@@ -6,6 +6,6 @@
 ------------
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](https://github.com/systemboys/GTi_Laboratory/tree/main/Debian%20Linux%20e%20derivados#debian-linux-e-derivados "Subir para o topo")
+[(&uarr;) Subir](#debian-linux-e-derivados "Subir para o topo")
 
 ------------
