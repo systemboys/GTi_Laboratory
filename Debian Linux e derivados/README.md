@@ -1,9 +1,7 @@
 # Assuntos Linux
 > Aqui estão alguns assuntos sobre os quais deixam alguns usuários de Linux na dúvida sobre alguns problemas e/ou determinadas soluções.
 
-- [Barra de tarefas (`taskbar`)](#system-tray-icon "Barra de tarefas (`taskbar`)")
-
-## Eliminar processo ativo
+- [Barra de tarefas (`taskbar`), Eliminar processo ativo](#system-tray-icon "Barra de tarefas (`taskbar`), Eliminar processo ativo")
 
 ### System Tray Icon
 
