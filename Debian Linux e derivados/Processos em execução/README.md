@@ -50,6 +50,6 @@ kill 1234 && kill 5678 && kill 9012
 Este comando executará o primeiro comando "kill 1234" e, se ele for executado com sucesso (ou seja, se o processo com o PID 1234 for finalizado), o segundo comando "kill 5678" será executado, e assim por diante. Se um dos comandos falhar, os comandos subsequentes não serão executados.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#sumario "Subir para o topo")
+[(&uarr;) Subir](#sumário "Subir para o topo")
 
 ------------
