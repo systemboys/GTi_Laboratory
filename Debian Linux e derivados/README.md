@@ -15,7 +15,6 @@ Se o ícone do Skype não desaparecer da área de notificação após um erro no
 
 - Abra o terminal (pressionando Ctrl + Alt + T).
 - Digite o seguinte comando para listar todos os processos em execução:
-
 ```bash
 ps -A
 ```
@@ -23,7 +22,6 @@ ps -A
 - Procure pelo processo do Skype na lista. Geralmente, o processo do Skype é chamado de skype ou skypeforlinux.
 - Anote o número do PID (Process ID) do processo do Skype.
 - Digite o seguinte comando para encerrar o processo do Skype:
-
 ```bash
 kill PID
 ```
