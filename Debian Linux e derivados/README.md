@@ -1,7 +1,7 @@
 # Debian Linux e derivados
 > Aqui estão alguns assuntos sobre os quais deixam alguns usuários de Linux na dúvida sobre alguns problemas e/ou determinadas soluções.
 
-- [Processos em execução](#system-tray-icon "Processos em execução")
+- [Processos em execução](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Processos%20em%20execu%C3%A7%C3%A3o/README.md#assuntos-linux "Processos em execução")
 
 ------------
 
