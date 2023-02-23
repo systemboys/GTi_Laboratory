@@ -3,7 +3,7 @@
 
 - [Barra de tarefas (`taskbar`)](#system-tray-icon "Barra de tarefas (`taskbar`)")
 
-# Eliminar processo ativo
+## Eliminar processo ativo
 
 ### System Tray Icon
 
