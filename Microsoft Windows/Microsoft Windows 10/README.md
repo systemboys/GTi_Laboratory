@@ -2,7 +2,7 @@
 
 ------------
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#assunto "Subir para o topo")
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory/tree/main/Microsoft%20Windows#assuntos-windows "Voltar ao Sumário") | 
+[(&uarr;) Subir](#microsoft-windows-10 "Subir para o topo")
 
 ------------
