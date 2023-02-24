@@ -18,7 +18,7 @@ Se o ícone do Skype não desaparecer da área de notificação após um erro no
 ps -A
 ```
 
-[![Processos em execução](https://github.com/systemboys/GTi_Laboratory/raw/main/Debian%20Linux%20e%20derivados/Processos%20em%20execu%C3%A7%C3%A3o/images/ps_-A.png "Processos em execução")
+[![Processos em execução](https://github.com/systemboys/GTi_Laboratory/raw/main/Debian%20Linux%20e%20derivados/Processos%20em%20execu%C3%A7%C3%A3o/images/ps_-A.png "Processos em execução")](https://github.com/systemboys/GTi_Laboratory/raw/main/Debian%20Linux%20e%20derivados/Processos%20em%20execu%C3%A7%C3%A3o/images/ps_-A.png "Processos em execução")
 
 - Procure pelo processo do Skype na lista. Geralmente, o processo do Skype é chamado de skype ou skypeforlinux.
 - Anote o número do PID (Process ID) do processo do Skype.
