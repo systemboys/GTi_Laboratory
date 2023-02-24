@@ -2,7 +2,7 @@
 
 - [Link do Texto de começo](#link-do-texto-de-comeco "Link do Texto de começo")
 
-------------
+---
 
 ## Texto de começo
 
@@ -17,7 +17,7 @@ const yourCodeJavaScript = "Seu código JavaScript";
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#link-do-texto-de-comeco "Subir para o topo")
 
-------------
+---
 
 ## Texto de começo
 
