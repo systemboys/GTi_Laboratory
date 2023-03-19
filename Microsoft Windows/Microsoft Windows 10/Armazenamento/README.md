@@ -1,8 +1,8 @@
-# Microsoft Windows 10
+# [React Codes](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi") / Armazenamento
 
 ---
 
-- [Identificar se o computador está utilizando HDD ou SSD](#link-do-texto-de-comeco "Identificar se o computador está utilizando HDD ou SSD")
+- [Identificar se o computador está utilizando HDD ou SSD](#identificar-se-o-computador-est%C3%A1-utilizando-hdd-ou-ssd "Identificar se o computador está utilizando HDD ou SSD")
 
 ## Identificar se o computador está utilizando HDD ou SSD
 
