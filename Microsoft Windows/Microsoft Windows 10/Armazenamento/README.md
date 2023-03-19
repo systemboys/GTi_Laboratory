@@ -14,9 +14,9 @@ Para identificar se um computador está utilizando um HD (disco mecânico) ou um
 
 3. A janela "Gerenciamento de disco" será aberta e mostrará uma lista de todos os discos conectados ao seu computador.
 
-4. Encontre o disco que você deseja verificar e procure na coluna "Mídia" para ver se está listado como "HDD" ou "SSD".
+4. Encontre o disco que você deseja verificar e clique inversamente nele, e depois em "Propriedades".
 
-5. Se o disco estiver listado como "HDD", isso significa que ele é um disco rígido mecânico. Se estiver listado como "SSD", isso significa que ele é um disco de estado sólido.
+5. Aparecerá a janela "Propriedades de Disco Local (C:)" por exemplo, na Aba "Hardware" na área "Todas as unidades de disco:" aparecerá o nome do disco com seu modelo informando se é um "HDD" ou "SSD".
 
 [![Gerenciador de discos](https://github.com/systemboys/GTi_Laboratory/raw/main/Microsoft%20Windows/Microsoft%20Windows%2010/Armazenamento/images/Gerenciador%20de%20discos.png "Gerenciador de discos")](https://github.com/systemboys/GTi_Laboratory/raw/main/Microsoft%20Windows/Microsoft%20Windows%2010/Armazenamento/images/Gerenciador%20de%20discos.png "Gerenciador de discos")
 
