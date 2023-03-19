@@ -31,6 +31,6 @@ Também é possível identificar o tipo de disco rígido instalado em seu comput
 5. Ao lado de cada dispositivo de armazenamento, você verá uma descrição que indicará se é um "Disco rígido" (HDD) ou um "Disco de estado sólido" (SSD).
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory/tree/main/Microsoft%20Windows#assuntos-windows "Voltar ao Sumário") | 
-[(&uarr;) Subir](#microsoft-windows-10 "Subir para o topo")
+[(&uarr;) Subir](#react-codes--armazenamento "Subir para o topo")
 
 ---
