@@ -8,12 +8,12 @@
 
 Baixe os seguintes aplicativos:
 
-1. Baixe o PJe Office.
-2. Java.
-3. Os drivers para o Token.
-	3.1. Driver.
-	3.2. Gerenciador Admin.
-4. Navegador Mozilla Firefox.
+1. Baixe o [PJe Office](https://www.pje.jus.br/wiki/index.php/PJeOffice "PJe Office").
+2. O [Java](https://www.java.com/pt-BR/download/ie_manual.jsp?locale=pt_BR "Java").
+3. Os drivers para o Token no site [Certisign](https://www.certisign.com.br/duvidas-suporte/downloads/tokens "Certisign").
+	- Baixe o driver `Driver`.
+	- E o `Gerenciador Admin`.
+4. Navegador [Mozilla Firefox](https://www.mozilla.org/pt-BR/firefox/new/ "Mozilla Firefox").
 
 Instalar na seguinte ordem:
 
