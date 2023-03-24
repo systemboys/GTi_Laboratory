@@ -1,4 +1,7 @@
 # Assuntos Windows
+
+[![Assuntos Windows](https://github.com/systemboys/GTi_Laboratory/raw/main/Microsoft%20Windows/images/Microsoft-Windows-logo-history.jpg "Assuntos Windows")](https://github.com/systemboys/GTi_Laboratory/raw/main/Microsoft%20Windows/images/Microsoft-Windows-logo-history.jpg "Assuntos Windows")
+
 > Aqui estão alguns assuntos sobre os quais deixam alguns usuários de Windows na dúvida sobre alguns problemas e/ou determinadas soluções.
 
 - [Microsoft Windows 10](https://github.com/systemboys/GTi_Laboratory/tree/main/Microsoft%20Windows/Microsoft%20Windows%2010#microsoft-windows-10 "Microsoft Windows 10")
