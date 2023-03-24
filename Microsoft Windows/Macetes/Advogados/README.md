@@ -36,5 +36,5 @@ Instalar na seguinte ordem:
 ---
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#react-codes--programas-utilizados-por-advogados "Subir para o topo")
+[(&uarr;) Subir](#gti-laboratory--programas-utilizados-por-advogados "Subir para o topo")
 
