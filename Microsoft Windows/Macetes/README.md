@@ -2,7 +2,7 @@
 
 [![Macetes diversos para lidar com Windows](https://github.com/systemboys/GTi_Laboratory/raw/main/Microsoft%20Windows/Macetes/images/banner1.jpg "Macetes diversos para lidar com Windows")](https://github.com/systemboys/GTi_Laboratory/raw/main/Microsoft%20Windows/Macetes/images/banner1.jpg "Macetes diversos para lidar com Windows")
 
-- [Programas utilizados por advogados](https://github.com/systemboys/GTi_Laboratory/tree/main/Microsoft%20Windows/Macetes/Advogados#react-codes--programas-utilizados-por-advogados "Programas utilizados por advogados")
+- [Programas utilizados por advogados](https://github.com/systemboys/GTi_Laboratory/tree/main/Microsoft%20Windows/Macetes/Advogados#gti-laboratory--programas-utilizados-por-advogados "Programas utilizados por advogados")
 
 ---
 
