@@ -68,6 +68,6 @@ ps -A --sort=-cmd
 Este comando classifica os processos com base no nome do comando (CMD) em ordem alfabética decrescente.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory/tree/main/Debian%20Linux%20e%20derivados#debian-linux-e-derivados "Voltar ao Sumário") | 
-[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--processos-em-execu%C3%A7%C3%A3o "Subir para o topo")
 
 ---
