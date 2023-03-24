@@ -76,3 +76,17 @@ Para mudar a senha do superusuário "root" no Linux, você pode seguir os seguin
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--usu%C3%A1rios-linux "Subir para o topo")
 
 ---
+
+Vogais
+á = a (agudo)
+ã = a (til)
+à = a (case)
+é = e (agudo)
+ê = e (circunflexo)
+í = i (agudo)
+ó = o (agudo)
+õ = o (til)
+ú = u (agudo)
+
+Letras consoantes
+ç = c (cedilha)
