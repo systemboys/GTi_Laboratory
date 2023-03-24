@@ -6,8 +6,7 @@
 
 ---
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[← Voltar](javascript:history.go(-1)) |
+[(&larr;) Voltar](javascript:history.go(-1) "Voltar ao Sumário") | 
 [(&uarr;) Subir](#debian-linux-e-derivados "Subir para o topo")
 
 ---
