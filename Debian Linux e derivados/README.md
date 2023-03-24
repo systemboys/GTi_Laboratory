@@ -1,4 +1,7 @@
 # Debian Linux e derivados
+
+[![Linux](https://github.com/systemboys/GTi_Laboratory/raw/main/Debian%20Linux%20e%20derivados/images/Linux_1.jpg "Linux")](https://github.com/systemboys/GTi_Laboratory/raw/main/Debian%20Linux%20e%20derivados/images/Linux_1.jpg "Linux")
+
 > Aqui estão alguns assuntos sobre os quais deixam alguns usuários de Linux na dúvida sobre alguns problemas e/ou determinadas soluções.
 
 - [Processos em execução](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Processos%20em%20execu%C3%A7%C3%A3o/README.md#sum%C3%A1rio "Processos em execução")
