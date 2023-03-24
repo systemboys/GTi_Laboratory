@@ -6,7 +6,7 @@
 
 ---
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory/tree/main/Debian%20Linux%20e%20derivados#debian-linux-e-derivados "Voltar ao Sumário") | 
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--usu%C3%A1rios-linux "Subir para o topo")
 
 ---
