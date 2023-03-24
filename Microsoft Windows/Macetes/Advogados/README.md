@@ -1,5 +1,7 @@
 # [GTi Laboratory](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi") / Programas utilizados por advogados
 
+[![Processo Judicial Eletrônico](https://github.com/systemboys/GTi_Laboratory/raw/main/Microsoft%20Windows/Macetes/Advogados/images/PJe_img1.jpeg "Processo Judicial Eletrônico")](https://github.com/systemboys/GTi_Laboratory/raw/main/Microsoft%20Windows/Macetes/Advogados/images/PJe_img1.jpeg "Processo Judicial Eletrônico")
+
 - [Procedimentos](#procedimentos "Procedimentos")
 
 ---
