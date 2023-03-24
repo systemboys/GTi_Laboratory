@@ -38,8 +38,7 @@ No Linux, o usuário "root" já vem pré-instalado no sistema e é criado automa
 > Lembre-se de que é importante limitar o acesso do usuário root sempre que possível e evitar usá-lo para tarefas rotineiras. Em vez disso, use um usuário comum com privilégios limitados para tarefas diárias e execute comandos como superusuário apenas quando necessário.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#laborat%C3%B3rio-gti--usuários-linux "Subir para o topo") | 
-[(&uarr;) Subir](#laborat%C3%B3rio-gti--usuarios-linux "Subir para o topo")
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--usu%C3%A1rios-linux "Subir para o topo")
 
 ---
 
