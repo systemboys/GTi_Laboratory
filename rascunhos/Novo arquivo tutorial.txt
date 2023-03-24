@@ -49,3 +49,9 @@ const yourCodeJavaScript = "Seu código JavaScript";
 | 1 | 2 |
 | 3 | 4 |
 
+---
+
+Caracteres especiais
+
+    %C3%A1 = á
+
