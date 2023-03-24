@@ -78,15 +78,15 @@ Para mudar a senha do superusuário "root" no Linux, você pode seguir os seguin
 ---
 
 Vogais
-á = a (agudo)
-ã = a (til)
-à = a (case)
-é = e (agudo)
-ê = e (circunflexo)
-í = i (agudo)
-ó = o (agudo)
-õ = o (til)
-ú = u (agudo)
+https://www.site.com/á = a (agudo)
+https://www.site.com/ã = a (til)
+https://www.site.com/à = a (case)
+https://www.site.com/é = e (agudo)
+https://www.site.com/ê = e (circunflexo)
+https://www.site.com/í = i (agudo)
+https://www.site.com/ó = o (agudo)
+https://www.site.com/õ = o (til)
+https://www.site.com/ú = u (agudo)
 
 Letras consoantes
-ç = c (cedilha)
+https://www.site.com/ç = c (cedilha)
