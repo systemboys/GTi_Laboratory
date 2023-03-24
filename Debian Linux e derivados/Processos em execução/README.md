@@ -1,3 +1,5 @@
+# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi") / Processos em execução
+
 # Sumário
 
 - [Barra de tarefas (`taskbar`), Eliminar processo ativo](#system-tray-icon "Barra de tarefas (`taskbar`), Eliminar processo ativo")
