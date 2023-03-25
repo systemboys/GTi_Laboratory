@@ -1,12 +1,12 @@
 # [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi") / Assunto
 
-- [Link do Texto de começo](#link-do-texto-de-comeco "Link do Texto de começo")
+[![Imagem 1](https://site.com/img/exemplo.png "Imagem 1")](http://link.com "Imagem 1")
+
+- [Link 1](https://site.com#anchor-link-1 "Link 1")
 
 ---
 
 ## Texto de começo
-
-[![Imagem de exemplo](https://site.com/img/exemplo.png "Imagem de exemplo")](http://link.com "Imagem de exemplo")
 
 Descrição do conteúdo...
 
