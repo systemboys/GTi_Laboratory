@@ -33,6 +33,11 @@ Para apagar um diretório com todos os seus subdiretórios e arquivos no Linux v
 
 Lembre-se de ter cuidado ao usar o comando "rm" com a opção "-r", pois ele pode excluir arquivos importantes e não é possível recuperá-los. Certifique-se de que você esteja excluindo o diretório correto e que não haja arquivos importantes dentro dele antes de executar o comando.
 
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao SumÃ¡rio") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--diret%C3%B3rios-e-arquivos "Subir para o topo")
+
+---
+
 ## Apagar todos os arquivo de um diretório exceto um arquivo ou diretório filho
 
 Para apagar todos os arquivos de um diretório, exceto um arquivo ou diretório filho específico no Linux via terminal, você pode usar o comando "find" com a opção "-not" e a opção "-name" para localizar todos os arquivos que não correspondem ao arquivo ou diretório que você deseja preservar, e então usar o comando "rm" para removê-los. Os seguintes passos irão guiá-lo através do processo:
