@@ -4,6 +4,7 @@
 
 - [Apagar um diretório com todos os seus subdiretórios e arquivos](#apagar-um-diret%C3%B3rio-com-todos-os-seus-subdiret%C3%B3rios-e-arquivos "Apagar um diretório com todos os seus subdiretórios e arquivos")
 - [Apagar todos os arquivo de um diretório exceto um arquivo ou diretório filho](#apagar-todos-os-arquivo-de-um-diret%C3%B3rio-exceto-um-arquivo-ou-diret%C3%B3rio-filho "Apagar todos os arquivo de um diretório exceto um arquivo ou diretório filho")
+- [Permissões a arquivos e diretórios](# "Permissões a arquivos e diretórios")
 
 ---
 
@@ -61,6 +62,55 @@ Para apagar todos os arquivos de um diretório, exceto um arquivo ou diretório 
 4. Aguarde enquanto o sistema exclui todos os arquivos no diretório, exceto o arquivo ou diretório filho que você deseja preservar.
 
 Lembre-se de que este comando é muito poderoso e pode causar a exclusão acidental de arquivos importantes se não for usado com cuidado. Certifique-se de revisar cuidadosamente o comando antes de executá-lo e garantir que você esteja preservando o arquivo ou diretório filho desejado.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao SumÃ¡rio") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--diret%C3%B3rios-e-arquivos "Subir para o topo")
+
+---
+
+## Permissões a arquivos e diretórios
+
+Para dar permissões a arquivos e diretórios no Linux via terminal, você pode usar o comando "chmod" (change mode). As permissões são definidas para três tipos de usuários: proprietário do arquivo, grupo e outros. Existem três tipos de permissões: leitura (r), escrita (w) e execução (x). Os seguintes passos irão guiá-lo através do processo:
+
+1. Abra o terminal ou console de comandos.
+
+2. Navegue até o arquivo ou diretório para o qual você deseja definir permissões. Por exemplo, para definir permissões para um arquivo chamado "arquivo.txt", use o seguinte comando:
+
+    ```bash
+    cd /caminho/para/o/arquivo
+    ```
+
+3. Use o comando "chmod" para definir as permissões. A sintaxe do comando é a seguinte:
+
+    ```bash
+    chmod [permissões] nome_do_arquivo
+    ```
+
+    > Ou para um diretório com todos os seus itens como subdiretórios e arquivos.
+
+    ```bash
+    chmod -R [permissões] diretório/arquivo
+    ```
+
+Onde "[permissões]" são as permissões que você deseja definir para o arquivo ou diretório, e "nome_do_arquivo" é o nome do arquivo ou diretório que você deseja definir as permissões.
+
+4. Defina as permissões usando os seguintes valores:
+
+    ```bash
+    r = permissão de leitura
+    w = permissão de escrita
+    x = permissão de execução
+    ```
+
+    Os valores são usados em conjunto para definir permissões para o proprietário do arquivo, o grupo e outros usuários. Para definir permissões para o proprietário, use "u" (user), para o grupo, use "g" (group) e para outros usuários, use "o" (others). Para definir as permissões para todos os usuários, use "a" (all). Por exemplo, para dar permissão de leitura, escrita e execução para o proprietário, permissão de leitura apenas para o grupo e permissão de execução apenas para outros usuários, use o seguinte comando:
+
+    ```bash
+    chmod u=rwx,g=r,o=x arquivo.txt
+    ```
+
+5. Confirme que as permissões foram definidas corretamente usando o comando "ls -l" para listar o arquivo ou diretório e suas permissões.
+
+Lembre-se de que as permissões de arquivos e diretórios são uma parte importante da segurança do sistema, por isso é importante usar com cuidado e conceder apenas as permissões necessárias.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao SumÃ¡rio") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--diret%C3%B3rios-e-arquivos "Subir para o topo")
