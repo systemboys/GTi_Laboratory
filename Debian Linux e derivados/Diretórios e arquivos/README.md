@@ -2,8 +2,8 @@
 
 [![Diretórios e arquivos](https://github.com/systemboys/GTi_Laboratory/raw/main/Debian%20Linux%20e%20derivados/Diret%C3%B3rios%20e%20arquivos/images/desktop_zero_feature_tiny.jpg "Diretórios e arquivos")](http://link.com "Diretórios e arquivos")
 
-- [Apagar um diretório com todos os seus subdiretórios e arquivos](https://site.com#anchor-link-1 "Apagar um diretório com todos os seus subdiretórios e arquivos")
-- [Apagar todos os arquivo de um diretório exceto um arquivo ou diretório filho](# "Apagar todos os arquivo de um diretório exceto um arquivo ou diretório filho")
+- [Apagar um diretório com todos os seus subdiretórios e arquivos](#apagar-um-diret%C3%B3rio-com-todos-os-seus-subdiret%C3%B3rios-e-arquivos "Apagar um diretório com todos os seus subdiretórios e arquivos")
+- [Apagar todos os arquivo de um diretório exceto um arquivo ou diretório filho](#apagar-todos-os-arquivo-de-um-diret%C3%B3rio-exceto-um-arquivo-ou-diret%C3%B3rio-filho "Apagar todos os arquivo de um diretório exceto um arquivo ou diretório filho")
 
 ---
 
