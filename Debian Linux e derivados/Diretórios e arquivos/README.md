@@ -86,7 +86,7 @@ Para dar permissões a arquivos e diretórios no Linux via terminal, você pode 
     chmod [permissões] nome_do_arquivo
     ```
 
-    > Ou para um diretório com todos os seus itens como subdiretórios e arquivos.
+    > Ou com a opção `-R` para dar permissões a um diretório com todos os seus itens como subdiretórios e arquivos `recursivamente`.
 
     ```bash
     chmod -R [permissões] diretório/arquivo
