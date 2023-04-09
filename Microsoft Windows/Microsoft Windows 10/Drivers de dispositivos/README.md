@@ -26,7 +26,7 @@ Esse comportamento pode indicar um problema com o driver de vídeo do computador
 
     - Clique com o botão direito do mouse no botão Iniciar e selecione "Gerenciador de Dispositivos".
 
-        [![Imagem 1](https://site.com/img/exemplo.png "Imagem 1")](http://link.com "Imagem 1")
+        [![Gerenciar](https://github.com/systemboys/GTi_Laboratory/raw/main/Microsoft%20Windows/Microsoft%20Windows%2010/Drivers%20de%20dispositivos/images/Gerenciador_de_dispositivos.png "Gerenciar")](https://github.com/systemboys/GTi_Laboratory/raw/main/Microsoft%20Windows/Microsoft%20Windows%2010/Drivers%20de%20dispositivos/images/Gerenciador_de_dispositivos.png "Gerenciar")
 
     - Expanda a seção "Adaptadores de Vídeo".
     
@@ -47,6 +47,8 @@ Esse comportamento pode indicar um problema com o driver de vídeo do computador
 3. Se ainda assim o problema persistir, tente desabilitar o driver de vídeo atual e usar o driver de vídeo padrão do Windows:
 
     - No Gerenciador de Dispositivos, clique com o botão direito do mouse no adaptador de vídeo e selecione "Propriedades".
+
+        [![Propriedades de dispositivo](https://github.com/systemboys/GTi_Laboratory/raw/main/Microsoft%20Windows/Microsoft%20Windows%2010/Drivers%20de%20dispositivos/images/Propriedades_de_drivers.png "Propriedades de dispositivo")](https://github.com/systemboys/GTi_Laboratory/raw/main/Microsoft%20Windows/Microsoft%20Windows%2010/Drivers%20de%20dispositivos/images/Propriedades_de_drivers.png "Propriedades de dispositivo")
     
     - Na guia "Driver", selecione "Desabilitar dispositivo".
     
