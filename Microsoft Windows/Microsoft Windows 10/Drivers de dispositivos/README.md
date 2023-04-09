@@ -1,6 +1,6 @@
-# [LaboratÃ³rio GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "LaboratÃ³rio GTi") / Assuntos sobre Drivers de dispositivos
+# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi") / Assuntos sobre Drivers de dispositivos
 
-[![Imagem 1](https://site.com/img/exemplo.png "Imagem 1")](http://link.com "Imagem 1")
+[![Drivers de dispositivos](https://github.com/systemboys/GTi_Laboratory/raw/main/Microsoft%20Windows/Microsoft%20Windows%2010/Drivers%20de%20dispositivos/images/drivers_dispositivos.jpg "Drivers de dispositivos")](https://github.com/systemboys/GTi_Laboratory/raw/main/Microsoft%20Windows/Microsoft%20Windows%2010/Drivers%20de%20dispositivos/images/drivers_dispositivos.jpg "Drivers de dispositivos")
 
 - [Sobre drivers de dispositivos](# "Sobre drivers de dispositivos")
 - [Problemas com drivers de vídeo após formatação](https://site.com#anchor-link-1 "Problemas com drivers de vídeo após formatação")
