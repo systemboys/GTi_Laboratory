@@ -2,14 +2,19 @@
 
 [![Drivers de dispositivos](https://github.com/systemboys/GTi_Laboratory/raw/main/Microsoft%20Windows/Microsoft%20Windows%2010/Drivers%20de%20dispositivos/images/drivers_dispositivos.jpg "Drivers de dispositivos")](https://github.com/systemboys/GTi_Laboratory/raw/main/Microsoft%20Windows/Microsoft%20Windows%2010/Drivers%20de%20dispositivos/images/drivers_dispositivos.jpg "Drivers de dispositivos")
 
-- [Sobre drivers de dispositivos](# "Sobre drivers de dispositivos")
-- [Problemas com drivers de vídeo após formatação](https://site.com#anchor-link-1 "Problemas com drivers de vídeo após formatação")
+- [Sobre drivers de dispositivos](#sobre-drivers-de-dispositivos "Sobre drivers de dispositivos")
+- [Problemas com drivers de vídeo após formatação](#problemas-com-drivers-de-v%C3%ADdeo-ap%C3%B3s-formata%C3%A7%C3%A3o "Problemas com drivers de vídeo após formatação")
 
 ---
 
 ## Sobre drivers de dispositivos
 
 Os drivers de dispositivos são programas que permitem que o sistema operacional do computador se comunique com os diferentes dispositivos conectados a ele, como impressoras, scanners, placas de som, placas de vídeo, entre outros. Eles funcionam como uma ponte entre o sistema operacional e o hardware, permitindo que o sistema operacional envie e receba informações do dispositivo. Sem os drivers apropriados, o dispositivo não pode funcionar corretamente e pode até mesmo não ser detectado pelo sistema operacional.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao SumÃ¡rio") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--assuntos-sobre-drivers-de-dispositivos "Subir para o topo")
+
+---
 
 ## Problemas com drivers de vídeo após formatação
 
@@ -20,6 +25,8 @@ Esse comportamento pode indicar um problema com o driver de vídeo do computador
 1. Verifique se há atualizações disponíveis para o driver de vídeo:
 
     - Clique com o botão direito do mouse no botão Iniciar e selecione "Gerenciador de Dispositivos".
+
+        [![Imagem 1](https://site.com/img/exemplo.png "Imagem 1")](http://link.com "Imagem 1")
 
     - Expanda a seção "Adaptadores de Vídeo".
     
@@ -50,6 +57,6 @@ Esse comportamento pode indicar um problema com o driver de vídeo do computador
 Se nenhuma dessas etapas resolver o problema, pode ser necessário levar o computador a um técnico de informática para uma análise mais detalhada.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao SumÃ¡rio") | 
-[(&uarr;) Subir](#assunto "Subir para o topo")
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--assuntos-sobre-drivers-de-dispositivos "Subir para o topo")
 
 ---
