@@ -17,6 +17,8 @@ N: Updating from such a repository can't be done securely, and is therefore disa
 N: See apt-secure(8) manpage for repository creation and user configuration details.
 ```
 
+[![Terminal após o comando apt update](https://github.com/systemboys/GTi_Laboratory/raw/main/Debian%20Linux%20e%20derivados/Atualiza%C3%A7%C3%B5es/images/apt_update.png "Terminal após o comando apt update")](https://github.com/systemboys/GTi_Laboratory/raw/main/Debian%20Linux%20e%20derivados/Atualiza%C3%A7%C3%B5es/images/apt_update.png "Terminal após o comando apt update")
+
 Esse erro indica que há um problema com o repositório VirtualBox no arquivo `/etc/apt/sources.list`. Especificamente, há um problema com a entrada de linha do arquivo que se refere ao repositório VirtualBox.
 
 A mensagem de erro indica que a entrada da linha do arquivo para o diretório de origem do repositório VirtualBox (contrib/source/Sources) está faltando ou foi mal escrita. Além disso, a mensagem de erro também informa que o repositório não possui um arquivo Release, o que torna o processo de atualização inseguro e, portanto, é desabilitado por padrão.
