@@ -1,8 +1,8 @@
 # [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi") / Atualizações
 
-[![Imagem 1](https://site.com/img/exemplo.png "Imagem 1")](http://link.com "Imagem 1")
+[![Atualizações](https://github.com/systemboys/GTi_Laboratory/raw/main/Debian%20Linux%20e%20derivados/Atualiza%C3%A7%C3%B5es/images/Upgrade_button.jpg "Atualizações")](https://github.com/systemboys/GTi_Laboratory/raw/main/Debian%20Linux%20e%20derivados/Atualiza%C3%A7%C3%B5es/images/Upgrade_button.jpg "Atualizações")
 
-- [Alguns erros](https://site.com#anchor-link-1 "Alguns erros")
+- [Alguns erros](#alguns-erros-durante-a-atualiza%C3%A7%C3%A3o-de-pacotes "Alguns erros")
 
 ---
 
@@ -42,6 +42,6 @@ sudo nano /etc/apt/sources.list
 Com esses passos, você deve conseguir resolver o erro e atualizar seu sistema sem problemas.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#assunto "Subir para o topo")
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--atualiza%C3%A7%C3%B5es "Subir para o topo")
 
 ---
