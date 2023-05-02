@@ -55,3 +55,6 @@ Caracteres especiais
 
     %C3%A1 = á
 
+╭─╮
+│ │
+╰─╯
