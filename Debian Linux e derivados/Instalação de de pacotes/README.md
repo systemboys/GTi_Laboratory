@@ -51,6 +51,10 @@ Após editar, salvar e sair do arquivo, execute o seguinte comando:
 source /etc/profile
 ```
 
+Feito este processo, seu linux irá instalar normalmente o pacote através do `dpkg -i pacote.deb`.
+
+> ( ! ) Obs.: Em uma instalação futura, se houver o mesmo problema, faça o mesmo procedimento reomovendo o `/sbin`. No caso, algumas instalações exigirão o "sbin" e outras não.
+
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#erro-de-path-ap%C3%B3s-instala%C3%A7%C3%A3o-de-pacote-deb-no-linux "Subir para o topo")
 
