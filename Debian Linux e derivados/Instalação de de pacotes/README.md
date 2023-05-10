@@ -55,6 +55,30 @@ Feito este processo, seu linux irá instalar normalmente o pacote através do `d
 
 > ( ! ) Obs.: Em uma instalação futura, se houver o mesmo problema, faça o mesmo procedimento reomovendo o `/sbin`. No caso, algumas instalações exigirão o "sbin" e outras não.
 
+Uma solução definitiva para o erro de `PATH` após a instalação de um pacote `.deb` é adicionar o caminho correto ao arquivo `/etc/environment`, que é lido pelo sistema no momento do login. Para fazer isso, você pode seguir estes passos:
+
+1. Abra o arquivo `/etc/environment` em um editor de texto com privilégios de administrador:
+
+   ```bash
+   sudo nano /etc/environment
+   ```
+
+2. Adicione o caminho correto à variável `PATH`. Por exemplo, se o caminho correto for `/usr/local/bin`, adicione esta linha:
+
+   ```bash
+   PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/bin"
+   ```
+
+3. Salve e feche o arquivo.
+
+4. Recarregue o arquivo `/etc/environment` para que as alterações tenham efeito:
+
+   ```bash
+   source /etc/environment
+   ```
+
+Depois de seguir estes passos, o caminho correto deve estar configurado corretamente e o erro de `PATH` não deve mais ocorrer.
+
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#erro-de-path-ap%C3%B3s-instala%C3%A7%C3%A3o-de-pacote-deb-no-linux "Subir para o topo")
 
