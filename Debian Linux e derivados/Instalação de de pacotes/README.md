@@ -38,7 +38,7 @@ Altere a linha no `else` da condição, adicionando um `/sbin` como no exemplo a
 PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games/sbin"
 ```
 
-Após modificar salve o arquivo e saida. Obs.: Se for no `nano`, execute os comandos:
+Após modificar salve o arquivo e saia, você voltará para o terminal. Obs.: Se for no `nano`, execute os comandos:
 
 | Comando | Descrição |
 | :------------: | :------------ |
