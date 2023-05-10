@@ -1,6 +1,6 @@
 # [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi") / Instalação de pacotes
 
-[![Imagem 1](https://site.com/img/exemplo.png "Imagem 1")](http://link.com "Imagem 1")
+[![Linux Terminal](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Instala%C3%A7%C3%A3o%20de%20de%20pacotes/images/Linux_terminal.jpg?raw=true "Linux Terminal")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Instala%C3%A7%C3%A3o%20de%20de%20pacotes/images/Linux_terminal.jpg?raw=true "Linux Terminal")
 
 - [Erro de PATH após instalação de pacote .deb no Linux](#erro-de-path-ap%C3%B3s-instala%C3%A7%C3%A3o-de-pacote-deb-no-linux "Erro de PATH após instalação de pacote .deb no Linux")
 
