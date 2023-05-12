@@ -35,6 +35,6 @@ Também é possível identificar o tipo de disco rígido instalado em seu comput
 [![Informações do sistema](https://github.com/systemboys/GTi_Laboratory/raw/main/Microsoft%20Windows/Microsoft%20Windows%2010/Armazenamento/images/Informa%C3%A7%C3%B5es%20do%20sistema.png "Informações do sistema")](https://github.com/systemboys/GTi_Laboratory/raw/main/Microsoft%20Windows/Microsoft%20Windows%2010/Armazenamento/images/Informa%C3%A7%C3%B5es%20do%20sistema.png "Informações do sistema")
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory/tree/main/Microsoft%20Windows#assuntos-windows "Voltar ao Sumário") | 
-[(&uarr;) Subir](#react-codes--armazenamento "Subir para o topo")
+[(&uarr;) Subir](#assuntos-windows--armazenamento "Subir para o topo")
 
 ---
