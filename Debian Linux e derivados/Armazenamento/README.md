@@ -45,6 +45,6 @@ Para formatar e criar partições em um SSD no Linux via terminal, você pode se
 Após seguir esses passos, a partição do SSD será criada e formatada com o sistema de arquivos escolhido. Você pode montar a partição em um diretório de sua escolha para começar a usá-la.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#armazenamento "Subir para o topo")
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--armazenamento "Subir para o topo")
 
 ---
