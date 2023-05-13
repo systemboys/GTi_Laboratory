@@ -1,6 +1,6 @@
 # [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi") / Armazenamento
 
-[![Imagem 1](https://site.com/img/exemplo.png "Imagem 1")](http://link.com "Imagem 1")
+[![HHD's e SSD's](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Armazenamento/images/ssd-o-hdd-1024x576.jpg?raw=true "HHD's e SSD's")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Armazenamento/images/ssd-o-hdd-1024x576.jpg?raw=true "HHD's e SSD's")
 
 - [Como formatar e criar partições em um SSD no Linux via terminal](#como-formatar-e-criar-partições-em-um-ssd-no-linux-via-terminal "Como formatar e criar partições em um SSD no Linux via terminal")
 
