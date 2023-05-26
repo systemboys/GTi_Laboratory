@@ -55,7 +55,7 @@ Após editar, salvar e sair do arquivo, execute o seguinte comando:
 source /etc/profile
 ```
 
-Feito este processo, seu linux irá instalar normalmente o pacote através do `dpkg -i pacote.deb`.
+Feito este processo, seu linux irá instalar normalmente o pacote através do `dpkg -i your_installation_package.deb`.
 
 > ( ! ) Obs.: Em uma instalação futura, se houver o mesmo problema, faça o mesmo procedimento reomovendo o `/sbin`. No caso, algumas instalações exigirão o "sbin" e outras não.
 
