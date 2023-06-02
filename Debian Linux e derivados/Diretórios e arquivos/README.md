@@ -2,7 +2,9 @@
 
 [![Diretórios e arquivos](https://github.com/systemboys/GTi_Laboratory/raw/main/Debian%20Linux%20e%20derivados/Diret%C3%B3rios%20e%20arquivos/images/desktop_zero_feature_tiny.jpg "Diretórios e arquivos")](http://link.com "Diretórios e arquivos")
 
+- [Renomear um diretório via terminal Linux](#renomear-um-diret%C3%B3rio-via-terminal-linux "Renomear um diretório via terminal Linux")
 - [Apagar um diretório com todos os seus subdiretórios e arquivos](#apagar-um-diret%C3%B3rio-com-todos-os-seus-subdiret%C3%B3rios-e-arquivos "Apagar um diretório com todos os seus subdiretórios e arquivos")
+- [Mover de um local para outro](# "Mover de um local para outro")
 - [Apagar todos os arquivo de um diretório exceto um arquivo ou diretório filho](#apagar-todos-os-arquivo-de-um-diret%C3%B3rio-exceto-um-arquivo-ou-diret%C3%B3rio-filho "Apagar todos os arquivo de um diretório exceto um arquivo ou diretório filho")
 - [Permissões a arquivos e diretórios](#permiss%C3%B5es-a-arquivos-e-diret%C3%B3rios "Permissões a arquivos e diretórios")
 
@@ -25,6 +27,49 @@ mv antigo_nome novo_nome
 ```
 
 Certifique-se de estar no diretório correto ou fornecer o caminho completo para o diretório, caso esteja em um local diferente. Além disso, verifique se você tem permissões suficientes para renomear o diretório.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao SumÃ¡rio") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--diret%C3%B3rios-e-arquivos "Subir para o topo")
+
+---
+
+## Mover diretório ou arquivo de um local para outro
+
+Para mover um diretório de um local para outro no Linux via terminal, você também pode usar o comando `mv` (move). O `mv` é usado tanto para renomear diretórios quanto para movê-los para um novo local. O formato do comando é o seguinte:
+
+```bash
+mv nome_do_diretorio caminho_destino
+```
+
+Substitua "nome_do_diretorio" pelo nome do diretório que você deseja mover e "caminho_destino" pelo novo local de destino para o diretório.
+
+Por exemplo, se você deseja mover o diretório "meu_diretorio" para a pasta "novo_destino", você pode usar o seguinte comando:
+
+```bash
+mv meu_diretorio novo_destino/
+```
+
+Certifique-se de fornecer o caminho correto para o diretório de destino. Se você estiver movendo o diretório para um local diferente, forneça o caminho completo do destino.
+
+Além disso, verifique se você tem as permissões adequadas para realizar a operação de movimentação.
+
+Para mover arquivos de um local para outro no Linux via terminal, você também pode usar o comando `mv` (move). O `mv` é usado tanto para renomear arquivos quanto para movê-los para um novo local. O formato do comando é o seguinte:
+
+```bash
+mv nome_do_arquivo caminho_destino
+```
+
+Substitua "nome_do_arquivo" pelo nome do arquivo que você deseja mover e "caminho_destino" pelo novo local de destino para o arquivo.
+
+Por exemplo, se você deseja mover o arquivo "meu_arquivo.txt" para a pasta "novo_destino", você pode usar o seguinte comando:
+
+```bash
+mv meu_arquivo.txt novo_destino/
+```
+
+Certifique-se de fornecer o caminho correto para o local de destino. Se você estiver movendo o arquivo para um diretório diferente, forneça o caminho completo do destino.
+
+Além disso, verifique se você tem as permissões adequadas para realizar a operação de movimentação.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao SumÃ¡rio") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--diret%C3%B3rios-e-arquivos "Subir para o topo")
