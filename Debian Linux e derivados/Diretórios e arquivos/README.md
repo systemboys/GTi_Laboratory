@@ -8,6 +8,29 @@
 
 ---
 
+## Renomear um diretório via terminal Linux
+
+Para renomear um diretório via terminal no Linux, você pode usar o comando `mv` (move). O `mv` também é usado para renomear diretórios, além de mover arquivos ou diretórios para um novo local. Aqui está o formato do comando:
+
+```bash
+mv nome_atual novo_nome
+```
+
+Substitua "nome_atual" pelo nome atual do diretório que você deseja renomear e "novo_nome" pelo novo nome que você deseja atribuir ao diretório.
+
+Por exemplo, se você quiser renomear o diretório "antigo_nome" para "novo_nome", o comando seria:
+
+```bash
+mv antigo_nome novo_nome
+```
+
+Certifique-se de estar no diretório correto ou fornecer o caminho completo para o diretório, caso esteja em um local diferente. Além disso, verifique se você tem permissões suficientes para renomear o diretório.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao SumÃ¡rio") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--diret%C3%B3rios-e-arquivos "Subir para o topo")
+
+---
+
 ## Apagar um diretório com todos os seus subdiretórios e arquivos
 
 Para apagar um diretório com todos os seus subdiretórios e arquivos no Linux via terminal, você pode usar o comando "rm" com a opção "-r" para remover diretórios recursivamente. Os seguintes passos irão guiá-lo através do processo:
