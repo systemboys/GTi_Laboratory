@@ -12,7 +12,7 @@
 ---
 # Marcos Aurélio Rocha da Silva (programação)
 
-> O conteúdo abaixo, são as configurações do meu computador o qual utilizo para fazer meus trabalhos, meus projetos e meu companheiro de gerra...
+> O conteúdo abaixo, são as configurações do meu computador o qual utilizo para fazer meus trabalhos, meus projetos e meu companheiro de gerra. Nessas configurações, estou utilizando o `Debian Linux` com o ambiente `Cinnamon`, adotei como minha principal interface de usuário...
 
 ## Instalações e configurações
 
