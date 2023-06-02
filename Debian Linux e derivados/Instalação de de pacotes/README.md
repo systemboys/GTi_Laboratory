@@ -86,7 +86,7 @@ Uma solução definitiva para o erro de `PATH` após a instalação de um pacote
 Depois de seguir estes passos, o caminho correto deve estar configurado corretamente e o erro de `PATH` não deve mais ocorrer.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#erro-de-path-ap%C3%B3s-instala%C3%A7%C3%A3o-de-pacote-deb-no-linux "Subir para o topo")
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--instala%C3%A7%C3%A3o-de-pacotes "Subir para o topo")
 
 ---
 
@@ -129,7 +129,7 @@ Siga as etapas abaixo para instalar o Google Earth no Debian Linux via terminal:
 Lembre-se de ter privilégios administrativos para executar os comandos com `sudo`. Certifique-se também de baixar a versão correta do Google Earth para o seu sistema operacional (32 bits ou 64 bits) e de atualizar os comandos acima com o nome do arquivo .deb baixado, se necessário.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#erro-de-path-ap%C3%B3s-instala%C3%A7%C3%A3o-de-pacote-deb-no-linux "Subir para o topo")
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--instala%C3%A7%C3%A3o-de-pacotes "Subir para o topo")
 
 ---
 
@@ -170,6 +170,6 @@ Certifique-se de ter privilégios administrativos para executar os comandos com 
 Observação: Se você estiver usando uma versão diferente do Debian, substitua `$(lsb_release -sc)` pelo código do seu sistema, como "buster" para o Debian 10.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#erro-de-path-ap%C3%B3s-instala%C3%A7%C3%A3o-de-pacote-deb-no-linux "Subir para o topo")
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--instala%C3%A7%C3%A3o-de-pacotes "Subir para o topo")
 
 ---
