@@ -4,7 +4,7 @@
 
 - [Renomear um diretório via terminal Linux](#renomear-um-diret%C3%B3rio-via-terminal-linux "Renomear um diretório via terminal Linux")
 - [Apagar um diretório com todos os seus subdiretórios e arquivos](#apagar-um-diret%C3%B3rio-com-todos-os-seus-subdiret%C3%B3rios-e-arquivos "Apagar um diretório com todos os seus subdiretórios e arquivos")
-- [Mover de um local para outro](# "Mover de um local para outro")
+- [MMover diretório ou arquivo de um local para outro](# "MMover diretório ou arquivo de um local para outro")
 - [Apagar todos os arquivo de um diretório exceto um arquivo ou diretório filho](#apagar-todos-os-arquivo-de-um-diret%C3%B3rio-exceto-um-arquivo-ou-diret%C3%B3rio-filho "Apagar todos os arquivo de um diretório exceto um arquivo ou diretório filho")
 - [Permissões a arquivos e diretórios](#permiss%C3%B5es-a-arquivos-e-diret%C3%B3rios "Permissões a arquivos e diretórios")
 
