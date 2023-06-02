@@ -4,6 +4,7 @@
 
 - [Erro de PATH após instalação de pacote .deb no Linux](#erro-de-path-ap%C3%B3s-instala%C3%A7%C3%A3o-de-pacote-deb-no-linux "Erro de PATH após instalação de pacote .deb no Linux")
 - [Instalar o Google Earth via terminal](#instalar-o-google-earth-via-terminal "Instalar o Google Earth via terminal")
+- [Instalar o Oracle Virtual Box no Debian Linux](#instalar-o-oracle-virtual-box-no-debian-linux "Instalar o Oracle Virtual Box no Debian Linux")
 
 ---
 
@@ -126,6 +127,47 @@ Siga as etapas abaixo para instalar o Google Earth no Debian Linux via terminal:
 5. Após a instalação, você pode iniciar o Google Earth digitando `google-earth-pro` no terminal ou procurando-o no menu de aplicativos.
 
 Lembre-se de ter privilégios administrativos para executar os comandos com `sudo`. Certifique-se também de baixar a versão correta do Google Earth para o seu sistema operacional (32 bits ou 64 bits) e de atualizar os comandos acima com o nome do arquivo .deb baixado, se necessário.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#erro-de-path-ap%C3%B3s-instala%C3%A7%C3%A3o-de-pacote-deb-no-linux "Subir para o topo")
+
+---
+
+## Instalar o Oracle Virtual Box no Debian Linux
+
+Para instalar o Oracle VirtualBox no Debian Linux, você pode seguir as seguintes etapas:
+
+1. Abra um terminal.
+
+2. Adicione o repositório do VirtualBox ao seu sistema executando o seguinte comando:
+
+```bash
+sudo sh -c 'echo "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian $(lsb_release -sc) contrib" >> /etc/apt/sources.list.d/virtualbox.list'
+```
+
+3. Baixe e importe a chave GPG do VirtualBox para verificar a autenticidade dos pacotes:
+
+```bash
+wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+```
+
+4. Atualize a lista de pacotes disponíveis:
+
+```bash
+sudo apt update
+```
+
+5. Instale o VirtualBox:
+
+```bash
+sudo apt install virtualbox-6.1
+```
+
+6. Após a instalação, você pode executar o VirtualBox a partir do menu de aplicativos ou digitando o comando `virtualbox` no terminal.
+
+Certifique-se de ter privilégios administrativos para executar os comandos com `sudo`. Além disso, verifique a versão mais recente do VirtualBox no site oficial (https://www.virtualbox.org) para garantir que você está instalando a versão correta.
+
+Observação: Se você estiver usando uma versão diferente do Debian, substitua `$(lsb_release -sc)` pelo código do seu sistema, como "buster" para o Debian 10.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#erro-de-path-ap%C3%B3s-instala%C3%A7%C3%A3o-de-pacote-deb-no-linux "Subir para o topo")
