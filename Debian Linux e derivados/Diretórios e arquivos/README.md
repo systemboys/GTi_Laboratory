@@ -96,7 +96,7 @@ Para apagar um diretório com todos os seus subdiretórios e arquivos no Linux v
     sudo rm -r nome_do_diretorio
     ```
 
-    > ( ! ) Com o parâmetro `-f` o comando força a remoção sem pedir confirmação.
+    > ( ! ) Com o parâmetro `-f` o comando força a remoção sem pedir confirmação!
 
     ```bash
     sudo rm -rf nome_do_diretorio
