@@ -28,6 +28,12 @@
 | Editor de texto | Nativo | Preferêncis: Esquema de cores (Olívio) \| Adicionar ao painel. |
 | Typora | [Typora](https://typora.io/ "Download") | Temas: Night \| Adicionar à área de trabalho. |
 
+Botões do Painel na barra inferior.
+
+[![Botões do painel](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Minhas%20configura%C3%A7%C3%B5es/images/panel_buttons.png?raw=true "Botões do painel")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Minhas%20configura%C3%A7%C3%B5es/images/panel_buttons.png?raw=true "Botões do painel")
+
+> ( ! ) Acima estão os botões por ordem na barra inferior!
+
 ## Algumas ferramentas úteis
 
 | Software | Copyright | Instalação e/ou Configurações |
