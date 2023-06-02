@@ -3,6 +3,7 @@
 [![Linux Terminal](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Instala%C3%A7%C3%A3o%20de%20de%20pacotes/images/Linux_terminal.jpg?raw=true "Linux Terminal")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Instala%C3%A7%C3%A3o%20de%20de%20pacotes/images/Linux_terminal.jpg?raw=true "Linux Terminal")
 
 - [Erro de PATH após instalação de pacote .deb no Linux](#erro-de-path-ap%C3%B3s-instala%C3%A7%C3%A3o-de-pacote-deb-no-linux "Erro de PATH após instalação de pacote .deb no Linux")
+- [Instalar o Google Earth via terminal](#instalar-o-google-earth-via-terminal "Instalar o Google Earth via terminal")
 
 ---
 
@@ -86,6 +87,47 @@ Depois de seguir estes passos, o caminho correto deve estar configurado corretam
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#erro-de-path-ap%C3%B3s-instala%C3%A7%C3%A3o-de-pacote-deb-no-linux "Subir para o topo")
 
-Reinicie o PC, ou simplemente de um export.
+---
+
+## Instalar o Google Earth via terminal
+
+O Google Earth não está disponível nos repositórios oficiais do Debian, mas você pode baixar e instalar o pacote .deb do Google Earth diretamente do site oficial. 
+
+Siga as etapas abaixo para instalar o Google Earth no Debian Linux via terminal:
+
+1. Abra um terminal.
+
+2. Baixe o pacote .deb mais recente do Google Earth usando o comando `wget`. Certifique-se de escolher a versão correta para o seu sistema operacional (32 bits ou 64 bits):
+
+   - Para sistemas de 32 bits:
+
+     ```bash
+     wget https://dl.google.com/dl/earth/client/current/google-earth-stable_current_i386.deb
+     ```
+
+   - Para sistemas de 64 bits:
+
+     ```bash
+     wget https://dl.google.com/dl/earth/client/current/google-earth-stable_current_amd64.deb
+     ```
+
+3. Após o download, instale o pacote .deb usando o comando `dpkg`:
+
+   ```bash
+   sudo dpkg -i google-earth-stable_current_*.deb
+   ```
+
+4. Se ocorrerem dependências ausentes durante a instalação, execute o seguinte comando para corrigir e instalar as dependências necessárias:
+
+   ```bash
+   sudo apt install -f
+   ```
+
+5. Após a instalação, você pode iniciar o Google Earth digitando `google-earth-pro` no terminal ou procurando-o no menu de aplicativos.
+
+Lembre-se de ter privilégios administrativos para executar os comandos com `sudo`. Certifique-se também de baixar a versão correta do Google Earth para o seu sistema operacional (32 bits ou 64 bits) e de atualizar os comandos acima com o nome do arquivo .deb baixado, se necessário.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#erro-de-path-ap%C3%B3s-instala%C3%A7%C3%A3o-de-pacote-deb-no-linux "Subir para o topo")
 
 ---
