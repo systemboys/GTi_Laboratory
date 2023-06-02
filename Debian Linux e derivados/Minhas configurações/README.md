@@ -2,7 +2,12 @@
 
 [![Programação](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Minhas%20configura%C3%A7%C3%B5es/images/programacao.png?raw=true "Programação")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Minhas%20configura%C3%A7%C3%B5es/images/programacao.png?raw=true "Programação")
 
-- [Marcos Aurélio Rocha da Silva (programação)](https://site.com#anchor-link-1 "Marcos Aurélio Rocha da Silva (programação)")
+- [Marcos Aurélio Rocha da Silva (programação)](#marcos-aur%C3%A9lio-rocha-da-silva-programa%C3%A7%C3%A3o "Marcos Aurélio Rocha da Silva (programação)")
+- [Instalações e configurações](#instala%C3%A7%C3%B5es-e-configura%C3%A7%C3%B5es "Instalações e configurações")
+- [Nativos e outros](#nativos-e-outros "Nativos e outros")
+- [Algumas ferramentas úteis](#algumas-ferramentas-%C3%BAteis "Algumas ferramentas úteis")
+- [Internet](#internet "Internet")
+- [Desenvolvimento](#desenvolvimento "Desenvolvimento")
 
 ---
 # Marcos Aurélio Rocha da Silva (programação)
@@ -57,6 +62,6 @@
 |        Git         | [Software Freedom Conservancy](https://git-scm.com/ "Download") | Terminal: `apt update && apt install git && git --version`. |
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#assunto "Subir para o topo")
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--minhas-configura%C3%A7%C3%B5es "Subir para o topo")
 
 ---
