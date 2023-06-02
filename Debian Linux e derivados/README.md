@@ -2,7 +2,7 @@
 
 [![Linux](https://github.com/systemboys/GTi_Laboratory/raw/main/Debian%20Linux%20e%20derivados/images/Linux_1.jpg "Linux")](https://github.com/systemboys/GTi_Laboratory/raw/main/Debian%20Linux%20e%20derivados/images/Linux_1.jpg "Linux")
 
-> Aqui estão alguns assuntos sobre os quais deixam alguns usuários de Linux na dúvida sobre alguns problemas e/ou determinadas soluções.
+> Aqui estão alguns assuntos sobre os quais deixam alguns [usuários](https://github.com/systemboys/GTi_Laboratory/tree/main/Debian%20Linux%20e%20derivados/Minhas%20configura%C3%A7%C3%B5es#laborat%C3%B3rio-gti--minhas-configura%C3%A7%C3%B5es "usuários") de Linux na dúvida sobre alguns problemas e/ou determinadas soluções.
 
 - [Atualizações](https://github.com/systemboys/GTi_Laboratory/tree/main/Debian%20Linux%20e%20derivados/Atualiza%C3%A7%C3%B5es#laborat%C3%B3rio-gti--atualiza%C3%A7%C3%B5es "Atualizações")
 - [Instalação de pacotes](https://github.com/systemboys/GTi_Laboratory/tree/main/Debian%20Linux%20e%20derivados/Instala%C3%A7%C3%A3o%20de%20de%20pacotes#laborat%C3%B3rio-gti--instala%C3%A7%C3%A3o-de-pacotes "Instalação de pacotes")
