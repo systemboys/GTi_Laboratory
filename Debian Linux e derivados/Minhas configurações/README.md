@@ -22,7 +22,7 @@
 
 | Software | Copyright | Instalação e/ou Configurações |
 | :--: | :--: | ---- |
-| Configuração da data na área de notificação | Nativo | Clique inverso na data / Configurar... / Ativar "Exibir números da semana no calendário" e "Usar um formato de data personalizado", formato da data: `%A, %e de %B de %Y, %H:%M:%S`. |
+| Configuração da data na área de notificação | Nativo | Clique inverso na data / Configurar... / Ativar "Exibir números da semana no calendário" e "Usar um formato de data personalizado", formato da data: `%A, %e de %B de %Y, %H:%M:%S`. [![Data e hora do sistema](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Minhas%20configura%C3%A7%C3%B5es/images/Data_e_hora_do_sistema.png?raw=true "Data e hora do sistema")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Minhas%20configura%C3%A7%C3%B5es/images/Data_e_hora_do_sistema.png?raw=true "Data e hora do sistema") |
 | Captura de tela | Nativo | Adicionar ao painel. |
 | Monitor do sistema | Nativo | Adicionar ao painel. |
 | Editor de texto | Nativo | Preferêncis: Esquema de cores (Olívio) \| Adicionar ao painel. |
