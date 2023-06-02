@@ -96,6 +96,12 @@ Para apagar um diretório com todos os seus subdiretórios e arquivos no Linux v
     sudo rm -r nome_do_diretorio
     ```
 
+    > ( ! ) Com o parâmetro `-f` o comando força a remoção sem pedir confirmação.
+
+    ```bash
+    sudo rm -rf nome_do_diretorio
+    ```
+
 5. Confirme a exclusão do diretório e de todos os seus arquivos e subdiretórios digitando "y" e pressionando "Enter" quando solicitado.
 
 6. Aguarde enquanto o sistema exclui o diretório e seu conteúdo. Dependendo do tamanho do diretório, isso pode levar alguns minutos.
