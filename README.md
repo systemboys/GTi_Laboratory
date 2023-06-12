@@ -5,7 +5,7 @@
 - [Debian Linux e derivados](https://github.com/systemboys/GTi_Laboratory/tree/main/Debian%20Linux%20e%20derivados#debian-linux-e-derivados "Debian Linux e derivados")
 - [Microsoft Windows](https://github.com/systemboys/GTi_Laboratory/tree/main/Microsoft%20Windows#assuntos-windows "Microsoft Windows")
 
-[!] Ainda `sendo escrito`, é apenas o começo do conteúdo!
+( ! ) Ainda `sendo escrito`, é apenas o começo do conteúdo!
 
 > A documentação criada pelo técnico de informática Marcos Aurélio da empresa GLOBAL TEC Informática é uma fonte rica de informações sobre diversos assuntos relacionados à área de tecnologia. Com uma linguagem clara e objetiva, a documentação aborda tópicos como consertos de hardware, instalação de softwares, formatação de sistemas operacionais, configurações de redes, entre outros.
 
