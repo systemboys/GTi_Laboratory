@@ -1,4 +1,4 @@
-# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi") / Assunto
+# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi") / Hardwares e Softwares
 
 [![Hardwares e Softwares](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/images/hardware.jpg?raw=true "Hardwares e Softwares")](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/images/hardware.jpg?raw=true "Hardwares e Softwares")
 
