@@ -1,6 +1,6 @@
 # [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi") / Assunto
 
-[![Imagem 1](https://site.com/img/exemplo.png "Imagem 1")](http://link.com "Imagem 1")
+[![Hardwares e Softwares](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardware%20e%20Software/images/hardware.jpg?raw=true "Hardwares e Softwares")](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardware%20e%20Software/images/hardware.jpg?raw=true "Hardwares e Softwares")
 
 - [Link 1](https://site.com#anchor-link-1 "Link 1")
 
