@@ -44,12 +44,13 @@ Os pinos de áudio do painel frontal do gabinete são responsáveis pela conexã
 
 É importante consultar o manual da placa-mãe ou a documentação do gabinete para identificar corretamente a disposição dos pinos e garantir a conexão correta dos conectores de áudio.
 
-> Para configurar o som frontal do gabinete, aqui esta duas imagens que poderá ser util.
-Imagem 001. – Para ampliar, clique em cima da imagem abaixo:
+> Para configurar o som frontal do gabinete, aqui estão duas imagens que poderão ser úteis.
+>
+> Imagem 1 – Para ampliar, clique em cima da imagem abaixo:
 
 [![Painel de áudio frontal](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/images/Painel_de_audio_frontal.jpg?raw=true "Painel de áudio frontal")](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/images/Painel_de_audio_frontal.jpg?raw=true "Painel de áudio frontal")
 
-> Imagem 002. – Para ampliar, clique em cima da imagem abaixo:
+> Imagem 2 – Para ampliar, clique em cima da imagem abaixo:
 
 [![Painel de áudio frontal](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/images/Painel_de_audio_frontal_2.jpg?raw=true "Painel de áudio frontal")](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/images/Painel_de_audio_frontal_2.jpg?raw=true "Painel de áudio frontal")
 
