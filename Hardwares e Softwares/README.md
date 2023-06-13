@@ -47,11 +47,11 @@ Os pinos de áudio do painel frontal do gabinete são responsáveis pela conexã
 > Para configurar o som frontal do gabinete, aqui esta duas imagens que poderá ser util.
 Imagem 001. – Para ampliar, clique em cima da imagem abaixo:
 
-[![Painel de áudio frontal](https://site.com/img/exemplo.png "Painel de áudio frontal")](http://link.com "Painel de áudio frontal")
+[![Painel de áudio frontal](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/images/Painel_de_audio_frontal.jpg?raw=true "Painel de áudio frontal")](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/images/Painel_de_audio_frontal.jpg?raw=true "Painel de áudio frontal")
 
 > Imagem 002. – Para ampliar, clique em cima da imagem abaixo:
 
-[![Painel de áudio frontal](https://site.com/img/exemplo.png "Painel de áudio frontal")](http://link.com "Painel de áudio frontal")
+[![Painel de áudio frontal](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/images/Painel_de_audio_frontal_2.jpg?raw=true "Painel de áudio frontal")](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/images/Painel_de_audio_frontal_2.jpg?raw=true "Painel de áudio frontal")
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--hardwares-e-softwares "Subir para o topo")
