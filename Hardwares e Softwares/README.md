@@ -3,7 +3,7 @@
 [![Hardwares e Softwares](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/images/hardware.jpg?raw=true "Hardwares e Softwares")](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/images/hardware.jpg?raw=true "Hardwares e Softwares")
 
 - [Descrição dos pinos do painel frontal da placa-mãe: Conectores e funcionalidades](#descri%C3%A7%C3%A3o-dos-pinos-do-painel-frontal-da-placa-m%C3%A3e-conectores-e-funcionalidades "Descrição dos pinos do painel frontal da placa-mãe: Conectores e funcionalidades")
-- [Descrição dos pinos de áudio no painel frontal do gabinete](# "Descrição dos pinos de áudio no painel frontal do gabinete")
+- [Descrição dos pinos de áudio no painel frontal do gabinete](#descri%C3%A7%C3%A3o-dos-pinos-de-%C3%A1udio-no-painel-frontal-do-gabinete "Descrição dos pinos de áudio no painel frontal do gabinete")
 
 ---
 
