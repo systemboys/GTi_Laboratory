@@ -2,11 +2,13 @@
 
 [![Hardwares e Softwares](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/images/hardware.jpg?raw=true "Hardwares e Softwares")](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/images/hardware.jpg?raw=true "Hardwares e Softwares")
 
-- [Descrição dos pinos do painel frontal da placa-mãe: Conectores e funcionalidades](https://site.com#anchor-link-1 "Descrição dos pinos do painel frontal da placa-mãe: Conectores e funcionalidades")
+- [Descrição dos pinos do painel frontal da placa-mãe: Conectores e funcionalidades](#descri%C3%A7%C3%A3o-dos-pinos-do-painel-frontal-da-placa-m%C3%A3e-conectores-e-funcionalidades "Descrição dos pinos do painel frontal da placa-mãe: Conectores e funcionalidades")
 
 ---
 
 ## Descrição dos pinos do painel frontal da placa-mãe: Conectores e funcionalidades
+
+[![Painel frontal](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/images/Painel_PowerSW_ResetSW_PowerLED_HD_LED.jpeg?raw=true "Painel frontal")](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/images/Painel_PowerSW_ResetSW_PowerLED_HD_LED.jpeg?raw=true "Painel frontal")
 
 Os pinos do painel frontal da placa-mãe são responsáveis por conectar os conectores do Power Switch, Reset Switch, Power LED e HD LED. Aqui está a descrição de cada um dos pinos:
 
