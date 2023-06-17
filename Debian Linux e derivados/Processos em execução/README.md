@@ -3,6 +3,7 @@
 # Sumário
 
 - [Barra de tarefas (`taskbar`), Eliminar processo ativo](#system-tray-icon "Barra de tarefas (`taskbar`), Eliminar processo ativo")
+- [Tarefas em execução (top)](# "Tarefas em execução (top)")
 
 ---
 
@@ -66,6 +67,37 @@ ps -A --sort=-cmd
 ```
 
 Este comando classifica os processos com base no nome do comando (CMD) em ordem alfabética decrescente.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--processos-em-execu%C3%A7%C3%A3o "Subir para o topo")
+
+---
+
+## Tarefas em execução (top)
+
+O comando "top" pode ser combinado com outros comandos no terminal Linux usando a funcionalidade de redirecionamento de saída. Por exemplo, você pode usar o comando "top -n 1" para executar o "top" uma única vez e redirecionar sua saída para outro comando ou arquivo.
+
+Aqui estão alguns exemplos de combinações de comandos com o "top":
+
+1. Redirecionar a saída do "top" para um arquivo:
+
+   ```bash
+   top -n 1 > arquivo.txt
+   ```
+
+2. Filtrar informações específicas do "top" usando o comando "grep":
+
+   ```bash
+   top -n 1 | grep "nome_do_processo"
+   ```
+
+3. Contar o número de processos em execução usando o comando "wc":
+
+   ```bash
+   top -n 1 | wc -l
+   ```
+
+Esses são apenas alguns exemplos básicos, mas você pode combinar o comando "top" com vários outros comandos do Linux para realizar diferentes tarefas e obter informações específicas sobre os processos em execução no sistema.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--processos-em-execu%C3%A7%C3%A3o "Subir para o topo")
