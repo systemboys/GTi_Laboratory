@@ -10,8 +10,21 @@
 - [Usuários do Linux](https://github.com/systemboys/GTi_Laboratory/tree/main/Debian%20Linux%20e%20derivados/Usu%C3%A1rios%20Linux#laborat%C3%B3rio-gti--usu%C3%A1rios-linux "Usuários do Linux")
 - [Diretórios e arquivos](https://github.com/systemboys/GTi_Laboratory/tree/main/Debian%20Linux%20e%20derivados/Diret%C3%B3rios%20e%20arquivos#laborat%C3%B3rio-gti--diret%C3%B3rios-e-arquivos "Diretórios e arquivos")
 - [Armazenamento](https://github.com/systemboys/GTi_Laboratory/tree/main/Debian%20Linux%20e%20derivados/Armazenamento#laborat%C3%B3rio-gti--armazenamento "Armazenamento")
+- [A Linux Foundation (Fundação Linux)](# "A Linux Foundation (Fundação Linux)")
 
 ---
+
+## A Linux Foundation (Fundação Linux)
+
+A Linux Foundation (Fundação Linux) é uma organização sem fins lucrativos dedicada ao avanço e suporte ao ecossistema Linux e ao software de código aberto em geral. Fundada em 2000, a Linux Foundation desempenha um papel fundamental na promoção, colaboração e proteção do Linux e de outros projetos de código aberto.
+
+A missão da Linux Foundation é acelerar o crescimento do Linux e do software de código aberto, fornecer recursos, infraestrutura e serviços para projetos de código aberto, além de promover padrões abertos e colaboração entre as comunidades de desenvolvedores.
+
+A Linux Foundation é conhecida por hospedar projetos de código aberto importantes, como o Linux (kernel do sistema operacional), Kubernetes (orquestrador de contêineres), Node.js (ambiente de execução JavaScript), Git (sistema de controle de versão distribuído) e muitos outros. Esses projetos são amplamente utilizados na indústria de tecnologia e têm um impacto significativo no desenvolvimento de software e na infraestrutura de TI.
+
+Além de hospedar projetos, a Linux Foundation oferece uma variedade de programas e serviços, incluindo treinamentos, certificações, eventos, grupos de trabalho, colaboração empresarial e iniciativas de padronização. A organização também promove a adoção de software de código aberto em vários setores e trabalha com empresas, governos e comunidades para impulsionar a inovação e o crescimento contínuo do software livre.
+
+A Linux Foundation desempenha um papel essencial no suporte à comunidade de código aberto, fornecendo recursos financeiros, técnicos e legais para garantir o sucesso e a sustentabilidade de projetos de código aberto. Seu trabalho tem ajudado a moldar a indústria de tecnologia e a promover a cultura de colaboração e transparência que é característica do software de código aberto.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#debian-linux-e-derivados "Subir para o topo")
