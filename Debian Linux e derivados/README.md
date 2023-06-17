@@ -16,7 +16,9 @@
 
 ## A Linux Foundation (Fundação Linux)
 
-A Linux Foundation (Fundação Linux) é uma organização sem fins lucrativos dedicada ao avanço e suporte ao ecossistema Linux e ao software de código aberto em geral. Fundada em 2000, a Linux Foundation desempenha um papel fundamental na promoção, colaboração e proteção do Linux e de outros projetos de código aberto.
+A Linux Foundation ([Fundação Linux](https://www.linuxfoundation.org/ "Fundação Linux")) é uma organização sem fins lucrativos dedicada ao avanço e suporte ao ecossistema Linux e ao software de código aberto em geral. Fundada em 2000, a Linux Foundation desempenha um papel fundamental na promoção, colaboração e proteção do Linux e de outros projetos de código aberto.
+
+[![Linux Foundation](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/images/linux-foundation-open-source.jpg?raw=true "Linux Foundation")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/images/linux-foundation-open-source.jpg?raw=true "Linux Foundation")
 
 A missão da Linux Foundation é acelerar o crescimento do Linux e do software de código aberto, fornecer recursos, infraestrutura e serviços para projetos de código aberto, além de promover padrões abertos e colaboração entre as comunidades de desenvolvedores.
 
