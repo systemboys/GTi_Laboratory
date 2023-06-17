@@ -10,7 +10,7 @@
 - [Usuários do Linux](https://github.com/systemboys/GTi_Laboratory/tree/main/Debian%20Linux%20e%20derivados/Usu%C3%A1rios%20Linux#laborat%C3%B3rio-gti--usu%C3%A1rios-linux "Usuários do Linux")
 - [Diretórios e arquivos](https://github.com/systemboys/GTi_Laboratory/tree/main/Debian%20Linux%20e%20derivados/Diret%C3%B3rios%20e%20arquivos#laborat%C3%B3rio-gti--diret%C3%B3rios-e-arquivos "Diretórios e arquivos")
 - [Armazenamento](https://github.com/systemboys/GTi_Laboratory/tree/main/Debian%20Linux%20e%20derivados/Armazenamento#laborat%C3%B3rio-gti--armazenamento "Armazenamento")
-- [A Linux Foundation (Fundação Linux)](# "A Linux Foundation (Fundação Linux)")
+- [A Linux Foundation (Fundação Linux)](#a-linux-foundation-funda%C3%A7%C3%A3o-linux "A Linux Foundation (Fundação Linux)")
 
 ---
 
