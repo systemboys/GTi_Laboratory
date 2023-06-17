@@ -3,7 +3,7 @@
 # Sumário
 
 - [Barra de tarefas (`taskbar`), Eliminar processo ativo](#system-tray-icon "Barra de tarefas (`taskbar`), Eliminar processo ativo")
-- [Tarefas em execução (top)](# "Tarefas em execução (top)")
+- [Tarefas em execução (`top`)](#tarefas-em-execu%C3%A7%C3%A3o-top "Tarefas em execução (top)")
 
 ---
 
