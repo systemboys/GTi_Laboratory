@@ -6,6 +6,7 @@
 
 - [Armazenamento](https://github.com/systemboys/GTi_Laboratory/tree/main/Microsoft%20Windows/Microsoft%20Windows%2010/Armazenamento#assuntos-windows--armazenamento "Armazenamento")
 - [Drivers de dispositivos](https://github.com/systemboys/GTi_Laboratory/tree/main/Microsoft%20Windows/Microsoft%20Windows%2010/Drivers%20de%20dispositivos#laborat%C3%B3rio-gti--assuntos-sobre-drivers-de-dispositivos "Drivers de dispositivos")
+- [Instalação de Softwares](# "Instalação de Softwares")
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory/tree/main/Microsoft%20Windows#assuntos-windows "Voltar ao Sumário") | 
 [(&uarr;) Subir](#microsoft-windows-10 "Subir para o topo")
