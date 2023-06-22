@@ -1,12 +1,10 @@
-# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi") / Assunto
+# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi") / Instalação de Softwares
 
 [![Imagem 1](https://site.com/img/exemplo.png "Imagem 1")](http://link.com "Imagem 1")
 
 - [Link 1](https://site.com#anchor-link-1 "Link 1")
 
 ---
-
-# Instalação de Softwares
 
 > ( ! ) Essas informações são baseadas na forma de instalação do técnicos da GLOBAL TEC Informática!
 
@@ -31,11 +29,11 @@
 
 Microsoft Office:
 
-[![Imagem 1](https://site.com/img/exemplo.png "Imagem 1")](http://link.com "Imagem 1")
+[![Microsoft Office](https://github.com/systemboys/GTi_Laboratory/blob/main/Microsoft%20Windows/Microsoft%20Windows%2010/Instala%C3%A7%C3%A3o%20de%20Softwares/images/Microsoft%20Office.png?raw=true "Microsoft Office")](https://github.com/systemboys/GTi_Laboratory/blob/main/Microsoft%20Windows/Microsoft%20Windows%2010/Instala%C3%A7%C3%A3o%20de%20Softwares/images/Microsoft%20Office.png?raw=true "Microsoft Office")
 
 Outros aplicativos para preencher o espaço vazio do menu:
 
-[![Imagem 1](https://site.com/img/exemplo.png "Imagem 1")](http://link.com "Imagem 1")
+[![outros aplicativos](https://github.com/systemboys/GTi_Laboratory/blob/main/Microsoft%20Windows/Microsoft%20Windows%2010/Instala%C3%A7%C3%A3o%20de%20Softwares/images/Outros%20softwares%20do%20sistema.png?raw=true "outros aplicativos")](https://github.com/systemboys/GTi_Laboratory/blob/main/Microsoft%20Windows/Microsoft%20Windows%2010/Instala%C3%A7%C3%A3o%20de%20Softwares/images/Outros%20softwares%20do%20sistema.png?raw=true "outros aplicativos")
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#assunto "Subir para o topo")
