@@ -1,6 +1,6 @@
 # [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi") / Instalação de Softwares
 
-[![Imagem 1](https://site.com/img/exemplo.png "Imagem 1")](http://link.com "Imagem 1")
+[![Instalação de Softwares](https://github.com/systemboys/GTi_Laboratory/blob/main/Microsoft%20Windows/Microsoft%20Windows%2010/Instala%C3%A7%C3%A3o%20de%20Softwares/images/aplicativos-windows-1000x563.jpg?raw=true "Instalação de Softwares")](https://github.com/systemboys/GTi_Laboratory/blob/main/Microsoft%20Windows/Microsoft%20Windows%2010/Instala%C3%A7%C3%A3o%20de%20Softwares/images/aplicativos-windows-1000x563.jpg?raw=true "Instalação de Softwares")
 
 - [Após formatação do Windows 10, instalação dos seguintes softwares](#ap%C3%B3s-formata%C3%A7%C3%A3o-do-windows-10-instala%C3%A7%C3%A3o-dos-seguintes-softwares "Após formatação do Windows 10, instalação dos seguintes softwares")
 - [Posição dos softwares no menu Iniciar](#posi%C3%A7%C3%A3o-dos-softwares-no-menu-iniciar "Posição dos softwares no menu Iniciar")
