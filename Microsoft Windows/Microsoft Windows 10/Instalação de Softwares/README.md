@@ -26,6 +26,11 @@
 |  11  | Deep Freeze                        | [![Baixar](https://github.com/systemboys/GTi_Laboratory/blob/main/Microsoft%20Windows/Microsoft%20Windows%2010/Instala%C3%A7%C3%A3o%20de%20Softwares/images/49364_box_crate_delivery_entrega_inventory_icon.png?raw=true "Baixar")](https://1drv.ms/u/s!AijDX6h8vVT-iYVdpz1QHXPLkfbsIg?e=S00sbP "Baixar") | O Deep Freeze Standard é um software que mantém a configuração original de computadores públicos, evitando alterações indesejadas e eliminando a necessidade de restauração do sistema. |
 |  12  | Posição dos ícones do menu Iniciar | [![Baixar](https://github.com/systemboys/GTi_Laboratory/blob/main/Microsoft%20Windows/Microsoft%20Windows%2010/Instala%C3%A7%C3%A3o%20de%20Softwares/images/49364_box_crate_delivery_entrega_inventory_icon.png?raw=true "Baixar")](https://f2ocqg.sn.files.1drv.com/y4mz7wK7W-n3axzL-OYB6fsCLrgEJvRyfKNmVHkEwdfgVrImqG9-MYSMMYbDYP_UI3Swq_I3t-lVOzditXAvKcm8YYg0WsPHxbCQLNWBGZzLDRzzhmIQqlMGgHWEi8R-S_eUYjei4CPnTuyj5MycSMVvEg16Xkun4EgSfv9leW7Cljs5mxgwpRhJA9PK4b2Dm7gbr-dEYGepS4dHK5yoi8C2A "Baixar") | O menu Iniciar do Windows 10 é uma interface centralizada que permite acesso rápido a aplicativos, configurações e arquivos. Ele apresenta um layout personalizável, com uma combinação de ícones e blocos dinâmicos para facilitar a navegação e o acesso às principais funcionalidades do sistema operacional. |
 
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--instala%C3%A7%C3%A3o-de-softwares "Subir para o topo")
+
+---
+
 ## Posição dos softwares no menu Iniciar
 
 Microsoft Office:
