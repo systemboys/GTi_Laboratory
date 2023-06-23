@@ -7,7 +7,7 @@
 
 ---
 
-> ( ! ) Essas informações são baseadas na forma de instalação do técnicos da GLOBAL TEC Informática!
+> ( ! ) Essas informações são baseadas na forma de instalação dos técnicos da GLOBAL TEC Informática!
 
 ## Após formatação do Windows 10, instalação dos seguintes softwares
 
