@@ -2,7 +2,7 @@
 
 [![Instalação de Softwares](https://github.com/systemboys/GTi_Laboratory/blob/main/Microsoft%20Windows/Microsoft%20Windows%2010/Instala%C3%A7%C3%A3o%20de%20Softwares/images/aplicativos-windows-1000x563.jpg?raw=true "Instalação de Softwares")](https://github.com/systemboys/GTi_Laboratory/blob/main/Microsoft%20Windows/Microsoft%20Windows%2010/Instala%C3%A7%C3%A3o%20de%20Softwares/images/aplicativos-windows-1000x563.jpg?raw=true "Instalação de Softwares")
 
-- [Após instalação do Windows 10, instalação dos seguintes softwares](#ap%C3%B3s-instalata%C3%A7%C3%A3o-do-windows-10-instala%C3%A7%C3%A3o-dos-seguintes-softwares "Após instalação do Windows 10, instalação dos seguintes softwares")
+- [Após instalação do Windows 10, instalação dos seguintes softwares](#ap%C3%B3s-instala%C3%A7%C3%A3o-do-windows-10-instala%C3%A7%C3%A3o-dos-seguintes-softwares "Após instalação do Windows 10, instalação dos seguintes softwares")
 - [Posição dos softwares no menu Iniciar](#posi%C3%A7%C3%A3o-dos-softwares-no-menu-iniciar "Posição dos softwares no menu Iniciar")
 
 ---
