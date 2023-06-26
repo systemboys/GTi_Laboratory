@@ -57,6 +57,7 @@ Botões do Painel na barra inferior.
 | Discrod | [Discord Inc](https://discord.com/ "Download") | Adicionar à área de trabalho. \|  Adicionar à área de trabalho. |
 | FileZilla | [filezilla-project.org](https://filezilla-project.org/download.php?type=client "Download") | Instalação via terminal: `apt install filezilla` e `apt --fix-broken install`. \|  Adicionar à área de trabalho. |
 | Steam | [Valve Corporation](https://store.steampowered.com/?l=portuguese "Download") | Adicionar à área de trabalho. |
+| Remmina | [Antenore Gatta](https://remmina.org/ "Antenore Gatta") | Instalação via terminal: `sudo apt-get install remmina` |
 
 ## Desenvolvimento
 
