@@ -6,6 +6,7 @@
 - [Instalar o Google Earth via terminal](#instalar-o-google-earth-via-terminal "Instalar o Google Earth via terminal")
 - [Instalar o Oracle Virtual Box no Debian Linux](#instalar-o-oracle-virtual-box-no-debian-linux "Instalar o Oracle Virtual Box no Debian Linux")
 - [Instalação e Desinstalação de Programas no Linux via Terminal](#instala%C3%A7%C3%A3o-e-desinstala%C3%A7%C3%A3o-de-programas-no-linux-via-terminal "Instalação e Desinstalação de Programas no Linux via Terminal")
+   - [Identificar programa para removê-lo via comando no terminal Linux](# "Identificar programa para removê-lo via comando no terminal Linux")
 
 ---
 
@@ -215,6 +216,27 @@ Certifique-se de adaptar os comandos de instalação e desinstalação de acordo
 Ao seguir esses exemplos, você poderá fazer a instalação e desinstalação de programas no Linux via terminal.
 
 Lembre-se de verificar a documentação oficial do programa e fazer backup de dados importantes antes de realizar qualquer alteração em seu sistema.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--instala%C3%A7%C3%A3o-de-pacotes "Subir para o topo")
+
+---
+
+## Identificar programa para removê-lo via comando no terminal Linux
+
+Sim, existe outra forma de identificar o programa para removê-lo via comando no terminal Linux. Você pode usar o comando `dpkg --list` para listar todos os pacotes instalados no sistema. Em seguida, você pode filtrar a saída usando o comando `grep` e fornecer um trecho do nome do programa que você deseja desinstalar.
+
+Por exemplo, se você lembrar que o programa possui a palavra "editor" no nome, você pode executar o seguinte comando:
+
+```bash
+dpkg --list | grep editor
+```
+
+Isso mostrará uma lista dos pacotes instalados que contêm a palavra "editor" no nome. A partir daí, você pode identificar o pacote específico que deseja desinstalar e usar o comando `apt remove` seguido do nome do pacote para removê-lo.
+
+Tenha cuidado ao desinstalar pacotes usando esse método, pois é importante identificar corretamente o pacote que você deseja remover para evitar a remoção de pacotes indesejados.
+
+Título para anotação: Identificando e removendo programas no Linux usando o comando dpkg.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--instala%C3%A7%C3%A3o-de-pacotes "Subir para o topo")
