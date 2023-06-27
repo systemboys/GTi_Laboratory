@@ -5,6 +5,7 @@
 - [Erro de PATH após instalação de pacote .deb no Linux](#erro-de-path-ap%C3%B3s-instala%C3%A7%C3%A3o-de-pacote-deb-no-linux "Erro de PATH após instalação de pacote .deb no Linux")
 - [Instalar o Google Earth via terminal](#instalar-o-google-earth-via-terminal "Instalar o Google Earth via terminal")
 - [Instalar o Oracle Virtual Box no Debian Linux](#instalar-o-oracle-virtual-box-no-debian-linux "Instalar o Oracle Virtual Box no Debian Linux")
+- [Instalação e Desinstalação de Programas no Linux via Terminal](# "Instalação e Desinstalação de Programas no Linux via Terminal")
 
 ---
 
@@ -168,6 +169,52 @@ sudo apt install virtualbox-6.1
 Certifique-se de ter privilégios administrativos para executar os comandos com `sudo`. Além disso, verifique a versão mais recente do VirtualBox no site oficial (https://www.virtualbox.org) para garantir que você está instalando a versão correta.
 
 Observação: Se você estiver usando uma versão diferente do Debian, substitua `$(lsb_release -sc)` pelo código do seu sistema, como "buster" para o Debian 10.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--instala%C3%A7%C3%A3o-de-pacotes "Subir para o topo")
+
+---
+
+## Instalação e Desinstalação de Programas no Linux via Terminal
+
+Exemplo 1: Instalando o TigerVNC
+1. Abra o terminal em seu sistema.
+2. Execute o seguinte comando para instalar o TigerVNC:
+   ```bash
+   sudo apt install tigervnc-scraping-server
+   ```
+3. Aguarde até que o processo de instalação seja concluído.
+
+Exemplo 2: Desinstalando o TigerVNC
+1. Abra o terminal em seu sistema.
+2. Execute o seguinte comando para desinstalar o TigerVNC:
+   ```bash
+   sudo apt remove tigervnc-scraping-server
+   ```
+3. Aguarde até que o processo de desinstalação seja concluído.
+
+Exemplo 3: Instalando o RealVNC Viewer
+1. Abra o terminal em seu sistema.
+2. Execute o seguinte comando para instalar o RealVNC Viewer:
+   ```bash
+   sudo dpkg -i realvnc-vnc-viewer.deb
+   ```
+   (substitua "realvnc-vnc-viewer.deb" pelo nome do pacote .deb que você baixou)
+3. Aguarde até que o processo de instalação seja concluído.
+
+Exemplo 4: Desinstalando o RealVNC Viewer
+1. Abra o terminal em seu sistema.
+2. Execute o seguinte comando para desinstalar o RealVNC Viewer:
+   ```bash
+   sudo dpkg -r realvnc-vnc-viewer
+   ```
+3. Aguarde até que o processo de desinstalação seja concluído.
+
+Certifique-se de adaptar os comandos de instalação e desinstalação de acordo com o programa que você está instalando ou removendo.
+
+Ao seguir esses exemplos, você poderá fazer a instalação e desinstalação de programas no Linux via terminal.
+
+Lembre-se de verificar a documentação oficial do programa e fazer backup de dados importantes antes de realizar qualquer alteração em seu sistema.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--instala%C3%A7%C3%A3o-de-pacotes "Subir para o topo")
