@@ -1,6 +1,6 @@
 # [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi") / Assuntos relacionados à redes e Internet
 
-[![Imagem 1](https://site.com/img/exemplo.png "Imagem 1")](http://link.com "Imagem 1")
+[![Redes e Internet](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Assuntos%20relacionados%20%C3%A0%20redes%20e%20Internet/images/networks.png?raw=true "Redes e Internet")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Assuntos%20relacionados%20%C3%A0%20redes%20e%20Internet/images/networks.png?raw=true "Redes e Internet")
 
 - [Entendendo o comando nslookup e a resolução de DNS no Linux (obtendo IP de domínios)](#entendendo-o-comando-nslookup-e-a-resolu%C3%A7%C3%A3o-de-dns-no-linux-obtendo-ip-de-dom%C3%ADnios "Entendendo o comando nslookup e a resolução de DNS no Linux (obtendo IP de domínios)")
 
@@ -8,7 +8,9 @@
 
 ## Entendendo o comando nslookup e a resolução de DNS no Linux (obtendo IP de domínios)
 
-O comando "nslookup dominio_do_site.com" é usado para obter informações sobre um domínio específico, como o endereço IP associado a ele. No exemplo que você forneceu, o comando "nslookup facebook.com" foi executado.
+O comando "nslookup dominio_do_site.com" é usado para obter informações sobre um domínio específico, como o endereço IP associado a ele. No exemplo abaixo, o comando "nslookup facebook.com" foi executado.
+
+[![Comando nslookup](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Assuntos%20relacionados%20%C3%A0%20redes%20e%20Internet/images/Terminal_comando_nslookup.png?raw=true "Comando nslookup")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Assuntos%20relacionados%20%C3%A0%20redes%20e%20Internet/images/Terminal_comando_nslookup.png?raw=true "Comando nslookup")
 
 A resposta retornada mostra o servidor DNS usado para fazer a consulta (no caso, 10.0.0.1) e as informações relacionadas ao domínio "facebook.com". A resposta não é autoritativa, o que significa que não é proveniente do servidor DNS oficial do domínio.
 
