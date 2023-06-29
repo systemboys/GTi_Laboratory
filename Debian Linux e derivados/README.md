@@ -11,7 +11,7 @@
 - [Usuários do Linux](https://github.com/systemboys/GTi_Laboratory/tree/main/Debian%20Linux%20e%20derivados/Usu%C3%A1rios%20Linux#laborat%C3%B3rio-gti--usu%C3%A1rios-linux "Usuários do Linux")
 - [Diretórios e arquivos](https://github.com/systemboys/GTi_Laboratory/tree/main/Debian%20Linux%20e%20derivados/Diret%C3%B3rios%20e%20arquivos#laborat%C3%B3rio-gti--diret%C3%B3rios-e-arquivos "Diretórios e arquivos")
 - [Armazenamento](https://github.com/systemboys/GTi_Laboratory/tree/main/Debian%20Linux%20e%20derivados/Armazenamento#laborat%C3%B3rio-gti--armazenamento "Armazenamento")
-- [Assuntos relacionados à rede e Internet](# "Assuntos relacionados à rede e Internet")
+- [Assuntos relacionados à rede e Internet](https://github.com/systemboys/GTi_Laboratory/tree/main/Debian%20Linux%20e%20derivados/Assuntos%20relacionados%20%C3%A0%20redes%20e%20Internet#entendendo-o-comando-nslookup-e-a-resolu%C3%A7%C3%A3o-de-dns-no-linux-obtendo-ip-de-dom%C3%ADnios "Assuntos relacionados à rede e Internet")
 
 ---
 

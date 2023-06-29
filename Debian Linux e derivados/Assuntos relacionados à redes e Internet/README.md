@@ -2,7 +2,7 @@
 
 [![Imagem 1](https://site.com/img/exemplo.png "Imagem 1")](http://link.com "Imagem 1")
 
-- [Entendendo o comando nslookup e a resolução de DNS no Linux (obtendo IP de domínios)](https://site.com#anchor-link-1 "Entendendo o comando nslookup e a resolução de DNS no Linux (obtendo IP de domínios)")
+- [Entendendo o comando nslookup e a resolução de DNS no Linux (obtendo IP de domínios)](#entendendo-o-comando-nslookup-e-a-resolu%C3%A7%C3%A3o-de-dns-no-linux-obtendo-ip-de-dom%C3%ADnios "Entendendo o comando nslookup e a resolução de DNS no Linux (obtendo IP de domínios)")
 
 ---
 
@@ -17,6 +17,6 @@ Em seguida, são exibidos os registros de nome e endereço (IP) associados ao do
 Essas informações são úteis para verificar a resolução de DNS de um domínio específico e obter os endereços IP associados a ele.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#assunto "Subir para o topo")
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--assuntos-relacionados-%C3%A0-redes-e-internet "Subir para o topo")
 
 ---
