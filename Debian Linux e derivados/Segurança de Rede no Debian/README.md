@@ -6,7 +6,7 @@
 
 ---
 
-## NMap
+## Verificarndo porta com NMap
 
 Para verificar se a porta 22 (SSH) está aberta em um determinado endereço IP, você pode usar uma ferramenta como o `nmap`. No seu computador local (Debian Linux), siga os passos abaixo:
 
