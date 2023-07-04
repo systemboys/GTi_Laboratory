@@ -5,7 +5,7 @@
 - [Verificarndo porta com NMap](#verificarndo-porta-com-nmap "Verificarndo porta com NMap")
 - [Verificar status de todas as portas em um host](#verificar-status-de-todas-as-portas-em-um-host "Verificar status de todas as portas em um host")
 - [Instalar utilitário "ufw" (Uncomplicated Firewall) no Debian Linux](#instalar-utilit%C3%A1rio-ufw-uncomplicated-firewall-no-debian-linux "Instalar utilitário 'ufw' (Uncomplicated Firewall) no Debian Linux")
-- [Firewall UFW](#firewall-ufw "Firewall UFW")
+- [Firewall UFW (abrir ou fechar portas)](#firewall-ufw-abrir-ou-fechar-portas "Firewall UFW (abrir ou fechar portas)")
 
 ---
 
