@@ -1,6 +1,6 @@
 # [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi") / Segurança de Rede no Debian Linux
 
-[![Firewall Linux](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Seguran%C3%A7a%20de%20Rede%20no%20Debian/images/firewall-logo.png?raw=true "Firewall Linux")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Seguran%C3%A7a%20de%20Rede%20no%20Debian/images/firewall-logo.png?raw=true "Firewall Linux")
+[![Firewall Linux](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Seguran%C3%A7a%20de%20Rede%20no%20Debian/images/managed-firewalls.png?raw=true "Firewall Linux")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Seguran%C3%A7a%20de%20Rede%20no%20Debian/images/managed-firewalls.png?raw=true "Firewall Linux")
 
 - [Verificarndo porta com NMap](#verificarndo-porta-com-nmap "Verificarndo porta com NMap")
 - [Verificar status de todas as portas em um host](#verificar-status-de-todas-as-portas-em-um-host "Verificar status de todas as portas em um host")
