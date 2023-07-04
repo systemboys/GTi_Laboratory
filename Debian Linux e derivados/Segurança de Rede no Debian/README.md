@@ -2,7 +2,10 @@
 
 [![Imagem 1](https://site.com/img/exemplo.png "Imagem 1")](http://link.com "Imagem 1")
 
-- [Link 1](https://site.com#anchor-link-1 "Link 1")
+- [Verificarndo porta com NMap](#verificarndo-porta-com-nmap "Verificarndo porta com NMap")
+- [Verificar status de todas as portas em um host](#verificar-status-de-todas-as-portas-em-um-host "Verificar status de todas as portas em um host")
+- [Instalar utilitário "ufw" (Uncomplicated Firewall) no Debian Linux](#instalar-utilit%C3%A1rio-ufw-uncomplicated-firewall-no-debian-linux "Instalar utilitário 'ufw' (Uncomplicated Firewall) no Debian Linux")
+- [Firewall UFW](#firewall-ufw "Firewall UFW")
 
 ---
 
