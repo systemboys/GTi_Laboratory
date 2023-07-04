@@ -89,7 +89,7 @@ Após a conclusão da instalação, você poderá utilizar o "ufw" para configur
 
 ---
 
-## Firewall UFW
+## Firewall UFW (abrir ou fechar portas)
 
 Para abrir ou fechar portas em um sistema Debian Linux, você pode usar o utilitário UFW (Uncomplicated Firewall) da seguinte maneira:
 
