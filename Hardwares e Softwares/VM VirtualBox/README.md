@@ -1,3 +1,11 @@
+# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi") / VM VirtualBox
+
+[![Imagem 1](https://site.com/img/exemplo.png "Imagem 1")](http://link.com "Imagem 1")
+
+- [Link 1](https://site.com#anchor-link-1 "Link 1")
+
+---
+
 ## Configurando resolução da área de trabalho em uma máquina virtual no VirtualBox
 
 Para que a máquina virtual utilize as configurações de resolução do host no VirtualBox, você precisa instalar os "Adicionais para Convidado" (Guest Additions) dentro da máquina virtual. Siga os passos abaixo:
@@ -12,3 +20,8 @@ Para que a máquina virtual utilize as configurações de resolução do host no
 Após reiniciar a máquina virtual, você deverá conseguir ajustar a resolução da área de trabalho de acordo com as configurações disponíveis no host. Basta acessar as configurações de exibição no Windows 10 dentro da máquina virtual e selecionar a resolução desejada.
 
 Lembrando que é importante ter os drivers de vídeo corretos instalados no host para que as opções de resolução sejam adequadamente disponibilizadas na máquina virtual.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#assunto "Subir para o topo")
+
+---
