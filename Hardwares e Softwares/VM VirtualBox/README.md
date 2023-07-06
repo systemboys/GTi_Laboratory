@@ -2,7 +2,7 @@
 
 [![Imagem 1](https://site.com/img/exemplo.png "Imagem 1")](http://link.com "Imagem 1")
 
-- [Link 1](https://site.com#anchor-link-1 "Link 1")
+- [Configurando resolução da área de trabalho em uma máquina virtual no VirtualBox](#configurando-resolu%C3%A7%C3%A3o-da-%C3%A1rea-de-trabalho-em-uma-m%C3%A1quina-virtual-no-virtualbox "Configurando resolução da área de trabalho em uma máquina virtual no VirtualBox")
 
 ---
 
@@ -22,6 +22,6 @@ Após reiniciar a máquina virtual, você deverá conseguir ajustar a resoluçã
 Lembrando que é importante ter os drivers de vídeo corretos instalados no host para que as opções de resolução sejam adequadamente disponibilizadas na máquina virtual.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#assunto "Subir para o topo")
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--vm-virtualbox "Subir para o topo")
 
 ---
