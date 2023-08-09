@@ -3,7 +3,7 @@
 [![Monitoramento Linux](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Monitoramento%20de%20sistemas/images/monitoramento_linux.jpeg?raw=true "Monitoramento Linux")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Monitoramento%20de%20sistemas/images/monitoramento_linux.jpeg?raw=true "Monitoramento Linux")
 
 - [Instalar o BashTOP no Debian Linux](#instalar-o-bashtop-no-debian-linux "Instalar o BashTOP no Debian Linux")
-- [Instalar o utilitário de monitoramento HTOP](# "Instalar o utilitário de monitoramento HTOP")
+- [Instalar o utilitário de monitoramento HTOP](#instalar-o-utilit%C3%A1rio-de-monitoramento-htop "Instalar o utilitário de monitoramento HTOP")
 
 ---
 
@@ -83,6 +83,8 @@ sudo apt install htop
 ```bash
 htop
 ```
+
+[![HTop](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Monitoramento%20de%20sistemas/images/htop.png?raw=true "HTop")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Monitoramento%20de%20sistemas/images/htop.png?raw=true "HTop")
 
 O "htop" deve ser iniciado e exibirá uma interface interativa que mostra uma visão detalhada do uso de recursos do sistema.
 
