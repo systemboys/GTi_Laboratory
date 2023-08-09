@@ -1,6 +1,6 @@
 # [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi") / Monitoramento de sistema
 
-[![Imagem 1](https://site.com/img/exemplo.png "Imagem 1")](http://link.com "Imagem 1")
+[![Monitoramento Linux](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Monitoramento%20de%20sistemas/images/monitoramento_linux.jpeg?raw=true "Monitoramento Linux")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Monitoramento%20de%20sistemas/images/monitoramento_linux.jpeg?raw=true "Monitoramento Linux")
 
 - [Instalar o BashTOP no Debian Linux](#instalar-o-bashtop-no-debian-linux "Instalar o BashTOP no Debian Linux")
 
