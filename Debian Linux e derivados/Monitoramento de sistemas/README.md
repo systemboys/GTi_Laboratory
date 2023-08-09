@@ -48,6 +48,8 @@ sudo make install
 bashtop
 ```
 
+[![BashTOP](https://site.com/img/exemplo.png "BashTOP")](http://link.com "BashTOP")
+
 O BashTOP deve iniciar e começar a exibir informações sobre o uso de CPU, memória e outros recursos do sistema.
 
 Lembre-se de que, como o BashTOP é uma ferramenta de terceiros, ele pode não estar disponível nos repositórios oficiais do Debian. Portanto, ao instalá-lo dessa maneira, você está confiando no código fornecido no repositório do GitHub. Sempre verifique a fonte e a confiabilidade das ferramentas que você instala no seu sistema.
