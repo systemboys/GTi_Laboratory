@@ -8,6 +8,7 @@
 - [Instalação e Desinstalação de Programas no Linux via Terminal](#instala%C3%A7%C3%A3o-e-desinstala%C3%A7%C3%A3o-de-programas-no-linux-via-terminal "Instalação e Desinstalação de Programas no Linux via Terminal")
    - [Identificar e remover programas no Linux usando o comando dpkg no terminal](#identificar-e-remover-programas-no-linux-usando-o-comando-dpkg-no-terminal "Identificar e remover programas no Linux usando o comando dpkg no terminal")
 - [Script de Instalação Automática de pacotes no Linux](#script-de-instala%C3%A7%C3%A3o-autom%C3%A1tica-de-pacotes-no-linux "Script de Instalação Automática de pacotes no Linux")
+   - [Verificação e Instalação Condicional de Programas em Scripts Bash](# "Verificação e Instalação Condicional de Programas em Scripts Bash")
 
 ---
 
@@ -287,6 +288,49 @@ Lembre-se de que, para fazer essas alterações no sistema (adicionar chaves e r
 Certifique-se de executar scripts de fontes confiáveis, pois eles têm o potencial de alterar o sistema. Como o script está adicionando um repositório de terceiros, esteja ciente dos riscos associados a isso.
 
 Depois de usar o AnyDesk, você pode remover o script se desejar, já que ele é apenas para automação do processo de instalação.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--instala%C3%A7%C3%A3o-de-pacotes "Subir para o topo")
+
+---
+
+## Verificação e Instalação Condicional de Programas em Scripts Bash
+
+Você pode usar uma estrutura de controle para verificar se qualquer programa está instalado no sistema. O comando `command -v` verifica se um determinado comando está disponível no ambiente. Portanto, você pode usá-lo para verificar a existência de qualquer programa no sistema.
+
+Por exemplo, para verificar a existência do Node.js, você pode usar algo assim:
+
+```bash
+# Verificar se o Node.js está instalado
+if ! command -v node &> /dev/null; then
+    echo "Node.js não está instalado. Instalando..."
+    sudo apt install nodejs
+else
+    echo "Node.js já está instalado. Ignorando a instalação."
+fi
+```
+
+No caso do Node.js, o comando "node" é o executável que é usado para executar scripts do Node.js, portanto, verificar sua disponibilidade é suficiente para verificar se o Node.js está instalado.
+
+Você pode usar essa estrutura de controle para verificar a existência de qualquer programa no sistema e tomar ação com base nessa verificação.
+
+Você pode usar a mesma estrutura de controle para verificar a existência de programas como o AnyDesk ou qualquer outro programa no sistema. O princípio é o mesmo: você verifica se o comando associado ao programa está disponível.
+
+No caso do AnyDesk, o comando associado a ele pode variar dependendo da versão e da configuração específica. Normalmente, os programas instalados são acessíveis por seus nomes de comando, mas isso pode não ser verdade para todos os programas. Alguns programas podem não ter um comando associado diretamente.
+
+Se você souber qual é o comando associado ao programa (como "anydesk" no caso do AnyDesk), pode usar a estrutura de controle da mesma forma que fizemos anteriormente:
+
+```bash
+# Verificar se o AnyDesk está instalado
+if ! command -v anydesk &> /dev/null; then
+    echo "AnyDesk não está instalado. Instalando..."
+    # Comando para instalar o AnyDesk
+else
+    echo "AnyDesk já está instalado. Ignorando a instalação."
+fi
+```
+
+Lembre-se de que alguns programas podem não ter um comando associado diretamente e podem ter um processo de instalação mais complexo que envolve a obtenção de pacotes específicos ou a configuração de repositórios. Certifique-se de verificar a documentação oficial do programa ou as orientações da distribuição Linux para a instalação correta do AnyDesk ou de qualquer outro software que você deseja instalar.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--instala%C3%A7%C3%A3o-de-pacotes "Subir para o topo")
