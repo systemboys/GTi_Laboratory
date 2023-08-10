@@ -7,6 +7,7 @@
 - [Instalar o Oracle Virtual Box no Debian Linux](#instalar-o-oracle-virtual-box-no-debian-linux "Instalar o Oracle Virtual Box no Debian Linux")
 - [Instalação e Desinstalação de Programas no Linux via Terminal](#instala%C3%A7%C3%A3o-e-desinstala%C3%A7%C3%A3o-de-programas-no-linux-via-terminal "Instalação e Desinstalação de Programas no Linux via Terminal")
    - [Identificar e remover programas no Linux usando o comando dpkg no terminal](#identificar-e-remover-programas-no-linux-usando-o-comando-dpkg-no-terminal "Identificar e remover programas no Linux usando o comando dpkg no terminal")
+- [Script de Instalação Automática de pacotes no Linux](# "Script de Instalação Automática de pacotes no Linux")
 
 ---
 
@@ -235,6 +236,57 @@ dpkg --list | grep editor
 Isso mostrará uma lista dos pacotes instalados que contêm a palavra "editor" no nome. A partir daí, você pode identificar o pacote específico que deseja desinstalar e usar o comando `apt remove` seguido do nome do pacote para removê-lo.
 
 Tenha cuidado ao desinstalar pacotes usando esse método, pois é importante identificar corretamente o pacote que você deseja remover para evitar a remoção de pacotes indesejados.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--instala%C3%A7%C3%A3o-de-pacotes "Subir para o topo")
+
+---
+
+## Script de Instalação Automática de pacotes no Linux
+
+Certamente! Você pode criar um script shell executável para realizar essas etapas automaticamente. Aqui está um exemplo de como fazer isso para instalar um pacote, nosso exemplo será o "AnyDesk":
+
+1. Abra um editor de texto, como o "nano", e crie um novo arquivo chamado `install_anydesk.sh`:
+
+```bash
+nano install_anydesk.sh
+```
+
+2. Cole o seguinte conteúdo no arquivo:
+
+```bash
+#!/bin/bash
+
+# Adicionar a chave GPG
+wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | sudo apt-key add -
+
+# Adicionar o repositório
+echo "deb http://deb.anydesk.com/ all main" | sudo tee /etc/apt/sources.list.d/anydesk-stable.list
+
+# Atualizar os pacotes
+sudo apt update
+
+# Instalar o AnyDesk
+sudo apt install anydesk
+
+echo "AnyDesk instalado com sucesso!"
+```
+
+3. Salve o arquivo pressionando `Ctrl` + `O`, pressione Enter para confirmar e, em seguida, saia do editor pressionando `Ctrl` + `X`.
+
+4. Dê permissão de execução ao script:
+
+```bash
+chmod +x install_anydesk.sh
+```
+
+Agora você pode executar o script simplesmente digitando `./install_anydesk.sh` no terminal. Isso automatizará o processo de adição da chave GPG, configuração do repositório, atualização dos pacotes e instalação do AnyDesk.
+
+Lembre-se de que, para fazer essas alterações no sistema (adicionar chaves e repositórios), você precisa ter privilégios de superusuário (root). Portanto, o script solicitará a senha do sudo quando necessário.
+
+Certifique-se de executar scripts de fontes confiáveis, pois eles têm o potencial de alterar o sistema. Como o script está adicionando um repositório de terceiros, esteja ciente dos riscos associados a isso.
+
+Depois de usar o AnyDesk, você pode remover o script se desejar, já que ele é apenas para automação do processo de instalação.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--instala%C3%A7%C3%A3o-de-pacotes "Subir para o topo")
