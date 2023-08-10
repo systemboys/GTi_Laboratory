@@ -8,7 +8,7 @@
 - [Instalação e Desinstalação de Programas no Linux via Terminal](#instala%C3%A7%C3%A3o-e-desinstala%C3%A7%C3%A3o-de-programas-no-linux-via-terminal "Instalação e Desinstalação de Programas no Linux via Terminal")
    - [Identificar e remover programas no Linux usando o comando dpkg no terminal](#identificar-e-remover-programas-no-linux-usando-o-comando-dpkg-no-terminal "Identificar e remover programas no Linux usando o comando dpkg no terminal")
 - [Script de Instalação Automática de pacotes no Linux](#script-de-instala%C3%A7%C3%A3o-autom%C3%A1tica-de-pacotes-no-linux "Script de Instalação Automática de pacotes no Linux")
-   - [Verificação e Instalação Condicional de Programas em Scripts Bash](# "Verificação e Instalação Condicional de Programas em Scripts Bash")
+   - [Verificação e Instalação Condicional de Programas em Scripts Bash](#verifica%C3%A7%C3%A3o-e-instala%C3%A7%C3%A3o-condicional-de-programas-em-scripts-bash "Verificação e Instalação Condicional de Programas em Scripts Bash")
 
 ---
 
