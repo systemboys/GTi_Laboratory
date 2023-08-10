@@ -55,6 +55,6 @@ Isso iniciará o MapSCII e você verá o mapa ASCII no terminal. Você pode nave
 Lembre-se de que essa é uma ferramenta experimental e de entretenimento. A qualidade do mapa ASCII pode variar, dependendo da área que você está visualizando. Divirta-se explorando!
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#assunto "Subir para o topo")
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--softwares-para-terminais "Subir para o topo")
 
 ---
