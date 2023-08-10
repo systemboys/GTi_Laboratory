@@ -50,7 +50,7 @@ npm start
 
 Isso iniciará o MapSCII e você verá o mapa ASCII no terminal. Você pode navegar pelo mapa usando as teclas de seta e as teclas "W", "A", "S" e "D". Para sair do MapSCII, pressione `Ctrl` + `C`.
 
-[![MapSCII](https://site.com/img/exemplo.png "MapSCII")](http://link.com "MapSCII")
+[![MapSCII](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Softwares%20para%20terminais/images/mapscii.png?raw=true "MapSCII")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Softwares%20para%20terminais/images/mapscii.png?raw=true "MapSCII")
 
 Lembre-se de que essa é uma ferramenta experimental e de entretenimento. A qualidade do mapa ASCII pode variar, dependendo da área que você está visualizando. Divirta-se explorando!
 
