@@ -1,6 +1,6 @@
 # [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi") / Softwares para terminais
 
-[![Imagem 1](https://site.com/img/exemplo.png "Imagem 1")](http://link.com "Imagem 1")
+[![Terminal Linux](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Softwares%20para%20terminais/images/terminai_linux.jpg?raw=true "Terminal Linux")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Softwares%20para%20terminais/images/terminai_linux.jpg?raw=true "Terminal Linux")
 
 - [Executando Mapas ASCII no Terminal com MapSCII](#executando-mapas-ascii-no-terminal-com-mapscii "Executando Mapas ASCII no Terminal com MapSCII")
 
