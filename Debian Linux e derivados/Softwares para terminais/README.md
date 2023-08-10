@@ -1,0 +1,60 @@
+# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi") / Softwares para terminais
+
+[![Imagem 1](https://site.com/img/exemplo.png "Imagem 1")](http://link.com "Imagem 1")
+
+- [Executando Mapas ASCII no Terminal com MapSCII](#executando-mapas-ascii-no-terminal-com-mapscii "Executando Mapas ASCII no Terminal com MapSCII")
+
+---
+
+## Executando Mapas ASCII no Terminal com MapSCII
+
+O MapSCII é uma ferramenta interessante que permite visualizar mapas no estilo ASCII direto no terminal. Para executá-lo a partir do GitHub, siga estas etapas:
+
+1. Abra um terminal. Você pode fazer isso pressionando `Ctrl` + `Alt` + `T` ao mesmo tempo.
+
+2. Certifique-se de ter o Node.js instalado em seu sistema. Você pode verificar isso digitando:
+
+```bash
+node -v
+```
+
+Se o Node.js não estiver instalado, você precisará instalá-lo. No Debian ou no Linux Mint, você pode fazer isso com o seguinte comando:
+
+```bash
+sudo apt install nodejs
+```
+
+3. Clone o repositório do MapSCII do GitHub:
+
+```bash
+git clone https://github.com/rastapasta/mapscii.git
+```
+
+4. Entre no diretório que foi criado após o clone:
+
+```bash
+cd mapscii
+```
+
+5. Instale as dependências do Node.js:
+
+```bash
+npm install
+```
+
+6. Após a instalação das dependências, execute o MapSCII:
+
+```bash
+npm start
+```
+
+Isso iniciará o MapSCII e você verá o mapa ASCII no terminal. Você pode navegar pelo mapa usando as teclas de seta e as teclas "W", "A", "S" e "D". Para sair do MapSCII, pressione `Ctrl` + `C`.
+
+[![MapSCII](https://site.com/img/exemplo.png "MapSCII")](http://link.com "MapSCII")
+
+Lembre-se de que essa é uma ferramenta experimental e de entretenimento. A qualidade do mapa ASCII pode variar, dependendo da área que você está visualizando. Divirta-se explorando!
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#assunto "Subir para o topo")
+
+---
