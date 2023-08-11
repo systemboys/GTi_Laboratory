@@ -7,6 +7,8 @@
 - [Apagar um diretório com todos os seus subdiretórios e arquivos](#apagar-um-diret%C3%B3rio-com-todos-os-seus-subdiret%C3%B3rios-e-arquivos "Apagar um diretório com todos os seus subdiretórios e arquivos")
 - [Apagar todos os arquivo de um diretório exceto um arquivo ou diretório filho](#apagar-todos-os-arquivo-de-um-diret%C3%B3rio-exceto-um-arquivo-ou-diret%C3%B3rio-filho "Apagar todos os arquivo de um diretório exceto um arquivo ou diretório filho")
 - [Permissões a arquivos e diretórios](#permiss%C3%B5es-a-arquivos-e-diret%C3%B3rios "Permissões a arquivos e diretórios")
+> Compactadores
+- [Guia Rápido: Como Extrair Arquivos ZIP Usando o Terminal no Linux](# "Guia Rápido: Como Extrair Arquivos ZIP Usando o Terminal no Linux")
 
 ---
 
@@ -185,6 +187,49 @@ Onde "[permissões]" são as permissões que você deseja definir para o arquivo
 5. Confirme que as permissões foram definidas corretamente usando o comando "ls -l" para listar o arquivo ou diretório e suas permissões.
 
 Lembre-se de que as permissões de arquivos e diretórios são uma parte importante da segurança do sistema, por isso é importante usar com cuidado e conceder apenas as permissões necessárias.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao SumÃ¡rio") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--diret%C3%B3rios-e-arquivos "Subir para o topo")
+
+---
+
+## Guia Rápido: Como Extrair Arquivos ZIP Usando o Terminal no Linux
+
+Para extrair um arquivo ZIP via terminal, você pode usar o comando `unzip`. Aqui está a sintaxe básica:
+
+```bash
+unzip nome-do-arquivo.zip
+```
+
+Substitua "nome-do-arquivo.zip" pelo nome real do arquivo ZIP que você deseja extrair. Se o arquivo ZIP estiver em um diretório diferente do diretório atual do terminal, você precisará fornecer o caminho completo para o arquivo.
+
+Por exemplo, se o arquivo ZIP estiver em sua pasta pessoal:
+
+```bash
+unzip ~/nome-do-arquivo.zip
+```
+
+Se o arquivo ZIP contiver diretórios e você quiser extrair tudo para o diretório atual, use o seguinte comando:
+
+```bash
+unzip nome-do-arquivo.zip -d .
+```
+
+Isso extrairá o conteúdo do arquivo ZIP para o diretório em que você está no momento.
+
+Se você quiser extrair o conteúdo para um diretório específico, substitua `.` pelo caminho para o diretório de destino:
+
+```bash
+unzip nome-do-arquivo.zip -d /caminho/do/diretorio
+```
+
+Lembre-se de que o comando `unzip` precisa estar disponível no seu sistema. Se ele não estiver instalado, você pode instalá-lo usando o seguinte comando (no Debian ou Ubuntu):
+
+```bash
+sudo apt install unzip
+```
+
+Após a instalação do `unzip`, você poderá usá-lo para extrair arquivos ZIP como mencionado anteriormente.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao SumÃ¡rio") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--diret%C3%B3rios-e-arquivos "Subir para o topo")
