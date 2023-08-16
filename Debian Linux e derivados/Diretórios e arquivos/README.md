@@ -3,6 +3,7 @@
 [![Diretórios e arquivos](https://github.com/systemboys/GTi_Laboratory/raw/main/Debian%20Linux%20e%20derivados/Diret%C3%B3rios%20e%20arquivos/images/desktop_zero_feature_tiny.jpg "Diretórios e arquivos")](http://link.com "Diretórios e arquivos")
 
 - [Renomear um diretório via terminal Linux](#renomear-um-diret%C3%B3rio-via-terminal-linux "Renomear um diretório via terminal Linux")
+- [Como Copiar Arquivos e Diretórios Usando o Terminal Linux](# "Como Copiar Arquivos e Diretórios Usando o Terminal Linux")
 - [Mover diretório ou arquivo de um local para outro](#mover-diret%C3%B3rio-ou-arquivo-de-um-local-para-outro "Mover diretório ou arquivo de um local para outro")
 - [Apagar um diretório com todos os seus subdiretórios e arquivos](#apagar-um-diret%C3%B3rio-com-todos-os-seus-subdiret%C3%B3rios-e-arquivos "Apagar um diretório com todos os seus subdiretórios e arquivos")
 - [Apagar todos os arquivo de um diretório exceto um arquivo ou diretório filho](#apagar-todos-os-arquivo-de-um-diret%C3%B3rio-exceto-um-arquivo-ou-diret%C3%B3rio-filho "Apagar todos os arquivo de um diretório exceto um arquivo ou diretório filho")
@@ -29,6 +30,53 @@ mv antigo_nome novo_nome
 ```
 
 Certifique-se de estar no diretório correto ou fornecer o caminho completo para o diretório, caso esteja em um local diferente. Além disso, verifique se você tem permissões suficientes para renomear o diretório.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao SumÃ¡rio") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--diret%C3%B3rios-e-arquivos "Subir para o topo")
+
+---
+
+## Como Copiar Arquivos e Diretórios Usando o Terminal Linux
+
+Você pode copiar arquivos de um local para outro usando o comando `cp` no terminal Linux. Aqui está a sintaxe básica:
+
+```bash
+cp origem destino
+```
+
+Substitua "origem" pelo caminho completo do arquivo ou diretório que você deseja copiar e "destino" pelo caminho para onde você deseja copiar os arquivos.
+
+Aqui estão alguns exemplos:
+
+1. Copiar um arquivo para um diretório:
+```bash
+cp arquivo.txt /caminho/do/destino/
+```
+
+2. Copiar um arquivo para o diretório atual:
+```bash
+cp arquivo.txt .
+```
+
+3. Copiar um arquivo com um novo nome:
+```bash
+cp arquivo.txt novo-arquivo.txt
+```
+
+4. Copiar um diretório inteiro com seu conteúdo:
+```bash
+cp -r diretorio_origem /caminho/do/destino/
+```
+
+O uso da opção `-r` é importante para copiar diretórios de maneira recursiva, ou seja, copiar todo o conteúdo dentro do diretório.
+
+Lembre-se de que, se você estiver copiando arquivos para diretórios protegidos por permissões, como diretórios de sistema, pode ser necessário usar o comando `sudo` para executar a operação de cópia com privilégios de superusuário:
+
+```bash
+sudo cp arquivo.txt /diretorio/protegido/
+```
+
+Sempre tenha cuidado ao usar o comando `cp` para evitar sobrescrever acidentalmente arquivos existentes. É uma boa prática fazer backup ou ter certeza do que você está copiando e para onde está copiando.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao SumÃ¡rio") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--diret%C3%B3rios-e-arquivos "Subir para o topo")
