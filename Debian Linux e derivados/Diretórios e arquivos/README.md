@@ -3,7 +3,7 @@
 [![Diretórios e arquivos](https://github.com/systemboys/GTi_Laboratory/raw/main/Debian%20Linux%20e%20derivados/Diret%C3%B3rios%20e%20arquivos/images/desktop_zero_feature_tiny.jpg "Diretórios e arquivos")](http://link.com "Diretórios e arquivos")
 
 - [Renomear um diretório via terminal Linux](#renomear-um-diret%C3%B3rio-via-terminal-linux "Renomear um diretório via terminal Linux")
-- [Como Copiar Arquivos e Diretórios Usando o Terminal Linux](# "Como Copiar Arquivos e Diretórios Usando o Terminal Linux")
+- [Como Copiar Arquivos e Diretórios Usando o Terminal Linux](#como-copiar-arquivos-e-diret%C3%B3rios-usando-o-terminal-linux "Como Copiar Arquivos e Diretórios Usando o Terminal Linux")
 - [Mover diretório ou arquivo de um local para outro](#mover-diret%C3%B3rio-ou-arquivo-de-um-local-para-outro "Mover diretório ou arquivo de um local para outro")
 - [Apagar um diretório com todos os seus subdiretórios e arquivos](#apagar-um-diret%C3%B3rio-com-todos-os-seus-subdiret%C3%B3rios-e-arquivos "Apagar um diretório com todos os seus subdiretórios e arquivos")
 - [Apagar todos os arquivo de um diretório exceto um arquivo ou diretório filho](#apagar-todos-os-arquivo-de-um-diret%C3%B3rio-exceto-um-arquivo-ou-diret%C3%B3rio-filho "Apagar todos os arquivo de um diretório exceto um arquivo ou diretório filho")
