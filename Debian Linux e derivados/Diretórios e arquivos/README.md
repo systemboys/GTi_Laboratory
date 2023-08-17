@@ -13,6 +13,7 @@
 - [Compartilhando um Diretório no Debian com o Linux Mint Usando o Samba](#compartilhando-um-diret%C3%B3rio-no-debian-com-o-linux-mint-usando-o-samba "Compartilhando um Diretório no Debian com o Linux Mint Usando o Samba")
 > Compactadores
 - [Guia Rápido: Como Extrair Arquivos ZIP Usando o Terminal no Linux](#guia-r%C3%A1pido-como-extrair-arquivos-zip-usando-o-terminal-no-linux "Guia Rápido: Como Extrair Arquivos ZIP Usando o Terminal no Linux")
+- [Extraindo Arquivos .tar.xz via Terminal no Linux](#extraindo-arquivos-.tar.xz-via-Terminal-no-Linux "Extraindo Arquivos .tar.xz via Terminal no Linux")
 
 ---
 
@@ -344,6 +345,41 @@ sudo apt install unzip
 ```
 
 Após a instalação do `unzip`, você poderá usá-lo para extrair arquivos ZIP como mencionado anteriormente.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao SumÃ¡rio") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--diret%C3%B3rios-e-arquivos "Subir para o topo")
+
+---
+
+## Extraindo Arquivos .tar.xz via Terminal no Linux
+
+Para extrair arquivos no formato ".tar.xz" via terminal, você pode usar o comando `tar`. No Linux, o `tar` é uma ferramenta amplamente utilizada para criar, manipular e extrair arquivos compactados. O formato ".tar.xz" combina o empacotamento de arquivos usando o comando `tar` com a compressão usando o algoritmo XZ.
+
+Aqui está a sintaxe básica para extrair arquivos ".tar.xz":
+
+```bash
+tar -xvf nome-do-arquivo.tar.xz
+```
+
+- `-x`: Indica que você deseja extrair arquivos.
+- `-v`: Exibe a saída detalhada, mostrando os arquivos sendo extraídos.
+- `-f`: Indica que você está especificando o arquivo que deseja extrair.
+
+Substitua "nome-do-arquivo.tar.xz" pelo nome real do arquivo que você deseja extrair.
+
+Você também pode usar opções adicionais para especificar um diretório de destino para a extração ou para incluir/excluir arquivos específicos. Aqui estão alguns exemplos:
+
+- Para extrair em um diretório específico:
+  ```bash
+  tar -xvf nome-do-arquivo.tar.xz -C /caminho/do/diretorio
+  ```
+
+- Para extrair apenas um arquivo específico:
+  ```bash
+  tar -xvf nome-do-arquivo.tar.xz arquivo-desejado.txt
+  ```
+
+Lembre-se de que o comando `tar` é bastante versátil e possui várias opções que você pode explorar usando o `man tar` no terminal ou consultando sua documentação online.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao SumÃ¡rio") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--diret%C3%B3rios-e-arquivos "Subir para o topo")
