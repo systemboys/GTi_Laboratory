@@ -13,7 +13,7 @@
 - [Compartilhando um Diretório no Debian com o Linux Mint Usando o Samba](#compartilhando-um-diret%C3%B3rio-no-debian-com-o-linux-mint-usando-o-samba "Compartilhando um Diretório no Debian com o Linux Mint Usando o Samba")
 > Compactadores
 - [Guia Rápido: Como Extrair Arquivos ZIP Usando o Terminal no Linux](#guia-r%C3%A1pido-como-extrair-arquivos-zip-usando-o-terminal-no-linux "Guia Rápido: Como Extrair Arquivos ZIP Usando o Terminal no Linux")
-- [Guia Rápido: Extraindo Arquivos .tar.xz via Terminal no Linux](#extraindo-arquivos-.tar.xz-via-Terminal-no-Linux "Guia Rápido: Extraindo Arquivos .tar.xz via Terminal no Linux")
+- [Guia Rápido: Extraindo Arquivos .tar.xz via Terminal no Linux](#guia-r%C3%A1pido-extraindo-arquivos-tarxz-via-terminal-no-linux "Guia Rápido: Extraindo Arquivos .tar.xz via Terminal no Linux")
 
 ---
 
