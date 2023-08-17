@@ -351,7 +351,7 @@ Após a instalação do `unzip`, você poderá usá-lo para extrair arquivos ZIP
 
 ---
 
-## Extraindo Arquivos .tar.xz via Terminal no Linux
+## Guia Rápido: Extraindo Arquivos .tar.xz via Terminal no Linux
 
 Para extrair arquivos no formato ".tar.xz" via terminal, você pode usar o comando `tar`. No Linux, o `tar` é uma ferramenta amplamente utilizada para criar, manipular e extrair arquivos compactados. O formato ".tar.xz" combina o empacotamento de arquivos usando o comando `tar` com a compressão usando o algoritmo XZ.
 
