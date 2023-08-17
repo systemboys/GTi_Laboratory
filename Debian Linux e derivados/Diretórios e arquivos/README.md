@@ -2,12 +2,15 @@
 
 [![Diretórios e arquivos](https://github.com/systemboys/GTi_Laboratory/raw/main/Debian%20Linux%20e%20derivados/Diret%C3%B3rios%20e%20arquivos/images/desktop_zero_feature_tiny.jpg "Diretórios e arquivos")](http://link.com "Diretórios e arquivos")
 
+> Comandos e Gerenciamento de Arquivos no Terminal Linux
 - [Renomear um diretório via terminal Linux](#renomear-um-diret%C3%B3rio-via-terminal-linux "Renomear um diretório via terminal Linux")
 - [Como Copiar Arquivos e Diretórios Usando o Terminal Linux](#como-copiar-arquivos-e-diret%C3%B3rios-usando-o-terminal-linux "Como Copiar Arquivos e Diretórios Usando o Terminal Linux")
 - [Mover diretório ou arquivo de um local para outro](#mover-diret%C3%B3rio-ou-arquivo-de-um-local-para-outro "Mover diretório ou arquivo de um local para outro")
 - [Apagar um diretório com todos os seus subdiretórios e arquivos](#apagar-um-diret%C3%B3rio-com-todos-os-seus-subdiret%C3%B3rios-e-arquivos "Apagar um diretório com todos os seus subdiretórios e arquivos")
 - [Apagar todos os arquivo de um diretório exceto um arquivo ou diretório filho](#apagar-todos-os-arquivo-de-um-diret%C3%B3rio-exceto-um-arquivo-ou-diret%C3%B3rio-filho "Apagar todos os arquivo de um diretório exceto um arquivo ou diretório filho")
 - [Permissões a arquivos e diretórios](#permiss%C3%B5es-a-arquivos-e-diret%C3%B3rios "Permissões a arquivos e diretórios")
+> Redes e Compartilhamento
+- [Compartilhando um Diretório no Debian com o Linux Mint Usando o Samba](# "Compartilhando um Diretório no Debian com o Linux Mint Usando o Samba")
 > Compactadores
 - [Guia Rápido: Como Extrair Arquivos ZIP Usando o Terminal no Linux](#guia-r%C3%A1pido-como-extrair-arquivos-zip-usando-o-terminal-no-linux "Guia Rápido: Como Extrair Arquivos ZIP Usando o Terminal no Linux")
 
@@ -235,6 +238,69 @@ Onde "[permissões]" são as permissões que você deseja definir para o arquivo
 5. Confirme que as permissões foram definidas corretamente usando o comando "ls -l" para listar o arquivo ou diretório e suas permissões.
 
 Lembre-se de que as permissões de arquivos e diretórios são uma parte importante da segurança do sistema, por isso é importante usar com cuidado e conceder apenas as permissões necessárias.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao SumÃ¡rio") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--diret%C3%B3rios-e-arquivos "Subir para o topo")
+
+---
+
+## Compartilhando um Diretório no Debian com o Linux Mint Usando o Samba
+
+Para compartilhar um diretório do Debian para que você possa acessá-lo a partir do Linux Mint, você pode configurar o servidor Samba. O Samba é uma implementação do protocolo SMB/CIFS que permite compartilhar arquivos e impressoras entre sistemas Linux e Windows na mesma rede.
+
+Aqui está um guia passo a passo para configurar o compartilhamento de diretórios usando o Samba:
+
+1. **Instalar o Samba**:
+
+   No Debian, abra um terminal e execute os seguintes comandos para instalar o Samba:
+
+   ```bash
+   sudo apt update
+   sudo apt install samba
+   ```
+
+2. **Configurar o Compartilhamento**:
+
+   Edite o arquivo de configuração do Samba usando um editor de texto, como o `nano` ou o `vim`:
+
+   ```bash
+   sudo nano /etc/samba/smb.conf
+   ```
+
+   Dentro do arquivo, adicione as configurações do compartilhamento no final:
+
+   ```plaintext
+   [NomeCompartilhamento]
+   path = /caminho/para/o/diretorio
+   valid users = seu_usuario
+   read only = no
+   ```
+
+   Substitua `NomeCompartilhamento` pelo nome que você deseja dar ao compartilhamento, `/caminho/para/o/diretorio` pelo caminho absoluto do diretório que você deseja compartilhar e `seu_usuario` pelo seu nome de usuário no Debian.
+
+3. **Definir uma Senha para o Usuário Samba**:
+
+   Execute o seguinte comando para definir uma senha para o usuário Samba (você precisará definir uma senha separada do seu usuário do sistema):
+
+   ```bash
+   sudo smbpasswd -a seu_usuario
+   ```
+
+4. **Reiniciar o Serviço Samba**:
+
+   Após fazer as configurações, reinicie o serviço Samba:
+
+   ```bash
+   sudo systemctl restart smbd
+   ```
+
+5. **Acesso do Linux Mint**:
+
+   No Linux Mint, você pode usar o gerenciador de arquivos Caja para acessar o compartilhamento. Abra o Caja e vá para `Rede -> Windows Network -> NomeDoComputador -> NomeCompartilhamento`. Ele pode solicitar suas credenciais Samba (o nome de usuário e senha definidos com `smbpasswd`).
+
+Isso permitirá que você acesse o diretório compartilhado do Debian a partir do Linux Mint na mesma rede local.
+
+Lembre-se de que as configurações de firewall e permissões de acesso podem afetar a capacidade de compartilhamento e acesso. Certifique-se de que o firewall permita o tráfego necessário (geralmente a porta 445 para o Samba) e que as permissões de compartilhamento e do diretório estejam configuradas corretamente.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao SumÃ¡rio") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--diret%C3%B3rios-e-arquivos "Subir para o topo")
