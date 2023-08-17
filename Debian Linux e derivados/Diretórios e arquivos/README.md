@@ -10,7 +10,7 @@
 - [Apagar todos os arquivo de um diretório exceto um arquivo ou diretório filho](#apagar-todos-os-arquivo-de-um-diret%C3%B3rio-exceto-um-arquivo-ou-diret%C3%B3rio-filho "Apagar todos os arquivo de um diretório exceto um arquivo ou diretório filho")
 - [Permissões a arquivos e diretórios](#permiss%C3%B5es-a-arquivos-e-diret%C3%B3rios "Permissões a arquivos e diretórios")
 > Redes e Compartilhamento
-- [Compartilhando um Diretório no Debian com o Linux Mint Usando o Samba](# "Compartilhando um Diretório no Debian com o Linux Mint Usando o Samba")
+- [Compartilhando um Diretório no Debian com o Linux Mint Usando o Samba](#compartilhando-um-diret%C3%B3rio-no-debian-com-o-linux-mint-usando-o-samba "Compartilhando um Diretório no Debian com o Linux Mint Usando o Samba")
 > Compactadores
 - [Guia Rápido: Como Extrair Arquivos ZIP Usando o Terminal no Linux](#guia-r%C3%A1pido-como-extrair-arquivos-zip-usando-o-terminal-no-linux "Guia Rápido: Como Extrair Arquivos ZIP Usando o Terminal no Linux")
 
