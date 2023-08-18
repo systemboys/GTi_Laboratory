@@ -238,6 +238,22 @@ Isso mostrará uma lista dos pacotes instalados que contêm a palavra "editor" n
 
 Tenha cuidado ao desinstalar pacotes usando esse método, pois é importante identificar corretamente o pacote que você deseja remover para evitar a remoção de pacotes indesejados.
 
+> ( ! ) Sobre `dpkg` e `apt`!
+
+O comando `dpkg --list | grep program_name` é útil para identificar programas instalados por meio do sistema de gerenciamento de pacotes `dpkg`, que é a base do sistema de gerenciamento de pacotes Debian. No entanto, para programas instalados via `apt`, que é uma interface de gerenciamento de pacotes que utiliza o `dpkg` por baixo dos panos, você pode usar diretamente o comando `apt list`.
+
+Para identificar programas instalados usando o `apt`, você pode usar o seguinte comando:
+
+```bash
+apt list --installed | grep program_name
+```
+
+Substitua "program_name" pelo nome ou parte do nome do programa que você está procurando.
+
+Esse comando lista todos os pacotes instalados pelo `apt` (incluindo os do `dpkg`) e, em seguida, o comando `grep` filtra o resultado para mostrar apenas as linhas que correspondem ao nome do programa que você está procurando.
+
+Lembre-se de que o comando `apt` é uma camada de gerenciamento de pacotes mais amigável que envolve o `dpkg`. Portanto, a maioria dos programas instalados usando o `apt` também estará listada se você usar o comando `dpkg --list`, mas o comando `apt list` é mais direto para listar programas instalados através do `apt`.
+
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--instala%C3%A7%C3%A3o-de-pacotes "Subir para o topo")
 
