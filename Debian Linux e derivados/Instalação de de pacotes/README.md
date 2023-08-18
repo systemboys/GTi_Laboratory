@@ -6,7 +6,7 @@
 - [Instalar o Google Earth via terminal](#instalar-o-google-earth-via-terminal "Instalar o Google Earth via terminal")
 - [Instalar o Oracle Virtual Box no Debian Linux](#instalar-o-oracle-virtual-box-no-debian-linux "Instalar o Oracle Virtual Box no Debian Linux")
 - [Instalação e Desinstalação de Programas no Linux via Terminal](#instala%C3%A7%C3%A3o-e-desinstala%C3%A7%C3%A3o-de-programas-no-linux-via-terminal "Instalação e Desinstalação de Programas no Linux via Terminal")
-   - [Identificar e remover programas no Linux usando o comando dpkg no terminal](#identificar-e-remover-programas-no-linux-usando-o-comando-dpkg-no-terminal "Identificar e remover programas no Linux usando o comando dpkg no terminal")
+   - [Identificar e remover programas no Linux usando o comando dpkg e apt no terminal](#identificar-e-remover-programas-no-linux-usando-o-comando-dpkg-e-apt-no-terminal "Identificar e remover programas no Linux usando o comando dpkg e apt no terminal")
 - [Script de Instalação Automática de pacotes no Linux](#script-de-instala%C3%A7%C3%A3o-autom%C3%A1tica-de-pacotes-no-linux "Script de Instalação Automática de pacotes no Linux")
    - [Verificação e Instalação Condicional de Programas em Scripts Bash](#verifica%C3%A7%C3%A3o-e-instala%C3%A7%C3%A3o-condicional-de-programas-em-scripts-bash "Verificação e Instalação Condicional de Programas em Scripts Bash")
 
@@ -224,7 +224,7 @@ Lembre-se de verificar a documentação oficial do programa e fazer backup de da
 
 ---
 
-## Identificar e remover programas no Linux usando o comando dpkg no terminal
+## Identificar e remover programas no Linux usando o comando dpkg e apt no terminal
 
 Identificar o programa para removê-lo via comando no terminal Linux. Você pode usar o comando `dpkg --list` para listar todos os pacotes instalados no sistema. Em seguida, você pode filtrar a saída usando o comando `grep` e fornecer um trecho do nome do programa que você deseja desinstalar.
 
