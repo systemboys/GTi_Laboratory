@@ -4,6 +4,7 @@
 
 > Macetes
 - [Erro de PATH após instalação de pacote .deb no Linux](#erro-de-path-ap%C3%B3s-instala%C3%A7%C3%A3o-de-pacote-deb-no-linux "Erro de PATH após instalação de pacote .deb no Linux")
+- [Resolvendo Dependências de Pacotes no Linux com o Comando apt-get install -f](# "Resolvendo Dependências de Pacotes no Linux com o Comando apt-get install -f")
 > Instalação de alguns softwares via terminal
 - [Instalar o Google Earth via terminal](#instalar-o-google-earth-via-terminal "Instalar o Google Earth via terminal")
 - [Instalar o Microsoft Edge para Linux](#instalar-o-microsoft-edge-para-linux "Instalar o Microsoft Edge para Linux")
@@ -92,6 +93,27 @@ Uma solução definitiva para o erro de `PATH` após a instalação de um pacote
    ```
 
 Depois de seguir estes passos, o caminho correto deve estar configurado corretamente e o erro de `PATH` não deve mais ocorrer.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--instala%C3%A7%C3%A3o-de-pacotes "Subir para o topo")
+
+---
+
+## Resolvendo Dependências de Pacotes no Linux com o Comando apt-get install -f
+
+O comando `apt-get install -f` é usado para resolver dependências quebradas ou pacotes desinstalados/incompletos no sistema Linux. A opção `-f` é uma abreviação de `--fix-broken`, que indica ao gerenciador de pacotes para tentar corrigir qualquer problema com pacotes que estão parcialmente instalados, desinstalados ou com dependências que não foram satisfeitas.
+
+Quando você executa `apt-get install -f`, o sistema irá:
+
+1. Verificar os pacotes que estão parcialmente instalados ou que possuem dependências não satisfeitas.
+
+2. Tentar resolver os problemas baixando e instalando os pacotes necessários para satisfazer as dependências faltantes.
+
+3. Pode, em alguns casos, remover pacotes problemáticos que estão causando conflitos com outros pacotes ou impedindo a conclusão da instalação.
+
+Este comando é útil quando você encontra mensagens de erro relacionadas a dependências ou quando alguma instalação foi interrompida e precisa ser corrigida.
+
+Lembre-se de que você precisa ter privilégios de administrador (usando `sudo`) para executar esse comando, pois ele lida com operações que afetam o sistema como um todo.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--instala%C3%A7%C3%A3o-de-pacotes "Subir para o topo")
