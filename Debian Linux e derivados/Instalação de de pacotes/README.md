@@ -5,6 +5,7 @@
 > Macetes
 - [Erro de PATH após instalação de pacote .deb no Linux](#erro-de-path-ap%C3%B3s-instala%C3%A7%C3%A3o-de-pacote-deb-no-linux "Erro de PATH após instalação de pacote .deb no Linux")
 - [Resolvendo Dependências de Pacotes no Linux com o Comando apt-get install -f](#resolvendo-depend%C3%AAncias-de-pacotes-no-linux-com-o-comando-apt-get-install--f "Resolvendo Dependências de Pacotes no Linux com o Comando apt-get install -f")
+- [Liberação de Espaço no Linux: Usando o Comando apt autoremove para Remover Pacotes Não Necessários](# "Liberação de Espaço no Linux: Usando o Comando apt autoremove para Remover Pacotes Não Necessários")
 > Instalação de alguns softwares via terminal
 - [Instalar o Google Earth via terminal](#instalar-o-google-earth-via-terminal "Instalar o Google Earth via terminal")
 - [Instalar o Microsoft Edge para Linux](#instalar-o-microsoft-edge-para-linux "Instalar o Microsoft Edge para Linux")
@@ -114,6 +115,21 @@ Quando você executa `apt-get install -f`, o sistema irá:
 Este comando é útil quando você encontra mensagens de erro relacionadas a dependências ou quando alguma instalação foi interrompida e precisa ser corrigida.
 
 Lembre-se de que você precisa ter privilégios de administrador (usando `sudo`) para executar esse comando, pois ele lida com operações que afetam o sistema como um todo.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--instala%C3%A7%C3%A3o-de-pacotes "Subir para o topo")
+
+---
+
+# Liberação de Espaço no Linux: Usando o Comando apt autoremove para Remover Pacotes Não Necessários
+
+O comando `apt autoremove` é usado no sistema operacional Linux (especialmente em distribuições baseadas em Debian, como o Ubuntu) para remover automaticamente pacotes que não são mais necessários, ou seja, pacotes que foram instalados como dependências de outros pacotes, mas que não são mais necessários por nenhum outro pacote instalado.
+
+Quando você instala um pacote que tem dependências, o sistema também instala automaticamente as dependências necessárias. No entanto, quando você remove um pacote principal, as dependências já não são mais necessárias, e é aí que o `apt autoremove` entra em ação.
+
+Ao executar `apt autoremove`, o sistema verifica as dependências que foram instaladas e não são mais necessárias (pois não têm mais nenhum pacote dependente), e então as remove, liberando espaço no sistema.
+
+Em resumo, o comando `apt autoremove` ajuda a limpar o sistema, removendo pacotes que não têm mais utilidade após a remoção de pacotes principais. Certifique-se de que você realmente não precisa dessas dependências antes de executar o comando, pois ele pode remover pacotes que não são mais necessários, mas tenha cuidado para não remover algo importante acidentalmente.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--instala%C3%A7%C3%A3o-de-pacotes "Subir para o topo")
