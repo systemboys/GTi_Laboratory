@@ -132,6 +132,41 @@ Siga as etapas abaixo para instalar o Google Earth no Debian Linux via terminal:
 
 Lembre-se de ter privilégios administrativos para executar os comandos com `sudo`. Certifique-se também de baixar a versão correta do Google Earth para o seu sistema operacional (32 bits ou 64 bits) e de atualizar os comandos acima com o nome do arquivo .deb baixado, se necessário.
 
+> ***Via repositório***
+
+A Microsoft fornece versões do Microsoft Edge para Linux por meio de seu próprio repositório. No entanto, o Microsoft Edge não oferece um link direto para download via "wget" como os pacotes DEB tradicionais. Em vez disso, é necessário adicionar o repositório oficial e, em seguida, usar o gerenciador de pacotes, como o `apt`, para instalar o Microsoft Edge.
+
+Aqui estão os passos para instalar o Microsoft Edge no Linux usando o terminal:
+
+1. **Adicione o Repositório:**
+   Abra o terminal e execute os seguintes comandos para adicionar o repositório do Microsoft Edge:
+
+   ```bash
+   curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+   sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
+   sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
+   ```
+
+2. **Atualize a Lista de Pacotes:**
+   Execute o seguinte comando para atualizar a lista de pacotes disponíveis:
+
+   ```bash
+   sudo apt update
+   ```
+
+3. **Instale o Microsoft Edge:**
+   Agora, você pode instalar o Microsoft Edge usando o seguinte comando:
+
+   ```bash
+   sudo apt install microsoft-edge-dev
+   ```
+
+Isso fará o download e a instalação do Microsoft Edge diretamente do repositório oficial da Microsoft.
+
+Lembre-se de que você precisará ter privilégios de administrador (sudo) para executar esses comandos.
+
+Essas etapas garantirão a instalação apropriada e atualizações futuras do Microsoft Edge no seu sistema Linux.
+
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--instala%C3%A7%C3%A3o-de-pacotes "Subir para o topo")
 
