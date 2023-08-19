@@ -6,6 +6,7 @@
 - [Erro de PATH após instalação de pacote .deb no Linux](#erro-de-path-ap%C3%B3s-instala%C3%A7%C3%A3o-de-pacote-deb-no-linux "Erro de PATH após instalação de pacote .deb no Linux")
 > Instalação de alguns softwares via terminal
 - [Instalar o Google Earth via terminal](#instalar-o-google-earth-via-terminal "Instalar o Google Earth via terminal")
+- [Instalar o Microsoft Edge para Linux](#instalar-o-microsoft-edge-para-linux "Instalar o Microsoft Edge para Linux")
 - [Instalar o Oracle Virtual Box no Debian Linux](#instalar-o-oracle-virtual-box-no-debian-linux "Instalar o Oracle Virtual Box no Debian Linux")
 > Dicas de Instalação e Desinstalação
 - [Instalação e Desinstalação de Programas no Linux via Terminal](#instala%C3%A7%C3%A3o-e-desinstala%C3%A7%C3%A3o-de-programas-no-linux-via-terminal "Instalação e Desinstalação de Programas no Linux via Terminal")
@@ -135,7 +136,12 @@ Siga as etapas abaixo para instalar o Google Earth no Debian Linux via terminal:
 
 Lembre-se de ter privilégios administrativos para executar os comandos com `sudo`. Certifique-se também de baixar a versão correta do Google Earth para o seu sistema operacional (32 bits ou 64 bits) e de atualizar os comandos acima com o nome do arquivo .deb baixado, se necessário.
 
-> ***Via repositório***
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--instala%C3%A7%C3%A3o-de-pacotes "Subir para o topo")
+
+---
+
+## Instalar o Microsoft Edge para Linux
 
 A Microsoft fornece versões do Microsoft Edge para Linux por meio de seu próprio repositório. No entanto, o Microsoft Edge não oferece um link direto para download via "wget" como os pacotes DEB tradicionais. Em vez disso, é necessário adicionar o repositório oficial e, em seguida, usar o gerenciador de pacotes, como o `apt`, para instalar o Microsoft Edge.
 
