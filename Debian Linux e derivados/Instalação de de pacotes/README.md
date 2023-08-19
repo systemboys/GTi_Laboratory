@@ -5,7 +5,7 @@
 > Macetes
 - [Erro de PATH após instalação de pacote .deb no Linux](#erro-de-path-ap%C3%B3s-instala%C3%A7%C3%A3o-de-pacote-deb-no-linux "Erro de PATH após instalação de pacote .deb no Linux")
 - [Resolvendo Dependências de Pacotes no Linux com o Comando apt-get install -f](#resolvendo-depend%C3%AAncias-de-pacotes-no-linux-com-o-comando-apt-get-install--f "Resolvendo Dependências de Pacotes no Linux com o Comando apt-get install -f")
-- [Liberação de Espaço no Linux: Usando o Comando apt autoremove para Remover Pacotes Não Necessários](# "Liberação de Espaço no Linux: Usando o Comando apt autoremove para Remover Pacotes Não Necessários")
+- [Liberação de Espaço no Linux: Usando o Comando apt autoremove para Remover Pacotes Não Necessários](#libera%C3%A7%C3%A3o-de-espa%C3%A7o-no-linux-usando-o-comando-apt-autoremove-para-remover-pacotes-n%C3%A3o-necess%C3%A1rios "Liberação de Espaço no Linux: Usando o Comando apt autoremove para Remover Pacotes Não Necessários")
 > Instalação de alguns softwares via terminal
 - [Instalar o Google Earth via terminal](#instalar-o-google-earth-via-terminal "Instalar o Google Earth via terminal")
 - [Instalar o Microsoft Edge para Linux](#instalar-o-microsoft-edge-para-linux "Instalar o Microsoft Edge para Linux")
