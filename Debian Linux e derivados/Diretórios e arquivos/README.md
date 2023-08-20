@@ -327,7 +327,7 @@ Isso permitirá que você acesse o diretório compartilhado do Debian a partir d
 
 Lembre-se de que as configurações de firewall e permissões de acesso podem afetar a capacidade de compartilhamento e acesso. Certifique-se de que o firewall permita o tráfego necessário (geralmente a porta 445 para o Samba) e que as permissões de compartilhamento e do diretório estejam configuradas corretamente.
 
-> ( ? ) Dica: Configurando um Compartilhamento Somente Leitura no Samba no Linux.
+> ( i ) Dica: Configurando um Compartilhamento Somente Leitura no Samba no Linux.
 
 Se você deseja configurar um compartilhamento no Samba que seja somente leitura, ou seja, os usuários não podem modificar os arquivos, você pode ajustar as configurações da seguinte forma:
 
