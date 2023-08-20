@@ -331,7 +331,7 @@ Lembre-se de que as configurações de firewall e permissões de acesso podem af
 
 Se você deseja configurar um compartilhamento no Samba que seja somente leitura, ou seja, os usuários não podem modificar os arquivos, você pode ajustar as configurações da seguinte forma:
 
-```ini
+```bash
 [NomeCompartilhamento]
 path = /caminho/para/o/diretorio
 valid users = seu_usuario
@@ -341,6 +341,32 @@ read only = yes
 Note que a única mudança em relação à configuração anterior é definir `read only` como `yes`. Isso faz com que os usuários tenham apenas acesso de leitura ao compartilhamento, sem a permissão de modificar ou criar novos arquivos.
 
 Ao usar essa configuração, os usuários que acessarem o compartilhamento apenas poderão visualizar o conteúdo, sem poder editar, mover ou excluir arquivos. Certifique-se de que as permissões de acesso aos arquivos no sistema de arquivos também estejam configuradas corretamente para evitar conflitos.
+
+> ( i ) Configurar mais de um diretório para compartilhamento.
+
+Sim, você pode configurar mais de um diretório para compartilhamento no Samba replicando as linhas de configuração para cada diretório que deseja compartilhar. Cada seção de configuração representa um compartilhamento separado. Por exemplo:
+
+```bash
+[Compartilhamento1]
+path = /caminho/para/o/diretorio1
+valid users = seu_usuario
+read only = yes
+
+[Compartilhamento2]
+path = /caminho/para/o/diretorio2
+valid users = seu_usuario
+read only = no
+```
+
+Nesse exemplo, dois compartilhamentos diferentes, "Compartilhamento1" e "Compartilhamento2", são configurados. Você pode adicionar quantos compartilhamentos desejar seguindo esse padrão. Lembre-se de ajustar os valores de `path`, `valid users` e outras opções de acordo com suas necessidades.
+
+Após fazer as alterações no arquivo de configuração do Samba, você precisará reiniciar o serviço para que as alterações entrem em vigor:
+
+```bash
+sudo service smbd restart
+```
+
+Certifique-se de também ajustar as permissões de acesso nos diretórios no sistema de arquivos para garantir que os usuários tenham as permissões apropriadas para os compartilhamentos.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao SumÃ¡rio") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--diret%C3%B3rios-e-arquivos "Subir para o topo")
