@@ -9,6 +9,7 @@
 - [Apagar um diretório com todos os seus subdiretórios e arquivos](#apagar-um-diret%C3%B3rio-com-todos-os-seus-subdiret%C3%B3rios-e-arquivos "Apagar um diretório com todos os seus subdiretórios e arquivos")
 - [Apagar todos os arquivo de um diretório exceto um arquivo ou diretório filho](#apagar-todos-os-arquivo-de-um-diret%C3%B3rio-exceto-um-arquivo-ou-diret%C3%B3rio-filho "Apagar todos os arquivo de um diretório exceto um arquivo ou diretório filho")
 - [Permissões a arquivos e diretórios](#permiss%C3%B5es-a-arquivos-e-diret%C3%B3rios "Permissões a arquivos e diretórios")
+- [Listando Arquivos e Pastas Ocultos com o Comando ls no Linux](#listando-arquivos-e-pastas-ocultos-com-o-comando-ls-no-linux "Listando Arquivos e Pastas Ocultos com o Comando ls no Linux")
 > Redes e Compartilhamento
 - [Compartilhando um Diretório no Debian com o Linux Mint Usando o Samba](#compartilhando-um-diret%C3%B3rio-no-debian-com-o-linux-mint-usando-o-samba "Compartilhando um Diretório no Debian com o Linux Mint Usando o Samba")
 > Compactadores
@@ -239,6 +240,29 @@ Onde "[permissões]" são as permissões que você deseja definir para o arquivo
 5. Confirme que as permissões foram definidas corretamente usando o comando "ls -l" para listar o arquivo ou diretório e suas permissões.
 
 Lembre-se de que as permissões de arquivos e diretórios são uma parte importante da segurança do sistema, por isso é importante usar com cuidado e conceder apenas as permissões necessárias.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao SumÃ¡rio") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--diret%C3%B3rios-e-arquivos "Subir para o topo")
+
+---
+
+## Listando Arquivos e Pastas Ocultos com o Comando ls no Linux
+
+Para listar não apenas os itens visíveis, mas também os ocultos em um diretório usando o comando `ls` no Linux, você pode usar a opção `-a` ou `--all`. Essa opção faz com que o `ls` mostre todos os arquivos, incluindo os ocultos, que começam com um ponto `.`.
+
+Aqui está como fazer:
+
+```bash
+ls -a
+```
+
+ou
+
+```bash
+ls --all
+```
+
+Quando você usar um desses comandos, o `ls` exibirá todos os itens, incluindo os ocultos, no diretório atual. Isso é útil para visualizar todos os arquivos e pastas, inclusive os que normalmente não são mostrados ao usar apenas o comando `ls`.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao SumÃ¡rio") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--diret%C3%B3rios-e-arquivos "Subir para o topo")
