@@ -18,25 +18,25 @@ Claro, aqui estão algumas orientações básicas para usar o Windows Package Ma
 
 3. **Comandos Básicos:**
    - Para listar todos os aplicativos disponíveis para instalação, você pode usar o comando:
-     ```
+     ```bash
      winget list
      ```
    - Para instalar um aplicativo, você pode usar o comando:
-     ```
+     ```bash
      winget install NomeDoAplicativo
      ```
    - Para desinstalar um aplicativo, use:
-     ```
+     ```bash
      winget uninstall NomeDoAplicativo
      ```
    - Para buscar um aplicativo específico, utilize:
-     ```
+     ```bash
      winget search NomeOuPalavraChave
      ```
 
 4. **Atualizações:**
    - Para verificar atualizações para todos os aplicativos instalados:
-     ```
+     ```bash
      winget upgrade
      ```
    - Para atualizar todas as atualizações disponíveis
@@ -44,19 +44,19 @@ Claro, aqui estão algumas orientações básicas para usar o Windows Package Ma
      winget upgrade --all
      ```
    - Para atualizar um aplicativo específico:
-     ```
+     ```bash
      winget upgrade NomeDoAplicativo
      ```
 
 5. **Informações Detalhadas:**
    - Para obter informações detalhadas sobre um aplicativo:
-     ```
+     ```bash
      winget show NomeDoAplicativo
      ```
 
 6. **Listar Todos os Comandos:**
    - Para ver todos os comandos disponíveis:
-     ```
+     ```bash
      winget --help
      ```
 
