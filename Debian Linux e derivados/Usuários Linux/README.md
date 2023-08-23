@@ -2,7 +2,9 @@
 
 # Sumário
 
+> Gerenciando Usuários no Linux
 - [Criar um `usuário Root`](#criar-um-usu%C3%A1rio-root "Criar um usuário Root")
+- [Removendo Usuários via Terminal](# "Removendo Usuários via Terminal")
 - [Mudar a senha do `super usuário`](#mudar-a-senha-do-super-usu%C3%A1rio "Mudar a senha do super usuário")
 
 ---
@@ -35,7 +37,32 @@ No Linux, o usuário "root" já vem pré-instalado no sistema e é criado automa
     sudo comando_a_ser_executado
     ```
 
-> Lembre-se de que é importante limitar o acesso do usuário root sempre que possível e evitar usá-lo para tarefas rotineiras. Em vez disso, use um usuário comum com privilégios limitados para tarefas diárias e execute comandos como superusuário apenas quando necessário.
+Lembre-se de que é importante limitar o acesso do usuário root sempre que possível e evitar usá-lo para tarefas rotineiras. Em vez disso, use um usuário comum com privilégios limitados para tarefas diárias e execute comandos como superusuário apenas quando necessário.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--usu%C3%A1rios-linux "Subir para o topo")
+
+---
+
+## Removendo Usuários via Terminal
+
+Para remover um usuário via terminal no Linux, você pode usar o comando `sudo deluser nome_usuario`. No entanto, esse comando remove o usuário, mas não exclui os arquivos pessoais associados a esse usuário. Se você deseja excluir completamente o usuário e seus arquivos, pode usar `sudo deluser --remove-home nome_usuario`.
+
+Portanto, você tem duas opções, dependendo se deseja manter ou excluir os arquivos do usuário:
+
+1. Para remover o usuário, mas manter seus arquivos pessoais (casa), use:
+
+   ```bash
+   sudo deluser nome_usuario
+   ```
+
+2. Para remover o usuário e todos os seus arquivos pessoais, use:
+
+   ```bash
+   sudo deluser --remove-home nome_usuario
+   ```
+
+Certifique-se de substituir "nome_usuario" pelo nome real do usuário que você deseja remover. Lembre-se de que você precisará ter privilégios de administrador (sudo) para executar esses comandos. Certifique-se de fazer isso com cuidado, pois a remoção de um usuário é uma ação irreversível e seus arquivos serão perdidos.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--usu%C3%A1rios-linux "Subir para o topo")
