@@ -1,6 +1,6 @@
 # [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi") / Windows Package Manager
 
-[![Imagem 1](https://site.com/img/exemplo.png "Imagem 1")](http://link.com "Imagem 1")
+[![Windows Package Manager](https://github.com/systemboys/GTi_Laboratory/blob/main/Microsoft%20Windows/Microsoft%20Windows%2010/Windows%20Package%20Manager%20(winget)/images/winget.jpg?raw=true "Windows Package Manager")](https://github.com/systemboys/GTi_Laboratory/blob/main/Microsoft%20Windows/Microsoft%20Windows%2010/Windows%20Package%20Manager%20(winget)/images/winget.jpg?raw=true "Windows Package Manager")
 
 - [Dicas para Utilizar o Windows Package Manager (winget)](#dicas-para-utilizar-o-windows-package-manager-winget "Dicas para Utilizar o Windows Package Manager (winget)")
 
@@ -59,6 +59,10 @@ Claro, aqui estão algumas orientações básicas para usar o Windows Package Ma
      ```
      winget --help
      ```
+
+[![WinGet Upgrade List](https://github.com/systemboys/GTi_Laboratory/blob/main/Microsoft%20Windows/Microsoft%20Windows%2010/Windows%20Package%20Manager%20(winget)/images/listar.png?raw=true "WinGet Upgrade List")](https://github.com/systemboys/GTi_Laboratory/blob/main/Microsoft%20Windows/Microsoft%20Windows%2010/Windows%20Package%20Manager%20(winget)/images/listar.png?raw=true "WinGet Upgrade List")
+
+[![WinGet Upgrade All](https://github.com/systemboys/GTi_Laboratory/blob/main/Microsoft%20Windows/Microsoft%20Windows%2010/Windows%20Package%20Manager%20(winget)/images/update_all.PNG?raw=true "WinGet Upgrade All")](https://github.com/systemboys/GTi_Laboratory/blob/main/Microsoft%20Windows/Microsoft%20Windows%2010/Windows%20Package%20Manager%20(winget)/images/update_all.PNG?raw=true "WinGet Upgrade All")
 
 Lembre-se de que você pode precisar executar o Prompt de Comando ou o PowerShell como administrador para usar alguns comandos, especialmente os de instalação e desinstalação.
 
