@@ -2,7 +2,7 @@
 
 [![Imagem 1](https://site.com/img/exemplo.png "Imagem 1")](http://link.com "Imagem 1")
 
-- [Link 1](https://site.com#anchor-link-1 "Link 1")
+- [Dicas para Utilizar o Windows Package Manager (winget)](#dicas-para-utilizar-o-windows-package-manager-winget "Dicas para Utilizar o Windows Package Manager (winget)")
 
 ---
 
@@ -65,6 +65,6 @@ Lembre-se de que você pode precisar executar o Prompt de Comando ou o PowerShel
 Certifique-se de consultar a documentação oficial do Windows Package Manager (winget) da Microsoft para obter informações mais detalhadas e atualizadas sobre como usar esse recurso.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#laborat%C3%B3rio-gti--instala%C3%A7%C3%A3o-de-softwares "Subir para o topo")
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--windows-package-manager "Subir para o topo")
 
 ---
