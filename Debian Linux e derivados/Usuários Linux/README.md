@@ -5,7 +5,7 @@
 > Gerenciando Usuários no Linux
 - [Criar um `usuário Root`](#criar-um-usu%C3%A1rio-root "Criar um usuário Root")
 - [Removendo Usuários via Terminal](#removendo-usu%C3%A1rios-via-terminal "Removendo Usuários via Terminal")
-- [Editando Configurações de Usuários no Linux com o Comando usermod](# "Editando Configurações de Usuários no Linux com o Comando usermod")
+- [Editando Configurações de Usuários no Linux com o Comando usermod](#editando-configura%C3%A7%C3%B5es-de-usu%C3%A1rios-no-linux-com-o-comando-usermod "Editando Configurações de Usuários no Linux com o Comando usermod")
 - [Mudar a senha do `super usuário`](#mudar-a-senha-do-super-usu%C3%A1rio "Mudar a senha do super usuário")
 
 ---
