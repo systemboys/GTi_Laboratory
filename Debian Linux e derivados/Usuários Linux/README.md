@@ -5,6 +5,7 @@
 > Gerenciando Usuários no Linux
 - [Criar um `usuário Root`](#criar-um-usu%C3%A1rio-root "Criar um usuário Root")
 - [Removendo Usuários via Terminal](#removendo-usu%C3%A1rios-via-terminal "Removendo Usuários via Terminal")
+- [Editando Configurações de Usuários no Linux com o Comando usermod](# "Editando Configurações de Usuários no Linux com o Comando usermod")
 - [Mudar a senha do `super usuário`](#mudar-a-senha-do-super-usu%C3%A1rio "Mudar a senha do super usuário")
 
 ---
@@ -63,6 +64,45 @@ Portanto, você tem duas opções, dependendo se deseja manter ou excluir os arq
    ```
 
 Certifique-se de substituir "nome_usuario" pelo nome real do usuário que você deseja remover. Lembre-se de que você precisará ter privilégios de administrador (sudo) para executar esses comandos. Certifique-se de fazer isso com cuidado, pois a remoção de um usuário é uma ação irreversível e seus arquivos serão perdidos.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--usu%C3%A1rios-linux "Subir para o topo")
+
+---
+
+## Editando Configurações de Usuários no Linux com o Comando usermod
+
+Para editar as configurações de um usuário no Linux, como alterar informações de conta, senha, grupos e outros detalhes, você pode usar o comando `sudo usermod`. Aqui estão alguns exemplos de como você pode usar o `usermod` para editar as configurações de um usuário:
+
+1. **Alterar o Nome Completo do Usuário:**
+   
+   ```bash
+   sudo usermod -c "Novo Nome Completo" nome_usuario
+   ```
+
+2. **Mudar o Diretório Home do Usuário:**
+   
+   ```bash
+   sudo usermod -d /novo/caminho/para/diretorio nome_usuario
+   ```
+
+3. **Adicionar o Usuário a um Grupo:**
+   
+   ```bash
+   sudo usermod -aG nome_do_grupo nome_usuario
+   ```
+
+4. **Mudar a Senha do Usuário:**
+   
+   ```bash
+   sudo passwd nome_usuario
+   ```
+
+Lembre-se de substituir "nome_usuario" pelo nome real do usuário e os valores relevantes nas outras opções.
+
+Importante: Tome cuidado ao usar esses comandos, pois eles podem afetar a configuração do usuário e até mesmo o acesso ao sistema. Certifique-se de verificar a documentação relevante (`man usermod`) ou use a opção `-h` para obter ajuda com um comando específico.
+
+A edição de usuários geralmente requer privilégios de administrador (sudo), pois envolve alterações nas configurações do sistema. Certifique-se de que está fazendo alterações com cuidado e de acordo com as necessidades do sistema.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--usu%C3%A1rios-linux "Subir para o topo")
