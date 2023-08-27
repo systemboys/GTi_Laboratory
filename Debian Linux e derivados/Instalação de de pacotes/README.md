@@ -13,6 +13,7 @@
 > Dicas de Instalação e Desinstalação
 - [Instalação e Desinstalação de Programas no Linux via Terminal](#instala%C3%A7%C3%A3o-e-desinstala%C3%A7%C3%A3o-de-programas-no-linux-via-terminal "Instalação e Desinstalação de Programas no Linux via Terminal")
    - [Identificar e remover programas no Linux usando o comando dpkg e apt no terminal](#identificar-e-remover-programas-no-linux-usando-o-comando-dpkg-e-apt-no-terminal "Identificar e remover programas no Linux usando o comando dpkg e apt no terminal")
+   - [Verificar nome correto de pacote no sistema Debian](#verificar-nome-correto-de-pacote-no-sistema-debian "Verificar nome correto de pacote no sistema Debian")
 - [Script de Instalação Automática de pacotes no Linux](#script-de-instala%C3%A7%C3%A3o-autom%C3%A1tica-de-pacotes-no-linux "Script de Instalação Automática de pacotes no Linux")
    - [Verificação e Instalação Condicional de Programas em Scripts Bash](#verifica%C3%A7%C3%A3o-e-instala%C3%A7%C3%A3o-condicional-de-programas-em-scripts-bash "Verificação e Instalação Condicional de Programas em Scripts Bash")
 
@@ -335,6 +336,31 @@ Substitua "program_name" pelo nome ou parte do nome do programa que você está 
 Esse comando lista todos os pacotes instalados pelo `apt` (incluindo os do `dpkg`) e, em seguida, o comando `grep` filtra o resultado para mostrar apenas as linhas que correspondem ao nome do programa que você está procurando.
 
 Lembre-se de que o comando `apt` é uma camada de gerenciamento de pacotes mais amigável que envolve o `dpkg`. Portanto, a maioria dos programas instalados usando o `apt` também estará listada se você usar o comando `dpkg --list`, mas o comando `apt list` é mais direto para listar programas instalados através do `apt`.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--instala%C3%A7%C3%A3o-de-pacotes "Subir para o topo")
+
+---
+
+## Verificar nome correto de pacote no sistema Debian
+
+Para verificar o nome correto do pacote no sistema Debian, você pode usar o comando `apt search` ou `apt-cache search` seguido por uma palavra-chave relacionada ao pacote que você está procurando. Isso exibirá uma lista de pacotes que correspondem à palavra-chave fornecida. 
+
+No seu caso, para verificar o nome correto do pacote "bashtop", você pode fazer o seguinte:
+
+```bash
+apt search bashtop
+```
+
+ou
+
+```bash
+apt-cache search bashtop
+```
+
+Esses comandos irão listar os pacotes cujos nomes ou descrições incluem a palavra-chave "bashtop". Você pode então ver se o pacote que você está procurando está listado e verificar o nome correto dele.
+
+Lembre-se de executar esses comandos com privilégios de administrador (sudo). Se o pacote "bashtop" estiver disponível nos repositórios configurados, você deverá ver o nome correto e outras informações relacionadas a ele.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--instala%C3%A7%C3%A3o-de-pacotes "Subir para o topo")
