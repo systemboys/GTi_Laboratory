@@ -81,6 +81,7 @@ Para instalar manualmente o Windows Package Manager (winget) em versões mais an
 1. **Verifique a Versão do Windows:** Primeiro, verifique se o seu sistema atende aos requisitos mínimos para o uso do winget. Ele é compatível com o Windows 10 versão 1809 (build 10.0.17763) ou posterior.
 
 2. **Baixe a Ferramenta de Instalação:** A Microsoft fornece um instalador de código aberto chamado "App Installer" que você pode usar para instalar o winget manualmente. Você pode baixá-lo no GitHub da Microsoft.
+    > ( i ) [Clique aqui](#https://learn.microsoft.com/pt-br/windows/package-manager/winget/ "Clique aqui") para acessar a página de download!
 
 3. **Instalação:** Após baixar o instalador, execute-o. Ele irá instalar o winget e fazer as configurações necessárias no seu sistema.
 
