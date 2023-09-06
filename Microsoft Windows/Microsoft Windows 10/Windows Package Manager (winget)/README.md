@@ -3,7 +3,7 @@
 [![Windows Package Manager](https://github.com/systemboys/GTi_Laboratory/blob/main/Microsoft%20Windows/Microsoft%20Windows%2010/Windows%20Package%20Manager%20(winget)/images/winget.jpg?raw=true "Windows Package Manager")](https://github.com/systemboys/GTi_Laboratory/blob/main/Microsoft%20Windows/Microsoft%20Windows%2010/Windows%20Package%20Manager%20(winget)/images/winget.jpg?raw=true "Windows Package Manager")
 
 - [Dicas para Utilizar o Windows Package Manager (winget)](#dicas-para-utilizar-o-windows-package-manager-winget "Dicas para Utilizar o Windows Package Manager (winget)")
-- [Como Instalar Manualmente o Windows Package Manager (winget) em Versões Antigas do Windows](#como-instalar-manualmente-o-windows-package-manager-winget-em-versoes-antigas-do-windows "Como Instalar Manualmente o Windows Package Manager (winget) em Versões Antigas do Windows")
+- [Como Instalar Manualmente o Windows Package Manager (winget) em Versões Antigas do Windows](#como-instalar-manualmente-o-windows-package-manager-winget-em-vers%C3%B5es-antigas-do-windows "Como Instalar Manualmente o Windows Package Manager (winget) em Versões Antigas do Windows")
 
 ---
 
