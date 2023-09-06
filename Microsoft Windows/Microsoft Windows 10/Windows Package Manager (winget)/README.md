@@ -3,6 +3,7 @@
 [![Windows Package Manager](https://github.com/systemboys/GTi_Laboratory/blob/main/Microsoft%20Windows/Microsoft%20Windows%2010/Windows%20Package%20Manager%20(winget)/images/winget.jpg?raw=true "Windows Package Manager")](https://github.com/systemboys/GTi_Laboratory/blob/main/Microsoft%20Windows/Microsoft%20Windows%2010/Windows%20Package%20Manager%20(winget)/images/winget.jpg?raw=true "Windows Package Manager")
 
 - [Dicas para Utilizar o Windows Package Manager (winget)](#dicas-para-utilizar-o-windows-package-manager-winget "Dicas para Utilizar o Windows Package Manager (winget)")
+- [Como Instalar Manualmente o Windows Package Manager (winget) em Versões Antigas do Windows](#como-instalar-manualmente-o-windows-package-manager-winget-em-versoes-antigas-do-windows "Como Instalar Manualmente o Windows Package Manager (winget) em Versões Antigas do Windows")
 
 ---
 
@@ -67,6 +68,33 @@ Claro, aqui estão algumas orientações básicas para usar o Windows Package Ma
 Lembre-se de que você pode precisar executar o Prompt de Comando ou o PowerShell como administrador para usar alguns comandos, especialmente os de instalação e desinstalação.
 
 Certifique-se de consultar a documentação oficial do Windows Package Manager (winget) da Microsoft para obter informações mais detalhadas e atualizadas sobre como usar esse recurso.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--windows-package-manager "Subir para o topo")
+
+---
+
+## Como Instalar Manualmente o Windows Package Manager (winget) em Versões Antigas do Windows
+
+Para instalar manualmente o Windows Package Manager (winget) em versões mais antigas do Windows que não o têm pré-instalado, siga estas etapas:
+
+1. **Verifique a Versão do Windows:** Primeiro, verifique se o seu sistema atende aos requisitos mínimos para o uso do winget. Ele é compatível com o Windows 10 versão 1809 (build 10.0.17763) ou posterior.
+
+2. **Baixe a Ferramenta de Instalação:** A Microsoft fornece um instalador de código aberto chamado "App Installer" que você pode usar para instalar o winget manualmente. Você pode baixá-lo no GitHub da Microsoft.
+
+3. **Instalação:** Após baixar o instalador, execute-o. Ele irá instalar o winget e fazer as configurações necessárias no seu sistema.
+
+4. **Verificação da Instalação:** Para verificar se a instalação foi bem-sucedida, abra o Prompt de Comando (cmd.exe) e digite o seguinte comando:
+
+   ```bash
+   winget --version
+   ```
+
+   Isso deve exibir a versão do Windows Package Manager que foi instalada.
+
+5. **Uso do winget:** Agora você pode usar o winget para instalar, desinstalar e gerenciar aplicativos da Microsoft Store ou outros programas suportados pelo winget.
+
+Lembre-se de que a instalação manual pode não estar disponível em todas as versões mais antigas do Windows e pode exigir a execução de comandos com privilégios de administrador. Certifique-se de seguir as etapas com cuidado e de acordo com os requisitos do seu sistema.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--windows-package-manager "Subir para o topo")
