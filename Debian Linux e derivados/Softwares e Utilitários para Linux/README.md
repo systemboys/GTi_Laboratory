@@ -5,6 +5,7 @@
 > Internet
 
 - [Melhorando a Velocidade de Download no Linux com Aceleradores de Download](#melhorando-a-velocidade-de-download-no-linux-com-aceleradores-de-download "Melhorando a Velocidade de Download no Linux com Aceleradores de Download")
+- [Baixando com Facilidade: Utilizando o Comando wget no Linux](# "Baixando com Facilidade: Utilizando o Comando wget no Linux")
 
 ---
 
@@ -48,6 +49,59 @@ Sim, existem vários aceleradores de download disponíveis para Linux que podem 
    ```
 
 Cada uma dessas ferramentas tem suas próprias características e vantagens, então escolha a que melhor atende às suas necessidades e preferências. Todas elas podem ajudar a melhorar a velocidade de download de arquivos da Internet.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--softwares-e-utilit%C3%A1rios-para-linux "Subir para o topo")
+
+---
+
+## Baixando com Facilidade: Utilizando o Comando wget no Linux
+
+O comando `wget` é uma ferramenta de linha de comando disponível em sistemas Linux e UNIX que é usada para baixar arquivos da Internet. O nome "wget" significa "Web Get", o que descreve bem a função da ferramenta: ela permite que você obtenha arquivos e conteúdo diretamente da web para o seu sistema local. Aqui estão algumas das principais características e usos do comando `wget`:
+
+1. **Download de Arquivos:** O uso mais comum do `wget` é para baixar arquivos da Internet. Você pode especificar a URL do arquivo que deseja baixar como argumento para o comando. Por exemplo:
+
+   ```bash
+   wget https://example.com/arquivo.zip
+   ```
+
+   Isso baixará o arquivo "arquivo.zip" do site "example.com" para o diretório atual.
+
+2. **Download Recursivo:** O `wget` permite realizar downloads recursivos, o que significa que você pode baixar todo um site ou diretório da web, incluindo seus subdiretórios e arquivos. Para isso, você pode usar a opção `-r` ou `--recursive`. Por exemplo:
+
+   ```bash
+   wget -r https://example.com/diretorio/
+   ```
+
+   Isso baixará todo o conteúdo do diretório "diretorio" e seus subdiretórios.
+
+3. **Retomar Downloads:** O `wget` é capaz de retomar downloads interrompidos. Se você estiver baixando um arquivo grande e a conexão for interrompida, pode usar o `wget` para continuar o download de onde parou. Basta usar a opção `-c` ou `--continue`. Por exemplo:
+
+   ```bash
+   wget -c https://example.com/arquivo-grande.zip
+   ```
+
+4. **Limitar Largura de Banda:** Você pode limitar a largura de banda usada pelo `wget` para não sobrecarregar sua conexão. Isso pode ser útil ao baixar grandes arquivos. Use a opção `--limit-rate` seguida pela taxa desejada em bytes por segundo.
+
+   ```bash
+   wget --limit-rate=100k https://example.com/arquivo-grande.zip
+   ```
+
+5. **Autenticação:** O `wget` permite que você forneça credenciais de autenticação para acessar recursos protegidos por senha na web. Use a opção `--user` para especificar o nome de usuário e `--password` para especificar a senha.
+
+   ```bash
+   wget --user=seu_nome_de_usuario --password=sua_senha https://example.com/recursos-restritos
+   ```
+
+6. **Conversão de Links Relativos:** Quando você baixa um site inteiro, o `wget` pode converter os links relativos para que funcionem localmente. Use a opção `--convert-links` para ativar essa funcionalidade.
+
+   ```bash
+   wget --recursive --convert-links https://example.com/site-com-links-relativos
+   ```
+
+7. **Espelhamento de Sites:** O `wget` pode ser usado para criar espelhos de sites inteiros, o que é útil para fazer backup de sites ou criar cópias locais de conteúdo da web.
+
+O `wget` é uma ferramenta poderosa e versátil para gerenciar downloads de arquivos e recursos da web em sistemas Linux e UNIX. É amplamente utilizado por administradores de sistemas e usuários avançados para diversas tarefas relacionadas à web. Certifique-se de usar com responsabilidade e respeitar os direitos autorais e os termos de uso ao baixar conteúdo da Internet.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--softwares-e-utilit%C3%A1rios-para-linux "Subir para o topo")
