@@ -2,6 +2,8 @@
 
 [![Pacotes Linux](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Softwares%20e%20Utilit%C3%A1rios%20para%20Linux/images/cardboard-boxes-apt-dpkg.jpg?raw=true "Pacotes Linux")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Softwares%20e%20Utilit%C3%A1rios%20para%20Linux/images/cardboard-boxes-apt-dpkg.jpg?raw=true "Pacotes Linux")
 
+> Internet
+
 - [Melhorando a Velocidade de Download no Linux com Aceleradores de Download](https://site.com#anchor-link-1 "Melhorando a Velocidade de Download no Linux com Aceleradores de Download")
 
 ---
