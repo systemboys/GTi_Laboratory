@@ -4,7 +4,7 @@
 
 > Internet
 
-- [Melhorando a Velocidade de Download no Linux com Aceleradores de Download](https://site.com#anchor-link-1 "Melhorando a Velocidade de Download no Linux com Aceleradores de Download")
+- [Melhorando a Velocidade de Download no Linux com Aceleradores de Download](#melhorando-a-velocidade-de-download-no-linux-com-aceleradores-de-download "Melhorando a Velocidade de Download no Linux com Aceleradores de Download")
 
 ---
 
