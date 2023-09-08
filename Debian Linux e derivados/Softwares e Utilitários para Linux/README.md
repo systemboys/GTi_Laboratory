@@ -1,6 +1,6 @@
 # [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi") / Softwares e Utilitários para Linux
 
-[![Imagem 1](https://site.com/img/exemplo.png "Imagem 1")](http://link.com "Imagem 1")
+[![Pacotes Linux](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Softwares%20e%20Utilit%C3%A1rios%20para%20Linux/images/cardboard-boxes-apt-dpkg.jpg?raw=true "Pacotes Linux")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Softwares%20e%20Utilit%C3%A1rios%20para%20Linux/images/cardboard-boxes-apt-dpkg.jpg?raw=true "Pacotes Linux")
 
 - [Melhorando a Velocidade de Download no Linux com Aceleradores de Download](https://site.com#anchor-link-1 "Melhorando a Velocidade de Download no Linux com Aceleradores de Download")
 
