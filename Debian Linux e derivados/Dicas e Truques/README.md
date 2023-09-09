@@ -2,7 +2,7 @@
 
 [![Imagem 1](https://site.com/img/exemplo.png "Imagem 1")](http://link.com "Imagem 1")
 
-- [Configurando uma Resolução de Tela Personalizada no Debian Linux](https://site.com#anchor-link-1 "Configurando uma Resolução de Tela Personalizada no Debian Linux")
+- [Configurando uma Resolução de Tela Personalizada no Debian Linux](#configurando-uma-resolu%C3%A7%C3%A3o-de-tela-personalizada-no-debian-linux "Configurando uma Resolução de Tela Personalizada no Debian Linux")
 
 ---
 
@@ -56,6 +56,6 @@ Após reiniciar, sua resolução personalizada deve estar disponível nas config
 Lembre-se de que a edição incorreta do arquivo de configuração do Xorg pode causar problemas de exibição. Portanto, faça isso com cuidado e siga as etapas de backup para que você possa restaurar a configuração anterior, se necessário.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#assunto "Subir para o topo")
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--dicas-e-truques "Subir para o topo")
 
 ---
