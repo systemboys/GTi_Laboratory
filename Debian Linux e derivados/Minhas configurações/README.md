@@ -50,6 +50,11 @@ Para particionar o disco em duas partições, uma para o sistema raiz ("/") e ou
 
 Depois de concluir essas etapas, o Debian Linux será instalado com as duas partições desejadas: uma para o sistema raiz ("/") e outra para o diretório pessoal ("/home"). Isso permitirá que você mantenha seus dados pessoais separados do sistema operacional, facilitando a reinstalação ou a atualização do sistema no futuro. Certifique-se de fazer backup de dados importantes antes de prosseguir.
 
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--minhas-configura%C3%A7%C3%B5es "Subir para o topo")
+
+---
+
 ## Como Instalar o Debian Linux em uma Partição Específica sem Afetar Outras Partições
 
 Você pode instalar o Debian Linux em uma partição específica do seu disco rígido (HDD) sem afetar as outras partições. Aqui estão os passos gerais que você pode seguir:
@@ -74,6 +79,11 @@ Você pode instalar o Debian Linux em uma partição específica do seu disco r�
 
 Após concluir essas etapas, o Debian Linux estará instalado na partição desejada do seu disco rígido, e as outras partições devem permanecer intactas. Certifique-se de fazer backup dos dados importantes e tome cuidado ao selecionar a partição durante a instalação para evitar a formatação acidental de outras partições.
 
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--minhas-configura%C3%A7%C3%B5es "Subir para o topo")
+
+---
+
 ## Instalações e configurações
 
 > ( ! ) Essa configuração corresponde às preferências de `Marcos Aurélio`.
@@ -94,12 +104,22 @@ Botões do Painel na barra inferior.
 
 > ( ! ) Acima estão os botões por ordem na barra inferior!
 
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--minhas-configura%C3%A7%C3%B5es "Subir para o topo")
+
+---
+
 ## Algumas ferramentas úteis
 
 | Software | Copyright | Instalação e/ou Configurações |
 | :--: | :--: | ---- |
 | GParted | Copyright © 2004-2006 Bart Hakvoort \| Copyright © 2008-2021 Curtis Gedak \| Copyright © 2011-2021 Mike Fleetwood | `apt update && apt install gparted` |
 | Virtual Box | [Oracle](https://www.oracle.com/ "Oracle - Cloud Applications and Cloud Platform") |  |
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--minhas-configura%C3%A7%C3%B5es "Subir para o topo")
+
+---
 
 ## Internet
 
@@ -118,6 +138,11 @@ Botões do Painel na barra inferior.
 | FileZilla | [filezilla-project.org](https://filezilla-project.org/download.php?type=client "Download") | Instalação via terminal: `apt install filezilla` e `apt --fix-broken install`. \|  Adicionar à área de trabalho. |
 | Steam | [Valve Corporation](https://store.steampowered.com/?l=portuguese "Download") | Adicionar à área de trabalho. |
 | Remmina | [Antenore Gatta](https://remmina.org/ "Antenore Gatta") | Instalação via terminal: `sudo apt-get install remmina` |
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--minhas-configura%C3%A7%C3%B5es "Subir para o topo")
+
+---
 
 ## Desenvolvimento
 
