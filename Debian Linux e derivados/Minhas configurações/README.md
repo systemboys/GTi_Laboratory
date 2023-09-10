@@ -6,7 +6,7 @@
 
 > Instalação do Linux
 
-- [Como Instalar o Debian Linux em uma Partição Específica sem Afetar Outras Partições](# "Como Instalar o Debian Linux em uma Partição Específica sem Afetar Outras Partições")
+- [Como Instalar o Debian Linux em uma Partição Específica sem Afetar Outras Partições](#como-instalar-o-debian-linux-em-uma-parti%C3%A7%C3%A3o-espec%C3%ADfica-sem-afetar-outras-parti%C3%A7%C3%B5es "Como Instalar o Debian Linux em uma Partição Específica sem Afetar Outras Partições")
 
 > Outras instações e configurações
 
