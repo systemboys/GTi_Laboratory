@@ -6,7 +6,7 @@
 
 > Instalação do Linux
 
-- [Como Particionar um Disco para Instalar o Debian Linux com "/" e "/home" Separados](# "Como Particionar um Disco para Instalar o Debian Linux com / e /home Separados")
+- [Como Particionar um Disco para Instalar o Debian Linux com "/" e "/home" Separados](#como-particionar-um-disco-para-instalar-o-debian-linux-com--e-home-separados "Como Particionar um Disco para Instalar o Debian Linux com / e /home Separados")
 - [Como Instalar o Debian Linux em uma Partição Específica sem Afetar Outras Partições](#como-instalar-o-debian-linux-em-uma-parti%C3%A7%C3%A3o-espec%C3%ADfica-sem-afetar-outras-parti%C3%A7%C3%B5es "Como Instalar o Debian Linux em uma Partição Específica sem Afetar Outras Partições")
 
 > Outras instações e configurações
