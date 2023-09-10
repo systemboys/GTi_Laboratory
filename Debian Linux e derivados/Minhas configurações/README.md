@@ -22,7 +22,7 @@
 
 > O conteúdo abaixo, são as configurações do meu computador o qual utilizo para fazer meus trabalhos, meus projetos e meu companheiro de gerra. Nessas configurações, estou utilizando o `Debian Linux` com o ambiente `Cinnamon`, adotei como minha principal interface de usuário...
 
-## Como Particionar um Disco para Instalar o Debian Linux com / e /home Separados
+## Como Particionar um Disco para Instalar o Debian Linux com "/" e "/home" Separados
 
 Para particionar o disco em duas partições, uma para o sistema raiz ("/") e outra para o diretório pessoal ("/home") durante a instalação do Debian Linux, siga estas etapas:
 
