@@ -4,7 +4,7 @@
 
 - [Configurando uma Resolução de Tela Personalizada no Debian Linux](#configurando-uma-resolu%C3%A7%C3%A3o-de-tela-personalizada-no-debian-linux "Configurando uma Resolução de Tela Personalizada no Debian Linux")
 - [Como Limpar o Histórico de Comandos no Terminal Linux](#como-limpar-o-hist%C3%B3rico-de-comandos-no-terminal-linux "Como Limpar o Histórico de Comandos no Terminal Linux")
-- [Como Desligar ou Reiniciar o Linux via Terminal: Comandos Úteis](# "Como Desligar ou Reiniciar o Linux via Terminal: Comandos Úteis")
+- [Como Desligar ou Reiniciar o Linux via Terminal: Comandos Úteis](#como-desligar-ou-reiniciar-o-linux-via-terminal-comandos-%C3%BAteis "Como Desligar ou Reiniciar o Linux via Terminal: Comandos Úteis")
 
 ---
 
