@@ -6,6 +6,7 @@
 
 > Instalação do Linux
 
+- [Como Particionar um Disco para Instalar o Debian Linux com "/" e "/home" Separados](# "Como Particionar um Disco para Instalar o Debian Linux com / e /home Separados")
 - [Como Instalar o Debian Linux em uma Partição Específica sem Afetar Outras Partições](#como-instalar-o-debian-linux-em-uma-parti%C3%A7%C3%A3o-espec%C3%ADfica-sem-afetar-outras-parti%C3%A7%C3%B5es "Como Instalar o Debian Linux em uma Partição Específica sem Afetar Outras Partições")
 
 > Outras instações e configurações
@@ -20,6 +21,34 @@
 # Marcos Aurélio Rocha da Silva (programação)
 
 > O conteúdo abaixo, são as configurações do meu computador o qual utilizo para fazer meus trabalhos, meus projetos e meu companheiro de gerra. Nessas configurações, estou utilizando o `Debian Linux` com o ambiente `Cinnamon`, adotei como minha principal interface de usuário...
+
+## Como Particionar um Disco para Instalar o Debian Linux com / e /home Separados
+
+Para particionar o disco em duas partições, uma para o sistema raiz ("/") e outra para o diretório pessoal ("/home") durante a instalação do Debian Linux, siga estas etapas:
+
+**Nota:** Antes de prosseguir, faça backup de todos os dados importantes, pois a criação de partições envolve o risco de perda de dados.
+
+1. **Inicie a Instalação:** Inicie a instalação do Debian a partir do pendrive de instalação como mencionado anteriormente.
+
+2. **Escolha a Opção de Particionamento Personalizado:** Durante o processo de instalação, você chegará à tela de particionamento. Em vez de escolher a opção automática, selecione a opção de particionamento personalizado (às vezes chamada de "Particionamento Manual" ou "Avançado").
+
+3. **Selecione o Disco:** Escolha o disco no qual deseja instalar o Debian e selecione-o. Normalmente, será algo como "/dev/sda" ou "/dev/nvme0n1", dependendo do tipo de disco.
+
+4. **Crie as Partições:** Agora, você precisa criar duas partições:
+
+   a. **Partição para o Sistema Raiz ("/"):** Crie uma partição com o tamanho desejado para o sistema raiz ("/"). Geralmente, é recomendável reservar pelo menos 20 GB para o sistema raiz, mas você pode alocar mais espaço, dependendo das suas necessidades. Defina o ponto de montagem como "/" (raiz).
+
+   b. **Partição para o Diretório Pessoal ("/home"):** Crie uma segunda partição com o tamanho desejado para o diretório pessoal ("/home"). Defina o ponto de montagem como "/home".
+
+5. **Configure o Sistema de Arquivos:** Para cada partição, defina o sistema de arquivos. O sistema de arquivos mais comum é o "ext4". Você também pode definir o tamanho do ponto de montagem e outras opções, se desejar.
+
+6. **Finalize a Configuração das Partições:** Após criar as duas partições, revise suas configurações para garantir que estejam corretas. Certifique-se de que a partição para o sistema raiz ("/") não está marcada para formatação, para preservar seus dados se já houver algo na partição.
+
+7. **Conclua a Instalação:** Continue seguindo as instruções na tela para concluir a instalação do Debian. Durante o processo, você será solicitado a confirmar as alterações nas partições. Certifique-se de que tudo esteja correto antes de prosseguir.
+
+8. **Configure o GRUB:** Como mencionado anteriormente, você pode escolher instalar o GRUB durante a instalação. Isso permitirá que você inicie o Debian e outros sistemas instalados. Configure-o de acordo com suas preferências.
+
+Depois de concluir essas etapas, o Debian Linux será instalado com as duas partições desejadas: uma para o sistema raiz ("/") e outra para o diretório pessoal ("/home"). Isso permitirá que você mantenha seus dados pessoais separados do sistema operacional, facilitando a reinstalação ou a atualização do sistema no futuro. Certifique-se de fazer backup de dados importantes antes de prosseguir.
 
 ## Como Instalar o Debian Linux em uma Partição Específica sem Afetar Outras Partições
 
