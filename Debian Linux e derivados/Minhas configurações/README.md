@@ -28,7 +28,7 @@ Para particionar o disco em duas partições, uma para o sistema raiz ("/") e ou
 
 **Nota:** Antes de prosseguir, faça backup de todos os dados importantes, pois a criação de partições envolve o risco de perda de dados.
 
-1. **Inicie a Instalação:** Inicie a instalação do Debian a partir do pendrive de instalação como mencionado anteriormente.
+1. **Inicie a Instalação:** Insira o pendrive de instalação no seu computador e inicie a partir dele. Você pode precisar alterar a ordem de inicialização no BIOS ou na UEFI para inicializar a partir do pendrive.
 
 2. **Escolha a Opção de Particionamento Personalizado:** Durante o processo de instalação, você chegará à tela de particionamento. Em vez de escolher a opção automática, selecione a opção de particionamento personalizado (às vezes chamada de "Particionamento Manual" ou "Avançado").
 
