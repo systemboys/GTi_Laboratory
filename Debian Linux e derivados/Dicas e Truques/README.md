@@ -4,6 +4,7 @@
 
 - [Configurando uma Resolução de Tela Personalizada no Debian Linux](#configurando-uma-resolu%C3%A7%C3%A3o-de-tela-personalizada-no-debian-linux "Configurando uma Resolução de Tela Personalizada no Debian Linux")
 - [Como Limpar o Histórico de Comandos no Terminal Linux](#como-limpar-o-hist%C3%B3rico-de-comandos-no-terminal-linux "Como Limpar o Histórico de Comandos no Terminal Linux")
+- [Como Desligar ou Reiniciar o Linux via Terminal: Comandos Úteis](# "Como Desligar ou Reiniciar o Linux via Terminal: Comandos Úteis")
 
 ---
 
@@ -88,6 +89,59 @@ Aqui estão os passos:
 4. Para garantir que o histórico seja salvo vazio, você pode digitar o comando `history -w`. Isso salvará o histórico vazio no arquivo de histórico.
 
 Agora, seu histórico de comandos estará vazio. Lembre-se de que isso apagará permanentemente o histórico de comandos, portanto, certifique-se de que é isso que deseja fazer. Se você deseja evitar que comandos futuros sejam registrados no histórico, pode configurar o shell para ignorar o histórico com um comando específico ou ajustar as configurações de histórico em seu arquivo de perfil, como o `~/.bashrc` para o Bash shell.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--dicas-e-truques "Subir para o topo")
+
+---
+
+## Como Desligar ou Reiniciar o Linux via Terminal: Comandos Úteis
+
+Você pode desligar o Linux via terminal usando vários comandos, mas os principais comandos são:
+
+1. **shutdown:** O comando `shutdown` permite que você desligue ou reinicie o sistema. Aqui estão alguns exemplos:
+
+   - Para desligar imediatamente: `sudo shutdown -h now`
+   - Para reiniciar imediatamente: `sudo shutdown -r now`
+   - Para agendar um desligamento em 10 minutos: `sudo shutdown -h +10`
+   - Para cancelar um desligamento agendado: `sudo shutdown -c`
+
+2. **poweroff:** Este é um comando simples para desligar o sistema imediatamente:
+
+   ```bash
+   sudo poweroff
+   ```
+
+3. **halt:** Outro comando para desligar o sistema:
+
+   ```bash
+   sudo halt
+   ```
+
+4. **reboot:** Para reiniciar o sistema imediatamente:
+
+   ```bash
+   sudo reboot
+   ```
+
+5. **init:** Você também pode usar o comando `init` para alterar o nível de execução do sistema. Por exemplo, para desligar:
+
+   ```bash
+   sudo init 0
+   ```
+
+   Para reiniciar:
+
+   ```bash
+   sudo init 6
+   ```
+
+6. **systemctl:** Se você estiver usando um sistema com o systemd (como muitas distribuições modernas), pode usar o `systemctl` para desligar ou reiniciar:
+
+   - Para desligar: `sudo systemctl poweroff`
+   - Para reiniciar: `sudo systemctl reboot`
+
+Lembre-se de usar o `sudo` antes desses comandos para executá-los com privilégios de superusuário, pois o desligamento do sistema geralmente requer permissões elevadas. Certifique-se de salvar o trabalho antes de desligar ou reiniciar o sistema para evitar perda de dados.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--dicas-e-truques "Subir para o topo")
