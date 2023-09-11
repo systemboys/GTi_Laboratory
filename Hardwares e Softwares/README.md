@@ -72,25 +72,55 @@ Para realizar a clonagem de um dispositivo de armazenamento para outro, você po
 
 1. Conecte o dispositivo de armazenamento de destino que receberá a clonagem.
 
+    [![Dispositivo conectado à máquina](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/AB%20Multiboot/20230909_102906.jpg?raw=true "Dispositivo conectado à máquina")](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/AB%20Multiboot/20230909_102906.jpg?raw=true "Dispositivo conectado à máquina")
+
 2. Inicie o software "AB Multiboot" no computador que possui o dispositivo de armazenamento a ser clonado.
+
+    [![AB Multiboot](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/AB%20Multiboot/telas-ab-multiboot-sobre-a-ferramenta-multiboot-3-1.png?raw=true "AB Multiboot")](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/AB%20Multiboot/telas-ab-multiboot-sobre-a-ferramenta-multiboot-3-1.png?raw=true "AB Multiboot")
 
 3. Localize e execute a aplicação "MiniTool Partition Wizard Enterprise". Isso abrirá a interface da ferramenta, na qual você poderá visualizar todos os discos instalados no computador, incluindo unidades removíveis.
 
+    [![MiniTool Partition Wizard Enterprise](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/AB%20Multiboot/gerenciador-de-particoes-de-disco.png?raw=true "MiniTool Partition Wizard Enterprise")](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/AB%20Multiboot/gerenciador-de-particoes-de-disco.png?raw=true "MiniTool Partition Wizard Enterprise")
+
 4. No painel esquerdo, clique na opção "Assistente de Clonagem de Disco".
+
+    [![Copy Disk Wizard](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/AB%20Multiboot/Capture8.PNG?raw=true "Copy Disk Wizard")](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/AB%20Multiboot/Capture8.PNG?raw=true "Copy Disk Wizard")
 
 5. Uma tela será exibida, solicitando que você escolha o dispositivo de origem. Selecione o dispositivo que deseja clonar e prossiga clicando em "Próximo" (ou "Next", dependendo do idioma).
 
+    [![Select Disk to copy](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/AB%20Multiboot/Capture9.PNG?raw=true "Select Disk to copy")](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/AB%20Multiboot/Capture9.PNG?raw=true "Select Disk to copy")
+
 6. Em seguida, selecione o dispositivo de destino para onde deseja implantar o clone e clique em "Próximo" (ou "Next").
+
+    [![Select target Disk](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/AB%20Multiboot/Capture10.PNG?raw=true "Select target Disk")](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/AB%20Multiboot/Capture10.PNG?raw=true "Select target Disk")
 
 7. Uma mensagem de confirmação será exibida, perguntando se você deseja continuar. Confirme clicando em "Sim" (ou "Yes").
 
+    [![Worning](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/AB%20Multiboot/Capture11.PNG?raw=true "Worning")](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/AB%20Multiboot/Capture11.PNG?raw=true "Worning")
+
 8. A próxima tela apresentará um resumo das configurações do processo de clonagem. Verifique se todas as configurações estão corretas e, se estiverem, clique em "Próximo" (ou "Next").
+
+    [![Review the changes](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/AB%20Multiboot/Capture12.PNG?raw=true "Review the changes")](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/AB%20Multiboot/Capture12.PNG?raw=true "Review the changes")
 
 9. A tela subsequente pode solicitar que você configure a BIOS do computador para inicializar a partir do disco de destino. Siga as instruções fornecidas e clique em "Concluir" (ou "Finish").
 
+    [![Boot from the Destination disk](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/AB%20Multiboot/Capture13.PNG?raw=true "Boot from the Destination disk")](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/AB%20Multiboot/Capture13.PNG?raw=true "Boot from the Destination disk")
+
 10. Por fim, aplique as configurações clicando em "Aplicar" (ou "Apply"). O processo de clonagem será iniciado e você poderá acompanhar seu progresso.
 
+    [![Aplicação das mudanças](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/AB%20Multiboot/Capture14.PNG?raw=true "Aplicação das mudanças")](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/AB%20Multiboot/Capture14.PNG?raw=true "Aplicação das mudanças")
+
 11. Uma tela de progresso mostrará o processo de clonagem em andamento. Aguarde até que o processo seja concluído.
+
+    [![Apply Pending Operation(s)...](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/AB%20Multiboot/Capture6.PNG?raw=true "Apply Pending Operation(s)...")](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/AB%20Multiboot/Capture6.PNG?raw=true "Apply Pending Operation(s)...")
+
+12. Conclusão.
+
+    [![Successfull](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/AB%20Multiboot/Capture7.PNG?raw=true "Successfull")](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/AB%20Multiboot/Capture7.PNG?raw=true "Successfull")
+
+13. No caso deste exemplo, o dispositivo de armazenamento que foi clonado foi removido e o dispositivo que recebeu o clone foi instalado na maquina e o clone do sistema operacional foi iniciado normalmente.
+
+    [![Sistema operacional clonado](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/AB%20Multiboot/20230909_120318.jpg?raw=true "Sistema operacional clonado")](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/AB%20Multiboot/20230909_120318.jpg?raw=true "Sistema operacional clonado")
 
 Lembre-se de que os nomes de botões e opções podem variar ligeiramente dependendo da versão específica da ferramenta "MiniTool Partition Wizard Enterprise" e do sistema operacional. Certifique-se de seguir as instruções fornecidas pela ferramenta que estiver utilizando.
 
