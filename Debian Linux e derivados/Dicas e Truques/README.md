@@ -30,12 +30,16 @@ Resolvendo o Problema de Resolução em uma Máquina Virtual Debian no Hyper-V:
    sudo nano grub
    ```
 
+   [![Nano - Grub](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Dicas%20e%20Truques/images/nano_etc_default_grub.png?raw=true "Nano - Grub")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Dicas%20e%20Truques/images/nano_etc_default_grub.png?raw=true "Nano - Grub")
+
 5. No arquivo de configuração do GRUB, encontre as linhas que começam com `GRUB_CMDLINE_LINUX_DEFAULT` e `GRUB_CMDLINE_LINUX`. Adicione a resolução ideal para a sua tela ao final dessas linhas. Por exemplo, se a resolução desejada for 1366x768, as linhas devem ser assim:
 
    ```plaintext
    GRUB_CMDLINE_LINUX_DEFAULT="quiet splash video=hyperv_fb:1366x768"
    GRUB_CMDLINE_LINUX="video=hyperv_fb:1366x768"
    ```
+
+   [![Grub](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Dicas%20e%20Truques/images/nano_etc_default_grub_code.png?raw=true "Grub")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Dicas%20e%20Truques/images/nano_etc_default_grub_code.png?raw=true "Grub")
 
 6. Salve as alterações no arquivo e saia do editor de texto.
 
@@ -53,7 +57,11 @@ Resolvendo o Problema de Resolução em uma Máquina Virtual Debian no Hyper-V:
 
 Após a reinicialização da máquina virtual Debian, você deve ter a resolução configurada corretamente. Se necessário, ajuste a resolução da tela nas configurações do ambiente gráfico do Debian para corresponder à configuração feita no GRUB.
 
+[![Configurações do sistema](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Dicas%20e%20Truques/images/System_settings-layout.png?raw=true "Configurações do sistema")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Dicas%20e%20Truques/images/System_settings-layout.png?raw=true "Configurações do sistema")
+
 Essas etapas devem ajudá-lo a resolver problemas de resolução em uma máquina virtual Debian no Hyper-V.
+
+[![Desktop do Debian Linux](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Dicas%20e%20Truques/images/desktop_debian.png?raw=true "Desktop do Debian Linux")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Dicas%20e%20Truques/images/desktop_debian.png?raw=true "Desktop do Debian Linux")
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--dicas-e-truques "Subir para o topo")
