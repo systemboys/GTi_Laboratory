@@ -78,6 +78,10 @@ Para realizar a clonagem de um dispositivo de armazenamento para outro, você po
 
 2. Inicie o software "AB Multiboot" no computador que possui o dispositivo de armazenamento a ser clonado.
 
+    [![Pendrive com AB Multiboot](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/AB%20Multiboot/20230911_095118.jpg?raw=true "Pendrive com AB Multiboot")](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/AB%20Multiboot/20230911_095118.jpg?raw=true "Pendrive com AB Multiboot")
+
+    > ( ! ) Configure o BIOS da placa-mãe para iniciar com o pendrive de boot, ou pressione a tecla de função correspondente ao "**Boot Menu**". São as teclas de funções "**F1 a F12**". No iníciar do equipamento, é comum serem exibidas as informações de inicialização do Boot Menu.
+
     [![AB Multiboot](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/AB%20Multiboot/telas-ab-multiboot-sobre-a-ferramenta-multiboot-3-1.png?raw=true "AB Multiboot")](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/AB%20Multiboot/telas-ab-multiboot-sobre-a-ferramenta-multiboot-3-1.png?raw=true "AB Multiboot")
 
 3. Localize e execute a aplicação "MiniTool Partition Wizard Enterprise". Isso abrirá a interface da ferramenta, na qual você poderá visualizar todos os discos instalados no computador, incluindo unidades removíveis.
