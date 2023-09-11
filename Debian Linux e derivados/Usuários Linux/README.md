@@ -4,6 +4,7 @@
 
 > Gerenciando Usuários no Linux
 - [Criar um `usuário Root`](#criar-um-usu%C3%A1rio-root "Criar um usuário Root")
+- [Concedendo Privilégios de Superusuário a um Usuário no Linux usando o Grupo sudo](# "Concedendo Privilégios de Superusuário a um Usuário no Linux usando o Grupo sudo")
 - [Removendo Usuários via Terminal](#removendo-usu%C3%A1rios-via-terminal "Removendo Usuários via Terminal")
 - [Editando Configurações de Usuários no Linux com o Comando usermod](#editando-configura%C3%A7%C3%B5es-de-usu%C3%A1rios-no-linux-com-o-comando-usermod "Editando Configurações de Usuários no Linux com o Comando usermod")
 - [Mudar a senha do `super usuário`](#mudar-a-senha-do-super-usu%C3%A1rio "Mudar a senha do super usuário")
@@ -39,6 +40,37 @@ No Linux, o usuário "root" já vem pré-instalado no sistema e é criado automa
     ```
 
 Lembre-se de que é importante limitar o acesso do usuário root sempre que possível e evitar usá-lo para tarefas rotineiras. Em vez disso, use um usuário comum com privilégios limitados para tarefas diárias e execute comandos como superusuário apenas quando necessário.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--usu%C3%A1rios-linux "Subir para o topo")
+
+---
+
+## Concedendo Privilégios de Superusuário a um Usuário no Linux usando o Grupo sudo
+
+Para conceder a um usuário a capacidade de executar comandos com privilégios de superusuário no Linux, você pode adicionar esse usuário ao grupo `sudo`. O grupo `sudo` é geralmente configurado para permitir que os membros executem comandos com `sudo`, o que lhes concede temporariamente privilégios de superusuário.
+
+Aqui estão os passos para adicionar um usuário ao grupo `sudo` e conceder-lhe privilégios de superusuário:
+
+1. Abra um terminal.
+
+2. Execute o seguinte comando para adicionar o usuário ao grupo `sudo`, substituindo `name_user` pelo nome do usuário que você deseja conceder privilégios de superusuário:
+
+   ```bash
+   sudo usermod -aG sudo name_user
+   ```
+
+   O parâmetro `-aG` significa "adicionar ao grupo", e `sudo` é o nome do grupo que concede privilégios de superusuário.
+
+3. Após adicionar o usuário ao grupo `sudo`, você pode testar os privilégios de superusuário executando um comando com `sudo`. Por exemplo, para atualizar o índice de pacotes do sistema, você pode usar o seguinte comando:
+
+   ```bash
+   sudo apt update
+   ```
+
+   Você será solicitado a inserir a senha do seu usuário para confirmar a ação.
+
+A partir deste ponto, o usuário `name_user` terá a capacidade de executar comandos com privilégios de superusuário usando `sudo`. Isso elimina a necessidade de usar `su` para trocar para o superusuário, mas ainda exigirá a autenticação com a senha do próprio usuário ao usar `sudo`. Certifique-se de usar esses privilégios com responsabilidade, pois comandos errados podem afetar o sistema.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--usu%C3%A1rios-linux "Subir para o topo")
