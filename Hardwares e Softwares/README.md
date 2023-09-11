@@ -74,6 +74,8 @@ Para realizar a clonagem de um dispositivo de armazenamento para outro, você po
 
     [![Dispositivo conectado à máquina](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/AB%20Multiboot/20230909_102906.jpg?raw=true "Dispositivo conectado à máquina")](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/AB%20Multiboot/20230909_102906.jpg?raw=true "Dispositivo conectado à máquina")
 
+    > ( i ) O exemplo em questão, se trata da clonagem do sistema operacional instalado em um HDD (mecânico) de um computador que estava muito lento, para um SSD (sólido) para garantir mais velocidade.
+
 2. Inicie o software "AB Multiboot" no computador que possui o dispositivo de armazenamento a ser clonado.
 
     [![AB Multiboot](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/AB%20Multiboot/telas-ab-multiboot-sobre-a-ferramenta-multiboot-3-1.png?raw=true "AB Multiboot")](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/AB%20Multiboot/telas-ab-multiboot-sobre-a-ferramenta-multiboot-3-1.png?raw=true "AB Multiboot")
