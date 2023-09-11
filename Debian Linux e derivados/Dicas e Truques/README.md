@@ -5,6 +5,7 @@
 - [Resolvendo Problemas de Resolução em uma Máquina Virtual Debian no Hyper-V](#resolvendo-problemas-de-resolu%C3%A7%C3%A3o-em-uma-m%C3%A1quina-virtual-debian-no-hyper-v "Resolvendo Problemas de Resolução em uma Máquina Virtual Debian no Hyper-V")
 - [Como Limpar o Histórico de Comandos no Terminal Linux](#como-limpar-o-hist%C3%B3rico-de-comandos-no-terminal-linux "Como Limpar o Histórico de Comandos no Terminal Linux")
 - [Como Desligar ou Reiniciar o Linux via Terminal: Comandos Úteis](#como-desligar-ou-reiniciar-o-linux-via-terminal-comandos-%C3%BAteis "Como Desligar ou Reiniciar o Linux via Terminal: Comandos Úteis")
+- [Entendendo a Mensagem 'Do you want to continue? [Y/n]' em Instalações de Pacotes no Linux](# "Entendendo a Mensagem 'Do you want to continue? [Y/n]' em Instalações de Pacotes no Linux")
 
 ---
 
@@ -148,6 +149,25 @@ Você pode desligar o Linux via terminal usando vários comandos, mas os princip
    - Para reiniciar: `sudo systemctl reboot`
 
 Lembre-se de usar o `sudo` antes desses comandos para executá-los com privilégios de superusuário, pois o desligamento do sistema geralmente requer permissões elevadas. Certifique-se de salvar o trabalho antes de desligar ou reiniciar o sistema para evitar perda de dados.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--dicas-e-truques "Subir para o topo")
+
+---
+
+## Entendendo a Mensagem 'Do you want to continue? [Y/n]' em Instalações de Pacotes no Linux
+
+Claro, vou explicar essa mensagem "Do you want to continue? [Y/n]" que você frequentemente encontra ao instalar pacotes no Linux via terminal. 
+
+A mensagem "Do you want to continue? [Y/n]" é uma solicitação de confirmação que aparece durante a instalação ou atualização de pacotes no sistema Linux. Ela é projetada para que o usuário confirme se deseja prosseguir com a ação que está prestes a ser executada.
+
+- **O "Y" maiúsculo:** O "Y" maiúsculo é a opção padrão e é usado para indicar uma resposta afirmativa. Se você pressionar "Enter" sem digitar nada, a ação será confirmada automaticamente como "Sim" (Y). Isso é útil para agilizar o processo de instalação quando você deseja aceitar a configuração padrão.
+
+- **O "n" minúsculo:** O "n" minúsculo é a opção para negação ou rejeição. Se você não deseja prosseguir com a ação, pode pressionar "n" e depois "Enter" para recusar a instalação ou atualização. 
+
+Essa abordagem de ter a opção padrão como "Sim" (Y) é uma convenção para tornar o processo mais eficiente, especialmente quando os usuários geralmente querem prosseguir com a instalação. No entanto, a inclusão da opção "n" permite que os usuários cancelem a ação facilmente, caso desejem.
+
+Em resumo, essa mensagem visa tornar as operações no terminal mais seguras e eficientes, permitindo que os usuários confirmem ou cancelem a ação de forma rápida e simples.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--dicas-e-truques "Subir para o topo")
