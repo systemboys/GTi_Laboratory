@@ -10,7 +10,7 @@
 
 ## Resolvendo Problemas de Resolução em uma Máquina Virtual Debian no Hyper-V
 
-Claro, aqui está a mesma instrução adaptada para uma máquina virtual Debian no Hyper-V:
+Aqui está uma instrução adaptada para uma máquina virtual Debian no Hyper-V:
 
 Resolvendo o Problema de Resolução em uma Máquina Virtual Debian no Hyper-V:
 
