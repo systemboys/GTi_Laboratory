@@ -2,7 +2,7 @@
 
 [![Dicas e Truques](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Dicas%20e%20Truques/images/Comandos-basicos-do-Linux-para-iniciantes.jpg?raw=true "Dicas e Truques")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Dicas%20e%20Truques/images/Comandos-basicos-do-Linux-para-iniciantes.jpg?raw=true "Dicas e Truques")
 
-- [Resolvendo Problemas de Resolução em uma Máquina Virtual Debian no Hyper-V](#configurando-uma-resolu%C3%A7%C3%A3o-de-tela-personalizada-no-debian-linux "Resolvendo Problemas de Resolução em uma Máquina Virtual Debian no Hyper-V")
+- [Resolvendo Problemas de Resolução em uma Máquina Virtual Debian no Hyper-V](#resolvendo-problemas-de-resolu%C3%A7%C3%A3o-em-uma-m%C3%A1quina-virtual-debian-no-hyper-v "Resolvendo Problemas de Resolução em uma Máquina Virtual Debian no Hyper-V")
 - [Como Limpar o Histórico de Comandos no Terminal Linux](#como-limpar-o-hist%C3%B3rico-de-comandos-no-terminal-linux "Como Limpar o Histórico de Comandos no Terminal Linux")
 - [Como Desligar ou Reiniciar o Linux via Terminal: Comandos Úteis](#como-desligar-ou-reiniciar-o-linux-via-terminal-comandos-%C3%BAteis "Como Desligar ou Reiniciar o Linux via Terminal: Comandos Úteis")
 
