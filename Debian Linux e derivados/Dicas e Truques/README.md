@@ -2,60 +2,58 @@
 
 [![Dicas e Truques](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Dicas%20e%20Truques/images/Comandos-basicos-do-Linux-para-iniciantes.jpg?raw=true "Dicas e Truques")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Dicas%20e%20Truques/images/Comandos-basicos-do-Linux-para-iniciantes.jpg?raw=true "Dicas e Truques")
 
-- [Configurando uma Resolução de Tela Personalizada no Debian Linux](#configurando-uma-resolu%C3%A7%C3%A3o-de-tela-personalizada-no-debian-linux "Configurando uma Resolução de Tela Personalizada no Debian Linux")
+- [Resolvendo Problemas de Resolução em uma Máquina Virtual Debian no Hyper-V](#configurando-uma-resolu%C3%A7%C3%A3o-de-tela-personalizada-no-debian-linux "Resolvendo Problemas de Resolução em uma Máquina Virtual Debian no Hyper-V")
 - [Como Limpar o Histórico de Comandos no Terminal Linux](#como-limpar-o-hist%C3%B3rico-de-comandos-no-terminal-linux "Como Limpar o Histórico de Comandos no Terminal Linux")
 - [Como Desligar ou Reiniciar o Linux via Terminal: Comandos Úteis](#como-desligar-ou-reiniciar-o-linux-via-terminal-comandos-%C3%BAteis "Como Desligar ou Reiniciar o Linux via Terminal: Comandos Úteis")
 
 ---
 
-## Configurando uma Resolução de Tela Personalizada no Debian Linux
+## Resolvendo Problemas de Resolução em uma Máquina Virtual Debian no Hyper-V
 
-Se a resolução desejada de 1366x768 não está disponível nas opções de resolução na configuração do sistema, você pode tentar configurá-la manualmente editando o arquivo de configuração do Xorg. Aqui está um guia passo a passo sobre como fazer isso:
+Claro, aqui está a mesma instrução adaptada para uma máquina virtual Debian no Hyper-V:
 
-**Nota importante:** Certifique-se de fazer backup do arquivo de configuração do Xorg antes de fazer qualquer alteração. Isso permitirá que você restaure a configuração original, se algo der errado.
+Resolvendo o Problema de Resolução em uma Máquina Virtual Debian no Hyper-V:
 
-1. Abra um terminal.
+1. Inicie sua máquina virtual Debian no Hyper-V.
 
-2. Edite o arquivo de configuração do Xorg com um editor de texto. Você precisará de permissões de superusuário para fazer isso. Use o seguinte comando:
+2. Abra um terminal.
+
+3. Navegue até o diretório `/etc/default/`. Você pode fazer isso digitando o seguinte comando:
 
    ```bash
-   sudo nano /etc/X11/xorg.conf
+   cd /etc/default/
    ```
 
-   Isso abrirá o arquivo de configuração do Xorg no editor de texto "nano".
+4. Abra o arquivo de configuração do GRUB com um editor de texto. Você pode usar o editor de texto Nano, por exemplo:
 
-3. Dentro do arquivo de configuração do Xorg, você precisará adicionar uma seção "Monitor" e uma seção "Screen" para a resolução desejada. Use o seguinte exemplo como referência:
+   ```bash
+   sudo nano grub
+   ```
+
+5. No arquivo de configuração do GRUB, encontre as linhas que começam com `GRUB_CMDLINE_LINUX_DEFAULT` e `GRUB_CMDLINE_LINUX`. Adicione a resolução ideal para a sua tela ao final dessas linhas. Por exemplo, se a resolução desejada for 1366x768, as linhas devem ser assim:
 
    ```plaintext
-   Section "Monitor"
-       Identifier "Monitor0"
-       Modeline "1366x768_60.00" 85.25 1366 1440 1576 1784 768 771 781 798 -hsync +vsync
-       Option "PreferredMode" "1366x768_60.00"
-   EndSection
-
-   Section "Screen"
-       Identifier "Screen0"
-       Monitor "Monitor0"
-       DefaultDepth 24
-       SubSection "Display"
-           Depth 24
-           Modes "1366x768"
-       EndSubSection
+   GRUB_CMDLINE_LINUX_DEFAULT="quiet splash video=hyperv_fb:1366x768"
+   GRUB_CMDLINE_LINUX="video=hyperv_fb:1366x768"
    ```
 
-   Este exemplo configura uma resolução de 1366x768 a 60Hz. Você pode ajustar os valores conforme necessário para a resolução e a taxa de atualização desejadas.
+6. Salve as alterações no arquivo e saia do editor de texto.
 
-4. Salve as alterações no arquivo pressionando `Ctrl + O`, confirme o nome do arquivo e pressione Enter. Em seguida, saia do editor de texto pressionando `Ctrl + X`.
+7. Atualize o GRUB para aplicar as alterações digitando o seguinte comando:
 
-5. Reinicie o seu sistema para aplicar as configurações:
+   ```bash
+   sudo update-grub
+   ```
+
+8. Reinicie a máquina virtual Debian:
 
    ```bash
    sudo reboot
    ```
 
-Após reiniciar, sua resolução personalizada deve estar disponível nas configurações do sistema ou na configuração do monitor. Selecione-a e aplique-a como sua resolução preferida.
+Após a reinicialização da máquina virtual Debian, você deve ter a resolução configurada corretamente. Se necessário, ajuste a resolução da tela nas configurações do ambiente gráfico do Debian para corresponder à configuração feita no GRUB.
 
-Lembre-se de que a edição incorreta do arquivo de configuração do Xorg pode causar problemas de exibição. Portanto, faça isso com cuidado e siga as etapas de backup para que você possa restaurar a configuração anterior, se necessário.
+Essas etapas devem ajudá-lo a resolver problemas de resolução em uma máquina virtual Debian no Hyper-V.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--dicas-e-truques "Subir para o topo")
