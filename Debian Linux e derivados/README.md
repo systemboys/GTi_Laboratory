@@ -17,6 +17,7 @@
 - [Softwares para terminais](https://github.com/systemboys/GTi_Laboratory/tree/main/Debian%20Linux%20e%20derivados/Softwares%20para%20terminais#laborat%C3%B3rio-gti--softwares-para-terminais "Softwares para terminais")
 - [Softwares e Utilitários para Linux](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Softwares%20e%20Utilit%C3%A1rios%20para%20Linux/README.md#laborat%C3%B3rio-gti--softwares-e-utilit%C3%A1rios-para-linux "Softwares e Utilitários para Linux")
 - [Dicas e Truques](https://github.com/systemboys/GTi_Laboratory/tree/main/Debian%20Linux%20e%20derivados/Dicas%20e%20Truques#laborat%C3%B3rio-gti--dicas-e-truques "Dicas e Truques")
+- [Configurações e Soluções para Ambientes Linux](# "Configurações e Soluções para Ambientes Linux")
 
 ---
 
