@@ -4,6 +4,7 @@
 
 - [Entendendo o comando nslookup e a resolução de DNS no Linux (obtendo IP de domínios)](#entendendo-o-comando-nslookup-e-a-resolu%C3%A7%C3%A3o-de-dns-no-linux-obtendo-ip-de-dom%C3%ADnios "Entendendo o comando nslookup e a resolução de DNS no Linux (obtendo IP de domínios)")
 - [Como Configurar um IP Estático via Terminal no Linux](#como-configurar-um-ip-est%C3%A1tico-via-terminal-no-linux "Como Configurar um IP Estático via Terminal no Linux")
+- [Configurando Temporariamente uma Rede no Linux via Terminal](#configurando-temporariamente-uma-rede-no-linux-via-terminal "Configurando Temporariamente uma Rede no Linux via Terminal")
 
 ---
 
@@ -71,6 +72,36 @@ ip a show interface
 Substitua "interface" pelo nome da sua interface de rede. Certifique-se de que as configurações estejam corretas.
 
 Depois de seguir essas etapas, sua interface de rede deve estar configurada com o IP estático especificado. Certifique-se de ter anotado todos os valores corretamente, pois incorreções podem causar problemas na conectividade de rede.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--assuntos-relacionados-%C3%A0-redes-e-internet "Subir para o topo")
+
+---
+
+## Configurando Temporariamente uma Rede no Linux via Terminal
+
+Sim, é possível configurar temporariamente uma rede no Linux via terminal usando o utilitário `ip` ou comandos específicos, como `ifconfig` e `route`. Essa configuração será efêmera e não persistirá após reiniciar o sistema. Aqui estão alguns exemplos de como fazer isso:
+
+**Configurando um IP temporário com `ip` (exemplo para a interface eth0):**
+
+```bash
+sudo ip addr add seu_ip/24 dev eth0
+sudo ip link set eth0 up
+sudo ip route add default via seu_gateway
+```
+
+Substitua "seu_ip", "eth0", "seu_gateway" e "24" pelos valores apropriados.
+
+**Configurando um IP temporário com `ifconfig` (exemplo para a interface eth0):**
+
+```bash
+sudo ifconfig eth0 seu_ip netmask sua_mascara up
+sudo route add default gw seu_gateway
+```
+
+Substitua "seu_ip", "eth0", "sua_mascara" e "seu_gateway" pelos valores apropriados.
+
+Essas configurações serão válidas até o próximo reinício do sistema. Se você deseja tornar a configuração permanente, siga as instruções fornecidas na resposta anterior para configurar um IP estático.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--assuntos-relacionados-%C3%A0-redes-e-internet "Subir para o topo")
