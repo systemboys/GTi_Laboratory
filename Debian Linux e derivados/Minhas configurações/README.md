@@ -3,8 +3,8 @@
 [![Programação](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Minhas%20configura%C3%A7%C3%B5es/images/programacao.png?raw=true "Programação")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Minhas%20configura%C3%A7%C3%B5es/images/programacao.png?raw=true "Programação")
 
 - [Marcos Aurélio Rocha da Silva (programação)](#marcos-aur%C3%A9lio-rocha-da-silva-programa%C3%A7%C3%A3o "Marcos Aurélio Rocha da Silva (programação)")
-   - [(História 1) - Minha Jornada de Descoberta no Mundo do GNU/Linux](#minha-jornada-de-descoberta-no-mundo-do-gnulinux "(História 1) - Minha Jornada de Descoberta no Mundo do GNU/Linux")
-   - [(História 2) - Explorando a Diversidade dos Sistemas Operacionais: Uma Jornada de Aprendizado e Evolução](# "(História 2) - Explorando a Diversidade dos Sistemas Operacionais: Uma Jornada de Aprendizado e Evolução")
+   - [(História 1) - Minha Jornada de Descoberta no Mundo do GNU/Linux](#hist%C3%B3ria-1---minha-jornada-de-descoberta-no-mundo-do-gnulinux "(História 1) - Minha Jornada de Descoberta no Mundo do GNU/Linux")
+   - [(História 2) - Explorando a Diversidade dos Sistemas Operacionais: Uma Jornada de Aprendizado e Evolução](#hist%C3%B3ria-2---explorando-a-diversidade-dos-sistemas-operacionais-uma-jornada-de-aprendizado-e-evolu%C3%A7%C3%A3o "(História 2) - Explorando a Diversidade dos Sistemas Operacionais: Uma Jornada de Aprendizado e Evolução")
 
 > Instalação do Linux
 
