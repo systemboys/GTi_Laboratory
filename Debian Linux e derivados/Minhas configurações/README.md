@@ -3,8 +3,15 @@
 [![Programação](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Minhas%20configura%C3%A7%C3%B5es/images/programacao.png?raw=true "Programação")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Minhas%20configura%C3%A7%C3%B5es/images/programacao.png?raw=true "Programação")
 
 - [Marcos Aurélio Rocha da Silva (programação)](#marcos-aur%C3%A9lio-rocha-da-silva-programa%C3%A7%C3%A3o "Marcos Aurélio Rocha da Silva (programação)")
+
+   *Minha jornada*
+
    - [(História 1) - Minha Jornada de Descoberta no Mundo do GNU/Linux](#hist%C3%B3ria-1---minha-jornada-de-descoberta-no-mundo-do-gnulinux "(História 1) - Minha Jornada de Descoberta no Mundo do GNU/Linux")
    - [(História 2) - Explorando a Diversidade dos Sistemas Operacionais: Uma Jornada de Aprendizado e Evolução](#hist%C3%B3ria-2---explorando-a-diversidade-dos-sistemas-operacionais-uma-jornada-de-aprendizado-e-evolu%C3%A7%C3%A3o "(História 2) - Explorando a Diversidade dos Sistemas Operacionais: Uma Jornada de Aprendizado e Evolução")
+
+   *Assuntos Linux*
+
+   - [A Evolução do GNU/Linux e os Mitos do Desktop](# "A Evolução do GNU/Linux e os Mitos do Desktop")
 
 > Instalação do Linux
 
@@ -67,6 +74,19 @@ Minha jornada de aprendizado não se limitou apenas a sistemas operacionais. Des
 Minha paixão se concentrou na programação web, e comecei a trabalhar com PHP, estudando cursos básicos de PHP + MySQL. No início, eu desenvolvia principalmente no Windows, mas gradualmente fui explorando comandos Linux e, eventualmente, mudei para o GNU/Linux para meu desenvolvimento.
 
 Hoje, sou um programador que cria soluções baseadas na web e utiliza o Linux, com o Debian como meu ambiente de desenvolvimento principal. Essa jornada tem sido uma mistura emocionante de exploração, aprendizado e evolução constante."
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--minhas-configura%C3%A7%C3%B5es "Subir para o topo")
+
+---
+
+## A Evolução do GNU/Linux e os Mitos do Desktop
+
+O GNU/Linux passou por uma incrível jornada de evolução desde o seu lançamento. Hoje, ele é amplamente dominante no mercado de servidores web e está conquistando espaço no mercado geral de servidores. No entanto, quando se trata de desktops, a história é um pouco diferente. Muitas pessoas ainda hesitam em adotar o Linux como sistema operacional de desktop devido a mitos e concepções errôneas.
+
+Há uma percepção negativa de que o Linux é reservado para geeks e hackers, o que impede muitos usuários de explorar um sistema operacional tão amigável quanto o Windows. É importante destacar que o Linux evoluiu consideravelmente em termos de usabilidade e interface. Embora existam alguns desafios e peculiaridades, ele já pode ser utilizado como um sistema desktop por usuários comuns.
+
+> Neste texto, exploraremos a jornada de evolução do GNU/Linux e desvendaremos os mitos que cercam sua utilização como sistema operacional de desktop. É hora de compreender que o Linux é uma opção viável e amigável para o usuário médio.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--minhas-configura%C3%A7%C3%B5es "Subir para o topo")
