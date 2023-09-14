@@ -3,7 +3,8 @@
 [![Programação](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Minhas%20configura%C3%A7%C3%B5es/images/programacao.png?raw=true "Programação")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Minhas%20configura%C3%A7%C3%B5es/images/programacao.png?raw=true "Programação")
 
 - [Marcos Aurélio Rocha da Silva (programação)](#marcos-aur%C3%A9lio-rocha-da-silva-programa%C3%A7%C3%A3o "Marcos Aurélio Rocha da Silva (programação)")
-   - [Minha Jornada de Descoberta no Mundo do GNU/Linux](#minha-jornada-de-descoberta-no-mundo-do-gnulinux "Minha Jornada de Descoberta no Mundo do GNU/Linux")
+   - [(História 1) - Minha Jornada de Descoberta no Mundo do GNU/Linux](#minha-jornada-de-descoberta-no-mundo-do-gnulinux "(História 1) - Minha Jornada de Descoberta no Mundo do GNU/Linux")
+   - [(História 2) - Explorando a Diversidade dos Sistemas Operacionais: Uma Jornada de Aprendizado e Evolução](# "(História 2) - Explorando a Diversidade dos Sistemas Operacionais: Uma Jornada de Aprendizado e Evolução")
 
 > Instalação do Linux
 
@@ -28,11 +29,9 @@
 
 ---
 
-## Minha Jornada de Descoberta no Mundo do GNU/Linux
+## (História 1) - Minha Jornada de Descoberta no Mundo do GNU/Linux
 
-Claro, vou reescrever o conteúdo para você:
-
-"Lembro-me de quando ouvi falar sobre o Linux pela primeira vez em 2000, embora naquela época eu não soubesse muito sobre ele. Eu estava usando o Windows 98, que era uma grande sensação aqui no Brasil. Naquela época, eu estava trabalhando na CompuService Informática e foi lá que comecei minha jornada no mundo da informática, por volta de 2000.
+Lembro-me de quando ouvi falar sobre o Linux pela primeira vez em 2000, embora naquela época eu não soubesse muito sobre ele. Eu estava usando o Windows 98, que era uma grande sensação aqui no Brasil. Naquela época, eu estava trabalhando na CompuService Informática e foi lá que comecei minha jornada no mundo da informática, por volta de 2000.
 
 Até 2005, na minha cidade natal, Mirador, eu estava profundamente envolvido com o Windows. No entanto, em março de 2005, mudei para Teresina, no Piauí, e consegui um emprego em uma empresa que oferecia serviços técnicos em informática. Meu trabalho principal era consertar computadores. Foi durante uma dessas chamadas de serviço em 2006, quando visitei um laboratório em uma faculdade, que minha vida mudou.
 
@@ -42,7 +41,32 @@ Decidi mergulhar mais fundo no Linux e, em 2007, comecei a usar uma distribuiç�
 
 Em 2008, continuei minha exploração do mundo Linux, experimentando outras distribuições para aumentar meu conhecimento. Com o tempo, percebi que o Linux não era apenas sobre as diferentes distribuições, mas sim sobre o "kernel" subjacente, enquanto as distribuições eram sistemas operacionais que executavam programas em modo gráfico.
 
-Em 2010, retornei a Mirador e comecei a usar o Ubuntu Linux por alguns anos. Posteriormente, mudei para o Debian Linux, que continua sendo minha distribuição de escolha até hoje. Para mim, o GNU/Linux não é apenas um sistema operacional; é um "kernel". Apesar de trabalhar com o Windows em outros computadores, meu sistema operacional pessoal é o Debian Linux no mundo do GNU/Linux."
+Em 2010, retornei a Mirador e comecei a usar o Ubuntu Linux por alguns anos. Posteriormente, mudei para o Debian Linux, que continua sendo minha distribuição de escolha até hoje. Para mim, o GNU/Linux não é apenas um sistema operacional; é um "kernel". Apesar de trabalhar com o Windows em outros computadores, meu sistema operacional pessoal é o Debian Linux no mundo do GNU/Linux.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--minhas-configura%C3%A7%C3%B5es "Subir para o topo")
+
+---
+
+## (História 2) - Explorando a Diversidade dos Sistemas Operacionais: Uma Jornada de Aprendizado e Evolução
+
+Nessa jornada de mais de duas décadas no mundo da informática, aprendi a apreciar a diversidade de sistemas operacionais. Minha história começou em 2000, quando eu estava usando o Windows 98, uma escolha popular na época, especialmente no Brasil. Naquela época, eu trabalhava na CompuService Informática, onde minha carreira em TI começou.
+
+Nos primeiros anos, eu me aprofundei no Windows, pois era o sistema dominante em minha cidade natal, Mirador. Em 2005, mudei para Teresina, no Piauí, para um emprego onde trabalhei como técnico de informática, principalmente consertando computadores. Foi lá que meu horizonte tecnológico se expandiu.
+
+Em 2006, durante um serviço em uma faculdade, entrei em um laboratório repleto de computadores com uma distribuição Linux chamada "Conectiva Linux". A interface e a funcionalidade me impressionaram, abrindo minha mente para uma plataforma completamente nova.
+
+Minha paixão pelo Linux cresceu gradualmente, levando-me a experimentar várias distribuições. Em 2007, instalei o Curumim Linux em meu computador pessoal, com um HDD que alternava entre o Windows 98 e o Curumim Linux.
+
+Em 2008, minha sede de conhecimento me levou a experimentar ainda mais distribuições. No entanto, ao longo desse processo, eu aprendi que o Linux não se resumia às distribuições. Em vez disso, compreendi que o Linux era um kernel, e as distribuições eram sistemas operacionais que suportavam aplicativos em modo gráfico.
+
+Em 2010, retornei a Mirador e comecei a usar o Ubuntu Linux, mudando depois para o Debian Linux, que é minha distribuição principal até hoje. Para mim, o GNU/Linux não é apenas um sistema operacional; é um kernel. Embora eu continue trabalhando com o Windows em outros computadores, meu sistema operacional pessoal é o Debian Linux no GNU/Linux.
+
+Minha jornada de aprendizado não se limitou apenas a sistemas operacionais. Desde 2002, fui fascinado por códigos-fonte em HTML e JavaScript. Eu costumava encontrar tutoriais em CD-ROMs, onde procurava arquivos .html e .js para reescrever e experimentar códigos. Isso foi minha introdução à programação, pois eu já entendia que todos os sites, sistemas operacionais, software e kernels eram construídos com códigos-fonte.
+
+Minha paixão se concentrou na programação web, e comecei a trabalhar com PHP, estudando cursos básicos de PHP + MySQL. No início, eu desenvolvia principalmente no Windows, mas gradualmente fui explorando comandos Linux e, eventualmente, mudei para o GNU/Linux para meu desenvolvimento.
+
+Hoje, sou um programador que cria soluções baseadas na web e utiliza o Linux, com o Debian como meu ambiente de desenvolvimento principal. Essa jornada tem sido uma mistura emocionante de exploração, aprendizado e evolução constante."
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--minhas-configura%C3%A7%C3%B5es "Subir para o topo")
