@@ -11,7 +11,7 @@
 
    *Assuntos Linux*
 
-   - [A Evolução do GNU/Linux e os Mitos do Desktop](# "A Evolução do GNU/Linux e os Mitos do Desktop")
+   - [A Evolução do GNU/Linux e os Mitos do Desktop](#a-evolu%C3%A7%C3%A3o-do-gnulinux-e-os-mitos-do-desktop "A Evolução do GNU/Linux e os Mitos do Desktop")
 
 > Instalação do Linux
 
@@ -85,6 +85,8 @@ Hoje, sou um programador que cria soluções baseadas na web e utiliza o Linux, 
 O GNU/Linux passou por uma incrível jornada de evolução desde o seu lançamento. Hoje, ele é amplamente dominante no mercado de servidores web e está conquistando espaço no mercado geral de servidores. No entanto, quando se trata de desktops, a história é um pouco diferente. Muitas pessoas ainda hesitam em adotar o Linux como sistema operacional de desktop devido a mitos e concepções errôneas.
 
 Há uma percepção negativa de que o Linux é reservado para geeks e hackers, o que impede muitos usuários de explorar um sistema operacional tão amigável quanto o Windows. É importante destacar que o Linux evoluiu consideravelmente em termos de usabilidade e interface. Embora existam alguns desafios e peculiaridades, ele já pode ser utilizado como um sistema desktop por usuários comuns.
+
+*Por Marcos Aurélio, quinta, 14 de setembro de 2023, 00h46*
 
 > Neste texto, exploraremos a jornada de evolução do GNU/Linux e desvendaremos os mitos que cercam sua utilização como sistema operacional de desktop. É hora de compreender que o Linux é uma opção viável e amigável para o usuário médio.
 
