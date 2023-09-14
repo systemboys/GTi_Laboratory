@@ -3,6 +3,7 @@
 [![Programação](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Minhas%20configura%C3%A7%C3%B5es/images/programacao.png?raw=true "Programação")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Minhas%20configura%C3%A7%C3%B5es/images/programacao.png?raw=true "Programação")
 
 - [Marcos Aurélio Rocha da Silva (programação)](#marcos-aur%C3%A9lio-rocha-da-silva-programa%C3%A7%C3%A3o "Marcos Aurélio Rocha da Silva (programação)")
+   - [Minha Jornada de Descoberta no Mundo do GNU/Linux](# "Minha Jornada de Descoberta no Mundo do GNU/Linux")
 
 > Instalação do Linux
 
@@ -21,6 +22,32 @@
 # Marcos Aurélio Rocha da Silva (programação)
 
 > O conteúdo abaixo, são as configurações do meu computador o qual utilizo para fazer meus trabalhos, meus projetos e meu companheiro de gerra. Nessas configurações, estou utilizando o `Debian Linux` com o ambiente `Cinnamon`, adotei como minha principal interface de usuário...
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--minhas-configura%C3%A7%C3%B5es "Subir para o topo")
+
+---
+
+## Minha Jornada de Descoberta no Mundo do GNU/Linux
+
+Claro, vou reescrever o conteúdo para você:
+
+"Lembro-me de quando ouvi falar sobre o Linux pela primeira vez em 2000, embora naquela época eu não soubesse muito sobre ele. Eu estava usando o Windows 98, que era uma grande sensação aqui no Brasil. Naquela época, eu estava trabalhando na CompuService Informática e foi lá que comecei minha jornada no mundo da informática, por volta de 2000.
+
+Até 2005, na minha cidade natal, Mirador, eu estava profundamente envolvido com o Windows. No entanto, em março de 2005, mudei para Teresina, no Piauí, e consegui um emprego em uma empresa que oferecia serviços técnicos em informática. Meu trabalho principal era consertar computadores. Foi durante uma dessas chamadas de serviço em 2006, quando visitei um laboratório em uma faculdade, que minha vida mudou.
+
+Naquele laboratório, deparei-me com vários computadores executando uma distribuição Linux chamada "Conectiva Linux". Fiquei maravilhado com a interface e rapidamente me apaixonei. Foi uma experiência incrível, pois eu estava vendo uma plataforma completamente diferente daquilo que eu estava acostumado. A partir desse momento, meu interesse pelo Linux só cresceu.
+
+Decidi mergulhar mais fundo no Linux e, em 2007, comecei a usar uma distribuição chamada "Curumim Linux". Era facilmente reconhecida por seu mascote, um pinguim vestido como um índio. Usei essa distribuição por um tempo com a intenção de aprender o máximo que pudesse. Em 2007, dei o próximo passo e decidi instalá-la no meu próprio computador pessoal para testá-la. Naquela época, eu estava alternando frequentemente entre discos rígidos, pois um deles continha o Windows 98 e o outro tinha o Curumim Linux instalado.
+
+Em 2008, continuei minha exploração do mundo Linux, experimentando outras distribuições para aumentar meu conhecimento. Com o tempo, percebi que o Linux não era apenas sobre as diferentes distribuições, mas sim sobre o "kernel" subjacente, enquanto as distribuições eram sistemas operacionais que executavam programas em modo gráfico.
+
+Em 2010, retornei a Mirador e comecei a usar o Ubuntu Linux por alguns anos. Posteriormente, mudei para o Debian Linux, que continua sendo minha distribuição de escolha até hoje. Para mim, o GNU/Linux não é apenas um sistema operacional; é um "kernel". Apesar de trabalhar com o Windows em outros computadores, meu sistema operacional pessoal é o Debian Linux no mundo do GNU/Linux."
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--minhas-configura%C3%A7%C3%B5es "Subir para o topo")
+
+---
 
 ## Como Particionar um Disco para Instalar o Debian Linux com "/" e "/home" Separados
 
