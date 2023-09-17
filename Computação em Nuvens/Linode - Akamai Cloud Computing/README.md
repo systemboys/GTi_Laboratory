@@ -71,7 +71,7 @@ root@10:/home/marcos# nano .bashrc
 
 O arquivo `.bashrc` será exibido e rolando um pouco para baixo, verá os "alias".
 
-[![Alias no .BashRC](./Alias-BashRC.png "Alias no .BashRC")](./Alias-BashRC.png "Alias no .BashRC")
+[![Alias no .BashRC](https://github.com/systemboys/GTi_Laboratory/blob/main/Computa%C3%A7%C3%A3o%20em%20Nuvens/Linode%20-%20Akamai%20Cloud%20Computing/images/Alias-BashRC.png?raw=true "Alias no .BashRC")](https://github.com/systemboys/GTi_Laboratory/blob/main/Computa%C3%A7%C3%A3o%20em%20Nuvens/Linode%20-%20Akamai%20Cloud%20Computing/images/Alias-BashRC.png?raw=true "Alias no .BashRC")
 
 Como no exemplo na imagem, adicione a linha com o atalho:
 
@@ -84,11 +84,11 @@ alias kali-murdock='ssh -L 61000:localhost:5901 -N -f marcos@170.187.154.205'
 
 Depois desse comando, o túnel estará rodando em background como um processo. A partir daí, precisa-se de um aplicativo VNC View para acessa o Kali Linux. Abaixo segue dois aplicativos que conseguem fazer a conexão via VNC.
 
-[![Visualizador TigerVNC](./Visualizador_TigerVNC_logo.png "Visualizador TigerVNC")](./Visualizador_TigerVNC_logo.png "Visualizador TigerVNC")
+[![Visualizador TigerVNC](https://github.com/systemboys/GTi_Laboratory/blob/main/Computa%C3%A7%C3%A3o%20em%20Nuvens/Linode%20-%20Akamai%20Cloud%20Computing/images/Visualizador_TigerVNC_logo.png?raw=true "Visualizador TigerVNC")](https://github.com/systemboys/GTi_Laboratory/blob/main/Computa%C3%A7%C3%A3o%20em%20Nuvens/Linode%20-%20Akamai%20Cloud%20Computing/images/Visualizador_TigerVNC_logo.png?raw=true "Visualizador TigerVNC")
 
-[![Visualizador TigerVNC form](./Visualizador_TigerVNC_form.png "Visualizador TigerVNC form")](./Visualizador_TigerVNC_form.png "Visualizador TigerVNC form")
+[![Visualizador TigerVNC form](https://github.com/systemboys/GTi_Laboratory/blob/main/Computa%C3%A7%C3%A3o%20em%20Nuvens/Linode%20-%20Akamai%20Cloud%20Computing/images/Visualizador_TigerVNC_form.png?raw=true "Visualizador TigerVNC form")](https://github.com/systemboys/GTi_Laboratory/blob/main/Computa%C3%A7%C3%A3o%20em%20Nuvens/Linode%20-%20Akamai%20Cloud%20Computing/images/Visualizador_TigerVNC_form.png?raw=true "Visualizador TigerVNC form")
 
-[![Visualizador TigerVNC Kali Linux](./Visualizador_TigerVNC_Kali_Linux.png "Visualizador TigerVNC Kali Linux")](./Visualizador_TigerVNC_Kali_Linux.png "Visualizador TigerVNC Kali Linux")
+[![Visualizador TigerVNC Kali Linux](https://github.com/systemboys/GTi_Laboratory/blob/main/Computa%C3%A7%C3%A3o%20em%20Nuvens/Linode%20-%20Akamai%20Cloud%20Computing/images/Visualizador_TigerVNC_Kali_Linux.png?raw=true "Visualizador TigerVNC Kali Linux")](https://github.com/systemboys/GTi_Laboratory/blob/main/Computa%C3%A7%C3%A3o%20em%20Nuvens/Linode%20-%20Akamai%20Cloud%20Computing/images/Visualizador_TigerVNC_Kali_Linux.png?raw=true "Visualizador TigerVNC Kali Linux")
 
 ### Como Encerrar um Túnel SSH para uma Conexão VNC em um Servidor Remoto
 
