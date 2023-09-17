@@ -2,8 +2,8 @@
 
 [![Linode - Akamai Cloud Computing](./images/linode.png "Linode - Akamai Cloud Computing")](http://link.com "Linode - Akamai Cloud Computing")
 
-- [Linode e Akamai: Explorando Duas Perspectivas Diferentes da Computação em Nuvem](https://site.com#anchor-link-1 "Linode e Akamai: Explorando Duas Perspectivas Diferentes da Computação em Nuvem")
-- [Kali Linux Cloud Deploy na Linode](# "Kali Linux Cloud Deploy na Linode")
+- [Linode e Akamai: Explorando Duas Perspectivas Diferentes da Computação em Nuvem](#linode-e-akamai-explorando-duas-perspectivas-diferentes-da-computa%C3%A7%C3%A3o-em-nuvem "Linode e Akamai: Explorando Duas Perspectivas Diferentes da Computação em Nuvem")
+- [Kali Linux Cloud Deploy na Linode](#kali-linux-cloud-deploy-na-linode "Kali Linux Cloud Deploy na Linode")
 
 ---
 
@@ -44,16 +44,16 @@ Tudo que você precisa para ter um Kali Linux na nuvem. Segue o passo a passo.
 
    >  **( i )** Esse processo demorará alguns minutos e, você pode acompanhar clicando em **Launch LISH Console**, é um terminal no servidor Kali Linux onde você verá que ainda estará sendo realizado o processo de construção do Kali Linux.
 
-## Usuário e senha pro módulo VNC
+### Usuário e senha pro módulo VNC
 
 Acessar o Kali LInux com interface gráfica via VNC. Essa 
 
 ```bash
 User: marcos
-Password: @2K3MuGoldengate
+Password: *******
 ```
 
-## Nome pro servidor
+### Nome pro servidor
 
 Linode Label.
 
@@ -61,12 +61,12 @@ Linode Label.
 kali-murdock
 ```
 
-## Senha de root para o servidor
+### Senha de root para o servidor
 
 Root Password.
 
 ```bash
-a2K3MuGoldengate
+***********
 ```
 
 Após entrar no Kali Linux, a senha foi mudada para.
@@ -77,7 +77,7 @@ a2K3Mu
 
 
 
-## Detalhes da máquina
+### Detalhes da máquina
 
 IP Addresses.
 
@@ -86,17 +86,17 @@ IP Addresses.
 | 1 CPU Core | 50 GB Storage | 170.187.154.205                | SSH Access           | ssh root@170.187.154.205                                     |
 | 2 GB ROM   | 0 Volumes     | 2600:3c02::f03c:93ff:feab:50b2 | LISH Console via SSH | ssh -t systemboymarcos@lish-us-southeast.linode.com kali-murdock |
 
-## Acessar o Kali Linux
+### Acessar o Kali Linux
 
 Acessar o Kali Linux do servidor diretamente com interface gráfica XFCE. Criando um túnel via SSH para criar uma conexão VNC para o servidor.
 
 ```bash
-ssh -L 61000:localhost:5901 -N -f marcos@170.187.154.205
+ssh -L 61000:localhost:5901 -N -f marcos@123.231.132.133
 ```
 
 > **( ! )** Informe a senha VNC que você criou!
 
-## Alias (Apelido)
+### Alias (Apelido)
 
 Criando um atalho para o comando SSH para acessar sua máquina via VNC.
 No terminal, no diretório pessoa digite o seguinte comando como no exemplo abaixo:
@@ -120,7 +120,7 @@ Como no exemplo na imagem, adicione a linha com o atalho:
 alias kali-murdock='ssh -L 61000:localhost:5901 -N -f marcos@170.187.154.205'
 ```
 
-## Túnel
+### Túnel
 
 Depois desse comando, o túnel estará rodando em background como um processo. A partir daí, precisa-se de um aplicativo VNC View para acessa o Kali Linux. Abaixo segue dois aplicativos que conseguem fazer a conexão via VNC.
 
@@ -130,7 +130,7 @@ Depois desse comando, o túnel estará rodando em background como um processo. A
 
 [![Visualizador TigerVNC Kali Linux](./Visualizador_TigerVNC_Kali_Linux.png "Visualizador TigerVNC Kali Linux")](./Visualizador_TigerVNC_Kali_Linux.png "Visualizador TigerVNC Kali Linux")
 
-## Como Encerrar um Túnel SSH para uma Conexão VNC em um Servidor Remoto
+### Como Encerrar um Túnel SSH para uma Conexão VNC em um Servidor Remoto
 
 Para fechar o túnel SSH que você criou para a conexão VNC, você pode seguir estas etapas:
 

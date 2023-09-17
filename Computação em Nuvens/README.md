@@ -9,7 +9,7 @@
 > Servidores
 
 - [AWS - Amazon Web Services](https://github.com/systemboys/GTi_Laboratory/tree/main/Computa%C3%A7%C3%A3o%20em%20Nuvens/AWS%20-%20Amazon%20Web%20Services#laborat%C3%B3rio-gti--aws---amazon-web-services "AWS - Amazon Web Services")
-- [Linode - Akamai Cloud Computing](https://github.com/systemboys/GTi_Laboratory/tree/main/Computa%C3%A7%C3%A3o%20em%20Nuvens/Linode%20-%20Akamai%20Cloud%20Computing#laborat%C3%B3rio-gti--assunto "Linode - Akamai Cloud Computing")
+- [Linode - Akamai Cloud Computing](https://github.com/systemboys/GTi_Laboratory/tree/main/Computa%C3%A7%C3%A3o%20em%20Nuvens/Linode%20-%20Akamai%20Cloud%20Computing#laborat%C3%B3rio-gti--linode---akamai-cloud-computing "Linode - Akamai Cloud Computing")
 
 ---
 
