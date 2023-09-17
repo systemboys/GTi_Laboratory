@@ -4,6 +4,8 @@
 
 - [Linode e Akamai: Explorando Duas Perspectivas Diferentes da Computação em Nuvem](#linode-e-akamai-explorando-duas-perspectivas-diferentes-da-computa%C3%A7%C3%A3o-em-nuvem "Linode e Akamai: Explorando Duas Perspectivas Diferentes da Computação em Nuvem")
 - [Kali Linux Cloud Deploy na Linode](#kali-linux-cloud-deploy-na-linode "Kali Linux Cloud Deploy na Linode")
+   - [Acessar o Kali Linux](#acessar-o-kali-linux "Acessar o Kali Linux")
+   - [Alias (Apelido)](#alias-apelido "Alias (Apelido)")
 
 ---
 
@@ -16,7 +18,7 @@ Por outro lado, a "Akamai Technologies" é uma empresa global de serviços em nu
 Portanto, não há uma relação direta entre a "Linode" e a "Akamai" em termos de propriedade ou operações conjuntas. Ambas são empresas independentes que oferecem serviços relacionados à computação em nuvem, mas com foco em áreas diferentes.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#assunto "Subir para o topo")
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--linode---akamai-cloud-computing "Subir para o topo")
 
 ---
 
@@ -44,54 +46,12 @@ Tudo que você precisa para ter um Kali Linux na nuvem. Segue o passo a passo.
 
    >  **( i )** Esse processo demorará alguns minutos e, você pode acompanhar clicando em **Launch LISH Console**, é um terminal no servidor Kali Linux onde você verá que ainda estará sendo realizado o processo de construção do Kali Linux.
 
-### Usuário e senha pro módulo VNC
-
-Acessar o Kali LInux com interface gráfica via VNC. Essa 
-
-```bash
-User: marcos
-Password: *******
-```
-
-### Nome pro servidor
-
-Linode Label.
-
-```bash
-kali-murdock
-```
-
-### Senha de root para o servidor
-
-Root Password.
-
-```bash
-***********
-```
-
-Após entrar no Kali Linux, a senha foi mudada para.
-
-```bash
-a2K3Mu
-```
-
-
-
-### Detalhes da máquina
-
-IP Addresses.
-
-| Summary    |               | IP Addresses                   | Access               |                                                              |
-| ---------- | ------------- | ------------------------------ | -------------------- | ------------------------------------------------------------ |
-| 1 CPU Core | 50 GB Storage | 170.187.154.205                | SSH Access           | ssh root@170.187.154.205                                     |
-| 2 GB ROM   | 0 Volumes     | 2600:3c02::f03c:93ff:feab:50b2 | LISH Console via SSH | ssh -t systemboymarcos@lish-us-southeast.linode.com kali-murdock |
-
 ### Acessar o Kali Linux
 
 Acessar o Kali Linux do servidor diretamente com interface gráfica XFCE. Criando um túnel via SSH para criar uma conexão VNC para o servidor.
 
 ```bash
-ssh -L 61000:localhost:5901 -N -f marcos@123.231.132.133
+ssh -L 61000:localhost:5901 -N -f username@123.231.132.133
 ```
 
 > **( ! )** Informe a senha VNC que você criou!
@@ -151,7 +111,7 @@ Isso encerrará o túnel SSH e, consequentemente, a conexão VNC para o servidor
 Lembre-se de substituir `PID` pelo número real do PID que corresponde ao seu túnel SSH. Certifique-se de encerrar apenas o processo relevante para evitar fechar outras conexões SSH que possam estar em execução no seu sistema local.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#assunto "Subir para o topo")
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--linode---akamai-cloud-computing "Subir para o topo")
 
 ---
 
