@@ -1,4 +1,4 @@
-# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi") / Assunto
+# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi") / Linode - Akamai Cloud Computing
 
 [![Linode - Akamai Cloud Computing](./images/linode.png "Linode - Akamai Cloud Computing")](http://link.com "Linode - Akamai Cloud Computing")
 

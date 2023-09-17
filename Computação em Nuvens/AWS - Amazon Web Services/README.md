@@ -2,7 +2,7 @@
 
 [![AWS-Amazon-Web-Services.png](./images/AWS-Amazon-Web-Services.png "AWS-Amazon-Web-Services.png")](http://link.com "AWS-Amazon-Web-Services.png")
 
-- [AWS - Amazon Web Services: Líder Global em Computação em Nuvem e seus Principais Serviços](https://site.com#anchor-link-1 "AWS - Amazon Web Services: Líder Global em Computação em Nuvem e seus Principais Serviços")
+- [AWS - Amazon Web Services: Líder Global em Computação em Nuvem e seus Principais Serviços](#aws---amazon-web-services-l%C3%ADder-global-em-computa%C3%A7%C3%A3o-em-nuvem-e-seus-principais-servi%C3%A7os "AWS - Amazon Web Services: Líder Global em Computação em Nuvem e seus Principais Serviços")
 
 ---
 
@@ -33,6 +33,6 @@ Aqui estão alguns dos principais serviços e produtos oferecidos pela AWS:
 A AWS é usada por uma ampla gama de clientes, desde startups até grandes empresas e órgãos governamentais, para hospedar aplicativos, armazenar dados, executar análises, implantar sites e muito mais.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#assunto "Subir para o topo")
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--aws---amazon-web-services "Subir para o topo")
 
 ---

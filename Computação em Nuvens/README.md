@@ -4,12 +4,12 @@
 
 > Sobre
 
-- [O que é Computação em Nuvem](# "O que é Computação em Nuvem")
+- [O que é Computação em Nuvem](#o-que-%C3%A9-computa%C3%A7%C3%A3o-em-nuvem "O que é Computação em Nuvem")
 
 > Servidores
 
-- [AWS - Amazon Web Services](https://site.com#anchor-link-1 "AWS - Amazon Web Services")
-- [Linode - Akamai Cloud Computing](https://site.com#anchor-link-1 "Linode - Akamai Cloud Computing")
+- [AWS - Amazon Web Services](https://github.com/systemboys/GTi_Laboratory/tree/main/Computa%C3%A7%C3%A3o%20em%20Nuvens/AWS%20-%20Amazon%20Web%20Services#laborat%C3%B3rio-gti--aws---amazon-web-services "AWS - Amazon Web Services")
+- [Linode - Akamai Cloud Computing](https://github.com/systemboys/GTi_Laboratory/tree/main/Computa%C3%A7%C3%A3o%20em%20Nuvens/Linode%20-%20Akamai%20Cloud%20Computing#laborat%C3%B3rio-gti--assunto "Linode - Akamai Cloud Computing")
 
 ---
 
@@ -46,6 +46,6 @@ Existem três modelos de serviço de computação em nuvem principais:
 A computação em nuvem desempenhou um papel fundamental na transformação digital de muitas empresas, permitindo que elas sejam mais ágeis, eficientes e inovadoras em um ambiente altamente escalável e flexível.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#assunto "Subir para o topo")
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--computa%C3%A7%C3%A3o-em-nuvens "Subir para o topo")
 
 ---
