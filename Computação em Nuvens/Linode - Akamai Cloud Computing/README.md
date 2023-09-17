@@ -1,6 +1,6 @@
 # [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi") / Linode - Akamai Cloud Computing
 
-[![Linode - Akamai Cloud Computing](./images/linode.png "Linode - Akamai Cloud Computing")](http://link.com "Linode - Akamai Cloud Computing")
+[![Linode - Akamai Cloud Computing](https://github.com/systemboys/GTi_Laboratory/blob/main/Computa%C3%A7%C3%A3o%20em%20Nuvens/Linode%20-%20Akamai%20Cloud%20Computing/images/linode.png?raw=true "Linode - Akamai Cloud Computing")](https://github.com/systemboys/GTi_Laboratory/blob/main/Computa%C3%A7%C3%A3o%20em%20Nuvens/Linode%20-%20Akamai%20Cloud%20Computing/images/linode.png?raw=true "Linode - Akamai Cloud Computing")
 
 - [Linode e Akamai: Explorando Duas Perspectivas Diferentes da Computação em Nuvem](#linode-e-akamai-explorando-duas-perspectivas-diferentes-da-computa%C3%A7%C3%A3o-em-nuvem "Linode e Akamai: Explorando Duas Perspectivas Diferentes da Computação em Nuvem")
 - [Kali Linux Cloud Deploy na Linode](#kali-linux-cloud-deploy-na-linode "Kali Linux Cloud Deploy na Linode")

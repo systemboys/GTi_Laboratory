@@ -1,6 +1,6 @@
 # [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi") / Computação em Nuvens
 
-[![Computação em Nuvens](https://www.ascenderideias.com.br/blog/wp-content/uploads/2020/06/o-que-e-computacao-em-nuvem.jpg "Computação em Nuvens")](https://www.ascenderideias.com.br/blog/wp-content/uploads/2020/06/o-que-e-computacao-em-nuvem.jpg "Computação em Nuvens")
+[![Computação em Nuvens](https://github.com/systemboys/GTi_Laboratory/blob/main/Computa%C3%A7%C3%A3o%20em%20Nuvens/images/o-que-e-computacao-em-nuvem.jpg?raw=true "Computação em Nuvens")](https://github.com/systemboys/GTi_Laboratory/blob/main/Computa%C3%A7%C3%A3o%20em%20Nuvens/images/o-que-e-computacao-em-nuvem.jpg?raw=true "Computação em Nuvens")
 
 > Sobre
 
