@@ -20,34 +20,36 @@ chcp 65001
 title Menu de Instalação
 
 :menu
+mode 98,35
+color A
 cls
 echo ╭───────────────────────────────────────╮
 echo │          SELECIONE UMA OPÇAO          │
 echo ╰───────────────────────────────────────╯
 echo.
-echo ╭───────────────────────────────────────╮
+echo ╭─────────────[Utilitários]─────────────╮
 echo │ 1 │ Baixar e Instalar WinRAR          │
 echo │ 2 │ Sair                              │
 echo ╰───────────────────────────────────────╯
 echo.
 
-set /p opcao=Digite o número da opção desejada: 
+set /p option=Digite o número da opção desejada: 
 
-if "%opcao%"=="1" (
+if "%option%"=="1" (
     echo Baixando WinRAR...
     bitsadmin /transfer "DownloadWinRAR" https://exemplo.com/winrar.exe "%CD%\winrar.exe"
     echo.
     echo Instalando WinRAR...
     start /wait "" "%CD%\winrar.exe"
-    del /f /a winrar.exe
+    del /f /a "%CD%\winrar.exe"
     echo.
     echo WinRAR instalado com sucesso!
     pause
-) else if "%opcao%"=="2" (
+) else if "%option%"=="2" (
     echo Saindo...
     exit
 ) else (
-    echo Opção inválida. Tente novamente.
+    echo Opção inválida! Tente novamente.
     pause
 )
 goto menu
