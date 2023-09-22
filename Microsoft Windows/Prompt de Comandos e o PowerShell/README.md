@@ -31,7 +31,7 @@ echo │ 2 │ Sair                              │
 echo ╰───────────────────────────────────────╯
 echo.
 
-set /p opcao=Digite o número da opção desejada:
+set /p opcao=Digite o número da opção desejada: 
 
 if "%opcao%"=="1" (
     echo Baixando WinRAR...
