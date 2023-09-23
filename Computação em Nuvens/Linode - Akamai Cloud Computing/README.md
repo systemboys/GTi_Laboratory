@@ -6,7 +6,8 @@
 - [Kali Linux Cloud Deploy na Linode](#kali-linux-cloud-deploy-na-linode "Kali Linux Cloud Deploy na Linode")
    - [Acessar o Kali Linux](#acessar-o-kali-linux "Acessar o Kali Linux")
    - [Alias (Apelido)](#alias-apelido "Alias (Apelido)")
-   - [Túnel](#t%C3%BAnel "Túnel")
+   - [Acessar a VM via Visualizador TigerVNC](#acessar-a-vm-via-visualizador-tigervnc "Acessar a VM via Visualizador TigerVNC")
+   - [Acessar a VM via Remmina](#acessar-a-vm-via-remmina "Acessar a VM via Remmina")
    - [Como Encerrar um Túnel SSH para uma Conexão VNC em um Servidor Remoto](#como-encerrar-um-t%C3%BAnel-ssh-para-uma-conex%C3%A3o-vnc-em-um-servidor-remoto "Como Encerrar um Túnel SSH para uma Conexão VNC em um Servidor Remoto")
 
 ---
