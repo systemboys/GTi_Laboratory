@@ -139,6 +139,8 @@ Claro, aqui estão as instruções para se conectar a uma VM Linode usando o Rem
 
 5. **Inicie a Conexão**: Agora, você pode selecionar o perfil de conexão recém-criado na lista de conexões disponíveis e clicar no botão "Conectar" para iniciar a conexão com a sua VM Linode via o túnel SSH configurado.
 
+![Kali Linux no Remmina](https://github.com/systemboys/GTi_Laboratory/blob/main/Computa%C3%A7%C3%A3o%20em%20Nuvens/Linode%20-%20Akamai%20Cloud%20Computing/images/Remmina_3.png?raw=true)
+
 Lembre-se de que a segurança é fundamental. Certifique-se de usar senhas fortes e manter suas credenciais seguras.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
