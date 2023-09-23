@@ -97,7 +97,7 @@ alias kali-murdock='ssh -L 61000:localhost:5901 -N -f marcos@170.187.154.205'
 
 ---
 
-### Túnel
+### Acessar a VM via Visualizador TigerVNC
 
 Depois desse comando, o túnel estará rodando em background como um processo. A partir daí, precisa-se de um aplicativo VNC View para acessa o Kali Linux. Abaixo segue dois aplicativos que conseguem fazer a conexão via VNC.
 
@@ -106,6 +106,39 @@ Depois desse comando, o túnel estará rodando em background como um processo. A
 [![Visualizador TigerVNC form](https://github.com/systemboys/GTi_Laboratory/blob/main/Computa%C3%A7%C3%A3o%20em%20Nuvens/Linode%20-%20Akamai%20Cloud%20Computing/images/Visualizador_TigerVNC_form.png?raw=true "Visualizador TigerVNC form")](https://github.com/systemboys/GTi_Laboratory/blob/main/Computa%C3%A7%C3%A3o%20em%20Nuvens/Linode%20-%20Akamai%20Cloud%20Computing/images/Visualizador_TigerVNC_form.png?raw=true "Visualizador TigerVNC form")
 
 [![Visualizador TigerVNC Kali Linux](https://github.com/systemboys/GTi_Laboratory/blob/main/Computa%C3%A7%C3%A3o%20em%20Nuvens/Linode%20-%20Akamai%20Cloud%20Computing/images/Visualizador_TigerVNC_Kali_Linux.png?raw=true "Visualizador TigerVNC Kali Linux")](https://github.com/systemboys/GTi_Laboratory/blob/main/Computa%C3%A7%C3%A3o%20em%20Nuvens/Linode%20-%20Akamai%20Cloud%20Computing/images/Visualizador_TigerVNC_Kali_Linux.png?raw=true "Visualizador TigerVNC Kali Linux")
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--linode---akamai-cloud-computing "Subir para o topo")
+
+---
+
+### Acessar a VM via Remmina
+
+Claro, aqui estão as instruções para se conectar a uma VM Linode usando o Remmina:
+
+1. **Abra o Remmina**: Caso você tenha o aplicativo Remmina instalado em seu sistema, abra-o.
+
+![Remmina](https://github.com/systemboys/GTi_Laboratory/blob/main/Computa%C3%A7%C3%A3o%20em%20Nuvens/Linode%20-%20Akamai%20Cloud%20Computing/images/Remmina_1.png?raw=true)
+
+2. **Crie um Novo Perfil de Conexão**:
+   - Com o Remmina aberto, clique no botão "Novo perfil de conexão" para configurar uma nova conexão.
+
+![Novo Perfil de Conexão](https://github.com/systemboys/GTi_Laboratory/blob/main/Computa%C3%A7%C3%A3o%20em%20Nuvens/Linode%20-%20Akamai%20Cloud%20Computing/images/Remmina_2.png?raw=true)
+
+3. **Configure os Detalhes da Conexão**:
+   - Dentro das configurações do perfil de conexão, forneça os detalhes da sua conexão. Certifique-se de configurar os seguintes campos:
+     - **Nome da Conexão**: Dê um nome para identificar essa conexão.
+     - **Protocolo**: Selecione o protocolo apropriado para sua conexão (por exemplo, VNC).
+     - **Servidor**: Insira "localhost" como o endereço do servidor, pois você criou um túnel SSH local.
+     - **Porta**: Digite a porta que você especificou ao criar o túnel SSH (por exemplo, 61000).
+     - **Nome de Usuário**: Insira seu nome de usuário SSH.
+     - **Senha**: Se necessário, insira a senha associada à sua conta SSH.
+
+4. **Salve o Perfil de Conexão**: Após configurar todos os detalhes, clique no botão "Salvar" para salvar o perfil de conexão.
+
+5. **Inicie a Conexão**: Agora, você pode selecionar o perfil de conexão recém-criado na lista de conexões disponíveis e clicar no botão "Conectar" para iniciar a conexão com a sua VM Linode via o túnel SSH configurado.
+
+Lembre-se de que a segurança é fundamental. Certifique-se de usar senhas fortes e manter suas credenciais seguras.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--linode---akamai-cloud-computing "Subir para o topo")
