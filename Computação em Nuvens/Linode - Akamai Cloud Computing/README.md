@@ -1,4 +1,5 @@
-# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi") / Linode - Akamai Cloud Computing
+# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi")
+# Linode - Akamai Cloud Computing
 
 [![Linode - Akamai Cloud Computing](https://github.com/systemboys/GTi_Laboratory/blob/main/Computa%C3%A7%C3%A3o%20em%20Nuvens/Linode%20-%20Akamai%20Cloud%20Computing/images/linode.png?raw=true "Linode - Akamai Cloud Computing")](https://github.com/systemboys/GTi_Laboratory/blob/main/Computa%C3%A7%C3%A3o%20em%20Nuvens/Linode%20-%20Akamai%20Cloud%20Computing/images/linode.png?raw=true "Linode - Akamai Cloud Computing")
 
