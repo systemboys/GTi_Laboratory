@@ -6,8 +6,8 @@
 - [Kali Linux Cloud Deploy na Linode](#kali-linux-cloud-deploy-na-linode "Kali Linux Cloud Deploy na Linode")
    - [Acessar o Kali Linux](#acessar-o-kali-linux "Acessar o Kali Linux")
    - [Alias (Apelido)](#alias-apelido "Alias (Apelido)")
-   - [Acessar a VM via Visualizador TigerVNC](#acessar-a-vm-via-visualizador-tigervnc "Acessar a VM via Visualizador TigerVNC")
-   - [Acessar a VM via Remmina](#acessar-a-vm-via-remmina "Acessar a VM via Remmina")
+   - [Como Conectar-se a uma VM Linode Usando o Visualizador TigerVNC e um Túnel SSH no Linux](#acessar-a-vm-via-visualizador-tigervnc "Como Conectar-se a uma VM Linode Usando o Visualizador TigerVNC e um Túnel SSH no Linux")
+   - [Como Conectar-se a uma VM Linode Usando o Remmina e um Túnel SSH no Linux](#acessar-a-vm-via-remmina "Como Conectar-se a uma VM Linode Usando o Remmina e um Túnel SSH no Linux")
    - [Como Encerrar um Túnel SSH para uma Conexão VNC em um Servidor Remoto](#como-encerrar-um-t%C3%BAnel-ssh-para-uma-conex%C3%A3o-vnc-em-um-servidor-remoto "Como Encerrar um Túnel SSH para uma Conexão VNC em um Servidor Remoto")
 
 ---
@@ -98,7 +98,7 @@ alias kali-murdock='ssh -L 61000:localhost:5901 -N -f marcos@170.187.154.205'
 
 ---
 
-### Acessar a VM via Visualizador TigerVNC
+### Como Conectar-se a uma VM Linode Usando o Visualizador TigerVNC e um Túnel SSH no Linux
 
 Depois desse comando, o túnel estará rodando em background como um processo. A partir daí, precisa-se de um aplicativo VNC View para acessa o Kali Linux. Abaixo segue dois aplicativos que conseguem fazer a conexão via VNC.
 
@@ -113,7 +113,7 @@ Depois desse comando, o túnel estará rodando em background como um processo. A
 
 ---
 
-### Acessar a VM via Remmina
+### Como Conectar-se a uma VM Linode Usando o Remmina e um Túnel SSH no Linux
 
 Claro, aqui estão as instruções para se conectar a uma VM Linode usando o Remmina:
 
