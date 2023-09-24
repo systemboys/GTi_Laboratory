@@ -22,7 +22,7 @@ Por outro lado, a "Akamai Technologies" é uma empresa global de serviços em nu
 Portanto, não há uma relação direta entre a "Linode" e a "Akamai" em termos de propriedade ou operações conjuntas. Ambas são empresas independentes que oferecem serviços relacionados à computação em nuvem, mas com foco em áreas diferentes.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#laborat%C3%B3rio-gti--linode---akamai-cloud-computing "Subir para o topo")
+[(&uarr;) Subir](#linode---akamai-cloud-computing "Subir para o topo")
 
 ---
 
@@ -51,7 +51,7 @@ Tudo que você precisa para ter um Kali Linux na nuvem. Segue o passo a passo.
    >  **( i )** Esse processo demorará alguns minutos e, você pode acompanhar clicando em **Launch LISH Console**, é um terminal no servidor Kali Linux onde você verá que ainda estará sendo realizado o processo de construção do Kali Linux.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#laborat%C3%B3rio-gti--linode---akamai-cloud-computing "Subir para o topo")
+[(&uarr;) Subir](#linode---akamai-cloud-computing "Subir para o topo")
 
 ---
 
@@ -66,7 +66,7 @@ ssh -L 61000:localhost:5901 -N -f username@123.231.132.133
 > **( ! )** Informe a senha VNC que você criou!
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#laborat%C3%B3rio-gti--linode---akamai-cloud-computing "Subir para o topo")
+[(&uarr;) Subir](#linode---akamai-cloud-computing "Subir para o topo")
 
 ---
 
@@ -95,7 +95,7 @@ alias kali-murdock='ssh -L 61000:localhost:5901 -N -f marcos@170.187.154.205'
 ```
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#laborat%C3%B3rio-gti--linode---akamai-cloud-computing "Subir para o topo")
+[(&uarr;) Subir](#linode---akamai-cloud-computing "Subir para o topo")
 
 ---
 
@@ -110,7 +110,7 @@ Depois desse comando, o túnel estará rodando em background como um processo. A
 [![Visualizador TigerVNC Kali Linux](https://github.com/systemboys/GTi_Laboratory/blob/main/Computa%C3%A7%C3%A3o%20em%20Nuvens/Linode%20-%20Akamai%20Cloud%20Computing/images/Visualizador_TigerVNC_Kali_Linux.png?raw=true "Visualizador TigerVNC Kali Linux")](https://github.com/systemboys/GTi_Laboratory/blob/main/Computa%C3%A7%C3%A3o%20em%20Nuvens/Linode%20-%20Akamai%20Cloud%20Computing/images/Visualizador_TigerVNC_Kali_Linux.png?raw=true "Visualizador TigerVNC Kali Linux")
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#laborat%C3%B3rio-gti--linode---akamai-cloud-computing "Subir para o topo")
+[(&uarr;) Subir](#linode---akamai-cloud-computing "Subir para o topo")
 
 ---
 
@@ -145,7 +145,7 @@ Claro, aqui estão as instruções para se conectar a uma VM Linode usando o Rem
 Lembre-se de que a segurança é fundamental. Certifique-se de usar senhas fortes e manter suas credenciais seguras.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#laborat%C3%B3rio-gti--linode---akamai-cloud-computing "Subir para o topo")
+[(&uarr;) Subir](#linode---akamai-cloud-computing "Subir para o topo")
 
 ---
 
@@ -170,7 +170,7 @@ Isso encerrará o túnel SSH e, consequentemente, a conexão VNC para o servidor
 Lembre-se de substituir `PID` pelo número real do PID que corresponde ao seu túnel SSH. Certifique-se de encerrar apenas o processo relevante para evitar fechar outras conexões SSH que possam estar em execução no seu sistema local.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#laborat%C3%B3rio-gti--linode---akamai-cloud-computing "Subir para o topo")
+[(&uarr;) Subir](#linode---akamai-cloud-computing "Subir para o topo")
 
 ---
 
