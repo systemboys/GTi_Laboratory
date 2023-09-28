@@ -31,13 +31,13 @@ echo ╭─────────────[Utilitários]──────�
 echo │ 1 │ Baixar e Instalar WinRAR          │
 echo │ 2 │ Sair                              │
 echo ╰───────────────────────────────────────╯
-echo.
 
 set /p option=Digite o número da opção desejada: 
 
 if "%option%"=="1" (
+    mode 98,20
     echo Baixando WinRAR...
-    bitsadmin /transfer "DownloadWinRAR" https://exemplo.com/winrar.exe "%CD%\winrar.exe"
+    bitsadmin /transfer "DownloadWinRAR" "https://exemplo.com/winrar.exe" "%CD%\winrar.exe"
     echo.
     echo Instalando WinRAR...
     start /wait "" "%CD%\winrar.exe"
