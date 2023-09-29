@@ -35,6 +35,7 @@ echo ╰────────────────────────
 set /p option=Digite o número da opção desejada: 
 
 if "%option%"=="1" (
+    cls
     mode 98,20
     echo Baixando WinRAR...
     bitsadmin /transfer "DownloadWinRAR" "https://exemplo.com/winrar.exe" "%CD%\winrar.exe"
@@ -46,9 +47,11 @@ if "%option%"=="1" (
     echo WinRAR instalado com sucesso!
     pause
 ) else if "%option%"=="2" (
+    cls
     echo Saindo...
     exit
 ) else (
+    cls
     echo Opção inválida! Tente novamente.
     pause
 )
