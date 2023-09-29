@@ -44,7 +44,9 @@ if "%option%"=="1" (
     start /wait "" "%CD%\winrar.exe"
     del /f /a "%CD%\winrar.exe"
     echo.
-    echo WinRAR instalado com sucesso!
+    echo ╭────────────────────────────────────────╮
+    echo │ WinRAR instalado com sucesso!          │
+    echo ╰────────────────────────────────────────╯
     pause
 ) else if "%option%"=="2" (
     cls
