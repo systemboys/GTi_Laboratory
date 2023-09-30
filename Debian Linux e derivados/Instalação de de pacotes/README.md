@@ -22,6 +22,7 @@
       - [Personalizando o Plano de Fundo no Terminal Linux: Como Alterar o Fundo dos Textos em Scripts Bash](#personalizando-o-plano-de-fundo-no-terminal-linux-como-alterar-o-fundo-dos-textos-em-scripts-bash "Personalizando o Plano de Fundo no Terminal Linux: Como Alterar o Fundo dos Textos em Scripts Bash")
       - [Explorando Cores no Bash: Uma Paleta de Possibilidades](#explorando-cores-no-bash-uma-paleta-de-possibilidades "Explorando Cores no Bash: Uma Paleta de Possibilidades")
       - [Controle o Tempo: Criando Intervalos entre Comandos no Linux com Sleep](#controle-o-tempo-criando-intervalos-entre-comandos-no-linux-com-sleep "Controle o Tempo: Criando Intervalos entre Comandos no Linux com Sleep")
+      - [Extraindo e Exibindo o Nome do Script Bash Automaticamente](# "Extraindo e Exibindo o Nome do Script Bash Automaticamente")
 
 ---
 
@@ -664,6 +665,29 @@ echo "Segundo comando executado!"
 ```
 
 Neste exemplo, o `sleep 3` faz com que o script pause por 3 segundos antes de executar o próximo comando. Você pode ajustar o número de segundos conforme necessário.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--instala%C3%A7%C3%A3o-de-pacotes "Subir para o topo")
+
+---
+
+## Extraindo e Exibindo o Nome do Script Bash Automaticamente
+
+Sim, é possível obter o nome do script bash (`arquivo.sh`) a partir de dentro do próprio script e exibi-lo usando um `echo`. Você pode fazer isso usando a variável especial `$0`, que contém o nome do arquivo do script que está sendo executado. Aqui está como você pode fazer:
+
+```bash
+#!/bin/bash
+
+# Obtendo o nome do arquivo do script
+nome_do_arquivo=$(basename "$0")
+
+# Exibindo o nome do arquivo
+echo "O nome deste script é: $nome_do_arquivo"
+
+# Restante do seu script...
+```
+
+Neste exemplo, `basename "$0"` extrai apenas o nome do arquivo do caminho completo do script, e o resultado é armazenado na variável `nome_do_arquivo`. Em seguida, o `echo` exibe o nome do arquivo. Você pode adaptar essa parte do código conforme necessário para se adequar ao restante do seu script.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--instala%C3%A7%C3%A3o-de-pacotes "Subir para o topo")
