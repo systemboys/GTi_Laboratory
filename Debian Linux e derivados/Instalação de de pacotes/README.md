@@ -20,6 +20,7 @@
    - [Menu de Instalação de Programas no Terminal Linux](#menu-de-instala%C3%A7%C3%A3o-de-programas-no-terminal-linux "Menu de Instalação de Programas no Terminal Linux")
       - [Personalizando Cores de Texto em Scripts Bash: Uma Introdução aos Códigos de Escape ANSI](#personalizando-cores-de-texto-em-scripts-bash-uma-introdu%C3%A7%C3%A3o-aos-c%C3%B3digos-de-escape-ansi "Personalizando Cores de Texto em Scripts Bash: Uma Introdução aos Códigos de Escape ANSI")
       - [Personalizando o Plano de Fundo no Terminal Linux: Como Alterar o Fundo dos Textos em Scripts Bash](#personalizando-o-plano-de-fundo-no-terminal-linux-como-alterar-o-fundo-dos-textos-em-scripts-bash "Personalizando o Plano de Fundo no Terminal Linux: Como Alterar o Fundo dos Textos em Scripts Bash")
+      - [Explorando Cores no Bash: Uma Paleta de Possibilidades](# "Explorando Cores no Bash: Uma Paleta de Possibilidades")
 
 ---
 
@@ -587,6 +588,64 @@ echo -e "\033[0m"
 Neste exemplo, `\033[97;41m` muda a cor do texto para branco (código 97) e o plano de fundo para vermelho (código 41). Após a mensagem, `\033[0m` é usado para restaurar as cores originais.
 
 Sugestão de título para esta dica: "Personalizando o Plano de Fundo no Terminal Linux: Como Alterar o Fundo dos Textos em Scripts Bash"
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--instala%C3%A7%C3%A3o-de-pacotes "Subir para o topo")
+
+---
+
+### Explorando Cores no Bash: Uma Paleta de Possibilidades
+
+Certamente! Aqui está uma paleta de cores ANSI que você pode usar em seus scripts Bash:
+
+- **Texto Regular:**
+  - Preto: `\033[0;30m`
+  - Vermelho: `\033[0;31m`
+  - Verde: `\033[0;32m`
+  - Amarelo: `\033[0;33m`
+  - Azul: `\033[0;34m`
+  - Roxo: `\033[0;35m`
+  - Ciano: `\033[0;36m`
+  - Branco: `\033[0;37m`
+
+- **Texto Negrito:**
+  - Preto: `\033[1;30m`
+  - Vermelho: `\033[1;31m`
+  - Verde: `\033[1;32m`
+  - Amarelo: `\033[1;33m`
+  - Azul: `\033[1;34m`
+  - Roxo: `\033[1;35m`
+  - Ciano: `\033[1;36m`
+  - Branco: `\033[1;37m`
+
+- **Fundo:**
+  - Preto: `\033[40m`
+  - Vermelho: `\033[41m`
+  - Verde: `\033[42m`
+  - Amarelo: `\033[43m`
+  - Azul: `\033[44m`
+  - Roxo: `\033[45m`
+  - Ciano: `\033[46m`
+  - Branco: `\033[47m`
+
+- **Estilos de Texto:**
+  - Negrito: `\033[1m`
+  - Faint (Fraco): `\033[2m`
+  - Itálico: `\033[3m`
+  - Sublinhado: `\033[4m`
+  - Piscando: `\033[5m`
+  - Invertido: `\033[7m`
+  - Escondido: `\033[8m`
+
+Por exemplo, se você quiser imprimir texto verde com fundo amarelo e negrito, você pode usar: 
+
+```bash
+echo -e "\033[1;32;43mTexto Verde com Fundo Amarelo e Negrito\033[0m"
+```
+
+Neste exemplo, `\033[1;32;43m` define o texto como verde, fundo como amarelo e negrito, e `\033[0m` reseta as configurações de formatação para que o texto subsequente não seja afetado.
+
+Você pode combinar e experimentar diferentes códigos de escape para criar os efeitos visuais desejados em seus scripts Bash.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--instala%C3%A7%C3%A3o-de-pacotes "Subir para o topo")
