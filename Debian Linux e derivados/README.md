@@ -5,7 +5,7 @@
 > Aqui estão alguns assuntos sobre os quais deixam alguns [usuários](https://github.com/systemboys/GTi_Laboratory/tree/main/Debian%20Linux%20e%20derivados/Minhas%20configura%C3%A7%C3%B5es#laborat%C3%B3rio-gti--minhas-configura%C3%A7%C3%B5es "usuários") de Linux na dúvida sobre alguns problemas e/ou determinadas soluções.
 
 - [A Linux Foundation (Fundação Linux)](#a-linux-foundation-funda%C3%A7%C3%A3o-linux "A Linux Foundation (Fundação Linux)")
-- [Atualizações](https://github.com/systemboys/GTi_Laboratory/tree/main/Debian%20Linux%20e%20derivados/Atualiza%C3%A7%C3%B5es#atualizar-o-kernel-do-linux "Atualizações")
+- [Atualizações](https://github.com/systemboys/GTi_Laboratory/tree/main/Debian%20Linux%20e%20derivados/Atualiza%C3%A7%C3%B5es#atualiza%C3%A7%C3%B5es "Atualizações")
 - [Instalação de pacotes](https://github.com/systemboys/GTi_Laboratory/tree/main/Debian%20Linux%20e%20derivados/Instala%C3%A7%C3%A3o%20de%20de%20pacotes#instala%C3%A7%C3%A3o-de-pacotes "Instalação de pacotes")
 - [Processos em execução](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Processos%20em%20execu%C3%A7%C3%A3o/README.md#sum%C3%A1rio "Processos em execução")
 - [Monitoramento de Sistemas](https://github.com/systemboys/GTi_Laboratory/tree/main/Debian%20Linux%20e%20derivados/Monitoramento%20de%20sistemas#laborat%C3%B3rio-gti--monitoramento-de-sistemas "Monitoramento de Sistemas")
