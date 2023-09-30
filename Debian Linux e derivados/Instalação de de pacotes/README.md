@@ -506,7 +506,7 @@ echo "│ 1 │ Baixar e Instalar WinRAR          │"
 echo "│ q │ Sair                              │"
 echo "╰───────────────────────────────────────╯"
 
-read -p "Digite o número da opção desejada: " option
+read -p "${fileName}: Digite uma opção: " option
 
 case $option in
     0) # Recarregar menu
@@ -516,7 +516,7 @@ case $option in
     1) # WinRAR
         clear
         # Start of commands
-        # Enter your commands here
+        # Enter your commands here...
         # End of commands
         echo
         echo "╭───────────────────────────────╮"
@@ -526,9 +526,12 @@ case $option in
         ./${fileName}
         ;;
     *) # Opção inválida
+        clear
         echo "╭──────────────────────────────────╮"
         echo "│ Opção inválida! Tente novamente. │"
         echo "╰──────────────────────────────────╯"
+        sleep ${sleep}
+        ./${fileName}
         ;;
     q) # Sair do menu
         clear
