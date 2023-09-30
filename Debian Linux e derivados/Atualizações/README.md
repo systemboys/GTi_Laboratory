@@ -1,6 +1,10 @@
-# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi") / Atualizações
+# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi")
+
+## Atualizações
 
 [![Atualizações](https://github.com/systemboys/GTi_Laboratory/raw/main/Debian%20Linux%20e%20derivados/Atualiza%C3%A7%C3%B5es/images/Upgrade_button.jpg "Atualizações")](https://github.com/systemboys/GTi_Laboratory/raw/main/Debian%20Linux%20e%20derivados/Atualiza%C3%A7%C3%B5es/images/Upgrade_button.jpg "Atualizações")
+
+### *Sumário*
 
 - [Atualizar o kernel do Linux](#atualizar-o-kernel-do-linux "Atualizar o kernel do Linux")
 - [Alguns erros](#alguns-erros-durante-a-atualiza%C3%A7%C3%A3o-de-pacotes "Alguns erros")
@@ -62,7 +66,7 @@ Lembre-se de que, se você estiver usando um gerenciador de inicialização como
 Novamente, reforço a importância de fazer backup dos seus dados antes de qualquer procedimento de atualização do kernel. Se você não estiver confortável com essas etapas, é melhor buscar assistência de alguém mais experiente ou evitar atualizar o kernel. O kernel existente do Debian é geralmente estável e seguro, a menos que você precise especificamente de uma nova funcionalidade ou correção fornecida em uma versão mais recente.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#laborat%C3%B3rio-gti--atualiza%C3%A7%C3%B5es "Subir para o topo")
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
 
@@ -104,6 +108,6 @@ sudo nano /etc/apt/sources.list
 Com esses passos, você deve conseguir resolver o erro e atualizar seu sistema sem problemas.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#laborat%C3%B3rio-gti--atualiza%C3%A7%C3%B5es "Subir para o topo")
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
