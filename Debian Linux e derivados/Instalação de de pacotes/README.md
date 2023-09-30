@@ -19,6 +19,7 @@
    - [Verificação e Instalação Condicional de Programas em Scripts Bash](#verifica%C3%A7%C3%A3o-e-instala%C3%A7%C3%A3o-condicional-de-programas-em-scripts-bash "Verificação e Instalação Condicional de Programas em Scripts Bash")
    - [Menu de Instalação de Programas no Terminal Linux](#menu-de-instala%C3%A7%C3%A3o-de-programas-no-terminal-linux "Menu de Instalação de Programas no Terminal Linux")
       - [Personalizando Cores de Texto em Scripts Bash: Uma Introdução aos Códigos de Escape ANSI](#personalizando-cores-de-texto-em-scripts-bash-uma-introdu%C3%A7%C3%A3o-aos-c%C3%B3digos-de-escape-ansi "Personalizando Cores de Texto em Scripts Bash: Uma Introdução aos Códigos de Escape ANSI")
+      - [Personalizando o Plano de Fundo no Terminal Linux: Como Alterar o Fundo dos Textos em Scripts Bash](# "Personalizando o Plano de Fundo no Terminal Linux: Como Alterar o Fundo dos Textos em Scripts Bash")
 
 ---
 
@@ -563,6 +564,29 @@ echo -e "${vermelho}Vermelho${reset}, ${verde}Verde${reset}, e ${azul}Azul${rese
 Neste exemplo, `\033[0;31m` representa a cor vermelha e `\033[0;32m` representa a cor verde. Após imprimir o texto colorido, é importante usar `\033[0m` para resetar a formatação para a cor padrão, caso contrário, todo o texto subsequente será colorido.
 
 Espero que isso ajude! Se você tiver mais perguntas ou precisar de assistência com algo mais, sinta-se à vontade para perguntar.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--instala%C3%A7%C3%A3o-de-pacotes "Subir para o topo")
+
+---
+
+### Personalizando o Plano de Fundo no Terminal Linux: Como Alterar o Fundo dos Textos em Scripts Bash
+
+Sim, você pode mudar o plano de fundo no terminal usando códigos de escape ANSI em scripts Bash. Para mudar o plano de fundo, você pode utilizar o código de escape ANSI `\033[<cor de fundo>m`. Aqui está um exemplo de como mudar o plano de fundo para vermelho:
+
+```bash
+#!/bin/bash
+
+# Mudar a cor do texto para branco e o plano de fundo para vermelho
+echo -e "\033[97;41mOlá, Mundo!\033[0m"
+
+# Restaurar as cores originais
+echo -e "\033[0m"
+```
+
+Neste exemplo, `\033[97;41m` muda a cor do texto para branco (código 97) e o plano de fundo para vermelho (código 41). Após a mensagem, `\033[0m` é usado para restaurar as cores originais.
+
+Sugestão de título para esta dica: "Personalizando o Plano de Fundo no Terminal Linux: Como Alterar o Fundo dos Textos em Scripts Bash"
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--instala%C3%A7%C3%A3o-de-pacotes "Subir para o topo")
