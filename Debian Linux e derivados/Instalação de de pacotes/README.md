@@ -22,7 +22,7 @@
       - [Personalizando o Plano de Fundo no Terminal Linux: Como Alterar o Fundo dos Textos em Scripts Bash](#personalizando-o-plano-de-fundo-no-terminal-linux-como-alterar-o-fundo-dos-textos-em-scripts-bash "Personalizando o Plano de Fundo no Terminal Linux: Como Alterar o Fundo dos Textos em Scripts Bash")
       - [Explorando Cores no Bash: Uma Paleta de Possibilidades](#explorando-cores-no-bash-uma-paleta-de-possibilidades "Explorando Cores no Bash: Uma Paleta de Possibilidades")
       - [Controle o Tempo: Criando Intervalos entre Comandos no Linux com Sleep](#controle-o-tempo-criando-intervalos-entre-comandos-no-linux-com-sleep "Controle o Tempo: Criando Intervalos entre Comandos no Linux com Sleep")
-      - [Extraindo e Exibindo o Nome do Script Bash Automaticamente](# "Extraindo e Exibindo o Nome do Script Bash Automaticamente")
+      - [Extraindo e Exibindo o Nome do Script Bash Automaticamente](#extraindo-e-exibindo-o-nome-do-script-bash-automaticamente "Extraindo e Exibindo o Nome do Script Bash Automaticamente")
 
 ---
 
