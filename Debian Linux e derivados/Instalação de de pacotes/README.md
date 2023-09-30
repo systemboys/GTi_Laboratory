@@ -490,35 +490,52 @@ Aqui está uma versão equivalente do menu de instalação para Linux, em um arq
 ```bash
 #!/bin/bash
 
+clear
+
+# Variáveis úteis
+sleep='3'
+fileName=$(basename "$0")
+
 echo "╭───────────────────────────────────────╮"
 echo "│          SELECIONE UMA OPÇÃO          │"
 echo "╰───────────────────────────────────────╯"
 echo
 echo "╭─────────────[Utilitários]─────────────╮"
+echo "│ 0 │ Recarregar o menu                 │"
 echo "│ 1 │ Baixar e Instalar WinRAR          │"
-echo "│ 2 │ Sair                              │"
+echo "│ q │ Sair                              │"
 echo "╰───────────────────────────────────────╯"
 
 read -p "Digite o número da opção desejada: " option
 
 case $option in
-    1)
-        echo "Baixando WinRAR..."
-        wget -O winrar.tar.gz https://exemplo.com/winrar.tar.gz
-        echo "Descompactando WinRAR..."
-        tar -xzvf winrar.tar.gz
-        rm winrar.tar.gz
+    0) # Recarregar menu
+        clear
+        ./${fileName}
+        ;;
+    1) # WinRAR
+        clear
+        # Start of commands
+        # Enter your commands here
+        # End of commands
         echo
         echo "╭───────────────────────────────╮"
         echo "│ WinRAR instalado com sucesso! │"
         echo "╰───────────────────────────────╯"
+        sleep ${sleep}
+        ./${fileName}
         ;;
-    2)
-        echo "Saindo..."
+    *) # Opção inválida
+        echo "╭──────────────────────────────────╮"
+        echo "│ Opção inválida! Tente novamente. │"
+        echo "╰──────────────────────────────────╯"
+        ;;
+    q) # Sair do menu
+        clear
+        echo "╭────────────────────╮"
+        echo "│ Você saiu do menu! │"
+        echo "╰────────────────────╯"
         exit 0
-        ;;
-    *)
-        echo "Opção inválida! Tente novamente."
         ;;
 esac
 ```
