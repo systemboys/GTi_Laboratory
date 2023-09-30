@@ -23,6 +23,7 @@
       - [Explorando Cores no Bash: Uma Paleta de Possibilidades](#explorando-cores-no-bash-uma-paleta-de-possibilidades "Explorando Cores no Bash: Uma Paleta de Possibilidades")
       - [Controle o Tempo: Criando Intervalos entre Comandos no Linux com Sleep](#controle-o-tempo-criando-intervalos-entre-comandos-no-linux-com-sleep "Controle o Tempo: Criando Intervalos entre Comandos no Linux com Sleep")
       - [Extraindo e Exibindo o Nome do Script Bash Automaticamente](#extraindo-e-exibindo-o-nome-do-script-bash-automaticamente "Extraindo e Exibindo o Nome do Script Bash Automaticamente")
+      - [Tabela de Caracteres Especiais para Interfaces de Texto](#tabela-de-caracteres-especiais-para-interfaces-de-texto "Tabela de Caracteres Especiais para Interfaces de Texto")
 
 ---
 
@@ -708,6 +709,43 @@ echo "O nome deste script é: $nome_do_arquivo"
 ```
 
 Neste exemplo, `basename "$0"` extrai apenas o nome do arquivo do caminho completo do script, e o resultado é armazenado na variável `nome_do_arquivo`. Em seguida, o `echo` exibe o nome do arquivo. Você pode adaptar essa parte do código conforme necessário para se adequar ao restante do seu script.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--instala%C3%A7%C3%A3o-de-pacotes "Subir para o topo")
+
+---
+
+## Tabela de Caracteres Especiais para Interfaces de Texto
+
+Aqui está uma lista de caracteres especiais que podem ser úteis para criar menus ou elementos gráficos em scripts e programas:
+
+```bash
+╭ ─ ┤ ├ ┬ ╮
+│   │ │
+├ ─ ┼ ┤
+╰ ─ ┴ ╯
+╔ ╡ ╞ ╤ ╦ ╗
+║   │ │
+╨   │ │
+╥   │ │
+╠══ ╪ ╬ ╣
+╚══ ╧ ╩ ╝
+╒ ╤ ╕
+╘ ╧ ╛
+╓ ╖
+╟ ╢
+╙ ╜
+░ ▒ ▓
+← ↑ → ↓ ↔ ↕ ↨
+┌ ┬ ┐
+├ ┼ ┤
+└ ┴ ┘
+▀ ▄ █ ▌ ▐
+▲ ► ▼ ◄
+← ↑ → ↓ ↔ ↕ ↨ ≡ │ ┌ ┐ └ ┘ ├ ┤ ┬ ┴ ┼ ═ ║
+```
+
+Esses caracteres podem ser usados para criar bordas, setas, caixas, e muitos outros elementos gráficos em menus ou interfaces de texto. Sinta-se à vontade para experimentar e combiná-los conforme necessário!
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--instala%C3%A7%C3%A3o-de-pacotes "Subir para o topo")
