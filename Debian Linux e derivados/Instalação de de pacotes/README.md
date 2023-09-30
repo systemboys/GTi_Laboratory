@@ -21,6 +21,7 @@
       - [Personalizando Cores de Texto em Scripts Bash: Uma Introdução aos Códigos de Escape ANSI](#personalizando-cores-de-texto-em-scripts-bash-uma-introdu%C3%A7%C3%A3o-aos-c%C3%B3digos-de-escape-ansi "Personalizando Cores de Texto em Scripts Bash: Uma Introdução aos Códigos de Escape ANSI")
       - [Personalizando o Plano de Fundo no Terminal Linux: Como Alterar o Fundo dos Textos em Scripts Bash](#personalizando-o-plano-de-fundo-no-terminal-linux-como-alterar-o-fundo-dos-textos-em-scripts-bash "Personalizando o Plano de Fundo no Terminal Linux: Como Alterar o Fundo dos Textos em Scripts Bash")
       - [Explorando Cores no Bash: Uma Paleta de Possibilidades](#explorando-cores-no-bash-uma-paleta-de-possibilidades "Explorando Cores no Bash: Uma Paleta de Possibilidades")
+      - [Controle o Tempo: Criando Intervalos entre Comandos no Linux com Sleep](# "Controle o Tempo: Criando Intervalos entre Comandos no Linux com Sleep")
 
 ---
 
@@ -481,7 +482,7 @@ Lembre-se de que alguns programas podem não ter um comando associado diretament
 
 ---
 
-### Menu de Instalação de Programas no Terminal Linux
+## Menu de Instalação de Programas no Terminal Linux
 
 Aqui está uma versão equivalente do menu de instalação para Linux, em um arquivo de script bash chamado `menu_instalacao.sh`:
 
@@ -538,7 +539,7 @@ Certifique-se de substituir o URL de download pelo URL real do arquivo de instal
 
 ---
 
-### Personalizando Cores de Texto em Scripts Bash: Uma Introdução aos Códigos de Escape ANSI
+## Personalizando Cores de Texto em Scripts Bash: Uma Introdução aos Códigos de Escape ANSI
 
 Para mudar a cor de uma palavra ou de um texto específico ao imprimir no terminal em um script Bash, você pode usar códigos de escape ANSI. Esses códigos permitem controlar várias formatações de texto, incluindo cores.
 
@@ -571,7 +572,7 @@ Espero que isso ajude! Se você tiver mais perguntas ou precisar de assistência
 
 ---
 
-### Personalizando o Plano de Fundo no Terminal Linux: Como Alterar o Fundo dos Textos em Scripts Bash
+## Personalizando o Plano de Fundo no Terminal Linux: Como Alterar o Fundo dos Textos em Scripts Bash
 
 Sim, você pode mudar o plano de fundo no terminal usando códigos de escape ANSI em scripts Bash. Para mudar o plano de fundo, você pode utilizar o código de escape ANSI `\033[<cor de fundo>m`. Aqui está um exemplo de como mudar o plano de fundo para vermelho:
 
@@ -594,7 +595,7 @@ Sugestão de título para esta dica: "Personalizando o Plano de Fundo no Termina
 
 ---
 
-### Explorando Cores no Bash: Uma Paleta de Possibilidades
+## Explorando Cores no Bash: Uma Paleta de Possibilidades
 
 Certamente! Aqui está uma paleta de cores ANSI que você pode usar em seus scripts Bash:
 
@@ -646,6 +647,23 @@ echo -e "\033[1;32;43mTexto Verde com Fundo Amarelo e Negrito\033[0m"
 Neste exemplo, `\033[1;32;43m` define o texto como verde, fundo como amarelo e negrito, e `\033[0m` reseta as configurações de formatação para que o texto subsequente não seja afetado.
 
 Você pode combinar e experimentar diferentes códigos de escape para criar os efeitos visuais desejados em seus scripts Bash.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--instala%C3%A7%C3%A3o-de-pacotes "Subir para o topo")
+
+---
+
+## Controle o Tempo: Criando Intervalos entre Comandos no Linux com Sleep
+
+Você pode usar o comando `sleep` para criar um intervalo entre comandos no terminal Linux. O `sleep` é utilizado para pausar a execução do script por um determinado número de segundos. No seu exemplo, você poderia fazer o seguinte:
+
+```bash
+echo "Primeiro comando executado!"
+sleep 3
+echo "Segundo comando executado!"
+```
+
+Neste exemplo, o `sleep 3` faz com que o script pause por 3 segundos antes de executar o próximo comando. Você pode ajustar o número de segundos conforme necessário.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--instala%C3%A7%C3%A3o-de-pacotes "Subir para o topo")
