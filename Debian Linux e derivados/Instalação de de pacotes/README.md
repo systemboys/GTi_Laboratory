@@ -82,7 +82,7 @@ source /etc/profile
 
 Feito este processo, seu linux irá instalar normalmente o pacote através do `dpkg -i your_installation_package.deb`.
 
-> ( ! ) Obs.: Em uma instalação futura, se houver o mesmo problema, faça o mesmo procedimento removendo o `/sbin`. No caso, algumas instalações exigirão o "/sbin" e outras não no valor "se" falso da condição.
+> ( ! ) Obs.: Em uma instalação futura, se houver o mesmo problema, faça o mesmo procedimento removendo o `/sbin`. No caso, algumas instalações exigirão o "/sbin" e outras não no valor "se falso" da condição.
 
 Uma solução definitiva para o erro de `PATH` após a instalação de um pacote `.deb` é adicionar o caminho correto ao arquivo `/etc/environment`, que é lido pelo sistema no momento do login. Para fazer isso, você pode seguir estes passos:
 
