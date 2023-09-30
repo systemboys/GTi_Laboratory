@@ -523,7 +523,6 @@ case $option in
         # Start of commands
         # Enter your commands here...
         # End of commands
-        echo
         echo "╭───────────────────────────────╮"
         echo "│ WinRAR instalado com sucesso! │"
         echo "╰───────────────────────────────╯"
