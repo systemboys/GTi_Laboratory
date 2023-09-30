@@ -18,6 +18,7 @@
 - [Script de Instalação Automática de pacotes no Linux](#script-de-instala%C3%A7%C3%A3o-autom%C3%A1tica-de-pacotes-no-linux "Script de Instalação Automática de pacotes no Linux")
    - [Verificação e Instalação Condicional de Programas em Scripts Bash](#verifica%C3%A7%C3%A3o-e-instala%C3%A7%C3%A3o-condicional-de-programas-em-scripts-bash "Verificação e Instalação Condicional de Programas em Scripts Bash")
    - [Menu de Instalação de Programas no Terminal Linux](#menu-de-instala%C3%A7%C3%A3o-de-programas-no-terminal-linux "Menu de Instalação de Programas no Terminal Linux")
+      - [Personalizando Cores de Texto em Scripts Bash: Uma Introdução aos Códigos de Escape ANSI](# "Personalizando Cores de Texto em Scripts Bash: Uma Introdução aos Códigos de Escape ANSI")
 
 ---
 
@@ -480,7 +481,7 @@ Lembre-se de que alguns programas podem não ter um comando associado diretament
 
 ### Menu de Instalação de Programas no Terminal Linux
 
-Claro, aqui está uma versão equivalente do menu de instalação para Linux, em um arquivo de script bash chamado `menu_instalacao.sh`:
+Aqui está uma versão equivalente do menu de instalação para Linux, em um arquivo de script bash chamado `menu_instalacao.sh`:
 
 ```bash
 #!/bin/bash
@@ -529,6 +530,39 @@ Neste script para Linux:
 Lembre-se de tornar o arquivo `menu_instalacao.sh` executável antes de usá-lo com o comando `chmod +x menu_instalacao.sh`.
 
 Certifique-se de substituir o URL de download pelo URL real do arquivo de instalação e ajuste o script conforme necessário para outras operações de instalação ou personalizações que você precise.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--instala%C3%A7%C3%A3o-de-pacotes "Subir para o topo")
+
+---
+
+### Personalizando Cores de Texto em Scripts Bash: Uma Introdução aos Códigos de Escape ANSI
+
+Para mudar a cor de uma palavra ou de um texto específico ao imprimir no terminal em um script Bash, você pode usar códigos de escape ANSI. Esses códigos permitem controlar várias formatações de texto, incluindo cores.
+
+Aqui está um exemplo de como você pode fazer isso no seu script Bash:
+
+```bash
+#!/bin/bash
+
+# Defina os códigos de escape ANSI para as cores
+vermelho='\033[0;31m'
+verde='\033[0;32m'
+reset='\033[0m' # Resetar a formatação para a cor padrão
+
+# Imprimir texto em vermelho
+echo -e "Este é um texto em ${vermelho}vermelho${reset}."
+
+# Imprimir texto em verde
+echo -e "Este é um texto em ${verde}verde${reset}."
+
+# Imprimir texto em várias cores
+echo -e "${vermelho}Vermelho${reset}, ${verde}Verde${reset}, e ${azul}Azul${reset}."
+```
+
+Neste exemplo, `\033[0;31m` representa a cor vermelha e `\033[0;32m` representa a cor verde. Após imprimir o texto colorido, é importante usar `\033[0m` para resetar a formatação para a cor padrão, caso contrário, todo o texto subsequente será colorido.
+
+Espero que isso ajude! Se você tiver mais perguntas ou precisar de assistência com algo mais, sinta-se à vontade para perguntar.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--instala%C3%A7%C3%A3o-de-pacotes "Subir para o topo")
