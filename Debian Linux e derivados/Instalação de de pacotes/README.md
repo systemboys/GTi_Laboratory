@@ -20,7 +20,7 @@
    - [Menu de Instalação de Programas no Terminal Linux](#menu-de-instala%C3%A7%C3%A3o-de-programas-no-terminal-linux "Menu de Instalação de Programas no Terminal Linux")
       - [Personalizando Cores de Texto em Scripts Bash: Uma Introdução aos Códigos de Escape ANSI](#personalizando-cores-de-texto-em-scripts-bash-uma-introdu%C3%A7%C3%A3o-aos-c%C3%B3digos-de-escape-ansi "Personalizando Cores de Texto em Scripts Bash: Uma Introdução aos Códigos de Escape ANSI")
       - [Personalizando o Plano de Fundo no Terminal Linux: Como Alterar o Fundo dos Textos em Scripts Bash](#personalizando-o-plano-de-fundo-no-terminal-linux-como-alterar-o-fundo-dos-textos-em-scripts-bash "Personalizando o Plano de Fundo no Terminal Linux: Como Alterar o Fundo dos Textos em Scripts Bash")
-      - [Explorando Cores no Bash: Uma Paleta de Possibilidades](# "Explorando Cores no Bash: Uma Paleta de Possibilidades")
+      - [Explorando Cores no Bash: Uma Paleta de Possibilidades](#personalizando-o-plano-de-fundo-no-terminal-linux-como-alterar-o-fundo-dos-textos-em-scripts-bash "Explorando Cores no Bash: Uma Paleta de Possibilidades")
 
 ---
 
