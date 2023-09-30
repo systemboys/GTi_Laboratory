@@ -17,6 +17,7 @@
    - [Verificar nome correto de pacote no sistema Debian](#verificar-nome-correto-de-pacote-no-sistema-debian "Verificar nome correto de pacote no sistema Debian")
 - [Script de Instalação Automática de pacotes no Linux](#script-de-instala%C3%A7%C3%A3o-autom%C3%A1tica-de-pacotes-no-linux "Script de Instalação Automática de pacotes no Linux")
    - [Verificação e Instalação Condicional de Programas em Scripts Bash](#verifica%C3%A7%C3%A3o-e-instala%C3%A7%C3%A3o-condicional-de-programas-em-scripts-bash "Verificação e Instalação Condicional de Programas em Scripts Bash")
+   - [Menu de Instalação de Programas no Terminal Linux](# "Menu de Instalação de Programas no Terminal Linux")
 
 ---
 
@@ -471,6 +472,63 @@ fi
 ```
 
 Lembre-se de que alguns programas podem não ter um comando associado diretamente e podem ter um processo de instalação mais complexo que envolve a obtenção de pacotes específicos ou a configuração de repositórios. Certifique-se de verificar a documentação oficial do programa ou as orientações da distribuição Linux para a instalação correta do AnyDesk ou de qualquer outro software que você deseja instalar.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--instala%C3%A7%C3%A3o-de-pacotes "Subir para o topo")
+
+---
+
+### Menu de Instalação de Programas no Terminal Linux
+
+Claro, aqui está uma versão equivalente do menu de instalação para Linux, em um arquivo de script bash chamado `menu_instalacao.sh`:
+
+```bash
+#!/bin/bash
+
+echo "╭───────────────────────────────────────╮"
+echo "│          SELECIONE UMA OPÇÃO          │"
+echo "╰───────────────────────────────────────╯"
+echo
+echo "╭─────────────[Utilitários]─────────────╮"
+echo "│ 1 │ Baixar e Instalar WinRAR          │"
+echo "│ 2 │ Sair                              │"
+echo "╰───────────────────────────────────────╯"
+
+read -p "Digite o número da opção desejada: " option
+
+case $option in
+    1)
+        echo "Baixando WinRAR..."
+        wget -O winrar.tar.gz https://exemplo.com/winrar.tar.gz
+        echo "Descompactando WinRAR..."
+        tar -xzvf winrar.tar.gz
+        rm winrar.tar.gz
+        echo
+        echo "╭───────────────────────────────╮"
+        echo "│ WinRAR instalado com sucesso! │"
+        echo "╰───────────────────────────────╯"
+        ;;
+    2)
+        echo "Saindo..."
+        exit 0
+        ;;
+    *)
+        echo "Opção inválida! Tente novamente."
+        ;;
+esac
+```
+
+Neste script para Linux:
+
+- O menu é exibido, e o usuário pode inserir o número da opção desejada.
+- Se o usuário escolhe a opção 1, o script usa o comando `wget` para baixar o arquivo de instalação do WinRAR de um URL fictício (substitua https://exemplo.com/winrar.tar.gz pelo URL real).
+- Em seguida, o script descompacta o arquivo usando `tar` e exibe uma mensagem de sucesso.
+- Se o usuário escolhe a opção 2, o script sai.
+- Se uma opção inválida for inserida, uma mensagem de erro é exibida.
+
+Lembre-se de tornar o arquivo `menu_instalacao.sh` executável antes de usá-lo com o comando `chmod +x menu_instalacao.sh`.
+
+Certifique-se de substituir o URL de download pelo URL real do arquivo de instalação e ajuste o script conforme necessário para outras operações de instalação ou personalizações que você precise.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--instala%C3%A7%C3%A3o-de-pacotes "Subir para o topo")
