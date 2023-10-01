@@ -21,6 +21,7 @@
    - [Verificar nome correto de pacote no sistema Debian](#verificar-nome-correto-de-pacote-no-sistema-debian "Verificar nome correto de pacote no sistema Debian")
 - [Script de Instalação Automática de pacotes no Linux](#script-de-instala%C3%A7%C3%A3o-autom%C3%A1tica-de-pacotes-no-linux "Script de Instalação Automática de pacotes no Linux")
    - [Verificação e Instalação Condicional de Programas em Scripts Bash](#verifica%C3%A7%C3%A3o-e-instala%C3%A7%C3%A3o-condicional-de-programas-em-scripts-bash "Verificação e Instalação Condicional de Programas em Scripts Bash")
+   - [Verificação de Pacotes no Debian: dpkg](# "Verificação de Pacotes no Debian: dpkg")
    - [Menu de Instalação de Programas no Terminal Linux](#menu-de-instala%C3%A7%C3%A3o-de-programas-no-terminal-linux "Menu de Instalação de Programas no Terminal Linux")
       - [Personalizando Cores de Texto em Scripts Bash: Uma Introdução aos Códigos de Escape ANSI](#personalizando-cores-de-texto-em-scripts-bash-uma-introdu%C3%A7%C3%A3o-aos-c%C3%B3digos-de-escape-ansi "Personalizando Cores de Texto em Scripts Bash: Uma Introdução aos Códigos de Escape ANSI")
       - [Personalizando o Plano de Fundo no Terminal Linux: Como Alterar o Fundo dos Textos em Scripts Bash](#personalizando-o-plano-de-fundo-no-terminal-linux-como-alterar-o-fundo-dos-textos-em-scripts-bash "Personalizando o Plano de Fundo no Terminal Linux: Como Alterar o Fundo dos Textos em Scripts Bash")
@@ -482,6 +483,26 @@ fi
 ```
 
 Lembre-se de que alguns programas podem não ter um comando associado diretamente e podem ter um processo de instalação mais complexo que envolve a obtenção de pacotes específicos ou a configuração de repositórios. Certifique-se de verificar a documentação oficial do programa ou as orientações da distribuição Linux para a instalação correta do AnyDesk ou de qualquer outro software que você deseja instalar.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Verificação de Pacotes no Debian: dpkg
+
+O exemplo aqui é para verificar se o Discord (pacote `dpkg`) está instalado no Debian Linux, você pode modificar o script da seguinte forma:
+
+```bash
+if ! dpkg -l | grep -q discord; then
+    echo "Discord não está instalado. Instalando..."
+    # Comandos para instalar o Discord aqui (dependendo do método que você está usando)
+else
+    echo "Discord já está instalado!"
+fi
+```
+
+Neste script, `dpkg -l` lista todos os pacotes instalados no sistema e `grep discord` filtra a saída para verificar se o Discord está presente. Se não estiver, ele exibirá a mensagem "Discord não está instalado. Instalando...". Você pode adicionar os comandos para instalar o Discord no bloco de código dentro do `if` conforme necessário.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
