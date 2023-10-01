@@ -29,6 +29,7 @@
       - [Controle o Tempo: Criando Intervalos entre Comandos no Linux com Sleep](#controle-o-tempo-criando-intervalos-entre-comandos-no-linux-com-sleep "Controle o Tempo: Criando Intervalos entre Comandos no Linux com Sleep")
       - [Extraindo e Exibindo o Nome do Script Bash Automaticamente](#extraindo-e-exibindo-o-nome-do-script-bash-automaticamente "Extraindo e Exibindo o Nome do Script Bash Automaticamente")
       - [Tabela de Caracteres Especiais para Interfaces de Texto](#tabela-de-caracteres-especiais-para-interfaces-de-texto "Tabela de Caracteres Especiais para Interfaces de Texto")
+      - [Verificando e Executando Comandos Baseado na Existência de Diretórios no Debian Linux](#verificando-e-executando-comandos-baseado-na-existência-de-Diretórios-no-Debian-Linux "Verificando e Executando Comandos Baseado na Existência de Diretórios no Debian Linux")
 
 ---
 
@@ -770,6 +771,34 @@ Aqui está uma lista de caracteres especiais que podem ser úteis para criar men
 ```
 
 Esses caracteres podem ser usados para criar bordas, setas, caixas, e muitos outros elementos gráficos em menus ou interfaces de texto. Sinta-se à vontade para experimentar e combiná-los conforme necessário!
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Verificando e Executando Comandos Baseado na Existência de Diretórios no Debian Linux
+
+Você pode verificar se um diretório existe em um script shell usando a estrutura condicional `if`. Aqui está um exemplo de como fazer isso no Debian Linux:
+
+```bash
+#!/bin/bash
+
+diretorioA="/caminho/para/diretorioA"
+diretorioB="$diretorioA/diretorioB"
+
+if [ -d "$diretorioB" ]; then
+    # Diretório B existe, executar o comando 1
+    echo "Diretório B existe. Executando Comando 1..."
+    # Coloque aqui o comando 1 que você deseja executar
+else
+    # Diretório B não existe, executar o comando 2
+    echo "Diretório B não existe. Executando Comando 2..."
+    # Coloque aqui o comando 2 que você deseja executar
+fi
+```
+
+Neste exemplo, `$diretorioA` é o caminho para "diretorioA" e `$diretorioB` é o caminho completo para "diretorioB". O script verifica se o diretório B existe usando a condição `-d "$diretorioB"`. Se existir, executa o comando 1; caso contrário, executa o comando 2. Você pode substituir os `echo` com os comandos reais que deseja executar em cada caso. Certifique-se de substituir `"/caminho/para/diretorioA"` pelo caminho real do seu "diretorioA".
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
