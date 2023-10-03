@@ -893,8 +893,6 @@ echo "Agora são $hora_atual"
 
 Neste exemplo, `%H:%M:%S` é um formato para extrair a hora (`%H`) os minutos (`%M`) e os segundos (`%S`) do comando `date`.
 
-Espero que isso ajude! Se você tiver mais perguntas ou precisar de assistência com algo mais, sinta-se à vontade para perguntar.
-
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
