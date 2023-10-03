@@ -891,7 +891,7 @@ hora_atual=$(date +%H:%M:%S)
 echo "Agora são $hora_atual"
 ```
 
-Neste exemplo, `%H:%M` é um formato para extrair a hora (`%H`) e os minutos (`%M`) do comando `date`.
+Neste exemplo, `%H:%M:%S` é um formato para extrair a hora (`%H`) os minutos (`%M`) e os segundos do comando `date`.
 
 Espero que isso ajude! Se você tiver mais perguntas ou precisar de assistência com algo mais, sinta-se à vontade para perguntar.
 
