@@ -31,6 +31,7 @@
       - [Extraindo e Exibindo o Nome do Script Bash Automaticamente](#extraindo-e-exibindo-o-nome-do-script-bash-automaticamente "Extraindo e Exibindo o Nome do Script Bash Automaticamente")
       - [Tabela de Caracteres Especiais para Interfaces de Texto](#tabela-de-caracteres-especiais-para-interfaces-de-texto "Tabela de Caracteres Especiais para Interfaces de Texto")
       - [Verificando e Executando Comandos Baseado na Existência de Diretórios no Debian Linux](#verificando-e-executando-comandos-baseado-na-exist%C3%AAncia-de-diret%C3%B3rios-no-debian-linux "Verificando e Executando Comandos Baseado na Existência de Diretórios no Debian Linux")
+      - [Passando Variáveis entre Scripts Bash no Linux](# "Passando Variáveis entre Scripts Bash no Linux")
 
 ---
 
@@ -822,6 +823,46 @@ fi
 ```
 
 Neste exemplo, `$diretorioA` é o caminho para "diretorioA" e `$diretorioB` é o caminho completo para "diretorioB". O script verifica se o diretório B existe usando a condição `-d "$diretorioB"`. Se existir, executa o comando 1; caso contrário, executa o comando 2. Você pode substituir os `echo` com os comandos reais que deseja executar em cada caso. Certifique-se de substituir `"/caminho/para/diretorioA"` pelo caminho real do seu "diretorioA".
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+### Passando Variáveis entre Scripts Bash no Linux
+
+É possível passar as variáveis "sleep" e "fileName" para o arquivo "Install_Package1.sh" de algumas maneiras. Uma delas é passar essas variáveis como argumentos quando você executa o script "Install_Package1.sh". Por exemplo:
+
+No arquivo "GTi_Support.sh":
+
+```bash
+#!/bin/bash
+clear
+# Variáveis úteis
+sleep='3'
+fileName=$(basename "$0")
+cd Package_Installers/
+./Install_Package1.sh "$sleep" "$fileName"
+```
+
+No arquivo "Install_Package1.sh", você pode receber esses valores como argumentos da seguinte maneira:
+
+```bash
+#!/bin/bash
+# Verifica se o número de argumentos é correto
+if [ "$#" -ne 2 ]; then
+    echo "Erro: Número incorreto de argumentos."
+    exit 1
+fi
+
+# Obtém os valores dos argumentos
+sleep="$1"
+fileName="$2"
+
+# Agora você pode usar as variáveis $sleep e $fileName neste script.
+```
+
+Quando você executa "./Install_Package1.sh" a partir de "GTi_Support.sh", as variáveis "sleep" e "fileName" serão passadas como argumentos para o script "Install_Package1.sh", permitindo que você use esses valores dentro do segundo script.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
