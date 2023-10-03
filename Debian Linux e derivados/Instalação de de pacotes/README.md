@@ -31,7 +31,7 @@
       - [Extraindo e Exibindo o Nome do Script Bash Automaticamente](#extraindo-e-exibindo-o-nome-do-script-bash-automaticamente "Extraindo e Exibindo o Nome do Script Bash Automaticamente")
       - [Tabela de Caracteres Especiais para Interfaces de Texto](#tabela-de-caracteres-especiais-para-interfaces-de-texto "Tabela de Caracteres Especiais para Interfaces de Texto")
       - [Verificando e Executando Comandos Baseado na Existência de Diretórios no Debian Linux](#verificando-e-executando-comandos-baseado-na-exist%C3%AAncia-de-diret%C3%B3rios-no-debian-linux "Verificando e Executando Comandos Baseado na Existência de Diretórios no Debian Linux")
-      - [Passando Variáveis entre Scripts Bash no Linux](# "Passando Variáveis entre Scripts Bash no Linux")
+      - [Passando Variáveis entre Scripts Bash no Linux](#passando-vari%C3%A1veis-entre-scripts-bash-no-linux "Passando Variáveis entre Scripts Bash no Linux")
 
 ---
 
