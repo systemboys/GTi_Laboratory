@@ -32,6 +32,7 @@
       - [Tabela de Caracteres Especiais para Interfaces de Texto](#tabela-de-caracteres-especiais-para-interfaces-de-texto "Tabela de Caracteres Especiais para Interfaces de Texto")
       - [Verificando e Executando Comandos Baseado na Existência de Diretórios no Debian Linux](#verificando-e-executando-comandos-baseado-na-exist%C3%AAncia-de-diret%C3%B3rios-no-debian-linux "Verificando e Executando Comandos Baseado na Existência de Diretórios no Debian Linux")
       - [Passando Variáveis entre Scripts Bash no Linux](#passando-vari%C3%A1veis-entre-scripts-bash-no-linux "Passando Variáveis entre Scripts Bash no Linux")
+      - [Exibindo Data e Hora em Tempo Real em um Shell Script Bash](#exibindo-data-e-hora-em-tempo-real-em-um-shell-script-bash "Exibindo Data e Hora em Tempo Real em um Shell Script Bash")
 
 ---
 
@@ -863,6 +864,36 @@ fileName="$2"
 ```
 
 Quando você executa "./Install_Package1.sh" a partir de "GTi_Support.sh", as variáveis "sleep" e "fileName" serão passadas como argumentos para o script "Install_Package1.sh", permitindo que você use esses valores dentro do segundo script.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+### Exibindo Data e Hora em Tempo Real em um Shell Script Bash
+
+É possível exibir a data e hora em tempo real dentro de um Shell Script Bash. Você pode usar a variável especial `$(date)` para obter a data e hora atual. Por exemplo:
+
+```bash
+#!/bin/bash
+
+# Obter a data e hora atual
+data_e_hora=$(date)
+
+# Exibir a data e hora
+echo "A data e hora atual são: $data_e_hora"
+```
+
+Neste script, `$(date)` é substituído pela data e hora atuais quando o script é executado. Você pode personalizar o formato da data e hora usando opções específicas do comando `date`. Por exemplo, para exibir apenas a hora e os minutos, você pode usar:
+
+```bash
+hora_atual=$(date +%H:%M:%S)
+echo "Agora são $hora_atual"
+```
+
+Neste exemplo, `%H:%M` é um formato para extrair a hora (`%H`) e os minutos (`%M`) do comando `date`.
+
+Espero que isso ajude! Se você tiver mais perguntas ou precisar de assistência com algo mais, sinta-se à vontade para perguntar.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
