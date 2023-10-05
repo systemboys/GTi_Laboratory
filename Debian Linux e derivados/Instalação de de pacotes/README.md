@@ -33,7 +33,7 @@
       - [Verificando e Executando Comandos Baseado na Existência de Diretórios no Debian Linux](#verificando-e-executando-comandos-baseado-na-exist%C3%AAncia-de-diret%C3%B3rios-no-debian-linux "Verificando e Executando Comandos Baseado na Existência de Diretórios no Debian Linux")
       - [Passando Variáveis entre Scripts Bash no Linux](#passando-vari%C3%A1veis-entre-scripts-bash-no-linux "Passando Variáveis entre Scripts Bash no Linux")
       - [Exibindo Data e Hora em Tempo Real em um Shell Script Bash](#exibindo-data-e-hora-em-tempo-real-em-um-shell-script-bash "Exibindo Data e Hora em Tempo Real em um Shell Script Bash")
-      - [Verificando a Existência do Diretório em /opt/](#aaa "Verificando a Existência do Diretório em /opt/")
+      - [Verificando a Existência do Diretório em /opt/](#exibindo-data-e-hora-em-tempo-real-em-um-shell-script-bash "Verificando a Existência do Diretório em /opt/")
 
 ---
 
