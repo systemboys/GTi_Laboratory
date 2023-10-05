@@ -33,6 +33,7 @@
       - [Verificando e Executando Comandos Baseado na Existência de Diretórios no Debian Linux](#verificando-e-executando-comandos-baseado-na-exist%C3%AAncia-de-diret%C3%B3rios-no-debian-linux "Verificando e Executando Comandos Baseado na Existência de Diretórios no Debian Linux")
       - [Passando Variáveis entre Scripts Bash no Linux](#passando-vari%C3%A1veis-entre-scripts-bash-no-linux "Passando Variáveis entre Scripts Bash no Linux")
       - [Exibindo Data e Hora em Tempo Real em um Shell Script Bash](#exibindo-data-e-hora-em-tempo-real-em-um-shell-script-bash "Exibindo Data e Hora em Tempo Real em um Shell Script Bash")
+      - [Verificando a Existência do Diretório em /opt/](#aaa "Verificando a Existência do Diretório em /opt/")
 
 ---
 
@@ -892,6 +893,33 @@ echo "Agora são $hora_atual"
 ```
 
 Neste exemplo, `%H:%M:%S` é um formato para extrair a hora (`%H`) os minutos (`%M`) e os segundos (`%S`) do comando `date`.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+### Verificando a Existência do Diretório em /opt/
+
+No exemplo, veremos se existe o diretório `Firefox`, você pode usar a estrutura `if...else...fi` corrigida para verificar se o diretório "/opt/firefox" existe no seu script Bash. Aqui está a versão correta:
+
+```bash
+#!/bin/bash
+
+if [ -d "/opt/firefox" ]; then
+    echo "O diretório Firefox existe!"
+else
+    echo "O diretório Firefox não existe!"
+fi
+```
+
+> **( i )** Caso queira que seja o contrário, faça uso de uma exclamação (!) antes dos cochetes `if ! [...]; then`.
+
+Neste script:
+
+- `[ -d "/opt/firefox" ]` verifica se "/opt/firefox" é um diretório.
+- Se o diretório existe, a primeira parte do `if` é verdadeira, então ele entra no bloco `then` e exibe "O diretório Firefox existe!".
+- Se o diretório não existe, ele pula para a parte do `else` e exibe "O diretório Firefox não existe!".
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
