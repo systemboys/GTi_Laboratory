@@ -458,6 +458,8 @@ Você pode usar uma estrutura de controle para verificar se qualquer programa es
 Por exemplo, para verificar a existência do Node.js, você pode usar algo assim:
 
 ```bash
+#!/bin/bash
+
 # Verificar se o Node.js está instalado
 if ! command -v node &> /dev/null; then
     echo "Node.js não está instalado. Instalando..."
@@ -478,6 +480,8 @@ No caso do AnyDesk, o comando associado a ele pode variar dependendo da versão 
 Se você souber qual é o comando associado ao programa (como "anydesk" no caso do AnyDesk), pode usar a estrutura de controle da mesma forma que fizemos anteriormente:
 
 ```bash
+#!/bin/bash
+
 # Verificar se o AnyDesk está instalado
 if ! command -v anydesk &> /dev/null; then
     echo "AnyDesk não está instalado. Instalando..."
@@ -499,6 +503,8 @@ Lembre-se de que alguns programas podem não ter um comando associado diretament
 O exemplo aqui é para verificar se o Discord (pacote `dpkg`) está instalado no Debian Linux, você pode modificar o script da seguinte forma:
 
 ```bash
+#!/bin/bash
+
 if ! dpkg -l | grep -q discord; then
     echo "Discord não está instalado. Instalando..."
     # Comandos para instalar o Discord aqui (dependendo do método que você está usando)
