@@ -23,6 +23,7 @@
    - [Verificação e Instalação Condicional de Programas em Scripts Bash](#verifica%C3%A7%C3%A3o-e-instala%C3%A7%C3%A3o-condicional-de-programas-em-scripts-bash "Verificação e Instalação Condicional de Programas em Scripts Bash")
    - [Verificação de Pacotes no Debian: dpkg](#verifica%C3%A7%C3%A3o-de-pacotes-no-debian-dpkg "Verificação de Pacotes no Debian: dpkg")
    - [Verificação de Instalação de software em Bash](#verifica%C3%A7%C3%A3o-de-instala%C3%A7%C3%A3o-de-software-em-bash "Verificação de Instalação de software em Bash")
+    - [Verificando a Existência do Diretório em /opt/](#verificando-a-exist%C3%AAncia-do-diret%C3%B3rio-em-opt "Verificando a Existência do Diretório em /opt/")
    - [Menu de Instalação de Programas no Terminal Linux](#menu-de-instala%C3%A7%C3%A3o-de-programas-no-terminal-linux "Menu de Instalação de Programas no Terminal Linux")
       - [Personalizando Cores de Texto em Scripts Bash: Uma Introdução aos Códigos de Escape ANSI](#personalizando-cores-de-texto-em-scripts-bash-uma-introdu%C3%A7%C3%A3o-aos-c%C3%B3digos-de-escape-ansi "Personalizando Cores de Texto em Scripts Bash: Uma Introdução aos Códigos de Escape ANSI")
       - [Personalizando o Plano de Fundo no Terminal Linux: Como Alterar o Fundo dos Textos em Scripts Bash](#personalizando-o-plano-de-fundo-no-terminal-linux-como-alterar-o-fundo-dos-textos-em-scripts-bash "Personalizando o Plano de Fundo no Terminal Linux: Como Alterar o Fundo dos Textos em Scripts Bash")
@@ -33,7 +34,6 @@
       - [Verificando e Executando Comandos Baseado na Existência de Diretórios no Debian Linux](#verificando-e-executando-comandos-baseado-na-exist%C3%AAncia-de-diret%C3%B3rios-no-debian-linux "Verificando e Executando Comandos Baseado na Existência de Diretórios no Debian Linux")
       - [Passando Variáveis entre Scripts Bash no Linux](#passando-vari%C3%A1veis-entre-scripts-bash-no-linux "Passando Variáveis entre Scripts Bash no Linux")
       - [Exibindo Data e Hora em Tempo Real em um Shell Script Bash](#exibindo-data-e-hora-em-tempo-real-em-um-shell-script-bash "Exibindo Data e Hora em Tempo Real em um Shell Script Bash")
-      - [Verificando a Existência do Diretório em /opt/](#verificando-a-exist%C3%AAncia-do-diret%C3%B3rio-em-opt "Verificando a Existência do Diretório em /opt/")
 
 ---
 
@@ -536,6 +536,33 @@ Neste script, `command -v google-chrome` verifica se o comando `google-chrome` p
 
 ---
 
+### Verificando a Existência do Diretório em /opt/
+
+No exemplo, veremos se existe o diretório `Firefox`, você pode usar a estrutura `if...else...fi` corrigida para verificar se o diretório "/opt/firefox" existe no seu script Bash. Aqui está a versão correta:
+
+```bash
+#!/bin/bash
+
+if [ -d "/opt/firefox" ]; then
+    echo "O diretório Firefox existe!"
+else
+    echo "O diretório Firefox não existe!"
+fi
+```
+
+> **( i )** Caso queira que seja o contrário, faça uso de uma exclamação (!) antes dos cochetes `if ! [...]; then`.
+
+Neste script:
+
+- `[ -d "/opt/firefox" ]` verifica se "/opt/firefox" é um diretório.
+- Se o diretório existe, a primeira parte do `if` é verdadeira, então ele entra no bloco `then` e exibe "O diretório Firefox existe!".
+- Se o diretório não existe, ele pula para a parte do `else` e exibe "O diretório Firefox não existe!".
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
 ## Menu de Instalação de Programas no Terminal Linux
 
 Aqui está uma versão equivalente do menu de instalação para Linux, em um arquivo de script bash chamado `menu_instalacao.sh`:
@@ -893,33 +920,6 @@ echo "Agora são $hora_atual"
 ```
 
 Neste exemplo, `%H:%M:%S` é um formato para extrair a hora (`%H`) os minutos (`%M`) e os segundos (`%S`) do comando `date`.
-
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
-
----
-
-### Verificando a Existência do Diretório em /opt/
-
-No exemplo, veremos se existe o diretório `Firefox`, você pode usar a estrutura `if...else...fi` corrigida para verificar se o diretório "/opt/firefox" existe no seu script Bash. Aqui está a versão correta:
-
-```bash
-#!/bin/bash
-
-if [ -d "/opt/firefox" ]; then
-    echo "O diretório Firefox existe!"
-else
-    echo "O diretório Firefox não existe!"
-fi
-```
-
-> **( i )** Caso queira que seja o contrário, faça uso de uma exclamação (!) antes dos cochetes `if ! [...]; then`.
-
-Neste script:
-
-- `[ -d "/opt/firefox" ]` verifica se "/opt/firefox" é um diretório.
-- Se o diretório existe, a primeira parte do `if` é verdadeira, então ele entra no bloco `then` e exibe "O diretório Firefox existe!".
-- Se o diretório não existe, ele pula para a parte do `else` e exibe "O diretório Firefox não existe!".
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
