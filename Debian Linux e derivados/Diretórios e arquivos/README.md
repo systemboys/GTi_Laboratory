@@ -5,7 +5,6 @@
 > Comandos e Gerenciamento de Arquivos no Terminal Linux
 - [Renomear um diretório via terminal Linux](#renomear-um-diret%C3%B3rio-via-terminal-linux "Renomear um diretório via terminal Linux")
 - [Como Copiar Arquivos e Diretórios Usando o Terminal Linux](#como-copiar-arquivos-e-diret%C3%B3rios-usando-o-terminal-linux "Como Copiar Arquivos e Diretórios Usando o Terminal Linux")
-    > Rsync
     - [Como Copiar Arquivos e Pastas com Indicador de Progresso no Linux usando o Rsync](#como-copiar-arquivos-e-pastas-com-indicador-de-progresso-no-linux-usando-o-rsync "Como Copiar Arquivos e Pastas com Indicador de Progresso no Linux usando o Rsync")
     - [Explorando o Poder do Rsync: Parâmetros Essenciais para Sincronização e Cópia Eficientes de Arquivos no Linux](#explorando-o-poder-do-rsync-par%C3%A2metros-essenciais-para-sincroniza%C3%A7%C3%A3o-e-c%C3%B3pia-eficientes-de-arquivos-no-linux "Explorando o Poder do Rsync: Parâmetros Essenciais para Sincronização e Cópia Eficientes de Arquivos no Linux")
 - [Mover diretório ou arquivo de um local para outro](#mover-diret%C3%B3rio-ou-arquivo-de-um-local-para-outro "Mover diretório ou arquivo de um local para outro")
