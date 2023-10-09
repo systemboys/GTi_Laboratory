@@ -5,6 +5,7 @@
 > Comandos e Gerenciamento de Arquivos no Terminal Linux
 - [Renomear um diretório via terminal Linux](#renomear-um-diret%C3%B3rio-via-terminal-linux "Renomear um diretório via terminal Linux")
 - [Como Copiar Arquivos e Diretórios Usando o Terminal Linux](#como-copiar-arquivos-e-diret%C3%B3rios-usando-o-terminal-linux "Como Copiar Arquivos e Diretórios Usando o Terminal Linux")
+    - [Como Copiar Arquivos e Pastas com Indicador de Progresso no Linux usando o Rsync](#como-copiar-arquivos-e-pastas-com-indicador-de-progresso-no-linux-usando-o-rsync "Como Copiar Arquivos e Pastas com Indicador de Progresso no Linux usando o Rsync")
 - [Mover diretório ou arquivo de um local para outro](#mover-diret%C3%B3rio-ou-arquivo-de-um-local-para-outro "Mover diretório ou arquivo de um local para outro")
 - [Apagar um diretório com todos os seus subdiretórios e arquivos](#apagar-um-diret%C3%B3rio-com-todos-os-seus-subdiret%C3%B3rios-e-arquivos "Apagar um diretório com todos os seus subdiretórios e arquivos")
 - [Apagar todos os arquivo de um diretório exceto um arquivo ou diretório filho](#apagar-todos-os-arquivo-de-um-diret%C3%B3rio-exceto-um-arquivo-ou-diret%C3%B3rio-filho "Apagar todos os arquivo de um diretório exceto um arquivo ou diretório filho")
@@ -82,6 +83,32 @@ sudo cp arquivo.txt /diretorio/protegido/
 ```
 
 Sempre tenha cuidado ao usar o comando `cp` para evitar sobrescrever acidentalmente arquivos existentes. É uma boa prática fazer backup ou ter certeza do que você está copiando e para onde está copiando.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao SumÃ¡rio") | 
+[(&uarr;) Subir](#laborat%C3%B3rio-gti--diret%C3%B3rios-e-arquivos "Subir para o topo")
+
+---
+
+## Como Copiar Arquivos e Pastas com Indicador de Progresso no Linux usando o Rsync
+
+Para copiar todo o conteúdo de um diretório para outro local via terminal no Linux e ver um indicador de progresso, você pode usar o comando `rsync` com a opção `--progress`. O `rsync` é uma ferramenta poderosa para sincronização e cópia de dados, e a opção `--progress` exibe um indicador de progresso durante a cópia.
+
+Aqui está o comando que você pode usar:
+
+```bash
+rsync -av --progress /caminho/do/seu/diretorio/fonte/ /caminho/do/seu/diretorio/destino/
+```
+
+Neste comando:
+
+- `/caminho/do/seu/diretorio/fonte/` é o caminho do diretório que você quer copiar.
+- `/caminho/do/seu/diretorio/destino/` é o caminho do diretório para onde você quer copiar os arquivos.
+
+O `-av` é para copiar recursivamente e exibir informações verbosas (indicador de andamento).
+
+Certifique-se de substituir `/caminho/do/seu/diretorio/fonte/` pelo caminho real do diretório de origem e `/caminho/do/seu/diretorio/destino/` pelo caminho real do diretório de destino.
+
+Isso copiará todos os arquivos e pastas do diretório de origem para o diretório de destino, exibindo um indicador de progresso no terminal.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao SumÃ¡rio") | 
 [(&uarr;) Subir](#laborat%C3%B3rio-gti--diret%C3%B3rios-e-arquivos "Subir para o topo")
