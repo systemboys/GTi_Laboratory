@@ -34,7 +34,6 @@
       - [Verificando e Executando Comandos Baseado na Existência de Diretórios no Debian Linux](#verificando-e-executando-comandos-baseado-na-exist%C3%AAncia-de-diret%C3%B3rios-no-debian-linux "Verificando e Executando Comandos Baseado na Existência de Diretórios no Debian Linux")
       - [Passando Variáveis entre Scripts Bash no Linux](#passando-vari%C3%A1veis-entre-scripts-bash-no-linux "Passando Variáveis entre Scripts Bash no Linux")
       - [Exibindo Data e Hora em Tempo Real em um Shell Script Bash](#exibindo-data-e-hora-em-tempo-real-em-um-shell-script-bash "Exibindo Data e Hora em Tempo Real em um Shell Script Bash")
-   - [Outro exemplo de menu com Shell Script, esse utilizando funções](https://github.com/systemboys/React_Codes/tree/main/Computa%C3%A7%C3%A3o%20em%20nuvens/Hospedar%20aplicativo%20ReactJS%20em%20servidor%20de%20hospedagem#controle-docker-simplificado-automatizando-opera%C3%A7%C3%B5es-com-docker-compose "Outro exemplo de menu com Shell Script, esse utilizando funções")
 
 ---
 
@@ -583,6 +582,29 @@ clear
 sleep='3'
 fileName=$(basename "$0")
 
+# Recarregar Menu
+reloadMenu() {
+    clear
+    ./${fileName}
+}
+# Opção inválida
+invalidOption() {
+    clear
+    echo "╭──────────────────────────────────╮"
+    echo "│ Opção inválida! Tente novamente. │"
+    echo "╰──────────────────────────────────╯"
+    sleep ${sleep}
+    ./${fileName}
+}
+# Sair do menu
+exitTheMenu() {
+    clear
+    echo "╭────────────────────╮"
+    echo "│ Você saiu do menu! │"
+    echo "╰────────────────────╯"
+    exit 0
+}
+
 echo "╭───────────────────────────────────────╮"
 echo "│          SELECIONE UMA OPÇÃO          │"
 echo "╰───────────────────────────────────────╯"
@@ -597,8 +619,7 @@ read -p "${fileName}: Digite uma opção: " option
 
 case $option in
     0) # Recarregar menu
-        clear
-        ./${fileName}
+        reloadMenu
         ;;
     1) # WinRAR
         clear
@@ -612,19 +633,10 @@ case $option in
         ./${fileName}
         ;;
     *) # Opção inválida
-        clear
-        echo "╭──────────────────────────────────╮"
-        echo "│ Opção inválida! Tente novamente. │"
-        echo "╰──────────────────────────────────╯"
-        sleep ${sleep}
-        ./${fileName}
+        invalidOption
         ;;
     q) # Sair do menu
-        clear
-        echo "╭────────────────────╮"
-        echo "│ Você saiu do menu! │"
-        echo "╰────────────────────╯"
-        exit 0
+        exitTheMenu
         ;;
 esac
 ```
