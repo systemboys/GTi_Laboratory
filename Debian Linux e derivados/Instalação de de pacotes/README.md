@@ -23,7 +23,7 @@
    - [Verificação e Instalação Condicional de Programas em Scripts Bash](#verifica%C3%A7%C3%A3o-e-instala%C3%A7%C3%A3o-condicional-de-programas-em-scripts-bash "Verificação e Instalação Condicional de Programas em Scripts Bash")
    - [Verificação de Pacotes no Debian: dpkg](#verifica%C3%A7%C3%A3o-de-pacotes-no-debian-dpkg "Verificação de Pacotes no Debian: dpkg")
    - [Verificação de Instalação de software em Bash](#verifica%C3%A7%C3%A3o-de-instala%C3%A7%C3%A3o-de-software-em-bash "Verificação de Instalação de software em Bash")
-    - [Verificando a Existência do Diretório em /opt/](#verificando-a-exist%C3%AAncia-do-diret%C3%B3rio-em-opt "Verificando a Existência do Diretório em /opt/")
+   - [Verificando a Existência do Diretório em /opt/](#verificando-a-exist%C3%AAncia-do-diret%C3%B3rio-em-opt "Verificando a Existência do Diretório em /opt/")
    - [Menu de Instalação de Programas no Terminal Linux](#menu-de-instala%C3%A7%C3%A3o-de-programas-no-terminal-linux "Menu de Instalação de Programas no Terminal Linux")
       - [Personalizando Cores de Texto em Scripts Bash: Uma Introdução aos Códigos de Escape ANSI](#personalizando-cores-de-texto-em-scripts-bash-uma-introdu%C3%A7%C3%A3o-aos-c%C3%B3digos-de-escape-ansi "Personalizando Cores de Texto em Scripts Bash: Uma Introdução aos Códigos de Escape ANSI")
       - [Personalizando o Plano de Fundo no Terminal Linux: Como Alterar o Fundo dos Textos em Scripts Bash](#personalizando-o-plano-de-fundo-no-terminal-linux-como-alterar-o-fundo-dos-textos-em-scripts-bash "Personalizando o Plano de Fundo no Terminal Linux: Como Alterar o Fundo dos Textos em Scripts Bash")
@@ -34,6 +34,7 @@
       - [Verificando e Executando Comandos Baseado na Existência de Diretórios no Debian Linux](#verificando-e-executando-comandos-baseado-na-exist%C3%AAncia-de-diret%C3%B3rios-no-debian-linux "Verificando e Executando Comandos Baseado na Existência de Diretórios no Debian Linux")
       - [Passando Variáveis entre Scripts Bash no Linux](#passando-vari%C3%A1veis-entre-scripts-bash-no-linux "Passando Variáveis entre Scripts Bash no Linux")
       - [Exibindo Data e Hora em Tempo Real em um Shell Script Bash](#exibindo-data-e-hora-em-tempo-real-em-um-shell-script-bash "Exibindo Data e Hora em Tempo Real em um Shell Script Bash")
+   - [Outro exemplo de menu com Shell Script, esse utilizando funções](https://github.com/systemboys/React_Codes/tree/main/Computa%C3%A7%C3%A3o%20em%20nuvens/Hospedar%20aplicativo%20ReactJS%20em%20servidor%20de%20hospedagem#controle-docker-simplificado-automatizando-opera%C3%A7%C3%B5es-com-docker-compose "Outro exemplo de menu com Shell Script, esse utilizando funções")
 
 ---
 
