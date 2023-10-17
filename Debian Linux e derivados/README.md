@@ -13,7 +13,7 @@
 - [Instalação de pacotes](https://github.com/systemboys/GTi_Laboratory/tree/main/Debian%20Linux%20e%20derivados/Instala%C3%A7%C3%A3o%20de%20pacotes#instala%C3%A7%C3%A3o-de-pacotes "Instalação de pacotes")
 - [Processos em execução](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Processos%20em%20execu%C3%A7%C3%A3o/README.md#processos-em-execu%C3%A7%C3%A3o "Processos em execução")
 - [Monitoramento de Sistemas](https://github.com/systemboys/GTi_Laboratory/tree/main/Debian%20Linux%20e%20derivados/Monitoramento%20de%20sistemas#monitoramento-de-sistema "Monitoramento de Sistemas")
-- [Usuários do Linux](https://github.com/systemboys/GTi_Laboratory/tree/main/Debian%20Linux%20e%20derivados/Usu%C3%A1rios%20Linux#laborat%C3%B3rio-gti--usu%C3%A1rios-linux "Usuários do Linux")
+- [Usuários do Linux](https://github.com/systemboys/GTi_Laboratory/tree/main/Debian%20Linux%20e%20derivados/Usu%C3%A1rios%20Linux#usu%C3%A1rios-linux "Usuários do Linux")
 - [Diretórios e arquivos](https://github.com/systemboys/GTi_Laboratory/tree/main/Debian%20Linux%20e%20derivados/Diret%C3%B3rios%20e%20arquivos#laborat%C3%B3rio-gti--diret%C3%B3rios-e-arquivos "Diretórios e arquivos")
 - [Armazenamento](https://github.com/systemboys/GTi_Laboratory/tree/main/Debian%20Linux%20e%20derivados/Armazenamento#laborat%C3%B3rio-gti--armazenamento "Armazenamento")
 - [Assuntos relacionados à rede e Internet](https://github.com/systemboys/GTi_Laboratory/tree/main/Debian%20Linux%20e%20derivados/Assuntos%20relacionados%20%C3%A0%20redes%20e%20Internet#entendendo-o-comando-nslookup-e-a-resolu%C3%A7%C3%A3o-de-dns-no-linux-obtendo-ip-de-dom%C3%ADnios "Assuntos relacionados à rede e Internet")
