@@ -1,8 +1,17 @@
-# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi") / Softwares para terminais
+# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi")
+
+## Softwares para terminais
 
 [![Terminal Linux](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Softwares%20para%20terminais/images/terminai_linux.jpg?raw=true "Terminal Linux")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Softwares%20para%20terminais/images/terminai_linux.jpg?raw=true "Terminal Linux")
 
+### *Sumário*
+
 - [Executando Mapas ASCII no Terminal com MapSCII](#executando-mapas-ascii-no-terminal-com-mapscii "Executando Mapas ASCII no Terminal com MapSCII")
+
+---
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
 
@@ -55,6 +64,6 @@ Isso iniciará o MapSCII e você verá o mapa ASCII no terminal. Você pode nave
 Lembre-se de que essa é uma ferramenta experimental e de entretenimento. A qualidade do mapa ASCII pode variar, dependendo da área que você está visualizando. Divirta-se explorando!
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#laborat%C3%B3rio-gti--softwares-para-terminais "Subir para o topo")
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
