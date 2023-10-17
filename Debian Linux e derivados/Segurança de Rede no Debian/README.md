@@ -1,11 +1,20 @@
-# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi") / Segurança de Rede no Debian Linux
+# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi")
+
+## Segurança de Rede no Debian Linux
 
 [![Firewall Linux](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Seguran%C3%A7a%20de%20Rede%20no%20Debian/images/managed-firewalls.png?raw=true "Firewall Linux")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Seguran%C3%A7a%20de%20Rede%20no%20Debian/images/managed-firewalls.png?raw=true "Firewall Linux")
+
+### *Sumário*
 
 - [Verificarndo porta com NMap](#verificarndo-porta-com-nmap "Verificarndo porta com NMap")
 - [Verificar status de todas as portas em um host](#verificar-status-de-todas-as-portas-em-um-host "Verificar status de todas as portas em um host")
 - [Instalar utilitário "ufw" (Uncomplicated Firewall) no Debian Linux](#instalar-utilit%C3%A1rio-ufw-uncomplicated-firewall-no-debian-linux "Instalar utilitário 'ufw' (Uncomplicated Firewall) no Debian Linux")
 - [Firewall UFW (abrir ou fechar portas)](#firewall-ufw-abrir-ou-fechar-portas "Firewall UFW (abrir ou fechar portas)")
+
+---
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
 
@@ -39,7 +48,7 @@ Para verificar se a porta 22 (SSH) está aberta em um determinado endereço IP, 
 Isso irá verificar se a porta 22 está aberta na máquina da Linode. Se a porta estiver fechada ou se você estiver enfrentando problemas de conexão, verifique suas configurações de firewall e rede na máquina da Linode.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#laborat%C3%B3rio-gti--seguran%C3%A7a-de-rede-no-debian-linux "Subir para o topo")
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
 
@@ -60,7 +69,7 @@ Após a execução do comando, o Nmap irá verificar todas as portas no host e e
 Lembre-se de que verificar todas as portas em um host pode levar algum tempo, dependendo do número de portas a serem verificadas.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#laborat%C3%B3rio-gti--seguran%C3%A7a-de-rede-no-debian-linux "Subir para o topo")
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
 
@@ -85,7 +94,7 @@ Para instalar o utilitário "ufw" (Uncomplicated Firewall) no Debian Linux, voc�
 Após a conclusão da instalação, você poderá utilizar o "ufw" para configurar o firewall no seu sistema Debian Linux. Lembre-se de consultar a documentação ou recursos adicionais para aprender a usar o "ufw" corretamente e configurar as regras de firewall de acordo com suas necessidades.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#laborat%C3%B3rio-gti--seguran%C3%A7a-de-rede-no-debian-linux "Subir para o topo")
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
 
@@ -128,6 +137,6 @@ Lembre-se de substituir `<número_da_porta>` pelo número da porta que deseja ab
 Certifique-se de configurar suas regras de firewall com cuidado e considere os riscos de segurança ao abrir portas em seu sistema.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#laborat%C3%B3rio-gti--seguran%C3%A7a-de-rede-no-debian-linux "Subir para o topo")
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
