@@ -1,8 +1,17 @@
-# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi") / Armazenamento
+# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi")
+
+## Armazenamento
 
 [![HHD's e SSD's](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Armazenamento/images/ssd-o-hdd-1024x576.jpg?raw=true "HHD's e SSD's")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Armazenamento/images/ssd-o-hdd-1024x576.jpg?raw=true "HHD's e SSD's")
 
+### *Sumário*
+
 - [Como formatar e criar partições em um SSD no Linux via terminal](#como-formatar-e-criar-partições-em-um-ssd-no-linux-via-terminal "Como formatar e criar partições em um SSD no Linux via terminal")
+
+---
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
 
@@ -45,6 +54,6 @@ Para formatar e criar partições em um SSD no Linux via terminal, você pode se
 Após seguir esses passos, a partição do SSD será criada e formatada com o sistema de arquivos escolhido. Você pode montar a partição em um diretório de sua escolha para começar a usá-la.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#laborat%C3%B3rio-gti--armazenamento "Subir para o topo")
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
