@@ -1,6 +1,10 @@
-# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi") / Computação em Nuvens
+# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi")
+
+## Computação em Nuvens
 
 [![Computação em Nuvens](https://github.com/systemboys/GTi_Laboratory/blob/main/Computa%C3%A7%C3%A3o%20em%20Nuvens/images/o-que-e-computacao-em-nuvem.jpg?raw=true "Computação em Nuvens")](https://github.com/systemboys/GTi_Laboratory/blob/main/Computa%C3%A7%C3%A3o%20em%20Nuvens/images/o-que-e-computacao-em-nuvem.jpg?raw=true "Computação em Nuvens")
+
+### *Sumário*
 
 > Sobre
 
@@ -46,6 +50,6 @@ Existem três modelos de serviço de computação em nuvem principais:
 A computação em nuvem desempenhou um papel fundamental na transformação digital de muitas empresas, permitindo que elas sejam mais ágeis, eficientes e inovadoras em um ambiente altamente escalável e flexível.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#laborat%C3%B3rio-gti--computa%C3%A7%C3%A3o-em-nuvens "Subir para o topo")
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
