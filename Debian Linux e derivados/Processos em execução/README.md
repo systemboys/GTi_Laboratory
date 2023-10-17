@@ -1,6 +1,8 @@
-# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi") / Processos em execução
+# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi")
 
-# Sumário
+## Processos em execução
+
+### *Sumário*
 
 - [Barra de tarefas (`taskbar`), Eliminar processo ativo](#system-tray-icon "Barra de tarefas (`taskbar`), Eliminar processo ativo")
 - [Tarefas em execução (`top`)](#tarefas-em-execu%C3%A7%C3%A3o-top "Tarefas em execução (top)")
@@ -69,7 +71,7 @@ ps -A --sort=-cmd
 Este comando classifica os processos com base no nome do comando (CMD) em ordem alfabética decrescente.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#laborat%C3%B3rio-gti--processos-em-execu%C3%A7%C3%A3o "Subir para o topo")
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
 
@@ -100,6 +102,6 @@ Aqui estão alguns exemplos de combinações de comandos com o "top":
 Esses são apenas alguns exemplos básicos, mas você pode combinar o comando "top" com vários outros comandos do Linux para realizar diferentes tarefas e obter informações específicas sobre os processos em execução no sistema.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#laborat%C3%B3rio-gti--processos-em-execu%C3%A7%C3%A3o "Subir para o topo")
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
