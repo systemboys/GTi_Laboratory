@@ -1,10 +1,19 @@
-# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi") / Configurações e Soluções para Ambientes Linux
+# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi")
+
+## Configurações e Soluções para Ambientes Linux
 
 [![Ambientes Linux](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Configura%C3%A7%C3%B5es%20e%20Solu%C3%A7%C3%B5es%20para%20Ambientes%20Linux/images/Linux_environments.png?raw=true "Ambientes Linux")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Configura%C3%A7%C3%B5es%20e%20Solu%C3%A7%C3%B5es%20para%20Ambientes%20Linux/images/Linux_environments.png?raw=true "Ambientes Linux")
+
+### *Sumário*
 
 - [Como Instalar o Ambiente de Desktop Cinnamon via Terminal no Linux](#como-instalar-o-ambiente-de-desktop-cinnamon-via-terminal-no-linux "Como Instalar o Ambiente de Desktop Cinnamon via Terminal no Linux")
 - [Como Desinstalar o Ambiente GNOME e Manter Apenas o Cinnamon no Linux](#como-desinstalar-o-ambiente-gnome-e-manter-apenas-o-cinnamon-no-linux "Como Desinstalar o Ambiente GNOME e Manter Apenas o Cinnamon no Linux")
 - [Como Solucionar o Problema 'Falha ao Iniciar a Sessão' ao Criar um Novo Usuário no Linux](#como-solucionar-o-problema-falha-ao-iniciar-a-sess%C3%A3o-ao-criar-um-novo-usu%C3%A1rio-no-linux "Como Solucionar o Problema 'Falha ao Iniciar a Sessão' ao Criar um Novo Usuário no Linux")
+
+---
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
 
@@ -21,7 +30,7 @@ Este comando instalará o ambiente de desktop Cinnamon e suas dependências. Lem
 Depois que a instalação estiver concluída, você pode fazer logout da sua sessão atual ou reiniciar o sistema e, na tela de login, selecionar "Cinnamon" como ambiente de desktop antes de fazer login novamente.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#laborat%C3%B3rio-gti--configura%C3%A7%C3%B5es-e-solu%C3%A7%C3%B5es-para-ambientes-linux "Subir para o topo")
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
 
@@ -70,7 +79,7 @@ Para desinstalar o ambiente GNOME e manter apenas o Cinnamon (ou qualquer outro 
 Após reiniciar, você deve estar usando apenas o ambiente de desktop Cinnamon, com o ambiente GNOME removido. Certifique-se de verificar se tudo está funcionando conforme o esperado antes de prosseguir, pois a desinstalação de ambientes de desktop pode ter efeitos inesperados em alguns casos.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#laborat%C3%B3rio-gti--configura%C3%A7%C3%B5es-e-solu%C3%A7%C3%B5es-para-ambientes-linux "Subir para o topo")
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
 
@@ -117,6 +126,6 @@ Se nenhum desses passos resolver o problema, é possível que haja um problema m
 ---
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#laborat%C3%B3rio-gti--configura%C3%A7%C3%B5es-e-solu%C3%A7%C3%B5es-para-ambientes-linux "Subir para o topo")
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
