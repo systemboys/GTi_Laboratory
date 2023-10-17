@@ -1,11 +1,20 @@
-# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi") / Softwares e Utilitários para Linux
+# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi")
+
+## Softwares e Utilitários para Linux
 
 [![Pacotes Linux](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Softwares%20e%20Utilit%C3%A1rios%20para%20Linux/images/cardboard-boxes-apt-dpkg.jpg?raw=true "Pacotes Linux")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Softwares%20e%20Utilit%C3%A1rios%20para%20Linux/images/cardboard-boxes-apt-dpkg.jpg?raw=true "Pacotes Linux")
+
+### *Sumário*
 
 > Internet
 
 - [Melhorando a Velocidade de Download no Linux com Aceleradores de Download](#melhorando-a-velocidade-de-download-no-linux-com-aceleradores-de-download "Melhorando a Velocidade de Download no Linux com Aceleradores de Download")
 - [Baixando com Facilidade: Utilizando o Comando wget no Linux](#baixando-com-facilidade-utilizando-o-comando-wget-no-linux "Baixando com Facilidade: Utilizando o Comando wget no Linux")
+
+---
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
 
@@ -59,7 +68,7 @@ Sim, existem vários aceleradores de download disponíveis para Linux que podem 
 Cada uma dessas ferramentas tem suas próprias características e vantagens, então escolha a que melhor atende às suas necessidades e preferências. Todas elas podem ajudar a melhorar a velocidade de download de arquivos da Internet.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#laborat%C3%B3rio-gti--softwares-e-utilit%C3%A1rios-para-linux "Subir para o topo")
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
 
@@ -114,6 +123,6 @@ O comando `wget` é uma ferramenta de linha de comando disponível em sistemas L
 O `wget` é uma ferramenta poderosa e versátil para gerenciar downloads de arquivos e recursos da web em sistemas Linux e UNIX. É amplamente utilizado por administradores de sistemas e usuários avançados para diversas tarefas relacionadas à web. Certifique-se de usar com responsabilidade e respeitar os direitos autorais e os termos de uso ao baixar conteúdo da Internet.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#laborat%C3%B3rio-gti--softwares-e-utilit%C3%A1rios-para-linux "Subir para o topo")
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
