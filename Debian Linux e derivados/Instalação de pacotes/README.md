@@ -719,34 +719,34 @@ Sugestão de título para esta dica: "Personalizando o Plano de Fundo no Termina
 Certamente! Aqui está uma paleta de cores ANSI que você pode usar em seus scripts Bash:
 
 - **Texto Regular:**
-  - Preto: `\033[0;30m`
-  - Vermelho: `\033[0;31m`
-  - Verde: `\033[0;32m`
-  - Amarelo: `\033[0;33m`
-  - Azul: `\033[0;34m`
-  - Roxo: `\033[0;35m`
-  - Ciano: `\033[0;36m`
-  - Branco: `\033[0;37m`
+  - Preto_R: `\033[0;30m`
+  - Vermelho_R: `\033[0;31m`
+  - Verde_R: `\033[0;32m`
+  - Amarelo_R: `\033[0;33m`
+  - Azul_R: `\033[0;34m`
+  - Roxo_R: `\033[0;35m`
+  - Ciano_R: `\033[0;36m`
+  - Branco_R: `\033[0;37m`
 
 - **Texto Negrito:**
-  - Preto: `\033[1;30m`
-  - Vermelho: `\033[1;31m`
-  - Verde: `\033[1;32m`
-  - Amarelo: `\033[1;33m`
-  - Azul: `\033[1;34m`
-  - Roxo: `\033[1;35m`
-  - Ciano: `\033[1;36m`
-  - Branco: `\033[1;37m`
+  - Preto_N: `\033[1;30m`
+  - Vermelho_N: `\033[1;31m`
+  - Verde_N: `\033[1;32m`
+  - Amarelo_N: `\033[1;33m`
+  - Azul_N: `\033[1;34m`
+  - Roxo_N: `\033[1;35m`
+  - Ciano_N: `\033[1;36m`
+  - Branco_N: `\033[1;37m`
 
 - **Fundo:**
-  - Preto: `\033[40m`
-  - Vermelho: `\033[41m`
-  - Verde: `\033[42m`
-  - Amarelo: `\033[43m`
-  - Azul: `\033[44m`
-  - Roxo: `\033[45m`
-  - Ciano: `\033[46m`
-  - Branco: `\033[47m`
+  - Preto_F: `\033[40m`
+  - Vermelho_F: `\033[41m`
+  - Verde_F: `\033[42m`
+  - Amarelo_F: `\033[43m`
+  - Azul_F: `\033[44m`
+  - Roxo_F: `\033[45m`
+  - Ciano_F: `\033[46m`
+  - Branco_F: `\033[47m`
 
 - **Estilos de Texto:**
   - Negrito: `\033[1m`
