@@ -1,6 +1,10 @@
-# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi") / Hardwares e Softwares
+# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi")
+
+## Hardwares e Softwares
 
 [![Hardwares e Softwares](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/images/hardware.jpg?raw=true "Hardwares e Softwares")](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/images/hardware.jpg?raw=true "Hardwares e Softwares")
+
+### *Sumário*
 
 > Hardwares
 
@@ -11,6 +15,11 @@
 > Softwares
 
 - [VM VirtualBox](https://github.com/systemboys/GTi_Laboratory/tree/main/Hardwares%20e%20Softwares/VM%20VirtualBox#laborat%C3%B3rio-gti--vm-virtualbox "VM VirtualBox")
+
+---
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
 
@@ -31,7 +40,7 @@ Os pinos do painel frontal da placa-mãe são responsáveis por conectar os cone
 É importante verificar o manual da placa-mãe específica para obter a localização exata dos pinos no conector do painel frontal, pois pode variar de acordo com o modelo da placa-mãe.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#laborat%C3%B3rio-gti--hardwares-e-softwares "Subir para o topo")
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
 
@@ -62,7 +71,7 @@ Os pinos de áudio do painel frontal do gabinete são responsáveis pela conexã
 [![Painel de áudio frontal](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/images/Painel_de_audio_frontal_2.jpg?raw=true "Painel de áudio frontal")](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/images/Painel_de_audio_frontal_2.jpg?raw=true "Painel de áudio frontal")
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#laborat%C3%B3rio-gti--hardwares-e-softwares "Subir para o topo")
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
 
@@ -131,6 +140,6 @@ Para realizar a clonagem de um dispositivo de armazenamento para outro, você po
 Lembre-se de que os nomes de botões e opções podem variar ligeiramente dependendo da versão específica da ferramenta "MiniTool Partition Wizard Enterprise" e do sistema operacional. Certifique-se de seguir as instruções fornecidas pela ferramenta que estiver utilizando.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#laborat%C3%B3rio-gti--hardwares-e-softwares "Subir para o topo")
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
