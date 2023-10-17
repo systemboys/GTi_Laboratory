@@ -2,7 +2,7 @@
 
 [![GTi Laboratory](https://github.com/systemboys/GTi_Laboratory/raw/main/images/consertodecomputador.jpg "GTi Laboratory")](https://github.com/systemboys/GTi_Laboratory/raw/main/images/consertodecomputador.jpg "GTi Laboratory")
 
-- [Hardwares e Softwares](https://github.com/systemboys/GTi_Laboratory/tree/main/Hardwares%20e%20Softwares#laborat%C3%B3rio-gti--hardwares-e-softwares "Hardwares e Softwares")
+- [Hardwares e Softwares](https://github.com/systemboys/GTi_Laboratory/tree/main/Hardwares%20e%20Softwares#hardwares-e-softwares "Hardwares e Softwares")
 - [Debian Linux e derivados](https://github.com/systemboys/GTi_Laboratory/tree/main/Debian%20Linux%20e%20derivados#debian-linux-e-derivados "Debian Linux e derivados")
 - [Microsoft Windows](https://github.com/systemboys/GTi_Laboratory/tree/main/Microsoft%20Windows#assuntos-windows "Microsoft Windows")
 - [Computação em Nuvens](https://github.com/systemboys/GTi_Laboratory/tree/main/Computa%C3%A7%C3%A3o%20em%20Nuvens#laborat%C3%B3rio-gti--computa%C3%A7%C3%A3o-em-nuvens "Computação em Nuvens")
