@@ -1,8 +1,12 @@
-# Debian Linux e derivados
+# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi")
+
+## Debian Linux e derivados
 
 [![Linux](https://github.com/systemboys/GTi_Laboratory/raw/main/Debian%20Linux%20e%20derivados/images/Linux_1.jpg "Linux")](https://github.com/systemboys/GTi_Laboratory/raw/main/Debian%20Linux%20e%20derivados/images/Linux_1.jpg "Linux")
 
 > Aqui estão alguns assuntos sobre os quais deixam alguns [usuários](https://github.com/systemboys/GTi_Laboratory/tree/main/Debian%20Linux%20e%20derivados/Minhas%20configura%C3%A7%C3%B5es#laborat%C3%B3rio-gti--minhas-configura%C3%A7%C3%B5es "usuários") de Linux na dúvida sobre alguns problemas e/ou determinadas soluções.
+
+### *Sumário*
 
 - [A Linux Foundation (Fundação Linux)](#a-linux-foundation-funda%C3%A7%C3%A3o-linux "A Linux Foundation (Fundação Linux)")
 - [Atualizações](https://github.com/systemboys/GTi_Laboratory/tree/main/Debian%20Linux%20e%20derivados/Atualiza%C3%A7%C3%B5es#atualiza%C3%A7%C3%B5es "Atualizações")
@@ -21,6 +25,11 @@
 
 ---
 
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
 ## A Linux Foundation (Fundação Linux)
 
 A Linux Foundation ([Fundação Linux](https://www.linuxfoundation.org/ "Fundação Linux")) é uma organização sem fins lucrativos dedicada ao avanço e suporte ao ecossistema Linux e ao software de código aberto em geral. Fundada em 2000, a Linux Foundation desempenha um papel fundamental na promoção, colaboração e proteção do Linux e de outros projetos de código aberto.
@@ -36,6 +45,6 @@ Além de hospedar projetos, a Linux Foundation oferece uma variedade de programa
 A Linux Foundation desempenha um papel essencial no suporte à comunidade de código aberto, fornecendo recursos financeiros, técnicos e legais para garantir o sucesso e a sustentabilidade de projetos de código aberto. Seu trabalho tem ajudado a moldar a indústria de tecnologia e a promover a cultura de colaboração e transparência que é característica do software de código aberto.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#debian-linux-e-derivados "Subir para o topo")
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
