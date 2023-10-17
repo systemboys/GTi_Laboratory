@@ -1,11 +1,20 @@
-# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi") / Dicas e Truques
+# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi")
+
+## Dicas e Truques
 
 [![Dicas e Truques](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Dicas%20e%20Truques/images/Comandos-basicos-do-Linux-para-iniciantes.jpg?raw=true "Dicas e Truques")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Dicas%20e%20Truques/images/Comandos-basicos-do-Linux-para-iniciantes.jpg?raw=true "Dicas e Truques")
+
+### *Sumário*
 
 - [Resolvendo Problemas de Resolução em uma Máquina Virtual Debian no Hyper-V](#resolvendo-problemas-de-resolu%C3%A7%C3%A3o-em-uma-m%C3%A1quina-virtual-debian-no-hyper-v "Resolvendo Problemas de Resolução em uma Máquina Virtual Debian no Hyper-V")
 - [Como Limpar o Histórico de Comandos no Terminal Linux](#como-limpar-o-hist%C3%B3rico-de-comandos-no-terminal-linux "Como Limpar o Histórico de Comandos no Terminal Linux")
 - [Como Desligar ou Reiniciar o Linux via Terminal: Comandos Úteis](#como-desligar-ou-reiniciar-o-linux-via-terminal-comandos-%C3%BAteis "Como Desligar ou Reiniciar o Linux via Terminal: Comandos Úteis")
 - [Entendendo a Mensagem 'Do you want to continue? [Y/n]' em Instalações de Pacotes no Linux](#entendendo-a-mensagem-do-you-want-to-continue-yn-em-instala%C3%A7%C3%B5es-de-pacotes-no-linux "Entendendo a Mensagem 'Do you want to continue? [Y/n]' em Instalações de Pacotes no Linux")
+
+---
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
 
@@ -65,7 +74,7 @@ Essas etapas devem ajudá-lo a resolver problemas de resolução em uma máquina
 [![Desktop do Debian Linux](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Dicas%20e%20Truques/images/desktop_debian.png?raw=true "Desktop do Debian Linux")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Dicas%20e%20Truques/images/desktop_debian.png?raw=true "Desktop do Debian Linux")
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#laborat%C3%B3rio-gti--dicas-e-truques "Subir para o topo")
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
 
@@ -98,7 +107,7 @@ Aqui estão os passos:
 Agora, seu histórico de comandos estará vazio. Lembre-se de que isso apagará permanentemente o histórico de comandos, portanto, certifique-se de que é isso que deseja fazer. Se você deseja evitar que comandos futuros sejam registrados no histórico, pode configurar o shell para ignorar o histórico com um comando específico ou ajustar as configurações de histórico em seu arquivo de perfil, como o `~/.bashrc` para o Bash shell.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#laborat%C3%B3rio-gti--dicas-e-truques "Subir para o topo")
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
 
@@ -151,7 +160,7 @@ Você pode desligar o Linux via terminal usando vários comandos, mas os princip
 Lembre-se de usar o `sudo` antes desses comandos para executá-los com privilégios de superusuário, pois o desligamento do sistema geralmente requer permissões elevadas. Certifique-se de salvar o trabalho antes de desligar ou reiniciar o sistema para evitar perda de dados.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#laborat%C3%B3rio-gti--dicas-e-truques "Subir para o topo")
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
 
@@ -170,6 +179,6 @@ Essa abordagem de ter a opção padrão como "Sim" (Y) é uma convenção para t
 Em resumo, essa mensagem visa tornar as operações no terminal mais seguras e eficientes, permitindo que os usuários confirmem ou cancelem a ação de forma rápida e simples.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#laborat%C3%B3rio-gti--dicas-e-truques "Subir para o topo")
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
