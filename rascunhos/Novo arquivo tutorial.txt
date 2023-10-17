@@ -14,8 +14,10 @@
 
 Descrição do conteúdo...
 
-```javascript
-const yourCodeJavaScript = "Seu código JavaScript";
+```bash
+#!/bin/bash
+clear
+apt install package -y
 ```
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
