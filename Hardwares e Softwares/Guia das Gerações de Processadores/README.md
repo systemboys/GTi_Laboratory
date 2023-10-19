@@ -70,6 +70,8 @@ Por favor, note que dentro de cada geração, há variações específicas do mo
 
 ## i3, i5, i7 e i9: entenda a diferença entre os processadores da Intel
 
+> [Olhar Digital](https://olhardigital.com.br) > [Notícias](https://olhardigital.com.br/editorias/noticias/) > i3, i5, i7 e i9: entenda a diferença entre os processadores da Intel
+
 Tire todas as suas dúvidas sobre a principal linha de chips da Intel
 
 [Redação](https://olhardigital.com.br/author/redacao/) | 21/02/2017 17h44, atualizada em 11/07/2018 21h20
