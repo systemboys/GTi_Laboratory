@@ -990,6 +990,7 @@ while true; do
             atualizar_kernel
             ;;
         3)
+            clear
             echo "Saindo do menu. Adeus!"
             exit 0
             ;;
