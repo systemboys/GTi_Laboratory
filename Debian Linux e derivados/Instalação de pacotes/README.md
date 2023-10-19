@@ -34,6 +34,7 @@
       - [Verificando e Executando Comandos Baseado na Existência de Diretórios no Debian Linux](#verificando-e-executando-comandos-baseado-na-exist%C3%AAncia-de-diret%C3%B3rios-no-debian-linux "Verificando e Executando Comandos Baseado na Existência de Diretórios no Debian Linux")
       - [Passando Variáveis entre Scripts Bash no Linux](#passando-vari%C3%A1veis-entre-scripts-bash-no-linux "Passando Variáveis entre Scripts Bash no Linux")
       - [Exibindo Data e Hora em Tempo Real em um Shell Script Bash](#exibindo-data-e-hora-em-tempo-real-em-um-shell-script-bash "Exibindo Data e Hora em Tempo Real em um Shell Script Bash")
+    - [Criando Menus Interativos com Dialog no Debian Linux](#criando-menus-interativos-com-dialog-no-debian-linux "Criando Menus Interativos com Dialog no Debian Linux")
 
 ---
 
@@ -939,6 +940,76 @@ echo "Agora são $hora_atual"
 ```
 
 Neste exemplo, `%H:%M:%S` é um formato para extrair a hora (`%H`) os minutos (`%M`) e os segundos (`%S`) do comando `date`.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Criando Menus Interativos com Dialog no Debian Linux
+
+Para criar um menu interativo usando o `dialog` e permitir que o usuário navegue usando as setas direcionais, você pode utilizar o seguinte script:
+
+```bash
+#!/bin/bash
+
+# Verifica se o dialog está instalado
+if ! command -v dialog &> /dev/null; then
+    echo "Dialog não está instalado. Instalando..."
+    sudo apt-get update
+    sudo apt-get install -y dialog
+fi
+
+# Função para atualizar pacotes Linux
+atualizar_pacotes() {
+    sudo apt-get update
+    dialog --msgbox "Pacotes Linux atualizados!" 8 40
+}
+
+# Função para atualizar o kernel Linux
+atualizar_kernel() {
+    sudo apt-get upgrade -y
+    dialog --msgbox "Kernel Linux atualizado!" 8 40
+}
+
+# Menu interativo usando dialog
+while true; do
+    choice=$(dialog --clear --backtitle "Menu Interativo" \
+            --title "Escolha uma opção" \
+            --menu "Selecione uma opção usando as setas direcionais:" 15 40 3 \
+            1 "Atualizar pacotes Linux" \
+            2 "Atualizar kernel Linux" \
+            3 "Sair" \
+            2>&1 >/dev/tty)
+
+    case $choice in
+        1)
+            atualizar_pacotes
+            ;;
+        2)
+            atualizar_kernel
+            ;;
+        3)
+            echo "Saindo do menu. Adeus!"
+            exit 0
+            ;;
+        *)
+            dialog --msgbox "Opção inválida. Tente novamente." 8 40
+            ;;
+    esac
+done
+```
+
+Neste script, o `dialog` é usado para criar um menu interativo com três opções: atualizar pacotes Linux, atualizar o kernel Linux e sair. O usuário pode navegar pelo menu usando as setas direcionais e pressionar Enter para selecionar uma opção. Após cada operação, uma caixa de mensagem é exibida informando que a operação foi concluída com sucesso.
+
+Para instalar o `dialog` no Debian Linux, você pode usar o gerenciador de pacotes `apt`. Abra o terminal e execute o seguinte comando:
+
+```bash
+sudo apt-get update
+sudo apt-get install dialog
+```
+
+O comando `apt-get update` atualiza a lista de pacotes disponíveis e o comando `apt-get install dialog` instala o pacote `dialog` em seu sistema Debian. Você pode então usar o `dialog` em seus scripts Shell Bash para criar interfaces de usuário interativas baseadas em texto.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
