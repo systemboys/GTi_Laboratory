@@ -52,6 +52,8 @@ Aqui está uma lista resumida das principais gerações de processadores Intel C
 11. **Décima Primeira Geração (Tiger Lake):**
     - Intel Core i3-11xxx, i5-11xxx, i7-11xxx
 
+[![Gerações e Modelos](./images/generations-and-models.png "Gerações e Modelos")](./images/generations-and-models.png "Gerações e Modelos")
+
 Por favor, note que dentro de cada geração, há variações específicas do modelo do processador. Além disso, após a 11ª geração, pode haver novas gerações lançadas pela Intel. Recomendo verificar o site oficial da Intel para as informações mais recentes sobre os processadores.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
