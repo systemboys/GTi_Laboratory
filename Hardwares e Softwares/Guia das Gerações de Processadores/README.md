@@ -7,7 +7,13 @@
 ### *Sumário*
 
 - [Guia das Gerações: Processadores Intel Core i até 2021](#guia-das-gera%C3%A7%C3%B5es-processadores-intel-core-i-at%C3%A9-2021 "Guia das Gerações: Processadores Intel Core i até 2021")
-    - [i3, i5, i7 e i9: entenda a diferença entre os processadores da Intel](# "i3, i5, i7 e i9: entenda a diferença entre os processadores da Intel")
+    - [i3, i5, i7 e i9: entenda a diferença entre os processadores da Intel](#i3-i5-i7-e-i9-entenda-a-diferen%C3%A7a-entre-os-processadores-da-intel "i3, i5, i7 e i9: entenda a diferença entre os processadores da Intel")
+    - [O que você precisa saber](#o-que-voc%C3%AA-precisa-saber "O que você precisa saber")
+    - [Gerações](#gera%C3%A7%C3%B5es "Gerações")
+    - [U, Y, T, Q, H e K](#u-y-t-q-h-e-k "U, Y, T, Q, H e K")
+    - [Cache](#cache "Cache")
+    - [Outros detalhes](#outros-detalhes "Outros detalhes")
+    - [Qual comprar?](#qual-comprar "Qual comprar?")
 
 ---
 
@@ -62,11 +68,11 @@ Por favor, note que dentro de cada geração, há variações específicas do mo
 
 ## i3, i5, i7 e i9: entenda a diferença entre os processadores da Intel
 
-
-
 Especialmente quando se está tentando comprar um novo PC ou montar seu próprio  computador pela primeira vez. Não faltam opções de configurações no  mercado, e nem sempre é fácil distinguir entre muitas delas. Escolher um processador, que é um dos principais componentes, pode ser desgastante.
 
 Nem sempre o mais caro é o melhor, por isso é importante entender as diferenças entre esses processadores. Pois então, vamos lá.
+
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ## O que você precisa saber
 
@@ -82,6 +88,8 @@ A velocidade com que esse processamento é executado também faz diferença: um 
 
 Contudo, é possível encontrar um modelo de notebook com processador  Intel Core i3 mais barato do que um outro PC que também usa Intel Core  i3. Ou um i5 mais caro e mais rápido que um i7. Como explicar essa  diferença? É disso o que vamos falar a seguir.
 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
 ## Gerações
 
 A Intel começou a fabricar essa família de  processadores em 2010. De lá para cá, a empresa já lançou oito gerações  de Intel Core i3, i5 e i7 e duas do i9. Isso significa que é possível  encontrar, em uma mesma loja, um PC com um i3 de quinta geração e outro  com um i3 de sexta geração.
@@ -95,6 +103,8 @@ Mas como saber qual a geração do chipset que estamos comprando? É aqui que  e
 ![Reprodução](./images/20180711060012.png)
 
 É possível encontrar modelos diferentes dentro de uma mesma geração,  porém. Nesse caso, melhor é aquele que tem o número de identificação  mais alto. Um Intel Core i3-6167 é melhor do que um i3-6100 porque,  afinal de contas, 6167 é um número mais alto do que 6100, mesmo que  ambos sejam da sexta geração.
+
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ## U, Y, T, Q, H e K
 
@@ -121,6 +131,8 @@ Eis um dicionários simples para cada sufixo:
 - **S** – Otimizado para performance;
 - **X** – “Extreme Edition”, performance melhorada.
 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
 ## Cache
 
 As  diferenças entre os processadores, porém, não acabam aqui. Se você já  saiu em busca de um PC novo, deve ter notado que muitas lojas indicam  também o tamanho do cache. Esse “cache” nada mais é do que a memória  temporária do processador, explicando de forma mais simples.
@@ -130,6 +142,8 @@ O  cache é o local onde o processador armazena informações que ele precisa  b
 Dessa forma, ele pode executar a tarefa mais rapidamente, porque o processador não precisa ir até o HD para buscar  informações importantes. Os dados mais indispensáveis já ficam no  “bolso” do processador, que é essa memória de cache.
 
 Nesse ponto  não tem segredo: quanto maior o cache, mais informações o processador  pode guardar num local de fácil acesso e mais rapidamente ele vai  executar tarefas corriqueiras. Normalmente, um i3 vem com 4 MB ou 6 MB  de cache, enquanto um i5 pode chegar a 9 MB e um i7 ou i9 alcança até 12 MB.
+
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ## Outros detalhes
 
@@ -142,6 +156,8 @@ Outro detalhe que pode pesar no momento da  compra é a GPU que acompanha a CPU.
 Nessa linha, a Intel costuma usar três modelos: Intel HD, Intel Iris e Intel Iris Pro. Nenhuma é tão boa  quanto uma placa de vídeo dedicada, como as da AMD ou da Nvidia, por  exemplo, só são úteis se você não estiver interessado num PC para jogar. Se quiser rodar games na máquina, uma placa de vídeo dedicada é o  ideal.
 
 ![Reprodução](./images/20180417102751.jpg)
+
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ## Qual comprar?
 
