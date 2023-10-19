@@ -6,7 +6,7 @@
 
 ### *Sumário*
 
-- [Guia das Gerações: Processadores Intel Core i até 2021](https://site.com#anchor-link-1 "Guia das Gerações: Processadores Intel Core i até 2021")
+- [Guia das Gerações: Processadores Intel Core i até 2021](#guia-das-gera%C3%A7%C3%B5es-processadores-intel-core-i-at%C3%A9-2021 "Guia das Gerações: Processadores Intel Core i até 2021")
 
 ---
 

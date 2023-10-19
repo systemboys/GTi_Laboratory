@@ -12,6 +12,10 @@
 - [Descrição dos pinos de áudio no painel frontal do gabinete](#descri%C3%A7%C3%A3o-dos-pinos-de-%C3%A1udio-no-painel-frontal-do-gabinete "Descrição dos pinos de áudio no painel frontal do gabinete")
 - [Guia Passo a Passo: Como Realizar Clonagem de Disco com MiniTool Partition Wizard Enterprise e AB Multiboot](#guia-passo-a-passo-como-realizar-clonagem-de-disco-com-minitool-partition-wizard-enterprise-e-ab-multiboot "Guia Passo a Passo: Como Realizar Clonagem de Disco com MiniTool Partition Wizard Enterprise e AB Multiboot")
 
+> Geração de Processadores
+
+- [Guia das Gerações de Processadores](https://github.com/systemboys/GTi_Laboratory/tree/main/Hardwares%20e%20Softwares/Guia%20das%20Gera%C3%A7%C3%B5es%20de%20Processadores#gera%C3%A7%C3%A3o-de-processadores "Guia das Gerações de Processadores")
+
 > Softwares
 
 - [VM VirtualBox](https://github.com/systemboys/GTi_Laboratory/tree/main/Hardwares%20e%20Softwares/VM%20VirtualBox#laborat%C3%B3rio-gti--vm-virtualbox "VM VirtualBox")
