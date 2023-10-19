@@ -17,7 +17,7 @@
 
 ## Guia das Gerações: Processadores Intel Core i até 2021
 
-Até a minha última atualização em setembro de 2021, aqui está uma lista resumida das principais gerações de processadores Intel Core i, começando com a primeira geração:
+Aqui está uma lista resumida das principais gerações de processadores Intel Core i, começando com a primeira geração:
 
 1. **Primeira Geração (Nehalem):**
    - Intel Core i3-5xx, i5-6xx, i7-8xx, i7-9xx
