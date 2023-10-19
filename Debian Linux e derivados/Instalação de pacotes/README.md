@@ -984,9 +984,11 @@ while true; do
 
     case $choice in
         1)
+            clear
             atualizar_pacotes
             ;;
         2)
+            clear
             atualizar_kernel
             ;;
         3)
