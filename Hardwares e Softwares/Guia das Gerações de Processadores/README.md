@@ -6,14 +6,16 @@
 
 ### *Sumário*
 
+> Processadores Intel
+
 - [Guia das Gerações: Processadores Intel Core i até 2021](#guia-das-gera%C3%A7%C3%B5es-processadores-intel-core-i-at%C3%A9-2021 "Guia das Gerações: Processadores Intel Core i até 2021")
-    - [i3, i5, i7 e i9: entenda a diferença entre os processadores da Intel](#i3-i5-i7-e-i9-entenda-a-diferen%C3%A7a-entre-os-processadores-da-intel "i3, i5, i7 e i9: entenda a diferença entre os processadores da Intel")
-    - [O que você precisa saber](#o-que-voc%C3%AA-precisa-saber "O que você precisa saber")
-    - [Gerações](#gera%C3%A7%C3%B5es "Gerações")
-    - [U, Y, T, Q, H e K](#u-y-t-q-h-e-k "U, Y, T, Q, H e K")
-    - [Cache](#cache "Cache")
-    - [Outros detalhes](#outros-detalhes "Outros detalhes")
-    - [Qual comprar?](#qual-comprar "Qual comprar?")
+- [i3, i5, i7 e i9: entenda a diferença entre os processadores da Intel](#i3-i5-i7-e-i9-entenda-a-diferen%C3%A7a-entre-os-processadores-da-intel "i3, i5, i7 e i9: entenda a diferença entre os processadores da Intel")
+- [O que você precisa saber](#o-que-voc%C3%AA-precisa-saber "O que você precisa saber")
+- [Gerações](#gera%C3%A7%C3%B5es "Gerações")
+- [U, Y, T, Q, H e K](#u-y-t-q-h-e-k "U, Y, T, Q, H e K")
+- [Cache](#cache "Cache")
+- [Outros detalhes](#outros-detalhes "Outros detalhes")
+- [Qual comprar?](#qual-comprar "Qual comprar?")
 
 ---
 
