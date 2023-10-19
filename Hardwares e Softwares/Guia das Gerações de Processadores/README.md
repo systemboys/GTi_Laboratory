@@ -70,6 +70,14 @@ Por favor, note que dentro de cada geração, há variações específicas do mo
 
 ## i3, i5, i7 e i9: entenda a diferença entre os processadores da Intel
 
+Tire todas as suas dúvidas sobre a principal linha de chips da Intel
+
+[Redação](https://olhardigital.com.br/author/redacao/) | 21/02/2017 17h44, atualizada em 11/07/2018 21h20
+
+![img](./images//20180711181931.jpg)
+
+Intel Core i3, i5, i7, i9, Celeron, Pentium… a nomenclatura dos processadores da Intel não conhece limites. Há tempos a maioria das grandes fabricantes de PCs optam por usar processadores da Intel em  seus produtos, mas, para o público menos inserido nesse mercado, é  difícil entender a diferença entre os modelos apenas pelo nome.
+
 Especialmente quando se está tentando comprar um novo PC ou montar seu próprio  computador pela primeira vez. Não faltam opções de configurações no  mercado, e nem sempre é fácil distinguir entre muitas delas. Escolher um processador, que é um dos principais componentes, pode ser desgastante.
 
 Nem sempre o mais caro é o melhor, por isso é importante entender as diferenças entre esses processadores. Pois então, vamos lá.
