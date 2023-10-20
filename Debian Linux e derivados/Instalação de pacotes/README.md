@@ -950,7 +950,8 @@ Neste exemplo, `%H:%M:%S` é um formato para extrair a hora (`%H`) os minutos (`
 
 Para criar um menu interativo usando o `dialog` e permitir que o usuário navegue usando as setas direcionais, você pode utilizar o seguinte script:
 
-```bash#!/bin/bash
+```bash
+#!/bin/bash
 
 # Verifica se o dialog está instalado
 if ! command -v dialog &> /dev/null; then
