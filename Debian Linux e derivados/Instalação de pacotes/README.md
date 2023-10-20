@@ -950,8 +950,7 @@ Neste exemplo, `%H:%M:%S` é um formato para extrair a hora (`%H`) os minutos (`
 
 Para criar um menu interativo usando o `dialog` e permitir que o usuário navegue usando as setas direcionais, você pode utilizar o seguinte script:
 
-```bash
-#!/bin/bash
+```bash#!/bin/bash
 
 # Verifica se o dialog está instalado
 if ! command -v dialog &> /dev/null; then
@@ -961,13 +960,13 @@ if ! command -v dialog &> /dev/null; then
 fi
 
 # Função para atualizar pacotes Linux
-atualizar_pacotes() {
+update_packages() {
     sudo apt-get update
     dialog --msgbox "Pacotes Linux atualizados!" 8 40
 }
 
 # Função para atualizar o kernel Linux
-atualizar_kernel() {
+update_kernel() {
     sudo apt-get upgrade -y
     dialog --msgbox "Kernel Linux atualizado!" 8 40
 }
@@ -976,25 +975,26 @@ atualizar_kernel() {
 while true; do
     choice=$(dialog --clear --backtitle "Menu Interativo" \
             --title "Escolha uma opção" \
-            --menu "Selecione uma opção usando as setas direcionais:" 15 40 3 \
+            --menu "Selecione as opções usando (↓ ↑ → ←) e pressione \"Enter\". Pode usar os núermso ou o clique também:" 15 40 2 \
             1 "Atualizar pacotes Linux" \
             2 "Atualizar kernel Linux" \
-            3 "Sair" \
             2>&1 >/dev/tty)
+
+    # Se o usuário pressionar Cancelar, sair do loop
+    if [ $? -ne 0 ]; then
+        clear
+        echo "Saindo do menu. Até mais!"
+        exit 0
+    fi
 
     case $choice in
         1)
             clear
-            atualizar_pacotes
+            update_packages
             ;;
         2)
             clear
-            atualizar_kernel
-            ;;
-        3)
-            clear
-            echo "Saindo do menu. Adeus!"
-            exit 0
+            update_kernel
             ;;
         *)
             dialog --msgbox "Opção inválida. Tente novamente." 8 40
