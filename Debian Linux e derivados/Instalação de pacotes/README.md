@@ -1029,16 +1029,16 @@ Você pode adicionar uma barra de progresso para mostrar o andamento de uma fun�
 
 ```bash
 # Função para atualizar pacotes Linux com barra de progresso
-update_packages() {
+functionName() {
     (
         echo "10" ; sleep 1
         echo "30" ; sleep 1
         echo "50" ; sleep 1
         echo "70" ; sleep 1
         echo "100" ; sleep 1
-    ) | dialog --title "Atualizando Pacotes" --gauge "Aguarde, atualizando pacotes..." 10 70 0
-    sudo apt-get update
-    dialog --msgbox "Pacotes Linux atualizados!" 8 40
+    ) | dialog --title "Executando o comando" --gauge "Aguarde, atualizando pacotes..." 10 70 0
+    # Your commands here...
+    dialog --msgbox "Comandos executados!" 8 40
 }
 ```
 
