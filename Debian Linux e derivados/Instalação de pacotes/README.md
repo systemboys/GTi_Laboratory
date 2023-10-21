@@ -1025,7 +1025,7 @@ O comando `apt-get update` atualiza a lista de pacotes disponíveis e o comando 
 
 **_Abordagem não sincronizada:_**
 
-Você pode adicionar uma barra de progresso para mostrar o andamento de uma função. Você pode fazer isso usando o comando `dialog` com a opção `--gauge`. Aqui está um exemplo de como modificar sua função `update_packages` para mostrar uma barra de progresso:
+Você pode adicionar uma barra de progresso para mostrar o andamento de uma função. Você pode fazer isso usando o comando `dialog` com a opção `--gauge`. Aqui está um exemplo de como modificar sua função `functionName` para mostrar uma barra de progresso:
 
 ```bash
 # Função para atualizar pacotes Linux com barra de progresso
