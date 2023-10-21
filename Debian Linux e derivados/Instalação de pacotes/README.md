@@ -36,7 +36,7 @@
       - [Exibindo Data e Hora em Tempo Real em um Shell Script Bash](#exibindo-data-e-hora-em-tempo-real-em-um-shell-script-bash "Exibindo Data e Hora em Tempo Real em um Shell Script Bash")
     - [Criando Menus Interativos com Dialog no Debian Linux](#criando-menus-interativos-com-dialog-no-debian-linux "Criando Menus Interativos com Dialog no Debian Linux")
         - [Integrando Barra de Progresso com Comandos em Shell Script: Uma Abordagem Sincronizada](#integrando-barra-de-progresso-com-comandos-em-shell-script-uma-abordagem-sincronizada "Integrando Barra de Progresso com Comandos em Shell Script: Uma Abordagem Sincronizada")
-        - [Validação de Senha no Shell Script: Garantindo Entrada Não Vazia](# "Validação de Senha no Shell Script: Garantindo Entrada Não Vazia")
+        - [Validação de Senha no Shell Script: Garantindo Entrada Não Vazia](#valida%C3%A7%C3%A3o-de-senha-no-shell-script-garantindo-entrada-n%C3%A3o-vazia "Validação de Senha no Shell Script: Garantindo Entrada Não Vazia")
 
 ---
 
@@ -48,7 +48,7 @@ Erro ao instalar um seguinte programa no Debian 10:
 dpkg -i your_installation_package.deb
 ```
 
-[![Erro ao instalar programa](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Instala%C3%A7%C3%A3o%20de%20de%20pacotes/images/Erro_PATH_do_root.png?raw=true "Erro ao instalar programa")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Instala%C3%A7%C3%A3o%20de%20de%20pacotes/images/Erro_PATH_do_root.png?raw=true "Erro ao instalar programa")
+[![Erro ao instalar programa](./images/Erro_PATH_do_root.png "Erro ao instalar programa")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Instala%C3%A7%C3%A3o%20de%20de%20pacotes/images/Erro_PATH_do_root.png?raw=true "Erro ao instalar programa")
 
 O erro "E: Sub-process /usr/bin/dpkg returned an error code (1)" é geralmente um erro genérico que ocorre durante a instalação ou atualização de pacotes em sistemas operacionais baseados em Debian, como Ubuntu e Debian. Esse erro pode ser causado por uma série de problemas, como dependências quebradas, problemas de conflito entre pacotes ou problemas com o próprio pacote que está sendo instalado. Para resolver esse erro, é necessário identificar a causa específica do problema e corrigi-lo adequadamente.
 
