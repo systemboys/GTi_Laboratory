@@ -35,6 +35,7 @@
       - [Passando Variáveis entre Scripts Bash no Linux](#passando-vari%C3%A1veis-entre-scripts-bash-no-linux "Passando Variáveis entre Scripts Bash no Linux")
       - [Exibindo Data e Hora em Tempo Real em um Shell Script Bash](#exibindo-data-e-hora-em-tempo-real-em-um-shell-script-bash "Exibindo Data e Hora em Tempo Real em um Shell Script Bash")
     - [Criando Menus Interativos com Dialog no Debian Linux](#criando-menus-interativos-com-dialog-no-debian-linux "Criando Menus Interativos com Dialog no Debian Linux")
+        - [Integrando Barra de Progresso com Comandos em Shell Script: Uma Abordagem Sincronizada](# "Integrando Barra de Progresso com Comandos em Shell Script: Uma Abordagem Sincronizada")
 
 ---
 
@@ -1014,6 +1015,81 @@ sudo apt-get install dialog
 ```
 
 O comando `apt-get update` atualiza a lista de pacotes disponíveis e o comando `apt-get install dialog` instala o pacote `dialog` em seu sistema Debian. Você pode então usar o `dialog` em seus scripts Shell Bash para criar interfaces de usuário interativas baseadas em texto.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Integrando Barra de Progresso com Comandos em Shell Script: Uma Abordagem Sincronizada
+
+**_Abordagem não sincronizada:_**
+
+Você pode adicionar uma barra de progresso para mostrar o andamento de uma função. Você pode fazer isso usando o comando `dialog` com a opção `--gauge`. Aqui está um exemplo de como modificar sua função `update_packages` para mostrar uma barra de progresso:
+
+```bash
+# Função para atualizar pacotes Linux com barra de progresso
+update_packages() {
+    (
+        echo "10" ; sleep 1
+        echo "30" ; sleep 1
+        echo "50" ; sleep 1
+        echo "70" ; sleep 1
+        echo "100" ; sleep 1
+    ) | dialog --title "Atualizando Pacotes" --gauge "Aguarde, atualizando pacotes..." 10 70 0
+    sudo apt-get update
+    dialog --msgbox "Pacotes Linux atualizados!" 8 40
+}
+```
+
+Nesse exemplo, a barra de progresso vai de 0 a 100 em cinco etapas, cada uma delas dormindo por 1 segundo para simular o processo de atualização. Você pode ajustar as etapas e os tempos de sono de acordo com a complexidade da sua operação de atualização.
+
+Ao executar a função `update_packages`, uma barra de progresso aparecerá na tela, indicando o progresso da operação. Quando a atualização estiver completa, uma caixa de mensagem será exibida informando que os pacotes foram atualizados.
+
+**_Abordagem sincronizada:_**
+
+Para que as atualizações de pacotes aconteçam em sincronia com o indicador de progresso, você pode redirecionar a saída do comando `apt-get update` para um arquivo temporário e, em seguida, processar esse arquivo para obter o progresso da atualização.
+
+Aqui está uma maneira de fazer isso:
+
+```bash
+# Função para atualizar pacotes Linux com barra de progresso
+update_packages() {
+    (
+        # Inicia a atualização em segundo plano e redireciona a saída para um arquivo temporário
+        sudo apt-get update > /tmp/apt_progress 2>&1 &
+        
+        # Obtém o número total de linhas no arquivo temporário
+        total_lines=$(wc -l < /tmp/apt_progress)
+
+        # Loop para processar o arquivo temporário e atualizar a barra de progresso
+        while true; do
+            # Obtém o número atual de linhas no arquivo temporário
+            current_lines=$(wc -l < /tmp/apt_progress)
+            
+            # Calcula o progresso como uma porcentagem
+            progress=$(( (current_lines * 100) / total_lines ))
+
+            # Atualiza a barra de progresso
+            echo "$progress"
+            
+            # Aguarda 1 segundo antes de verificar novamente
+            sleep 1
+
+            # Sai do loop quando a atualização estiver completa
+            [ "$current_lines" -eq "$total_lines" ] && break
+        done
+    ) | dialog --title "Atualizando Pacotes" --gauge "Aguarde, atualizando pacotes..." 10 70 0
+
+    # Limpa o arquivo temporário
+    rm -f /tmp/apt_progress
+
+    # Exibe a mensagem de conclusão
+    dialog --msgbox "Pacotes Linux atualizados!" 8 40
+}
+```
+
+Neste script, a saída do `sudo apt-get update` é redirecionada para o arquivo temporário `/tmp/apt_progress`. O script então lê este arquivo, calcula o progresso como uma porcentagem do total de linhas e atualiza a barra de progresso em conformidade. Quando a atualização estiver completa, o arquivo temporário é removido e uma caixa de mensagem informa que os pacotes foram atualizados.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
