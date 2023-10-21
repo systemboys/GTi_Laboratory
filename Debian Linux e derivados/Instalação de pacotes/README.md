@@ -36,6 +36,7 @@
       - [Exibindo Data e Hora em Tempo Real em um Shell Script Bash](#exibindo-data-e-hora-em-tempo-real-em-um-shell-script-bash "Exibindo Data e Hora em Tempo Real em um Shell Script Bash")
     - [Criando Menus Interativos com Dialog no Debian Linux](#criando-menus-interativos-com-dialog-no-debian-linux "Criando Menus Interativos com Dialog no Debian Linux")
         - [Integrando Barra de Progresso com Comandos em Shell Script: Uma Abordagem Sincronizada](#integrando-barra-de-progresso-com-comandos-em-shell-script-uma-abordagem-sincronizada "Integrando Barra de Progresso com Comandos em Shell Script: Uma Abordagem Sincronizada")
+        - [Validação de Senha no Shell Script: Garantindo Entrada Não Vazia](# "Validação de Senha no Shell Script: Garantindo Entrada Não Vazia")
 
 ---
 
@@ -1092,6 +1093,66 @@ update_packages() {
 > **_( ! )_** O teste que fiz (Marcos Aurélio) não deu certo, tenho que melhorar este script!
 
 Neste script, a saída do `sudo apt-get update` é redirecionada para o arquivo temporário `/tmp/apt_progress`. O script então lê este arquivo, calcula o progresso como uma porcentagem do total de linhas e atualiza a barra de progresso em conformidade. Quando a atualização estiver completa, o arquivo temporário é removido e uma caixa de mensagem informa que os pacotes foram atualizados.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Validação de Senha no Shell Script: Garantindo Entrada Não Vazia
+
+No `dialog`, o resultado de entrada do usuário (incluindo senhas) pode ser capturado e armazenado em uma variável para ser usada posteriormente. Veja como você pode fazer isso no seu script:
+
+**_Obtendo a senha:_**
+
+```bash
+#!/bin/bash
+
+# Captura a senha do usuário usando o dialog
+senha=$(dialog --title 'Confirmação' --passwordbox 'Por favor, confirme a senha:' 0 0 3>&1 1>&2 2>&3)
+
+# Verifica se o usuário pressionou Cancelar
+if [ $? -ne 0 ]; then
+    echo "Você cancelou a operação."
+else
+    echo "Você digitou a senha: $senha"
+fi
+```
+
+Neste script, `senha` captura a entrada do usuário da caixa de senha do `dialog`. O resultado é então verificado. Se o usuário pressionar Cancelar, ele será informado de que a operação foi cancelada. Se uma senha foi digitada, ela será exibida no `echo`.
+
+Essa abordagem permite que você armazene a senha capturada em uma variável para uso futuro em seu script.
+
+**_Validando o campo de senha:_**
+
+Para validar se o campo de senha está vazio antes de permitir que o usuário prossiga, você pode adicionar uma verificação antes de mostrar a caixa de mensagem. Veja como você pode fazer isso:
+
+```bash
+#!/bin/bash
+
+# Loop para garantir que o usuário forneça uma senha não vazia
+while true; do
+    # Captura a senha do usuário usando o dialog
+    passRoot=$(dialog --title 'Redefinir senha' --passwordbox 'Por favor, informe a senha:' 0 0 3>&1 1>&2 2>&3)
+
+    # Verifica se o usuário pressionou Cancelar
+    if [ $? -ne 0 ]; then
+        dialog --msgbox "Você cancelou a operação." 5 40
+        exit 0
+    fi
+
+    # Verifica se a senha está vazia
+    if [ -z "$passRoot" ]; then
+        dialog --msgbox "Senha não pode ser vazia. Por favor, tente novamente." 5 50
+    else
+        # Se a senha não está vazia, exibe a senha e sai do loop
+        dialog --msgbox "Você digitou a senha: $passRoot" 5 50
+        break
+    fi
+done
+```
+
+Nesse script, o loop `while true` garante que o usuário forneça uma senha não vazia. Se o usuário pressionar Cancelar, ele será informado de que a operação foi cancelada. Se a senha estiver vazia, ele será informado de que a senha não pode ser vazia e solicitado a fornecer uma senha novamente. Somente quando uma senha não vazia é fornecida, o script exibirá a senha e sairá do loop.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
