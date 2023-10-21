@@ -1089,6 +1089,8 @@ update_packages() {
 }
 ```
 
+> **_( ! )_** O teste que fiz (Marcos Aurélio) não deu certo, tenho que melhorar este script!
+
 Neste script, a saída do `sudo apt-get update` é redirecionada para o arquivo temporário `/tmp/apt_progress`. O script então lê este arquivo, calcula o progresso como uma porcentagem do total de linhas e atualiza a barra de progresso em conformidade. Quando a atualização estiver completa, o arquivo temporário é removido e uma caixa de mensagem informa que os pacotes foram atualizados.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
