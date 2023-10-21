@@ -10,6 +10,7 @@
 - [Removendo Usuários via Terminal](#removendo-usu%C3%A1rios-via-terminal "Removendo Usuários via Terminal")
 - [Editando Configurações de Usuários no Linux com o Comando usermod](#editando-configura%C3%A7%C3%B5es-de-usu%C3%A1rios-no-linux-com-o-comando-usermod "Editando Configurações de Usuários no Linux com o Comando usermod")
 - [Mudar a senha do `super usuário`](#mudar-a-senha-do-super-usu%C3%A1rio "Mudar a senha do super usuário")
+   - [Redefinindo Senha do Usuário Root e Executando um Script em uma Linha de Comando](# "Redefinindo Senha do Usuário Root e Executando um Script em uma Linha de Comando")
 
 ---
 
@@ -177,6 +178,28 @@ Para mudar a senha do superusuário "root" no Linux, você pode seguir os seguin
 6. Agora, a nova senha será necessária para fazer login como o superusuário "root" no futuro.
 
 > Lembre-se de escolher uma senha forte e complexa para aumentar a segurança do sistema. Uma senha forte deve conter uma combinação de letras maiúsculas e minúsculas, números e caracteres especiais e ter pelo menos 8 caracteres de comprimento. Evite usar senhas fáceis de adivinhar, como datas de nascimento, nomes comuns ou palavras do dicionário.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Redefinindo Senha do Usuário Root e Executando um Script em uma Linha de Comando
+
+Sim, você pode fazer isso em uma única linha de comando usando uma tubulação de comandos no terminal. A sintaxe seria a seguinte:
+
+```bash
+echo "nova_senha" | sudo passwd root && echo "nova_senha" | su -c './arquivo.sh' root
+```
+
+Neste comando:
+
+- `echo "nova_senha" | sudo passwd root` redefine a senha do usuário root.
+- `echo "nova_senha" | su -c './arquivo.sh' root` tentará fazer login como root usando a nova senha e, se bem-sucedido, executará o arquivo shell script `arquivo.sh`.
+
+Lembre-se de substituir `"nova_senha"` pela senha desejada.
+
+No entanto, este método de fornecer senhas diretamente no terminal pode ser inseguro, pois deixa as senhas visíveis no histórico do terminal e em processos em execução. Em ambientes de produção ou em sistemas críticos, é altamente recomendável utilizar métodos mais seguros para gerenciar senhas e autenticações, como o uso de chaves SSH e políticas de segurança adequadas.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
