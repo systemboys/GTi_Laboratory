@@ -35,6 +35,7 @@
       - [Verificando e Executando Comandos Baseado na Existência de Diretórios no Debian Linux](#verificando-e-executando-comandos-baseado-na-exist%C3%AAncia-de-diret%C3%B3rios-no-debian-linux "Verificando e Executando Comandos Baseado na Existência de Diretórios no Debian Linux")
       - [Passando Variáveis entre Scripts Bash no Linux](#passando-vari%C3%A1veis-entre-scripts-bash-no-linux "Passando Variáveis entre Scripts Bash no Linux")
       - [Exibindo Data e Hora em Tempo Real em um Shell Script Bash](#exibindo-data-e-hora-em-tempo-real-em-um-shell-script-bash "Exibindo Data e Hora em Tempo Real em um Shell Script Bash")
+      - [Símbolos Unicode e Seus Códigos Correspondentes](# "Símbolos Unicode e Seus Códigos Correspondentes")
     - [Criando Menus Interativos com Dialog no Debian Linux](#criando-menus-interativos-com-dialog-no-debian-linux "Criando Menus Interativos com Dialog no Debian Linux")
         - [Integrando Barra de Progresso com Comandos em Shell Script: Uma Abordagem Sincronizada](#integrando-barra-de-progresso-com-comandos-em-shell-script-uma-abordagem-sincronizada "Integrando Barra de Progresso com Comandos em Shell Script: Uma Abordagem Sincronizada")
         - [Solicitação de Nome Interativa: Scripts com e sem Uso de Arquivos Temporários](#solicita%C3%A7%C3%A3o-de-nome-interativa-scripts-com-e-sem-uso-de-arquivos-tempor%C3%A1rios "Solicitação de Nome Interativa: Scripts com e sem Uso de Arquivos Temporários")
@@ -985,6 +986,75 @@ echo "Agora são $hora_atual"
 ```
 
 Neste exemplo, `%H:%M:%S` é um formato para extrair a hora (`%H`) os minutos (`%M`) e os segundos (`%S`) do comando `date`.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Símbolos Unicode e Seus Códigos Correspondentes
+
+Aqui está a tabela com alguns exemplos de símbolos Unicode, seus códigos e descrições:
+
+```markdown
+| Símbolo | Código | Descrição |
+| :------ | :----- | :-------- |
+| ®       | \u24C7 | Registrado |
+| ©       | \u00A9 | Direitos autorais |
+| ™       | \u2122 | Marcado |
+| €       | \u20AC | Euro |
+| £       | \u00A3 | Libra esterlina |
+| ¥       | \u00A5 | Iene |
+| ¢       | \u00A2 | Cêntimo |
+| °       | \u00B0 | Grau |
+| §       | \u00A7 | Seção |
+| ×       | \u00D7 | Multiplicação |
+| ÷       | \u00F7 | Divisão |
+```
+
+Esses são apenas alguns exemplos; existem muitos outros símbolos Unicode disponíveis.
+
+**_Como aplicá-los_**
+
+Para exibir o símbolo de registro (®) em um círculo em um terminal, você pode usar o código de escape ANSI específico para criar esse caractere especial. No entanto, nem todos os terminais suportam esse recurso, então a visualização pode variar.
+
+Aqui está um exemplo de como você poderia fazer isso:
+
+```bash
+#!/bin/bash
+
+# Define o símbolo de registro (®) em um círculo usando o código de escape ANSI
+registered_symbol="\u24C7"
+
+# Monta a mensagem com o símbolo de registro em um círculo
+mensagem="Produto Registrado: $registered_symbol"
+
+# Exibe a mensagem
+echo -e "$mensagem"
+```
+
+No código acima, `\u24C7` é o código de escape Unicode para o símbolo de registro (®) em um círculo. Usando o parâmetro `-e` com `echo`, o Bash interpretará os códigos de escape ANSI, permitindo que o caractere especial seja exibido corretamente.
+
+Lembre-se de que a aparência final dependerá do terminal que você está usando e se ele suporta códigos de escape ANSI Unicode.
+
+Para incluir o símbolo de registro (®) em uma linha usando escape Unicode, você precisa usar a flag `-e` com o comando `echo`. No entanto, para fazer isso dentro de uma variável, você precisa usar o valor hexadecimal do código Unicode. Aqui está o código corrigido:
+
+```bash
+#!/bin/bash
+
+# Define o símbolo de registro (®) em um círculo usando o código Unicode hexadecimal
+symbol_1=$(echo -e "\u24C7")
+developer="${symbol_1} $(date +%Y) - GLOBAL TEC Informática | www.gti1.com.br"
+
+# Trecho de código...
+
+# Menu interativo usando dialog
+while true; do
+    choice=$(dialog --clear --backtitle "${developer}" \
+    # Resto de código...
+```
+
+Neste código, `"\u24C7"` é o valor Unicode hexadecimal para o símbolo de registro (®) em um círculo. Usando `echo -e`, ele é convertido para o caractere correspondente e armazenado na variável `symbol_1`. Em seguida, `symbol_1` é incorporado à string `developer` conforme necessário.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
