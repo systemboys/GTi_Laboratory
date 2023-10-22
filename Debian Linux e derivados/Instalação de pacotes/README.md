@@ -2,7 +2,7 @@
 
 ## Instalação de pacotes
 
-[![Linux Terminal](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Instala%C3%A7%C3%A3o%20de%20de%20pacotes/images/Linux_terminal.jpg?raw=true "Linux Terminal")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Instala%C3%A7%C3%A3o%20de%20de%20pacotes/images/Linux_terminal.jpg?raw=true "Linux Terminal")
+[![Linux Terminal](./images/Linux_terminal.jpg "Linux Terminal")](./images/Linux_terminal.jpg "Linux Terminal")
 
 ### *Sumário*
 
@@ -50,7 +50,7 @@ Erro ao instalar um seguinte programa no Debian 10:
 dpkg -i your_installation_package.deb
 ```
 
-[![Erro ao instalar programa](./images/Erro_PATH_do_root.png "Erro ao instalar programa")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Instala%C3%A7%C3%A3o%20de%20de%20pacotes/images/Erro_PATH_do_root.png?raw=true "Erro ao instalar programa")
+[![Erro ao instalar programa](./images/Erro_PATH_do_root.png "Erro ao instalar programa")](./images/Erro_PATH_do_root.png "Erro ao instalar programa")
 
 O erro "E: Sub-process /usr/bin/dpkg returned an error code (1)" é geralmente um erro genérico que ocorre durante a instalação ou atualização de pacotes em sistemas operacionais baseados em Debian, como Ubuntu e Debian. Esse erro pode ser causado por uma série de problemas, como dependências quebradas, problemas de conflito entre pacotes ou problemas com o próprio pacote que está sendo instalado. Para resolver esse erro, é necessário identificar a causa específica do problema e corrigi-lo adequadamente.
 
@@ -60,7 +60,7 @@ Com editor de sua preferência edite o arquivo `./etc/profile`.
 sudo nano /etc/profile
 ```
 
-[![Terminal Profile](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Instala%C3%A7%C3%A3o%20de%20de%20pacotes/images/Terminal_etc_profile.png?raw=true "Terminal Profile")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Instala%C3%A7%C3%A3o%20de%20de%20pacotes/images/Terminal_etc_profile.png?raw=true "Terminal Profile")
+[![Terminal Profile](./images/Terminal_etc_profile.png "Terminal Profile")](./images/Terminal_etc_profile.png "Terminal Profile")
 
 Observe que haverá uma condição com valor verdadeiro ou falso:
 
