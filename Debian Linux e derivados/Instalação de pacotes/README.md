@@ -20,6 +20,7 @@
    - [Identificar e remover programas no Linux usando o comando dpkg e apt no terminal](#identificar-e-remover-programas-no-linux-usando-o-comando-dpkg-e-apt-no-terminal "Identificar e remover programas no Linux usando o comando dpkg e apt no terminal")
    - [Verificar nome correto de pacote no sistema Debian](#verificar-nome-correto-de-pacote-no-sistema-debian "Verificar nome correto de pacote no sistema Debian")
 - [Script de Instalação Automática de pacotes no Linux](#script-de-instala%C3%A7%C3%A3o-autom%C3%A1tica-de-pacotes-no-linux "Script de Instalação Automática de pacotes no Linux")
+    - [Script de Verificação de Privilégios de Superusuário](# "Script de Verificação de Privilégios de Superusuário")
    - [Verificação e Instalação Condicional de Programas em Scripts Bash](#verifica%C3%A7%C3%A3o-e-instala%C3%A7%C3%A3o-condicional-de-programas-em-scripts-bash "Verificação e Instalação Condicional de Programas em Scripts Bash")
    - [Verificação de Pacotes no Debian: dpkg](#verifica%C3%A7%C3%A3o-de-pacotes-no-debian-dpkg "Verificação de Pacotes no Debian: dpkg")
    - [Verificação de Instalação de software em Bash](#verifica%C3%A7%C3%A3o-de-instala%C3%A7%C3%A3o-de-software-em-bash "Verificação de Instalação de software em Bash")
@@ -448,6 +449,47 @@ Lembre-se de que, para fazer essas alterações no sistema (adicionar chaves e r
 Certifique-se de executar scripts de fontes confiáveis, pois eles têm o potencial de alterar o sistema. Como o script está adicionando um repositório de terceiros, esteja ciente dos riscos associados a isso.
 
 Depois de usar o AnyDesk, você pode remover o script se desejar, já que ele é apenas para automação do processo de instalação.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Script de Verificação de Privilégios de Superusuário
+
+```bash
+#!/bin/bash
+
+# Verifica se o script está sendo executado como superusuário
+if [ "$EUID" -ne 0 ]; then
+    echo "Este script precisa ser executado como superusuário."
+    exit 1
+fi
+
+# Resto do código...
+```
+
+**Descrição:**
+
+Este script em Bash foi criado para verificar se o usuário que o está executando possui privilégios de superusuário (root). Em sistemas Unix e Linux, o superusuário tem permissões especiais que permitem modificar arquivos e configurações do sistema que normalmente estão inacessíveis para outros usuários. O script utiliza a variável especial `$EUID`, que contém o ID do usuário que está executando o script.
+
+**Funcionamento:**
+
+1. **Verificação de Privilégios:**
+   O script começa verificando se o ID do usuário que está executando é igual a 0, o que é o ID do superusuário (root) no Linux. Se não for igual a 0, o script exibe uma mensagem indicando que precisa ser executado como superusuário e então encerra a execução.
+
+2. **Continuação da Execução (se aplicável):**
+   Se o script estiver sendo executado como superusuário, o restante do código pode ser adicionado aqui. Esta parte do script só será alcançada se o usuário que o executa tiver privilégios de superusuário.
+
+**Uso:**
+```bash
+sudo ./seu_script.sh
+```
+
+Ao executar o script com o comando `sudo`, ele terá as permissões necessárias para acessar recursos e configurações do sistema que normalmente estão restritos a usuários com privilégios de superusuário.
+
+**Finalidade:**
+Esse tipo de verificação é essencial para garantir que operações críticas do sistema sejam realizadas apenas por usuários autorizados, evitando assim possíveis danos acidentais ou maliciosos ao sistema operacional.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
