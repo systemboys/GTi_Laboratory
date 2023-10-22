@@ -37,7 +37,7 @@
       - [Exibindo Data e Hora em Tempo Real em um Shell Script Bash](#exibindo-data-e-hora-em-tempo-real-em-um-shell-script-bash "Exibindo Data e Hora em Tempo Real em um Shell Script Bash")
     - [Criando Menus Interativos com Dialog no Debian Linux](#criando-menus-interativos-com-dialog-no-debian-linux "Criando Menus Interativos com Dialog no Debian Linux")
         - [Integrando Barra de Progresso com Comandos em Shell Script: Uma Abordagem Sincronizada](#integrando-barra-de-progresso-com-comandos-em-shell-script-uma-abordagem-sincronizada "Integrando Barra de Progresso com Comandos em Shell Script: Uma Abordagem Sincronizada")
-        - [Captura de Nome Interativa com Validação](# "Captura de Nome Interativa com Validação")
+        - [Captura de Nome Interativa com Validação](#captura-de-nome-interativa-com-valida%C3%A7%C3%A3o "Captura de Nome Interativa com Validação")
         - [Validação de Senha no Shell Script: Garantindo Entrada Não Vazia](#valida%C3%A7%C3%A3o-de-senha-no-shell-script-garantindo-entrada-n%C3%A3o-vazia "Validação de Senha no Shell Script: Garantindo Entrada Não Vazia")
 
 ---
@@ -1162,6 +1162,7 @@ while true; do
         # Exibe uma mensagem de alerta se o campo estiver vazio
         dialog --msgbox "Informe o campo nome por favor!" 5 40
     else
+        clear
         # Se o campo nome não estiver vazio, exibe o nome e sai do loop
         echo "O seu nome é: $nome"
         break
