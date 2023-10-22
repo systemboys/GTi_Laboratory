@@ -40,7 +40,7 @@
         - [Integrando Barra de Progresso com Comandos em Shell Script: Uma Abordagem Sincronizada](#integrando-barra-de-progresso-com-comandos-em-shell-script-uma-abordagem-sincronizada "Integrando Barra de Progresso com Comandos em Shell Script: Uma Abordagem Sincronizada")
         - [Solicitação de Nome Interativa: Scripts com e sem Uso de Arquivos Temporários](#solicita%C3%A7%C3%A3o-de-nome-interativa-scripts-com-e-sem-uso-de-arquivos-tempor%C3%A1rios "Solicitação de Nome Interativa: Scripts com e sem Uso de Arquivos Temporários")
         - [Validação de Senha no Shell Script: Garantindo Entrada Não Vazia](#valida%C3%A7%C3%A3o-de-senha-no-shell-script-garantindo-entrada-n%C3%A3o-vazia "Validação de Senha no Shell Script: Garantindo Entrada Não Vazia")
-        - [Controle de Processos no Bash: Sinais e Dialog](# "Controle de Processos no Bash: Sinais e Dialog")
+        - [Controle de Processos no Bash: Sinais e Dialog](#controle-de-processos-no-bash-sinais-e-dialog "Controle de Processos no Bash: Sinais e Dialog")
 
 ---
 
@@ -1383,7 +1383,7 @@ Isso interromperá o script em execução da mesma forma que Ctrl+C faria.
 
 Por favor, note que isso é equivalente a pressionar Ctrl+C e pode interromper a execução do seu script imediatamente. Use com cuidado para não interromper processos importantes acidentalmente.
 
-**__Comportamento com o Dialog__**
+**_Comportamento com o Dialog_**
 
 > Foi colocado dentro de uma função, mas o "Dialog" não fechou após a linha "kill -SIGINT $$" ser executada.
 
