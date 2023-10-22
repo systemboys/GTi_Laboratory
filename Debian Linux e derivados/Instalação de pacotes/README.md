@@ -20,7 +20,7 @@
    - [Identificar e remover programas no Linux usando o comando dpkg e apt no terminal](#identificar-e-remover-programas-no-linux-usando-o-comando-dpkg-e-apt-no-terminal "Identificar e remover programas no Linux usando o comando dpkg e apt no terminal")
    - [Verificar nome correto de pacote no sistema Debian](#verificar-nome-correto-de-pacote-no-sistema-debian "Verificar nome correto de pacote no sistema Debian")
 - [Script de Instalação Automática de pacotes no Linux](#script-de-instala%C3%A7%C3%A3o-autom%C3%A1tica-de-pacotes-no-linux "Script de Instalação Automática de pacotes no Linux")
-    - [Script de Verificação de Privilégios de Superusuário](# "Script de Verificação de Privilégios de Superusuário")
+    - [Script de Verificação de Privilégios de Superusuário](#script-de-verifica%C3%A7%C3%A3o-de-privil%C3%A9gios-de-superusu%C3%A1rio "Script de Verificação de Privilégios de Superusuário")
    - [Verificação e Instalação Condicional de Programas em Scripts Bash](#verifica%C3%A7%C3%A3o-e-instala%C3%A7%C3%A3o-condicional-de-programas-em-scripts-bash "Verificação e Instalação Condicional de Programas em Scripts Bash")
    - [Verificação de Pacotes no Debian: dpkg](#verifica%C3%A7%C3%A3o-de-pacotes-no-debian-dpkg "Verificação de Pacotes no Debian: dpkg")
    - [Verificação de Instalação de software em Bash](#verifica%C3%A7%C3%A3o-de-instala%C3%A7%C3%A3o-de-software-em-bash "Verificação de Instalação de software em Bash")
