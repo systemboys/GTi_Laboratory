@@ -37,7 +37,7 @@
       - [Exibindo Data e Hora em Tempo Real em um Shell Script Bash](#exibindo-data-e-hora-em-tempo-real-em-um-shell-script-bash "Exibindo Data e Hora em Tempo Real em um Shell Script Bash")
     - [Criando Menus Interativos com Dialog no Debian Linux](#criando-menus-interativos-com-dialog-no-debian-linux "Criando Menus Interativos com Dialog no Debian Linux")
         - [Integrando Barra de Progresso com Comandos em Shell Script: Uma Abordagem Sincronizada](#integrando-barra-de-progresso-com-comandos-em-shell-script-uma-abordagem-sincronizada "Integrando Barra de Progresso com Comandos em Shell Script: Uma Abordagem Sincronizada")
-        - [Captura de Nome Interativa com Validação](#captura-de-nome-interativa-com-valida%C3%A7%C3%A3o "Captura de Nome Interativa com Validação")
+        - [Solicitação de Nome Interativa: Scripts com e sem Uso de Arquivos Temporários](#captura-de-nome-interativa-com-valida%C3%A7%C3%A3o "Solicitação de Nome Interativa: Scripts com e sem Uso de Arquivos Temporários")
         - [Validação de Senha no Shell Script: Garantindo Entrada Não Vazia](#valida%C3%A7%C3%A3o-de-senha-no-shell-script-garantindo-entrada-n%C3%A3o-vazia "Validação de Senha no Shell Script: Garantindo Entrada Não Vazia")
 
 ---
@@ -1142,9 +1142,13 @@ Neste script, a saída do `sudo apt-get update` é redirecionada para o arquivo 
 
 ---
 
-## Captura de Nome Interativa com Validação
+## Solicitação de Nome Interativa: Scripts com e sem Uso de Arquivos Temporários
 
 Aqui está o script modificado para exibir uma mensagem de alerta se o campo "Nome" for deixado em branco:
+
+No script seguinte, o usuário será solicitado novamente até que um nome não vazio seja fornecido. Se o campo for deixado em branco, a mensagem de alerta será exibida. Espero que isso ajude! Se precisar de mais alguma modificação ou ajuda com algo mais, sinta-se à vontade para perguntar.
+
+**_Com Uso do Arquivo "/tmp/nome.txt":_**
 
 ```bash
 #!/bin/bash
@@ -1170,7 +1174,58 @@ while true; do
 done
 ```
 
-Neste script, o usuário será solicitado novamente até que um nome não vazio seja fornecido. Se o campo for deixado em branco, a mensagem de alerta será exibida. Espero que isso ajude! Se precisar de mais alguma modificação ou ajuda com algo mais, sinta-se à vontade para perguntar.
+**_Sem Uso do Arquivo "/tmp/nome.txt":_**
+
+```bash
+#!/bin/bash
+
+# Loop para garantir que o usuário forneça um nome não vazio
+while true; do
+    # Solicita ao usuário que digite um nome usando o dialog
+    nome=$(dialog --inputbox 'Digite seu nome:' 0 0 3>&1 1>&2 2>&3)
+
+    # Verifica se o usuário pressionou Cancelar
+    if [ $? -ne 0 ]; then
+        # Exibe uma mensagem de alerta se o usuário pressionou Cancelar
+        dialog --msgbox "Você cancelou a operação. O campo nome é obrigatório." 5 50
+    elif [ -z "$nome" ]; then
+        # Verifica se o campo nome está vazio
+        # Exibe uma mensagem de alerta se o campo estiver vazio
+        dialog --msgbox "Informe o campo nome por favor!" 5 50
+    else
+        clear
+        # Se o campo nome não estiver vazio, exibe o nome e sai do loop
+        echo "O seu nome é: $nome"
+        break
+    fi
+done
+```
+
+Vamos entender a diferença entre os dois scripts e, em seguida, criar um título que englobe ambos.
+
+### Script com Uso do Arquivo "/tmp/nome.txt":
+
+1. **Solicitação do Nome:**
+   - Usa o comando `dialog --inputbox` para solicitar ao usuário que digite um nome.
+   - Salva o nome no arquivo temporário `/tmp/nome.txt`.
+
+2. **Leitura do Nome:**
+   - Lê o nome do arquivo temporário `/tmp/nome.txt`.
+   - Exibe o nome lido.
+
+3. **Consequência do Arquivo Temporário:**
+   - Usa um arquivo temporário para armazenar o nome temporariamente.
+   - Requer manipulação de arquivos e limpeza posterior do arquivo.
+
+### Script Sem Uso do Arquivo "/tmp/nome.txt":
+
+1. **Solicitação do Nome:**
+   - Usa o comando `dialog --inputbox` para solicitar ao usuário que digite um nome diretamente na variável `nome`.
+
+2. **Verificação e Exibição do Nome:**
+   - Verifica se o nome está vazio ou se o usuário pressionou Cancelar.
+   - Exibe uma mensagem de alerta se o nome está vazio ou se o usuário cancelou a operação.
+   - Se o nome não está vazio, exibe o nome.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
