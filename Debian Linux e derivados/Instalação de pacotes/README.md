@@ -40,6 +40,7 @@
         - [Integrando Barra de Progresso com Comandos em Shell Script: Uma Abordagem Sincronizada](#integrando-barra-de-progresso-com-comandos-em-shell-script-uma-abordagem-sincronizada "Integrando Barra de Progresso com Comandos em Shell Script: Uma Abordagem Sincronizada")
         - [Solicitação de Nome Interativa: Scripts com e sem Uso de Arquivos Temporários](#solicita%C3%A7%C3%A3o-de-nome-interativa-scripts-com-e-sem-uso-de-arquivos-tempor%C3%A1rios "Solicitação de Nome Interativa: Scripts com e sem Uso de Arquivos Temporários")
         - [Validação de Senha no Shell Script: Garantindo Entrada Não Vazia](#valida%C3%A7%C3%A3o-de-senha-no-shell-script-garantindo-entrada-n%C3%A3o-vazia "Validação de Senha no Shell Script: Garantindo Entrada Não Vazia")
+        - [Controle de Processos no Bash: Sinais e Dialog](# "Controle de Processos no Bash: Sinais e Dialog")
 
 ---
 
@@ -1354,6 +1355,64 @@ done
 ```
 
 Nesse script, o loop `while true` garante que o usuário forneça uma senha não vazia. Se o usuário pressionar Cancelar, ele será informado de que a operação foi cancelada. Se a senha estiver vazia, ele será informado de que a senha não pode ser vazia e solicitado a fornecer uma senha novamente. Somente quando uma senha não vazia é fornecida, o script exibirá a senha e sairá do loop.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Controle de Processos no Bash: Sinais e Dialog
+
+No Bash, você pode usar o comando `kill` para enviar sinais para processos. O sinal padrão para interromper a execução de um processo é o SIGINT, que é equivalente a pressionar Ctrl+C. Você pode usar o comando `kill` para enviar esse sinal para um processo específico.
+
+Por exemplo, suponha que você tenha um processo com o ID 12345 e deseje interrompê-lo, você pode usar o comando:
+
+```bash
+kill -SIGINT 12345
+```
+
+Isso enviará um sinal SIGINT para o processo com o ID 12345, que tem o mesmo efeito que pressionar Ctrl+C no terminal.
+
+Se você está tentando interromper o próprio script que está em execução, você pode usar o comando `$$` para obter o ID do processo do script em execução e enviar o sinal SIGINT para ele:
+
+```bash
+kill -SIGINT $$
+```
+
+Isso interromperá o script em execução da mesma forma que Ctrl+C faria.
+
+Por favor, note que isso é equivalente a pressionar Ctrl+C e pode interromper a execução do seu script imediatamente. Use com cuidado para não interromper processos importantes acidentalmente.
+
+**__Comportamento com o Dialog__**
+
+> Foi colocado dentro de uma função, mas o "Dialog" não fechou após a linha "kill -SIGINT $$" ser executada.
+
+O comportamento que você está experimentando pode estar relacionado ao contexto em que o `dialog` está sendo executado. O `dialog` geralmente lida bem com os sinais quando é chamado em processos em segundo plano ou em subshells. No entanto, dependendo do contexto em que é usado, pode ser necessário fazer algumas manipulações.
+
+Uma abordagem alternativa seria usar o comando `pkill` para enviar o sinal SIGINT para o próprio script. Aqui está como você poderia fazer isso:
+
+```bash
+# Função para deletar o kernel Linux
+DeleteQuickLinux() {
+    (
+        echo "10" ; sleep 1
+        echo "30" ; sleep 1
+        echo "50" ; sleep 1
+        echo "70" ; sleep 1
+        echo "100" ; sleep 1
+    ) | dialog --title "Deletando QuickLinux" --gauge "Aguarde, deletando QuickLinux..." 10 70 0
+    clear
+    cd ../../..
+    rm -rf QuickLinux
+    clear
+    dialog --msgbox 'O QuickLinux foi totalmente apagado. Adeus!' 6 40
+    pkill -SIGINT -f "$(basename "$0")"
+}
+```
+
+Nesse caso, `pkill -SIGINT -f "$(basename "$0")"` irá enviar o sinal SIGINT para o processo que está executando o script atual, garantindo que o `dialog` e qualquer outra execução subsequente sejam interrompidos.
+
+Certifique-se de testar essa abordagem para garantir que funcione conforme esperado no seu ambiente específico.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
