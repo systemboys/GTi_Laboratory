@@ -35,7 +35,7 @@
       - [Verificando e Executando Comandos Baseado na Existência de Diretórios no Debian Linux](#verificando-e-executando-comandos-baseado-na-exist%C3%AAncia-de-diret%C3%B3rios-no-debian-linux "Verificando e Executando Comandos Baseado na Existência de Diretórios no Debian Linux")
       - [Passando Variáveis entre Scripts Bash no Linux](#passando-vari%C3%A1veis-entre-scripts-bash-no-linux "Passando Variáveis entre Scripts Bash no Linux")
       - [Exibindo Data e Hora em Tempo Real em um Shell Script Bash](#exibindo-data-e-hora-em-tempo-real-em-um-shell-script-bash "Exibindo Data e Hora em Tempo Real em um Shell Script Bash")
-      - [Símbolos Unicode e Seus Códigos Correspondentes](# "Símbolos Unicode e Seus Códigos Correspondentes")
+      - [Símbolos Unicode e Seus Códigos Correspondentes](#s%C3%ADmbolos-unicode-e-seus-c%C3%B3digos-correspondentes "Símbolos Unicode e Seus Códigos Correspondentes")
     - [Criando Menus Interativos com Dialog no Debian Linux](#criando-menus-interativos-com-dialog-no-debian-linux "Criando Menus Interativos com Dialog no Debian Linux")
         - [Integrando Barra de Progresso com Comandos em Shell Script: Uma Abordagem Sincronizada](#integrando-barra-de-progresso-com-comandos-em-shell-script-uma-abordagem-sincronizada "Integrando Barra de Progresso com Comandos em Shell Script: Uma Abordagem Sincronizada")
         - [Solicitação de Nome Interativa: Scripts com e sem Uso de Arquivos Temporários](#solicita%C3%A7%C3%A3o-de-nome-interativa-scripts-com-e-sem-uso-de-arquivos-tempor%C3%A1rios "Solicitação de Nome Interativa: Scripts com e sem Uso de Arquivos Temporários")
