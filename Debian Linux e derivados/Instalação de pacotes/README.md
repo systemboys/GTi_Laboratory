@@ -37,6 +37,7 @@
       - [Exibindo Data e Hora em Tempo Real em um Shell Script Bash](#exibindo-data-e-hora-em-tempo-real-em-um-shell-script-bash "Exibindo Data e Hora em Tempo Real em um Shell Script Bash")
     - [Criando Menus Interativos com Dialog no Debian Linux](#criando-menus-interativos-com-dialog-no-debian-linux "Criando Menus Interativos com Dialog no Debian Linux")
         - [Integrando Barra de Progresso com Comandos em Shell Script: Uma Abordagem Sincronizada](#integrando-barra-de-progresso-com-comandos-em-shell-script-uma-abordagem-sincronizada "Integrando Barra de Progresso com Comandos em Shell Script: Uma Abordagem Sincronizada")
+        - [Captura de Nome Interativa com Validação](# "Captura de Nome Interativa com Validação")
         - [Validação de Senha no Shell Script: Garantindo Entrada Não Vazia](#valida%C3%A7%C3%A3o-de-senha-no-shell-script-garantindo-entrada-n%C3%A3o-vazia "Validação de Senha no Shell Script: Garantindo Entrada Não Vazia")
 
 ---
@@ -1135,6 +1136,40 @@ update_packages() {
 > **_( ! )_** O teste que fiz (Marcos Aurélio) não deu certo, tenho que melhorar este script!
 
 Neste script, a saída do `sudo apt-get update` é redirecionada para o arquivo temporário `/tmp/apt_progress`. O script então lê este arquivo, calcula o progresso como uma porcentagem do total de linhas e atualiza a barra de progresso em conformidade. Quando a atualização estiver completa, o arquivo temporário é removido e uma caixa de mensagem informa que os pacotes foram atualizados.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Captura de Nome Interativa com Validação
+
+Aqui está o script modificado para exibir uma mensagem de alerta se o campo "Nome" for deixado em branco:
+
+```bash
+#!/bin/bash
+
+# Loop para garantir que o usuário forneça um nome não vazio
+while true; do
+    # Solicita ao usuário que digite um nome usando o dialog
+    dialog --inputbox 'Digite seu nome:' 0 0 2>/tmp/nome.txt
+
+    # Lê o nome do arquivo temporário
+    nome=$(cat /tmp/nome.txt)
+
+    # Verifica se o campo nome está vazio
+    if [ -z "$nome" ]; then
+        # Exibe uma mensagem de alerta se o campo estiver vazio
+        dialog --msgbox "Informe o campo nome por favor!" 5 40
+    else
+        # Se o campo nome não estiver vazio, exibe o nome e sai do loop
+        echo "O seu nome é: $nome"
+        break
+    fi
+done
+```
+
+Neste script, o usuário será solicitado novamente até que um nome não vazio seja fornecido. Se o campo for deixado em branco, a mensagem de alerta será exibida. Espero que isso ajude! Se precisar de mais alguma modificação ou ajuda com algo mais, sinta-se à vontade para perguntar.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
