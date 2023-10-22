@@ -1394,14 +1394,9 @@ Uma abordagem alternativa seria usar o comando `pkill` para enviar o sinal SIGIN
 ```bash
 # Função para deletar o kernel Linux
 DeleteQuickLinux() {
-    (
-        echo "10" ; sleep 1
-        echo "30" ; sleep 1
-        echo "50" ; sleep 1
-        echo "70" ; sleep 1
-        echo "100" ; sleep 1
-    ) | dialog --title "Deletando QuickLinux" --gauge "Aguarde, deletando QuickLinux..." 10 70 0
-    clear
+
+    # Trecho de código...
+
     cd ../../..
     rm -rf QuickLinux
     clear
