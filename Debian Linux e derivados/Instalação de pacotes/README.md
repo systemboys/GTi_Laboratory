@@ -996,7 +996,6 @@ Neste exemplo, `%H:%M:%S` é um formato para extrair a hora (`%H`) os minutos (`
 
 Aqui está a tabela com alguns exemplos de símbolos Unicode, seus códigos e descrições:
 
-```markdown
 | Símbolo | Código | Descrição |
 | :------ | :----- | :-------- |
 | ®       | \u24C7 | Registrado |
@@ -1010,7 +1009,6 @@ Aqui está a tabela com alguns exemplos de símbolos Unicode, seus códigos e de
 | §       | \u00A7 | Seção |
 | ×       | \u00D7 | Multiplicação |
 | ÷       | \u00F7 | Divisão |
-```
 
 Esses são apenas alguns exemplos; existem muitos outros símbolos Unicode disponíveis.
 
