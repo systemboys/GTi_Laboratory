@@ -20,13 +20,13 @@
    - [Identificar e remover programas no Linux usando o comando dpkg e apt no terminal](#identificar-e-remover-programas-no-linux-usando-o-comando-dpkg-e-apt-no-terminal "Identificar e remover programas no Linux usando o comando dpkg e apt no terminal")
    - [Verificar nome correto de pacote no sistema Debian](#verificar-nome-correto-de-pacote-no-sistema-debian "Verificar nome correto de pacote no sistema Debian")
 - [Script de Instalação Automática de pacotes no Linux](#script-de-instala%C3%A7%C3%A3o-autom%C3%A1tica-de-pacotes-no-linux "Script de Instalação Automática de pacotes no Linux")
+    - [A Importância do Cabeçalho no Shell Script: Clareza, Documentação e Boas Práticas](#a-import%C3%A2ncia-do-cabe%C3%A7alho-no-shell-script-clareza-documenta%C3%A7%C3%A3o-e-boas-pr%C3%A1ticas "A Importância do Cabeçalho no Shell Script: Clareza, Documentação e Boas Práticas")
     - [Script de Verificação de Privilégios de Superusuário](#script-de-verifica%C3%A7%C3%A3o-de-privil%C3%A9gios-de-superusu%C3%A1rio "Script de Verificação de Privilégios de Superusuário")
    - [Verificação e Instalação Condicional de Programas em Scripts Bash](#verifica%C3%A7%C3%A3o-e-instala%C3%A7%C3%A3o-condicional-de-programas-em-scripts-bash "Verificação e Instalação Condicional de Programas em Scripts Bash")
    - [Verificação de Pacotes no Debian: dpkg](#verifica%C3%A7%C3%A3o-de-pacotes-no-debian-dpkg "Verificação de Pacotes no Debian: dpkg")
    - [Verificação de Instalação de software em Bash](#verifica%C3%A7%C3%A3o-de-instala%C3%A7%C3%A3o-de-software-em-bash "Verificação de Instalação de software em Bash")
    - [Verificando a Existência do Diretório em /opt/](#verificando-a-exist%C3%AAncia-do-diret%C3%B3rio-em-opt "Verificando a Existência do Diretório em /opt/")
    - [Menu de Instalação de Programas no Terminal Linux](#menu-de-instala%C3%A7%C3%A3o-de-programas-no-terminal-linux "Menu de Instalação de Programas no Terminal Linux")
-      - [A Importância do Cabeçalho no Shell Script: Clareza, Documentação e Boas Práticas](# "A Importância do Cabeçalho no Shell Script: Clareza, Documentação e Boas Práticas")
       - [Personalizando Cores de Texto em Scripts Bash: Uma Introdução aos Códigos de Escape ANSI](#personalizando-cores-de-texto-em-scripts-bash-uma-introdu%C3%A7%C3%A3o-aos-c%C3%B3digos-de-escape-ansi "Personalizando Cores de Texto em Scripts Bash: Uma Introdução aos Códigos de Escape ANSI")
       - [Personalizando o Plano de Fundo no Terminal Linux: Como Alterar o Fundo dos Textos em Scripts Bash](#personalizando-o-plano-de-fundo-no-terminal-linux-como-alterar-o-fundo-dos-textos-em-scripts-bash "Personalizando o Plano de Fundo no Terminal Linux: Como Alterar o Fundo dos Textos em Scripts Bash")
       - [Explorando Cores no Bash: Uma Paleta de Possibilidades](#explorando-cores-no-bash-uma-paleta-de-possibilidades "Explorando Cores no Bash: Uma Paleta de Possibilidades")
@@ -459,6 +459,62 @@ Depois de usar o AnyDesk, você pode remover o script se desejar, já que ele é
 
 ---
 
+## A Importância do Cabeçalho no Shell Script: Clareza, Documentação e Boas Práticas
+
+Segue abaixo um exemplo de **_comentário de cabeçalho_** ou **_bloco de comentário_**:
+
+```bash
+#!/bin/bash
+#
+# docker-control.sh - Executa o menu Docker Control
+#
+# URL https://github.com/systemboys/GTi_SiS_Float_Away_6_dev.git
+# Autor: Marcos Aurélio R. da Silva <systemboys@hotmail.com>
+# Manutenção: Marcos Aurélio R. da Silva <systemboys@hotmail.com>
+#
+# ---------------------------------------------------------------
+# Este programa tem a finadade de facilitar na construção Docker
+# Conteiners e levantar as aplicações no projeto envolvido.
+# ---------------------------------------------------------------
+# Histórico:
+# v1.0 2023-10-17 às 11h30, Marcos Aurélio:
+#   - Versão inicial, menu de controle para construção Docker Conteiner
+# v1.1 2023-10-17 às 22h30, Marcos Aurélio:
+#   - Testes de construção Docker Conteiner
+# v1.2 2023-10-24 às 23h00, Marcos Aurélio:
+#   - Otimizando espaço em disco, na função comentada como "Subir nova versão"
+#     uploadNewVersion() {...}
+#
+# Licença: GPL.
+
+clear
+
+# Resto do script...
+```
+
+O cabeçalho colocado no início do seu script Shell é chamado de **comentário de cabeçalho** ou **bloco de comentário**. Ele é uma prática muito boa ao escrever scripts (e, de fato, qualquer código). Aqui estão algumas razões pelas quais é importante ter tais informações no cabeçalho de um programa:
+
+1. **Documentação**: O cabeçalho fornece uma documentação clara sobre o que o script faz, quem o escreveu, quando foi escrito e quaisquer outras informações relevantes. Isso é especialmente útil para outras pessoas (ou você mesmo no futuro) que possam precisar entender ou modificar o script.
+
+2. **Rastreabilidade**: O cabeçalho inclui informações sobre quem escreveu o script e quando. Isso pode ser útil para rastrear alterações e fazer perguntas sobre o código quando surgirem problemas ou dúvidas no futuro.
+
+3. **Colaboração**: Se você está trabalhando em um projeto com outras pessoas, ou mesmo se você compartilha seu código em um repositório público como o GitHub, um cabeçalho claro e informativo facilita a colaboração. Outros desenvolvedores podem entender facilmente o propósito do script e como usá-lo ou contribuir para ele.
+
+4. **Licença**: O cabeçalho muitas vezes inclui informações sobre a licença sob a qual o código é distribuído. Isso é crucial para garantir que as pessoas saibam quais são seus direitos ao usar ou modificar o script.
+
+5. **Manutenção**: Quando você olha para um script que escreveu há meses ou anos, pode ser difícil lembrar exatamente o que ele faz e por que foi escrito daquela forma específica. Um cabeçalho bem documentado ajuda a entender o contexto e a intenção por trás do código.
+
+6. **Padrão de Codificação**: Em muitos projetos e organizações, um formato específico de cabeçalho é um padrão de codificação. Isso garante consistência em toda a base de código e facilita a leitura e a compreensão por parte de todos os desenvolvedores envolvidos.
+
+7. **Boas Práticas Profissionais**: Mostra que você está seguindo boas práticas de desenvolvimento, o que é algo valorizado na comunidade de desenvolvimento de software profissional.
+
+Lembre-se, a clareza e a documentação são sempre valiosas quando se trata de programação. O uso de comentários informativos, como no cabeçalho que você mostrou, é uma maneira fundamental de alcançar essas metas.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
 ## Script de Verificação de Privilégios de Superusuário
 
 ```bash
@@ -701,62 +757,6 @@ Neste script para Linux:
 Lembre-se de tornar o arquivo `menu_instalacao.sh` executável antes de usá-lo com o comando `chmod +x menu_instalacao.sh`.
 
 Certifique-se de substituir o URL de download pelo URL real do arquivo de instalação e ajuste o script conforme necessário para outras operações de instalação ou personalizações que você precise.
-
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
-
----
-
-## A Importância do Cabeçalho no Shell Script: Clareza, Documentação e Boas Práticas
-
-Segue abaixo um exemplo de **_comentário de cabeçalho_** ou **_bloco de comentário_**:
-
-```bash
-#!/bin/bash
-#
-# docker-control.sh - Executa o menu Docker Control
-#
-# URL https://github.com/systemboys/GTi_SiS_Float_Away_6_dev.git
-# Autor: Marcos Aurélio R. da Silva <systemboys@hotmail.com>
-# Manutenção: Marcos Aurélio R. da Silva <systemboys@hotmail.com>
-#
-# ---------------------------------------------------------------
-# Este programa tem a finadade de facilitar na construção Docker
-# Conteiners e levantar as aplicações no projeto envolvido.
-# ---------------------------------------------------------------
-# Histórico:
-# v1.0 2023-10-17 às 11h30, Marcos Aurélio:
-#   - Versão inicial, menu de controle para construção Docker Conteiner
-# v1.1 2023-10-17 às 22h30, Marcos Aurélio:
-#   - Testes de construção Docker Conteiner
-# v1.2 2023-10-24 às 23h00, Marcos Aurélio:
-#   - Otimizando espaço em disco, na função comentada como "Subir nova versão"
-#     uploadNewVersion() {...}
-#
-# Licença: GPL.
-
-clear
-
-# Resto do script...
-```
-
-O cabeçalho colocado no início do seu script Shell é chamado de **comentário de cabeçalho** ou **bloco de comentário**. Ele é uma prática muito boa ao escrever scripts (e, de fato, qualquer código). Aqui estão algumas razões pelas quais é importante ter tais informações no cabeçalho de um programa:
-
-1. **Documentação**: O cabeçalho fornece uma documentação clara sobre o que o script faz, quem o escreveu, quando foi escrito e quaisquer outras informações relevantes. Isso é especialmente útil para outras pessoas (ou você mesmo no futuro) que possam precisar entender ou modificar o script.
-
-2. **Rastreabilidade**: O cabeçalho inclui informações sobre quem escreveu o script e quando. Isso pode ser útil para rastrear alterações e fazer perguntas sobre o código quando surgirem problemas ou dúvidas no futuro.
-
-3. **Colaboração**: Se você está trabalhando em um projeto com outras pessoas, ou mesmo se você compartilha seu código em um repositório público como o GitHub, um cabeçalho claro e informativo facilita a colaboração. Outros desenvolvedores podem entender facilmente o propósito do script e como usá-lo ou contribuir para ele.
-
-4. **Licença**: O cabeçalho muitas vezes inclui informações sobre a licença sob a qual o código é distribuído. Isso é crucial para garantir que as pessoas saibam quais são seus direitos ao usar ou modificar o script.
-
-5. **Manutenção**: Quando você olha para um script que escreveu há meses ou anos, pode ser difícil lembrar exatamente o que ele faz e por que foi escrito daquela forma específica. Um cabeçalho bem documentado ajuda a entender o contexto e a intenção por trás do código.
-
-6. **Padrão de Codificação**: Em muitos projetos e organizações, um formato específico de cabeçalho é um padrão de codificação. Isso garante consistência em toda a base de código e facilita a leitura e a compreensão por parte de todos os desenvolvedores envolvidos.
-
-7. **Boas Práticas Profissionais**: Mostra que você está seguindo boas práticas de desenvolvimento, o que é algo valorizado na comunidade de desenvolvimento de software profissional.
-
-Lembre-se, a clareza e a documentação são sempre valiosas quando se trata de programação. O uso de comentários informativos, como no cabeçalho que você mostrou, é uma maneira fundamental de alcançar essas metas.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
