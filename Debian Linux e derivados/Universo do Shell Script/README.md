@@ -164,7 +164,7 @@ lastVersion=$(grep -o 'v[0-9]\+\.[0-9]\+' "$0" | tail -n 1)
 echo "A última versão registrada no script é: $lastVersion"
 ```
 
-Neste exemplo, `"$0"` refere-se ao próprio script em execução. O comando `grep -o 'v[0-9]\+\.[0-9]\+' "$0"` procura por padrões do tipo "v1.0" no script e `tail -n 1` pega apenas a última ocorrência (a última versão registrada). O número da versão é armazenado na variável `ultima_versao`.
+Neste exemplo, `"$0"` refere-se ao próprio script em execução. O comando `grep -o 'v[0-9]\+\.[0-9]\+' "$0"` procura por padrões do tipo "v1.0" no script e `tail -n 1` pega apenas a última ocorrência (a última versão registrada). O número da versão é armazenado na variável `lastVersion`.
 
 Certifique-se de que o padrão da versão no seu script corresponda ao padrão utilizado na expressão regular. Você pode ajustar a expressão regular conforme necessário para corresponder ao seu formato de versão específico.
 
