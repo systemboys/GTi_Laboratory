@@ -2,7 +2,7 @@
 
 ## Git e GitHub
 
-![Imagem 1](https://site.com/img/exemplo.png "Imagem 1")
+![Git e GitHub](./images/git-e-github.jpeg "Git e GitHub")
 
 ### *Sumário*
 
