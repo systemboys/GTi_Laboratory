@@ -466,7 +466,7 @@ Segue abaixo um exemplo de **_comentário de cabeçalho_** ou **_bloco de coment
 ```bash
 #!/bin/bash
 #
-# docker-control.sh - Executa o menu Docker Control
+# docker-control.sh - Executa o menu Docker Control.
 #
 # URL: https://github.com/systemboys/GTi_SiS_Float_Away_6_dev.git
 # Autor: Marcos Aurélio R. da Silva <systemboys@hotmail.com>
@@ -478,11 +478,11 @@ Segue abaixo um exemplo de **_comentário de cabeçalho_** ou **_bloco de coment
 # ---------------------------------------------------------------
 # Histórico:
 # v1.0 2023-10-17 às 11h30, Marcos Aurélio:
-#   - Versão inicial, menu de controle para construção Docker Conteiner
+#   - Versão inicial, menu de controle para construção Docker Conteiner.
 # v1.1 2023-10-17 às 22h30, Marcos Aurélio:
-#   - Testes de construção Docker Conteiner
+#   - Testes de construção Docker Conteiner.
 # v1.2 2023-10-24 às 23h00, Marcos Aurélio:
-#   - Otimizando espaço em disco, na função comentada como "Subir nova versão"
+#   - Otimizando espaço em disco, na função comentada como "Subir nova versão".
 #     uploadNewVersion() {...}
 #
 # Licença: GPL.
