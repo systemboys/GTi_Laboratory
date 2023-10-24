@@ -21,6 +21,7 @@
    - [Verificar nome correto de pacote no sistema Debian](#verificar-nome-correto-de-pacote-no-sistema-debian "Verificar nome correto de pacote no sistema Debian")
 - [Script de Instalação Automática de pacotes no Linux](#script-de-instala%C3%A7%C3%A3o-autom%C3%A1tica-de-pacotes-no-linux "Script de Instalação Automática de pacotes no Linux")
     - [A Importância do Cabeçalho no Shell Script: Clareza, Documentação e Boas Práticas](#a-import%C3%A2ncia-do-cabe%C3%A7alho-no-shell-script-clareza-documenta%C3%A7%C3%A3o-e-boas-pr%C3%A1ticas "A Importância do Cabeçalho no Shell Script: Clareza, Documentação e Boas Práticas")
+    - [Obtendo a Última Versão do Script a partir dos Comentários](# "Obtendo a Última Versão do Script a partir dos Comentários")
     - [Script de Verificação de Privilégios de Superusuário](#script-de-verifica%C3%A7%C3%A3o-de-privil%C3%A9gios-de-superusu%C3%A1rio "Script de Verificação de Privilégios de Superusuário")
    - [Verificação e Instalação Condicional de Programas em Scripts Bash](#verifica%C3%A7%C3%A3o-e-instala%C3%A7%C3%A3o-condicional-de-programas-em-scripts-bash "Verificação e Instalação Condicional de Programas em Scripts Bash")
    - [Verificação de Pacotes no Debian: dpkg](#verifica%C3%A7%C3%A3o-de-pacotes-no-debian-dpkg "Verificação de Pacotes no Debian: dpkg")
@@ -509,6 +510,39 @@ O cabeçalho colocado no início do seu script Shell é chamado de **comentário
 7. **Boas Práticas Profissionais**: Mostra que você está seguindo boas práticas de desenvolvimento, o que é algo valorizado na comunidade de desenvolvimento de software profissional.
 
 Lembre-se, a clareza e a documentação são sempre valiosas quando se trata de programação. O uso de comentários informativos, como no cabeçalho que você mostrou, é uma maneira fundamental de alcançar essas metas.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Obtendo a Última Versão do Script a partir dos Comentários
+
+Você pode obter o número da versão do último comentário no script usando expressões regulares (regex) no Bash. Aqui está um exemplo de como você pode fazer isso:
+
+```bash
+#!/bin/bash
+
+# Histórico:
+# v1.0 2023-10-17 às 11h30, Marcos Aurélio:
+#   - Versão inicial, menu de controle para construção Docker Conteiner.
+# v1.1 2023-10-17 às 22h30, Marcos Aurélio:
+#   - Testes de construção Docker Conteiner.
+# v1.2 2023-10-24 às 23h00, Marcos Aurélio:
+#   - Otimizando espaço em disco, na função comentada como "Subir nova versão".
+#     uploadNewVersion() {...}
+#
+# Licença: GPL.
+
+# Obtém o número da última versão do histórico do script
+lastVersion=$(grep -o 'v[0-9]\+\.[0-9]\+' "$0" | tail -n 1)
+
+echo "A última versão registrada no script é: $lastVersion"
+```
+
+Neste exemplo, `"$0"` refere-se ao próprio script em execução. O comando `grep -o 'v[0-9]\+\.[0-9]\+' "$0"` procura por padrões do tipo "v1.0" no script e `tail -n 1` pega apenas a última ocorrência (a última versão registrada). O número da versão é armazenado na variável `ultima_versao`.
+
+Certifique-se de que o padrão da versão no seu script corresponda ao padrão utilizado na expressão regular. Você pode ajustar a expressão regular conforme necessário para corresponder ao seu formato de versão específico.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
