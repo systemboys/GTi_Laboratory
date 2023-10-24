@@ -6,7 +6,7 @@
 
 ### *Sumário*
 
-- [Resolução de Conflitos no Git: Atualizando o Repositório Local e Lidando com Erros de Push](https://site.com#anchor-link-1 "Resolução de Conflitos no Git: Atualizando o Repositório Local e Lidando com Erros de Push")
+- [Resolução de Conflitos no Git: Atualizando o Repositório Local e Lidando com Erros de Push](#resolu%C3%A7%C3%A3o-de-conflitos-no-git-atualizando-o-reposit%C3%B3rio-local-e-lidando-com-erros-de-push "Resolução de Conflitos no Git: Atualizando o Repositório Local e Lidando com Erros de Push")
 
 ---
 
