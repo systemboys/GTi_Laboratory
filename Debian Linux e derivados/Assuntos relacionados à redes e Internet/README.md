@@ -9,6 +9,7 @@
 - [Entendendo o comando nslookup e a resolução de DNS no Linux (obtendo IP de domínios)](#entendendo-o-comando-nslookup-e-a-resolu%C3%A7%C3%A3o-de-dns-no-linux-obtendo-ip-de-dom%C3%ADnios "Entendendo o comando nslookup e a resolução de DNS no Linux (obtendo IP de domínios)")
 - [Como Configurar um IP Estático via Terminal no Linux](#como-configurar-um-ip-est%C3%A1tico-via-terminal-no-linux "Como Configurar um IP Estático via Terminal no Linux")
 - [Configurando Temporariamente uma Rede no Linux via Terminal](#configurando-temporariamente-uma-rede-no-linux-via-terminal "Configurando Temporariamente uma Rede no Linux via Terminal")
+- [Dominando as Configurações de Rede no Linux: Um Guia Abrangente para Iniciantes](# "Dominando as Configurações de Rede no Linux: Um Guia Abrangente para Iniciantes")
 
 ---
 
@@ -111,6 +112,70 @@ sudo route add default gw seu_gateway
 Substitua "seu_ip", "eth0", "sua_mascara" e "seu_gateway" pelos valores apropriados.
 
 Essas configurações serão válidas até o próximo reinício do sistema. Se você deseja tornar a configuração permanente, siga as instruções fornecidas na resposta anterior para configurar um IP estático.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Dominando as Configurações de Rede no Linux: Um Guia Abrangente para Iniciantes
+
+> Tutorial para alterar configurações de rede através do Terminal Linux:
+
+---
+
+**Alterando Configurações de Rede no Linux: Um Guia Passo a Passo**
+
+O Linux oferece a flexibilidade de gerenciar suas configurações de rede diretamente pelo terminal. Este guia passo a passo ajudará você a modificar configurações como IP, máscara de sub-rede, gateway e servidores DNS.
+
+**1º Passo: Identificar e Interromper Interfaces de Rede**
+
+Antes de alterar qualquer configuração, é crucial identificar as interfaces de rede instaladas. Você pode fazer isso usando o comando `ifconfig`. Por exemplo:
+
+```bash
+ifconfig
+```
+
+Identifique sua interface (por exemplo, `eth0` para Ethernet) e interrompa sua instância:
+
+```bash
+sudo ifconfig eth0 down
+```
+
+**2º Passo: Configurar IP, Máscara de Sub-rede e Gateway**
+
+Configure o IP e a máscara de sub-rede para a interface desejada (substitua `eth0` pelo nome da sua interface, `192.168.14.35` pelo IP desejado e `255.255.255.0` pela máscara de sub-rede):
+
+```bash
+sudo ifconfig eth0 192.168.14.35 netmask 255.255.255.0 up
+```
+
+Adicione o gateway (substitua `192.168.14.1` pelo IP do seu gateway):
+
+```bash
+sudo route add default gw 192.168.14.1 eth0
+```
+
+**3º Passo: Configurar Servidores DNS**
+
+Edite o arquivo `/etc/resolv.conf` para configurar seus servidores DNS. Use um editor de texto como `nano`:
+
+```bash
+sudo nano /etc/resolv.conf
+```
+
+Adicione suas configurações DNS:
+
+```plaintext
+nameserver 192.168.14.1
+nameserver 192.168.1.1
+```
+
+Pressione `Ctrl + O` para salvar e `Ctrl + X` para sair no Nano.
+
+---
+
+> Este tutorial oferece uma visão clara e concisa do processo de modificação das configurações de rede no Linux, permitindo que você ajuste sua conexão de acordo com suas necessidades.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
