@@ -31,6 +31,7 @@
     - [Validação de Senha no Shell Script: Garantindo Entrada Não Vazia](#valida%C3%A7%C3%A3o-de-senha-no-shell-script-garantindo-entrada-n%C3%A3o-vazia "Validação de Senha no Shell Script: Garantindo Entrada Não Vazia")
     - [Controle de Processos no Bash: Sinais e Dialog](#controle-de-processos-no-bash-sinais-e-dialog "Controle de Processos no Bash: Sinais e Dialog")
 - [Instalando Programas no Linux: O Poder do cURL e Bash](#instalando-programas-no-linux-o-poder-do-curl-e-bash "Instalando Programas no Linux: O Poder do cURL e Bash")
+- [Executando Shell Scripts do GitHub via cURL: Automatizando Instalações Remotas com Segurança](# "Executando Shell Scripts do GitHub via cURL: Automatizando Instalações Remotas com Segurança")
 
 ---
 
@@ -1143,6 +1144,35 @@ O comando `curl -fsSL https://get.docker.com | bash` é o exemplo nesse caso, é
 Portanto, o que está acontecendo é que o `curl` está baixando um script diretamente da URL especificada, e o `bash` está executando esse script imediatamente. Isso é útil para scripts de instalação e configuração, pois permite que os usuários executem o processo de instalação com um único comando, sem ter que baixar manualmente o script e depois executá-lo separadamente.
 
 No entanto, esta abordagem também tem riscos de segurança. Você está basicamente executando um script do qual não tem controle total, baixado da internet. É por isso que muitas pessoas e organizações recomendam revisar cuidadosamente os scripts antes de executá-los dessa maneira, especialmente em ambientes de produção, para garantir que não contenham código malicioso.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Executando Shell Scripts do GitHub via cURL: Automatizando Instalações Remotas com Segurança
+
+Para executar um Shell Script diretamente de um repositório GitHub, você pode usar o `curl` para baixar o arquivo e então executá-lo. Aqui está um exemplo de como você poderia fazer isso:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/systemboys/QuickLinux/main/QuickLinux.sh | bash
+```
+
+Neste comando:
+
+- `curl -fsSL` é usado para baixar o arquivo do GitHub. O parâmetro `-fsSL` significa o seguinte:
+  - `-f`: Falha silenciosa para erros HTTP (não imprime mensagens de erro).
+  - `-s`: Modo silencioso (não mostra barras de progresso ou mensagens de status).
+  - `-S`: Mostra erros se ocorrerem.
+  - `-L`: Seguir redirecionamentos, caso o link seja redirecionado para outro local.
+
+- `https://raw.githubusercontent.com/systemboys/QuickLinux/main/QuickLinux.sh` é o URL direto para o arquivo Shell Script no repositório GitHub.
+
+- `| bash` encadeia a saída do `curl` para o shell, executando assim o script.
+
+Certifique-se de que o arquivo Shell Script (`QuickLinux.sh` no seu caso) tenha permissões de execução para que possa ser executado após ser baixado. Você já mencionou que atribuiu as permissões de execução usando `chmod +x QuickLinux.sh`, então isso deve estar configurado corretamente.
+
+Lembre-se de que executar scripts diretamente do cURL desta forma tem riscos de segurança, pois você está executando código remoto no seu sistema. Portanto, só faça isso com scripts de fontes confiáveis.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
