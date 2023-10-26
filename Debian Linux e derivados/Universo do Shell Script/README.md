@@ -31,7 +31,7 @@
     - [Validação de Senha no Shell Script: Garantindo Entrada Não Vazia](#valida%C3%A7%C3%A3o-de-senha-no-shell-script-garantindo-entrada-n%C3%A3o-vazia "Validação de Senha no Shell Script: Garantindo Entrada Não Vazia")
     - [Controle de Processos no Bash: Sinais e Dialog](#controle-de-processos-no-bash-sinais-e-dialog "Controle de Processos no Bash: Sinais e Dialog")
 - [Instalando Programas no Linux: O Poder do cURL e Bash](#instalando-programas-no-linux-o-poder-do-curl-e-bash "Instalando Programas no Linux: O Poder do cURL e Bash")
-- [Executando Shell Scripts do GitHub via cURL: Automatizando Instalações Remotas com Segurança](# "Executando Shell Scripts do GitHub via cURL: Automatizando Instalações Remotas com Segurança")
+- [Executando Shell Scripts do GitHub via cURL: Automatizando Instalações Remotas com Segurança](#executando-shell-scripts-do-github-via-curl-automatizando-instala%C3%A7%C3%B5es-remotas-com-seguran%C3%A7a "Executando Shell Scripts do GitHub via cURL: Automatizando Instalações Remotas com Segurança")
 
 ---
 
