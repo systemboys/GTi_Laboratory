@@ -30,6 +30,7 @@
     - [Solicitação de Nome Interativa: Scripts com e sem Uso de Arquivos Temporários](#solicita%C3%A7%C3%A3o-de-nome-interativa-scripts-com-e-sem-uso-de-arquivos-tempor%C3%A1rios "Solicitação de Nome Interativa: Scripts com e sem Uso de Arquivos Temporários")
     - [Validação de Senha no Shell Script: Garantindo Entrada Não Vazia](#valida%C3%A7%C3%A3o-de-senha-no-shell-script-garantindo-entrada-n%C3%A3o-vazia "Validação de Senha no Shell Script: Garantindo Entrada Não Vazia")
     - [Controle de Processos no Bash: Sinais e Dialog](#controle-de-processos-no-bash-sinais-e-dialog "Controle de Processos no Bash: Sinais e Dialog")
+    - [Passando informação via campo de texto e retornando resultados em janela de Dialog](# "Passando informação via campo de texto e retornando resultados em janela de Dialog")
 - [Instalando Programas no Linux: O Poder do cURL e Bash](#instalando-programas-no-linux-o-poder-do-curl-e-bash "Instalando Programas no Linux: O Poder do cURL e Bash")
 - [Executando Shell Scripts do GitHub via cURL: Automatizando Instalações Remotas com Segurança](#executando-shell-scripts-do-github-via-curl-automatizando-instala%C3%A7%C3%B5es-remotas-com-seguran%C3%A7a "Executando Shell Scripts do GitHub via cURL: Automatizando Instalações Remotas com Segurança")
 
@@ -1125,6 +1126,64 @@ DeleteQuickLinux() {
 Nesse caso, `pkill -SIGINT -f "$(basename "$0")"` irá enviar o sinal SIGINT para o processo que está executando o script atual, garantindo que o `dialog` e qualquer outra execução subsequente sejam interrompidos.
 
 Certifique-se de testar essa abordagem para garantir que funcione conforme esperado no seu ambiente específico.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Passando informação via campo de texto e retornando resultados em janela de Dialog
+
+Para realizar essa tarefa, você pode criar um script Bash interativo usando o `Dialog`. O script vai pedir para você inserir um domínio, pingar esse domínio e mostrar o resultado em uma janela de mensagem do `Dialog`. Aqui está um exemplo de como você pode fazer isso, incluindo uma barra de progresso para indicar o andamento:
+
+```bash
+#!/bin/bash
+
+# Função para realizar o ping e mostrar o resultado em uma janela de mensagem
+pingDomain() {
+    # Solicita ao usuário que insira o domínio usando o dialog
+    domain=$(dialog --inputbox 'Digite o domínio:' 8 40 3>&1 1>&2 2>&3)
+
+    # Verifica se o campo de domínio está vazio
+    if [ -z "$domain" ]; then
+        dialog --msgbox "O domínio não pode estar vazio. Por favor, tente novamente." 8 40
+        return
+    fi
+
+    # Pinga o domínio e armazena o resultado
+    ping_result=$(ping -c 8 "$domain")
+
+    # Exibe o resultado em uma janela de mensagem usando dialog
+    dialog --title "Resultado do Ping para $domain" --msgbox "$ping_result" 20 70
+}
+
+# Inicia o loop para o menu interativo usando dialog
+while true; do
+    # Mostra um menu para escolher entre pingar um domínio ou sair
+    choice=$(dialog --clear --backtitle "Ping Tool" \
+            --menu "Escolha uma opção:" 10 40 2 \
+            1 "Pingar um Domínio" \
+            2 "Sair" \
+            2>&1 >/dev/tty)
+
+    # Verifica a escolha do usuário
+    case "$choice" in
+        1)
+            # Chama a função para pingar um domínio
+            pingDomain
+            ;;
+        2)
+            # Sai do script se o usuário escolher sair
+            clear
+            exit 0
+            ;;
+    esac
+done
+```
+
+Neste script, a função `pingDomain` solicita ao usuário que insira um domínio usando o `Dialog`. Em seguida, verifica se o campo do domínio está vazio. Se não estiver vazio, executa um ping para o domínio inserido e armazena o resultado na variável `ping_result`. O resultado é então exibido em uma janela de mensagem usando o `Dialog`. O script também inclui uma opção para sair do menu interativo.
+
+Certifique-se de ter o `Dialog` instalado em seu sistema para que o script funcione corretamente. Você pode instalá-lo usando `sudo apt-get install dialog` se estiver usando o Debian ou Ubuntu.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
