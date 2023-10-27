@@ -20,6 +20,7 @@
 - [Permissões a arquivos e diretórios](#permiss%C3%B5es-a-arquivos-e-diret%C3%B3rios "Permissões a arquivos e diretórios")
 - [Listando Arquivos e Pastas Ocultos com o Comando ls no Linux](#listando-arquivos-e-pastas-ocultos-com-o-comando-ls-no-linux "Listando Arquivos e Pastas Ocultos com o Comando ls no Linux")
 - [Comandos Básicos de Manipulação de Arquivos e Texto no Terminal Linux: Um Guia Detalhado](#comandos-b%C3%A1sicos-de-manipula%C3%A7%C3%A3o-de-arquivos-e-texto-no-terminal-linux-um-guia-detalhado "Comandos Básicos de Manipulação de Arquivos e Texto no Terminal Linux: Um Guia Detalhado")
+- [PIPES, REDIRECIONAMENTOS, METACARACTERES e REGEX no Linux: Um Guia Detalhado](# "PIPES, REDIRECIONAMENTOS, METACARACTERES e REGEX no Linux: Um Guia Detalhado")
 
 > Redes e Compartilhamento
 
@@ -414,6 +415,49 @@ Esses são comandos bastante úteis no Linux. Vou explicar cada um deles com um 
    Exemplo: `nano novo_arquivo.txt` - Isso abrirá um novo arquivo chamado `novo_arquivo.txt` no Nano para edição.
 
 Esses comandos são fundamentais para qualquer usuário do Linux que trabalhe com texto e arquivos de forma regular. Cada um tem suas próprias funcionalidades específicas, tornando-os muito versáteis em várias situações.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## PIPES, REDIRECIONAMENTOS, METACARACTERES e REGEX no Linux: Um Guia Detalhado
+
+### Pipes (|):
+Pipes são usados para direcionar a saída de um comando para a entrada de outro. Eles permitem que você combine vários comandos para criar operações mais complexas.
+
+Exemplo:
+```bash
+ls -l | grep ".txt"
+```
+Neste exemplo, a saída do comando `ls -l` (que lista todos os arquivos no diretório com detalhes) é direcionada para o comando `grep ".txt"`, que filtra apenas os arquivos com extensão ".txt".
+
+### Redirecionamentos (>, >>, <):
+Redirecionamentos são usados para controlar a entrada e saída de comandos. `>` é usado para redirecionar a saída de um comando para um arquivo. `>>` é usado para adicionar a saída de um comando a um arquivo existente. `<` é usado para fornecer a entrada para um comando a partir de um arquivo.
+
+Exemplo:
+```bash
+echo "Olá, Mundo!" > arquivo.txt
+```
+Neste exemplo, a frase "Olá, Mundo!" é escrita no arquivo `arquivo.txt`.
+
+### Metacaracteres (*, ?, []):
+Metacaracteres são caracteres especiais que têm significados especiais no contexto da linha de comando. `*` corresponde a zero ou mais caracteres. `?` corresponde a um único caractere. `[]` corresponde a qualquer caractere dentro dos colchetes.
+
+Exemplo:
+```bash
+ls *.txt
+```
+Neste exemplo, `*.txt` corresponde a todos os arquivos com extensão ".txt" no diretório atual.
+
+### Expressões Regulares (Regex):
+Expressões Regulares são padrões utilizados para fazer correspondência de padrões em texto. São muito poderosas e flexíveis para encontrar, substituir ou manipular texto com base em padrões complexos.
+
+Exemplo:
+```bash
+grep "^[A-Z].*ing$" arquivo.txt
+```
+Neste exemplo, a expressão regular `^[A-Z].*ing$` corresponde a linhas que começam com uma letra maiúscula e terminam com "ing" no arquivo `arquivo.txt`.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
