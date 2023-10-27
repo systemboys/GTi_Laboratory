@@ -10,6 +10,7 @@
 - [Como Configurar um IP Estático via Terminal no Linux](#como-configurar-um-ip-est%C3%A1tico-via-terminal-no-linux "Como Configurar um IP Estático via Terminal no Linux")
 - [Configurando Temporariamente uma Rede no Linux via Terminal](#configurando-temporariamente-uma-rede-no-linux-via-terminal "Configurando Temporariamente uma Rede no Linux via Terminal")
 - [Dominando as Configurações de Rede no Linux: Um Guia Abrangente para Iniciantes](#dominando-as-configura%C3%A7%C3%B5es-de-rede-no-linux-um-guia-abrangente-para-iniciantes "Dominando as Configurações de Rede no Linux: Um Guia Abrangente para Iniciantes")
+- [Comandos Ping no Linux: Explorando Opções](# "Comandos Ping no Linux: Explorando Opções")
 
 ---
 
@@ -176,6 +177,51 @@ Pressione `Ctrl + O` para salvar e `Ctrl + X` para sair no Nano.
 ---
 
 > Este tutorial oferece uma visão clara e concisa do processo de modificação das configurações de rede no Linux, permitindo que você ajuste sua conexão de acordo com suas necessidades.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Comandos Ping no Linux: Explorando Opções
+
+1. **`ping -c 2 uol.com.br`**:
+   - Este comando envia 2 pacotes de ping para o domínio `uol.com.br` e espera por respostas. Após enviar os 2 pacotes, ele exibe estatísticas de respostas e perdas.
+
+   Exemplo:
+   ```bash
+   ping -c 2 uol.com.br
+   ```
+   Resultado:
+   ```
+   PING uol.com.br (200.147.67.142) 56(84) bytes of data.
+   64 bytes from 200.147.67.142: icmp_seq=1 ttl=60 time=8.77 ms
+   64 bytes from 200.147.67.142: icmp_seq=2 ttl=60 time=8.89 ms
+
+   --- uol.com.br ping statistics ---
+   2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+   rtt min/avg/max/mdev = 8.773/8.830/8.887/0.057 ms
+   ```
+
+2. **`ping -4 -c 2 uol.com.br`**:
+   - O argumento `-4` força o uso do IPv4 para o ping, mesmo se o sistema tiver suporte para IPv6. O resto do comando é similar ao primeiro, enviando 2 pacotes de ping para `uol.com.br`.
+
+   Exemplo:
+   ```bash
+   ping -4 -c 2 uol.com.br
+   ```
+   Resultado (similar ao anterior, mas com forçamento para IPv4):
+   ```
+   PING uol.com.br (200.147.67.142) 56(84) bytes of data.
+   64 bytes from 200.147.67.142: icmp_seq=1 ttl=60 time=8.77 ms
+   64 bytes from 200.147.67.142: icmp_seq=2 ttl=60 time=8.89 ms
+
+   --- uol.com.br ping statistics ---
+   2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+   rtt min/avg/max/mdev = 8.773/8.830/8.887/0.057 ms
+   ```
+
+A principal diferença entre os dois comandos é que o segundo força explicitamente o uso do IPv4, enquanto o primeiro pode usar IPv6 se estiver configurado no sistema.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
