@@ -10,7 +10,7 @@
 - [Como Configurar um IP Estático via Terminal no Linux](#como-configurar-um-ip-est%C3%A1tico-via-terminal-no-linux "Como Configurar um IP Estático via Terminal no Linux")
 - [Configurando Temporariamente uma Rede no Linux via Terminal](#configurando-temporariamente-uma-rede-no-linux-via-terminal "Configurando Temporariamente uma Rede no Linux via Terminal")
 - [Dominando as Configurações de Rede no Linux: Um Guia Abrangente para Iniciantes](#dominando-as-configura%C3%A7%C3%B5es-de-rede-no-linux-um-guia-abrangente-para-iniciantes "Dominando as Configurações de Rede no Linux: Um Guia Abrangente para Iniciantes")
-- [Comandos Ping no Linux: Explorando Opções](# "Comandos Ping no Linux: Explorando Opções")
+- [Comandos Ping no Linux: Explorando Opções](#comandos-ping-no-linux-explorando-op%C3%A7%C3%B5es "Comandos Ping no Linux: Explorando Opções")
 
 ---
 
