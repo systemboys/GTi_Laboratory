@@ -193,7 +193,7 @@ Pressione `Ctrl + O` para salvar e `Ctrl + X` para sair no Nano.
    ping -c 2 uol.com.br
    ```
    Resultado:
-   ```
+   ```bash
    PING uol.com.br (200.147.67.142) 56(84) bytes of data.
    64 bytes from 200.147.67.142: icmp_seq=1 ttl=60 time=8.77 ms
    64 bytes from 200.147.67.142: icmp_seq=2 ttl=60 time=8.89 ms
@@ -211,7 +211,7 @@ Pressione `Ctrl + O` para salvar e `Ctrl + X` para sair no Nano.
    ping -4 -c 2 uol.com.br
    ```
    Resultado (similar ao anterior, mas com forçamento para IPv4):
-   ```
+   ```bash
    PING uol.com.br (200.147.67.142) 56(84) bytes of data.
    64 bytes from 200.147.67.142: icmp_seq=1 ttl=60 time=8.77 ms
    64 bytes from 200.147.67.142: icmp_seq=2 ttl=60 time=8.89 ms
