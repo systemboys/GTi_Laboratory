@@ -20,7 +20,7 @@
 - [Permissões a arquivos e diretórios](#permiss%C3%B5es-a-arquivos-e-diret%C3%B3rios "Permissões a arquivos e diretórios")
 - [Listando Arquivos e Pastas Ocultos com o Comando ls no Linux](#listando-arquivos-e-pastas-ocultos-com-o-comando-ls-no-linux "Listando Arquivos e Pastas Ocultos com o Comando ls no Linux")
 - [Comandos Básicos de Manipulação de Arquivos e Texto no Terminal Linux: Um Guia Detalhado](#comandos-b%C3%A1sicos-de-manipula%C3%A7%C3%A3o-de-arquivos-e-texto-no-terminal-linux-um-guia-detalhado "Comandos Básicos de Manipulação de Arquivos e Texto no Terminal Linux: Um Guia Detalhado")
-- [PIPES, REDIRECIONAMENTOS, METACARACTERES e REGEX no Linux: Um Guia Detalhado](# "PIPES, REDIRECIONAMENTOS, METACARACTERES e REGEX no Linux: Um Guia Detalhado")
+- [PIPES, REDIRECIONAMENTOS, METACARACTERES e REGEX no Linux: Um Guia Detalhado](#pipes-redirecionamentos-metacaracteres-e-regex-no-linux-um-guia-detalhado "PIPES, REDIRECIONAMENTOS, METACARACTERES e REGEX no Linux: Um Guia Detalhado")
 
 > Redes e Compartilhamento
 
