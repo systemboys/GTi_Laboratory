@@ -8,6 +8,8 @@
 
 ### *Sumário*
 
+> Comandos básicos para Linux
+
 - [Renomear um diretório via terminal Linux](#renomear-um-diret%C3%B3rio-via-terminal-linux "Renomear um diretório via terminal Linux")
 - [Como Copiar Arquivos e Diretórios Usando o Terminal Linux](#como-copiar-arquivos-e-diret%C3%B3rios-usando-o-terminal-linux "Como Copiar Arquivos e Diretórios Usando o Terminal Linux")
     - [Como Copiar Arquivos e Pastas com Indicador de Progresso no Linux usando o Rsync](#como-copiar-arquivos-e-pastas-com-indicador-de-progresso-no-linux-usando-o-rsync "Como Copiar Arquivos e Pastas com Indicador de Progresso no Linux usando o Rsync")
@@ -17,9 +19,14 @@
 - [Apagar todos os arquivo de um diretório exceto um arquivo ou diretório filho](#apagar-todos-os-arquivo-de-um-diret%C3%B3rio-exceto-um-arquivo-ou-diret%C3%B3rio-filho "Apagar todos os arquivo de um diretório exceto um arquivo ou diretório filho")
 - [Permissões a arquivos e diretórios](#permiss%C3%B5es-a-arquivos-e-diret%C3%B3rios "Permissões a arquivos e diretórios")
 - [Listando Arquivos e Pastas Ocultos com o Comando ls no Linux](#listando-arquivos-e-pastas-ocultos-com-o-comando-ls-no-linux "Listando Arquivos e Pastas Ocultos com o Comando ls no Linux")
+- [Comandos Básicos de Manipulação de Arquivos e Texto no Terminal Linux: Um Guia Detalhado](# "Comandos Básicos de Manipulação de Arquivos e Texto no Terminal Linux: Um Guia Detalhado")
+
 > Redes e Compartilhamento
+
 - [Compartilhando um Diretório no Debian com o Linux Mint Usando o Samba](#compartilhando-um-diret%C3%B3rio-no-debian-com-o-linux-mint-usando-o-samba "Compartilhando um Diretório no Debian com o Linux Mint Usando o Samba")
+
 > Compactadores
+
 - [Guia Rápido: Como Extrair Arquivos ZIP Usando o Terminal no Linux](#guia-r%C3%A1pido-como-extrair-arquivos-zip-usando-o-terminal-no-linux "Guia Rápido: Como Extrair Arquivos ZIP Usando o Terminal no Linux")
 - [Guia Rápido: Extraindo Arquivos .tar.xz via Terminal no Linux](#guia-r%C3%A1pido-extraindo-arquivos-tarxz-via-terminal-no-linux "Guia Rápido: Extraindo Arquivos .tar.xz via Terminal no Linux")
 
@@ -356,6 +363,57 @@ ls --all
 ```
 
 Quando você usar um desses comandos, o `ls` exibirá todos os itens, incluindo os ocultos, no diretório atual. Isso é útil para visualizar todos os arquivos e pastas, inclusive os que normalmente não são mostrados ao usar apenas o comando `ls`.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Comandos Básicos de Manipulação de Arquivos e Texto no Terminal Linux: Um Guia Detalhado
+
+Esses são comandos bastante úteis no Linux. Vou explicar cada um deles com um exemplo:
+
+1. **`cat`** - O comando `cat` é usado para mostrar o conteúdo de um arquivo.
+
+   Exemplo: `cat arquivo.txt` - Isso exibirá o conteúdo do arquivo `arquivo.txt` no terminal.
+
+2. **`head`** - O comando `head` é usado para mostrar as primeiras linhas de um arquivo.
+
+   Exemplo: `head -n 10 arquivo.txt` - Isso exibirá as 10 primeiras linhas do arquivo `arquivo.txt`.
+
+3. **`tail`** - O comando `tail` é usado para mostrar as últimas linhas de um arquivo.
+
+   Exemplo: `tail -n 5 arquivo.txt` - Isso exibirá as últimas 5 linhas do arquivo `arquivo.txt`.
+
+4. **`wc`** - O comando `wc` é usado para contar palavras, linhas e caracteres em um arquivo.
+
+   Exemplo: `wc arquivo.txt` - Isso mostrará o número de linhas, palavras e caracteres no arquivo `arquivo.txt`.
+
+5. **`nl`** - O comando `nl` é usado para numerar as linhas de um arquivo.
+
+   Exemplo: `nl arquivo.txt` - Isso numerará as linhas do arquivo `arquivo.txt`.
+
+6. **`grep`** - O comando `grep` é usado para pesquisar padrões em arquivos.
+
+   Exemplo: `grep "palavra" arquivo.txt` - Isso mostrará todas as linhas em `arquivo.txt` que contêm a palavra "palavra".
+
+7. **`sed`** - O comando `sed` é um editor de fluxo usado para realizar transformações em texto.
+
+   Exemplo: `sed 's/velho/novo/g' arquivo.txt` - Isso substituirá todas as ocorrências de "velho" por "novo" no `arquivo.txt`.
+
+8. **`awk`** - O comando `awk` é uma linguagem de programação para processamento de texto.
+
+   Exemplo: `awk '{print $1}' arquivo.txt` - Isso imprimirá a primeira coluna de `arquivo.txt` para cada linha.
+
+9. **`vim`** - O Vim é um editor de texto poderoso e altamente configurável.
+
+   Exemplo: `vim arquivo.txt` - Isso abrirá o arquivo `arquivo.txt` no Vim para edição.
+
+10. **`nano`** - O Nano é um editor de texto fácil de usar para o terminal.
+
+   Exemplo: `nano novo_arquivo.txt` - Isso abrirá um novo arquivo chamado `novo_arquivo.txt` no Nano para edição.
+
+Esses comandos são fundamentais para qualquer usuário do Linux que trabalhe com texto e arquivos de forma regular. Cada um tem suas próprias funcionalidades específicas, tornando-os muito versáteis em várias situações.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
