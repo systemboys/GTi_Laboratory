@@ -42,7 +42,11 @@ echo ╰────────────────────────
 
 set /p option=Digite o número da opção desejada: 
 
-if "%option%"=="1" (
+if "%option%"=="q" (
+    cls
+    echo Saindo...
+    exit
+) else if "%option%"=="1" (
     cls
     mode 98,20
     echo Baixando WinRAR...
@@ -58,8 +62,10 @@ if "%option%"=="1" (
     pause
 ) else if "%option%"=="2" (
     cls
-    echo Saindo...
-    exit
+    echo Você escolheu a Opção 2.
+    rem Aqui você coloca suas linhas de comandos...
+    pause
+    goto menu
 ) else (
     cls
     echo Opção inválida! Tente novamente.
