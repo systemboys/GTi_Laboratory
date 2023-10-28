@@ -244,7 +244,7 @@ if %ERRORLEVEL% equ 5 (
 goto :EOF
 : end batch / begin PowerShell hybrid chimera #>
 
-$menutitle = "=== GTi_Support ==="
+$menutitle = "=== Menu GTi_Support ==="
 $menuprompt = "Use as teclas direcionais. Pressione Enter para selecionar."
 
 $maxlen = $menuprompt.length + 6
