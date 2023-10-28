@@ -8,6 +8,8 @@
 
 - [Menu de Instalação de Programas no Prompt de Comando do Windows](#menu-de-instala%C3%A7%C3%A3o-de-programas-no-prompt-de-comando-do-windows "Menu de Instalação de Programas no Prompt de Comando do Windows")
 - [Como Corrigir a Exibição de Caracteres Especiais no Prompt de Comando do Windows](#como-corrigir-a-exibi%C3%A7%C3%A3o-de-caracteres-especiais-no-prompt-de-comando-do-windows "Como Corrigir a Exibição de Caracteres Especiais no Prompt de Comando do Windows")
+- [Menu Interativo de Instalação - Menu com uso de setas direcionais](# "Menu Interativo de Instalação - Menu com uso de setas direcionais")
+- [Exibição da Data e Hora Atual - Script Batch](# "Exibição da Data e Hora Atual - Script Batch")
 
 ---
 
@@ -25,22 +27,22 @@ Aqui está um exemplo de script em lote:
 ```batch
 @echo off
 
-rem Menu.bat - Executa o menu com várias linhas de comandos
-rem para instalação de softwares para Windows
-rem
-rem URL: ?
-rem Autor: Marcos Aurélio R. da Silva "systemboys@hotmail.com"
-rem Manutenção: Marcos Aurélio R. da Silva "systemboys@hotmail.com"
-rem
-rem ---------------------------------------------------------------
-rem Este programa tem a finadade de agilizar na instalação de softwares
-rem para Windows durante a formatação e/ou manutenção de computadores.
-rem ---------------------------------------------------------------
-rem Histórico:
-rem v1.0 2023-09-30 às 19h00, Marcos Aurélio:
-rem   - Versão inicial, menu de instalações de programas para Windows.
-rem
-rem Licença: GPL.
+:: Menu.bat - Executa o menu com várias linhas de comandos
+:: para instalação de softwares para Windows
+::
+:: URL: ?
+:: Autor: Marcos Aurélio R. da Silva "systemboys@hotmail.com"
+:: Manutenção: Marcos Aurélio R. da Silva "systemboys@hotmail.com"
+::
+:: ---------------------------------------------------------------
+:: Este programa tem a finadade de agilizar na instalação de softwares
+:: para Windows durante a formatação e/ou manutenção de computadores.
+:: ---------------------------------------------------------------
+:: Histórico:
+:: v1.0 2023-09-30 às 19h00, Marcos Aurélio:
+::   - Versão inicial, menu de instalações de programas para Windows.
+::
+:: Licença: GPL.
 
 chcp 65001
 title Menu de Instalação
@@ -81,7 +83,7 @@ if "%option%"=="q" (
 ) else if "%option%"=="2" (
     cls
     echo Você escolheu a Opção 2.
-    rem Aqui você coloca suas linhas de comandos...
+    @REM Aqui você coloca suas linhas de comandos...
     pause
     goto menu
 ) else (
@@ -130,6 +132,243 @@ Isso define a codificação do terminal para UTF-8.
 3. Agora, execute seu arquivo .bat novamente. A linha "echo Selecione uma opção:" deve ser exibida corretamente.
 
 Lembre-se de que, ao usar UTF-8, você deve garantir que seu arquivo .bat e quaisquer outros arquivos de texto estejam salvos com codificação UTF-8 para que os caracteres especiais sejam exibidos corretamente.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Menu Interativo de Instalação - Menu com uso de setas direcionais
+
+direcionais
+
+Entendi, você deseja que após executar uma funcionalidade relacionada a uma opção do menu, o script retorne ao menu em vez de sair do Prompt de Comandos. Aqui está o script modificado para atender a esse requisito:
+
+```batch
+<# : Batch portion
+@echo off & setlocal enabledelayedexpansion
+
+:: Menu.bat - Executa o menu com várias linhas de comandos
+:: para instalação de softwares para Windows
+::
+:: URL: ?
+:: Autor: Marcos Aurélio R. da Silva "systemboys@hotmail.com"
+:: Manutenção: Marcos Aurélio R. da Silva "systemboys@hotmail.com"
+::
+:: ---------------------------------------------------------------
+:: Este programa tem a finadade de agilizar na instalação de softwares
+:: para Windows durante a formatação e/ou manutenção de computadores.
+:: ---------------------------------------------------------------
+:: Histórico:
+:: v1.0 2023-10-28 às 16h40, Marcos Aurélio:
+::   - Versão inicial, menu de instalações de programas para Windows.
+::
+:: Licença: GPL.
+
+chcp 65001 > nul
+
+:: Obter o ano atual
+for /f "tokens=2 delims==" %%I in ('"wmic os get localdatetime /value"') do set datetime=%%I
+set "ano=%datetime:~0,4%"
+
+:: Subtrair o ano atual por 2008
+set /a resultado=ano-2008
+
+:: Mensagem de entrada do Menu com o resultado
+echo © %ano% - GLOBAL TEC Informática ® - A %resultado% no mercado de Informática.
+echo www.gti1.com.br - gti.inf@hotmail.com - systemboys@hotmail.com
+
+:: Opções do Menu
+set "menu[0]=Sair"
+set "menu[1]=Opção 1"
+set "menu[2]=Opção 2"
+set "menu[3]=Opção 3"
+set "menu[4]=Opção 4"
+set "menu[5]=Opção 5"
+
+set "default=0"
+
+:menu
+powershell -noprofile "iex (gc \"%~f0\" | out-string)"
+if %ERRORLEVEL% equ 0 (
+    echo Você escolheu Sair.
+    pause
+    goto :EOF
+)
+
+if %ERRORLEVEL% equ 1 (
+    echo Você selecionou a Opção 1.
+
+    @REM  Your commands here...
+
+    pause
+    goto menu
+)
+
+if %ERRORLEVEL% equ 2 (
+    echo Você selecionou a Opção 2.
+
+    @REM  Your commands here...
+
+    pause
+    goto menu
+)
+
+if %ERRORLEVEL% equ 3 (
+    echo Você selecionou a Opção 3.
+
+    @REM  Your commands here...
+
+    pause
+    goto menu
+)
+
+if %ERRORLEVEL% equ 4 (
+    echo Você selecionou a Opção 4.
+
+    @REM  Your commands here...
+
+    pause
+    goto menu
+)
+
+if %ERRORLEVEL% equ 5 (
+    echo Você selecionou a Opção 5.
+
+    @REM  Your commands here...
+
+    pause
+    goto menu
+)
+
+goto :EOF
+: end batch / begin PowerShell hybrid chimera #>
+
+$menutitle = "=== GTi_Support ==="
+$menuprompt = "Use as teclas direcionais. Pressione Enter para selecionar."
+
+$maxlen = $menuprompt.length + 6
+$menu = gci env: | ?{ $_.Name -match "^menu\[\d+\]$" } | %{
+    $_.Value.trim()
+    $len = $_.Value.trim().Length + 6
+    if ($len -gt $maxlen) { $maxlen = $len }
+}
+[int]$selection = $env:default
+$h = $Host.UI.RawUI.WindowSize.Height
+$w = $Host.UI.RawUI.WindowSize.Width
+$xpos = [math]::floor(($w - ($maxlen + 5)) / 2)
+$ypos = [math]::floor(($h - ($menu.Length + 4)) / 3)
+
+$offY = [console]::WindowTop;
+$rect = New-Object Management.Automation.Host.Rectangle `
+    0,$offY,($w - 1),($offY+$ypos+$menu.length+4)
+$buffer = $Host.UI.RawUI.GetBufferContents($rect)
+
+function destroy {
+    $coords = New-Object Management.Automation.Host.Coordinates 0,$offY
+    $Host.UI.RawUI.SetBufferContents($coords,$buffer)
+}
+
+function getKey {
+    while (-not ((37..40 + 13 + 48..(47 + $menu.length)) -contains $x)) {
+        $x = $Host.UI.RawUI.ReadKey('NoEcho,IncludeKeyDown').VirtualKeyCode
+    }
+    $x
+}
+
+# http://goo.gl/IAmdR6
+function WriteTo-Pos ([string]$str, [int]$x = 0, [int]$y = 0,
+    [string]$bgc = [console]::BackgroundColor, [string]$fgc = [Console]::ForegroundColor) {
+    if($x -ge 0 -and $y -ge 0 -and $x -le [Console]::WindowWidth -and
+        $y -le [Console]::WindowHeight) {
+        $saveY = [console]::CursorTop
+        $offY = [console]::WindowTop       
+        [console]::setcursorposition($x,$offY+$y)
+        Write-Host $str -b $bgc -f $fgc -nonewline
+        [console]::setcursorposition(0,$saveY)
+    }
+}
+
+function center([string]$what) {
+    $what = "    $what  "
+    $lpad = " " * [math]::max([math]::floor(($maxlen - $what.length) / 2), 0)
+    $rpad = " " * [math]::max(($maxlen - $what.length - $lpad.length), 0)
+    WriteTo-Pos "$lpad   $what   $rpad" $xpos $line blue yellow
+}
+
+function menu {
+    $line = $ypos
+    center $menutitle
+    $line++
+    center " "
+    $line++
+
+    for ($i=0; $item = $menu[$i]; $i++) {
+        # write-host $xpad -nonewline
+        $rtpad = " " * ($maxlen - $item.length)
+        if ($i -eq $selection) {
+            WriteTo-Pos "  > $item <$rtpad" $xpos ($line++) yellow blue
+        } else {
+            WriteTo-Pos " $i`: $item  $rtpad" $xpos ($line++) blue yellow
+        }
+    }
+    center " "
+    $line++
+    center $menuprompt
+    1
+}
+
+while (menu) {
+
+    [int]$key = getKey
+
+    switch ($key) {
+
+        37 {}   # left or up
+        38 { if ($selection) { $selection-- }; break }
+
+        39 {}   # right or down
+        40 { if ($selection -lt ($menu.length - 1)) { $selection++ }; break }
+
+        # number or enter
+        default { if ($key -gt 13) {$selection = $key - 48}; destroy; exit($selection) }
+    }
+}
+```
+
+Neste script modificado, após executar uma opção do menu (exceto "Sair"), o script retornará ao menu em vez de sair do Prompt de Comandos. Você pode adicionar a lógica de cada opção do menu no local correspondente no script.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Exibição da Data e Hora Atual - Script Batch
+
+Certamente! Você pode obter a data atual dentro de um script batch no Windows usando variáveis de ambiente e a função `echo`. Aqui está um exemplo de como você pode fazer isso:
+
+```batch
+@echo off
+setlocal enabledelayedexpansion
+
+:: Obter a data atual
+for /f "tokens=2 delims==" %%I in ('"wmic os get localdatetime /value"') do set datetime=%%I
+set "ano=%datetime:~0,4%"
+set "mes=%datetime:~4,2%"
+set "dia=%datetime:~6,2%"
+set "hora=%datetime:~8,2%"
+set "minuto=%datetime:~10,2%"
+set "segundo=%datetime:~12,2%"
+
+:: Exibir a data atual
+echo Data Atual: %dia%/%mes%/%ano% %hora%:%minuto%:%segundo%
+
+endlocal
+```
+
+Neste exemplo, o script usa o comando `wmic os get localdatetime` para obter a data e a hora atuais. Em seguida, ele processa a saída para extrair o ano, o mês, o dia, a hora, o minuto e o segundo. Esses valores são armazenados em variáveis (`ano`, `mes`, `dia`, `hora`, `minuto` e `segundo`) e, em seguida, são usados no comando `echo` para exibir a data atual no formato desejado.
+
+Por favor, note que o formato da data e da hora pode variar com base nas configurações regionais do sistema. O exemplo acima assume o formato "dd/mm/aaaa hh:mm:ss". Você pode ajustar o formato conforme necessário para atender aos seus requisitos específicos.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
