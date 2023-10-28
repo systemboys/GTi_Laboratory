@@ -24,6 +24,24 @@ Aqui está um exemplo de script em lote:
 
 ```batch
 @echo off
+
+rem Menu.bat - Executa o menu com várias linhas de comandos
+rem para instalação de softwares para Windows
+rem
+rem URL: ?
+rem Autor: Marcos Aurélio R. da Silva "systemboys@hotmail.com"
+rem Manutenção: Marcos Aurélio R. da Silva "systemboys@hotmail.com"
+rem
+rem ---------------------------------------------------------------
+rem Este programa tem a finadade de agilizar na instalação de softwares
+rem para Windows durante a formatação e/ou manutenção de computadores.
+rem ---------------------------------------------------------------
+rem Histórico:
+rem v1.0 2023-09-30 às 19h00, Marcos Aurélio:
+rem   - Versão inicial, menu de instalações de programas para Windows.
+rem
+rem Licença: GPL.
+
 chcp 65001
 title Menu de Instalação
 
