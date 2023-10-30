@@ -105,11 +105,11 @@ Segue abaixo um exemplo de **_comentário de cabeçalho_** ou **_bloco de coment
 # Conteiners e levantar as aplicações no projeto envolvido.
 # ---------------------------------------------------------------
 # Histórico:
-# v1.0.0 2023-10-17 às 11h30, Marcos Aurélio:
+# v0.0.1 2023-10-17 às 11h30, Marcos Aurélio:
 #   - Versão inicial, menu de controle para construção Docker Conteiner.
-# v1.0.1 2023-10-17 às 22h30, Marcos Aurélio:
+# v0.0.2 2023-10-17 às 22h30, Marcos Aurélio:
 #   - Testes de construção Docker Conteiner.
-# v1.0.2 2023-10-24 às 23h00, Marcos Aurélio:
+# v0.0.3 2023-10-24 às 23h00, Marcos Aurélio:
 #   - Otimizando espaço em disco, na função comentada como "Subir nova versão".
 #     uploadNewVersion() {...}
 #
@@ -151,11 +151,11 @@ Você pode obter o número da versão do último comentário no script usando ex
 #!/bin/bash
 
 # Histórico:
-# v1.0.0 2023-10-17 às 11h30, Marcos Aurélio:
+# v0.0.1 2023-10-17 às 11h30, Marcos Aurélio:
 #   - Versão inicial, menu de controle para construção Docker Conteiner.
-# v1.0.1 2023-10-17 às 22h30, Marcos Aurélio:
+# v0.0.2 2023-10-17 às 22h30, Marcos Aurélio:
 #   - Testes de construção Docker Conteiner.
-# v1.0.2 2023-10-24 às 23h00, Marcos Aurélio:
+# v0.0.3 2023-10-24 às 23h00, Marcos Aurélio:
 #   - Otimizando espaço em disco, na função comentada como "Subir nova versão".
 #     uploadNewVersion() {...}
 #
@@ -167,7 +167,7 @@ lastVersion=$(grep -o 'v[0-9]\+\.[0-9]\+\.[0-9]\+' "$0" | tail -n 1)
 echo "A última versão registrada no script é: $lastVersion"
 ```
 
-Neste exemplo, `"$0"` refere-se ao próprio script em execução. O comando `grep -o 'v[0-9]\+\.[0-9]\+\.[0-9]\+' "$0"` procura por padrões do tipo "v1.0.0" no script e `tail -n 1` pega apenas a última ocorrência (a última versão registrada). O número da versão é armazenado na variável `lastVersion`.
+Neste exemplo, `"$0"` refere-se ao próprio script em execução. O comando `grep -o 'v[0-9]\+\.[0-9]\+\.[0-9]\+' "$0"` procura por padrões do tipo "v0.0.0" no script e `tail -n 1` pega apenas a última ocorrência (a última versão registrada). O número da versão é armazenado na variável `lastVersion`.
 
 Certifique-se de que o padrão da versão no seu script corresponda ao padrão utilizado na expressão regular. Você pode ajustar a expressão regular conforme necessário para corresponder ao seu formato de versão específico.
 
