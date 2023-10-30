@@ -93,10 +93,10 @@ Segue abaixo um exemplo de **_comentário de cabeçalho_** ou **_bloco de coment
 
 ```bash
 #!/bin/bash
-#
+
 # docker-control.sh - Executa o menu Docker Control.
 #
-# URL: https://github.com/systemboys/GTi_SiS_Float_Away_6_dev.git
+# URL: https://github.com/github_user/project_on_github.git
 # Autor: Marcos Aurélio R. da Silva <systemboys@hotmail.com>
 # Manutenção: Marcos Aurélio R. da Silva <systemboys@hotmail.com>
 #
