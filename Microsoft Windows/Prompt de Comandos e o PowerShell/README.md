@@ -11,6 +11,7 @@
 - [Menu Interativo de Instalação - Com uso de setas direcionais](#menu-interativo-de-instala%C3%A7%C3%A3o---com-uso-de-setas-direcionais "Menu Interativo de Instalação - Com uso de setas direcionais")
 - [Exibição da Data e Hora Atual - Script Batch](#exibi%C3%A7%C3%A3o-da-data-e-hora-atual---script-batch "Exibição da Data e Hora Atual - Script Batch")
 - [Como Extrair a Versão do Histórico em Scripts Batch do Windows: Dicas Úteis para Gerenciar Seus Projetos](#como-extrair-a-vers%C3%A3o-do-hist%C3%B3rico-em-scripts-batch-do-windows-dicas-%C3%BAteis-para-gerenciar-seus-projetos "Como Extrair a Versão do Histórico em Scripts Batch do Windows: Dicas Úteis para Gerenciar Seus Projetos")
+- [Guia Essencial de Comandos e Variáveis de Ambiente no Windows](# "Guia Essencial de Comandos e Variáveis de Ambiente no Windows")
 
 ---
 
@@ -395,6 +396,72 @@ echo QuickWindows !lastVersion!
 Neste exemplo, o comando `findstr` é usado para encontrar linhas que correspondem ao padrão do histórico (`:: v[0-9]*\.[0-9]*\.[0-9]*`). O comando `for /f` é usado para extrair a segunda parte da linha, que representa a versão (`%%a`). A variável `lastVersion` é então definida com o valor da versão encontrada.
 
 Lembre-se de substituir `"QuickWindows"` pelo nome do seu script, se necessário. Este script Batch fornecerá a última versão do histórico do seu arquivo Batch.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Guia Essencial de Comandos e Variáveis de Ambiente no Windows
+
+Aqui estão alguns dos principais diretórios do Windows e as variáveis de ambiente correspondentes para acessá-los:
+
+1. **C:\ (Unidade do Sistema):**
+   ```
+   echo %SystemDrive%
+   ```
+
+2. **Arquivos de Programas (Program Files):**
+   - Para sistemas de 64 bits:
+     ```
+     echo %ProgramFiles%
+     ```
+   - Para sistemas de 32 bits em sistemas de 64 bits:
+     ```
+     echo %ProgramFiles(x86)%
+     ```
+
+3. **Diretório do Usuário:**
+   ```
+   echo %UserProfile%
+   ```
+
+4. **System32:**
+   ```
+   echo %SystemRoot%\System32
+   ```
+
+5. **Pasta Temporária do Windows:**
+   ```
+   echo %Temp%
+   ```
+
+6. **Pasta Documentos do Usuário:**
+   ```
+   echo %UserProfile%\Documents
+   ```
+
+7. **Área de Trabalho do Usuário:**
+   ```
+   echo %UserProfile%\Desktop
+   ```
+
+8. **Meus Documentos:**
+   ```
+   echo %UserProfile%\My Documents
+   ```
+
+9. **Downloads:**
+   ```
+   echo %UserProfile%\Downloads
+   ```
+
+10. **Configurações de Aplicativos Locais:**
+    ```
+    echo %LocalAppData%
+    ```
+
+Lembre-se de que essas variáveis de ambiente podem variar de acordo com a versão e configuração do Windows. Você pode usar essas variáveis em scripts ou no Prompt de Comandos para acessar esses diretórios.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
