@@ -18,6 +18,7 @@
 > Microsoft **_PowerShell_**
 
 - [Verificar a existência de um diretório ou de um arquivo com arquivo PowerShell (.ps1)](#verificar-a-exist%C3%AAncia-de-um-diret%C3%B3rio-ou-de-um-arquivo-com-arquivo-powershell-ps1 "Verificar a existência de um diretório ou de um arquivo com arquivo PowerShell (.ps1)")
+- [Arquivo (.ps1) para instalação de pacotes](# "Arquivo (.ps1) para instalação de pacotes")
 
 ---
 
@@ -507,6 +508,61 @@ if (Test-Path $filePath) {
 ```
 
 ---
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Arquivo (.ps1) para instalação de pacotes
+
+Escrever o `arquivo.ps1` para scripts de instalação:
+
+```powershell
+# Install_YourPackage.ps1 - Executa o script de instalação de YourPackage.
+#
+# URL: https://github.com/github_user/project_on_github.git
+# Autor: Marcos Aurélio R. da Silva <systemboys@hotmail.com>
+# Manutenção: Marcos Aurélio R. da Silva <systemboys@hotmail.com>
+#
+# ---------------------------------------------------------------
+# Este programa tem a finalidade de facilitar na instalação de
+# pacotes para Windows.
+# ---------------------------------------------------------------
+# Histórico:
+# v0.0.1 2023-10-31 às 01h10, Marcos Aurélio:
+#   - Versão inicial, Instalação de YourPackage.
+#
+# Licença: GPL.
+
+# Se o YourPackage não estiver instalado, faz o download e instala
+$programFiles = [Environment]::GetEnvironmentVariable("ProgramFiles(x86)")
+$directory = "$programFiles\YourPackage"
+
+if (Test-Path $directory) {
+    Write-Host "YourPackage is installed!"
+} else {
+    Write-Host "YourPackage is not installed! Starting installation process."
+
+    # Link do download e o diretório Temp
+    $downloadUrl = "https://download.anydesk.com/YourPackage.exe"
+    $downloadPath = "$env:temp\YourPackage.exe"
+    
+    # Faz o download do YourPackage
+    Invoke-WebRequest -Uri $downloadUrl -OutFile $downloadPath
+    
+    # Instala o YourPackage
+    Start-Process -FilePath $downloadPath -ArgumentList "/S" -Wait
+
+    # Apagar o arquivo
+    $filePath = "C:\Path\to\YourPackage.exe"
+    Remove-Item -Path $filePath -Force
+}
+
+Write-Host "Press any key to continue..."
+$null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+
+```
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
