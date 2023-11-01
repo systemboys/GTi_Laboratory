@@ -17,7 +17,7 @@
 
 > Microsoft **_PowerShell_**
 
-- [Verificar a existência de um diretório ou de um arquivo com arquivo PowerShell (.ps1)](# "Verificar a existência de um diretório ou de um arquivo com arquivo PowerShell (.ps1)")
+- [Verificar a existência de um diretório ou de um arquivo com arquivo PowerShell (.ps1)](#verificar-a-exist%C3%AAncia-de-um-diret%C3%B3rio-ou-de-um-arquivo-com-arquivo-powershell-ps1 "Verificar a existência de um diretório ou de um arquivo com arquivo PowerShell (.ps1)")
 
 ---
 
