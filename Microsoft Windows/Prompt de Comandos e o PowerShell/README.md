@@ -6,12 +6,18 @@
 
 ### *Sumário*
 
+> **_Prompt de comandos_** do Windows
+
 - [Menu de Instalação de Programas no Prompt de Comando do Windows](#menu-de-instala%C3%A7%C3%A3o-de-programas-no-prompt-de-comando-do-windows "Menu de Instalação de Programas no Prompt de Comando do Windows")
 - [Como Corrigir a Exibição de Caracteres Especiais no Prompt de Comando do Windows](#como-corrigir-a-exibi%C3%A7%C3%A3o-de-caracteres-especiais-no-prompt-de-comando-do-windows "Como Corrigir a Exibição de Caracteres Especiais no Prompt de Comando do Windows")
 - [Menu Interativo de Instalação - Com uso de setas direcionais](#menu-interativo-de-instala%C3%A7%C3%A3o---com-uso-de-setas-direcionais "Menu Interativo de Instalação - Com uso de setas direcionais")
 - [Exibição da Data e Hora Atual - Script Batch](#exibi%C3%A7%C3%A3o-da-data-e-hora-atual---script-batch "Exibição da Data e Hora Atual - Script Batch")
 - [Como Extrair a Versão do Histórico em Scripts Batch do Windows: Dicas Úteis para Gerenciar Seus Projetos](#como-extrair-a-vers%C3%A3o-do-hist%C3%B3rico-em-scripts-batch-do-windows-dicas-%C3%BAteis-para-gerenciar-seus-projetos "Como Extrair a Versão do Histórico em Scripts Batch do Windows: Dicas Úteis para Gerenciar Seus Projetos")
 - [Guia Essencial de Comandos e Variáveis de Ambiente no Windows](#guia-essencial-de-comandos-e-vari%C3%A1veis-de-ambiente-no-windows "Guia Essencial de Comandos e Variáveis de Ambiente no Windows")
+
+> Microsoft **_PowerShell_**
+
+- [Verificar a existência de um diretório ou de um arquivo com arquivo PowerShell (.ps1)](# "Verificar a existência de um diretório ou de um arquivo com arquivo PowerShell (.ps1)")
 
 ---
 
@@ -462,6 +468,45 @@ Aqui estão alguns dos principais diretórios do Windows e as variáveis de ambi
     ```
 
 Lembre-se de que essas variáveis de ambiente podem variar de acordo com a versão e configuração do Windows. Você pode usar essas variáveis em scripts ou no Prompt de Comandos para acessar esses diretórios.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Verificar a existência de um diretório ou de um arquivo com arquivo PowerShell (.ps1)
+
+Este script em `PowerShell` verifica a existência de um diretório:
+
+```powershell
+# Check if the directory exists
+$programFiles = [Environment]::GetEnvironmentVariable("ProgramFiles(x86)")
+$directory = "$programFiles\AnyDesk"
+
+if (Test-Path $directory) {
+    Write-Host "The directory $directory exists."
+} else {
+    Write-Host "The directory $directory does not exist."
+}
+# End of verification
+```
+
+Modificação para verificar a existência de um arquivo:
+
+```powershell
+# Check if the file exists
+$programFiles = [Environment]::GetEnvironmentVariable("ProgramFiles(x86)")
+$filePath = "$programFiles\AnyDesk\AnyDesk.exe"
+
+if (Test-Path $filePath) {
+    Write-Host "The file exists."
+} else {
+    Write-Host "The file does not exist."
+}
+# End of verification
+```
+
+---
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
