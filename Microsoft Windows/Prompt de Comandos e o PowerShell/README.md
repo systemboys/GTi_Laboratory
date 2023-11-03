@@ -556,8 +556,7 @@ if (Test-Path $directory) {
     Start-Process -FilePath $downloadPath -ArgumentList "/S" -Wait
 
     # Apagar o arquivo
-    $filePath = "$env:temp\YourPackage.exe"
-    Remove-Item -Path $filePath -Force
+    Remove-Item -Path $downloadPath -Force
 }
 
 Write-Host "Press any key to continue..."
