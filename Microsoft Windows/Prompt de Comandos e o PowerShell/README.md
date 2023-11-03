@@ -20,7 +20,7 @@
 - [Verificar a existência de um diretório ou de um arquivo com arquivo PowerShell (.ps1)](#verificar-a-exist%C3%AAncia-de-um-diret%C3%B3rio-ou-de-um-arquivo-com-arquivo-powershell-ps1 "Verificar a existência de um diretório ou de um arquivo com arquivo PowerShell (.ps1)")
 - [Arquivo (.ps1) para instalação de pacotes](#arquivo-ps1-para-instala%C3%A7%C3%A3o-de-pacotes "Arquivo (.ps1) para instalação de pacotes")
 - [Execução Interativa de Comandos no PowerShell: Como Permitir que os Usuários Execute Comandos Personalizados](#execu%C3%A7%C3%A3o-interativa-de-comandos-no-powershell-como-permitir-que-os-usu%C3%A1rios-execute-comandos-personalizados "Execução Interativa de Comandos no PowerShell: Como Permitir que os Usuários Execute Comandos Personalizados")
-- [Executando Comandos Remotos com PowerShell: Desvendando IRM e IEX](# "Executando Comandos Remotos com PowerShell: Desvendando IRM e IEX")
+- [Executando Comandos Remotos com PowerShell: Desvendando IRM e IEX](#executando-comandos-remotos-com-powershell-desvendando-irm-e-iex "Executando Comandos Remotos com PowerShell: Desvendando IRM e IEX")
 
 ---
 
