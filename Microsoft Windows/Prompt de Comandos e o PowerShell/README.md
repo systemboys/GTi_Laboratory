@@ -20,6 +20,7 @@
 - [Verificar a existência de um diretório ou de um arquivo com arquivo PowerShell (.ps1)](#verificar-a-exist%C3%AAncia-de-um-diret%C3%B3rio-ou-de-um-arquivo-com-arquivo-powershell-ps1 "Verificar a existência de um diretório ou de um arquivo com arquivo PowerShell (.ps1)")
 - [Arquivo (.ps1) para instalação de pacotes](#arquivo-ps1-para-instala%C3%A7%C3%A3o-de-pacotes "Arquivo (.ps1) para instalação de pacotes")
 - [Execução Interativa de Comandos no PowerShell: Como Permitir que os Usuários Execute Comandos Personalizados](#execu%C3%A7%C3%A3o-interativa-de-comandos-no-powershell-como-permitir-que-os-usu%C3%A1rios-execute-comandos-personalizados "Execução Interativa de Comandos no PowerShell: Como Permitir que os Usuários Execute Comandos Personalizados")
+- [Executando Comandos Remotos com PowerShell: Desvendando IRM e IEX](# "Executando Comandos Remotos com PowerShell: Desvendando IRM e IEX")
 
 ---
 
@@ -584,6 +585,21 @@ $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
 ```
 
 Primeiro, ele solicita ao usuário que digite um comando por meio do cmdlet `Read-Host`, armazenando a entrada na variável `$command`. Em seguida, o comando digitado é executado usando o `Invoke-Expression $command`. Após a execução do comando, o script exibe a mensagem "Pressione qualquer tecla para continuar..." e aguarda até que o usuário pressione uma tecla antes de continuar.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Executando Comandos Remotos com PowerShell: Desvendando IRM e IEX
+
+`IRM` e `IEX` são abreviações para cmdlets do PowerShell (Windows PowerShell Web Cmdlets) e são usados para baixar e executar scripts da web, respectivamente.
+
+- **IRM (`Invoke-RestMethod`):** O cmdlet `Invoke-RestMethod` é usado para fazer solicitações HTTP/S para um URI específico (Uniform Resource Identifier) e recuperar os dados de resposta. No contexto do comando `irm https://dominio.com/dir`, o `IRM` está baixando um script ou um arquivo de um local específico na web.
+
+- **IEX (`Invoke-Expression`):** O cmdlet `Invoke-Expression` é usado para avaliar ou executar strings como comandos no PowerShell. No contexto do comando `irm https://dominio.com/dir | iex`, o `IEX` está sendo usado para executar imediatamente o conteúdo baixado pelo `IRM`. Isso é útil quando você deseja baixar um script da web e executá-lo diretamente no PowerShell sem salvá-lo como um arquivo separado.
+
+Juntos, esses cmdlets são frequentemente usados em uma única linha de comando para baixar e executar scripts do PowerShell diretamente da web. No entanto, é importante ter cuidado ao usar esses comandos, pois eles podem executar código arbitrário do qual você não tem controle total, o que pode ser um risco de segurança se você estiver baixando e executando scripts de fontes não confiáveis.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
