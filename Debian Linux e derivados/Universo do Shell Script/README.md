@@ -139,6 +139,18 @@ O cabeçalho colocado no início do seu script Shell é chamado de **comentário
 
 Lembre-se, a clareza e a documentação são sempre valiosas quando se trata de programação. O uso de comentários informativos, como no cabeçalho que você mostrou, é uma maneira fundamental de alcançar essas metas.
 
+> **Exemplo para adicionar novas informações**
+
+Digamos que você está buscando uma maneira de indicar a versão e a mudança feita no cabeçalho de seus scripts. Considerando por exemplo, uma sessão "Utilitários do Sistema" e a opção "Informações do Sistema", você pode adicionar algo assim:
+
+```shell
+# v0.0.3 2023-10-24 às 00h00, Marcos Aurélio:
+#   - Adicionada a opção "Utilitários do Sistema" na sessão "Utilitários do Sistema" para
+#     fornecer informações detalhadas sobre o processador e a memória do sistema.
+```
+
+Nesse exemplo, substitua "XX" pelos valores reais de data e hora quando você fizer essa atualização. Esta linha indica claramente o que foi adicionado na versão atual (opção "Utilitários do Sistema" na sessão correspondente) e quando a mudança foi feita. Espero que isso atenda às suas necessidades!
+
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
