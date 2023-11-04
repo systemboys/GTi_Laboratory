@@ -29,7 +29,7 @@
 - [Algumas ferramentas úteis](#algumas-ferramentas-%C3%BAteis "Algumas ferramentas úteis")
 - [Internet](#internet "Internet")
 - [Desenvolvimento](#desenvolvimento "Desenvolvimento")
-- [Gráficos](#graficos "Gráficos")
+- [Gráficos](#gr%C3%A1ficos "Gráficos")
 
 ---
 # Marcos Aurélio Rocha da Silva (programação)
