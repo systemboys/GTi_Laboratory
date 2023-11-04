@@ -29,6 +29,7 @@
 - [Algumas ferramentas úteis](#algumas-ferramentas-%C3%BAteis "Algumas ferramentas úteis")
 - [Internet](#internet "Internet")
 - [Desenvolvimento](#desenvolvimento "Desenvolvimento")
+- [Gráficos](#graficos "Gráficos")
 
 ---
 # Marcos Aurélio Rocha da Silva (programação)
@@ -236,7 +237,7 @@ Botões do Painel na barra inferior.
 
 ---
 
-## Graficos
+## Gráficos
 
 | Software | Copyright | Instalação e/ou Configurações |
 | :--: | :--: | ---- |
