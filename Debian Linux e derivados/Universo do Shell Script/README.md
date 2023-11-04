@@ -15,6 +15,7 @@
    - [Verificação de Instalação de software em Bash](#verifica%C3%A7%C3%A3o-de-instala%C3%A7%C3%A3o-de-software-em-bash "Verificação de Instalação de software em Bash")
    - [Verificando a Existência do Diretório em /opt/](#verificando-a-exist%C3%AAncia-do-diret%C3%B3rio-em-opt "Verificando a Existência do Diretório em /opt/")
    - [Obtendo Informações do Processador e Memória](#obtendo-informa%C3%A7%C3%B5es-do-processador-e-mem%C3%B3ria "Obtendo Informações do Processador e Memória")
+   - [Exibindo Informações da Memória em MB](# "Exibindo Informações da Memória em MB")
 - [Menu de Instalação de Programas no Terminal Linux](#menu-de-instala%C3%A7%C3%A3o-de-programas-no-terminal-linux "Menu de Instalação de Programas no Terminal Linux")
     - [Personalizando Cores de Texto em Scripts Bash: Uma Introdução aos Códigos de Escape ANSI](#personalizando-cores-de-texto-em-scripts-bash-uma-introdu%C3%A7%C3%A3o-aos-c%C3%B3digos-de-escape-ansi "Personalizando Cores de Texto em Scripts Bash: Uma Introdução aos Códigos de Escape ANSI")
     - [Personalizando o Plano de Fundo no Terminal Linux: Como Alterar o Fundo dos Textos em Scripts Bash](#personalizando-o-plano-de-fundo-no-terminal-linux-como-alterar-o-fundo-dos-textos-em-scripts-bash "Personalizando o Plano de Fundo no Terminal Linux: Como Alterar o Fundo dos Textos em Scripts Bash")
@@ -395,6 +396,52 @@ Este script Bash em Shell Linux tem como objetivo obter informações do process
 Este script é útil para usuários que desejam verificar as especificações do processador e a quantidade de memória em seus sistemas Linux.
 
 **Nota:** A versão reescrita do script está na sintaxe padrão do Shell (/bin/sh), que é mais portátil e pode ser executada em uma variedade de ambientes Unix-like.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+### Exibindo Informações da Memória em MB
+
+Este script em shell obtém informações do total de memória do sistema em kB do arquivo `/proc/meminfo`, converte esse valor para MB e exibe o resultado em uma caixa de diálogo usando a ferramenta `dialog`.
+
+**Explicação:**
+
+1. **Obtenção das Informações da Memória:**
+   - `memory_info=$(grep "MemTotal" /proc/meminfo | cut -d ":" -f 2 | sed 's/^[ \t]*//')`: Obtém o valor total da memória do arquivo `/proc/meminfo`. O comando `grep` filtra a linha contendo "MemTotal", `cut -d ":" -f 2` divide a linha pelo caractere ":" e pega a segunda parte (o valor da memória), e `sed 's/^[ \t]*//'` remove espaços em branco no início.
+
+2. **Formatação do Tamanho da Memória:**
+   - A função `formatar_tamanho()` converte o tamanho da memória de kB para MB. Recebe um valor em kB como argumento, divide por 1024 para converter para MB e retorna o valor formatado com duas casas decimais seguidas de "MB".
+
+3. **Exibição em uma Caixa de Diálogo:**
+   - `tamanho_kb=$memory_info`: A variável `tamanho_kb` armazena o valor da memória em kB.
+   - O comando `dialog --msgbox` exibe uma caixa de diálogo com o tamanho da memória formatado em MB.
+
+**Código Reescrito:**
+
+```bash
+#!/bin/bash
+
+# Obter informações da memória em kB
+memory_info=$(grep "MemTotal" /proc/meminfo | cut -d ":" -f 2 | sed 's/^[ \t]*//')
+
+# Função para formatar o tamanho de kB para MB
+formatar_tamanho() {
+  tamanho_kb=$1
+  tamanho_mb=$(echo "scale=2; $tamanho_kb / 1024" | bc)
+  echo "$tamanho_mb MB"
+}
+
+# Tamanho em kB a ser formatado
+tamanho_kb=$memory_info
+
+# Exibir as informações da memória em uma caixa de diálogo
+dialog --msgbox "Memória:
+$(formatar_tamanho $tamanho_kb)" 15 80
+```
+
+Esse script é útil para exibir o total de memória do sistema de forma mais amigável para o usuário, mostrando o valor em MB.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
