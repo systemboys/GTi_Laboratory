@@ -436,9 +436,8 @@ formatar_tamanho() {
 # Tamanho em kB a ser formatado
 tamanho_kb=$memory_info
 
-# Exibir as informações da memória em uma caixa de diálogo
-dialog --msgbox "Memória:
-$(formatar_tamanho $tamanho_kb)" 15 80
+# Exibir as informações da memória
+echo "Informações da memória: $(formatar_tamanho $tamanho_kb)"
 ```
 
 Esse script é útil para exibir o total de memória do sistema de forma mais amigável para o usuário, mostrando o valor em MB.
