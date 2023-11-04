@@ -49,7 +49,7 @@ nano install_anydesk.sh
 
 2. Cole o seguinte conteúdo no arquivo:
 
-```bash
+```shell
 #!/bin/bash
 
 # Adicionar a chave GPG
@@ -92,7 +92,7 @@ Depois de usar o AnyDesk, você pode remover o script se desejar, já que ele é
 
 Segue abaixo um exemplo de **_comentário de cabeçalho_** ou **_bloco de comentário_**:
 
-```bash
+```shell
 #!/bin/bash
 
 # docker-control.sh - Executa o menu Docker Control.
@@ -148,7 +148,7 @@ Lembre-se, a clareza e a documentação são sempre valiosas quando se trata de 
 
 Você pode obter o número da versão do último comentário no script usando expressões regulares (regex) no Bash. Aqui está um exemplo de como você pode fazer isso:
 
-```bash
+```shell
 #!/bin/bash
 
 # Histórico:
@@ -179,7 +179,7 @@ Certifique-se de que o padrão da versão no seu script corresponda ao padrão u
 
 ## Script de Verificação de Privilégios de Superusuário
 
-```bash
+```shell
 #!/bin/bash
 
 # Verifica se o script está sendo executado como superusuário
@@ -224,7 +224,7 @@ Você pode usar uma estrutura de controle para verificar se qualquer programa es
 
 Por exemplo, para verificar a existência do Node.js, você pode usar algo assim:
 
-```bash
+```shell
 #!/bin/bash
 
 # Verificar se o Node.js está instalado
@@ -246,7 +246,7 @@ No caso do AnyDesk, o comando associado a ele pode variar dependendo da versão 
 
 Se você souber qual é o comando associado ao programa (como "anydesk" no caso do AnyDesk), pode usar a estrutura de controle da mesma forma que fizemos anteriormente:
 
-```bash
+```shell
 #!/bin/bash
 
 # Verificar se o AnyDesk está instalado
@@ -269,7 +269,7 @@ Lembre-se de que alguns programas podem não ter um comando associado diretament
 
 O exemplo aqui é para verificar se o Discord (pacote `dpkg`) está instalado no Debian Linux, você pode modificar o script da seguinte forma:
 
-```bash
+```shell
 #!/bin/bash
 
 if ! dpkg -l | grep -q discord; then
@@ -291,7 +291,7 @@ Neste script, `dpkg -l` lista todos os pacotes instalados no sistema e `grep dis
 
 Exemplo com o navegador Google Chrome! Você pode usar o seguinte script em Bash para verificar se o Google Chrome está instalado no sistema:
 
-```bash
+```shell
 #!/bin/bash
 
 # Verifica se o Google Chrome está instalado
@@ -313,7 +313,7 @@ Neste script, `command -v google-chrome` verifica se o comando `google-chrome` p
 
 No exemplo, veremos se existe o diretório `Firefox`, você pode usar a estrutura `if...else...fi` corrigida para verificar se o diretório "/opt/firefox" existe no seu script Bash. Aqui está a versão correta:
 
-```bash
+```shell
 #!/bin/bash
 
 if [ -d "/opt/firefox" ]; then
@@ -393,7 +393,7 @@ Este script é útil para usuários que desejam verificar as especificações do
 
 Aqui está uma versão equivalente do menu de instalação para Linux, em um arquivo de script bash chamado `menu_instalacao.sh`:
 
-```bash
+```shell
 #!/bin/bash
 
 clear
@@ -484,7 +484,7 @@ Para mudar a cor de uma palavra ou de um texto específico ao imprimir no termin
 
 Aqui está um exemplo de como você pode fazer isso no seu script Bash:
 
-```bash
+```shell
 #!/bin/bash
 
 # Defina os códigos de escape ANSI para as cores
@@ -515,7 +515,7 @@ Espero que isso ajude! Se você tiver mais perguntas ou precisar de assistência
 
 Sim, você pode mudar o plano de fundo no terminal usando códigos de escape ANSI em scripts Bash. Para mudar o plano de fundo, você pode utilizar o código de escape ANSI `\033[<cor de fundo>m`. Aqui está um exemplo de como mudar o plano de fundo para vermelho:
 
-```bash
+```shell
 #!/bin/bash
 
 # Mudar a cor do texto para branco e o plano de fundo para vermelho
@@ -613,7 +613,7 @@ Neste exemplo, o `sleep 3` faz com que o script pause por 3 segundos antes de ex
 
 Sim, é possível obter o nome do script bash (`arquivo.sh`) a partir de dentro do próprio script e exibi-lo usando um `echo`. Você pode fazer isso usando a variável especial `$0`, que contém o nome do arquivo do script que está sendo executado. Aqui está como você pode fazer:
 
-```bash
+```shell
 #!/bin/bash
 
 # Obtendo o nome do arquivo do script
@@ -673,7 +673,7 @@ Esses caracteres podem ser usados para criar bordas, setas, caixas, e muitos out
 
 Você pode verificar se um diretório existe em um script shell usando a estrutura condicional `if`. Aqui está um exemplo de como fazer isso no Debian Linux:
 
-```bash
+```shell
 #!/bin/bash
 
 diretorioA="/caminho/para/diretorioA"
@@ -703,7 +703,7 @@ Neste exemplo, `$diretorioA` é o caminho para "diretorioA" e `$diretorioB` é o
 
 No arquivo "GTi_Support.sh":
 
-```bash
+```shell
 #!/bin/bash
 clear
 # Variáveis úteis
@@ -715,7 +715,7 @@ cd Package_Installers/
 
 No arquivo "Install_Package1.sh", você pode receber esses valores como argumentos da seguinte maneira:
 
-```bash
+```shell
 #!/bin/bash
 # Verifica se o número de argumentos é correto
 if [ "$#" -ne 2 ]; then
@@ -741,7 +741,7 @@ Quando você executa "./Install_Package1.sh" a partir de "GTi_Support.sh", as va
 
 É possível exibir a data e hora em tempo real dentro de um Shell Script Bash. Você pode usar a variável especial `$(date)` para obter a data e hora atual. Por exemplo:
 
-```bash
+```shell
 #!/bin/bash
 
 # Obter a data e hora atual
@@ -791,7 +791,7 @@ Para exibir o símbolo de registro (®) em um círculo em um terminal, você pod
 
 Aqui está um exemplo de como você poderia fazer isso:
 
-```bash
+```shell
 #!/bin/bash
 
 # Define o símbolo de registro (®) em um círculo usando o código de escape ANSI
@@ -810,7 +810,7 @@ Lembre-se de que a aparência final dependerá do terminal que você está usand
 
 Para incluir o símbolo de registro (®) em uma linha usando escape Unicode, você precisa usar a flag `-e` com o comando `echo`. No entanto, para fazer isso dentro de uma variável, você precisa usar o valor hexadecimal do código Unicode. Aqui está o código corrigido:
 
-```bash
+```shell
 #!/bin/bash
 
 # Define o símbolo de registro (®) em um círculo usando o código Unicode hexadecimal
@@ -836,7 +836,7 @@ Neste código, `"\u24C7"` é o valor Unicode hexadecimal para o símbolo de regi
 
 Para criar um menu interativo usando o `dialog` e permitir que o usuário navegue usando as setas direcionais, você pode utilizar o seguinte script:
 
-```bash
+```shell
 #!/bin/bash
 
 # Verifica se o dialog está instalado
@@ -991,7 +991,7 @@ No script seguinte, o usuário será solicitado novamente até que um nome não 
 
 **_Com Uso do Arquivo "/tmp/nome.txt":_**
 
-```bash
+```shell
 #!/bin/bash
 
 # Loop para garantir que o usuário forneça um nome não vazio
@@ -1017,7 +1017,7 @@ done
 
 **_Sem Uso do Arquivo "/tmp/nome.txt":_**
 
-```bash
+```shell
 #!/bin/bash
 
 # Loop para garantir que o usuário forneça um nome não vazio
@@ -1079,7 +1079,7 @@ No `dialog`, o resultado de entrada do usuário (incluindo senhas) pode ser capt
 
 **_Obtendo a senha:_**
 
-```bash
+```shell
 #!/bin/bash
 
 # Captura a senha do usuário usando o dialog
@@ -1101,7 +1101,7 @@ Essa abordagem permite que você armazene a senha capturada em uma variável par
 
 Para validar se o campo de senha está vazio antes de permitir que o usuário prossiga, você pode adicionar uma verificação antes de mostrar a caixa de mensagem. Veja como você pode fazer isso:
 
-```bash
+```shell
 #!/bin/bash
 
 # Loop para garantir que o usuário forneça uma senha não vazia
@@ -1190,7 +1190,7 @@ Certifique-se de testar essa abordagem para garantir que funcione conforme esper
 
 Para realizar essa tarefa, você pode criar um script Bash interativo usando o `Dialog`. O script vai pedir para você inserir um domínio, pingar esse domínio e mostrar o resultado em uma janela de mensagem do `Dialog`. Aqui está um exemplo de como você pode fazer isso, incluindo uma barra de progresso para indicar o andamento:
 
-```bash
+```shell
 #!/bin/bash
 
 # Função para realizar o ping e mostrar o resultado em uma janela de mensagem
