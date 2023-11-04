@@ -14,6 +14,7 @@
    - [Verificação de Pacotes no Debian: dpkg](#verifica%C3%A7%C3%A3o-de-pacotes-no-debian-dpkg "Verificação de Pacotes no Debian: dpkg")
    - [Verificação de Instalação de software em Bash](#verifica%C3%A7%C3%A3o-de-instala%C3%A7%C3%A3o-de-software-em-bash "Verificação de Instalação de software em Bash")
    - [Verificando a Existência do Diretório em /opt/](#verificando-a-exist%C3%AAncia-do-diret%C3%B3rio-em-opt "Verificando a Existência do Diretório em /opt/")
+   - [Obtendo Informações do Processador e Memória](# "Obtendo Informações do Processador e Memória")
 - [Menu de Instalação de Programas no Terminal Linux](#menu-de-instala%C3%A7%C3%A3o-de-programas-no-terminal-linux "Menu de Instalação de Programas no Terminal Linux")
     - [Personalizando Cores de Texto em Scripts Bash: Uma Introdução aos Códigos de Escape ANSI](#personalizando-cores-de-texto-em-scripts-bash-uma-introdu%C3%A7%C3%A3o-aos-c%C3%B3digos-de-escape-ansi "Personalizando Cores de Texto em Scripts Bash: Uma Introdução aos Códigos de Escape ANSI")
     - [Personalizando o Plano de Fundo no Terminal Linux: Como Alterar o Fundo dos Textos em Scripts Bash](#personalizando-o-plano-de-fundo-no-terminal-linux-como-alterar-o-fundo-dos-textos-em-scripts-bash "Personalizando o Plano de Fundo no Terminal Linux: Como Alterar o Fundo dos Textos em Scripts Bash")
@@ -329,6 +330,59 @@ Neste script:
 - `[ -d "/opt/firefox" ]` verifica se "/opt/firefox" é um diretório.
 - Se o diretório existe, a primeira parte do `if` é verdadeira, então ele entra no bloco `then` e exibe "O diretório Firefox existe!".
 - Se o diretório não existe, ele pula para a parte do `else` e exibe "O diretório Firefox não existe!".
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Obtendo Informações do Processador e Memória
+
+Explorando o Shell: Obtendo Informações do Processador e Memória
+
+**Shell Script em Sintaxe:**
+```shell
+#!/bin/sh
+
+# Obter informações do processador
+processor_info=$(grep "model name" /proc/cpuinfo | head -n 1 | cut -d ":" -f 2 | sed 's/^[ \t]*//')
+
+# Obter informações da memória
+memory_info=$(grep "MemTotal" /proc/meminfo | cut -d ":" -f 2 | sed 's/^[ \t]*//')
+
+# Imprimir as informações obtidas
+echo "Informações do processador: $processor_info"
+echo "Informações da memória: $memory_info"
+```
+
+**Explicação:**
+
+Este script Bash em Shell Linux tem como objetivo obter informações do processador e da memória do sistema. Vamos analisar o que cada parte do script faz:
+
+1. `#!/bin/sh`: Indica que o script será interpretado pelo shell `/bin/sh`.
+
+2. **Obtendo Informações do Processador:**
+   - `processor_info=$(grep "model name" /proc/cpuinfo | head -n 1 | cut -d ":" -f 2 | sed 's/^[ \t]*//')`:
+     - `grep "model name" /proc/cpuinfo`: Obtém a linha contendo informações do modelo do processador.
+     - `head -n 1`: Seleciona a primeira linha encontrada.
+     - `cut -d ":" -f 2`: Divide a linha usando ":" como delimitador e pega o segundo campo (após o ":"), que contém as informações do modelo do processador.
+     - `sed 's/^[ \t]*//'`: Remove espaços em branco do início da linha, se houver.
+     - O resultado é armazenado na variável `processor_info`.
+
+3. **Obtendo Informações da Memória:**
+   - `memory_info=$(grep "MemTotal" /proc/meminfo | cut -d ":" -f 2 | sed 's/^[ \t]*//')`:
+     - `grep "MemTotal" /proc/meminfo`: Obtém a linha contendo informações sobre a memória total do sistema.
+     - `cut -d ":" -f 2`: Divide a linha usando ":" como delimitador e pega o segundo campo (após o ":"), que contém as informações da memória.
+     - `sed 's/^[ \t]*//'`: Remove espaços em branco do início da linha, se houver.
+     - O resultado é armazenado na variável `memory_info`.
+
+4. **Imprimindo as Informações:**
+   - `echo "Informações do processador: $processor_info"`: Imprime as informações do processador.
+   - `echo "Informações da memória: $memory_info"`: Imprime as informações da memória.
+
+Este script é útil para usuários que desejam verificar as especificações do processador e a quantidade de memória em seus sistemas Linux.
+
+**Nota:** A versão reescrita do script está na sintaxe padrão do Shell (/bin/sh), que é mais portátil e pode ser executada em uma variedade de ambientes Unix-like.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
