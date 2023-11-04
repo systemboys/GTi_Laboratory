@@ -322,7 +322,7 @@ Neste script, `command -v google-chrome` verifica se o comando `google-chrome` p
 
 ---
 
-### Verificando a Existência do Diretório em /opt/
+## Verificando a Existência do Diretório em /opt/
 
 No exemplo, veremos se existe o diretório `Firefox`, você pode usar a estrutura `if...else...fi` corrigida para verificar se o diretório "/opt/firefox" existe no seu script Bash. Aqui está a versão correta:
 
@@ -349,7 +349,7 @@ Neste script:
 
 ---
 
-### Obtendo Informações do Processador e Memória
+## Obtendo Informações do Processador e Memória
 
 Explorando o Shell: Obtendo Informações do Processador e Memória
 
@@ -402,7 +402,7 @@ Este script é útil para usuários que desejam verificar as especificações do
 
 ---
 
-### Exibindo Informações da Memória em MB
+## Exibindo Informações da Memória em MB
 
 Este script em shell obtém informações do total de memória do sistema em kB do arquivo `/proc/meminfo`, converte esse valor para MB e exibe o resultado em uma caixa de diálogo usando a ferramenta `dialog`.
 
@@ -756,7 +756,7 @@ Neste exemplo, `$diretorioA` é o caminho para "diretorioA" e `$diretorioB` é o
 
 ---
 
-### Passando Variáveis entre Scripts Bash no Linux
+## Passando Variáveis entre Scripts Bash no Linux
 
 É possível passar as variáveis "sleep" e "fileName" para o arquivo "Install_Package1.sh" de algumas maneiras. Uma delas é passar essas variáveis como argumentos quando você executa o script "Install_Package1.sh". Por exemplo:
 
@@ -796,7 +796,7 @@ Quando você executa "./Install_Package1.sh" a partir de "GTi_Support.sh", as va
 
 ---
 
-### Exibindo Data e Hora em Tempo Real em um Shell Script Bash
+## Exibindo Data e Hora em Tempo Real em um Shell Script Bash
 
 É possível exibir a data e hora em tempo real dentro de um Shell Script Bash. Você pode usar a variável especial `$(date)` para obter a data e hora atual. Por exemplo:
 
@@ -1103,7 +1103,7 @@ done
 
 Vamos entender a diferença entre os dois scripts e, em seguida, criar um título que englobe ambos.
 
-### Script com Uso do Arquivo "/tmp/nome.txt":
+## Script com Uso do Arquivo "/tmp/nome.txt":
 
 1. **Solicitação do Nome:**
    - Usa o comando `dialog --inputbox` para solicitar ao usuário que digite um nome.
@@ -1117,7 +1117,7 @@ Vamos entender a diferença entre os dois scripts e, em seguida, criar um títul
    - Usa um arquivo temporário para armazenar o nome temporariamente.
    - Requer manipulação de arquivos e limpeza posterior do arquivo.
 
-### Script Sem Uso do Arquivo "/tmp/nome.txt":
+## Script Sem Uso do Arquivo "/tmp/nome.txt":
 
 1. **Solicitação do Nome:**
    - Usa o comando `dialog --inputbox` para solicitar ao usuário que digite um nome diretamente na variável `nome`.
