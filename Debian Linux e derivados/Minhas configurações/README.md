@@ -216,7 +216,7 @@ Botões do Painel na barra inferior.
 | FileZilla | [filezilla-project.org](https://filezilla-project.org/download.php?type=client "Download") | Instalação via terminal: `apt install filezilla` e `apt --fix-broken install`. \|  Adicionar à área de trabalho. |
 | Steam | [Valve Corporation](https://store.steampowered.com/?l=portuguese "Download") | Adicionar à área de trabalho. |
 | Remmina | [Antenore Gatta](https://remmina.org/ "Antenore Gatta") | Instalação via terminal: `sudo apt-get install remmina` |
-| Visualizador TigerVNC | [TigerVNC](#https://tigervnc.org/ "Visualizador TigerVNC") | Para instalar o "Visualizador TigerVNC" via terminal: `sudo apt-get update` e `sudo apt-get install tigervnc-viewer` |
+| Visualizador TigerVNC | [TigerVNC](https://tigervnc.org/ "Visualizador TigerVNC") | Para instalar o "Visualizador TigerVNC" via terminal: `sudo apt-get update` e `sudo apt-get install tigervnc-viewer` |
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
