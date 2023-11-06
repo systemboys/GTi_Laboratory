@@ -16,6 +16,7 @@
    - [Verificando a Existência do Diretório em /opt/](#verificando-a-exist%C3%AAncia-do-diret%C3%B3rio-em-opt "Verificando a Existência do Diretório em /opt/")
    - [Obtendo Informações do Processador e Memória](#obtendo-informa%C3%A7%C3%B5es-do-processador-e-mem%C3%B3ria "Obtendo Informações do Processador e Memória")
    - [Exibindo Informações da Memória em MB](#exibindo-informa%C3%A7%C3%B5es-da-mem%C3%B3ria-em-mb "Exibindo Informações da Memória em MB")
+   - [Executando Scripts Diretamente do GitHub no Terminal Linux: Uma Abordagem Segura](# "Executando Scripts Diretamente do GitHub no Terminal Linux: Uma Abordagem Segura")
 - [Menu de Instalação de Programas no Terminal Linux](#menu-de-instala%C3%A7%C3%A3o-de-programas-no-terminal-linux "Menu de Instalação de Programas no Terminal Linux")
     - [Personalizando Cores de Texto em Scripts Bash: Uma Introdução aos Códigos de Escape ANSI](#personalizando-cores-de-texto-em-scripts-bash-uma-introdu%C3%A7%C3%A3o-aos-c%C3%B3digos-de-escape-ansi "Personalizando Cores de Texto em Scripts Bash: Uma Introdução aos Códigos de Escape ANSI")
     - [Personalizando o Plano de Fundo no Terminal Linux: Como Alterar o Fundo dos Textos em Scripts Bash](#personalizando-o-plano-de-fundo-no-terminal-linux-como-alterar-o-fundo-dos-textos-em-scripts-bash "Personalizando o Plano de Fundo no Terminal Linux: Como Alterar o Fundo dos Textos em Scripts Bash")
@@ -441,6 +442,28 @@ echo "Informações da memória: $(formatar_tamanho $tamanho_kb)"
 ```
 
 Esse script é útil para exibir o total de memória do sistema de forma mais amigável para o usuário, mostrando o valor em MB.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Executando Scripts Diretamente do GitHub no Terminal Linux: Uma Abordagem Segura
+
+Sim, você pode executar um script diretamente do GitHub no terminal usando `curl` e `bash` combinados. No entanto, ao fazer isso, você deve ter muito cuidado, pois está executando código diretamente da internet, o que pode ser inseguro se você não confia na fonte.
+
+Se você está confortável com os riscos e a fonte é confiável, você pode usar o comando que você mencionou:
+
+```bash
+bash -c "$(curl -fsSL https://github.com/systemboys/QuickLinux/raw/main/install.sh)"
+```
+
+Neste comando:
+
+- `curl -fsSL https://github.com/systemboys/QuickLinux/raw/main/install.sh` faz o download do script do GitHub.
+- `bash -c "$(comando)"` executa o comando no shell.
+
+Certifique-se de ajustar o URL do script para corresponder à localização real do seu script no repositório GitHub. Além disso, é altamente recomendável revisar o script ou a fonte para garantir que não contenha código malicioso antes de executá-lo desta forma.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
