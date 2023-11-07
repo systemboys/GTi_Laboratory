@@ -9,6 +9,7 @@
 - [Script de Instalação Automática de pacotes no Linux](#script-de-instala%C3%A7%C3%A3o-autom%C3%A1tica-de-pacotes-no-linux "Script de Instalação Automática de pacotes no Linux")
     - [A Importância do Cabeçalho no Shell Script: Clareza, Documentação e Boas Práticas](#a-import%C3%A2ncia-do-cabe%C3%A7alho-no-shell-script-clareza-documenta%C3%A7%C3%A3o-e-boas-pr%C3%A1ticas "A Importância do Cabeçalho no Shell Script: Clareza, Documentação e Boas Práticas")
     - [Obtendo a Última Versão do Script a partir dos Comentários](#obtendo-a-%C3%BAltima-vers%C3%A3o-do-script-a-partir-dos-coment%C3%A1rios "Obtendo a Última Versão do Script a partir dos Comentários")
+    - [Obtendo e Comparando Versões de Scripts Local e do GitHub em Shell](# "Obtendo e Comparando Versões de Scripts Local e do GitHub em Shell")
     - [Integrando Variáveis entre Scripts Shell no Linux](#integrando-vari%C3%A1veis-entre-scripts-shell-no-linux "Integrando Variáveis entre Scripts Shell no Linux")
     - [Script de Verificação de Privilégios de Superusuário](#script-de-verifica%C3%A7%C3%A3o-de-privil%C3%A9gios-de-superusu%C3%A1rio "Script de Verificação de Privilégios de Superusuário")
    - [Verificação e Instalação Condicional de Programas em Scripts Bash](#verifica%C3%A7%C3%A3o-e-instala%C3%A7%C3%A3o-condicional-de-programas-em-scripts-bash "Verificação e Instalação Condicional de Programas em Scripts Bash")
@@ -198,6 +199,57 @@ lastVersion=$(grep -o 'v[0-9]\+\.[0-9]\+\.[0-9]\+' "$fileHistory" | tail -n 1)
 
 echo "A última versão registrada no script é: $lastVersion"
 ```
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Obtendo e Comparando Versões de Scripts Local e do GitHub em Shell
+
+**Tutorial:**
+
+Neste tutorial, vamos aprender como obter a versão de um script local e compará-la com a versão de um script hospedado no GitHub usando Shell Script. Isso é útil para verificar se há atualizações disponíveis para um script sem a necessidade de baixar o arquivo.
+
+### **Passos:**
+
+**1. Obtendo a Versão do Script Local:**
+```shell
+# Obtém o número da última versão do histórico do script local
+lastLocalVersion=$(grep -o 'v[0-9]\+\.[0-9]\+\.[0-9]\+' "../../QuickLinux.sh" | tail -n 1)
+```
+
+Aqui, utilizamos o comando `grep` para encontrar a última versão (no formato 'vX.X.X') no arquivo local `../../QuickLinux.sh`.
+
+**2. Obtendo a Versão do Script no GitHub:**
+```shell
+# Obtém o número da última versão do histórico do script no GitHub
+lastGitHubVersion=$(curl -s https://github.com/systemboys/QuickLinux/blob/main/QuickLinux.sh | grep -o 'v[0-9]\+\.[0-9]\+\.[0-9]\+' | tail -n 1)
+```
+
+Utilizamos o `curl` para obter o conteúdo do arquivo do GitHub e, em seguida, o `grep` para encontrar a última versão no mesmo formato.
+
+**3. Exibindo as Versões:**
+```shell
+# Exibe as saídas para diagnóstico
+echo "Versão local: $lastLocalVersion"
+echo "Versão no GitHub: $lastGitHubVersion"
+```
+
+Estes comandos `echo` exibem as versões obtidas para diagnóstico.
+
+**4. Exibindo as Versões em uma Caixa de Diálogo usando Dialog:**
+```shell
+# Exibe as versões em uma caixa de mensagem usando dialog
+dialog --msgbox "Versão local: $lastLocalVersion | Versão no GitHub: $lastGitHubVersion" 10 60
+```
+
+Utilizamos o `dialog` para criar uma caixa de mensagem que exibe as versões do script local e do GitHub.
+
+**5. Conclusão:**
+Este método permite que você compare rapidamente as versões de um script local com o script no GitHub, ajudando-o a rastrear atualizações e manter seu código sempre atualizado.
+
+Este é um procedimento útil para qualquer pessoa que esteja trabalhando em colaboração com outros desenvolvedores ou que esteja interessada em manter seu código atualizado com a última versão disponível.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
