@@ -9,6 +9,7 @@
 - [Script de Instalação Automática de pacotes no Linux](#script-de-instala%C3%A7%C3%A3o-autom%C3%A1tica-de-pacotes-no-linux "Script de Instalação Automática de pacotes no Linux")
     - [A Importância do Cabeçalho no Shell Script: Clareza, Documentação e Boas Práticas](#a-import%C3%A2ncia-do-cabe%C3%A7alho-no-shell-script-clareza-documenta%C3%A7%C3%A3o-e-boas-pr%C3%A1ticas "A Importância do Cabeçalho no Shell Script: Clareza, Documentação e Boas Práticas")
     - [Obtendo a Última Versão do Script a partir dos Comentários](#obtendo-a-%C3%BAltima-vers%C3%A3o-do-script-a-partir-dos-coment%C3%A1rios "Obtendo a Última Versão do Script a partir dos Comentários")
+    - [Integrando Variáveis entre Scripts Shell no Linux](# "Integrando Variáveis entre Scripts Shell no Linux")
     - [Script de Verificação de Privilégios de Superusuário](#script-de-verifica%C3%A7%C3%A3o-de-privil%C3%A9gios-de-superusu%C3%A1rio "Script de Verificação de Privilégios de Superusuário")
    - [Verificação e Instalação Condicional de Programas em Scripts Bash](#verifica%C3%A7%C3%A3o-e-instala%C3%A7%C3%A3o-condicional-de-programas-em-scripts-bash "Verificação e Instalação Condicional de Programas em Scripts Bash")
    - [Verificação de Pacotes no Debian: dpkg](#verifica%C3%A7%C3%A3o-de-pacotes-no-debian-dpkg "Verificação de Pacotes no Debian: dpkg")
@@ -197,6 +198,48 @@ lastVersion=$(grep -o 'v[0-9]\+\.[0-9]\+\.[0-9]\+' "$fileHistory" | tail -n 1)
 
 echo "A última versão registrada no script é: $lastVersion"
 ```
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Integrando Variáveis entre Scripts Shell no Linux
+
+Para acessar variáveis definidas em um arquivo de shell script (`file1.sh`, por exemplo) a partir de outro arquivo de shell script (`file2.sh`, por exemplo), você pode usar o comando `source` (ou `.`) para incluir o conteúdo do primeiro arquivo no segundo. Isso faz com que as variáveis definidas no `file1.sh` se tornem acessíveis no `file2.sh`. Aqui está como você pode fazer isso:
+
+**file1.sh**
+
+```shell
+#!/bin/bash
+
+# Definindo variáveis
+variableA="a"
+variableB="b"
+variableC="c"
+```
+
+**file2.sh**
+
+```shell
+# Incluindo o file1.sh para acessar as variáveis
+source /path/to/directory1/file1.sh
+
+# Exibindo os valores das variáveis
+echo "Variável A: $variableA"
+echo "Variável B: $variableB"
+echo "Variável C: $ariableBC"
+```
+
+Ao executar o `file2.sh`, ele incluirá as variáveis do `file1.sh` e as exibirá:
+
+```shell
+Variável A: a
+Variável B: b
+Variável C: c
+```
+
+Dessa forma, você pode compartilhar variáveis entre diferentes scripts de shell, facilitando a modularização e reutilização de código.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
