@@ -190,10 +190,10 @@ Certifique-se de que o padrão da versão no seu script corresponda ao padrão u
 
 ```shell
 # Obtém o caminho do arquivo que contém o histórico
-historico_file="caminho/do/arquivo/historico.txt"
+fileHistory="caminho/do/arquivo/historico.txt"
 
 # Obtém o número da última versão do histórico do script
-lastVersion=$(grep -o 'v[0-9]\+\.[0-9]\+\.[0-9]\+' "$historico_file" | tail -n 1)
+lastVersion=$(grep -o 'v[0-9]\+\.[0-9]\+\.[0-9]\+' "$fileHistory" | tail -n 1)
 
 echo "A última versão registrada no script é: $lastVersion"
 ```
