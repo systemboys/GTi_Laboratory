@@ -186,7 +186,7 @@ Neste exemplo, `"$0"` refere-se ao próprio script em execução. O comando `gre
 
 Certifique-se de que o padrão da versão no seu script corresponda ao padrão utilizado na expressão regular. Você pode ajustar a expressão regular conforme necessário para corresponder ao seu formato de versão específico.
 
-> Se o arquivo onde estão escritas as versões tiver em outro arquivo, segue a seguinte instrução:
+> **( i )** Se o arquivo onde estão escritas as versões tiver em outro arquivo, segue a seguinte instrução:
 
 ```shell
 # Obtém o caminho do arquivo que contém o histórico
