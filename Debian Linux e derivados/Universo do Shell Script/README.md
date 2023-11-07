@@ -9,7 +9,7 @@
 - [Script de Instalação Automática de pacotes no Linux](#script-de-instala%C3%A7%C3%A3o-autom%C3%A1tica-de-pacotes-no-linux "Script de Instalação Automática de pacotes no Linux")
     - [A Importância do Cabeçalho no Shell Script: Clareza, Documentação e Boas Práticas](#a-import%C3%A2ncia-do-cabe%C3%A7alho-no-shell-script-clareza-documenta%C3%A7%C3%A3o-e-boas-pr%C3%A1ticas "A Importância do Cabeçalho no Shell Script: Clareza, Documentação e Boas Práticas")
     - [Obtendo a Última Versão do Script a partir dos Comentários](#obtendo-a-%C3%BAltima-vers%C3%A3o-do-script-a-partir-dos-coment%C3%A1rios "Obtendo a Última Versão do Script a partir dos Comentários")
-    - [Obtendo e Comparando Versões de Scripts Local e do GitHub em Shell](# "Obtendo e Comparando Versões de Scripts Local e do GitHub em Shell")
+    - [Obtendo e Comparando Versões de Scripts Local e do GitHub em Shell](#obtendo-e-comparando-vers%C3%B5es-de-scripts-local-e-do-github-em-shell "Obtendo e Comparando Versões de Scripts Local e do GitHub em Shell")
     - [Integrando Variáveis entre Scripts Shell no Linux](#integrando-vari%C3%A1veis-entre-scripts-shell-no-linux "Integrando Variáveis entre Scripts Shell no Linux")
     - [Script de Verificação de Privilégios de Superusuário](#script-de-verifica%C3%A7%C3%A3o-de-privil%C3%A9gios-de-superusu%C3%A1rio "Script de Verificação de Privilégios de Superusuário")
    - [Verificação e Instalação Condicional de Programas em Scripts Bash](#verifica%C3%A7%C3%A3o-e-instala%C3%A7%C3%A3o-condicional-de-programas-em-scripts-bash "Verificação e Instalação Condicional de Programas em Scripts Bash")
