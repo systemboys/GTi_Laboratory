@@ -186,6 +186,18 @@ Neste exemplo, `"$0"` refere-se ao próprio script em execução. O comando `gre
 
 Certifique-se de que o padrão da versão no seu script corresponda ao padrão utilizado na expressão regular. Você pode ajustar a expressão regular conforme necessário para corresponder ao seu formato de versão específico.
 
+> Se o arquivo onde estão escritas as versões tiver em outro arquivo, segue a seguinte instrução:
+
+```shell
+# Obtém o caminho do arquivo que contém o histórico
+historico_file="caminho/do/arquivo/historico.txt"
+
+# Obtém o número da última versão do histórico do script
+lastVersion=$(grep -o 'v[0-9]\+\.[0-9]\+\.[0-9]\+' "$historico_file" | tail -n 1)
+
+echo "A última versão registrada no script é: $lastVersion"
+```
+
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
