@@ -251,6 +251,19 @@ Este método permite que você compare rapidamente as versões de um script loca
 
 Este é um procedimento útil para qualquer pessoa que esteja trabalhando em colaboração com outros desenvolvedores ou que esteja interessada em manter seu código atualizado com a última versão disponível.
 
+> **_( i )_** Estrutura de controle para verificação de versão para executar algo do tipo mensagem ou comandos se as versões forem diferentes!
+
+```shell
+#!/bin/bash
+
+# Comparar as duas variáveis
+if [ "$lastLocalVersion" != "$lastGitHubVersion" ]; then
+  echo "Há uma nova versão!"
+else
+  echo "Esta é a última versão!"
+fi
+```
+
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
