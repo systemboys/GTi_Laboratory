@@ -10,6 +10,7 @@
     - [A Importância do Cabeçalho no Shell Script: Clareza, Documentação e Boas Práticas](#a-import%C3%A2ncia-do-cabe%C3%A7alho-no-shell-script-clareza-documenta%C3%A7%C3%A3o-e-boas-pr%C3%A1ticas "A Importância do Cabeçalho no Shell Script: Clareza, Documentação e Boas Práticas")
     - [Obtendo a Última Versão do Script a partir dos Comentários](#obtendo-a-%C3%BAltima-vers%C3%A3o-do-script-a-partir-dos-coment%C3%A1rios "Obtendo a Última Versão do Script a partir dos Comentários")
     - [Obtendo e Comparando Versões de Scripts Local e do GitHub em Shell](#obtendo-e-comparando-vers%C3%B5es-de-scripts-local-e-do-github-em-shell "Obtendo e Comparando Versões de Scripts Local e do GitHub em Shell")
+    - [Extraindo o Histórico de Versões de um Script com Linux: Um Guia Prático](# "Extraindo o Histórico de Versões de um Script com Linux: Um Guia Prático")
     - [Integrando Variáveis entre Scripts Shell no Linux](#integrando-vari%C3%A1veis-entre-scripts-shell-no-linux "Integrando Variáveis entre Scripts Shell no Linux")
     - [Script de Verificação de Privilégios de Superusuário](#script-de-verifica%C3%A7%C3%A3o-de-privil%C3%A9gios-de-superusu%C3%A1rio "Script de Verificação de Privilégios de Superusuário")
    - [Verificação e Instalação Condicional de Programas em Scripts Bash](#verifica%C3%A7%C3%A3o-e-instala%C3%A7%C3%A3o-condicional-de-programas-em-scripts-bash "Verificação e Instalação Condicional de Programas em Scripts Bash")
@@ -192,7 +193,7 @@ Certifique-se de que o padrão da versão no seu script corresponda ao padrão u
 
 ```shell
 # Obtém o caminho do arquivo que contém o histórico
-fileHistory="caminho/do/arquivo/historico.txt"
+fileHistory="caminho/do/arquivo/versionHistory.txt"
 
 # Obtém o número da última versão do histórico do script
 lastVersion=$(grep -o 'v[0-9]\+\.[0-9]\+\.[0-9]\+' "$fileHistory" | tail -n 1)
@@ -262,6 +263,57 @@ if [ "$lastLocalVersion" != "$lastGitHubVersion" ]; then
 else
   echo "Esta é a última versão!"
 fi
+```
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Extraindo o Histórico de Versões de um Script com Linux: Um Guia Prático
+
+Sim, é possível fazer isso usando ferramentas de linha de comando do Linux. Você pode usar o comando `sed` para extrair o trecho do histórico de versões entre `# Histórico:` e `# Licença: GPL`. Aqui está um exemplo de como você pode fazer isso:
+
+```bash
+# Obtém o histórico de versões entre # Histórico: e # Licença: GPL
+versionHistory=$(sed -n '/# Histórico:/,/# Licença: GPL/p' ../../QuickLinux.sh)
+
+# Exibe o histórico em uma caixa de mensagem usando dialog
+dialog --msgbox "$versionHistory" 20 80
+```
+
+Neste exemplo, o comando `sed` é usado para extrair todas as linhas entre `# Histórico:` e `# Licença: GPL` do arquivo `../../QuickLinux.sh` e armazená-las na variável `versionHistory`. Em seguida, o conteúdo extraído é exibido em uma caixa de mensagem usando `dialog`.
+
+Lembre-se de ajustar o comando `dialog` conforme necessário para atender às suas preferências de exibição.
+
+> **( i ) Exemplo do código do arquivo de onde está sendo extraído o trecho:**
+
+```shell
+#!/bin/bash
+
+# QuickLinux.sh - Executa o menu de instalações de pacotes e outros
+# comandos Linux.
+#
+# URL: https://github.com/systemboys/QuickLinux.git
+# Autor: Marcos Aurélio R. da Silva <systemboys@hotmail.com>
+# Manutenção: Marcos Aurélio R. da Silva <systemboys@hotmail.com>
+#
+# ---------------------------------------------------------------
+# Este programa tem a finalidade de agilizar nas instalações de
+# pacotes e comandos Linux.
+# ---------------------------------------------------------------
+# Histórico:
+# v0.0.1 2023-09-30 às 19h30, Marcos Aurélio:
+#   - Versão inicial, menu de controle de instalações de pacotes e outros
+#     comandos para sistemas Linux.
+# v0.0.2 2023-10-01 às 07h30, Marcos Aurélio:
+#   - Testes de instalações de pacotes e alguns comandos Linux.
+# v0.0.3 2023-10-02 às 21h15, Marcos Aurélio:
+#   - Alguns ajustes nas linhas de comandos, para melhorar o entendimento.
+#
+# Licença: GPL.
+
+# ... restante do código...
 ```
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
