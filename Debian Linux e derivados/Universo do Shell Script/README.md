@@ -12,7 +12,7 @@
     - [Obtendo e Comparando Versões de Scripts Local e do GitHub em Shell](#obtendo-e-comparando-vers%C3%B5es-de-scripts-local-e-do-github-em-shell "Obtendo e Comparando Versões de Scripts Local e do GitHub em Shell")
     - [Extraindo o Histórico de Versões de um Script com Linux: Um Guia Prático](#extraindo-o-hist%C3%B3rico-de-vers%C3%B5es-de-um-script-com-linux-um-guia-pr%C3%A1tico "Extraindo o Histórico de Versões de um Script com Linux: Um Guia Prático")
     - [Integrando Variáveis entre Scripts Shell no Linux](#integrando-vari%C3%A1veis-entre-scripts-shell-no-linux "Integrando Variáveis entre Scripts Shell no Linux")
-    - [Obtendo o Endereço Local de um Arquivo no Shell Script](# "Obtendo o Endereço Local de um Arquivo no Shell Script")
+    - [Obtendo o Endereço Local de um Arquivo no Shell Script](#obtendo-o-endere%C3%A7o-local-de-um-arquivo-no-shell-script "Obtendo o Endereço Local de um Arquivo no Shell Script")
     - [Condições Comuns em Bash: Uma Referência Rápida](#condi%C3%A7%C3%B5es-comuns-em-bash-uma-refer%C3%AAncia-r%C3%A1pida "Condições Comuns em Bash: Uma Referência Rápida")
     - [Script de Verificação de Privilégios de Superusuário](#script-de-verifica%C3%A7%C3%A3o-de-privil%C3%A9gios-de-superusu%C3%A1rio "Script de Verificação de Privilégios de Superusuário")
     - [Verificação e Instalação Condicional de Programas em Scripts Bash](#verifica%C3%A7%C3%A3o-e-instala%C3%A7%C3%A3o-condicional-de-programas-em-scripts-bash "Verificação e Instalação Condicional de Programas em Scripts Bash")
