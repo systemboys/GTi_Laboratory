@@ -13,6 +13,7 @@
     - [Extraindo o Histórico de Versões de um Script com Linux: Um Guia Prático](#extraindo-o-hist%C3%B3rico-de-vers%C3%B5es-de-um-script-com-linux-um-guia-pr%C3%A1tico "Extraindo o Histórico de Versões de um Script com Linux: Um Guia Prático")
     - [Integrando Variáveis entre Scripts Shell no Linux](#integrando-vari%C3%A1veis-entre-scripts-shell-no-linux "Integrando Variáveis entre Scripts Shell no Linux")
     - [Obtendo o Endereço Local de um Arquivo no Shell Script](#obtendo-o-endere%C3%A7o-local-de-um-arquivo-no-shell-script "Obtendo o Endereço Local de um Arquivo no Shell Script")
+    - [Obtendo o Endereço Local de um Diretório a Partir de um Arquivo Específico](# "Obtendo o Endereço Local de um Diretório a Partir de um Arquivo Específico")
     - [Condições Comuns em Bash: Uma Referência Rápida](#condi%C3%A7%C3%B5es-comuns-em-bash-uma-refer%C3%AAncia-r%C3%A1pida "Condições Comuns em Bash: Uma Referência Rápida")
     - [Script de Verificação de Privilégios de Superusuário](#script-de-verifica%C3%A7%C3%A3o-de-privil%C3%A9gios-de-superusu%C3%A1rio "Script de Verificação de Privilégios de Superusuário")
     - [Verificação e Instalação Condicional de Programas em Scripts Bash](#verifica%C3%A7%C3%A3o-e-instala%C3%A7%C3%A3o-condicional-de-programas-em-scripts-bash "Verificação e Instalação Condicional de Programas em Scripts Bash")
@@ -383,6 +384,32 @@ echo "O endereço local do arquivo é: $file_path"
 ```
 
 Esse código utiliza as variáveis `$0` e `$PWD` para obter o diretório atual onde o script está sendo executado. Em seguida, utiliza o comando `realpath` para obter o caminho completo do arquivo. Por fim, imprime o endereço local do arquivo utilizando o comando `echo`.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Obtendo o Endereço Local de um Diretório a Partir de um Arquivo Específico
+
+O código Shell para obter o endereço local de um arquivo que não é o mesmo onde o Shell Script está sendo executado é o seguinte:
+
+```shell
+#!/bin/bash
+
+# Caminho absoluto do arquivo
+arquivo="/caminho/para/o/arquivo.txt"
+
+# Obter o diretório do arquivo
+diretorio=$(dirname "$arquivo")
+
+# Obter o endereço local do diretório
+endereco_local=$(cd "$diretorio" && pwd)
+
+echo "Endereço local do arquivo: $endereco_local"
+```
+
+Neste código, definimos o caminho absoluto do arquivo que queremos obter o endereço local. Em seguida, usamos o comando `dirname` para obter o diretório do arquivo. Depois, usamos o comando `cd` para entrar no diretório e o comando `pwd` para obter o endereço local do diretório. Por fim, imprimimos o endereço local do arquivo na saída.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
