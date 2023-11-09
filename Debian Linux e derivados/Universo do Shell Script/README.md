@@ -12,7 +12,7 @@
     - [Obtendo e Comparando Versões de Scripts Local e do GitHub em Shell](#obtendo-e-comparando-vers%C3%B5es-de-scripts-local-e-do-github-em-shell "Obtendo e Comparando Versões de Scripts Local e do GitHub em Shell")
     - [Extraindo o Histórico de Versões de um Script com Linux: Um Guia Prático](#extraindo-o-hist%C3%B3rico-de-vers%C3%B5es-de-um-script-com-linux-um-guia-pr%C3%A1tico "Extraindo o Histórico de Versões de um Script com Linux: Um Guia Prático")
     - [Integrando Variáveis entre Scripts Shell no Linux](#integrando-vari%C3%A1veis-entre-scripts-shell-no-linux "Integrando Variáveis entre Scripts Shell no Linux")
-    - [Condições Comuns em Bash: Uma Referência Rápida](# "Condições Comuns em Bash: Uma Referência Rápida")
+    - [Condições Comuns em Bash: Uma Referência Rápida](#condi%C3%A7%C3%B5es-comuns-em-bash-uma-refer%C3%AAncia-r%C3%A1pida "Condições Comuns em Bash: Uma Referência Rápida")
     - [Script de Verificação de Privilégios de Superusuário](#script-de-verifica%C3%A7%C3%A3o-de-privil%C3%A9gios-de-superusu%C3%A1rio "Script de Verificação de Privilégios de Superusuário")
     - [Verificação e Instalação Condicional de Programas em Scripts Bash](#verifica%C3%A7%C3%A3o-e-instala%C3%A7%C3%A3o-condicional-de-programas-em-scripts-bash "Verificação e Instalação Condicional de Programas em Scripts Bash")
     - [Verificação de Pacotes no Debian: dpkg](#verifica%C3%A7%C3%A3o-de-pacotes-no-debian-dpkg "Verificação de Pacotes no Debian: dpkg")
@@ -369,76 +369,136 @@ Dessa forma, você pode compartilhar variáveis entre diferentes scripts de shel
 1. **Comparação Numérica:**
    ```bash
    if [ "$a" -eq "$b" ]; then
+        echo "Valor verdadeiro."
+    else
+        echo "Valor falso."
+    fi
    ```
 
 2. **Comparação de Strings:**
    ```bash
    if [ "$str1" = "$str2" ]; then
+        echo "Valor verdadeiro."
+    else
+        echo "Valor falso."
+    fi
    ```
 
 3. **Verificar se uma Variável está Vazia:**
    ```bash
    if [ -z "$var" ]; then
+        echo "Valor verdadeiro."
+    else
+        echo "Valor falso."
+    fi
    ```
 
 4. **Verificar se um Arquivo Existe:**
    ```bash
    if [ -e "$file" ]; then
+        echo "Valor verdadeiro."
+    else
+        echo "Valor falso."
+    fi
    ```
 
 5. **Verificar se um Diretório está Vazio:**
    ```bash
    if [ -z "$(ls -A "$dir")" ]; then
+        echo "Valor verdadeiro."
+    else
+        echo "Valor falso."
+    fi
    ```
 
 6. **Comparação de Strings Ignorando Maiúsculas/Minúsculas:**
    ```bash
    if [ "${str1,,}" = "${str2,,}" ]; then
+        echo "Valor verdadeiro."
+    else
+        echo "Valor falso."
+    fi
    ```
 
 7. **Comparação de Strings com Padrões (Wildcard):**
    ```bash
    if [[ "$str" == *pattern* ]]; then
+        echo "Valor verdadeiro."
+    else
+        echo "Valor falso."
+    fi
    ```
 
 8. **Verificar se um Comando foi Executado com Sucesso:**
    ```bash
    if [ $? -eq 0 ]; then
+        echo "Valor verdadeiro."
+    else
+        echo "Valor falso."
+    fi
    ```
 
 9. **Comparação Numérica com Condições Encadeadas:**
    ```bash
    if [[ "$num" -gt 10 && "$num" -lt 20 ]]; then
+        echo "Valor verdadeiro."
+    else
+        echo "Valor falso."
+    fi
    ```
 
 10. **Comparação de Strings com Condições Encadeadas:**
     ```bash
     if [[ "$str" == "foo" || "$str" == "bar" ]]; then
+        echo "Valor verdadeiro."
+    else
+        echo "Valor falso."
+    fi
     ```
 
 11. **Verificar se um Diretório é Gravável:**
     ```bash
     if [ -w "$dir" ]; then
+        echo "Valor verdadeiro."
+    else
+        echo "Valor falso."
+    fi
     ```
 
 12. **Verificar se um Arquivo é Executável:**
     ```bash
     if [ -x "$file" ]; then
+        echo "Valor verdadeiro."
+    else
+        echo "Valor falso."
+    fi
     ```
 
 13. **Comparação Numérica para Decimais:**
     ```bash
     if (( $(echo "$num1 > $num2" | bc -l) )); then
+        echo "Valor verdadeiro."
+    else
+        echo "Valor falso."
+    fi
     ```
 
 14. **Comparação de String com Substring:**
     ```bash
     if [[ "$str" == *substring* ]]; then
+        echo "Valor verdadeiro."
+    else
+        echo "Valor falso."
+    fi
     ```
 
 15. **Verificar se um Arquivo é um Link Simbólico:**
     ```bash
     if [ -L "$file" ]; then
+        echo "Valor verdadeiro."
+    else
+        echo "Valor falso."
+    fi
     ```
 
 Estes são apenas alguns exemplos de condições que você pode usar em Bash para realizar verificações e tomar decisões com base nessas verificações. Cada condição tem um propósito específico e pode ser útil em diferentes situações ao escrever scripts Bash.
