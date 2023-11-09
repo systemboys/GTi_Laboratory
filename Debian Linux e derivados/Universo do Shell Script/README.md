@@ -368,7 +368,9 @@ Dessa forma, você pode compartilhar variáveis entre diferentes scripts de shel
 
 1. **Comparação Numérica:**
    ```bash
-   if [ "$a" -eq "$b" ]; then
+   #!/bin/bash
+
+    if [ "$a" -eq "$b" ]; then
         echo "Valor verdadeiro."
     else
         echo "Valor falso."
@@ -377,7 +379,9 @@ Dessa forma, você pode compartilhar variáveis entre diferentes scripts de shel
 
 2. **Comparação de Strings:**
    ```bash
-   if [ "$str1" = "$str2" ]; then
+    #!/bin/bash
+   
+    if [ "$str1" = "$str2" ]; then
         echo "Valor verdadeiro."
     else
         echo "Valor falso."
@@ -386,7 +390,9 @@ Dessa forma, você pode compartilhar variáveis entre diferentes scripts de shel
 
 3. **Verificar se uma Variável está Vazia:**
    ```bash
-   if [ -z "$var" ]; then
+    #!/bin/bash
+   
+    if [ -z "$var" ]; then
         echo "Valor verdadeiro."
     else
         echo "Valor falso."
@@ -395,7 +401,9 @@ Dessa forma, você pode compartilhar variáveis entre diferentes scripts de shel
 
 4. **Verificar se um Arquivo Existe:**
    ```bash
-   if [ -e "$file" ]; then
+    #!/bin/bash
+   
+    if [ -e "$file" ]; then
         echo "Valor verdadeiro."
     else
         echo "Valor falso."
@@ -404,7 +412,9 @@ Dessa forma, você pode compartilhar variáveis entre diferentes scripts de shel
 
 5. **Verificar se um Diretório está Vazio:**
    ```bash
-   if [ -z "$(ls -A "$dir")" ]; then
+    #!/bin/bash
+   
+    if [ -z "$(ls -A "$dir")" ]; then
         echo "Valor verdadeiro."
     else
         echo "Valor falso."
@@ -413,7 +423,9 @@ Dessa forma, você pode compartilhar variáveis entre diferentes scripts de shel
 
 6. **Comparação de Strings Ignorando Maiúsculas/Minúsculas:**
    ```bash
-   if [ "${str1,,}" = "${str2,,}" ]; then
+    #!/bin/bash
+   
+    if [ "${str1,,}" = "${str2,,}" ]; then
         echo "Valor verdadeiro."
     else
         echo "Valor falso."
@@ -422,7 +434,9 @@ Dessa forma, você pode compartilhar variáveis entre diferentes scripts de shel
 
 7. **Comparação de Strings com Padrões (Wildcard):**
    ```bash
-   if [[ "$str" == *pattern* ]]; then
+    #!/bin/bash
+   
+    if [[ "$str" == *pattern* ]]; then
         echo "Valor verdadeiro."
     else
         echo "Valor falso."
@@ -431,7 +445,9 @@ Dessa forma, você pode compartilhar variáveis entre diferentes scripts de shel
 
 8. **Verificar se um Comando foi Executado com Sucesso:**
    ```bash
-   if [ $? -eq 0 ]; then
+    #!/bin/bash
+   
+    if [ $? -eq 0 ]; then
         echo "Valor verdadeiro."
     else
         echo "Valor falso."
@@ -440,7 +456,9 @@ Dessa forma, você pode compartilhar variáveis entre diferentes scripts de shel
 
 9. **Comparação Numérica com Condições Encadeadas:**
    ```bash
-   if [[ "$num" -gt 10 && "$num" -lt 20 ]]; then
+    #!/bin/bash
+   
+    if [[ "$num" -gt 10 && "$num" -lt 20 ]]; then
         echo "Valor verdadeiro."
     else
         echo "Valor falso."
@@ -449,6 +467,8 @@ Dessa forma, você pode compartilhar variáveis entre diferentes scripts de shel
 
 10. **Comparação de Strings com Condições Encadeadas:**
     ```bash
+    #!/bin/bash
+   
     if [[ "$str" == "foo" || "$str" == "bar" ]]; then
         echo "Valor verdadeiro."
     else
@@ -458,6 +478,8 @@ Dessa forma, você pode compartilhar variáveis entre diferentes scripts de shel
 
 11. **Verificar se um Diretório é Gravável:**
     ```bash
+    #!/bin/bash
+   
     if [ -w "$dir" ]; then
         echo "Valor verdadeiro."
     else
@@ -467,6 +489,8 @@ Dessa forma, você pode compartilhar variáveis entre diferentes scripts de shel
 
 12. **Verificar se um Arquivo é Executável:**
     ```bash
+    #!/bin/bash
+   
     if [ -x "$file" ]; then
         echo "Valor verdadeiro."
     else
@@ -476,6 +500,8 @@ Dessa forma, você pode compartilhar variáveis entre diferentes scripts de shel
 
 13. **Comparação Numérica para Decimais:**
     ```bash
+    #!/bin/bash
+   
     if (( $(echo "$num1 > $num2" | bc -l) )); then
         echo "Valor verdadeiro."
     else
@@ -485,6 +511,8 @@ Dessa forma, você pode compartilhar variáveis entre diferentes scripts de shel
 
 14. **Comparação de String com Substring:**
     ```bash
+    #!/bin/bash
+   
     if [[ "$str" == *substring* ]]; then
         echo "Valor verdadeiro."
     else
@@ -494,6 +522,8 @@ Dessa forma, você pode compartilhar variáveis entre diferentes scripts de shel
 
 15. **Verificar se um Arquivo é um Link Simbólico:**
     ```bash
+    #!/bin/bash
+   
     if [ -L "$file" ]; then
         echo "Valor verdadeiro."
     else
