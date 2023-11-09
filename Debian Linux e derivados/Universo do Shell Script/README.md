@@ -12,6 +12,7 @@
     - [Obtendo e Comparando Versões de Scripts Local e do GitHub em Shell](#obtendo-e-comparando-vers%C3%B5es-de-scripts-local-e-do-github-em-shell "Obtendo e Comparando Versões de Scripts Local e do GitHub em Shell")
     - [Extraindo o Histórico de Versões de um Script com Linux: Um Guia Prático](#extraindo-o-hist%C3%B3rico-de-vers%C3%B5es-de-um-script-com-linux-um-guia-pr%C3%A1tico "Extraindo o Histórico de Versões de um Script com Linux: Um Guia Prático")
     - [Integrando Variáveis entre Scripts Shell no Linux](#integrando-vari%C3%A1veis-entre-scripts-shell-no-linux "Integrando Variáveis entre Scripts Shell no Linux")
+    - [Condições Comuns em Bash: Uma Referência Rápida](# "Condições Comuns em Bash: Uma Referência Rápida")
     - [Script de Verificação de Privilégios de Superusuário](#script-de-verifica%C3%A7%C3%A3o-de-privil%C3%A9gios-de-superusu%C3%A1rio "Script de Verificação de Privilégios de Superusuário")
     - [Verificação e Instalação Condicional de Programas em Scripts Bash](#verifica%C3%A7%C3%A3o-e-instala%C3%A7%C3%A3o-condicional-de-programas-em-scripts-bash "Verificação e Instalação Condicional de Programas em Scripts Bash")
     - [Verificação de Pacotes no Debian: dpkg](#verifica%C3%A7%C3%A3o-de-pacotes-no-debian-dpkg "Verificação de Pacotes no Debian: dpkg")
@@ -357,6 +358,174 @@ Variável C: c
 ```
 
 Dessa forma, você pode compartilhar variáveis entre diferentes scripts de shell, facilitando a modularização e reutilização de código.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Condições Comuns em Bash: Uma Referência Rápida
+
+1. **Comparação Numérica:**
+   ```bash
+   if [ "$a" -eq "$b" ]; then
+   ```
+
+2. **Comparação de Strings:**
+   ```bash
+   if [ "$str1" = "$str2" ]; then
+   ```
+
+3. **Verificar se uma Variável está Vazia:**
+   ```bash
+   if [ -z "$var" ]; then
+   ```
+
+4. **Verificar se um Arquivo Existe:**
+   ```bash
+   if [ -e "$file" ]; then
+   ```
+
+5. **Verificar se um Diretório está Vazio:**
+   ```bash
+   if [ -z "$(ls -A "$dir")" ]; then
+   ```
+
+6. **Comparação de Strings Ignorando Maiúsculas/Minúsculas:**
+   ```bash
+   if [ "${str1,,}" = "${str2,,}" ]; then
+   ```
+
+7. **Comparação de Strings com Padrões (Wildcard):**
+   ```bash
+   if [[ "$str" == *pattern* ]]; then
+   ```
+
+8. **Verificar se um Comando foi Executado com Sucesso:**
+   ```bash
+   if [ $? -eq 0 ]; then
+   ```
+
+9. **Comparação Numérica com Condições Encadeadas:**
+   ```bash
+   if [[ "$num" -gt 10 && "$num" -lt 20 ]]; then
+   ```
+
+10. **Comparação de Strings com Condições Encadeadas:**
+    ```bash
+    if [[ "$str" == "foo" || "$str" == "bar" ]]; then
+    ```
+
+11. **Verificar se um Diretório é Gravável:**
+    ```bash
+    if [ -w "$dir" ]; then
+    ```
+
+12. **Verificar se um Arquivo é Executável:**
+    ```bash
+    if [ -x "$file" ]; then
+    ```
+
+13. **Comparação Numérica para Decimais:**
+    ```bash
+    if (( $(echo "$num1 > $num2" | bc -l) )); then
+    ```
+
+14. **Comparação de String com Substring:**
+    ```bash
+    if [[ "$str" == *substring* ]]; then
+    ```
+
+15. **Verificar se um Arquivo é um Link Simbólico:**
+    ```bash
+    if [ -L "$file" ]; then
+    ```
+
+Estes são apenas alguns exemplos de condições que você pode usar em Bash para realizar verificações e tomar decisões com base nessas verificações. Cada condição tem um propósito específico e pode ser útil em diferentes situações ao escrever scripts Bash.
+
+---
+
+Aqui estão alguns exemplos de condições que podem ser usadas em diferentes situações:
+
+1. Exemplo: Verificar se um arquivo existe
+
+> Verificar a existência de um arquivo
+
+```bash
+#!/bin/bash
+
+if [ -f arquivo.txt ]; then
+    echo "O arquivo existe"
+else
+    echo "O arquivo não existe"
+fi
+```
+
+2. Exemplo: Verificar se um diretório existe
+
+> Verificar a existência de um diretório
+
+```bash
+#!/bin/bash
+
+if [ -d diretório ]; then
+    echo "O diretório existe"
+else
+    echo "O diretório não existe"
+fi
+```
+
+3. Exemplo: Verificar se uma variável está vazia
+
+> Verificar se uma variável está vazia
+
+```bash
+#!/bin/bash
+
+variavel=""
+
+if [ -z "$variavel" ]; then
+    echo "A variável está vazia"
+else
+    echo "A variável não está vazia"
+fi
+```
+
+4. Exemplo: Verificar se uma string é igual a outra
+
+> Verificar se duas strings são iguais
+
+```bash
+#!/bin/bash
+
+string1="Hello"
+string2="World"
+
+if [ "$string1" = "$string2" ]; then
+    echo "As strings são iguais"
+else
+    echo "As strings são diferentes"
+fi
+```
+
+5. Exemplo: Verificar se um número é maior que outro
+
+> Verificar se um número é maior que outro
+
+```bash
+#!/bin/bash
+
+numero1=10
+numero2=5
+
+if [ "$numero1" -gt "$numero2" ]; then
+    echo "O número 1 é maior que o número 2"
+else
+    echo "O número 1 não é maior que o número 2"
+fi
+```
+
+Esses são apenas alguns exemplos de condições que podem ser usadas em scripts shell. Os títulos sugeridos para esses exemplos são:
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
