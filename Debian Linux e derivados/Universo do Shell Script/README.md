@@ -398,15 +398,15 @@ O código Shell para obter o endereço local de um arquivo que não é o mesmo o
 #!/bin/bash
 
 # Caminho absoluto do arquivo
-arquivo="/caminho/para/o/arquivo.txt"
+fileName="/path/to/the/file.txt"
 
 # Obter o diretório do arquivo
-diretorio=$(dirname "$arquivo")
+directoryName=$(dirname "$fileName")
 
 # Obter o endereço local do diretório
-endereco_local=$(cd "$diretorio" && pwd)
+localAddress=$(cd "$directoryName" && pwd)
 
-echo "Endereço local do arquivo: $endereco_local"
+echo "Endereço local do arquivo: $localAddress"
 ```
 
 Neste código, definimos o caminho absoluto do arquivo que queremos obter o endereço local. Em seguida, usamos o comando `dirname` para obter o diretório do arquivo. Depois, usamos o comando `cd` para entrar no diretório e o comando `pwd` para obter o endereço local do diretório. Por fim, imprimimos o endereço local do arquivo na saída.
