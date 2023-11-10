@@ -9,6 +9,7 @@
 > Macetes
 - [Erro de PATH após instalação de pacote .deb no Linux](#erro-de-path-ap%C3%B3s-instala%C3%A7%C3%A3o-de-pacote-deb-no-linux "Erro de PATH após instalação de pacote .deb no Linux")
    - [O Significado dos Arquivos (.deb) no Mundo Linux](#o-significado-dos-arquivos-deb-no-mundo-linux "O Significado dos Arquivos (.deb) no Mundo Linux")
+- [Entendendo e Corrigindo Dependências Quebradas no Linux com 'apt --fix-broken install'](# "Entendendo e Corrigindo Dependências Quebradas no Linux com 'apt --fix-broken install'")
 - [Resolvendo Dependências de Pacotes no Linux com o Comando apt-get install -f](#resolvendo-depend%C3%AAncias-de-pacotes-no-linux-com-o-comando-apt-get-install--f "Resolvendo Dependências de Pacotes no Linux com o Comando apt-get install -f")
 - [Liberação de Espaço no Linux: Usando o Comando apt autoremove para Remover Pacotes Não Necessários](#libera%C3%A7%C3%A3o-de-espa%C3%A7o-no-linux-usando-o-comando-apt-autoremove-para-remover-pacotes-n%C3%A3o-necess%C3%A1rios "Liberação de Espaço no Linux: Usando o Comando apt autoremove para Remover Pacotes Não Necessários")
 > Instalação de alguns softwares via terminal
@@ -113,6 +114,23 @@ O sistema Debian é uma distribuição Linux renomada, conhecida por seu sistema
 A história dos arquivos ".deb" remonta ao projeto Debian, que começou em 1993. Eles foram criados como parte do sistema de gerenciamento de pacotes do Debian para facilitar a instalação, atualização e remoção de software de forma consistente e automatizada em sistemas Debian e derivados.
 
 Portanto, quando você encontra um arquivo com a extensão ".deb", pode ter certeza de que é destinado principalmente a sistemas baseados no Debian e é compatível com ferramentas de gerenciamento de pacotes como "dpkg", "apt" e "apt-get".
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Entendendo e Corrigindo Dependências Quebradas no Linux com "sudo apt --fix-broken install"
+
+**Explicação:**
+
+O comando "sudo apt --fix-broken install" é utilizado no sistema operacional Linux, especificamente em distribuições que utilizam o gerenciador de pacotes APT (Advanced Package Tool), como o Ubuntu. Este comando é projetado para corrigir pacotes quebrados ou dependências ausentes que podem ocorrer durante a instalação, atualização ou remoção de software.
+
+A quebra de dependências geralmente ocorre quando há interrupções no processo de instalação de pacotes, atualizações incompletas ou quando pacotes necessários para o funcionamento adequado de outros pacotes estão ausentes.
+
+Ao executar esse comando com privilégios de superusuário (sudo), o sistema tenta resolver automaticamente as dependências quebradas, baixando e instalando os pacotes necessários. Ele também pode sugerir a remoção de pacotes problemáticos ou realizar outras ações para garantir a integridade do sistema.
+
+Portanto, o "sudo apt --fix-broken install" é uma ferramenta útil para manter a estabilidade do sistema Linux, garantindo que todas as dependências necessárias para o funcionamento adequado dos programas sejam satisfeitas.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
