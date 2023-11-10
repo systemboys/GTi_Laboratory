@@ -103,15 +103,14 @@ Segue abaixo um exemplo de **_comentário de cabeçalho_** ou **_bloco de coment
 ```shell
 #!/bin/bash
 
-# file-name.sh - Executa o "Nome do Arquivo ou o que faz".
+# file-name.sh - Executa o script que faz ...
 #
 # URL: https://github.com/github_user/project_on_github.git
 # Autor: Marcos Aurélio R. da Silva <systemboys@hotmail.com>
 # Manutenção: Marcos Aurélio R. da Silva <systemboys@hotmail.com>
 #
 # ---------------------------------------------------------------
-# Este programa tem a finalidade de facilitar na construção Docker
-# Conteiners e levantar as aplicações no projeto envolvido.
+# Este programa tem a finalidade de ...
 # ---------------------------------------------------------------
 # Histórico:
 # v0.0.1 2023-10-17 às 11h30, Marcos Aurélio:
