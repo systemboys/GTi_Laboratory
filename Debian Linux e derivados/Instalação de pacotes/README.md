@@ -122,6 +122,10 @@ Portanto, quando você encontra um arquivo com a extensão ".deb", pode ter cert
 
 ## Entendendo e Corrigindo Dependências Quebradas no Linux com "sudo apt --fix-broken install"
 
+```bash
+sudo apt --fix-broken install
+```
+
 **Explicação:**
 
 O comando "sudo apt --fix-broken install" é utilizado no sistema operacional Linux, especificamente em distribuições que utilizam o gerenciador de pacotes APT (Advanced Package Tool), como o Ubuntu. Este comando é projetado para corrigir pacotes quebrados ou dependências ausentes que podem ocorrer durante a instalação, atualização ou remoção de software.
