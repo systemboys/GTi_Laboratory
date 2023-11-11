@@ -1779,20 +1779,20 @@ while true; do
     # Mostra um menu para escolher entre pingar um domínio ou sair
     choice=$(dialog --clear --backtitle "Ping Tool" \
             --menu "Escolha uma opção:" 10 40 2 \
+            0 "Voltar..." \
             1 "Pingar um Domínio" \
-            2 "Sair" \
             2>&1 >/dev/tty)
 
     # Verifica a escolha do usuário
     case "$choice" in
-        1)
-            # Chama a função para pingar um domínio
-            pingDomain
-            ;;
-        2)
+        0)
             # Sai do script se o usuário escolher sair
             clear
             exit 0
+            ;;
+        1)
+            # Chama a função para pingar um domínio
+            pingDomain
             ;;
     esac
 done
