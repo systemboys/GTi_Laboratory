@@ -26,6 +26,7 @@
 - [Guia Rápido do PowerShell: Obtendo Diretórios-Chave através de Variáveis de Ambiente no Windows](#guia-r%C3%A1pido-do-powershell-obtendo-diret%C3%B3rios-chave-atrav%C3%A9s-de-vari%C3%A1veis-de-ambiente-no-windows "Guia Rápido do PowerShell: Obtendo Diretórios-Chave através de Variáveis de Ambiente no Windows")
 - [Script PowerShell: Obtendo Caminhos dos Principais Diretórios do Perfil do Usuário no Windows](#script-powershell-obtendo-caminhos-dos-principais-diret%C3%B3rios-do-perfil-do-usu%C3%A1rio-no-windows "Script PowerShell: Obtendo Caminhos dos Principais Diretórios do Perfil do Usuário no Windows")
 - [Script PowerShell: Abrir File Explorer e Selecionar Arquivo em um Diretório Específico](#script-powershell-abrir-file-explorer-e-selecionar-arquivo-em-um-diret%C3%B3rio-espec%C3%ADfico "Script PowerShell: Abrir File Explorer e Selecionar Arquivo em um Diretório Específico")
+- [Executar as atualizações do Windows a partir de um script PowerShell](# "Executar as atualizações do Windows a partir de um script PowerShell")
 
 ---
 
@@ -783,6 +784,34 @@ Para executar um arquivo específico, você precisará usar um comando ou proces
 Lembre-se de que a capacidade de execução depende do tipo de arquivo e da configuração do sistema. Alguns arquivos podem exigir privilégios de administrador ou outros requisitos específicos.
 
 Se você deseja abrir e executar automaticamente um arquivo específico, você precisa fornecer mais informações sobre o tipo de arquivo e o comportamento desejado para que eu possa oferecer uma orientação mais precisa.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Executar as atualizações do Windows a partir de um script PowerShell
+
+Sim, é possível executar as atualizações do Windows a partir de um script PowerShell. Você pode usar o cmdlet `Get-WindowsUpdate` para verificar e instalar atualizações do Windows. Para executar o  script como administrador sem precisar digitar a senha, você pode criar  um atalho para o script no desktop, clicar com o botão direito do mouse  no atalho e selecionar “Propriedades”. Em seguida, clique em “Avançado” e marque a caixa “Executar como administrador”.
+
+```powershell
+Install-Module PSWindowsUpdate -Force
+Get-WindowsUpdate -AcceptAll -Install -AutoReboot
+```
+
+Este script usa o cmdlet `Install-Module` para instalar o módulo `PSWindowsUpdate` e, em seguida, usa o cmdlet `Get-WindowsUpdate` para verificar e instalar todas as atualizações disponíveis do Windows. O parâmetro `-AcceptAll` é usado para aceitar todas as atualizações sem solicitar confirmação, o parâmetro `-Install` é usado para instalar as atualizações e o parâmetro `-AutoReboot` é usado para reiniciar automaticamente o sistema após a instalação das atualizações.
+
+Não há problema em remover o parâmetro `-AutoReboot` do cmdlet `Get-WindowsUpdate`. Isso impedirá que o sistema seja reiniciado automaticamente após a  instalação das atualizações. No entanto, você precisará reiniciar o  sistema manualmente para que as atualizações entrem em vigor.
+
+Se você quiser executar outro comando após a instalação das atualizações, pode adicioná-lo ao script PowerShell após o cmdlet `Get-WindowsUpdate`. Por exemplo, se você quiser executar o comando `winget upgrade --all` após a instalação das atualizações, pode usar o seguinte código:
+
+```powershell
+Install-Module PSWindowsUpdate -Force
+Get-WindowsUpdate -AcceptAll -Install
+winget upgrade --all
+```
+
+Este script usa o cmdlet `Get-WindowsUpdate` para verificar e instalar todas as atualizações disponíveis do Windows. Em seguida, ele executa o comando `winget upgrade --all` para atualizar todos os aplicativos instalados usando o Gerenciador de Pacotes do Windows.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
