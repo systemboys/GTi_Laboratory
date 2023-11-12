@@ -521,7 +521,7 @@ if (Test-Path $filePath) {
 
 ## Script de Instalação Silenciosa de Software (verificação por chave de registro)
 
-> **_( ! )_** No exemplo, o software testado é o Google Earth Pro!
+> **_( ! )_** No exemplo, o software testado é o ***Google Earth Pro***!
 
 ```powershell
 $installed = Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\* | Where-Object {$_.DisplayName -eq "Google Earth Pro"}
