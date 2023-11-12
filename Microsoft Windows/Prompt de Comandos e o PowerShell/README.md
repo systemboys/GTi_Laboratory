@@ -24,26 +24,6 @@
 - [Como Abrir Links no Navegador Padrão via PowerShell](#como-abrir-links-no-navegador-padr%C3%A3o-via-powershell "Como Abrir Links no Navegador Padrão via PowerShell")
 - [Guia Rápido do PowerShell: Obtendo Diretórios-Chave através de Variáveis de Ambiente no Windows](#guia-r%C3%A1pido-do-powershell-obtendo-diret%C3%B3rios-chave-atrav%C3%A9s-de-vari%C3%A1veis-de-ambiente-no-windows "Guia Rápido do PowerShell: Obtendo Diretórios-Chave através de Variáveis de Ambiente no Windows")
 
-Se você deseja definir variáveis no PowerShell para armazenar esses caminhos, você pode fazer algo assim:
-
-```powershell
-# Defina variáveis para os diretórios-chave
-$SystemDrive = $env:SystemDrive
-$ProgramFiles = $env:ProgramFiles
-$ProgramFilesx86 = $env:ProgramFiles(x86)
-$WindowsDirectory = $env:Windir
-```
-
-Agora, as variáveis `$SystemDrive`, `$ProgramFiles`, `$ProgramFilesx86`, e `$WindowsDirectory` contêm os caminhos correspondentes aos diretórios-chave. Você pode usar essas variáveis em seus scripts ou comandos PowerShell conforme necessário.
-
-Por exemplo, para exibir o conteúdo da pasta "Program Files", você poderia fazer algo assim:
-
-```powershell
-Get-ChildItem -Path $ProgramFiles
-```
-
-Lembre-se de que, ao definir variáveis, é boa prática usar nomes descritivos para que o código seja mais legível.
-
 ---
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
@@ -678,6 +658,26 @@ Para obter variáveis de ambiente específicas no PowerShell, você pode usar a 
 Esses comandos retornarão os caminhos associados às variáveis de ambiente correspondentes. Lembre-se de que, em sistemas de 64 bits, `$env:ProgramFiles` geralmente aponta para a pasta "Program Files" para aplicativos de 64 bits, e `$env:ProgramFiles(x86)` aponta para a pasta "Program Files (x86)" para aplicativos de 32 bits.
 
 Experimente esses comandos no PowerShell para ver os resultados específicos em seu sistema.
+
+Se você deseja definir variáveis no PowerShell para armazenar esses caminhos, você pode fazer algo assim:
+
+```powershell
+# Defina variáveis para os diretórios-chave
+$SystemDrive = $env:SystemDrive
+$ProgramFiles = $env:ProgramFiles
+$ProgramFilesx86 = $env:ProgramFiles(x86)
+$WindowsDirectory = $env:Windir
+```
+
+Agora, as variáveis `$SystemDrive`, `$ProgramFiles`, `$ProgramFilesx86`, e `$WindowsDirectory` contêm os caminhos correspondentes aos diretórios-chave. Você pode usar essas variáveis em seus scripts ou comandos PowerShell conforme necessário.
+
+Por exemplo, para exibir o conteúdo da pasta "Program Files", você poderia fazer algo assim:
+
+```powershell
+Get-ChildItem -Path $ProgramFiles
+```
+
+Lembre-se de que, ao definir variáveis, é boa prática usar nomes descritivos para que o código seja mais legível.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
