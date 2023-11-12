@@ -513,7 +513,30 @@ if (Test-Path $filePath) {
 # End of verification
 ```
 
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
 ---
+
+## Script de Instalação Silenciosa de Software (verificação por chave de registro)
+
+> **_( ! )_** No exemplo, o software testado é o Google Earth Pro!
+
+```powershell
+$installed = Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\* | Where-Object {$_.DisplayName -eq "Google Earth Pro"}
+if ($installed -eq $null) {
+    $temporaryDirectory = $env:TEMP
+    $url = "https://dl.google.com/earth/client/advanced/current/GoogleEarthProWin.exe"
+    $output = "$temporaryDirectory\GoogleEarthProWin.exe"
+    Invoke-WebRequest -Uri $url -OutFile $output
+    Start-Process -FilePath $output -ArgumentList "/S /v/qn"
+    Remove-Item $output
+} else {
+    Write-Host "Google Earth Pro já está instalado."
+}
+```
+
+Este script em PowerShell verifica se o software "Google Earth Pro" está instalado no sistema. Se o software não estiver instalado, o script realiza o download do instalador do Google Earth Pro a partir de uma URL específica, salva o instalador em um diretório temporário, e em seguida, inicia o processo de instalação silenciosa do software. A instalação silenciosa é realizada usando os argumentos "/S /v/qn" com o comando Start-Process. Após a instalação, o instalador baixado é removido para limpar o espaço temporário. Se o Google Earth Pro já estiver instalado, o script exibe uma mensagem indicando que o software já está presente no sistema.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
