@@ -23,6 +23,7 @@
 - [Executando Comandos Remotos com PowerShell: Desvendando IRM e IEX](#executando-comandos-remotos-com-powershell-desvendando-irm-e-iex "Executando Comandos Remotos com PowerShell: Desvendando IRM e IEX")
 - [Como Abrir Links no Navegador Padrão via PowerShell](#como-abrir-links-no-navegador-padr%C3%A3o-via-powershell "Como Abrir Links no Navegador Padrão via PowerShell")
 - [Guia Rápido do PowerShell: Obtendo Diretórios-Chave através de Variáveis de Ambiente no Windows](#guia-r%C3%A1pido-do-powershell-obtendo-diret%C3%B3rios-chave-atrav%C3%A9s-de-vari%C3%A1veis-de-ambiente-no-windows "Guia Rápido do PowerShell: Obtendo Diretórios-Chave através de Variáveis de Ambiente no Windows")
+- [Script PowerShell: Obtendo Caminhos dos Principais Diretórios do Perfil do Usuário no Windows](# "Script PowerShell: Obtendo Caminhos dos Principais Diretórios do Perfil do Usuário no Windows")
 
 ---
 
@@ -678,6 +679,38 @@ Get-ChildItem -Path $ProgramFiles
 ```
 
 Lembre-se de que, ao definir variáveis, é boa prática usar nomes descritivos para que o código seja mais legível.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Script PowerShell: Obtendo Caminhos dos Principais Diretórios do Perfil do Usuário no Windows
+
+Você pode usar o cmdlet `Get-Item` para obter informações sobre diretórios específicos do perfil do usuário no Windows. Aqui está um exemplo de script PowerShell que lista alguns dos diretórios principais do perfil do usuário, como Área de Trabalho, Documentos, Downloads, etc.:
+
+```powershell
+# Obter o perfil do usuário
+$userProfile = [System.IO.Path]::Combine($env:SystemDrive, $env:HomePath)
+
+# Obter caminhos para diretórios principais
+$desktopPath = [System.IO.Path]::Combine($userProfile, 'Desktop')
+$documentsPath = [System.IO.Path]::Combine($userProfile, 'Documents')
+$downloadsPath = [System.IO.Path]::Combine($userProfile, 'Downloads')
+$picturesPath = [System.IO.Path]::Combine($userProfile, 'Pictures')
+$musicPath = [System.IO.Path]::Combine($userProfile, 'Music')
+$videosPath = [System.IO.Path]::Combine($userProfile, 'Videos')
+
+# Exibir os caminhos dos diretórios
+Write-Output "Desktop: $desktopPath"
+Write-Output "Documents: $documentsPath"
+Write-Output "Downloads: $downloadsPath"
+Write-Output "Pictures: $picturesPath"
+Write-Output "Music: $musicPath"
+Write-Output "Videos: $videosPath"
+```
+
+Este script cria caminhos para os diretórios principais do perfil do usuário e os exibe no console. Você pode adicionar ou remover caminhos conforme necessário para atender às suas necessidades específicas. Execute este script no PowerShell para ver os caminhos dos diretórios no seu sistema.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
