@@ -21,6 +21,7 @@
 - [Arquivo (.ps1) para instalação de pacotes](#arquivo-ps1-para-instala%C3%A7%C3%A3o-de-pacotes "Arquivo (.ps1) para instalação de pacotes")
 - [Execução Interativa de Comandos no PowerShell: Como Permitir que os Usuários Execute Comandos Personalizados](#execu%C3%A7%C3%A3o-interativa-de-comandos-no-powershell-como-permitir-que-os-usu%C3%A1rios-execute-comandos-personalizados "Execução Interativa de Comandos no PowerShell: Como Permitir que os Usuários Execute Comandos Personalizados")
 - [Executando Comandos Remotos com PowerShell: Desvendando IRM e IEX](#executando-comandos-remotos-com-powershell-desvendando-irm-e-iex "Executando Comandos Remotos com PowerShell: Desvendando IRM e IEX")
+- [Como Abrir Links no Navegador Padrão via PowerShell](# "Como Abrir Links no Navegador Padrão via PowerShell")
 
 ---
 
@@ -600,6 +601,29 @@ Primeiro, ele solicita ao usuário que digite um comando por meio do cmdlet `Rea
 - **IEX (`Invoke-Expression`):** O cmdlet `Invoke-Expression` é usado para avaliar ou executar strings como comandos no PowerShell. No contexto do comando `irm https://dominio.com/dir | iex`, o `IEX` está sendo usado para executar imediatamente o conteúdo baixado pelo `IRM`. Isso é útil quando você deseja baixar um script da web e executá-lo diretamente no PowerShell sem salvá-lo como um arquivo separado.
 
 Juntos, esses cmdlets são frequentemente usados em uma única linha de comando para baixar e executar scripts do PowerShell diretamente da web. No entanto, é importante ter cuidado ao usar esses comandos, pois eles podem executar código arbitrário do qual você não tem controle total, o que pode ser um risco de segurança se você estiver baixando e executando scripts de fontes não confiáveis.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Como Abrir Links no Navegador Padrão via PowerShell
+
+É possível abrir um link no navegador padrão usando o PowerShell. Você pode fazer isso usando o cmdlet `Start-Process`. Aqui está um exemplo:
+
+```powershell
+Start-Process "https://www.microsoft.com/pt-br/edge"
+```
+
+Esse comando abrirá o link no navegador padrão configurado no sistema operacional.
+
+Se você quiser abrir o link em um navegador específico, você pode usar o parâmetro `-FilePath` e fornecer o caminho do executável do navegador. Por exemplo, para abrir o link no Microsoft Edge, você poderia fazer algo assim:
+
+```powershell
+Start-Process "msedge.exe" -ArgumentList "https://www.microsoft.com/pt-br/edge"
+```
+
+Lembre-se de que o caminho para o executável pode variar dependendo da instalação do navegador no seu sistema. No exemplo acima, `msedge.exe` é o executável do Microsoft Edge, mas para outros navegadores, você precisaria fornecer o caminho apropriado.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
