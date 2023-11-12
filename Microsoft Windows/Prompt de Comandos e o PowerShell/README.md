@@ -24,6 +24,7 @@
 - [Como Abrir Links no Navegador Padrão via PowerShell](#como-abrir-links-no-navegador-padr%C3%A3o-via-powershell "Como Abrir Links no Navegador Padrão via PowerShell")
 - [Guia Rápido do PowerShell: Obtendo Diretórios-Chave através de Variáveis de Ambiente no Windows](#guia-r%C3%A1pido-do-powershell-obtendo-diret%C3%B3rios-chave-atrav%C3%A9s-de-vari%C3%A1veis-de-ambiente-no-windows "Guia Rápido do PowerShell: Obtendo Diretórios-Chave através de Variáveis de Ambiente no Windows")
 - [Script PowerShell: Obtendo Caminhos dos Principais Diretórios do Perfil do Usuário no Windows](#script-powershell-obtendo-caminhos-dos-principais-diret%C3%B3rios-do-perfil-do-usu%C3%A1rio-no-windows "Script PowerShell: Obtendo Caminhos dos Principais Diretórios do Perfil do Usuário no Windows")
+- [Script PowerShell: Abrir File Explorer e Selecionar Arquivo em um Diretório Específico](# "Script PowerShell: Abrir File Explorer e Selecionar Arquivo em um Diretório Específico")
 
 ---
 
@@ -711,6 +712,53 @@ Write-Output "Videos: $videosPath"
 ```
 
 Este script cria caminhos para os diretórios principais do perfil do usuário e os exibe no console. Você pode adicionar ou remover caminhos conforme necessário para atender às suas necessidades específicas. Execute este script no PowerShell para ver os caminhos dos diretórios no seu sistema.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Script PowerShell: Abrir File Explorer e Selecionar Arquivo em um Diretório Específico
+
+Sim, é possível abrir o File Explorer do Windows em um diretório específico e selecionar um arquivo usando o PowerShell. Para isso, você pode usar o cmdlet `Start-Process` e fornecer o caminho do diretório desejado. Aqui está um exemplo de script que faz isso:
+
+```powershell
+# Caminho do diretório desejado
+$diretorio = "C:\Caminho\Para\Seu\Diretorio"
+
+# Arquivo que deseja ser selecionado
+$arquivoSelecionado = "Exemplo.txt"
+
+# Caminho completo do arquivo
+$caminhoCompleto = Join-Path -Path $diretorio -ChildPath $arquivoSelecionado
+
+# Abrir o File Explorer no diretório e selecionar o arquivo
+Start-Process explorer.exe -ArgumentList "/select, $caminhoCompleto"
+```
+
+Substitua `$diretorio` pelo caminho do diretório desejado e `$arquivoSelecionado` pelo nome do arquivo que você deseja selecionar. O script utiliza o comando `/select` para abrir o File Explorer e selecionar o arquivo especificado.
+
+Execute esse script no PowerShell para abrir o File Explorer no diretório desejado e selecionar o arquivo especificado.
+
+> Executar um determinado arquivo.
+
+Abrir e selecionar um arquivo no File Explorer via PowerShell não implica automaticamente em executar esse arquivo. O File Explorer é uma ferramenta de navegação e gerenciamento de arquivos, e não é projetado para executar automaticamente arquivos selecionados.
+
+Para executar um arquivo específico, você precisará usar um comando ou processo específico relacionado ao tipo de arquivo que está tentando abrir. Por exemplo:
+
+- **Executar um arquivo executável (por exemplo, um programa):**
+  ```powershell
+  Start-Process -FilePath "C:\Caminho\Para\Seu\Programa.exe"
+  ```
+
+- **Abrir um documento usando o aplicativo padrão associado:**
+  ```powershell
+  Start-Process "C:\Caminho\Para\Seu\Documento.txt"
+  ```
+
+Lembre-se de que a capacidade de execução depende do tipo de arquivo e da configuração do sistema. Alguns arquivos podem exigir privilégios de administrador ou outros requisitos específicos.
+
+Se você deseja abrir e executar automaticamente um arquivo específico, você precisa fornecer mais informações sobre o tipo de arquivo e o comportamento desejado para que eu possa oferecer uma orientação mais precisa.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
