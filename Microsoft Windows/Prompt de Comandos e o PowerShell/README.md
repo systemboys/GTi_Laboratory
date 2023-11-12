@@ -22,6 +22,7 @@
 - [Execução Interativa de Comandos no PowerShell: Como Permitir que os Usuários Execute Comandos Personalizados](#execu%C3%A7%C3%A3o-interativa-de-comandos-no-powershell-como-permitir-que-os-usu%C3%A1rios-execute-comandos-personalizados "Execução Interativa de Comandos no PowerShell: Como Permitir que os Usuários Execute Comandos Personalizados")
 - [Executando Comandos Remotos com PowerShell: Desvendando IRM e IEX](#executando-comandos-remotos-com-powershell-desvendando-irm-e-iex "Executando Comandos Remotos com PowerShell: Desvendando IRM e IEX")
 - [Como Abrir Links no Navegador Padrão via PowerShell](#como-abrir-links-no-navegador-padr%C3%A3o-via-powershell "Como Abrir Links no Navegador Padrão via PowerShell")
+- [Guia Rápido do PowerShell: Obtendo Diretórios-Chave através de Variáveis de Ambiente no Windows](# "Guia Rápido do PowerShell: Obtendo Diretórios-Chave através de Variáveis de Ambiente no Windows")
 
 ---
 
@@ -624,6 +625,39 @@ Start-Process "msedge.exe" -ArgumentList "https://www.microsoft.com/pt-br/edge"
 ```
 
 Lembre-se de que o caminho para o executável pode variar dependendo da instalação do navegador no seu sistema. No exemplo acima, `msedge.exe` é o executável do Microsoft Edge, mas para outros navegadores, você precisaria fornecer o caminho apropriado.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Guia Rápido do PowerShell: Obtendo Diretórios-Chave através de Variáveis de Ambiente no Windows
+
+Para obter variáveis de ambiente específicas no PowerShell, você pode usar a variável `$env`. Aqui estão exemplos para obter as variáveis de ambiente relacionadas aos diretórios mencionados:
+
+1. **C:\ (Unidade do Sistema):**
+   ```powershell
+   $env:SystemDrive
+   ```
+
+2. **C:\Arquivos de programas:**
+   ```powershell
+   $env:ProgramFiles
+   ```
+
+3. **C:\Arquivos de programas (x86) (para programas de 32 bits em sistemas de 64 bits):**
+   ```powershell
+   $env:ProgramFiles(x86)
+   ```
+
+4. **C:\Windows:**
+   ```powershell
+   $env:Windir
+   ```
+
+Esses comandos retornarão os caminhos associados às variáveis de ambiente correspondentes. Lembre-se de que, em sistemas de 64 bits, `$env:ProgramFiles` geralmente aponta para a pasta "Program Files" para aplicativos de 64 bits, e `$env:ProgramFiles(x86)` aponta para a pasta "Program Files (x86)" para aplicativos de 32 bits.
+
+Experimente esses comandos no PowerShell para ver os resultados específicos em seu sistema.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
