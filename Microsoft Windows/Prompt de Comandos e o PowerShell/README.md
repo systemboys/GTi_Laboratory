@@ -17,6 +17,7 @@
 
 > Microsoft **_PowerShell_**
 
+- [Função que executa um menu interativo com PowerShell](# "Função que executa um menu interativo com PowerShell")
 - [Verificar a existência de um diretório ou de um arquivo com arquivo PowerShell (.ps1)](#verificar-a-exist%C3%AAncia-de-um-diret%C3%B3rio-ou-de-um-arquivo-com-arquivo-powershell-ps1 "Verificar a existência de um diretório ou de um arquivo com arquivo PowerShell (.ps1)")
 - [Script de Instalação Silenciosa de Software (verificação por chave de registro)](#script-de-instala%C3%A7%C3%A3o-silenciosa-de-software-verifica%C3%A7%C3%A3o-por-chave-de-registro "Script de Instalação Silenciosa de Software (verificação por chave de registro)")
 - [Arquivo (.ps1) para instalação de pacotes](#arquivo-ps1-para-instala%C3%A7%C3%A3o-de-pacotes "Arquivo (.ps1) para instalação de pacotes")
@@ -477,6 +478,74 @@ Aqui estão alguns dos principais diretórios do Windows e as variáveis de ambi
     ```
 
 Lembre-se de que essas variáveis de ambiente podem variar de acordo com a versão e configuração do Windows. Você pode usar essas variáveis em scripts ou no Prompt de Comandos para acessar esses diretórios.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Função que executa um menu interativo com PowerShell
+
+Aqui está um script em PowerShell que exibe um menu em uma função:
+
+```powershell
+# Define a função do menu
+function Show-Menu {
+    param (
+        [string]$Title = 'Menu',
+        [string[]]$MenuItems = @(
+            'Exit...',
+            'Windows Updates',
+            'Software Update',
+            'Windows and Software Updates'
+        )
+    )
+
+    # Limpa a tela
+    Clear-Host
+
+    # Exibe o título do menu
+    Write-Host "`n$Title`n" -ForegroundColor Cyan
+
+    # Exibe as opções do menu
+    for ($i = 0; $i -lt $MenuItems.Length; $i++) {
+        Write-Host "$i | $($MenuItems[$i])"
+    }
+
+    # Lê a entrada do usuário
+    $choice = Read-Host "`nEscolha uma opção"
+
+    # Executa a opção escolhida
+    switch ($choice) {
+        '0' {
+            return
+        }
+        '1' {
+            Install-Module PSWindowsUpdate -Force
+            Get-WindowsUpdate -AcceptAll -Install
+        }
+        '2' {
+            winget upgrade --all
+        }
+        '3' {
+            Install-Module PSWindowsUpdate -Force
+            Get-WindowsUpdate -AcceptAll -Install
+            winget upgrade --all
+        }
+        default {
+            Write-Host 'Invalid option' -ForegroundColor Red
+        }
+    }
+
+    # Pausa o script
+    Pause
+}
+
+# Chama a função do menu
+Show-Menu
+```
+
+Este script define uma função Show-Menu que exibe um menu com quatro opções, conforme solicitado. A função usa um loop for para exibir as opções do menu e um comando switch para executar a opção escolhida pelo usuário. As opções 1, 2 e 3 executam os comandos que você forneceu em seu pedido.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
