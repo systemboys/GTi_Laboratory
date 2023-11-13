@@ -18,6 +18,7 @@
 > Microsoft **_PowerShell_**
 
 - [Função que executa um menu interativo com PowerShell](#fun%C3%A7%C3%A3o-que-executa-um-menu-interativo-com-powershell "Função que executa um menu interativo com PowerShell")
+- [Execução Remota de Script PowerShell via Domínio](# "Execução Remota de Script PowerShell via Domínio")
 - [Verificar a existência de um diretório ou de um arquivo com arquivo PowerShell (.ps1)](#verificar-a-exist%C3%AAncia-de-um-diret%C3%B3rio-ou-de-um-arquivo-com-arquivo-powershell-ps1 "Verificar a existência de um diretório ou de um arquivo com arquivo PowerShell (.ps1)")
 - [Script de Instalação Silenciosa de Software (verificação por chave de registro)](#script-de-instala%C3%A7%C3%A3o-silenciosa-de-software-verifica%C3%A7%C3%A3o-por-chave-de-registro "Script de Instalação Silenciosa de Software (verificação por chave de registro)")
 - [Arquivo (.ps1) para instalação de pacotes](#arquivo-ps1-para-instala%C3%A7%C3%A3o-de-pacotes "Arquivo (.ps1) para instalação de pacotes")
@@ -546,6 +547,90 @@ Show-Menu
 ```
 
 Este script define uma função Show-Menu que exibe um menu com quatro opções, conforme solicitado. A função usa um loop for para exibir as opções do menu e um comando switch para executar a opção escolhida pelo usuário. As opções 1, 2 e 3 executam os comandos que você forneceu em seu pedido.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Execução Remota de Script PowerShell via Domínio
+
+Ação, onde um script em PowerShell é executado remotamente a partir de um domínio usando os parâmetros "irm ... | iex".
+
+> **_( i )_** Segue abaixo o script em `PowerShell`:
+
+```powershell
+# file.ps1 - Executa o script de ...
+#
+# Autor: Marcos Aurélio R. da Silva <systemboys@hotmail.com>
+# Manutenção: Marcos Aurélio R. da Silva <systemboys@hotmail.com>
+#
+# ---------------------------------------------------------------
+# Este programa tem a finalidade de ...
+# ---------------------------------------------------------------
+# Histórico:
+# v0.0.1 2023-11-13 às 01h10, Marcos Aurélio:
+#   - Versão inicial, execução do script ...
+#
+# Licença: GPL.
+
+clear
+
+# Verifica se o pacote está instalado
+Write-Host "Checking if Git exists on Windows..."
+if (!(Get-Command git -ErrorAction SilentlyContinue)) {
+    # Definição do arquivo
+    $fileName="Git"
+    $fileUrl="https://github.com/git-for-windows/git/releases/download/v2.42.0.windows.2/Git-2.42.0.2-64-bit.exe"
+    $outputFileName="Git_Setup.exe"
+
+    Write-Host "$fileName does not exist on Windows! Downloading the installer..."
+
+    # Baixa o instalador do pacote
+    Invoke-WebRequest -Uri $fileUrl -OutFile "$env:TEMP\$outputFileName"
+
+    Write-Host "Running the $fileName installer..."
+
+    # Instala o pacote
+    Start-Process -FilePath "$env:TEMP\$outputFileName" -Wait
+
+    Write-Host "Deleting the $fileName installer..."
+
+    # Remove o instalador do pacote
+    Remove-Item "$env:TEMP\$outputFileName"
+}
+
+# Check if the directory exists
+Write-Host "Check if QuickWindows exists, if so, delete it to clone it again..."
+$programFiles = $env:TEMP
+$directory = "$programFiles\QuickWindows"
+
+# Verifica se o diretório existe antes de excluí-lo
+if (Test-Path $directory) {
+    Write-Host "The directory $directory exists."
+    Remove-Item -Path $directory -Recurse -Force
+} else {
+    Write-Host "The directory $directory does not exist."
+}
+
+# Clonando o QuickWindows do repositório GitHub
+Write-Host "Clonando o QuickWindows..."
+cd $env:TEMP ; git clone https://github.com/systemboys/QuickWindows.git ; cd .\QuickWindows\ ; .\QuickWindows.bat
+```
+
+> **_( i )_** Hospedagem do `arquivo.ps1` e sua execução:
+
+```tex
+https://domain.com/
+    └─ /dir/
+        └─ file.ps1
+```
+
+> **_( i )_** Executar com o **_Microsoft PowerShell_** o seguinte comando:
+
+```powershell
+irm https://domain.com/dir/file.ps1 | iex
+```
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
