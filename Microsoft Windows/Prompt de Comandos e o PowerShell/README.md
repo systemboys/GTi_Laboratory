@@ -18,12 +18,12 @@
 > Microsoft **_PowerShell_**
 
 - [Função que executa um menu interativo com PowerShell](#fun%C3%A7%C3%A3o-que-executa-um-menu-interativo-com-powershell "Função que executa um menu interativo com PowerShell")
-- [Execução Remota de Script PowerShell via Domínio](#execu%C3%A7%C3%A3o-remota-de-script-powershell-via-dom%C3%ADnio "Execução Remota de Script PowerShell via Domínio")
 - [Verificar a existência de um diretório ou de um arquivo com arquivo PowerShell (.ps1)](#verificar-a-exist%C3%AAncia-de-um-diret%C3%B3rio-ou-de-um-arquivo-com-arquivo-powershell-ps1 "Verificar a existência de um diretório ou de um arquivo com arquivo PowerShell (.ps1)")
 - [Script de Instalação Silenciosa de Software (verificação por chave de registro)](#script-de-instala%C3%A7%C3%A3o-silenciosa-de-software-verifica%C3%A7%C3%A3o-por-chave-de-registro "Script de Instalação Silenciosa de Software (verificação por chave de registro)")
 - [Arquivo (.ps1) para instalação de pacotes](#arquivo-ps1-para-instala%C3%A7%C3%A3o-de-pacotes "Arquivo (.ps1) para instalação de pacotes")
 - [Execução Interativa de Comandos no PowerShell: Como Permitir que os Usuários Execute Comandos Personalizados](#execu%C3%A7%C3%A3o-interativa-de-comandos-no-powershell-como-permitir-que-os-usu%C3%A1rios-execute-comandos-personalizados "Execução Interativa de Comandos no PowerShell: Como Permitir que os Usuários Execute Comandos Personalizados")
 - [Executando Comandos Remotos com PowerShell: Desvendando IRM e IEX](#executando-comandos-remotos-com-powershell-desvendando-irm-e-iex "Executando Comandos Remotos com PowerShell: Desvendando IRM e IEX")
+- [Execução Remota de Script PowerShell via Domínio](#execu%C3%A7%C3%A3o-remota-de-script-powershell-via-dom%C3%ADnio "Execução Remota de Script PowerShell via Domínio")
 - [Como Abrir Links no Navegador Padrão via PowerShell](#como-abrir-links-no-navegador-padr%C3%A3o-via-powershell "Como Abrir Links no Navegador Padrão via PowerShell")
 - [Guia Rápido do PowerShell: Obtendo Diretórios-Chave através de Variáveis de Ambiente no Windows](#guia-r%C3%A1pido-do-powershell-obtendo-diret%C3%B3rios-chave-atrav%C3%A9s-de-vari%C3%A1veis-de-ambiente-no-windows "Guia Rápido do PowerShell: Obtendo Diretórios-Chave através de Variáveis de Ambiente no Windows")
 - [Script PowerShell: Obtendo Caminhos dos Principais Diretórios do Perfil do Usuário no Windows](#script-powershell-obtendo-caminhos-dos-principais-diret%C3%B3rios-do-perfil-do-usu%C3%A1rio-no-windows "Script PowerShell: Obtendo Caminhos dos Principais Diretórios do Perfil do Usuário no Windows")
@@ -553,90 +553,6 @@ Este script define uma função Show-Menu que exibe um menu com quatro opções,
 
 ---
 
-## Execução Remota de Script PowerShell via Domínio
-
-Ação, onde um script em PowerShell é executado remotamente a partir de um domínio usando os parâmetros "irm ... | iex".
-
-> **_( i )_** Segue abaixo o script em `PowerShell`:
-
-```powershell
-# file.ps1 - Executa o script de ...
-#
-# Autor: Marcos Aurélio R. da Silva <systemboys@hotmail.com>
-# Manutenção: Marcos Aurélio R. da Silva <systemboys@hotmail.com>
-#
-# ---------------------------------------------------------------
-# Este programa tem a finalidade de ...
-# ---------------------------------------------------------------
-# Histórico:
-# v0.0.1 2023-11-13 às 01h10, Marcos Aurélio:
-#   - Versão inicial, execução do script ...
-#
-# Licença: GPL.
-
-clear
-
-# Verifica se o pacote está instalado
-Write-Host "Checking if Git exists on Windows..."
-if (!(Get-Command git -ErrorAction SilentlyContinue)) {
-    # Definição do arquivo
-    $fileName="Git"
-    $fileUrl="https://github.com/git-for-windows/git/releases/download/v2.42.0.windows.2/Git-2.42.0.2-64-bit.exe"
-    $outputFileName="Git_Setup.exe"
-
-    Write-Host "$fileName does not exist on Windows! Downloading the installer..."
-
-    # Baixa o instalador do pacote
-    Invoke-WebRequest -Uri $fileUrl -OutFile "$env:TEMP\$outputFileName"
-
-    Write-Host "Running the $fileName installer..."
-
-    # Instala o pacote
-    Start-Process -FilePath "$env:TEMP\$outputFileName" -Wait
-
-    Write-Host "Deleting the $fileName installer..."
-
-    # Remove o instalador do pacote
-    Remove-Item "$env:TEMP\$outputFileName"
-}
-
-# Check if the directory exists
-Write-Host "Check if QuickWindows exists, if so, delete it to clone it again..."
-$programFiles = $env:TEMP
-$directory = "$programFiles\QuickWindows"
-
-# Verifica se o diretório existe antes de excluí-lo
-if (Test-Path $directory) {
-    Write-Host "The directory $directory exists."
-    Remove-Item -Path $directory -Recurse -Force
-} else {
-    Write-Host "The directory $directory does not exist."
-}
-
-# Clonando o QuickWindows do repositório GitHub
-Write-Host "Clonando o QuickWindows..."
-cd $env:TEMP ; git clone https://github.com/systemboys/QuickWindows.git ; cd .\QuickWindows\ ; .\QuickWindows.bat
-```
-
-> **_( i )_** Hospedagem do `arquivo.ps1` e sua execução:
-
-```tex
-https://domain.com/
-    └─ /dir/
-        └─ file.ps1
-```
-
-> **_( i )_** Executar com o **_Microsoft PowerShell_** o seguinte comando:
-
-```powershell
-irm https://domain.com/dir/file.ps1 | iex
-```
-
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
-
----
-
 ## Verificar a existência de um diretório ou de um arquivo com arquivo PowerShell (.ps1)
 
 Este script em `PowerShell` verifica a existência de um diretório:
@@ -783,6 +699,90 @@ Primeiro, ele solicita ao usuário que digite um comando por meio do cmdlet `Rea
 - **IEX (`Invoke-Expression`):** O cmdlet `Invoke-Expression` é usado para avaliar ou executar strings como comandos no PowerShell. No contexto do comando `irm https://dominio.com/dir | iex`, o `IEX` está sendo usado para executar imediatamente o conteúdo baixado pelo `IRM`. Isso é útil quando você deseja baixar um script da web e executá-lo diretamente no PowerShell sem salvá-lo como um arquivo separado.
 
 Juntos, esses cmdlets são frequentemente usados em uma única linha de comando para baixar e executar scripts do PowerShell diretamente da web. No entanto, é importante ter cuidado ao usar esses comandos, pois eles podem executar código arbitrário do qual você não tem controle total, o que pode ser um risco de segurança se você estiver baixando e executando scripts de fontes não confiáveis.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Execução Remota de Script PowerShell via Domínio
+
+Ação, onde um script em PowerShell é executado remotamente a partir de um domínio usando os parâmetros "irm ... | iex".
+
+> **_( i )_** Segue abaixo o script em `PowerShell`:
+
+```powershell
+# file.ps1 - Executa o script de ...
+#
+# Autor: Marcos Aurélio R. da Silva <systemboys@hotmail.com>
+# Manutenção: Marcos Aurélio R. da Silva <systemboys@hotmail.com>
+#
+# ---------------------------------------------------------------
+# Este programa tem a finalidade de ...
+# ---------------------------------------------------------------
+# Histórico:
+# v0.0.1 2023-11-13 às 01h10, Marcos Aurélio:
+#   - Versão inicial, execução do script ...
+#
+# Licença: GPL.
+
+clear
+
+# Verifica se o pacote está instalado
+Write-Host "Checking if Git exists on Windows..."
+if (!(Get-Command git -ErrorAction SilentlyContinue)) {
+    # Definição do arquivo
+    $fileName="Git"
+    $fileUrl="https://github.com/git-for-windows/git/releases/download/v2.42.0.windows.2/Git-2.42.0.2-64-bit.exe"
+    $outputFileName="Git_Setup.exe"
+
+    Write-Host "$fileName does not exist on Windows! Downloading the installer..."
+
+    # Baixa o instalador do pacote
+    Invoke-WebRequest -Uri $fileUrl -OutFile "$env:TEMP\$outputFileName"
+
+    Write-Host "Running the $fileName installer..."
+
+    # Instala o pacote
+    Start-Process -FilePath "$env:TEMP\$outputFileName" -Wait
+
+    Write-Host "Deleting the $fileName installer..."
+
+    # Remove o instalador do pacote
+    Remove-Item "$env:TEMP\$outputFileName"
+}
+
+# Check if the directory exists
+Write-Host "Check if QuickWindows exists, if so, delete it to clone it again..."
+$programFiles = $env:TEMP
+$directory = "$programFiles\QuickWindows"
+
+# Verifica se o diretório existe antes de excluí-lo
+if (Test-Path $directory) {
+    Write-Host "The directory $directory exists."
+    Remove-Item -Path $directory -Recurse -Force
+} else {
+    Write-Host "The directory $directory does not exist."
+}
+
+# Clonando o QuickWindows do repositório GitHub
+Write-Host "Clonando o QuickWindows..."
+cd $env:TEMP ; git clone https://github.com/systemboys/QuickWindows.git ; cd .\QuickWindows\ ; .\QuickWindows.bat
+```
+
+> **_( i )_** Hospedagem do `arquivo.ps1` e sua execução:
+
+```tex
+https://domain.com/
+    └─ /dir/
+        └─ file.ps1
+```
+
+> **_( i )_** Executar com o **_Microsoft PowerShell_** o seguinte comando:
+
+```powershell
+irm https://domain.com/dir/file.ps1 | iex
+```
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
