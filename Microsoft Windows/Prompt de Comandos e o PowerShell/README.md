@@ -752,6 +752,14 @@ if (!(Get-Command git -ErrorAction SilentlyContinue)) {
 
     # Remove o instalador do pacote
     Remove-Item "$env:TEMP\$outputFileName"
+
+    # Fechar a janela do Windows PowerShell
+    Write-Host "After installing Git, Windows PowerShell must be restarted!"
+    Write-Host "Type the same command again or press the up directional arrow key."
+    Write-Host
+    Write-Host "Press any key to continue..."
+    $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+    exit
 }
 
 # Check if the directory exists
@@ -769,7 +777,7 @@ if (Test-Path $directory) {
 
 # Clonando o QuickWindows do repositório GitHub
 Write-Host "Clonando o QuickWindows..."
-cd $env:TEMP ; git clone https://github.com/systemboys/QuickWindows.git ; cd .\QuickWindows\ ; .\QuickWindows.bat
+cd $env:TEMP ; git clone https://github.com/systemboys/QuickWindows.git ; cd .\QuickWindows\ ; .\QuickWindows.cmd
 ```
 
 > **_( i )_** Hospedagem do `arquivo.ps1` e sua execução:
