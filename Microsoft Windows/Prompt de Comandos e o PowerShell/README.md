@@ -709,6 +709,8 @@ Juntos, esses cmdlets são frequentemente usados em uma única linha de comando 
 
 Ação, onde um script em PowerShell é executado remotamente a partir de um domínio usando os parâmetros "irm ... | iex".
 
+Neste exemplo, o script está hospedado em um domínio e o mesmo tem a função de instalar o Git no Windows caso não esteja instalado e clonar um repositório no GitHub.
+
 > **_( i )_** Segue abaixo o script em `PowerShell`:
 
 ```powershell
