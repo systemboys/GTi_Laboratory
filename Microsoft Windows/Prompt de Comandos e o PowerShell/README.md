@@ -870,6 +870,34 @@ Get-ChildItem -Path $ProgramFiles
 
 Lembre-se de que, ao definir variáveis, é boa prática usar nomes descritivos para que o código seja mais legível.
 
+> **_( i )_** Exemplo de definição e exibição.
+
+Certamente, aqui está um bloco de código PowerShell que define as variáveis de ambiente mencionadas e exibe seus valores:
+
+```powershell
+# Definindo as variáveis de ambiente
+$systemRoot = $env:SystemRoot
+$systemDrive = $env:SystemDrive
+$programFiles = $env:ProgramFiles
+$programData = $env:ProgramData
+$userProfile = $env:UserProfile
+$temp = $env:Temp
+$tmp = $env:Tmp
+$commonProgramFiles = $env:CommonProgramFiles
+
+# Exibindo os valores
+Write-Host "SystemRoot: $systemRoot"
+Write-Host "SystemDrive: $systemDrive"
+Write-Host "ProgramFiles: $programFiles"
+Write-Host "ProgramData: $programData"
+Write-Host "UserProfile: $userProfile"
+Write-Host "Temp: $temp"
+Write-Host "Tmp: $tmp"
+Write-Host "CommonProgramFiles: $commonProgramFiles"
+```
+
+Este script define cada variável de ambiente e, em seguida, usa o cmdlet `Write-Host` para exibir os valores correspondentes. Você pode executar este script em um ambiente PowerShell para ver os diretórios associados a cada variável de ambiente no seu sistema. Certifique-se de estar executando o PowerShell com privilégios suficientes, dependendo das operações que o script pode realizar.
+
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
