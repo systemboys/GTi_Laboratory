@@ -17,6 +17,7 @@
 
 > Microsoft **_PowerShell_**
 
+- [Ativar a execução de scripts no PowerShell](# "Ativar a execução de scripts no PowerShell")
 - [Função que executa um menu interativo com PowerShell](#fun%C3%A7%C3%A3o-que-executa-um-menu-interativo-com-powershell "Função que executa um menu interativo com PowerShell")
 - [Verificar a existência de um diretório ou de um arquivo com arquivo PowerShell (.ps1)](#verificar-a-exist%C3%AAncia-de-um-diret%C3%B3rio-ou-de-um-arquivo-com-arquivo-powershell-ps1 "Verificar a existência de um diretório ou de um arquivo com arquivo PowerShell (.ps1)")
 - [Script de Instalação Silenciosa de Software (verificação por chave de registro)](#script-de-instala%C3%A7%C3%A3o-silenciosa-de-software-verifica%C3%A7%C3%A3o-por-chave-de-registro "Script de Instalação Silenciosa de Software (verificação por chave de registro)")
@@ -479,6 +480,23 @@ Aqui estão alguns dos principais diretórios do Windows e as variáveis de ambi
     ```
 
 Lembre-se de que essas variáveis de ambiente podem variar de acordo com a versão e configuração do Windows. Você pode usar essas variáveis em scripts ou no Prompt de Comandos para acessar esses diretórios.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Ativar a execução de scripts no PowerShell
+
+Para ativar a execução de scripts no sistema, você precisa alterar a política de execução de scripts do PowerShell. A mensagem de erro que você recebeu sugere que a execução de scripts foi desabilitada no sistema. Para habilitá-la, siga as etapas abaixo:
+
+1. Abra o PowerShell como administrador. Para fazer isso, clique com o botão direito do mouse no ícone do PowerShell e selecione “Executar como administrador”.
+2. Digite o seguinte comando e pressione Enter: `Set-ExecutionPolicy RemoteSigned`
+3. Se você receber uma mensagem de confirmação, digite A e pressione Enter.
+4. Agora, tente executar o script novamente.
+
+O comando `Set-ExecutionPolicy RemoteSigned` permite a execução de scripts locais não assinados e scripts assinados baixados da Internet.
+
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
