@@ -637,7 +637,7 @@ Escrever o `arquivo.ps1` para scripts de instalação:
 # Licença: GPL.
 
 # Se o YourPackage não estiver instalado, faz o download e instala
-$programFiles = [Environment]::GetEnvironmentVariable("ProgramFiles(x86)")
+$programFiles = "$env:SystemDrive\Program Files"
 $directory = "$programFiles\YourPackage"
 
 if (Test-Path $directory) {
