@@ -32,7 +32,7 @@
 - [Executar as atualizações do Windows a partir de um script PowerShell](#executar-as-atualiza%C3%A7%C3%B5es-do-windows-a-partir-de-um-script-powershell "Executar as atualizações do Windows a partir de um script PowerShell")
 - [Exportando e importando variáveis em arquivos PowerShell](#exportando-e-importando-vari%C3%A1veis-em-arquivos-powershell "Exportando e importando variáveis em arquivos PowerShell")
 - [Alterar a cor de fundo do PowerShell](#alterar-a-cor-de-fundo-do-powershell "Alterar a cor de fundo do PowerShell")
-- [Ajustando a Janela do PowerShell: Alterando a Largura e a Altura da Janela](# "Ajustando a Janela do PowerShell: Alterando a Largura e a Altura da Janela")
+- [Ajustando a Janela do PowerShell: Alterando a Largura e a Altura da Janela](#ajustando-a-janela-do-powershell-alterando-a-largura-e-a-altura-da-janela "Ajustando a Janela do PowerShell: Alterando a Largura e a Altura da Janela")
 
 ---
 
