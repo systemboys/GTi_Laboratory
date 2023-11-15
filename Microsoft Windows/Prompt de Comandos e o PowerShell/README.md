@@ -30,6 +30,7 @@
 - [Script PowerShell: Obtendo Caminhos dos Principais Diretórios do Perfil do Usuário no Windows](#script-powershell-obtendo-caminhos-dos-principais-diret%C3%B3rios-do-perfil-do-usu%C3%A1rio-no-windows "Script PowerShell: Obtendo Caminhos dos Principais Diretórios do Perfil do Usuário no Windows")
 - [Script PowerShell: Abrir File Explorer e Selecionar Arquivo em um Diretório Específico](#script-powershell-abrir-file-explorer-e-selecionar-arquivo-em-um-diret%C3%B3rio-espec%C3%ADfico "Script PowerShell: Abrir File Explorer e Selecionar Arquivo em um Diretório Específico")
 - [Executar as atualizações do Windows a partir de um script PowerShell](#executar-as-atualiza%C3%A7%C3%B5es-do-windows-a-partir-de-um-script-powershell "Executar as atualizações do Windows a partir de um script PowerShell")
+- [Exportando e importando variáveis em arquivos PowerShell](# "Exportando e importando variáveis em arquivos PowerShell")
 
 ---
 
@@ -1022,6 +1023,35 @@ winget upgrade --all
 ```
 
 Este script usa o cmdlet `Get-WindowsUpdate` para verificar e instalar todas as atualizações disponíveis do Windows. Em seguida, ele executa o comando `winget upgrade --all` para atualizar todos os aplicativos instalados usando o Gerenciador de Pacotes do Windows.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Exportando e importando variáveis em arquivos PowerShell
+
+Você pode exportar várias variáveis de um arquivo PowerShell e importá-las em outro arquivo. Você pode usar o cmdlet `Export-ModuleMember` para exportar as variáveis do arquivo1.ps1 e, em seguida, usar o cmdlet `Import-Module` para importá-las no arquivo2.ps1. Aqui está um exemplo de como fazer isso:
+
+1. No arquivo1.ps1, defina as variáveis que você deseja exportar:
+
+```powershell
+$variable_a = "text1"
+$variable_b = "text2"
+$variable_c = "text3"
+Export-ModuleMember -Variable variable_a, variable_b, variable_c
+```
+
+1. No arquivo2.ps1, importe as variáveis e exiba seus valores:
+
+```powershell
+Import-Module .\arquivo1.ps1
+Write-Host $variable_a
+Write-Host $variable_b
+Write-Host $variable_c
+```
+
+Isso deve imprimir o valor das variáveis no console.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
