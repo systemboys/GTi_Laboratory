@@ -750,6 +750,9 @@ Neste exemplo, o script está hospedado em um domínio e o mesmo tem a função 
 
 clear
 
+# Ativar a execução de scripts no PowerShell
+Set-ExecutionPolicy RemoteSigned
+
 # Verifica se o pacote está instalado
 Write-Host "Checking if Git exists on Windows..."
 if (!(Get-Command git -ErrorAction SilentlyContinue)) {
