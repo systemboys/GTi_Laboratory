@@ -31,6 +31,7 @@
 - [Script PowerShell: Abrir File Explorer e Selecionar Arquivo em um Diretório Específico](#script-powershell-abrir-file-explorer-e-selecionar-arquivo-em-um-diret%C3%B3rio-espec%C3%ADfico "Script PowerShell: Abrir File Explorer e Selecionar Arquivo em um Diretório Específico")
 - [Executar as atualizações do Windows a partir de um script PowerShell](#executar-as-atualiza%C3%A7%C3%B5es-do-windows-a-partir-de-um-script-powershell "Executar as atualizações do Windows a partir de um script PowerShell")
 - [Exportando e importando variáveis em arquivos PowerShell](#exportando-e-importando-vari%C3%A1veis-em-arquivos-powershell "Exportando e importando variáveis em arquivos PowerShell")
+- [Alterar a cor de fundo do PowerShell](# "Alterar a cor de fundo do PowerShell")
 
 ---
 
@@ -1052,6 +1053,55 @@ Write-Host $variable_c
 ```
 
 Isso deve imprimir o valor das variáveis no console.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Alterar a cor de fundo do PowerShell
+
+Para alterar a cor de fundo do PowerShell para preto, você pode seguir as seguintes etapas:
+
+1. Abra o PowerShell.
+2. Clique com o botão direito do mouse na barra superior da janela do PowerShell e selecione “Propriedades”.
+3. Clique na guia “Cores”.
+4. Selecione “Preto” na lista suspensa “Cor de fundo”.
+5. Clique em “OK” para salvar as alterações.
+
+Se você quiser definir a cor de fundo do PowerShell para preto  permanentemente, você pode adicionar o seguinte código ao seu arquivo de perfil do PowerShell:
+
+```
+$Host.UI.RawUI.BackgroundColor = "Black"
+$Host.UI.RawUI.ForegroundColor = "White"
+```
+
+Isso definirá a cor de fundo como preto e a cor do  texto como branco sempre que você abrir o PowerShell. Para obter uma  lista de todas as cores disponíveis no PowerShell, você pode usar o  seguinte comando:
+
+```
+[Enum]::GetValues([System.ConsoleColor])
+```
+
+Isso  retornará uma lista de todas as cores disponíveis no PowerShell,  incluindo preto, azul, verde, ciano, vermelho, magenta, amarelo, cinza e  branco.
+
+```powershell
+Black
+DarkBlue
+DarkGreen
+DarkCyan
+DarkRed
+DarkMagenta
+DarkYellow
+Gray
+DarkGray
+Blue
+Green
+Cyan
+Red
+Magenta
+Yellow
+White
+```
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
