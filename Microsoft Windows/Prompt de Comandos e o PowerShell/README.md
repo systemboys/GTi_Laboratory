@@ -32,6 +32,7 @@
 - [Executar as atualizações do Windows a partir de um script PowerShell](#executar-as-atualiza%C3%A7%C3%B5es-do-windows-a-partir-de-um-script-powershell "Executar as atualizações do Windows a partir de um script PowerShell")
 - [Exportando e importando variáveis em arquivos PowerShell](#exportando-e-importando-vari%C3%A1veis-em-arquivos-powershell "Exportando e importando variáveis em arquivos PowerShell")
 - [Alterar a cor de fundo do PowerShell](#alterar-a-cor-de-fundo-do-powershell "Alterar a cor de fundo do PowerShell")
+- [Ajustando a Janela do PowerShell: Alterando a Largura e a Altura da Janela](# "Ajustando a Janela do PowerShell: Alterando a Largura e a Altura da Janela")
 
 ---
 
@@ -1105,6 +1106,27 @@ Magenta
 Yellow
 White
 ```
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Ajustando a Janela do PowerShell: Alterando a Largura e a Altura da Janela
+
+Sim, é possível alterar a largura e a altura da janela do Windows PowerShell usando um script. Aqui está um exemplo de como você pode fazer isso:
+
+```powershell
+# Cria uma nova instância do objeto System.Management.Automation.Host.Size
+$size = New-Object System.Management.Automation.Host.Size(120, 30)
+
+# Atribui o novo tamanho à janela do PowerShell
+$host.UI.RawUI.WindowSize = $size
+```
+
+Neste exemplo, a largura da janela é definida como 120 e a altura como 30. Você pode alterar esses valores de acordo com suas necessidades. Este script deve ser executado no início do seu arquivo .ps1 para definir o tamanho da janela antes de executar o restante do script.
+
+Por favor, note que este script só funcionará quando executado diretamente no Windows PowerShell. Se você estiver executando o script através de um atalho ou de outra interface de linha de comando, o tamanho da janela pode não ser alterado. Além disso, o Windows pode ter limitações sobre o quão grande a janela do PowerShell pode ser, dependendo da configuração do seu sistema.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
