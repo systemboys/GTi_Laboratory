@@ -1071,7 +1071,7 @@ Para importar as funções de um arquivo para outro em PowerShell, você pode us
 Exemplo de funções:
 
 ```powershell
-# Functions of choices after Enter
+# Program functions
 function commandExecution_0() {
     clear
     exit
