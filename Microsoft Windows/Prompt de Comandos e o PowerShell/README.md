@@ -31,6 +31,7 @@
 - [Script PowerShell: Abrir File Explorer e Selecionar Arquivo em um Diretório Específico](#script-powershell-abrir-file-explorer-e-selecionar-arquivo-em-um-diret%C3%B3rio-espec%C3%ADfico "Script PowerShell: Abrir File Explorer e Selecionar Arquivo em um Diretório Específico")
 - [Executar as atualizações do Windows a partir de um script PowerShell](#executar-as-atualiza%C3%A7%C3%B5es-do-windows-a-partir-de-um-script-powershell "Executar as atualizações do Windows a partir de um script PowerShell")
 - [Exportando e importando variáveis em arquivos PowerShell](#exportando-e-importando-vari%C3%A1veis-em-arquivos-powershell "Exportando e importando variáveis em arquivos PowerShell")
+- [Exportação e Importação, Compartilhando Funções entre Scripts PowerShell](# "Exportação e Importação, Compartilhando Funções entre Scripts PowerShell")
 - [Alterar a cor de fundo do PowerShell](#alterar-a-cor-de-fundo-do-powershell "Alterar a cor de fundo do PowerShell")
 - [Ajustando a Janela do PowerShell: Alterando a Largura e a Altura da Janela](#ajustando-a-janela-do-powershell-alterando-a-largura-e-a-altura-da-janela "Ajustando a Janela do PowerShell: Alterando a Largura e a Altura da Janela")
 
@@ -1057,6 +1058,81 @@ Write-Host $variable_c
 ```
 
 Isso deve imprimir o valor das variáveis no console.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Exportação e Importação, Compartilhando Funções entre Scripts PowerShell
+
+Para importar as funções de um arquivo para outro em PowerShell, você pode usar o comando `dot sourcing`. O `dot sourcing` é um método no PowerShell que permite que você chame funções definidas  em um script, em outro script. Aqui está como você pode fazer isso:
+
+Exemplo de funções:
+
+```powershell
+# Functions of choices after Enter
+function commandExecution_0() {
+    clear
+    exit
+}
+function commandExecution_1() {
+    Write-Host "Running commands for $selection"
+    # Start of commands here...
+    # Command 1...
+    # Command 2...
+    # Command 3...
+    Write-Host " >>> ok f1 <<< "
+    # End of commands here...
+    Read-Host -Prompt "Commands executed successfully, press Enter to return!"
+    & .\MyScripts.ps1
+}
+function commandExecution_2() {
+    Write-Host "Running commands for $selection"
+    # Start of commands here...
+    # Command 1...
+    # Command 2...
+    # Command 3...
+    Write-Host " >>> ok f2 <<< "
+    # End of commands here...
+    Read-Host -Prompt "Commands executed successfully, press Enter to return!"
+    & .\MyScripts.ps1
+}
+function commandExecution_3() {
+    Write-Host "Running commands for $selection"
+    # Start of commands here...
+    # Command 1...
+    # Command 2...
+    # Command 3...
+    Write-Host " >>> ok f3 <<< "
+    # End of commands here...
+    Read-Host -Prompt "Commands executed successfully, press Enter to return!"
+    & .\MyScripts.ps1
+}
+```
+
+1. Primeiro, certifique-se de que o arquivo `myFunctions.ps1` está no mesmo diretório que o seu script `myScript.ps1`. Se não estiver, você precisará fornecer o caminho completo para o arquivo `myFunctions.ps1`.
+2. No início do seu script `myScript.ps1`, adicione o seguinte comando para importar as funções do arquivo `myFunctions.ps1`:
+
+```powershell
+. .\myFunctions.ps1
+```
+
+Agora, todas as funções definidas em `myFunctions.ps1` estão disponíveis para uso em `myScript.ps1`.
+
+Por favor, note que há um espaço entre os dois pontos. O primeiro ponto é o operador de `dot sourcing` e o segundo ponto é parte do caminho do arquivo. Se o seu arquivo `myFunctions.ps1` estiver em um diretório diferente, você precisará ajustar o caminho do arquivo de acordo. Por exemplo, se `myFunctions.ps1` estiver em um subdiretório chamado `scripts`, você usaria:
+
+```powershell
+. .\scripts\myFunctions.ps1
+```
+
+Você pode usar a função Invoke-Command para executar a função desejada. Aqui está um exemplo de como você pode fazer isso:
+
+```powershell
+Invoke-Command -ScriptBlock (Get-Command "commandExecution_$ID").ScriptBlock
+```
+
+Substitua `$ID` pala referência da função a qual deseja executar caso esteja dentro de uma estrutura de controle. Caso contrário, se não tiver estrutura de controle, basta substituir o nome da função para a desejada `commandExecution_1`.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
