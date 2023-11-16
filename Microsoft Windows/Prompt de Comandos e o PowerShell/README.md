@@ -1146,7 +1146,7 @@ O código PowerShell para executar um arquivo .ps1 com um argumento seria o segu
 
 ```powershell
 $argumento = $args[0]
-& ".\file2.ps1" $argumento
+& ".\file1.ps1" $argumento
 ```
 
 Neste código, a variável `$argumento` armazena o valor do primeiro argumento passado para o script. Em seguida, o comando `&` é usado para executar o arquivo `.ps1`, passando o valor do argumento como parâmetro. Dentro do outro arquivo `file2.ps1`, você pode exibir o argumento usando a variável `$args[0]`.
