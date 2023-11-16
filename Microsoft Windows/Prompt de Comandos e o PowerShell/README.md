@@ -1158,7 +1158,7 @@ O código em Powershell para executar dois arquivos .ps1 com argumentos seria o 
 **_file1.ps1_**
 ```powershell
 # Executa o primeiro file1.ps1 com os argumentos 1 e 2
-& ".\file1.ps1" 1 2
+& ".\file2.ps1" 1 2
 ```
 
 **_file2.ps1_**
