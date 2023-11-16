@@ -1146,26 +1146,30 @@ O código PowerShell para executar um arquivo .ps1 com um argumento seria o segu
 
 ```powershell
 $argumento = $args[0]
-& ".\QuickWindows.ps1" $argumento
+& ".\file2.ps1" $argumento
 ```
 
-Neste código, a variável `$argumento` armazena o valor do primeiro argumento passado para o script. Em seguida, o comando `&` é usado para executar o arquivo .ps1, passando o valor do argumento como parâmetro. Dentro do arquivo .ps1, você pode exibir o argumento usando a variável `$args[0]`.
+Neste código, a variável `$argumento` armazena o valor do primeiro argumento passado para o script. Em seguida, o comando `&` é usado para executar o arquivo `.ps1`, passando o valor do argumento como parâmetro. Dentro do outro arquivo `file2.ps1`, você pode exibir o argumento usando a variável `$args[0]`.
 
 > **_( i )_** Para passar mais de um argumentos, basta incrementar um após o outro:
 
 O código em Powershell para executar dois arquivos .ps1 com argumentos seria o seguinte:
 
+**_file1.ps1_**
 ```powershell
-# Executa o primeiro arquivo.ps1 com os argumentos 1 e 2
-& ".\QuickWindows.ps1" 1 2
+# Executa o primeiro file1.ps1 com os argumentos 1 e 2
+& ".\file1.ps1" 1 2
+```
 
-# Dentro do arquivo QuickWindows.ps1, você pode acessar os argumentos usando o objeto $args
+**_file2.ps1_**
+```powershell
+# Dentro do arquivo file2.ps1, você pode acessar os argumentos usando o objeto $args
 # Exibe os argumentos passados para o arquivo
 Write-Host "Argumento 1: $($args[0])"
 Write-Host "Argumento 2: $($args[1])"
 ```
 
-Certifique-se de substituir `.\QuickWindows.ps1` pelo caminho correto do primeiro arquivo.ps1 que você deseja executar. Os argumentos passados para o arquivo podem ser acessados usando o objeto `$args`, onde `$args[0]` representa o primeiro argumento e `$args[1]` representa o segundo argumento.
+Certifique-se de substituir `.\file2.ps1` pelo caminho correto do primeiro arquivo.ps1 que você deseja executar. Os argumentos passados para o arquivo podem ser acessados usando o objeto `$args`, onde `$args[0]` representa o primeiro argumento e `$args[1]` representa o segundo argumento.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
