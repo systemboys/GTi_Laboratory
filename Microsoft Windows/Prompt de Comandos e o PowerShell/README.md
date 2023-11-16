@@ -32,6 +32,7 @@
 - [Executar as atualizações do Windows a partir de um script PowerShell](#executar-as-atualiza%C3%A7%C3%B5es-do-windows-a-partir-de-um-script-powershell "Executar as atualizações do Windows a partir de um script PowerShell")
 - [Exportando e importando variáveis em arquivos PowerShell](#exportando-e-importando-vari%C3%A1veis-em-arquivos-powershell "Exportando e importando variáveis em arquivos PowerShell")
 - [Exportação e Importação, Compartilhando Funções entre Scripts PowerShell](#exporta%C3%A7%C3%A3o-e-importa%C3%A7%C3%A3o-compartilhando-fun%C3%A7%C3%B5es-entre-scripts-powershell "Exportação e Importação, Compartilhando Funções entre Scripts PowerShell")
+- [Passando Argumentos em Scripts PowerShell](# "Passando Argumentos em Scripts PowerShell")
 - [Alterar a cor de fundo do PowerShell](#alterar-a-cor-de-fundo-do-powershell "Alterar a cor de fundo do PowerShell")
 - [Ajustando a Janela do PowerShell: Alterando a Largura e a Altura da Janela](#ajustando-a-janela-do-powershell-alterando-a-largura-e-a-altura-da-janela "Ajustando a Janela do PowerShell: Alterando a Largura e a Altura da Janela")
 
@@ -1133,6 +1134,47 @@ Invoke-Command -ScriptBlock (Get-Command "commandExecution_$ID").ScriptBlock
 ```
 
 Substitua `$ID` pala referência da função a qual deseja executar caso esteja dentro de uma estrutura de controle. Caso contrário, se não tiver estrutura de controle, basta substituir o nome da função para a desejada `commandExecution_1`.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Passando Argumentos em Scripts PowerShell
+
+Para executar um arquivo PowerShell (.ps1) com argumentos, você pode usar o seguinte comando:
+
+```powershell
+.\QuickWindows.ps1 -ArgumentName 2
+```
+
+Neste caso, `-ArgumentName` é o nome do parâmetro que você está passando para o script. Você deve substituir `ArgumentName` pelo nome real do parâmetro no seu script.
+
+Se o seu script não usa nomes de parâmetros, você pode simplesmente passar o argumento assim:
+
+```powershell
+.\QuickWindows.ps1 2
+```
+
+Lembre-se de que o operador `.\` é usado  para executar um script no diretório atual. Se o script  “QuickWindows.ps1” estiver em um diretório diferente, você precisará  fornecer o caminho completo ou relativo para o arquivo. Além disso,  certifique-se de que você tem permissões adequadas para executar o  script.
+
+> Posso levar mais de um argumento? Tipo, os números 1 e 2?
+
+Sim, você pode passar mais de um argumento para um script PowerShell. Aqui está um exemplo:
+
+```powershell
+.\SeuScript.ps1 -PrimeiroArgumento 1 -SegundoArgumento 2
+```
+
+Neste caso, `PrimeiroArgumento` e `SegundoArgumento` são os nomes dos parâmetros que você está passando para o script. Você deve substituir `PrimeiroArgumento` e `SegundoArgumento` pelos nomes reais dos parâmetros no seu script.
+
+Se o seu script não usa nomes de parâmetros, você pode simplesmente passar os argumentos assim:
+
+```powershell
+.\SeuScript.ps1 1 2
+```
+
+Neste caso, `1` e `2` são os argumentos que serão passados para o script. Eles serão acessíveis dentro do script através das variáveis automáticas `$args[0]` e `$args[1]`, respectivamente. Lembre-se de que o operador `.\` é usado para executar um script no diretório atual. Se o script  “SeuScript.ps1” estiver em um diretório diferente, você precisará  fornecer o caminho completo ou relativo para o arquivo. Além disso,  certifique-se de que você tem permissões adequadas para executar o  script.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
