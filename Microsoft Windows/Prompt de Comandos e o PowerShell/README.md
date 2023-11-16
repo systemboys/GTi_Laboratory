@@ -1142,39 +1142,21 @@ Substitua `$ID` pala referência da função a qual deseja executar caso esteja 
 
 ## Passando Argumentos em Scripts PowerShell: Entre arquivos (.ps1)
 
-Para executar um arquivo PowerShell (.ps1) com argumentos, você pode usar o seguinte comando:
+O código PowerShell para executar um arquivo .ps1 com um argumento seria o seguinte:
 
 ```powershell
-.\QuickWindows.ps1 -ArgumentName 2
+$argumento = $args[0]
+& ".\QuickWindows.ps1" $argumento
 ```
 
-Neste caso, `-ArgumentName` é o nome do parâmetro que você está passando para o script. Você deve substituir `ArgumentName` pelo nome real do parâmetro no seu script.
+Neste código, a variável `$argumento` armazena o valor do primeiro argumento passado para o script. Em seguida, o comando `&` é usado para executar o arquivo .ps1, passando o valor do argumento como parâmetro. Dentro do arquivo .ps1, você pode exibir o argumento usando a variável `$args[0]`.
 
-Se o seu script não usa nomes de parâmetros, você pode simplesmente passar o argumento assim:
-
-```powershell
-.\QuickWindows.ps1 2
-```
-
-Lembre-se de que o operador `.\` é usado  para executar um script no diretório atual. Se o script  “QuickWindows.ps1” estiver em um diretório diferente, você precisará  fornecer o caminho completo ou relativo para o arquivo. Além disso,  certifique-se de que você tem permissões adequadas para executar o  script.
-
-> Posso levar mais de um argumento? Tipo, os números 1 e 2?
-
-Sim, você pode passar mais de um argumento para um script PowerShell. Aqui está um exemplo:
-
-```powershell
-.\SeuScript.ps1 -PrimeiroArgumento 1 -SegundoArgumento 2
-```
-
-Neste caso, `PrimeiroArgumento` e `SegundoArgumento` são os nomes dos parâmetros que você está passando para o script. Você deve substituir `PrimeiroArgumento` e `SegundoArgumento` pelos nomes reais dos parâmetros no seu script.
-
-Se o seu script não usa nomes de parâmetros, você pode simplesmente passar os argumentos assim:
-
-```powershell
-.\SeuScript.ps1 1 2
-```
-
-Neste caso, `1` e `2` são os argumentos que serão passados para o script. Eles serão acessíveis dentro do script através das variáveis automáticas `$args[0]` e `$args[1]`, respectivamente. Lembre-se de que o operador `.\` é usado para executar um script no diretório atual. Se o script  “SeuScript.ps1” estiver em um diretório diferente, você precisará  fornecer o caminho completo ou relativo para o arquivo. Além disso,  certifique-se de que você tem permissões adequadas para executar o  script.
+> **_( i )_** Para passar mais de um argumentos, basta incrementar um após o outro:
+> ```powershell
+> $argumento1 = $args[0]
+> $argumento2 = $args[1]
+> & ".\QuickWindows.ps1" $argumento1 $argumento2
+> ```
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
