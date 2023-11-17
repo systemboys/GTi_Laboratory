@@ -614,6 +614,45 @@ if (Test-Path $filePath) {
 
 ---
 
+## Verificando versão do sistema operacional
+
+Estrutura de controle que verifica qual é a versão do Windows:
+
+```powershell
+# Verifica a versão do sistema operacional
+$osVersion = (Get-WmiObject -Class Win32_OperatingSystem).Version
+
+# Verifica versões do sistema operacional
+if ($osVersion -eq "10.0.19041") {
+    Write-Host "Windows 10 version 2004"
+} elseif ($osVersion -eq "10.0.18363") {
+    Write-Host "Windows 10 version 1909"
+} elseif ($osVersion -eq "10.0.17763") {
+    Write-Host "Windows 10 version 1809"
+} else {
+    Write-Host "Unknown Windows version"
+}
+```
+
+Estrutura de controle que verifica se o sistema operacional é Windows 10 ou 11.
+
+```powershell
+# Verifica a versão do sistema operacional
+$osVersion = (Get-WmiObject -Class Win32_OperatingSystem).Version
+
+# Verifica se o sistema operacional é Windows 10 ou 11
+if ($osVersion -like "10.*" -or $osVersion -like "11.*") {
+    Write-Host "O sistema operacional é Windows 10 ou 11."
+} else {
+    Write-Host "O sistema operacional não é Windows 10 ou 11."
+}
+```
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
 ## Script de Instalação Silenciosa de Software (verificação por chave de registro)
 
 > **_( ! )_** No exemplo, o software testado é o ***Google Earth Pro***!
