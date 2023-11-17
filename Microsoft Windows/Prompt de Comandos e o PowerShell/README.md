@@ -35,6 +35,7 @@
 - [Passando Argumentos em Scripts PowerShell: Entre arquivos (.ps1)](#passando-argumentos-em-scripts-powershell-entre-arquivos-ps1 "Passando Argumentos em Scripts PowerShell: Entre arquivos (.ps1)")
 - [Alterar a cor de fundo do PowerShell](#alterar-a-cor-de-fundo-do-powershell "Alterar a cor de fundo do PowerShell")
 - [Ajustando a Janela do PowerShell: Alterando a Largura e a Altura da Janela](#ajustando-a-janela-do-powershell-alterando-a-largura-e-a-altura-da-janela "Ajustando a Janela do PowerShell: Alterando a Largura e a Altura da Janela")
+- [Função de Correção de Codificação para Exibição de Texto no PowerShell (UTF8)](# "Função de Correção de Codificação para Exibição de Texto no PowerShell (UTF8)")
 
 ---
 
@@ -1240,6 +1241,31 @@ $host.UI.RawUI.WindowSize = $size
 Neste exemplo, a largura da janela é definida como 120 e a altura como 30. Você pode alterar esses valores de acordo com suas necessidades. Este script deve ser executado no início do seu arquivo .ps1 para definir o tamanho da janela antes de executar o restante do script.
 
 Por favor, note que este script só funcionará quando executado diretamente no Windows PowerShell. Se você estiver executando o script através de um atalho ou de outra interface de linha de comando, o tamanho da janela pode não ser alterado. Além disso, o Windows pode ter limitações sobre o quão grande a janela do PowerShell pode ser, dependendo da configuração do seu sistema.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Função de Correção de Codificação para Exibição de Texto no PowerShell (UTF8)
+
+Você pode criar uma função para lidar com essa correção de codificação e exibição da string. Aqui está um exemplo de como você pode fazer isso:
+
+```powershell
+function ShowEncodedString($text) {
+    $encodedText = [System.Text.Encoding]::UTF8.GetString([System.Text.Encoding]::Default.GetBytes($text))
+    return $encodedText
+}
+
+$footer = " (C) $currentYear GLOBAL TEC Informática"
+
+# Exibindo o texto corrigido
+Write-Host (ShowEncodedString $footer)
+```
+
+Neste exemplo, a função `ShowEncodedString` recebe uma string como argumento, corrige a codificação e retorna o texto corrigido. Depois, ao chamar `Write-Host`, utiliza-se a função `ShowEncodedString` para exibir a string corrigida.
+
+Você pode ajustar a função `ShowEncodedString` conforme necessário para incluir outras correções ou manipulações na string antes de exibi-la.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
