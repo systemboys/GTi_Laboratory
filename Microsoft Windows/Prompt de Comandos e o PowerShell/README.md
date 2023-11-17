@@ -35,7 +35,7 @@
 - [Passando Argumentos em Scripts PowerShell: Entre arquivos (.ps1)](#passando-argumentos-em-scripts-powershell-entre-arquivos-ps1 "Passando Argumentos em Scripts PowerShell: Entre arquivos (.ps1)")
 - [Alterar a cor de fundo do PowerShell](#alterar-a-cor-de-fundo-do-powershell "Alterar a cor de fundo do PowerShell")
 - [Ajustando a Janela do PowerShell: Alterando a Largura e a Altura da Janela](#ajustando-a-janela-do-powershell-alterando-a-largura-e-a-altura-da-janela "Ajustando a Janela do PowerShell: Alterando a Largura e a Altura da Janela")
-- [Função de Correção de Codificação para Exibição de Texto no PowerShell (UTF8)](# "Função de Correção de Codificação para Exibição de Texto no PowerShell (UTF8)")
+- [Função de Correção de Codificação para Exibição de Texto no PowerShell (UTF8)](#fun%C3%A7%C3%A3o-de-corre%C3%A7%C3%A3o-de-codifica%C3%A7%C3%A3o-para-exibi%C3%A7%C3%A3o-de-texto-no-powershell-utf8 "Função de Correção de Codificação para Exibição de Texto no PowerShell (UTF8)")
 
 ---
 
