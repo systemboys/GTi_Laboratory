@@ -1079,27 +1079,24 @@ Este script usa o cmdlet `Get-WindowsUpdate` para verificar e instalar todas as 
 
 ## Exportando e importando variáveis em arquivos PowerShell
 
-Você pode exportar várias variáveis de um arquivo PowerShell e importá-las em outro arquivo. Você pode usar o cmdlet `Export-ModuleMember` para exportar as variáveis do arquivo1.ps1 e, em seguida, usar o cmdlet `Import-Module` para importá-las no arquivo2.ps1. Aqui está um exemplo de como fazer isso:
-
-1. No arquivo1.ps1, defina as variáveis que você deseja exportar:
+Você pode usar o comando `dot source` no PowerShell para importar as variáveis do arquivo `file2.ps1` para o arquivo `file1.ps1`. Aqui está um exemplo de como você pode fazer isso:
 
 ```powershell
-$variable_a = "text1"
-$variable_b = "text2"
-$variable_c = "text3"
-Export-ModuleMember -Variable variable_a, variable_b, variable_c
+# Conteúdo do file2.ps1
+$variable1 = "valor1"
+$variable2 = "valor2"
+$variable3 = "valor3"
+
+# Conteúdo do file1.ps1
+. ./file2.ps1  # Importa as variáveis do file2.ps1
+
+# Agora você pode usar as variáveis no file1.ps1
+Write-Host $variable1
+Write-Host $variable2
+Write-Host $variable3
 ```
 
-1. No arquivo2.ps1, importe as variáveis e exiba seus valores:
-
-```powershell
-Import-Module .\arquivo1.ps1
-Write-Host $variable_a
-Write-Host $variable_b
-Write-Host $variable_c
-```
-
-Isso deve imprimir o valor das variáveis no console.
+No exemplo acima, o comando `. ./file2.ps1` no arquivo `file1.ps1` importa as variáveis do arquivo `file2.ps1`. Agora, você pode usar as variáveis `variable1`, `variable2` e `variable3` no arquivo `file1.ps1` como se elas fossem definidas lá. Lembre-se de que o caminho para `file2.ps1` deve ser o caminho correto do arquivo em seu sistema.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
