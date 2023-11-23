@@ -670,13 +670,13 @@ function New-Menu {
         [System.Console]::WriteLine($header)
         # Show all entries
         for ($i = 0; $i -lt $menuItems.Count; $i++) {
-            [System.Console]::Write("$leftSideEdge ► [$i] ")                    # Add identity number to each entry, it's not highlighted for selection but it's in the same line
+            [System.Console]::Write("$leftSideEdge > [$i] ")                     # Add identity number to each entry, it's not highlighted for selection but it's in the same line
             if ($selectIndex -eq $i) {
-                Reverse-Colors                                      # In case this is the selected entry, reverse color just for it to make the selection visible
-                [System.Console]::WriteLine($menuItems[$i] + "◄ $rightSideEdge")
+                Reverse-Colors                                                   # In case this is the selected entry, reverse color just for it to make the selection visible
+                [System.Console]::WriteLine($menuItems[$i] + "< $rightSideEdge")
                 Reverse-Colors      
             } else {
-                [System.Console]::WriteLine($menuItems[$i] + "◄ $rightSideEdge") # In case this is not-selected entry, just show it
+                [System.Console]::WriteLine($menuItems[$i] + "< $rightSideEdge") # In case this is not-selected entry, just show it
             }
         }
         [System.Console]::WriteLine($footer)
@@ -703,7 +703,7 @@ function New-Menu {
         
         # Hanlde arrows
         if ([System.Int16]$inputChar.Key -eq [System.ConsoleKey]::DownArrow){
-            if ($selectIndex -lt $menuItems.Count -1) {                                       # Avoid selection out of range
+            if ($selectIndex -lt $menuItems.Count -1) {                                      # Avoid selection out of range
                 $selectIndex++
             }
         } elseif ([System.Int16]$inputChar.Key -eq [System.ConsoleKey]::UpArrow){
@@ -714,14 +714,14 @@ function New-Menu {
             # Handle double-digit numbers
             $timestamp = Get-Date       
             while (![System.Console]::KeyAvailable -and ((get-date) - $timestamp).TotalMilliseconds -lt 500){
-                Start-Sleep -Milliseconds 250                                               # Give the user 500 miliseconds to type in the 2nd digit, check after 250 to improve responsivness
+                Start-Sleep -Milliseconds 250                                                # Give the user 500 miliseconds to type in the 2nd digit, check after 250 to improve responsivness
             }
             if ([System.Console]::KeyAvailable) {                                            # If user typed a key, read it in next line
                 $secondChar = [System.Console]::ReadKey($true).KeyChar
-                $fullChar   = "$($inputChar.KeyChar)$($secondChar)"                         # Join both keys
+                $fullChar   = "$($inputChar.KeyChar)$($secondChar)"                          # Join both keys
                 try {
                     # Set selection
-                    $number = [System.Int32]::Parse($fullChar)                              # Set the selection accordingly or raise flag for invalid key
+                    $number = [System.Int32]::Parse($fullChar)                               # Set the selection accordingly or raise flag for invalid key
                     if ($number -ge 0 -and $number -lt $menuItems.Count) {
                         $selectIndex   = $number
                     } else {
