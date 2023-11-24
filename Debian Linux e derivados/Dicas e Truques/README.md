@@ -10,6 +10,7 @@
 - [Como Limpar o Histórico de Comandos no Terminal Linux](#como-limpar-o-hist%C3%B3rico-de-comandos-no-terminal-linux "Como Limpar o Histórico de Comandos no Terminal Linux")
 - [Como Desligar ou Reiniciar o Linux via Terminal: Comandos Úteis](#como-desligar-ou-reiniciar-o-linux-via-terminal-comandos-%C3%BAteis "Como Desligar ou Reiniciar o Linux via Terminal: Comandos Úteis")
 - [Entendendo a Mensagem 'Do you want to continue? [Y/n]' em Instalações de Pacotes no Linux](#entendendo-a-mensagem-do-you-want-to-continue-yn-em-instala%C3%A7%C3%B5es-de-pacotes-no-linux "Entendendo a Mensagem 'Do you want to continue? [Y/n]' em Instalações de Pacotes no Linux")
+- [Criando alias para executar comandos no Linux como super usuário](# "Criando alias para executar comandos no Linux como super usuário")
 
 ---
 
@@ -177,6 +178,33 @@ A mensagem "Do you want to continue? [Y/n]" é uma solicitação de confirmaçã
 Essa abordagem de ter a opção padrão como "Sim" (Y) é uma convenção para tornar o processo mais eficiente, especialmente quando os usuários geralmente querem prosseguir com a instalação. No entanto, a inclusão da opção "n" permite que os usuários cancelem a ação facilmente, caso desejem.
 
 Em resumo, essa mensagem visa tornar as operações no terminal mais seguras e eficientes, permitindo que os usuários confirmem ou cancelem a ação de forma rápida e simples.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Criando alias para executar comandos no Linux como super usuário
+
+Para criar um alias para executar um comando no Linux como super usuário, você pode adicionar a seguinte linha ao seu arquivo de perfil (por exemplo, ~/.bashrc ou ~/.bash_profile):
+
+```bash
+alias comando='sudo comando'
+```
+
+Substitua "comando" pelo comando que você deseja executar como super usuário. Por exemplo, se você quiser criar um alias para o comando "apt-get update", o código seria:
+
+```bash
+alias update='sudo apt-get update'
+```
+
+Depois de adicionar essa linha ao seu arquivo de perfil, salve-o e feche-o. Em seguida, execute o seguinte comando para recarregar o arquivo de perfil:
+
+```bash
+source ~/.bashrc
+```
+
+Agora você pode executar o comando usando o alias que você criou. Por exemplo, para executar o comando "apt-get update" como super usuário, você pode simplesmente digitar "update" no terminal.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
