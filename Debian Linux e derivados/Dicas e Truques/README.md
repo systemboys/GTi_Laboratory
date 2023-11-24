@@ -206,6 +206,10 @@ source ~/.bashrc
 
 Agora você pode executar o comando usando o alias que você criou. Por exemplo, para executar o comando "apt-get update" como super usuário, você pode simplesmente digitar "update" no terminal.
 
+> ( i ) A diferença entre `~/.bashrc` e `~/.bash_profile`.
+
+A diferença entre os arquivos `~/.bashrc` e `~/.bash_profile` é que o `~/.bashrc` é executado toda vez que um novo shell é aberto, enquanto o `~/.bash_profile` é executado apenas no login do usuário.
+
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
