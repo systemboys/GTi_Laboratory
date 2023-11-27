@@ -27,6 +27,7 @@
 - [Execução Interativa de Comandos no PowerShell: Como Permitir que os Usuários Execute Comandos Personalizados](#execu%C3%A7%C3%A3o-interativa-de-comandos-no-powershell-como-permitir-que-os-usu%C3%A1rios-execute-comandos-personalizados "Execução Interativa de Comandos no PowerShell: Como Permitir que os Usuários Execute Comandos Personalizados")
 - [Executando Comandos Remotos com PowerShell: Desvendando IRM e IEX](#executando-comandos-remotos-com-powershell-desvendando-irm-e-iex "Executando Comandos Remotos com PowerShell: Desvendando IRM e IEX")
 - [Execução Remota de Script PowerShell via Domínio](#execu%C3%A7%C3%A3o-remota-de-script-powershell-via-dom%C3%ADnio "Execução Remota de Script PowerShell via Domínio")
+- [Entendendo o IRM e o Comando IEX: Proteção de Informações e Execução de Scripts](# "Entendendo o IRM e o Comando IEX: Proteção de Informações e Execução de Scripts")
 - [Como Abrir Links no Navegador Padrão via PowerShell](#como-abrir-links-no-navegador-padr%C3%A3o-via-powershell "Como Abrir Links no Navegador Padrão via PowerShell")
 - [Guia Rápido do PowerShell: Obtendo Diretórios-Chave através de Variáveis de Ambiente no Windows](#guia-r%C3%A1pido-do-powershell-obtendo-diret%C3%B3rios-chave-atrav%C3%A9s-de-vari%C3%A1veis-de-ambiente-no-windows "Guia Rápido do PowerShell: Obtendo Diretórios-Chave através de Variáveis de Ambiente no Windows")
 - [Script PowerShell: Obtendo Caminhos dos Principais Diretórios do Perfil do Usuário no Windows](#script-powershell-obtendo-caminhos-dos-principais-diret%C3%B3rios-do-perfil-do-usu%C3%A1rio-no-windows "Script PowerShell: Obtendo Caminhos dos Principais Diretórios do Perfil do Usuário no Windows")
@@ -1218,6 +1219,19 @@ https://domain.com/
 ```powershell
 irm https://domain.com/dir/file.ps1 | iex
 ```
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Entendendo o IRM e o Comando IEX: Proteção de Informações e Execução de Scripts
+
+O IRM (Information Rights Management) é uma tecnologia que permite especificar permissões de acesso a mensagens de email. O IRM usa o Active Directory Rights Management Services (AD RMS), que é um componente do Windows Server 2008 e posteriores. O AD RMS permite que os usuários criem um conteúdo protegido por direitos, como mensagens de email e anexos, além de controlar como o conteúdo é usado e para quem ele é distribuído.
+
+O IRM no Exchange depende do AD RMS que estiver sendo implantado na floresta do Active Directory na qual o servidor do Exchange reside. A configuração do AD RMS não é sincronizada automaticamente entre as organizações do Exchange Online e local.
+
+Por outro lado, iex é um comando do PowerShell que é a abreviação de Invoke-Expression. Ele é usado para executar um script. Quando combinado com irm, que é a abreviação de Invoke-RestMethod e é usado para baixar um script de um site, iex (irm [url]) é uma maneira de baixar e executar um conjunto de comandos de um site. Isso é uma operação bastante poderosa e pode ser suficiente para assumir o controle de sua máquina se o script for malicioso. Portanto, é seguro se e somente se o operador desse site for confiável.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
