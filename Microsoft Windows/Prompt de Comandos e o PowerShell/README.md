@@ -495,6 +495,35 @@ Lembre-se de que essas variáveis de ambiente podem variar de acordo com a vers�
 
 ---
 
+## Passagem de Argumentos entre Arquivos: PowerShell e Batch (CMD)
+
+Em arquivos batch (.cmd ou .bat), passar argumentos entre eles é semelhante, mas usa uma sintaxe um pouco diferente do PowerShell. Aqui está um exemplo simples de como passar argumentos entre dois arquivos batch:
+
+Suponha que você tenha `file1.cmd` e `file2.cmd`.
+
+No `file1.cmd`, você pode chamar o `file2.cmd` e passar argumentos da seguinte maneira:
+
+```batch
+REM Chama file2.cmd e passa dois argumentos: "argumento1" e "argumento2"
+file2.cmd argumento1 argumento2
+```
+
+No `file2.cmd`, você pode acessar esses argumentos usando `%1`, `%2`, etc., que representam o primeiro e o segundo argumentos passados, respectivamente:
+
+```batch
+@echo off
+REM Exibe os argumentos passados para o arquivo file2.cmd
+echo Argumento 1: %1
+echo Argumento 2: %2
+```
+
+Assim como no PowerShell, você pode acessar os argumentos usando `%1` para o primeiro, `%2` para o segundo e assim por diante. Certifique-se de ajustar os comandos de acordo com o que você precisa realizar nos seus arquivos batch.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
 ## Ativar a execução de scripts no PowerShell
 
 Para ativar a execução de scripts no sistema, você precisa alterar a política de execução de scripts do PowerShell. A mensagem de erro que você recebeu sugere que a execução de scripts foi desabilitada no sistema. Para habilitá-la, siga as etapas abaixo:
