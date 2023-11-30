@@ -1634,16 +1634,16 @@ $form.StartPosition = "CenterScreen"
 $label = New-Object System.Windows.Forms.Label
 $label.Text = "Digite o endereço:"
 $label.AutoSize = $true
-$label.Location = New-Object System.Drawing.Point(50,20)
+$label.Location = New-Object System.Drawing.Point(10,10)
 $form.Controls.Add($label)
 
 $textBox = New-Object System.Windows.Forms.TextBox
-$textBox.Location = New-Object System.Drawing.Point(50,50)
-$textBox.Size = New-Object System.Drawing.Size(200,20)
+$textBox.Location = New-Object System.Drawing.Point(10,30)
+$textBox.Size = New-Object System.Drawing.Size(265,20)
 $form.Controls.Add($textBox)
 
 $button = New-Object System.Windows.Forms.Button
-$button.Location = New-Object System.Drawing.Point(100,90)
+$button.Location = New-Object System.Drawing.Point(100,70)
 $button.Size = New-Object System.Drawing.Size(100,30)
 $button.Text = "Enviar"
 $button.Add_Click({
