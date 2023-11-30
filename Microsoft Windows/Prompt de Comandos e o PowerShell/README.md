@@ -1223,7 +1223,7 @@ Add-Type -AssemblyName System.Windows.Forms
 $form = New-Object System.Windows.Forms.Form
 $form.Text = "Executar Comando"
 $form.Width = 310
-$form.Height = 150
+$form.Height = 130
 $form.StartPosition = "CenterScreen"
 
 # Cria um Label com a mensagem informativa
@@ -1248,7 +1248,7 @@ $form.Controls.Add($textBox)
 
 # Cria um botão "Enviar"
 $button = New-Object System.Windows.Forms.Button
-$button.Location = New-Object System.Drawing.Point(100,70)
+$button.Location = New-Object System.Drawing.Point(100,60)
 $button.Size = New-Object System.Drawing.Size(100,23)
 $button.Text = "Enviar"
 $button.Add_Click({
