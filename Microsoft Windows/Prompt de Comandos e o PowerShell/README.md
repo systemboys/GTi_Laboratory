@@ -35,6 +35,7 @@
 - [Script PowerShell: Obtendo Caminhos dos Principais Diretórios do Perfil do Usuário no Windows](#script-powershell-obtendo-caminhos-dos-principais-diret%C3%B3rios-do-perfil-do-usu%C3%A1rio-no-windows "Script PowerShell: Obtendo Caminhos dos Principais Diretórios do Perfil do Usuário no Windows")
 - [Script PowerShell: Abrir File Explorer e Selecionar Arquivo em um Diretório Específico](#script-powershell-abrir-file-explorer-e-selecionar-arquivo-em-um-diret%C3%B3rio-espec%C3%ADfico "Script PowerShell: Abrir File Explorer e Selecionar Arquivo em um Diretório Específico")
 - [Abrir Gerenciador de Arquivos do Windows em pastas de ambiente](#abrir-gerenciador-de-arquivos-do-windows-em-pastas-de-ambiente "Abrir Gerenciador de Arquivos do Windows em pastas de ambiente")
+- [Script PowerShell: Abrir Gerenciador de Arquivos com Endereço Específico](# "Script PowerShell: Abrir Gerenciador de Arquivos com Endereço Específico")
 - [Executar as atualizações do Windows a partir de um script PowerShell](#executar-as-atualiza%C3%A7%C3%B5es-do-windows-a-partir-de-um-script-powershell "Executar as atualizações do Windows a partir de um script PowerShell")
 - [Exportando e importando variáveis em arquivos PowerShell](#exportando-e-importando-vari%C3%A1veis-em-arquivos-powershell "Exportando e importando variáveis em arquivos PowerShell")
 - [Exportação e Importação, Compartilhando Funções entre Scripts PowerShell](#exporta%C3%A7%C3%A3o-e-importa%C3%A7%C3%A3o-compartilhando-fun%C3%A7%C3%B5es-entre-scripts-powershell "Exportação e Importação, Compartilhando Funções entre Scripts PowerShell")
@@ -1665,6 +1666,57 @@ Write-Host $variable3
 ```
 
 No exemplo acima, o comando `. ./file2.ps1` no arquivo `file1.ps1` importa as variáveis do arquivo `file2.ps1`. Agora, você pode usar as variáveis `variable1`, `variable2` e `variable3` no arquivo `file1.ps1` como se elas fossem definidas lá. Lembre-se de que o caminho para `file2.ps1` deve ser o caminho correto do arquivo em seu sistema.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Script PowerShell: Abrir Gerenciador de Arquivos com Endereço Específico
+
+Script para abrir a Área de Trabalho (Desktop) e depois o Gerenciador de Arquivos no endereço fornecido.
+
+```powershell
+Add-Type -AssemblyName System.Windows.Forms
+
+# Cria uma caixa de diálogo para inserir o endereço
+$form = New-Object System.Windows.Forms.Form
+$form.Text = "Informe o endereço"
+$form.Size = New-Object System.Drawing.Size(300,150)
+$form.StartPosition = "CenterScreen"
+
+$label = New-Object System.Windows.Forms.Label
+$label.Text = "Digite o endereço:"
+$label.AutoSize = $true
+$label.Location = New-Object System.Drawing.Point(50,20)
+$form.Controls.Add($label)
+
+$textBox = New-Object System.Windows.Forms.TextBox
+$textBox.Location = New-Object System.Drawing.Point(50,50)
+$textBox.Size = New-Object System.Drawing.Size(200,20)
+$form.Controls.Add($textBox)
+
+$button = New-Object System.Windows.Forms.Button
+$button.Location = New-Object System.Drawing.Point(100,90)
+$button.Size = New-Object System.Drawing.Size(100,30)
+$button.Text = "Enviar"
+$button.Add_Click({
+    $address = $textBox.Text
+    if ([string]::IsNullOrEmpty($address)) {
+        [System.Windows.Forms.MessageBox]::Show("Por favor, informe um endereço!", "Erro", "OK", "Error")
+    } else {
+        # Abrir o Gerenciador de Arquivos com o endereço fornecido
+        Start-Process "explorer.exe" ([Environment]::GetFolderPath("Desktop"))
+        Start-Process "explorer.exe" $address
+        $form.Close()
+    }
+})
+$form.Controls.Add($button)
+
+$form.ShowDialog()
+```
+
+Este script abrirá apenas uma instância do Gerenciador de Arquivos na Área de Trabalho (Desktop) e outra no endereço que você fornecer, evitando a abertura duplicada da Área de Trabalho.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
