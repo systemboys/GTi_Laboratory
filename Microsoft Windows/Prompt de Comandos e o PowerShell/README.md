@@ -1222,7 +1222,7 @@ Add-Type -AssemblyName System.Windows.Forms
 # Cria uma janela de formulário
 $form = New-Object System.Windows.Forms.Form
 $form.Text = "Executar Comando"
-$form.Width = 300
+$form.Width = 310
 $form.Height = 150
 $form.StartPosition = "CenterScreen"
 
