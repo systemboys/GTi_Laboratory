@@ -1228,15 +1228,15 @@ $form.StartPosition = "CenterScreen"
 
 # Cria um Label com a mensagem informativa
 $label = New-Object System.Windows.Forms.Label
-$label.Location = New-Object System.Drawing.Point(50,10)
-$label.Size = New-Object System.Drawing.Size(250,20)
+$label.Location = New-Object System.Drawing.Point(10,10)
+$label.Size = New-Object System.Drawing.Size(275,20)
 $label.Text = "Digite o comando:"
 $form.Controls.Add($label)
 
 # Cria um campo de texto para o comando
 $textBox = New-Object System.Windows.Forms.TextBox
-$textBox.Location = New-Object System.Drawing.Point(50,30)
-$textBox.Size = New-Object System.Drawing.Size(200,20)
+$textBox.Location = New-Object System.Drawing.Point(10,30)
+$textBox.Size = New-Object System.Drawing.Size(275,20)
 $textBox.Text = "Digite o comando aqui..."
 $textBox.Add_Enter({
     # Limpa o texto inicial quando o usuário clicar no campo
