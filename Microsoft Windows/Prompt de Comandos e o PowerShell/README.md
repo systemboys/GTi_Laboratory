@@ -1618,6 +1618,57 @@ Este script abrirá duas janelas separadas, uma para a Área de Trabalho e outra
 
 ---
 
+## Script PowerShell: Abrir Gerenciador de Arquivos com Endereço Específico
+
+Script para abrir a Área de Trabalho (Desktop) e depois o Gerenciador de Arquivos no endereço fornecido.
+
+```powershell
+Add-Type -AssemblyName System.Windows.Forms
+
+# Cria uma caixa de diálogo para inserir o endereço
+$form = New-Object System.Windows.Forms.Form
+$form.Text = "Informe o endereço"
+$form.Size = New-Object System.Drawing.Size(300,150)
+$form.StartPosition = "CenterScreen"
+
+$label = New-Object System.Windows.Forms.Label
+$label.Text = "Digite o endereço:"
+$label.AutoSize = $true
+$label.Location = New-Object System.Drawing.Point(50,20)
+$form.Controls.Add($label)
+
+$textBox = New-Object System.Windows.Forms.TextBox
+$textBox.Location = New-Object System.Drawing.Point(50,50)
+$textBox.Size = New-Object System.Drawing.Size(200,20)
+$form.Controls.Add($textBox)
+
+$button = New-Object System.Windows.Forms.Button
+$button.Location = New-Object System.Drawing.Point(100,90)
+$button.Size = New-Object System.Drawing.Size(100,30)
+$button.Text = "Enviar"
+$button.Add_Click({
+    $address = $textBox.Text
+    if ([string]::IsNullOrEmpty($address)) {
+        [System.Windows.Forms.MessageBox]::Show("Por favor, informe um endereço!", "Erro", "OK", "Error")
+    } else {
+        # Abrir o Gerenciador de Arquivos com o endereço fornecido
+        Start-Process "explorer.exe" ([Environment]::GetFolderPath("Desktop"))
+        Start-Process "explorer.exe" $address
+        $form.Close()
+    }
+})
+$form.Controls.Add($button)
+
+$form.ShowDialog()
+```
+
+Este script abrirá apenas uma instância do Gerenciador de Arquivos na Área de Trabalho (Desktop) e outra no endereço que você fornecer, evitando a abertura duplicada da Área de Trabalho.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
 ## Executar as atualizações do Windows a partir de um script PowerShell
 
 Sim, é possível executar as atualizações do Windows a partir de um script PowerShell. Você pode usar o cmdlet `Get-WindowsUpdate` para verificar e instalar atualizações do Windows. Para executar o  script como administrador sem precisar digitar a senha, você pode criar  um atalho para o script no desktop, clicar com o botão direito do mouse  no atalho e selecionar “Propriedades”. Em seguida, clique em “Avançado” e marque a caixa “Executar como administrador”.
@@ -1666,57 +1717,6 @@ Write-Host $variable3
 ```
 
 No exemplo acima, o comando `. ./file2.ps1` no arquivo `file1.ps1` importa as variáveis do arquivo `file2.ps1`. Agora, você pode usar as variáveis `variable1`, `variable2` e `variable3` no arquivo `file1.ps1` como se elas fossem definidas lá. Lembre-se de que o caminho para `file2.ps1` deve ser o caminho correto do arquivo em seu sistema.
-
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
-
----
-
-## Script PowerShell: Abrir Gerenciador de Arquivos com Endereço Específico
-
-Script para abrir a Área de Trabalho (Desktop) e depois o Gerenciador de Arquivos no endereço fornecido.
-
-```powershell
-Add-Type -AssemblyName System.Windows.Forms
-
-# Cria uma caixa de diálogo para inserir o endereço
-$form = New-Object System.Windows.Forms.Form
-$form.Text = "Informe o endereço"
-$form.Size = New-Object System.Drawing.Size(300,150)
-$form.StartPosition = "CenterScreen"
-
-$label = New-Object System.Windows.Forms.Label
-$label.Text = "Digite o endereço:"
-$label.AutoSize = $true
-$label.Location = New-Object System.Drawing.Point(50,20)
-$form.Controls.Add($label)
-
-$textBox = New-Object System.Windows.Forms.TextBox
-$textBox.Location = New-Object System.Drawing.Point(50,50)
-$textBox.Size = New-Object System.Drawing.Size(200,20)
-$form.Controls.Add($textBox)
-
-$button = New-Object System.Windows.Forms.Button
-$button.Location = New-Object System.Drawing.Point(100,90)
-$button.Size = New-Object System.Drawing.Size(100,30)
-$button.Text = "Enviar"
-$button.Add_Click({
-    $address = $textBox.Text
-    if ([string]::IsNullOrEmpty($address)) {
-        [System.Windows.Forms.MessageBox]::Show("Por favor, informe um endereço!", "Erro", "OK", "Error")
-    } else {
-        # Abrir o Gerenciador de Arquivos com o endereço fornecido
-        Start-Process "explorer.exe" ([Environment]::GetFolderPath("Desktop"))
-        Start-Process "explorer.exe" $address
-        $form.Close()
-    }
-})
-$form.Controls.Add($button)
-
-$form.ShowDialog()
-```
-
-Este script abrirá apenas uma instância do Gerenciador de Arquivos na Área de Trabalho (Desktop) e outra no endereço que você fornecer, evitando a abertura duplicada da Área de Trabalho.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
