@@ -26,6 +26,7 @@
 - [Script de Instalação Silenciosa de Software (verificação por chave de registro)](#script-de-instala%C3%A7%C3%A3o-silenciosa-de-software-verifica%C3%A7%C3%A3o-por-chave-de-registro "Script de Instalação Silenciosa de Software (verificação por chave de registro)")
 - [Arquivo (.ps1) para instalação de pacotes](#arquivo-ps1-para-instala%C3%A7%C3%A3o-de-pacotes "Arquivo (.ps1) para instalação de pacotes")
 - [Execução Interativa de Comandos no PowerShell: Como Permitir que os Usuários Execute Comandos Personalizados](#execu%C3%A7%C3%A3o-interativa-de-comandos-no-powershell-como-permitir-que-os-usu%C3%A1rios-execute-comandos-personalizados "Execução Interativa de Comandos no PowerShell: Como Permitir que os Usuários Execute Comandos Personalizados")
+- [Script de Interação: Janela de Comando Interativa para Execução de Comandos](# "Script de Interação: Janela de Comando Interativa para Execução de Comandos")
 - [Executando Comandos Remotos com PowerShell: Desvendando IRM e IEX](#executando-comandos-remotos-com-powershell-desvendando-irm-e-iex "Executando Comandos Remotos com PowerShell: Desvendando IRM e IEX")
 - [Execução Remota de Script PowerShell via Domínio](#execu%C3%A7%C3%A3o-remota-de-script-powershell-via-dom%C3%ADnio "Execução Remota de Script PowerShell via Domínio")
 - [Entendendo o IRM e o Comando IEX: Proteção de Informações e Execução de Scripts](#entendendo-o-irm-e-o-comando-iex-prote%C3%A7%C3%A3o-de-informa%C3%A7%C3%B5es-e-execu%C3%A7%C3%A3o-de-scripts "Entendendo o IRM e o Comando IEX: Proteção de Informações e Execução de Scripts")
@@ -1137,6 +1138,53 @@ $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
 ```
 
 Primeiro, ele solicita ao usuário que digite um comando por meio do cmdlet `Read-Host`, armazenando a entrada na variável `$command`. Em seguida, o comando digitado é executado usando o `Invoke-Expression $command`. Após a execução do comando, o script exibe a mensagem "Pressione qualquer tecla para continuar..." e aguarda até que o usuário pressione uma tecla antes de continuar.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Script de Interação: Janela de Comando Interativa para Execução de Comandos
+
+Para criar um script `.cmd` que abre uma pop-up para digitar um comando e executá-lo no PowerShell, você precisará de um script em batch para interagir com um programa .NET Framework que permita a criação da interface. Infelizmente, não é possível fazer isso diretamente em um arquivo `.cmd`, pois ele é limitado em termos de interface gráfica.
+
+Você pode usar o PowerShell para criar uma janela pop-up com um campo de formulário e um botão "Enviar" e então executar o comando digitado nesse campo. Segue um exemplo em PowerShell:
+
+```powershell
+Add-Type -AssemblyName System.Windows.Forms
+
+# Cria uma janela de formulário
+$form = New-Object System.Windows.Forms.Form
+$form.Text = "Executar Comando"
+$form.Width = 300
+$form.Height = 150
+$form.StartPosition = "CenterScreen"
+
+# Cria um campo de texto para o comando
+$textBox = New-Object System.Windows.Forms.TextBox
+$textBox.Location = New-Object System.Drawing.Point(50,30)
+$textBox.Size = New-Object System.Drawing.Size(200,20)
+$form.Controls.Add($textBox)
+
+# Cria um botão "Enviar"
+$button = New-Object System.Windows.Forms.Button
+$button.Location = New-Object System.Drawing.Point(100,70)
+$button.Size = New-Object System.Drawing.Size(100,23)
+$button.Text = "Enviar"
+$button.Add_Click({
+    # Quando o botão for clicado, executa o comando no PowerShell
+    $command = $textBox.Text
+    Invoke-Expression $command
+})
+$form.Controls.Add($button)
+
+# Mostra o formulário
+$form.ShowDialog()
+```
+
+Salve este código em um arquivo `.ps1` e execute-o no PowerShell. Isso abrirá uma janela onde você poderá digitar um comando no campo de texto e clicar no botão "Enviar" para executar esse comando no PowerShell.
+
+Se você realmente precisa que isso seja feito a partir de um arquivo `.cmd`, considere criar um utilitário em C# ou outra linguagem que possa interagir com o `.NET Framework` e chamar esse utilitário a partir do arquivo `.cmd`. Mas isso envolverá um processo mais complexo.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
