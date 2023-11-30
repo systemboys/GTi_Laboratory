@@ -34,6 +34,7 @@
 - [Guia Rápido do PowerShell: Obtendo Diretórios-Chave através de Variáveis de Ambiente no Windows](#guia-r%C3%A1pido-do-powershell-obtendo-diret%C3%B3rios-chave-atrav%C3%A9s-de-vari%C3%A1veis-de-ambiente-no-windows "Guia Rápido do PowerShell: Obtendo Diretórios-Chave através de Variáveis de Ambiente no Windows")
 - [Script PowerShell: Obtendo Caminhos dos Principais Diretórios do Perfil do Usuário no Windows](#script-powershell-obtendo-caminhos-dos-principais-diret%C3%B3rios-do-perfil-do-usu%C3%A1rio-no-windows "Script PowerShell: Obtendo Caminhos dos Principais Diretórios do Perfil do Usuário no Windows")
 - [Script PowerShell: Abrir File Explorer e Selecionar Arquivo em um Diretório Específico](#script-powershell-abrir-file-explorer-e-selecionar-arquivo-em-um-diret%C3%B3rio-espec%C3%ADfico "Script PowerShell: Abrir File Explorer e Selecionar Arquivo em um Diretório Específico")
+- [Abrir Gerenciador de Arquivos do Windows em pasta de ambiente](# "Abrir Gerenciador de Arquivos do Windows em pasta de ambiente")
 - [Executar as atualizações do Windows a partir de um script PowerShell](#executar-as-atualiza%C3%A7%C3%B5es-do-windows-a-partir-de-um-script-powershell "Executar as atualizações do Windows a partir de um script PowerShell")
 - [Exportando e importando variáveis em arquivos PowerShell](#exportando-e-importando-vari%C3%A1veis-em-arquivos-powershell "Exportando e importando variáveis em arquivos PowerShell")
 - [Exportação e Importação, Compartilhando Funções entre Scripts PowerShell](#exporta%C3%A7%C3%A3o-e-importa%C3%A7%C3%A3o-compartilhando-fun%C3%A7%C3%B5es-entre-scripts-powershell "Exportação e Importação, Compartilhando Funções entre Scripts PowerShell")
@@ -1576,6 +1577,20 @@ Para executar um arquivo específico, você precisará usar um comando ou proces
 Lembre-se de que a capacidade de execução depende do tipo de arquivo e da configuração do sistema. Alguns arquivos podem exigir privilégios de administrador ou outros requisitos específicos.
 
 Se você deseja abrir e executar automaticamente um arquivo específico, você precisa fornecer mais informações sobre o tipo de arquivo e o comportamento desejado para que eu possa oferecer uma orientação mais precisa.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Abrir Gerenciador de Arquivos do Windows em pasta de ambiente
+
+Comando PowerShell para abrir o gerenciador de arquivos do Windows em uma pasta de ambiente como área de trabalho por exemplo.
+
+```powershell
+$folderPath = [Environment]::GetFolderPath("Desktop")
+Start-Process $folderPath
+```
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
