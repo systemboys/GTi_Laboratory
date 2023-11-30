@@ -34,7 +34,7 @@
 - [Guia Rápido do PowerShell: Obtendo Diretórios-Chave através de Variáveis de Ambiente no Windows](#guia-r%C3%A1pido-do-powershell-obtendo-diret%C3%B3rios-chave-atrav%C3%A9s-de-vari%C3%A1veis-de-ambiente-no-windows "Guia Rápido do PowerShell: Obtendo Diretórios-Chave através de Variáveis de Ambiente no Windows")
 - [Script PowerShell: Obtendo Caminhos dos Principais Diretórios do Perfil do Usuário no Windows](#script-powershell-obtendo-caminhos-dos-principais-diret%C3%B3rios-do-perfil-do-usu%C3%A1rio-no-windows "Script PowerShell: Obtendo Caminhos dos Principais Diretórios do Perfil do Usuário no Windows")
 - [Script PowerShell: Abrir File Explorer e Selecionar Arquivo em um Diretório Específico](#script-powershell-abrir-file-explorer-e-selecionar-arquivo-em-um-diret%C3%B3rio-espec%C3%ADfico "Script PowerShell: Abrir File Explorer e Selecionar Arquivo em um Diretório Específico")
-- [Abrir Gerenciador de Arquivos do Windows em pasta de ambiente](#abrir-gerenciador-de-arquivos-do-windows-em-pasta-de-ambiente "Abrir Gerenciador de Arquivos do Windows em pasta de ambiente")
+- [Abrir Gerenciador de Arquivos do Windows em pastas de ambiente](#abrir-gerenciador-de-arquivos-do-windows-em-pastas-de-ambiente "Abrir Gerenciador de Arquivos do Windows em pastas de ambiente")
 - [Executar as atualizações do Windows a partir de um script PowerShell](#executar-as-atualiza%C3%A7%C3%B5es-do-windows-a-partir-de-um-script-powershell "Executar as atualizações do Windows a partir de um script PowerShell")
 - [Exportando e importando variáveis em arquivos PowerShell](#exportando-e-importando-vari%C3%A1veis-em-arquivos-powershell "Exportando e importando variáveis em arquivos PowerShell")
 - [Exportação e Importação, Compartilhando Funções entre Scripts PowerShell](#exporta%C3%A7%C3%A3o-e-importa%C3%A7%C3%A3o-compartilhando-fun%C3%A7%C3%B5es-entre-scripts-powershell "Exportação e Importação, Compartilhando Funções entre Scripts PowerShell")
@@ -1583,7 +1583,7 @@ Se você deseja abrir e executar automaticamente um arquivo específico, você p
 
 ---
 
-## Abrir Gerenciador de Arquivos do Windows em pasta de ambiente
+## Abrir Gerenciador de Arquivos do Windows em pastas de ambiente
 
 Comando PowerShell para abrir o gerenciador de arquivos do Windows em uma pasta de ambiente como área de trabalho por exemplo.
 
@@ -1591,6 +1591,26 @@ Comando PowerShell para abrir o gerenciador de arquivos do Windows em uma pasta 
 $folderPath = [Environment]::GetFolderPath("Desktop")
 Start-Process $folderPath
 ```
+
+> **_( ? )_** É possível abrir dois diretórios diferentes?
+
+Sim, é possível abrir duas janelas do gerenciador de arquivos e colocá-las lado a lado. Aqui está um exemplo de como você pode fazer isso usando o PowerShell:
+
+```powershell
+# Caminho para a Área de Trabalho
+$desktopPath = [Environment]::GetFolderPath("Desktop")
+
+# Caminho para o Gerenciador de Arquivos
+$explorerPath = [Environment]::GetFolderPath("MyDocuments")
+
+# Abrir a Área de Trabalho
+Start-Process $desktopPath
+
+# Abrir o Gerenciador de Arquivos
+Start-Process $explorerPath
+```
+
+Este script abrirá duas janelas separadas, uma para a Área de Trabalho e outra para o Gerenciador de Arquivos. Você pode então organizá-las lado a lado manualmente. Por favor, note que o PowerShell não tem a capacidade de organizar as janelas automaticamente. Isso terá que ser feito manualmente pelo usuário.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
