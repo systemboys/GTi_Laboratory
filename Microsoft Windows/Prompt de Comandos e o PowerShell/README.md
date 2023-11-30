@@ -26,7 +26,7 @@
 - [Script de Instalação Silenciosa de Software (verificação por chave de registro)](#script-de-instala%C3%A7%C3%A3o-silenciosa-de-software-verifica%C3%A7%C3%A3o-por-chave-de-registro "Script de Instalação Silenciosa de Software (verificação por chave de registro)")
 - [Arquivo (.ps1) para instalação de pacotes](#arquivo-ps1-para-instala%C3%A7%C3%A3o-de-pacotes "Arquivo (.ps1) para instalação de pacotes")
 - [Execução Interativa de Comandos no PowerShell: Como Permitir que os Usuários Execute Comandos Personalizados](#execu%C3%A7%C3%A3o-interativa-de-comandos-no-powershell-como-permitir-que-os-usu%C3%A1rios-execute-comandos-personalizados "Execução Interativa de Comandos no PowerShell: Como Permitir que os Usuários Execute Comandos Personalizados")
-- [Script de Interação: Janela de Comando Interativa para Execução de Comandos](# "Script de Interação: Janela de Comando Interativa para Execução de Comandos")
+- [Script de Interação: Janela de Comando Interativa para Execução de Comandos](#script-de-intera%C3%A7%C3%A3o-janela-de-comando-interativa-para-execu%C3%A7%C3%A3o-de-comandos "Script de Interação: Janela de Comando Interativa para Execução de Comandos")
 - [Executando Comandos Remotos com PowerShell: Desvendando IRM e IEX](#executando-comandos-remotos-com-powershell-desvendando-irm-e-iex "Executando Comandos Remotos com PowerShell: Desvendando IRM e IEX")
 - [Execução Remota de Script PowerShell via Domínio](#execu%C3%A7%C3%A3o-remota-de-script-powershell-via-dom%C3%ADnio "Execução Remota de Script PowerShell via Domínio")
 - [Entendendo o IRM e o Comando IEX: Proteção de Informações e Execução de Scripts](#entendendo-o-irm-e-o-comando-iex-prote%C3%A7%C3%A3o-de-informa%C3%A7%C3%B5es-e-execu%C3%A7%C3%A3o-de-scripts "Entendendo o IRM e o Comando IEX: Proteção de Informações e Execução de Scripts")
@@ -1172,9 +1172,14 @@ $button.Location = New-Object System.Drawing.Point(100,70)
 $button.Size = New-Object System.Drawing.Size(100,23)
 $button.Text = "Enviar"
 $button.Add_Click({
-    # Quando o botão for clicado, executa o comando no PowerShell
-    $command = $textBox.Text
-    Invoke-Expression $command
+    # Verifica se o campo está vazio
+    if ([string]::IsNullOrWhiteSpace($textBox.Text)) {
+        [System.Windows.Forms.MessageBox]::Show("Por favor, digite um comando.", "Campo Vazio", "OK", [System.Windows.Forms.MessageBoxIcon]::Warning)
+    } else {
+        # Quando o botão for clicado e o campo não estiver vazio, executa o comando no PowerShell
+        $command = $textBox.Text
+        Invoke-Expression $command
+    }
 })
 $form.Controls.Add($button)
 
