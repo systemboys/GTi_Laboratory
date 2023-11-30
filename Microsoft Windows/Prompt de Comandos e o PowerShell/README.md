@@ -1198,6 +1198,77 @@ Salve este código em um arquivo `.ps1` e execute-o no PowerShell. Isso abrirá 
 
 Se você realmente precisa que isso seja feito a partir de um arquivo `.cmd`, considere criar um utilitário em C# ou outra linguagem que possa interagir com o `.NET Framework` e chamar esse utilitário a partir do arquivo `.cmd`. Mas isso envolverá um processo mais complexo.
 
+> **_( i )_** Outro exemplo onde o script após ser executado, abre outra janela do Windows PowerShell e executa o comando nessa nova janela.
+
+Claro, é possível fazer com que os comandos enviados pelo formulário sejam executados na própria janela do PowerShell que abre o script. Porém, para isso, é necessário uma abordagem diferente. A execução de comandos em uma janela específica do PowerShell a partir de um script em PowerShell pode ser um pouco complicada, já que normalmente os scripts são executados em uma instância separada do PowerShell.
+
+Se você estiver aberto a uma solução alternativa, podemos criar uma função no PowerShell para abrir uma nova janela do PowerShell e executar os comandos nessa nova janela. Aqui está um exemplo:
+
+```powershell
+function ExecutarComando {
+    param (
+        [string]$comando
+    )
+
+    # Abrir uma nova janela do PowerShell e executar o comando
+    $psi = New-Object System.Diagnostics.ProcessStartInfo
+    $psi.FileName = "powershell"
+    $psi.Arguments = "-NoExit -Command `"$comando`""
+    [System.Diagnostics.Process]::Start($psi) | Out-Null
+}
+
+Add-Type -AssemblyName System.Windows.Forms
+
+# Cria uma janela de formulário
+$form = New-Object System.Windows.Forms.Form
+$form.Text = "Executar Comando"
+$form.Width = 350
+$form.Height = 150
+$form.StartPosition = "CenterScreen"
+
+# Cria um Label com a mensagem informativa
+$label = New-Object System.Windows.Forms.Label
+$label.Location = New-Object System.Drawing.Point(50,10)
+$label.Size = New-Object System.Drawing.Size(250,20)
+$label.Text = "Digite o comando:"
+$form.Controls.Add($label)
+
+# Cria um campo de texto para o comando
+$textBox = New-Object System.Windows.Forms.TextBox
+$textBox.Location = New-Object System.Drawing.Point(50,30)
+$textBox.Size = New-Object System.Drawing.Size(200,20)
+$textBox.Text = "Digite o comando aqui..."
+$textBox.Add_Enter({
+    # Limpa o texto inicial quando o usuário clicar no campo
+    if ($textBox.Text -eq "Digite o comando aqui...") {
+        $textBox.Text = ""
+    }
+})
+$form.Controls.Add($textBox)
+
+# Cria um botão "Enviar"
+$button = New-Object System.Windows.Forms.Button
+$button.Location = New-Object System.Drawing.Point(100,70)
+$button.Size = New-Object System.Drawing.Size(100,23)
+$button.Text = "Enviar"
+$button.Add_Click({
+    # Verifica se o campo está vazio
+    if ([string]::IsNullOrWhiteSpace($textBox.Text) -or $textBox.Text -eq "Digite o comando aqui...") {
+        [System.Windows.Forms.MessageBox]::Show("O campo é obrigatório. Por favor, digite um comando.", "Campo Vazio", "OK", [System.Windows.Forms.MessageBoxIcon]::Warning)
+    } else {
+        # Quando o botão for clicado e o campo não estiver vazio, executa o comando na nova janela do PowerShell
+        $command = $textBox.Text
+        ExecutarComando -comando $command
+    }
+})
+$form.Controls.Add($button)
+
+# Mostra o formulário
+$form.ShowDialog()
+```
+
+Esse script define uma função chamada `ExecutarComando` que abre uma nova janela do PowerShell e executa o comando passado como argumento. Ao clicar em "Enviar" no formulário, ele usará essa função para executar o comando na nova janela do PowerShell.
+
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
