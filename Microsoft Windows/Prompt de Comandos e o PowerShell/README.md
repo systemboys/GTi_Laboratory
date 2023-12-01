@@ -31,6 +31,7 @@
 - [Execução Remota de Script PowerShell via Domínio](#execu%C3%A7%C3%A3o-remota-de-script-powershell-via-dom%C3%ADnio "Execução Remota de Script PowerShell via Domínio")
 - [Entendendo o IRM e o Comando IEX: Proteção de Informações e Execução de Scripts](#entendendo-o-irm-e-o-comando-iex-prote%C3%A7%C3%A3o-de-informa%C3%A7%C3%B5es-e-execu%C3%A7%C3%A3o-de-scripts "Entendendo o IRM e o Comando IEX: Proteção de Informações e Execução de Scripts")
 - [Como Abrir Links no Navegador Padrão via PowerShell](#como-abrir-links-no-navegador-padr%C3%A3o-via-powershell "Como Abrir Links no Navegador Padrão via PowerShell")
+- [Executar verificações de vírus e ameaças usando o Microsoft Defender Antivírus](# "Executar verificações de vírus e ameaças usando o Microsoft Defender Antivírus")
 - [Guia Rápido do PowerShell: Obtendo Diretórios-Chave através de Variáveis de Ambiente no Windows](#guia-r%C3%A1pido-do-powershell-obtendo-diret%C3%B3rios-chave-atrav%C3%A9s-de-vari%C3%A1veis-de-ambiente-no-windows "Guia Rápido do PowerShell: Obtendo Diretórios-Chave através de Variáveis de Ambiente no Windows")
 - [Script PowerShell: Obtendo Caminhos dos Principais Diretórios do Perfil do Usuário no Windows](#script-powershell-obtendo-caminhos-dos-principais-diret%C3%B3rios-do-perfil-do-usu%C3%A1rio-no-windows "Script PowerShell: Obtendo Caminhos dos Principais Diretórios do Perfil do Usuário no Windows")
 - [Script PowerShell: Abrir File Explorer e Selecionar Arquivo em um Diretório Específico](#script-powershell-abrir-file-explorer-e-selecionar-arquivo-em-um-diret%C3%B3rio-espec%C3%ADfico "Script PowerShell: Abrir File Explorer e Selecionar Arquivo em um Diretório Específico")
@@ -1418,6 +1419,51 @@ Start-Process "msedge.exe" -ArgumentList "https://www.microsoft.com/pt-br/edge"
 ```
 
 Lembre-se de que o caminho para o executável pode variar dependendo da instalação do navegador no seu sistema. No exemplo acima, `msedge.exe` é o executável do Microsoft Edge, mas para outros navegadores, você precisaria fornecer o caminho apropriado.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Executar verificações de vírus e ameaças usando o Microsoft Defender Antivírus
+
+No entanto, você pode usar o PowerShell para executar verificações de vírus e ameaças usando o Microsoft Defender Antivírus. Por exemplo, você pode iniciar uma verificação completa de malware com o seguinte comando:
+
+```powershell
+Start-MpScan -ScanType FullScan
+```
+
+Este comando inicia uma verificação completa de malware no seu sistema. Lembre-se de executar o PowerShell como administrador para garantir que você tenha as permissões necessárias para executar esses comandos.
+
+> **_( i )_** Tipos de verificações que pode ser executado usando o Microsoft Defender Antivírus via PowerShell.
+
+Existem diferentes tipos de verificações que você pode executar usando o Microsoft Defender Antivírus via PowerShell:
+
+1. Verificação rápida: Esta opção é útil quando você não quer gastar tempo executando uma verificação completa em todos os arquivos e pastas. Se a Segurança do Windows recomendar que você execute um dos outros tipos de verificação, você será notificado quando a verificação rápida for concluída. Para executar uma verificação rápida, você pode usar o seguinte comando no PowerShell:
+
+```powershell
+Start-MpScan -ScanType QuickScan
+```
+
+2. Verificação completa: Esta opção verifica todos os arquivos e programas em seu dispositivo. Para executar uma verificação completa, você pode usar o seguinte comando no PowerShell:
+
+```powershell
+Start-MpScan -ScanType FullScan
+```
+
+3. Verificação personalizada: Esta opção verifica apenas os arquivos e as pastas que você selecionar. Para executar uma verificação personalizada, você pode usar o seguinte comando no PowerShell:
+
+```powershell
+Start-MpScan -ScanPath "caminho_para_o_arquivo_ou_pasta"
+```
+
+4. Microsoft Defender verificação offline: Esta opção usa as últimas definições para verificar se o seu dispositivo contém as ameaças mais recentes. Isso acontece após uma reinicialização, sem carregar Windows, portanto, qualquer malware persistente tem um momento mais difícil de ocultar ou se defender. Para executar uma verificação offline, você pode usar o seguinte comando no PowerShell:
+
+```powershell
+Start-MpWDOScan
+```
+
+Lembre-se de executar o PowerShell como administrador para garantir que você tenha as permissões necessárias para executar esses comandos.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
