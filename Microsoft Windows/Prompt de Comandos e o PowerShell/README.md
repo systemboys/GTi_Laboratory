@@ -1974,3 +1974,28 @@ Você pode ajustar a função `ShowEncodedString` conforme necessário para incl
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
+
+## Janela pop-up PowerShell com .NET Framework com mensagem com botões “Sim” e “Não”
+
+Sim, é possível criar uma janela pop-up no PowerShell usando o .NET  Framework. Aqui está um exemplo de como você pode fazer isso:
+
+```powershell
+Add-Type -AssemblyName PresentationFramework
+
+$ButtonType = [System.Windows.MessageBoxButton]::YesNo
+$MessageIcon = [System.Windows.MessageBoxImage]::Question
+$MessageBody = "Deseja executar o comando?"
+$MessageTitle = "Executar o comando"
+$MessageBox = [System.Windows.MessageBox]::Show($MessageBody,$MessageTitle,$ButtonType,$MessageIcon)
+
+if ($MessageBox -eq 'Yes') {
+    # Coloque aqui seu comando de instalação!
+}
+```
+
+Neste script, uma janela pop-up é criada com a  mensagem “Deseja instalar o AnyDesk?” e os botões “Sim” e “Não”. Se o  usuário clicar em “Sim”, o comando de instalação será executado.  Lembre-se de substituir a linha de comentário pelo comando de instalação do AnyDesk. Se o usuário clicar em “Não”, a janela pop-up será  simplesmente fechada.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
