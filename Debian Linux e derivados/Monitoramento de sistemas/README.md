@@ -6,10 +6,26 @@
 
 ### *Sumário*
 
+- [Sensores de Hardware do Linux](# "Sensores de Hardware do Linux")
 - [Instalar o BashTOP no Debian Linux](#instalar-o-bashtop-no-debian-linux "Instalar o BashTOP no Debian Linux")
 - [Instalar o utilitário de monitoramento HTOP](#instalar-o-utilit%C3%A1rio-de-monitoramento-htop "Instalar o utilitário de monitoramento HTOP")
 
 ---
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Sensores de Hardware do Linux
+
+Sim, é possível verificar a temperatura do processador utilizando o Terminal Linux. Você pode usar o comando "sensors" para obter informações sobre a temperatura do processador.
+
+```bash
+sensors
+```
+
+Este comando exibirá as informações de temperatura do processador, incluindo a temperatura atual e máxima. Certifique-se de ter o pacote "lm-sensors" instalado em seu sistema antes de executar o comando.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
