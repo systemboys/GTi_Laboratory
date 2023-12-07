@@ -22,6 +22,10 @@
 - [Função que executa um menu interativo com PowerShell](#fun%C3%A7%C3%A3o-que-executa-um-menu-interativo-com-powershell "Função que executa um menu interativo com PowerShell")
 - [Menu interativo com PowerShell, uma maneira organizada de organizar opções](#menu-interativo-com-powershell-uma-maneira-organizada-de-organizar-op%C3%A7%C3%B5es "Menu interativo com PowerShell, uma maneira organizada de organizar opções")
 - [Verificar a existência de um diretório ou de um arquivo com arquivo PowerShell (.ps1)](#verificar-a-exist%C3%AAncia-de-um-diret%C3%B3rio-ou-de-um-arquivo-com-arquivo-powershell-ps1 "Verificar a existência de um diretório ou de um arquivo com arquivo PowerShell (.ps1)")
+
+- [Executar arquivo chamado executável via linha de comando PowerShell](# "Executar arquivo chamado executável via linha de comando PowerShell")
+- [Verificar para instalar ou executar arquivos executáveis](# "Verificar para instalar ou executar arquivos executáveis")
+
 - [Verificando versão do sistema operacional](#verificando-vers%C3%A3o-do-sistema-operacional "Verificando versão do sistema operacional")
 - [Script de Instalação Silenciosa de Software (verificação por chave de registro)](#script-de-instala%C3%A7%C3%A3o-silenciosa-de-software-verifica%C3%A7%C3%A3o-por-chave-de-registro "Script de Instalação Silenciosa de Software (verificação por chave de registro)")
 - [Arquivo (.ps1) para instalação de pacotes](#arquivo-ps1-para-instala%C3%A7%C3%A3o-de-pacotes "Arquivo (.ps1) para instalação de pacotes")
@@ -1002,6 +1006,77 @@ if (Test-Path $filePath) {
     Write-Host "The file does not exist."
 }
 # End of verification
+```
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Executar arquivo chamado executável via linha de comando PowerShell
+
+Ok, eu entendo que você quer executar um arquivo chamado "`AnyDesk.exe`" que está localizado em "`C:\Program Files (x86)\AnyDesk`". Uma possível linha de comando para fazer isso em PowerShell é:
+
+```powershell
+Start-Process -FilePath "C:\Program Files (x86)\AnyDesk\AnyDesk.exe"
+```
+
+Esse comando usa o cmdlet `Start-Process` para iniciar um processo que executa o arquivo especificado pelo parâmetro `-FilePath`. Você pode testar esse comando em seu script e ver se funciona como você espera. Espero ter ajudado. blush: [Start-Process (Microsoft.PowerShell.Management) - PowerShell | Microsoft Docs]
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Verificar para instalar ou executar arquivos executáveis
+
+O objetivo do script abaixo é verificar se um determinado software está instalado, caso esteja, ele ele informará através de uma popup que já está instalado e perguntará se deseja executá-lo, dando opção para o usuário responder com "Sim" ou "Não". Se o usuário responder com "Não", o script executará o "false" levando para a instalação do software.
+
+```power
+# Se o AnyDesk não estiver instalado, faz o download e instala
+$programFiles = "$env:SystemDrive\Program Files (x86)"
+$directory = "$programFiles\AnyDesk"
+
+if (Test-Path $directory) {
+    # Carrega a biblioteca do .NET Framework para criar a pop-up
+    [System.Reflection.Assembly]::LoadWithPartialName('Microsoft.VisualBasic') | Out-Null
+
+    # Define a mensagem, o título e os botões da pop-up
+    $message = "AnyDesk is already installed, do you want to run it?"
+    $title = "AnyDesk"
+    $buttons = [Microsoft.VisualBasic.MsgBoxStyle]::YesNo
+
+    # Mostra a pop-up ao usuário e guarda a resposta em uma variável
+    $response = [Microsoft.VisualBasic.Interaction]::MsgBox($message, $buttons, $title)
+
+    # Verifica se a resposta do usuário foi "Sim"
+    if ($response -eq "Yes") {
+        # Executa o AnyDesk
+        Start-Process -FilePath "C:\Program Files (x86)\AnyDesk\AnyDesk.exe"
+    }
+    else {
+        exit
+    }
+} else {
+    Write-Host "AnyDesk is not installed! Starting installation process."
+    Write-Host "File size: 5.27 MB"
+
+    # Link do download e o diretório Temp
+    $downloadUrl = "https://github.com/systemboys/_GTi_Support_/raw/main/Windows/Internet/RemoteAccess/AnyDesk.exe"
+    $downloadPath = "$env:temp\AnyDesk.exe"
+    
+    # Faz o download do AnyDesk
+    Invoke-WebRequest -Uri $downloadUrl -OutFile $downloadPath
+    
+    # Instala o AnyDesk
+    Start-Process -FilePath $downloadPath -ArgumentList "/S" -Wait
+
+    # Apagar o arquivo
+    Remove-Item -Path $downloadPath -Force
+}
+
+Write-Host "Press any key to continue..."
+$null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
 ```
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
