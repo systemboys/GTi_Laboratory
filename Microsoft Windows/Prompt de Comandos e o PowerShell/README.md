@@ -33,6 +33,7 @@
 - [Execução Remota de Script PowerShell via Domínio](#execu%C3%A7%C3%A3o-remota-de-script-powershell-via-dom%C3%ADnio "Execução Remota de Script PowerShell via Domínio")
 - [Entendendo o IRM e o Comando IEX: Proteção de Informações e Execução de Scripts](#entendendo-o-irm-e-o-comando-iex-prote%C3%A7%C3%A3o-de-informa%C3%A7%C3%B5es-e-execu%C3%A7%C3%A3o-de-scripts "Entendendo o IRM e o Comando IEX: Proteção de Informações e Execução de Scripts")
 - [Como Abrir Links no Navegador Padrão via PowerShell](#como-abrir-links-no-navegador-padr%C3%A3o-via-powershell "Como Abrir Links no Navegador Padrão via PowerShell")
+- [Fazer Windows PowerShell executar um comando após abrir novamente](# "Fazer Windows PowerShell executar um comando após abrir novamente")
 - [Executar verificações de vírus e ameaças usando o Microsoft Defender Antivírus](#executar-verifica%C3%A7%C3%B5es-de-v%C3%ADrus-e-amea%C3%A7as-usando-o-microsoft-defender-antiv%C3%ADrus "Executar verificações de vírus e ameaças usando o Microsoft Defender Antivírus")
 - [Guia Rápido do PowerShell: Obtendo Diretórios-Chave através de Variáveis de Ambiente no Windows](#guia-r%C3%A1pido-do-powershell-obtendo-diret%C3%B3rios-chave-atrav%C3%A9s-de-vari%C3%A1veis-de-ambiente-no-windows "Guia Rápido do PowerShell: Obtendo Diretórios-Chave através de Variáveis de Ambiente no Windows")
 - [Script PowerShell: Obtendo Caminhos dos Principais Diretórios do Perfil do Usuário no Windows](#script-powershell-obtendo-caminhos-dos-principais-diret%C3%B3rios-do-perfil-do-usu%C3%A1rio-no-windows "Script PowerShell: Obtendo Caminhos dos Principais Diretórios do Perfil do Usuário no Windows")
@@ -1493,6 +1494,22 @@ Start-Process "msedge.exe" -ArgumentList "https://www.microsoft.com/pt-br/edge"
 ```
 
 Lembre-se de que o caminho para o executável pode variar dependendo da instalação do navegador no seu sistema. No exemplo acima, `msedge.exe` é o executável do Microsoft Edge, mas para outros navegadores, você precisaria fornecer o caminho apropriado.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Fazer Windows PowerShell executar um comando após abrir novamente
+
+Sim, é possível fazer o Windows PowerShell executar um comando após abrir novamente. Você pode usar o parâmetro -Command do cmdlet Start-Process para especificar o comando que você quer executar na nova janela aberta. Por exemplo, se você quer abrir o arquivo "`.\QuickWindows.cmd`", você pode usar o seguinte código:
+
+```powershell
+# Inicia o PowerShell em modo Administrador com o comando desejado
+Start-Process -FilePath "powershell.exe" -Verb runAs -ArgumentList "-Command", "& {.\QuickWindows.cmd}"
+```
+
+Esse código usa o cmdlet Start-Process com o parâmetro -FilePath para especificar o caminho do PowerShell, o parâmetro -Verb para especificar a ação de executar como Administrador, e o parâmetro -ArgumentList para especificar o comando que você quer executar na nova janela aberta, que é "`.\QuickWindows.cmd`".
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
