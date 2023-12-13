@@ -48,6 +48,7 @@
 - [Ajustando a Janela do PowerShell: Alterando a Largura e a Altura da Janela](#ajustando-a-janela-do-powershell-alterando-a-largura-e-a-altura-da-janela "Ajustando a Janela do PowerShell: Alterando a Largura e a Altura da Janela")
 - [Função de Correção de Codificação para Exibição de Texto no PowerShell (UTF8)](#fun%C3%A7%C3%A3o-de-corre%C3%A7%C3%A3o-de-codifica%C3%A7%C3%A3o-para-exibi%C3%A7%C3%A3o-de-texto-no-powershell-utf8 "Função de Correção de Codificação para Exibição de Texto no PowerShell (UTF8)")
 - [Janela pop-up PowerShell com .NET Framework com mensagem com botões “Sim” e “Não”](#janela-pop-up-powershell-com-net-framework-com-mensagem-com-bot%C3%B5es-sim-e-n%C3%A3o "Janela pop-up PowerShell com .NET Framework com mensagem com botões 'Sim' e 'Não'")
+- [Script PowerShell para Emitir Sequência de Beeps](# "Script PowerShell para Emitir Sequência de Beeps")
 
 ---
 
@@ -2085,6 +2086,33 @@ if ($MessageBox -eq 'Yes') {
 ```
 
 Neste script, uma janela pop-up é criada com a  mensagem “Deseja instalar o AnyDesk?” e os botões “Sim” e “Não”. Se o  usuário clicar em “Sim”, o comando de instalação será executado.  Lembre-se de substituir a linha de comentário pelo comando de instalação do AnyDesk. Se o usuário clicar em “Não”, a janela pop-up será  simplesmente fechada.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Script PowerShell para Emitir Sequência de Beeps
+
+Você pode usar o cmdlet `Console.Beep()` do PowerShell para emitir um som do tipo bip. Aqui está um exemplo simples:
+
+```powershell
+[Console]::Beep(500, 300)
+```
+
+Neste exemplo, `500` é a frequência do som em hertz e `300` é a duração em milissegundos. Você pode ajustar esses valores conforme necessário para obter o tipo de som desejado.
+
+Você pode usar um loop para reproduzir vários beeps em sequência. Aqui está um exemplo de como você pode fazer isso:
+
+```powershell
+$numeroDeBeeps = 10
+for ($i = 0; $i -lt $numeroDeBeeps; $i++) {
+    [Console]::Beep(500, 300)
+    Start-Sleep -Milliseconds 200  # Aguarda um curto período entre os beeps
+}
+```
+
+Isso reproduzirá o som de bip 10 vezes em sequência, com um intervalo de 200 milissegundos entre cada um. Você pode ajustar `$numeroDeBeeps` para o número desejado de beeps e modificar a frequência e duração conforme necessário.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
