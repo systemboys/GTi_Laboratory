@@ -8,6 +8,7 @@
 
 - [Sensores de Hardware do Linux](#sensores-de-hardware-do-linux "Sensores de Hardware do Linux")
 - [Instalar o BashTOP no Debian Linux](#instalar-o-bashtop-no-debian-linux "Instalar o BashTOP no Debian Linux")
+- [Monitoramento e Execução Contínua do Bashtop](# "Monitoramento e Execução Contínua do Bashtop")
 - [Instalar o utilitário de monitoramento HTOP](#instalar-o-utilit%C3%A1rio-de-monitoramento-htop "Instalar o utilitário de monitoramento HTOP")
 
 ---
@@ -79,6 +80,42 @@ bashtop
 O BashTOP deve iniciar e começar a exibir informações sobre o uso de CPU, memória e outros recursos do sistema.
 
 Lembre-se de que, como o BashTOP é uma ferramenta de terceiros, ele pode não estar disponível nos repositórios oficiais do Debian. Portanto, ao instalá-lo dessa maneira, você está confiando no código fornecido no repositório do GitHub. Sempre verifique a fonte e a confiabilidade das ferramentas que você instala no seu sistema.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Monitoramento e Execução Contínua do Bashtop
+
+Esse script em Bash cria um loop infinito que verifica se o processo chamado "bashtop" está em execução. Se não estiver em execução, ele inicia o programa "bashtop". O comando `pgrep -f bashtop` busca por processos que correspondam ao nome "bashtop", e se não encontrar nenhum, o comando `bashtop` é executado para iniciar o programa.
+
+O `sleep 1` faz com que o script espere 1 segundo antes de verificar novamente se o processo "bashtop" está em execução. Isso cria um loop contínuo que garante que o programa "bashtop" esteja sempre em execução.
+
+```bash
+while true; do
+  pgrep -f bashtop >/dev/null || bashtop
+  sleep 1
+done
+```
+
+Esse script vai rodar infinitamente (while true) e  lançar o bashtop se ele não estiver rodando. Você pode salvar esse  arquivo em qualquer lugar que você quiser e executá-lo com o comando:
+
+```bash
+./keepalivescript.sh
+```
+
+Você também pode agendar esse script para ser  executado automaticamente na inicialização do sistema, usando o cron ou  outro gerenciador de tarefas. Para isso, você precisa editar o seu  crontab com o comando:
+
+```bash
+crontab -e
+```
+
+E adicionar uma linha usando a expressão @reboot, que vai executar o seu código uma vez na inicialização:
+
+```bash
+@reboot ./keepalivescript.sh
+```
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
