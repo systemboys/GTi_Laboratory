@@ -347,6 +347,28 @@ Lembre-se de que as permissões de arquivos e diretórios são uma parte importa
 
 ---
 
+## Concedendo Permissões 777 a Arquivos, Exceto um Diretório, ex.: .git no Linux
+
+Você pode usar o comando `find` em combinação com o `chmod` para conceder permissões 777 a todos os arquivos, exceto aqueles dentro do diretório `.git`. Aqui está um exemplo de como fazer isso:
+
+```bash
+find . -type f -not -path "./.git/*" -exec chmod 777 {} \;
+```
+
+Este comando faz o seguinte:
+
+- `find .`: Procura no diretório atual.
+- `-type f`: Seleciona apenas os arquivos.
+- `-not -path "./.git/*"`: Exclui todos os arquivos que estão dentro do diretório `.git`.
+- `-exec chmod 777 {} \;`: Executa o comando `chmod 777` nos arquivos encontrados, concedendo permissões de leitura, escrita e execução.
+
+Certifique-se de executar este comando no diretório raiz do seu repositório Git local. Isso dará permissões 777 a todos os arquivos, exceto aqueles dentro do diretório `.git`.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
 ## Listando Arquivos e Pastas Ocultos com o Comando ls no Linux
 
 Para listar não apenas os itens visíveis, mas também os ocultos em um diretório usando o comando `ls` no Linux, você pode usar a opção `-a` ou `--all`. Essa opção faz com que o `ls` mostre todos os arquivos, incluindo os ocultos, que começam com um ponto `.`.
