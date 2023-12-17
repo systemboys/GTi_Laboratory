@@ -15,6 +15,7 @@
 - [Como Extrair a Versão do Histórico em Scripts Batch do Windows: Dicas Úteis para Gerenciar Seus Projetos](#como-extrair-a-vers%C3%A3o-do-hist%C3%B3rico-em-scripts-batch-do-windows-dicas-%C3%BAteis-para-gerenciar-seus-projetos "Como Extrair a Versão do Histórico em Scripts Batch do Windows: Dicas Úteis para Gerenciar Seus Projetos")
 - [Guia Essencial de Comandos e Variáveis de Ambiente no Windows](#guia-essencial-de-comandos-e-vari%C3%A1veis-de-ambiente-no-windows "Guia Essencial de Comandos e Variáveis de Ambiente no Windows")
 - [Passagem de Argumentos entre Arquivos: PowerShell e Batch (CMD)](#passagem-de-argumentos-entre-arquivos-powershell-e-batch-cmd "Passagem de Argumentos entre Arquivos: PowerShell e Batch (CMD)")
+- [Compartilhando Variáveis e Funções entre Arquivos .CMD no Batch](# "Compartilhando Variáveis e Funções entre Arquivos .CMD no Batch")
 
 > Microsoft **_PowerShell_**
 
@@ -528,6 +529,50 @@ echo Argumento 2: %2
 ```
 
 Assim como no PowerShell, você pode acessar os argumentos usando `%1` para o primeiro, `%2` para o segundo e assim por diante. Certifique-se de ajustar os comandos de acordo com o que você precisa realizar nos seus arquivos batch.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Compartilhando Variáveis e Funções entre Arquivos .CMD no Batch
+
+Você pode importar as variáveis e funções de um arquivo `.cmd` para outro usando a declaração `call`. Se o arquivo que você deseja importar contém funções ou variáveis que precisam ser acessadas em outro script `.cmd`, você pode fazer da seguinte maneira:
+
+**Passo 1: Criar um arquivo `.cmd` com variáveis e funções**
+
+Vamos supor que você tem um arquivo chamado `functions.cmd` com variáveis e/ou funções que deseja importar para outro arquivo. Por exemplo, `functions.cmd` pode ter o seguinte conteúdo:
+
+```batch
+@echo off
+REM Definindo variáveis
+set variavelExemplo=123
+
+REM Definindo uma função de exemplo
+:exemploFuncao
+echo Esta é uma função de exemplo
+exit /b
+```
+
+**Passo 2: Importar as variáveis e funções em outro arquivo `.cmd`**
+
+Para usar essas variáveis e funções em outro arquivo `.cmd`, você pode simplesmente chamar o arquivo `functions.cmd` usando `call`. Por exemplo, no arquivo em que você deseja usar essas variáveis e funções:
+
+```batch
+@echo off
+REM Importando variáveis e funções de functions.cmd
+call "caminho\para\functions.cmd"
+
+REM Usando variáveis do arquivo importado
+echo A variável de exemplo é %variavelExemplo%
+
+REM Chamando a função do arquivo importado
+call :exemploFuncao
+
+REM Restante do código do arquivo atual...
+```
+
+Dessa forma, ao chamar `functions.cmd` com `call`, todas as variáveis e funções definidas nesse arquivo se tornarão disponíveis para uso no arquivo `.cmd` atual. Lembre-se de ajustar o caminho do arquivo conforme a estrutura do seu diretório.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
