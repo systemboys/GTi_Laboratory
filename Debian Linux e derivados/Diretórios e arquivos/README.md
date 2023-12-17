@@ -365,6 +365,37 @@ Este comando faz o seguinte:
 
 Certifique-se de executar este comando no diretório raiz do seu repositório Git local. Isso dará permissões 777 a todos os arquivos, exceto aqueles dentro do diretório `.git`.
 
+Você pode modificar o comando `find` para excluir arquivos específicos, mantendo as permissões para todos os outros. Por exemplo:
+
+```bash
+find . -type f ! \( -name "file1.txt" -o -name "file2.txt" -o -name "file3.txt" \) -exec chmod 777 {} \;
+```
+
+Este comando:
+
+- Procura por todos os arquivos no diretório atual e subdiretórios.
+- Exclui os arquivos com nomes específicos (`file1.txt`, `file2.txt` e `file3.txt`).
+- Aplica `chmod 777` nos arquivos restantes, concedendo permissões de leitura, escrita e execução.
+
+Isso concederá permissões 777 a todos os arquivos, exceto `file1.txt`, `file2.txt` e `file3.txt`.
+
+Se você quer aplicar permissões a todos os arquivos, exceto aqueles em determinados diretórios ou com nomes específicos, você pode usar o comando `find` com várias exclusões. Aqui está um exemplo:
+
+Suponha que você queira dar permissões 777 a todos os arquivos, exceto aqueles nos diretórios `dir1` e `dir2`, e também exceto os arquivos `file1.txt`, `file2.txt` e `file3.txt`. O comando seria assim:
+
+```bash
+find . -type f ! \( \( -path "./dir1/*" -o -path "./dir2/*" \) -o \( -name "file1.txt" -o -name "file2.txt" -o -name "file3.txt" \) \) -exec chmod 777 {} \;
+```
+
+Isso fará o seguinte:
+
+- Procurará por todos os arquivos no diretório atual e subdiretórios.
+- Excluirá arquivos nos diretórios `dir1` e `dir2`.
+- Excluirá os arquivos com nomes específicos (`file1.txt`, `file2.txt` e `file3.txt`).
+- Aplicará `chmod 777` nos arquivos restantes.
+
+Ajuste os diretórios e os nomes dos arquivos conforme necessário para atender aos seus requisitos específicos.
+
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
