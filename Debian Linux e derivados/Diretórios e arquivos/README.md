@@ -365,6 +365,8 @@ Este comando faz o seguinte:
 
 Certifique-se de executar este comando no diretório raiz do seu repositório Git local. Isso dará permissões 777 a todos os arquivos, exceto aqueles dentro do diretório `.git`.
 
+> ( i ) Mais de um arquivo.
+
 Você pode modificar o comando `find` para excluir arquivos específicos, mantendo as permissões para todos os outros. Por exemplo:
 
 ```bash
@@ -378,6 +380,8 @@ Este comando:
 - Aplica `chmod 777` nos arquivos restantes, concedendo permissões de leitura, escrita e execução.
 
 Isso concederá permissões 777 a todos os arquivos, exceto `file1.txt`, `file2.txt` e `file3.txt`.
+
+> ( i ) Mais de um diretório.
 
 Se você quer aplicar permissões a todos os arquivos, exceto aqueles em determinados diretórios ou com nomes específicos, você pode usar o comando `find` com várias exclusões. Aqui está um exemplo:
 
