@@ -158,6 +158,22 @@ Digamos que você está buscando uma maneira de indicar a versão e a mudança f
 
 Nesse exemplo, substitua "XXXX-XX-XX" e "XXhXX" pelos valores reais de data e hora quando você fizer essa atualização. Esta linha indica claramente o que foi adicionado na versão atual (opção "Utilitários do Sistema" na sessão correspondente) e quando a mudança foi feita. Espero que isso atenda às suas necessidades!
 
+> **( i )** Guia Básico de Versionamento de Software: Entendendo os Números de Versão
+
+O versionamento de software segue convenções estabelecidas para facilitar o entendimento sobre as mudanças e o progresso do produto. A estrutura típica é composta por três números separados por pontos (x.y.z), onde cada um representa um nível de mudança:
+
+- O primeiro número (x) é a versão principal. Mudanças nesse número indicam grandes atualizações, frequentemente incluindo mudanças significativas na funcionalidade ou na arquitetura do software. Muitas vezes, começar em 1.0.0 é comum para a primeira versão estável de um produto.
+  
+- O segundo número (y) é a versão secundária. Mudanças nesse número indicam adições de funcionalidades ou melhorias significativas sem alterar drasticamente a estrutura principal do software.
+  
+- O terceiro número (z) é a versão de revisão. Mudanças nesse número geralmente são para correções de bugs, ajustes menores ou pequenas melhorias que não afetam a funcionalidade principal.
+
+Começar com a versão 0.0.1 é uma abordagem válida, indicando que o software está em estágio inicial de desenvolvimento. À medida que você avança, quando ocorrem mudanças significativas que representam um marco ou um conjunto substancial de novas funcionalidades, o número da versão deve ser atualizado de acordo.
+
+Se o seu software já está em um estágio mais avançado de desenvolvimento e você considera que está pronto para lançar a primeira versão estável, iniciar com 1.0.0 pode ser apropriado.
+
+Em resumo, a convenção exata pode variar de equipe para equipe, mas o importante é manter consistência e comunicar claramente as mudanças significativas em cada versão.
+
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
