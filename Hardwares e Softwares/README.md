@@ -20,6 +20,10 @@
 
 - [VM VirtualBox](https://github.com/systemboys/GTi_Laboratory/tree/main/Hardwares%20e%20Softwares/VM%20VirtualBox#laborat%C3%B3rio-gti--vm-virtualbox "VM VirtualBox")
 
+> Dicas para resolver situações
+
+- [Notebook com tela quebrada onde todo o resto está funcionando e você deseja formatar](# "Notebook com tela quebrada onde todo o resto está funcionando e você deseja formatar")
+
 ---
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
@@ -142,6 +146,18 @@ Para realizar a clonagem de um dispositivo de armazenamento para outro, você po
     [![Sistema operacional clonado](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/AB%20Multiboot/20230909_120318.jpg?raw=true "Sistema operacional clonado")](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/AB%20Multiboot/20230909_120318.jpg?raw=true "Sistema operacional clonado")
 
 Lembre-se de que os nomes de botões e opções podem variar ligeiramente dependendo da versão específica da ferramenta "MiniTool Partition Wizard Enterprise" e do sistema operacional. Certifique-se de seguir as instruções fornecidas pela ferramenta que estiver utilizando.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Notebook com tela quebrada onde todo o resto está funcionando e você deseja formatar.
+
+- Remova o dispositivo de armazenamento (**HDD** ou **SSD**) e instalei em outra máquina para instalar o sistema operacional;
+- No sistema instalado na outra máquina, instale o **AnyDesk**, defina uma senha para acesso não supervisionado e copie o ID do dispositivo;
+- Remova o HDD ou SSD e volte ele para a máquina de origem e ligue-a;
+- O Windows não se conectará automaticamente, mesmo sem ver nada na tela quebrada, conecte um adaptador USB para rede RJ45 e conecte o cabo de rede com DHCP e Internet. Após isso, o AnyDesk estará ativo e acessível.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
