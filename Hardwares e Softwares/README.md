@@ -22,7 +22,7 @@
 
 > Dicas para resolver situações
 
-- [Notebook com tela quebrada onde todo o resto está funcionando e você deseja formatar](# "Notebook com tela quebrada onde todo o resto está funcionando e você deseja formatar")
+- [Notebook com tela quebrada onde todo o resto está funcionando e você deseja formatar](#notebook-com-tela-quebrada-onde-todo-o-resto-est%C3%A1-funcionando-e-voc%C3%AA-deseja-formatar "Notebook com tela quebrada onde todo o resto está funcionando e você deseja formatar")
 
 ---
 
