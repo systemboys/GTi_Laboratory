@@ -162,11 +162,11 @@ Lembre-se de que os nomes de botões e opções podem variar ligeiramente depend
 
 - Remova o HDD ou SSD e volte ele para a máquina de origem e ligue-a;
 
-- O Windows recém instalado no dispositivo de armazenamento não se conectará automaticamente à Internet, mesmo sem ver nada na tela quebrada, conecte um **adaptador USB** para rede **RJ45** e conecte o cabo de rede com DHCP e Internet. Após isso, o AnyDesk estará ativo e acessível.
+- O Windows recém instalado no dispositivo de armazenamento não se conectará automaticamente à Internet via **Wi-Fi** porque o dispositivo de rede mudou, no entanto, você poderá conectar via cabo de rede e, se por a caso o Windows não tiver drivers genéricos do dispositivo de rede, mesmo sem ver nada na tela quebrada, conecte um **adaptador USB** para rede **RJ45** e conecte o cabo de rede com DHCP e Internet. Após isso, o AnyDesk estará ativo e acessível.
 
     ![Adaptador USB para RJ45](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/images/519wjbodppL._AC_UF1000,1000_QL80_.jpg?raw=true "Adaptador USB para RJ45")
 
-- O Windows se conectará automaticamente via cabo de rede porque há um DHCP atribuirá um IP local ao Windows.
+- O Windows instalará automaticamente (driver genérico dependendo do adaptador) e se conectará automaticamente via cabo de rede porque há um DHCP atribuirá um IP local ao Windows.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
