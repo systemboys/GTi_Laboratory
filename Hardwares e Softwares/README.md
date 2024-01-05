@@ -166,7 +166,7 @@ Lembre-se de que os nomes de botões e opções podem variar ligeiramente depend
 
     ![Adaptador USB para RJ45](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/images/519wjbodppL._AC_UF1000,1000_QL80_.jpg?raw=true "Adaptador USB para RJ45")
 
-- O Windows instalará automaticamente (driver genérico dependendo do adaptador) e se conectará automaticamente via cabo de rede porque há um DHCP atribuirá um IP local ao Windows.
+- O Windows instalará automaticamente (driver genérico dependendo do adaptador) e se conectará automaticamente via cabo de rede porque o servidor DHCP do seu roteador atribuirá um IP local ao Windows.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
