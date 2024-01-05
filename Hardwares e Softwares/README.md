@@ -154,15 +154,19 @@ Lembre-se de que os nomes de botões e opções podem variar ligeiramente depend
 
 ## Notebook com tela quebrada onde todo o resto está funcionando e você deseja formatar.
 
-- Remova o dispositivo de armazenamento (**HDD** ou **SSD**) e instalei em outra máquina para instalar o sistema operacional;
+- Remova o dispositivo de armazenamento (**HDD** ou **SSD**) e instale em outra máquina para formatar e instalar o sistema operacional;
 
     ![HDDs e SSDs](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/images/ssd-vs-hdd-images.png?raw=true "HDDs e SSDs")
 
-- No sistema instalado na outra máquina, instale o **AnyDesk**, defina uma senha para acesso não supervisionado e copie o ID do dispositivo;
+- No sistema recém instalado na outra máquina, instale o **AnyDesk**, defina uma senha para acesso não supervisionado e anote o ID do dispositivo;
+
 - Remova o HDD ou SSD e volte ele para a máquina de origem e ligue-a;
-- O Windows não se conectará automaticamente, mesmo sem ver nada na tela quebrada, conecte um adaptador USB para rede RJ45 e conecte o cabo de rede com DHCP e Internet. Após isso, o AnyDesk estará ativo e acessível.
+
+- O Windows recém instalado no dispositivo de armazenamento não se conectará automaticamente à Internet, mesmo sem ver nada na tela quebrada, conecte um **adaptador USB** para rede **RJ45** e conecte o cabo de rede com DHCP e Internet. Após isso, o AnyDesk estará ativo e acessível.
 
     ![Adaptador USB para RJ45](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/images/519wjbodppL._AC_UF1000,1000_QL80_.jpg?raw=true "Adaptador USB para RJ45")
+
+- O Windows se conectará automaticamente via cabo de rede porque há um DHCP atribuirá um IP local ao Windows.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
