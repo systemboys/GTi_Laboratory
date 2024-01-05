@@ -156,11 +156,13 @@ Lembre-se de que os nomes de botões e opções podem variar ligeiramente depend
 
 - Remova o dispositivo de armazenamento (**HDD** ou **SSD**) e instalei em outra máquina para instalar o sistema operacional;
 
-![HDDs e SSDs](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/images/ssd-vs-hdd-images.png?raw=true "HDDs e SSDs")
+    ![HDDs e SSDs](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/images/ssd-vs-hdd-images.png?raw=true "HDDs e SSDs")
 
 - No sistema instalado na outra máquina, instale o **AnyDesk**, defina uma senha para acesso não supervisionado e copie o ID do dispositivo;
 - Remova o HDD ou SSD e volte ele para a máquina de origem e ligue-a;
 - O Windows não se conectará automaticamente, mesmo sem ver nada na tela quebrada, conecte um adaptador USB para rede RJ45 e conecte o cabo de rede com DHCP e Internet. Após isso, o AnyDesk estará ativo e acessível.
+
+    ![Adaptador USB para RJ45](https://github.com/systemboys/GTi_Laboratory/blob/main/Hardwares%20e%20Softwares/images/519wjbodppL._AC_UF1000,1000_QL80_.jpg?raw=true "Adaptador USB para RJ45")
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
