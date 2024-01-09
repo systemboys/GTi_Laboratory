@@ -1053,6 +1053,23 @@ if (Test-Path $filePath) {
 # End of verification
 ```
 
+Para verificar se um diretório ou arquivo não existe, basta inverter a condição do `if`. Você pode usar o `Test-Path` com o operador `-not` para verificar se o diretório não existe. Aqui está o código de exemplo:
+
+```powershell
+# Verifica se o Git não está instalado
+Write-Host "Checking if Git does not exist on Windows..."
+# Se o Git não estiver instalado, faz o download e instala
+$programFiles = "$env:SystemDrive\Program Files"
+$directory = "$programFiles\Git"
+if (-not (Test-Path $directory)) {
+    # Command...
+    Write-Host "The directory $directory does not exist."
+} else {
+    Write-Host "The directory $directory exists."
+}
+
+```
+
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
