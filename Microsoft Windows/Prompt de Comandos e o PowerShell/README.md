@@ -1067,8 +1067,9 @@ if (-not (Test-Path $directory)) {
 } else {
     Write-Host "The directory $directory exists."
 }
-
 ```
+
+Agora, se o diretório não existir em $directory, o bloco de código dentro do if será executado.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
