@@ -23,6 +23,7 @@
 - [Função que executa um menu interativo com PowerShell](#fun%C3%A7%C3%A3o-que-executa-um-menu-interativo-com-powershell "Função que executa um menu interativo com PowerShell")
 - [Menu interativo com PowerShell, uma maneira organizada de organizar opções](#menu-interativo-com-powershell-uma-maneira-organizada-de-organizar-op%C3%A7%C3%B5es "Menu interativo com PowerShell, uma maneira organizada de organizar opções")
 - [Verificar a existência de um diretório ou de um arquivo com arquivo PowerShell (.ps1)](#verificar-a-exist%C3%AAncia-de-um-diret%C3%B3rio-ou-de-um-arquivo-com-arquivo-powershell-ps1 "Verificar a existência de um diretório ou de um arquivo com arquivo PowerShell (.ps1)")
+- [Verificando a existência de diretóroi ou arquivo em duas versões do Windows](# "Verificando a existência de diretóroi ou arquivo em duas versões do Windows")
 - [Executar arquivo chamado executável via linha de comando PowerShell](#executar-arquivo-chamado-execut%C3%A1vel-via-linha-de-comando-powershell "Executar arquivo chamado executável via linha de comando PowerShell")
 - [Verificar para instalar ou executar arquivos executáveis](#verificar-para-instalar-ou-executar-arquivos-execut%C3%A1veis "Verificar para instalar ou executar arquivos executáveis")
 - [Verificando versão do sistema operacional](#verificando-vers%C3%A3o-do-sistema-operacional "Verificando versão do sistema operacional")
@@ -1070,6 +1071,79 @@ if (-not (Test-Path $directory)) {
 ```
 
 Agora, se o diretório não existir em $directory, o bloco de código dentro do if será executado.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Verificando a existência de diretóroi ou arquivo em duas versões do Windows
+
+Você pode verificar se o Git está instalado no Windows 10 e 11 procurando por um executável específico do Git, como `git.exe`, em diferentes caminhos padrão de instalação. Aqui está um exemplo de como você pode fazer isso no PowerShell:
+
+```powershell
+# Verifica se o Git está instalado no Windows (versões 10 e 11)
+Write-Host "Checking if Git is installed on Windows..."
+
+# Verifica o caminho padrão de instalação no Windows 10 e 11
+$gitPaths = @(
+    "$env:ProgramFiles\Git\bin\git.exe",
+    "$env:ProgramFiles(x86)\Git\bin\git.exe"
+)
+
+$gitInstalled = $false
+
+foreach ($path in $gitPaths) {
+    if (Test-Path $path) {
+        Write-Host "Git found at $path"
+        $gitInstalled = $true
+        break
+    }
+}
+
+if ($gitInstalled) {
+    Write-Host "Git is installed."
+} else {
+    Write-Host "Git is not installed."
+    # Comando para instalar o Git ou outra ação apropriada
+}
+```
+
+Esse script procura pelo executável `git.exe` em locais padrão de instalação do Git no Windows 10 e 11. Se encontrar o `git.exe` em um desses locais, ele indicará que o Git está instalado. Caso contrário, ele informará que o Git não está instalado e você pode adicionar um comando ou ação apropriada para instalação ou tratamento adequado.
+
+> ( ? ) E se eu desejar verificar apenas o diretório?
+
+Sim, você pode adaptar o código para verificar a existência de um diretório em vez de um arquivo específico. Aqui está um exemplo de como verificar se um diretório específico, como o diretório de instalação do Git, existe no Windows 10 e 11:
+
+```powershell
+# Verifica se o diretório do Git está instalado no Windows (versões 10 e 11)
+Write-Host "Checking if Git directory exists on Windows..."
+
+# Caminhos padrão onde o Git pode estar instalado
+$gitDirectories = @(
+    "$env:ProgramFiles\Git",
+    "$env:ProgramFiles(x86)\Git"
+)
+
+$gitInstalled = $false
+
+foreach ($dir in $gitDirectories) {
+    if (Test-Path $dir) {
+        Write-Host "Git directory found at $dir"
+        $gitInstalled = $true
+        break
+    }
+}
+
+if ($gitInstalled) {
+    Write-Host "Git directory exists."
+} else {
+    Write-Host "Git directory does not exist."
+    # Comando para instalar o Git ou outra ação apropriada
+}
+```
+
+Neste caso, o script verifica a existência de diretórios específicos que podem conter a instalação do Git no Windows 10 e 11. Se encontrar o diretório em um dos caminhos especificados, indicará que o diretório do Git está presente. Caso contrário, informará que o diretório do Git não existe, e você pode adicionar um comando ou ação apropriada para lidar com essa situação.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
