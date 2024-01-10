@@ -23,7 +23,7 @@
 - [Função que executa um menu interativo com PowerShell](#fun%C3%A7%C3%A3o-que-executa-um-menu-interativo-com-powershell "Função que executa um menu interativo com PowerShell")
 - [Menu interativo com PowerShell, uma maneira organizada de organizar opções](#menu-interativo-com-powershell-uma-maneira-organizada-de-organizar-op%C3%A7%C3%B5es "Menu interativo com PowerShell, uma maneira organizada de organizar opções")
 - [Verificar a existência de um diretório ou de um arquivo com arquivo PowerShell (.ps1)](#verificar-a-exist%C3%AAncia-de-um-diret%C3%B3rio-ou-de-um-arquivo-com-arquivo-powershell-ps1 "Verificar a existência de um diretório ou de um arquivo com arquivo PowerShell (.ps1)")
-- [Verificando a existência de diretóroi ou arquivo em duas versões do Windows](#verificando-a-exist%C3%AAncia-de-diret%C3%B3roi-ou-arquivo-em-duas-vers%C3%B5es-do-windows "Verificando a existência de diretóroi ou arquivo em duas versões do Windows")
+- [Verificando a existência de diretório ou arquivo em duas versões do Windows](#verificando-a-exist%C3%AAncia-de-diret%C3%B3rio-ou-arquivo-em-duas-vers%C3%B5es-do-windows "Verificando a existência de diretório ou arquivo em duas versões do Windows")
 - [Executar arquivo chamado executável via linha de comando PowerShell](#executar-arquivo-chamado-execut%C3%A1vel-via-linha-de-comando-powershell "Executar arquivo chamado executável via linha de comando PowerShell")
 - [Verificar para instalar ou executar arquivos executáveis](#verificar-para-instalar-ou-executar-arquivos-execut%C3%A1veis "Verificar para instalar ou executar arquivos executáveis")
 - [Verificando versão do sistema operacional](#verificando-vers%C3%A3o-do-sistema-operacional "Verificando versão do sistema operacional")
@@ -1077,7 +1077,7 @@ Agora, se o diretório não existir em $directory, o bloco de código dentro do 
 
 ---
 
-## Verificando a existência de diretóroi ou arquivo em duas versões do Windows
+## Verificando a existência de diretório ou arquivo em duas versões do Windows
 
 Você pode verificar se o Git está instalado no Windows 10 e 11 procurando por um executável específico do Git, como `git.exe`, em diferentes caminhos padrão de instalação. Aqui está um exemplo de como você pode fazer isso no PowerShell:
 
