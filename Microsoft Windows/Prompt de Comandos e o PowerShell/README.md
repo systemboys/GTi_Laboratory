@@ -51,6 +51,7 @@
 - [Função de Correção de Codificação para Exibição de Texto no PowerShell (UTF8)](#fun%C3%A7%C3%A3o-de-corre%C3%A7%C3%A3o-de-codifica%C3%A7%C3%A3o-para-exibi%C3%A7%C3%A3o-de-texto-no-powershell-utf8 "Função de Correção de Codificação para Exibição de Texto no PowerShell (UTF8)")
 - [Janela pop-up PowerShell com .NET Framework com mensagem com botões “Sim” e “Não”](#janela-pop-up-powershell-com-net-framework-com-mensagem-com-bot%C3%B5es-sim-e-n%C3%A3o "Janela pop-up PowerShell com .NET Framework com mensagem com botões 'Sim' e 'Não'")
 - [Script PowerShell para Emitir Sequência de Beeps](#script-powershell-para-emitir-sequ%C3%AAncia-de-beeps "Script PowerShell para Emitir Sequência de Beeps")
+- [Configuração Dinâmica de Rede no Windows via PowerShell / Habilitando DHCP e DNS Automático](# "Configuração Dinâmica de Rede no Windows via PowerShell / Habilitando DHCP e DNS Automático")
 
 ---
 
@@ -2250,6 +2251,52 @@ for ($i = 0; $i -lt $numeroDeBeeps; $i++) {
 ```
 
 Isso reproduzirá o som de bip 10 vezes em sequência, com um intervalo de 200 milissegundos entre cada um. Você pode ajustar `$numeroDeBeeps` para o número desejado de beeps e modificar a frequência e duração conforme necessário.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Configuração Dinâmica de Rede no Windows via PowerShell / Habilitando DHCP e DNS Automático
+
+É possível acessar e modificar configurações de rede usando o Windows PowerShell. Você pode usar cmdlets específicos para interagir com as configurações de rede. No entanto, não há um comando direto equivalente ao "control folders" para as configurações de rede. Em vez disso, você pode usar cmdlets específicos para executar tarefas relacionadas à rede.
+
+Aqui estão alguns exemplos de cmdlets que podem ser úteis:
+
+1. **Visualizar informações da interface de rede:**
+   ```powershell
+   Get-NetAdapter
+   ```
+
+2. **Visualizar configurações IP:**
+   ```powershell
+   Get-NetIPAddress
+   ```
+
+3. **Configurar um endereço IP manualmente:**
+   ```powershell
+   New-NetIPAddress -InterfaceAlias "Nome da Interface" -IPAddress "192.168.1.2" -PrefixLength 24 -DefaultGateway "192.168.1.1"
+   ```
+
+4. **Configurar as configurações DNS:**
+   ```powershell
+   Set-DnsClientServerAddress -InterfaceAlias "Nome da Interface" -ServerAddresses ("8.8.8.8", "8.8.4.4")
+   ```
+
+Lembre-se de substituir "Nome da Interface" pelo nome real da sua interface de rede.
+
+Se você precisar de funcionalidades mais avançadas, como configurações específicas do TCP/IP ou configurações avançadas de firewall, pode ser necessário usar ferramentas adicionais ou cmdlets específicos.
+
+Para configurar todas as configurações de IP, incluindo os servidores DNS, para serem atribuídas dinamicamente pelo DHCP, você pode usar o seguinte comando no PowerShell:
+
+```powershell
+Get-NetAdapter | ForEach-Object { $_ | Set-NetIPInterface -Dhcp Enabled }
+Get-DnsClient | Set-DnsClientServerAddress -ResetServerAddresses
+```
+
+O primeiro comando usa `Set-NetIPInterface -Dhcp Enabled` para habilitar a configuração dinâmica do DHCP para cada interface de rede, e o segundo comando usa `Set-DnsClientServerAddress -ResetServerAddresses` para restaurar as configurações de DNS para serem obtidas automaticamente do servidor DHCP.
+
+Certifique-se de executar o PowerShell como administrador para garantir as permissões necessárias para modificar as configurações de rede.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
