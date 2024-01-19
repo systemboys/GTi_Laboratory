@@ -52,6 +52,7 @@
 - [Janela pop-up PowerShell com .NET Framework com mensagem com botões “Sim” e “Não”](#janela-pop-up-powershell-com-net-framework-com-mensagem-com-bot%C3%B5es-sim-e-n%C3%A3o "Janela pop-up PowerShell com .NET Framework com mensagem com botões 'Sim' e 'Não'")
 - [Script PowerShell para Emitir Sequência de Beeps](#script-powershell-para-emitir-sequ%C3%AAncia-de-beeps "Script PowerShell para Emitir Sequência de Beeps")
 - [Configuração Dinâmica de Rede no Windows via PowerShell / Habilitando DHCP e DNS Automático](#configura%C3%A7%C3%A3o-din%C3%A2mica-de-rede-no-windows-via-powershell--habilitando-dhcp-e-dns-autom%C3%A1tico "Configuração Dinâmica de Rede no Windows via PowerShell / Habilitando DHCP e DNS Automático")
+- [Elevação de Privilégios e Execução Remota](# "Elevação de Privilégios e Execução Remota")
 
 ---
 
@@ -2297,6 +2298,64 @@ Get-DnsClient | Set-DnsClientServerAddress -ResetServerAddresses
 O primeiro comando usa `Set-NetIPInterface -Dhcp Enabled` para habilitar a configuração dinâmica do DHCP para cada interface de rede, e o segundo comando usa `Set-DnsClientServerAddress -ResetServerAddresses` para restaurar as configurações de DNS para serem obtidas automaticamente do servidor DHCP.
 
 Certifique-se de executar o PowerShell como administrador para garantir as permissões necessárias para modificar as configurações de rede.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Elevação de Privilégios e Execução Remota
+
+**Script em PowerShell: ElevacaoPrivilégiosExecucaoRemota.ps1**
+
+```powershell
+# Verifica se o Windows PowerShell está sendo executado como administrador
+if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    Write-Host "Este script precisa ser executado como administrador."
+    Start-Process powershell -Verb RunAs -ArgumentList "-Command irm qw.gti1.com.br/menu.ps1 | iex"
+    exit
+}
+```
+
+**Guia Rápido:**
+
+Este script em PowerShell é projetado para realizar duas tarefas principais: verificar se está sendo executado como administrador e, se não estiver, realizar a elevação de privilégios e executar um script remoto.
+
+**Instruções:**
+
+1. **Verificação de Privilégios:**
+   O script começa verificando se o Windows PowerShell está sendo executado como administrador. Isso é feito utilizando a classe `[Security.Principal.WindowsPrincipal]` e `[Security.Principal.WindowsIdentity]`, obtendo a identidade atual e verificando se ela está no grupo de Administradores usando `IsInRole`.
+
+    ```powershell
+    if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    ```
+
+2. **Elevação de Privilégios:**
+   Se a verificação de privilégios falhar, uma mensagem é exibida indicando que o script precisa ser executado como administrador. Em seguida, o script é reiniciado com privilégios elevados usando `Start-Process` e o argumento `-Verb RunAs`.
+
+    ```powershell
+        Write-Host "Este script precisa ser executado como administrador."
+        Start-Process powershell -Verb RunAs -ArgumentList "-Command irm qw.gti1.com.br/menu.ps1 | iex"
+        exit
+    ```
+
+   - `Write-Host`: Exibe uma mensagem informativa no console.
+   - `Start-Process`: Inicia um novo processo do PowerShell com privilégios elevados.
+   - `-Verb RunAs`: Especifica que o novo processo deve ser executado como administrador.
+   - `-ArgumentList`: Fornece os argumentos para o novo processo, que neste caso executa um comando remoto.
+
+3. **Execução Remota:**
+   O comando remoto executado é:
+
+    ```powershell
+    irm qw.gti1.com.br/menu.ps1 | iex
+    ```
+
+   - `irm`: Alias para `Invoke-RestMethod`, utilizado para baixar o script remoto.
+   - `qw.gti1.com.br/menu.ps1`: URL do script remoto a ser baixado.
+   - `iex`: Alias para `Invoke-Expression`, que executa o script baixado.
+
+Este script é útil quando se precisa garantir que um script seja executado com privilégios elevados e que o código remoto seja baixado e executado automaticamente. Certifique-se de entender os riscos associados à execução de scripts remotos antes de utilizá-lo.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
