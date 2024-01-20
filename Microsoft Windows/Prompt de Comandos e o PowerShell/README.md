@@ -1223,6 +1223,54 @@ $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
 
 ---
 
+## Automatizando a Extração e Execução de Arquivos com PowerShell
+
+**Explicação do Código:**
+Este script em PowerShell automatiza o processo de extração de um arquivo ZIP e a subsequente execução de um arquivo executável (`.exe`) contido dentro do diretório descompactado. Aqui está uma explicação passo a passo do código:
+
+1. **Definição dos Caminhos:**
+   - `$zipPath`: Representa o caminho completo para o arquivo ZIP que será extraído.
+   - `$extractPath`: Indica o diretório de destino para a extração dos arquivos contidos no arquivo ZIP.
+
+```powershell
+# Definir o caminho do arquivo zip
+$zipPath = "C:\caminho\para\arquivo.zip"
+
+# Definir o caminho do diretório de destino para a extração
+$extractPath = "C:\caminho\para\destino"
+```
+
+2. **Extração do Arquivo ZIP:**
+   - O cmdlet `Expand-Archive` é usado para extrair o conteúdo do arquivo ZIP especificado para o diretório de destino.
+
+```powershell
+# Extrair o arquivo zip para o diretório de destino
+Expand-Archive -Path $zipPath -DestinationPath $extractPath
+```
+
+3. **Definição do Caminho do Arquivo Executável:**
+   - O caminho do arquivo executável (`arquivo.exe`) dentro do diretório descompactado é construído usando `Join-Path`.
+
+```powershell
+# Definir o caminho do arquivo exe dentro do diretório descompactado
+$exePath = Join-Path -Path $extractPath -ChildPath "arquivo.exe"
+```
+
+4. **Execução do Arquivo Executável:**
+   - O cmdlet `Start-Process` é utilizado para iniciar a execução do arquivo executável no caminho especificado.
+
+```powershell
+# Executar o arquivo exe
+Start-Process -FilePath $exePath
+```
+
+O script é útil para situações em que você deseja automatizar o processo de extração e execução de um aplicativo contido em um arquivo ZIP, economizando esforços manuais. Certifique-se de ajustar os caminhos conforme necessário para se adequarem ao seu ambiente e às localizações específicas dos arquivos.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
 ## Verificando versão do sistema operacional
 
 Estrutura de controle que verifica qual é a versão do Windows:
