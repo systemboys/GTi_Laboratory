@@ -27,6 +27,8 @@
 - [Executar arquivo chamado executável via linha de comando PowerShell](#executar-arquivo-chamado-execut%C3%A1vel-via-linha-de-comando-powershell "Executar arquivo chamado executável via linha de comando PowerShell")
 - [Verificar para instalar ou executar arquivos executáveis](#verificar-para-instalar-ou-executar-arquivos-execut%C3%A1veis "Verificar para instalar ou executar arquivos executáveis")
 - [Automatizando a Extração e Execução de Arquivos com PowerShell](#automatizando-a-extra%C3%A7%C3%A3o-e-execu%C3%A7%C3%A3o-de-arquivos-com-powershell "Automatizando a Extração e Execução de Arquivos com PowerShell")
+- [Criar Atalho para Programa no Desktop usando PowerShell](# "Criar Atalho para Programa no Desktop usando PowerShell")
+- [Criar Atalho para Comando PowerShell no Desktop usando PowerShell](# "Criar Atalho para Comando PowerShell no Desktop usando PowerShell")
 - [Verificando versão do sistema operacional](#verificando-vers%C3%A3o-do-sistema-operacional "Verificando versão do sistema operacional")
 - [Script de Instalação Silenciosa de Software (verificação por chave de registro)](#script-de-instala%C3%A7%C3%A3o-silenciosa-de-software-verifica%C3%A7%C3%A3o-por-chave-de-registro "Script de Instalação Silenciosa de Software (verificação por chave de registro)")
 - [Arquivo (.ps1) para instalação de pacotes](#arquivo-ps1-para-instala%C3%A7%C3%A3o-de-pacotes "Arquivo (.ps1) para instalação de pacotes")
@@ -1266,6 +1268,81 @@ Start-Process -FilePath $exePath
 ```
 
 O script é útil para situações em que você deseja automatizar o processo de extração e execução de um aplicativo contido em um arquivo ZIP, economizando esforços manuais. Certifique-se de ajustar os caminhos conforme necessário para se adequarem ao seu ambiente e às localizações específicas dos arquivos.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Criar Atalho para Programa no Desktop usando PowerShell
+
+Sim, é possível criar um atalho para um programa no Desktop do Windows usando o PowerShell. Você pode usar o cmdlet `New-Object` para criar um objeto `WScript.Shell` e, em seguida, usar os métodos desse objeto para criar o atalho.
+
+Aqui está um exemplo de como você pode fazer isso:
+
+```powershell
+# Caminho do programa
+$programPath = "C:\Caminho\Para\SeuPrograma.exe"
+
+# Caminho do Desktop
+$desktopPath = [System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::DesktopDirectory)
+
+# Nome do atalho
+$shortcutName = "AtalhoPrograma"
+
+# Caminho completo para o atalho
+$shortcutPath = Join-Path -Path $desktopPath -ChildPath "$shortcutName.lnk"
+
+# Criar um objeto WScript.Shell
+$shell = New-Object -ComObject WScript.Shell
+
+# Criar atalho
+$shortcut = $shell.CreateShortcut($shortcutPath)
+$shortcut.TargetPath = $programPath
+$shortcut.Save()
+
+Write-Host "Atalho criado em: $shortcutPath"
+```
+
+Lembre-se de substituir o valor de `$programPath` com o caminho real do executável do programa que você deseja criar o atalho, e ajuste o nome do atalho conforme necessário.
+
+Salve o script em um arquivo com extensão `.ps1` e execute-o no PowerShell. Isso criará um atalho para o programa especificado no Desktop do Windows.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Criar Atalho para Comando PowerShell no Desktop usando PowerShell
+
+Sim, você pode criar um atalho para um comando usando o mesmo método. Veja como você pode modificar o script para criar um atalho para o comando PowerShell que você forneceu:
+
+```powershell
+# Comando a ser executado
+$command = "powershell -Command irm qw.gti1.com.br/menu.ps1 | iex"
+
+# Caminho do Desktop
+$desktopPath = [System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::DesktopDirectory)
+
+# Nome do atalho
+$shortcutName = "AtalhoComando"
+
+# Caminho completo para o atalho
+$shortcutPath = Join-Path -Path $desktopPath -ChildPath "$shortcutName.lnk"
+
+# Criar um objeto WScript.Shell
+$shell = New-Object -ComObject WScript.Shell
+
+# Criar atalho
+$shortcut = $shell.CreateShortcut($shortcutPath)
+$shortcut.TargetPath = "powershell.exe"
+$shortcut.Arguments = "-Command `"$command`""
+$shortcut.Save()
+
+Write-Host "Atalho criado em: $shortcutPath"
+```
+
+Este script cria um atalho no Desktop que executa o comando PowerShell fornecido. Substitua o valor da variável `$command` pelo comando que você deseja executar. Certifique-se de ajustar o nome do atalho, se necessário. Salve o script em um arquivo `.ps1` e execute-o no PowerShell para criar o atalho.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
