@@ -33,7 +33,7 @@
 - [Script de Instalação Silenciosa de Software (verificação por chave de registro)](#script-de-instala%C3%A7%C3%A3o-silenciosa-de-software-verifica%C3%A7%C3%A3o-por-chave-de-registro "Script de Instalação Silenciosa de Software (verificação por chave de registro)")
 - [Arquivo (.ps1) para instalação de pacotes](#arquivo-ps1-para-instala%C3%A7%C3%A3o-de-pacotes "Arquivo (.ps1) para instalação de pacotes")
 - [Execução Interativa de Comandos no PowerShell: Como Permitir que os Usuários Execute Comandos Personalizados](#execu%C3%A7%C3%A3o-interativa-de-comandos-no-powershell-como-permitir-que-os-usu%C3%A1rios-execute-comandos-personalizados "Execução Interativa de Comandos no PowerShell: Como Permitir que os Usuários Execute Comandos Personalizados")
-- [Executar comandos do Pronpt de comandos do Windows no Windows PowerShell](#executar-comandos-do-pronpt-de-comandos-do-windows-no-windows-powershell "Executar comandos do Pronpt de comandos do Windows no Windows PowerShell")
+- [Executar comandos do Prompt de comandos do Windows no Windows PowerShell](#executar-comandos-do-prompt-de-comandos-do-windows-no-windows-powershell "Executar comandos do Prompt de comandos do Windows no Windows PowerShell")
 - [Script de Interação: Janela de Comando Interativa para Execução de Comandos](#script-de-intera%C3%A7%C3%A3o-janela-de-comando-interativa-para-execu%C3%A7%C3%A3o-de-comandos "Script de Interação: Janela de Comando Interativa para Execução de Comandos")
 - [Executando Comandos Remotos com PowerShell: Desvendando IRM e IEX](#executando-comandos-remotos-com-powershell-desvendando-irm-e-iex "Executando Comandos Remotos com PowerShell: Desvendando IRM e IEX")
 - [Execução Remota de Script PowerShell via Domínio](#execu%C3%A7%C3%A3o-remota-de-script-powershell-via-dom%C3%ADnio "Execução Remota de Script PowerShell via Domínio")
@@ -1489,7 +1489,7 @@ Primeiro, ele solicita ao usuário que digite um comando por meio do cmdlet `Rea
 
 ---
 
-## Executar comandos do Pronpt de comandos do Windows no Windows PowerShell
+## Executar comandos do Prompt de comandos do Windows no Windows PowerShell
 
 O código PowerShell para executar o comando "chkdsk /f" é o seguinte:
 
