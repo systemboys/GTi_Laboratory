@@ -33,6 +33,7 @@
 - [Script de Instalação Silenciosa de Software (verificação por chave de registro)](#script-de-instala%C3%A7%C3%A3o-silenciosa-de-software-verifica%C3%A7%C3%A3o-por-chave-de-registro "Script de Instalação Silenciosa de Software (verificação por chave de registro)")
 - [Arquivo (.ps1) para instalação de pacotes](#arquivo-ps1-para-instala%C3%A7%C3%A3o-de-pacotes "Arquivo (.ps1) para instalação de pacotes")
 - [Execução Interativa de Comandos no PowerShell: Como Permitir que os Usuários Execute Comandos Personalizados](#execu%C3%A7%C3%A3o-interativa-de-comandos-no-powershell-como-permitir-que-os-usu%C3%A1rios-execute-comandos-personalizados "Execução Interativa de Comandos no PowerShell: Como Permitir que os Usuários Execute Comandos Personalizados")
+-[Executar comandos do Pronpt de comandos do Windows no Windows PowerShell](#executar-comandos-do-pronpt-de-comandos-do-windows-no-windows-powershell "Executar comandos do Pronpt de comandos do Windows no Windows PowerShell")
 - [Script de Interação: Janela de Comando Interativa para Execução de Comandos](#script-de-intera%C3%A7%C3%A3o-janela-de-comando-interativa-para-execu%C3%A7%C3%A3o-de-comandos "Script de Interação: Janela de Comando Interativa para Execução de Comandos")
 - [Executando Comandos Remotos com PowerShell: Desvendando IRM e IEX](#executando-comandos-remotos-com-powershell-desvendando-irm-e-iex "Executando Comandos Remotos com PowerShell: Desvendando IRM e IEX")
 - [Execução Remota de Script PowerShell via Domínio](#execu%C3%A7%C3%A3o-remota-de-script-powershell-via-dom%C3%ADnio "Execução Remota de Script PowerShell via Domínio")
@@ -1482,6 +1483,21 @@ $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
 ```
 
 Primeiro, ele solicita ao usuário que digite um comando por meio do cmdlet `Read-Host`, armazenando a entrada na variável `$command`. Em seguida, o comando digitado é executado usando o `Invoke-Expression $command`. Após a execução do comando, o script exibe a mensagem "Pressione qualquer tecla para continuar..." e aguarda até que o usuário pressione uma tecla antes de continuar.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Executar comandos do Pronpt de comandos do Windows no Windows PowerShell
+
+O código PowerShell para executar o comando "chkdsk /f" é o seguinte:
+
+```powershell
+Invoke-Expression -Command "chkdsk /f"
+```
+
+Esse comando irá executar o "chkdsk /f" no Prompt de Comando do Windows.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
