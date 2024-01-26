@@ -162,7 +162,7 @@ Lembre-se de que você precisa ter privilégios de administrador (usando `sudo`)
 
 ---
 
-# Liberação de Espaço no Linux: Usando o Comando apt autoremove para Remover Pacotes Não Necessários
+## Liberação de Espaço no Linux: Usando o Comando apt autoremove para Remover Pacotes Não Necessários
 
 O comando `apt autoremove` é usado no sistema operacional Linux (especialmente em distribuições baseadas em Debian, como o Ubuntu) para remover automaticamente pacotes que não são mais necessários, ou seja, pacotes que foram instalados como dependências de outros pacotes, mas que não são mais necessários por nenhum outro pacote instalado.
 
