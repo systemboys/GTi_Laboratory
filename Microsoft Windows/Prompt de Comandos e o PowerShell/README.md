@@ -26,6 +26,7 @@
 - [Verificando a existência de diretório ou arquivo em duas versões do Windows](#verificando-a-exist%C3%AAncia-de-diret%C3%B3rio-ou-arquivo-em-duas-vers%C3%B5es-do-windows "Verificando a existência de diretório ou arquivo em duas versões do Windows")
 - [Executar arquivo chamado executável via linha de comando PowerShell](#executar-arquivo-chamado-execut%C3%A1vel-via-linha-de-comando-powershell "Executar arquivo chamado executável via linha de comando PowerShell")
 - [Verificar para instalar ou executar arquivos executáveis](#verificar-para-instalar-ou-executar-arquivos-execut%C3%A1veis "Verificar para instalar ou executar arquivos executáveis")
+- [Compressão de arquivos, PowerShell Backup Automático](# "Compressão de arquivos, PowerShell Backup Automático")
 - [Automatizando a Extração e Execução de Arquivos com PowerShell](#automatizando-a-extra%C3%A7%C3%A3o-e-execu%C3%A7%C3%A3o-de-arquivos-com-powershell "Automatizando a Extração e Execução de Arquivos com PowerShell")
 - [Criar Atalho para Programa no Desktop usando PowerShell](#criar-atalho-para-programa-no-desktop-usando-powershell "Criar Atalho para Programa no Desktop usando PowerShell")
 - [Criar Atalho para Comando PowerShell no Desktop usando PowerShell](#criar-atalho-para-comando-powershell-no-desktop-usando-powershell "Criar Atalho para Comando PowerShell no Desktop usando PowerShell")
@@ -1221,6 +1222,86 @@ if (Test-Path $directory) {
 Write-Host "Press any key to continue..."
 $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
 ```
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Compressão de arquivos, PowerShell Backup Automático
+
+#### Descrição
+Este script em PowerShell permite a criação fácil de backups compactados em formato ZIP. O usuário é solicitado a fornecer o diretório a ser copiado e o local onde o arquivo ZIP resultante será salvo. O script utiliza a classe `ZipArchive` para criar um arquivo ZIP contendo todos os arquivos do diretório de origem. Além disso, uma barra de progresso é exibida para acompanhar o processo de compactação.
+
+```powershell
+# Solicita ao usuário o diretório a ser copiado
+do {
+    $sourceDirectory = Read-Host "Digite o caminho completo do diretório a ser copiado"
+    if (-not $sourceDirectory) {
+        Write-Host "Caminho inválido. Por favor, informe um caminho válido."
+    }
+    elseif (-not (Test-Path $sourceDirectory -PathType Container)) {
+        Write-Host "O diretório de origem não existe. Verifique o caminho e tente novamente."
+    }
+} while (-not $sourceDirectory -or -not (Test-Path $sourceDirectory -PathType Container))
+
+# Solicita ao usuário o caminho onde o arquivo ZIP será salvo
+do {
+    $destinationZip = Read-Host "Digite o caminho completo do local onde o arquivo ZIP será salvo"
+    if (-not $destinationZip) {
+        Write-Host "Caminho inválido. Por favor, informe um caminho válido."
+    }
+    elseif (-not (Test-Path $destinationZip -PathType Container)) {
+        Write-Host "O diretório de destino não existe. Verifique o caminho e tente novamente."
+    }
+} while (-not $destinationZip -or -not (Test-Path $destinationZip -PathType Container))
+
+# Obtém o nome base do diretório de origem e a data e hora atual para criar o nome do arquivo ZIP
+$dateString = Get-Date -Format "yyyy-MM-dd HH-mm-ss"
+$zipFileName = Join-Path $destinationZip ("$($sourceDirectory -split '\\|/' | Select-Object -Last 1) $dateString.zip")
+
+# Cria uma instância de ZipArchive
+$zipArchive = [System.IO.Compression.ZipFile]::Open($zipFileName, 'Create')
+
+# Adiciona uma barra de progresso
+Write-Progress -Activity "Comprimindo arquivos" -Status "Iniciando" -PercentComplete 0
+
+# Utiliza a classe ZipArchive para criar o arquivo ZIP
+$files = Get-ChildItem -Path $sourceDirectory -File -Recurse
+$totalFiles = $files.Count
+$currentFile = 0
+
+foreach ($file in $files) {
+    # Atualiza a barra de progresso
+    $currentFile++
+    $percentComplete = ($currentFile / $totalFiles) * 100
+    Write-Progress -Activity "Comprimindo arquivos" -Status "Em andamento" -PercentComplete $percentComplete
+
+    # Comprime o arquivo para o arquivo ZIP
+    $entry = $zipArchive.CreateEntry($file.FullName -replace [regex]::Escape($sourceDirectory), 'Optimal')
+    $stream = $entry.Open()
+    $fileStream = [System.IO.File]::OpenRead($file.FullName)
+    $fileStream.CopyTo($stream)
+    $fileStream.Close()
+    $stream.Close()
+}
+
+# Fecha o arquivo ZIP
+$zipArchive.Dispose()
+
+# Atualiza a barra de progresso para 100% e exibe a conclusão
+Write-Progress -Activity "Comprimindo arquivos" -Status "Concluído" -PercentComplete 100
+Write-Host "Backup concluído com sucesso. O arquivo ZIP está em: $zipFileName"
+```
+
+## Instruções de Uso
+1. Execute o script em um ambiente PowerShell.
+2. Digite o caminho completo do diretório a ser copiado quando solicitado.
+3. Digite o caminho completo do local onde o arquivo ZIP será salvo.
+4. Aguarde enquanto o script compacta os arquivos e exibe uma barra de progresso.
+5. O arquivo ZIP resultante será salvo no local especificado, com um nome baseado no diretório de origem e na data/hora atual.
+
+Lembre-se de verificar se possui as permissões adequadas para acessar os diretórios e se o módulo `ZipArchive` está disponível no ambiente onde o script será executado. Este script oferece uma solução rápida e eficiente para realizar backups compactados de seus dados importantes.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
