@@ -26,7 +26,7 @@
 - [Verificando a existência de diretório ou arquivo em duas versões do Windows](#verificando-a-exist%C3%AAncia-de-diret%C3%B3rio-ou-arquivo-em-duas-vers%C3%B5es-do-windows "Verificando a existência de diretório ou arquivo em duas versões do Windows")
 - [Executar arquivo chamado executável via linha de comando PowerShell](#executar-arquivo-chamado-execut%C3%A1vel-via-linha-de-comando-powershell "Executar arquivo chamado executável via linha de comando PowerShell")
 - [Verificar para instalar ou executar arquivos executáveis](#verificar-para-instalar-ou-executar-arquivos-execut%C3%A1veis "Verificar para instalar ou executar arquivos executáveis")
-- [Compressão de arquivos, PowerShell Backup Automático (.zip)](# "Compressão de arquivos, PowerShell Backup Automático (.zip)")
+- [Compressão de arquivos, PowerShell Backup Automático (.zip)](#compress%C3%A3o-de-arquivos-powershell-backup-autom%C3%A1tico-zip "Compressão de arquivos, PowerShell Backup Automático (.zip)")
 - [Automatizando a Extração e Execução de Arquivos com PowerShell](#automatizando-a-extra%C3%A7%C3%A3o-e-execu%C3%A7%C3%A3o-de-arquivos-com-powershell "Automatizando a Extração e Execução de Arquivos com PowerShell")
 - [Criar Atalho para Programa no Desktop usando PowerShell](#criar-atalho-para-programa-no-desktop-usando-powershell "Criar Atalho para Programa no Desktop usando PowerShell")
 - [Criar Atalho para Comando PowerShell no Desktop usando PowerShell](#criar-atalho-para-comando-powershell-no-desktop-usando-powershell "Criar Atalho para Comando PowerShell no Desktop usando PowerShell")
