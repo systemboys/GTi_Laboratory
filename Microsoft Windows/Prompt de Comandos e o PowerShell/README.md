@@ -1294,7 +1294,7 @@ Write-Progress -Activity "Comprimindo arquivos" -Status "Concluído" -PercentCom
 Write-Host "Backup concluído com sucesso. O arquivo ZIP está em: $zipFileName"
 ```
 
-### Instruções de Uso
+#### Instruções de Uso
 1. Execute o script em um ambiente PowerShell.
 2. Digite o caminho completo do diretório a ser copiado quando solicitado.
 3. Digite o caminho completo do local onde o arquivo ZIP será salvo.
