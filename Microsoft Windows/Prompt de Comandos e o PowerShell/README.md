@@ -1370,6 +1370,9 @@ Write-Host ""
 # Atualiza a barra de progresso para 100% e exibe a conclusão
 Write-Progress -Activity "Compressing files" -Status "Completed" -PercentComplete 100
 Write-Host "Backup completed successfully. The ZIP file is at: $zipFileName"
+
+# Adiciona a instrução return para evitar a mensagem de erro
+return
 ```
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
