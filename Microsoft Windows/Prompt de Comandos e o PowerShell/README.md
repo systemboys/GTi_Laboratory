@@ -1230,7 +1230,7 @@ $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
 
 ## Compressão de arquivos, PowerShell Backup Automático (.zip)
 
-#### Descrição
+### Descrição
 Este script em PowerShell permite a criação fácil de backups compactados em formato ZIP. O usuário é solicitado a fornecer o diretório a ser copiado e o local onde o arquivo ZIP resultante será salvo. O script utiliza a classe `ZipArchive` para criar um arquivo ZIP contendo todos os arquivos do diretório de origem. Além disso, uma barra de progresso é exibida para acompanhar o processo de compactação.
 
 ```powershell
@@ -1294,7 +1294,7 @@ Write-Progress -Activity "Comprimindo arquivos" -Status "Concluído" -PercentCom
 Write-Host "Backup concluído com sucesso. O arquivo ZIP está em: $zipFileName"
 ```
 
-#### Instruções de Uso
+### Instruções de Uso
 1. Execute o script em um ambiente PowerShell.
 2. Digite o caminho completo do diretório a ser copiado quando solicitado.
 3. Digite o caminho completo do local onde o arquivo ZIP será salvo.
