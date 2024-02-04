@@ -1303,6 +1303,75 @@ Write-Host "Backup concluído com sucesso. O arquivo ZIP está em: $zipFileName"
 
 Lembre-se de verificar se possui as permissões adequadas para acessar os diretórios e se o módulo `ZipArchive` está disponível no ambiente onde o script será executado. Este script oferece uma solução rápida e eficiente para realizar backups compactados de seus dados importantes.
 
+> ### Correções
+> Caso o script anterior apresentar erros, eis aqui algumas modificações e correções!
+
+```powershell
+# Solicita ao usuário o diretório a ser copiado
+do {
+    $sourceDirectory = Read-Host "Enter the full path of the directory to be copied"
+    if (-not $sourceDirectory) {
+        Write-Host "Invalid path. Please provide a valid path."
+    }
+    elseif (-not (Test-Path $sourceDirectory -PathType Container)) {
+        Write-Host "The source directory does not exist. Check the path and try again."
+    }
+} while (-not $sourceDirectory -or -not (Test-Path $sourceDirectory -PathType Container))
+
+# Solicita ao usuário o caminho onde o arquivo ZIP será salvo
+do {
+    $destinationZip = Read-Host "Enter the full path to the location where the ZIP file will be saved"
+    if (-not $destinationZip) {
+        Write-Host "Invalid path. Please provide a valid path."
+    }
+    elseif (-not (Test-Path $destinationZip -PathType Container)) {
+        Write-Host "The destination directory does not exist. Check the path and try again."
+    }
+} while (-not $destinationZip -or -not (Test-Path $destinationZip -PathType Container))
+
+# Obtém o nome base do diretório de origem e a data e hora atual para criar o nome do arquivo ZIP
+$dateString = Get-Date -Format "yyyy-MM-dd HH-mm-ss"
+$zipFileName = Join-Path $destinationZip ("$($sourceDirectory -split '\\|/' | Select-Object -Last 1) $dateString.zip")
+
+# Adiciona uma barra de progresso
+Write-Progress -Activity "Compressing files" -Status "Starting" -PercentComplete 0
+
+# Utiliza a classe ZipArchive para criar o arquivo ZIP
+try {
+    $zipArchive = [System.IO.Compression.ZipFile]::Open($zipFileName, 'Create')
+
+    # Restante do código que usa $zipArchive para adicionar arquivos ao ZIP
+
+    # Fecha o arquivo ZIP
+    $zipArchive.Dispose()
+}
+catch {
+    Write-Host "Error using System.IO.Compression.ZipFile: $_"
+}
+
+# Utiliza a classe ZipArchive para criar o arquivo ZIP
+Write-Host "Creating ZIP archive: $zipFileName"
+$files = Get-ChildItem -Path $sourceDirectory -File -Recurse
+
+try {
+    Compress-Archive -Path $files.FullName -DestinationPath $zipFileName -Force -CompressionLevel Optimal
+    Write-Host "ZIP archive created successfully."
+}
+catch {
+    Write-Host "Error creating ZIP archive: $_"
+}
+
+# Adiciona linhas vazias para espaçamento
+Write-Host ""
+Write-Host ""
+Write-Host ""
+Write-Host ""
+
+# Atualiza a barra de progresso para 100% e exibe a conclusão
+Write-Progress -Activity "Compressing files" -Status "Completed" -PercentComplete 100
+Write-Host "Backup completed successfully. The ZIP file is at: $zipFileName"
+```
+
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
