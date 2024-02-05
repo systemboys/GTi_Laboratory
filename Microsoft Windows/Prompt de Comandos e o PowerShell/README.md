@@ -2707,11 +2707,9 @@ function Show-InfoFrame {
         [string]$content
     )
 
-    Write-Host ("-" * 100)
+    Write-Host ("_" * 100)
     Write-Host ("{0,-100}" -f $title)
-    Write-Host ("-" * 100)
     Write-Host ("{0,-100}" -f $content)
-    Write-Host ("-" * 100)
 }
 
 # Obter informações do processador
@@ -2720,7 +2718,7 @@ $processorContent = "Name: $($processorInfo.Name)", "Max Clock Speed: $($process
 
 # Obter informações de memória
 $memoryInfo = Get-WmiObject -Class Win32_PhysicalMemory | Measure-Object -Property Capacity -Sum
-$memoryContent = "Total Physical Memory: {0:N2} GB" -f ($memoryInfo.Sum / 1GB)
+$memoryContent = "Total Physical Memory: {0:N2} GB" -f ($memoryInfo.Sum)
 
 # Obter informações gerais do sistema
 $systemInfo = Get-CimInstance -ClassName Win32_ComputerSystem | Select-Object Manufacturer, Model, TotalPhysicalMemory
@@ -2730,6 +2728,8 @@ $systemContent = "Manufacturer: $($systemInfo.Manufacturer)", "Model: $($systemI
 Show-InfoFrame -title "Processor Info" -content ($processorContent -join "`n")
 Show-InfoFrame -title "Memory Info" -content $memoryContent
 Show-InfoFrame -title "System Info" -content ($systemContent -join "`n")
+
+Write-Host ("_" * 100)
 ```
 
 Este script usa linhas horizontais para criar seções distintas e aumenta o comprimento para 100 caracteres para proporcionar uma aparência mais organizada. Execute-o no console do PowerShell para visualizar as informações formatadas.
