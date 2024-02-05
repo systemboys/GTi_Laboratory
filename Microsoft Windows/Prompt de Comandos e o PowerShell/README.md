@@ -58,6 +58,8 @@
 - [Script PowerShell para Emitir Sequência de Beeps](#script-powershell-para-emitir-sequ%C3%AAncia-de-beeps "Script PowerShell para Emitir Sequência de Beeps")
 - [Configuração Dinâmica de Rede no Windows via PowerShell / Habilitando DHCP e DNS Automático](#configura%C3%A7%C3%A3o-din%C3%A2mica-de-rede-no-windows-via-powershell--habilitando-dhcp-e-dns-autom%C3%A1tico "Configuração Dinâmica de Rede no Windows via PowerShell / Habilitando DHCP e DNS Automático")
 - [Elevação de Privilégios e Execução Remota](#eleva%C3%A7%C3%A3o-de-privil%C3%A9gios-e-execu%C3%A7%C3%A3o-remota "Elevação de Privilégios e Execução Remota")
+- [Obtendo Informações do Sistema com PowerShell: Processador, Memória e Detalhes Gerais](# "Obtendo Informações do Sistema com PowerShell: Processador, Memória e Detalhes Gerais")
+- [Script PowerShell: Apresentação Estilizada de Informações do Sistema em Quadros](# "Script PowerShell: Apresentação Estilizada de Informações do Sistema em Quadros")
 
 ---
 
@@ -2651,6 +2653,86 @@ Este script em PowerShell é projetado para realizar duas tarefas principais: ve
    - `iex`: Alias para `Invoke-Expression`, que executa o script baixado.
 
 Este script é útil quando se precisa garantir que um script seja executado com privilégios elevados e que o código remoto seja baixado e executado automaticamente. Certifique-se de entender os riscos associados à execução de scripts remotos antes de utilizá-lo.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Obtendo Informações do Sistema com PowerShell: Processador, Memória e Detalhes Gerais
+
+Sim, é possível obter informações sobre o sistema, incluindo detalhes do processador, quantidade de memória e outros, usando o Windows PowerShell. O PowerShell fornece cmdlets (comandos) específicos para recuperar essas informações. Aqui estão alguns exemplos:
+
+1. **Informações do Processador:**
+```powershell
+Get-WmiObject -Class Win32_Processor | Select-Object Name, MaxClockSpeed, NumberOfCores, NumberOfLogicalProcessors
+```
+
+Este comando utiliza o cmdlet `Get-WmiObject` para acessar informações do processador através da classe `Win32_Processor`.
+
+2. **Informações de Memória:**
+```powershell
+Get-WmiObject -Class Win32_PhysicalMemory | Select-Object Capacity
+```
+
+Este comando utiliza o cmdlet `Get-WmiObject` para acessar informações sobre a memória física instalada através da classe `Win32_PhysicalMemory`.
+
+3. **Informações Gerais do Sistema:**
+```powershell
+Get-CimInstance -ClassName Win32_ComputerSystem | Select-Object Manufacturer, Model, TotalPhysicalMemory
+```
+
+O cmdlet `Get-CimInstance` é utilizado para acessar informações gerais do sistema através da classe `Win32_ComputerSystem`.
+
+Estes são apenas alguns exemplos. Você pode combinar e personalizar esses comandos conforme necessário para obter informações específicas do sistema. Lembre-se de que alguns comandos podem exigir privilégios administrativos para acessar determinadas informações.
+
+Além disso, o PowerShell também fornece variáveis automáticas, como `$env:PROCESSOR_ARCHITECTURE` e `$env:NUMBER_OF_PROCESSORS`, que contêm informações sobre a arquitetura do processador e o número de processadores, respectivamente.
+
+Experimente esses comandos no console do PowerShell para ver as informações diretamente no ambiente de execução.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Script PowerShell: Apresentação Estilizada de Informações do Sistema em Quadros
+
+Aqui está um exemplo de um script em PowerShell que mostra as informações do processador, memória:
+
+```powershell
+# Função para exibir informações em um quadro
+function Show-InfoFrame {
+    param(
+        [string]$title,
+        [string]$content
+    )
+
+    Write-Host ("-" * 100)
+    Write-Host ("{0,-100}" -f $title)
+    Write-Host ("-" * 100)
+    Write-Host ("{0,-100}" -f $content)
+    Write-Host ("-" * 100)
+}
+
+# Obter informações do processador
+$processorInfo = Get-WmiObject -Class Win32_Processor | Select-Object Name, MaxClockSpeed, NumberOfCores, NumberOfLogicalProcessors
+$processorContent = "Name: $($processorInfo.Name)", "Max Clock Speed: $($processorInfo.MaxClockSpeed) MHz", "Cores: $($processorInfo.NumberOfCores)", "Logical Processors: $($processorInfo.NumberOfLogicalProcessors)"
+
+# Obter informações de memória
+$memoryInfo = Get-WmiObject -Class Win32_PhysicalMemory | Measure-Object -Property Capacity -Sum
+$memoryContent = "Total Physical Memory: {0:N2} GB" -f ($memoryInfo.Sum / 1GB)
+
+# Obter informações gerais do sistema
+$systemInfo = Get-CimInstance -ClassName Win32_ComputerSystem | Select-Object Manufacturer, Model, TotalPhysicalMemory
+$systemContent = "Manufacturer: $($systemInfo.Manufacturer)", "Model: $($systemInfo.Model)", "Total Physical Memory: {0:N2} GB" -f ($systemInfo.TotalPhysicalMemory / 1GB)
+
+# Exibir informações em quadros
+Show-InfoFrame -title "Processor Info" -content ($processorContent -join "`n")
+Show-InfoFrame -title "Memory Info" -content $memoryContent
+Show-InfoFrame -title "System Info" -content ($systemContent -join "`n")
+```
+
+Este script usa linhas horizontais para criar seções distintas e aumenta o comprimento para 100 caracteres para proporcionar uma aparência mais organizada. Execute-o no console do PowerShell para visualizar as informações formatadas.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
