@@ -60,6 +60,7 @@
 - [Elevação de Privilégios e Execução Remota](#eleva%C3%A7%C3%A3o-de-privil%C3%A9gios-e-execu%C3%A7%C3%A3o-remota "Elevação de Privilégios e Execução Remota")
 - [Obtendo Informações do Sistema com PowerShell: Processador, Memória e Detalhes Gerais](#obtendo-informa%C3%A7%C3%B5es-do-sistema-com-powershell-processador-mem%C3%B3ria-e-detalhes-gerais "Obtendo Informações do Sistema com PowerShell: Processador, Memória e Detalhes Gerais")
 - [Script PowerShell: Apresentação Estilizada de Informações do Sistema em Quadros](#script-powershell-apresenta%C3%A7%C3%A3o-estilizada-de-informa%C3%A7%C3%B5es-do-sistema-em-quadros "Script PowerShell: Apresentação Estilizada de Informações do Sistema em Quadros")
+- [Manipulando Espaços em PowerShell](# "Manipulando Espaços em PowerShell")
 
 ---
 
@@ -2733,6 +2734,21 @@ Write-Host ("_" * 100)
 ```
 
 Este script usa linhas horizontais para criar seções distintas e aumenta o comprimento para 100 caracteres para proporcionar uma aparência mais organizada. Execute-o no console do PowerShell para visualizar as informações formatadas.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Manipulando Espaços em PowerShell
+
+Neste script PowerShell, é demonstrado como inserir uma determinada quantidade de espaços antes de um texto utilizando o cmdlet `Write-Host`. No exemplo fornecido, são inseridos 15 espaços antes da mensagem "Distante da margem 15 caracteres espaços".
+
+```powershell
+Write-Host (" " * 15 + "Distante da margem 15 caracteres espaços.")
+```
+
+O número entre os parênteses após o asterisco indica quantos espaços serão inseridos antes da mensagem. Esse script pode ser útil em situações em que seja necessário alinhar ou posicionar textos de saída em uma interface de linha de comando.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
