@@ -19,6 +19,7 @@
 
 > Microsoft **_PowerShell_**
 
+- [Atualizando o PowerShell no Windows: Um Guia Passo a Passo](# "Atualizando o PowerShell no Windows: Um Guia Passo a Passo")
 - [Ativar a execução de scripts no PowerShell](#ativar-a-execu%C3%A7%C3%A3o-de-scripts-no-powershell "Ativar a execução de scripts no PowerShell")
 - [Função que executa um menu interativo com PowerShell](#fun%C3%A7%C3%A3o-que-executa-um-menu-interativo-com-powershell "Função que executa um menu interativo com PowerShell")
 - [Menu interativo com PowerShell, uma maneira organizada de organizar opções](#menu-interativo-com-powershell-uma-maneira-organizada-de-organizar-op%C3%A7%C3%B5es "Menu interativo com PowerShell, uma maneira organizada de organizar opções")
@@ -584,6 +585,25 @@ REM Restante do código do arquivo atual...
 ```
 
 Dessa forma, ao chamar `functions.cmd` com `call`, todas as variáveis e funções definidas nesse arquivo se tornarão disponíveis para uso no arquivo `.cmd` atual. Lembre-se de ajustar o caminho do arquivo conforme a estrutura do seu diretório.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Atualizando o PowerShell no Windows: Um Guia Passo a Passo
+
+Existe um comando que você pode usar para instalar ou atualizar o PowerShell 7 através do PowerShell que você já tem no seu computador. Aqui está o comando:
+
+```powershell
+iex "& { $(irm https://aka.ms/install-powershell.ps1) } -UseMSI"
+```
+
+Este comando baixa o script de instalação do PowerShell 7 do site da Microsoft e executa o script para instalar o PowerShell 7.
+
+No entanto, é importante notar que o PowerShell 7 é suportado nos seguintes sistemas operacionais Windows: Windows 10 e 11, Windows Server 2016, 2019 e 2022. Portanto, pode não ser compatível com o Windows 7.
+
+Por favor, verifique a compatibilidade antes de tentar a instalação. Se você estiver usando o Windows 7, pode ser necessário atualizar seu sistema operacional para uma versão mais recente antes de poder instalar o PowerShell 7.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
