@@ -19,7 +19,7 @@
 
 > Microsoft **_PowerShell_**
 
-- [Atualizando o PowerShell no Windows: Um Guia Passo a Passo](# "Atualizando o PowerShell no Windows: Um Guia Passo a Passo")
+- [Atualizando o PowerShell no Windows: Um Guia Passo a Passo](#atualizando-o-powershell-no-windows-um-guia-passo-a-passo "Atualizando o PowerShell no Windows: Um Guia Passo a Passo")
 - [Ativar a execução de scripts no PowerShell](#ativar-a-execu%C3%A7%C3%A3o-de-scripts-no-powershell "Ativar a execução de scripts no PowerShell")
 - [Função que executa um menu interativo com PowerShell](#fun%C3%A7%C3%A3o-que-executa-um-menu-interativo-com-powershell "Função que executa um menu interativo com PowerShell")
 - [Menu interativo com PowerShell, uma maneira organizada de organizar opções](#menu-interativo-com-powershell-uma-maneira-organizada-de-organizar-op%C3%A7%C3%B5es "Menu interativo com PowerShell, uma maneira organizada de organizar opções")
