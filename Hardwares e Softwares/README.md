@@ -85,7 +85,7 @@ Os pinos de áudio do painel frontal do gabinete são responsáveis pela conexã
 
 ## Guia Passo a Passo: Como Realizar Clonagem de Disco com MiniTool Partition Wizard Enterprise e AB Multiboot
 
-Para realizar a clonagem de um dispositivo de armazenamento para outro, você pode utilizar a ferramenta "MiniTool Partition Wizard Enterprise", que faz parte do conjunto de ferramentas "[AB Multiboot](https://1drv.ms/f/s!AijDX6h8vVT-iuhk2My01aDw-YBt4w?e=WsZoJZ "AB Multiboot")". Siga os passos abaixo para começar:
+Para realizar a clonagem de um dispositivo de armazenamento para outro, você pode utilizar a ferramenta "MiniTool Partition Wizard Enterprise", que faz parte do conjunto de ferramentas "[AB Multiboot](https://1drv.ms/f/s!AijDX6h8vVT-iuhk2My01aDw-YBt4w?e=HE7tug "AB Multiboot")". Siga os passos abaixo para começar:
 
 1. Conecte o dispositivo de armazenamento de destino que receberá a clonagem.
 
