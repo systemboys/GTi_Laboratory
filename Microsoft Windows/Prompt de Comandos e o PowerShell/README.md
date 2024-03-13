@@ -64,7 +64,7 @@
 - [Manipulando Espaços em PowerShell](#manipulando-espa%C3%A7os-em-powershell "Manipulando Espaços em PowerShell")
 - [Verificação e Aplicação Dinâmica da Versão do PowerShell em Scripts CMD](#verifica%C3%A7%C3%A3o-e-aplica%C3%A7%C3%A3o-din%C3%A2mica-da-vers%C3%A3o-do-powershell-em-scripts-cmd "Verificação e Aplicação Dinâmica da Versão do PowerShell em Scripts CMD")
 - [Modificando Informações do OEM no Registro do Windows Usando PowerShell](#modificando-informa%C3%A7%C3%B5es-do-oem-no-registro-do-windows-usando-powershell "Modificando Informações do OEM no Registro do Windows Usando PowerShell")
-- [Execução Condicional de Recursos](# "Execução Condicional de Recursos")
+- [Execução Condicional de Recursos](#execu%C3%A7%C3%A3o-condicional-de-recursos "Execução Condicional de Recursos")
 
 ---
 
