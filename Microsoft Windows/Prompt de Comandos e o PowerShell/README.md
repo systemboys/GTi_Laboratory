@@ -64,6 +64,7 @@
 - [Manipulando Espaços em PowerShell](#manipulando-espa%C3%A7os-em-powershell "Manipulando Espaços em PowerShell")
 - [Verificação e Aplicação Dinâmica da Versão do PowerShell em Scripts CMD](#verifica%C3%A7%C3%A3o-e-aplica%C3%A7%C3%A3o-din%C3%A2mica-da-vers%C3%A3o-do-powershell-em-scripts-cmd "Verificação e Aplicação Dinâmica da Versão do PowerShell em Scripts CMD")
 - [Modificando Informações do OEM no Registro do Windows Usando PowerShell](#modificando-informa%C3%A7%C3%B5es-do-oem-no-registro-do-windows-usando-powershell "Modificando Informações do OEM no Registro do Windows Usando PowerShell")
+- [Execução Condicional de Recursos](# "Execução Condicional de Recursos")
 
 ---
 
@@ -2829,6 +2830,57 @@ Set-ItemProperty -Path $Path -Name "SupportHours" -Value "Segunda a sexta de 8h 
 Este script PowerShell faz essencialmente a mesma coisa que o seu script .reg. Ele define as propriedades do caminho do registro especificado. Por favor, substitua os valores conforme necessário.
 
 **Nota:** Executar scripts que modificam o registro pode ter efeitos significativos no seu sistema, então sempre tenha cuidado e certifique-se de entender o que o script está fazendo antes de executá-lo. É uma boa prática fazer um backup do registro antes de fazer qualquer modificação. Além disso, você pode precisar de privilégios de administrador para modificar certas chaves do registro.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Execução Condicional de Recursos
+
+Este script em PowerShell permite a execução condicional de recursos com base em rotinas específicas. O usuário pode inserir uma ou mais rotinas separadas por vírgulas e o script executará os recursos associados a essas rotinas. Se várias rotinas forem fornecidas, o script aguardará a conclusão do recurso atual antes de prosseguir com o próximo. O script também inclui validação para garantir que uma entrada válida seja fornecida.
+
+```powershell
+# Array associativo que mapeia as rotinas aos recursos
+$Resources = @{
+    '123' = 'calc'
+    '456' = 'control'
+    '789' = 'winver'
+}
+
+# Função para executar um recurso
+function Execute-Resource {
+    param(
+        [string]$Resource
+    )
+
+    Start-Process $Resource
+}
+
+# Loop para solicitar entrada até que uma entrada válida seja fornecida
+do {
+    Write-Host 'Enter one or more of a routine, example: 123, 456, 789:'
+    $Input = Read-Host
+
+    if ([string]::IsNullOrWhiteSpace($Input)) {
+        Write-Host 'Please introduce a routine!'
+    }
+} until (-not [string]::IsNullOrWhiteSpace($Input))
+
+$Routines = $Input -split ','
+foreach ($Routine in $Routines) {
+    $Resource = $Resources[$Routine.Trim()]
+    if ($Resource) {
+        Execute-Resource $Resource
+        if ($Routines.Count -gt 1) {
+            Write-Host "Waiting for $Resource to finish. Press Enter to continue..."
+            Read-Host
+        }
+    } else {
+        Write-Host "Invalid routine: $Routine"
+    }
+}
+```
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
