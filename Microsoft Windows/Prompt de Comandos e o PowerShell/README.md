@@ -62,7 +62,7 @@
 - [Obtendo Informações do Sistema com PowerShell: Processador, Memória e Detalhes Gerais](#obtendo-informa%C3%A7%C3%B5es-do-sistema-com-powershell-processador-mem%C3%B3ria-e-detalhes-gerais "Obtendo Informações do Sistema com PowerShell: Processador, Memória e Detalhes Gerais")
 - [Script PowerShell: Apresentação Estilizada de Informações do Sistema em Quadros](#script-powershell-apresenta%C3%A7%C3%A3o-estilizada-de-informa%C3%A7%C3%B5es-do-sistema-em-quadros "Script PowerShell: Apresentação Estilizada de Informações do Sistema em Quadros")
 - [Manipulando Espaços em PowerShell](#manipulando-espa%C3%A7os-em-powershell "Manipulando Espaços em PowerShell")
-- [Verificação e Aplicação Dinâmica da Versão do PowerShell em Scripts CMD](# "Verificação e Aplicação Dinâmica da Versão do PowerShell em Scripts CMD")
+- [Verificação e Aplicação Dinâmica da Versão do PowerShell em Scripts CMD](#verifica%C3%A7%C3%A3o-e-aplica%C3%A7%C3%A3o-din%C3%A2mica-da-vers%C3%A3o-do-powershell-em-scripts-cmd "Verificação e Aplicação Dinâmica da Versão do PowerShell em Scripts CMD")
 
 ---
 
