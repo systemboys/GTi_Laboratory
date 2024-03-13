@@ -62,6 +62,7 @@
 - [Obtendo Informações do Sistema com PowerShell: Processador, Memória e Detalhes Gerais](#obtendo-informa%C3%A7%C3%B5es-do-sistema-com-powershell-processador-mem%C3%B3ria-e-detalhes-gerais "Obtendo Informações do Sistema com PowerShell: Processador, Memória e Detalhes Gerais")
 - [Script PowerShell: Apresentação Estilizada de Informações do Sistema em Quadros](#script-powershell-apresenta%C3%A7%C3%A3o-estilizada-de-informa%C3%A7%C3%B5es-do-sistema-em-quadros "Script PowerShell: Apresentação Estilizada de Informações do Sistema em Quadros")
 - [Manipulando Espaços em PowerShell](#manipulando-espa%C3%A7os-em-powershell "Manipulando Espaços em PowerShell")
+- [Verificação e Aplicação Dinâmica da Versão do PowerShell em Scripts CMD](# "Verificação e Aplicação Dinâmica da Versão do PowerShell em Scripts CMD")
 
 ---
 
@@ -2767,6 +2768,41 @@ Neste script PowerShell, é demonstrado como inserir uma determinada quantidade 
 ```powershell
 Write-Host (" " * 15 + "Distante da margem 15 caracteres espaços.")
 ```
+
+O número entre os parênteses após o asterisco indica quantos espaços serão inseridos antes da mensagem. Esse script pode ser útil em situações em que seja necessário alinhar ou posicionar textos de saída em uma interface de linha de comando.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Verificação e Aplicação Dinâmica da Versão do PowerShell em Scripts CMD
+
+Você pode usar o seguinte script em um arquivo `.cmd` para verificar se o PowerShell 7 ou posterior está instalado. Se estiver, ele define uma variável com o valor "pwsh". Caso contrário, ele define a variável com o valor "PowerShell".
+
+```cmd
+@echo off
+set "psCommand=powershell -Command "& {if ($PSVersionTable.PSVersion.Major -ge 7) {'pwsh'} else {'PowerShell'}}""
+for /f "delims=" %%i in ('%psCommand%') do set "result=%%i"
+
+echo %result%
+```
+
+Este script usa o comando `powershell` para verificar a versão do PowerShell instalada. Se a versão principal (`$PSVersionTable.PSVersion.Major`) for 7 ou superior, ele retorna "pwsh". Caso contrário, retorna "PowerShell". O resultado é então armazenado na variável `result`. O comando `echo %result%` é usado para exibir o valor da variável `result`.
+
+Você pode modificar o script anterior para usar a variável `result` no lugar de "PowerShell". Aqui está como você pode fazer isso:
+
+> Exemplo
+
+```cmd
+@echo off
+set "psCommand=powershell -Command "& {if ($PSVersionTable.PSVersion.Major -ge 7) {'pwsh'} else {'PowerShell'}}""
+for /f "delims=" %%i in ('%psCommand%') do set "result=%%i"
+
+%result%.exe -NoProfile -ExecutionPolicy Bypass -Command "& {Start-Process %result%.exe -ArgumentList '-NoProfile -ExecutionPolicy Bypass -File ""%~dp0Package_Installers\RunPowerShellCommands.ps1""' -Verb RunAs}"
+```
+
+Este script primeiro verifica a versão do PowerShell e armazena o resultado na variável `result`. Em seguida, ele usa essa variável para executar o comando desejado. Se o PowerShell 7 ou posterior estiver instalado, ele usará "pwsh". Caso contrário, ele usará "PowerShell".
 
 O número entre os parênteses após o asterisco indica quantos espaços serão inseridos antes da mensagem. Esse script pode ser útil em situações em que seja necessário alinhar ou posicionar textos de saída em uma interface de linha de comando.
 
