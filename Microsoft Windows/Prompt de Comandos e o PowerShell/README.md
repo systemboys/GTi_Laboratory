@@ -63,6 +63,7 @@
 - [Script PowerShell: Apresentação Estilizada de Informações do Sistema em Quadros](#script-powershell-apresenta%C3%A7%C3%A3o-estilizada-de-informa%C3%A7%C3%B5es-do-sistema-em-quadros "Script PowerShell: Apresentação Estilizada de Informações do Sistema em Quadros")
 - [Manipulando Espaços em PowerShell](#manipulando-espa%C3%A7os-em-powershell "Manipulando Espaços em PowerShell")
 - [Verificação e Aplicação Dinâmica da Versão do PowerShell em Scripts CMD](#verifica%C3%A7%C3%A3o-e-aplica%C3%A7%C3%A3o-din%C3%A2mica-da-vers%C3%A3o-do-powershell-em-scripts-cmd "Verificação e Aplicação Dinâmica da Versão do PowerShell em Scripts CMD")
+- [Modificando Informações do OEM no Registro do Windows Usando PowerShell](# "Modificando Informações do OEM no Registro do Windows Usando PowerShell")
 
 ---
 
@@ -2805,6 +2806,29 @@ for /f "delims=" %%i in ('%psCommand%') do set "result=%%i"
 Este script primeiro verifica a versão do PowerShell e armazena o resultado na variável `result`. Em seguida, ele usa essa variável para executar o comando desejado. Se o PowerShell 7 ou posterior estiver instalado, ele usará "pwsh". Caso contrário, ele usará "PowerShell".
 
 O número entre os parênteses após o asterisco indica quantos espaços serão inseridos antes da mensagem. Esse script pode ser útil em situações em que seja necessário alinhar ou posicionar textos de saída em uma interface de linha de comando.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Modificando Informações do OEM no Registro do Windows Usando PowerShell
+
+É possível fazer isso com scripts em PowerShell. Aqui está um exemplo de como você pode fazer isso:
+
+```powershell
+$Path = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\OEMInformation"
+Set-ItemProperty -Path $Path -Name "Model" -Value ""
+Set-ItemProperty -Path $Path -Name "Manufacturer" -Value ".:: GLOBAL TEC Informática ::."
+Set-ItemProperty -Path $Path -Name "Logo" -Value "\\windows\\System32\\oemlogo.bmp"
+Set-ItemProperty -Path $Path -Name "SupportPhone" -Value "(99)984399557 Marcos GTi (WhatsApp)"
+Set-ItemProperty -Path $Path -Name "SupportURL" -Value "https://www.gti1.com.br"
+Set-ItemProperty -Path $Path -Name "SupportHours" -Value "Segunda a sexta de 8h às 18h e sábado até meio dia."
+```
+
+Este script PowerShell faz essencialmente a mesma coisa que o seu script .reg. Ele define as propriedades do caminho do registro especificado. Por favor, substitua os valores conforme necessário.
+
+**Nota:** Executar scripts que modificam o registro pode ter efeitos significativos no seu sistema, então sempre tenha cuidado e certifique-se de entender o que o script está fazendo antes de executá-lo. É uma boa prática fazer um backup do registro antes de fazer qualquer modificação. Além disso, você pode precisar de privilégios de administrador para modificar certas chaves do registro.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
