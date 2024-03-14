@@ -2836,7 +2836,7 @@ Este script PowerShell faz essencialmente a mesma coisa que o seu script .reg. E
 
 ---
 
-## Execução Condicional de Recursos
+## Execução Condicional de Recursos (Exemplo de execução de Rotinas)
 
 Este script em PowerShell permite a execução condicional de recursos com base em rotinas específicas. O usuário pode inserir uma ou mais rotinas separadas por vírgulas e o script executará os recursos associados a essas rotinas. Se várias rotinas forem fornecidas, o script aguardará a conclusão do recurso atual antes de prosseguir com o próximo. O script também inclui validação para garantir que uma entrada válida seja fornecida.
 
@@ -2881,6 +2881,56 @@ foreach ($Routine in $Routines) {
     }
 }
 ```
+
+Outra abordagem com a "Execução Sequencial de Scripts PowerShell em Janelas Separadas".
+
+Você pode modificar o script para abrir uma nova janela do PowerShell para cada arquivo .ps1 a ser executado. Aqui está o script atualizado para fazer isso:
+
+```powershell
+# Array associativo que mapeia as rotinas aos arquivos .ps1
+$Files = @{
+    '123' = '$env:TEMP\QuickWindows\Package_Installers\Internet_Session\Install_AnyDesk.ps1'
+    '456' = '$env:TEMP\QuickWindows\Package_Installers\Internet_Session\Install_RustDesk.ps1'
+    '789' = '$env:TEMP\QuickWindows\Package_Installers\Internet_Session\Install_Transmission.ps1'
+}
+
+# Função para executar um arquivo .ps1 em uma nova janela do PowerShell
+function Execute-Script {
+    param(
+        [string]$File
+    )
+
+    # Construir o comando para executar o arquivo .ps1 em uma nova janela
+    $Command = "Start-Process powershell -ArgumentList '-NoExit','-File','$File' -WindowStyle Hidden"
+
+    # Executar o comando
+    Invoke-Expression $Command
+}
+
+# Loop para solicitar entrada até que uma entrada válida seja fornecida
+do {
+    Write-Host 'Enter one or more of a routine, example: 123, 456, 789:'
+    $Input = Read-Host
+
+    if ([string]::IsNullOrWhiteSpace($Input)) {
+        Write-Host 'Please introduce a routine!'
+    }
+} until (-not [string]::IsNullOrWhiteSpace($Input))
+
+$Routines = $Input -split ','
+foreach ($Routine in $Routines) {
+    $File = $Files[$Routine.Trim()]
+    if ($File) {
+        Execute-Script $File
+        Write-Host "Waiting for $File to finish. Press Enter to continue..."
+        Read-Host
+    } else {
+        Write-Host "Invalid routine: $Routine"
+    }
+}
+```
+
+Este script abrirá uma nova janela do PowerShell para cada arquivo .ps1 a ser executado, permitindo que você execute vários arquivos sequencialmente. Certifique-se de substituir os caminhos dos arquivos .ps1 pelos caminhos corretos em seu sistema.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
