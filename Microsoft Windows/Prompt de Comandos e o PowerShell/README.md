@@ -2930,9 +2930,9 @@ foreach ($Routine in $Routines) {
 }
 ```
 
-Este script abrirá uma nova janela do PowerShell para cada arquivo .ps1 a ser executado, permitindo que você execute vários arquivos sequencialmente. Certifique-se de substituir os caminhos dos arquivos .ps1 pelos caminhos corretos em seu sistema.
+Este script abrirá uma nova janela do PowerShell de forma oculta para cada arquivo .ps1 a ser executado, permitindo que você execute vários arquivos sequencialmente. Certifique-se de substituir os caminhos dos arquivos .ps1 pelos caminhos corretos em seu sistema.
 
-Para corrigir o script para que abra uma nova janela do Windows PowerShell ao executar o arquivo .ps1, você pode alterar a linha onde o comando é construído para incluir o parâmetro `-Wait`. Isso fará com que o PowerShell aguarde a conclusão do script antes de continuar.
+Para corrigir o script para que abra uma nova janela do Windows PowerShell e não seja oculta ao executar o arquivo .ps1, você pode alterar a linha onde o comando é construído para incluir o parâmetro `-Wait`. Isso fará com que o PowerShell aguarde a conclusão do script antes de continuar.
 
 Aqui está a modificação necessária no seu script:
 
