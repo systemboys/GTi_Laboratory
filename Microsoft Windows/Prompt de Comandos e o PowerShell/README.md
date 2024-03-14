@@ -2932,6 +2932,17 @@ foreach ($Routine in $Routines) {
 
 Este script abrirá uma nova janela do PowerShell para cada arquivo .ps1 a ser executado, permitindo que você execute vários arquivos sequencialmente. Certifique-se de substituir os caminhos dos arquivos .ps1 pelos caminhos corretos em seu sistema.
 
+Para corrigir o script para que abra uma nova janela do Windows PowerShell ao executar o arquivo .ps1, você pode alterar a linha onde o comando é construído para incluir o parâmetro `-Wait`. Isso fará com que o PowerShell aguarde a conclusão do script antes de continuar.
+
+Aqui está a modificação necessária no seu script:
+
+```powershell
+# Construir o comando para executar o arquivo .ps1 em uma nova janela e aguardar sua conclusão
+$Command = "Start-Process powershell -ArgumentList '-NoExit','-File','$File' -Wait"
+```
+
+Com essa alteração, ao executar o script, ele deve abrir uma nova janela do Windows PowerShell e exibir a execução do arquivo .ps1.
+
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
