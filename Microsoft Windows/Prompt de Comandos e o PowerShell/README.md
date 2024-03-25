@@ -31,6 +31,7 @@
 - [Automatizando a Extração e Execução de Arquivos com PowerShell](#automatizando-a-extra%C3%A7%C3%A3o-e-execu%C3%A7%C3%A3o-de-arquivos-com-powershell "Automatizando a Extração e Execução de Arquivos com PowerShell")
 - [Criar Atalho para Programa no Desktop usando PowerShell](#criar-atalho-para-programa-no-desktop-usando-powershell "Criar Atalho para Programa no Desktop usando PowerShell")
 - [Criar Atalho para Comando PowerShell no Desktop usando PowerShell](#criar-atalho-para-comando-powershell-no-desktop-usando-powershell "Criar Atalho para Comando PowerShell no Desktop usando PowerShell")
+- [Criar Atalho para Comando PowerShell no Desktop com ícone personalizado usando PowerShell](#criar-atalho-para-comando-powershell-no-desktop-usando-powershell "Criar Atalho para Comando PowerShell no Desktop com ícone personalizado usando PowerShell")
 - [Verificando versão do sistema operacional](#verificando-vers%C3%A3o-do-sistema-operacional "Verificando versão do sistema operacional")
 - [Script de Instalação Silenciosa de Software (verificação por chave de registro)](#script-de-instala%C3%A7%C3%A3o-silenciosa-de-software-verifica%C3%A7%C3%A3o-por-chave-de-registro "Script de Instalação Silenciosa de Software (verificação por chave de registro)")
 - [Arquivo (.ps1) para instalação de pacotes](#arquivo-ps1-para-instala%C3%A7%C3%A3o-de-pacotes "Arquivo (.ps1) para instalação de pacotes")
@@ -1523,6 +1524,46 @@ Write-Host "Atalho criado em: $shortcutPath"
 ```
 
 Este script cria um atalho no Desktop que executa o comando PowerShell fornecido. Substitua o valor da variável `$command` pelo comando que você deseja executar. Certifique-se de ajustar o nome do atalho, se necessário. Salve o script em um arquivo `.ps1` e execute-o no PowerShell para criar o atalho.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Criar Atalho para Comando PowerShell no Desktop com ícone personalizado usando PowerShell
+
+Para adicionar um ícone ao atalho, você pode usar a propriedade `IconLocation` do objeto de atalho. Esta propriedade aceita um caminho para o arquivo de ícone. Aqui está o seu código atualizado:
+
+```powershell
+# Comando a ser executado
+$command = "irm qw.gti1.com.br/menu.ps1 | iex"
+
+# Caminho do Desktop
+$desktopPath = [System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::DesktopDirectory)
+
+# Nome do atalho
+$shortcutName = "AtalhoComando"
+
+# Caminho completo para o atalho
+$shortcutPath = Join-Path -Path $desktopPath -ChildPath "$shortcutName.lnk"
+
+# Caminho para o ícone
+$iconPath = "$env:TEMP\QuickWindows\Images\QuickWindows.ico"
+
+# Criar um objeto WScript.Shell
+$shell = New-Object -ComObject WScript.Shell
+
+# Criar atalho
+$shortcut = $shell.CreateShortcut($shortcutPath)
+$shortcut.TargetPath = "powershell.exe"
+$shortcut.Arguments = "-Command `"$command`""
+$shortcut.IconLocation = $iconPath
+$shortcut.Save()
+
+Write-Host "Atalho criado em: $shortcutPath"
+```
+
+Este código agora criará um atalho com o ícone especificado no caminho `$iconPath`. Certifique-se de que o caminho para o ícone é válido e acessível. Se o arquivo de ícone não existir no local especificado, o atalho será criado sem um ícone.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
