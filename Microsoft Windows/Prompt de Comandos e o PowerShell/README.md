@@ -1494,6 +1494,45 @@ Salve o script em um arquivo com extensão `.ps1` e execute-o no PowerShell. Iss
 
 ---
 
+## Criar Atalho para Programa no Desktop com ícone personalizado usando PowerShell
+
+Para adicionar um ícone personalizado ao atalho do seu programa, você pode usar a propriedade `IconLocation` do objeto de atalho. Aqui está o seu código atualizado:
+
+```powershell
+# Caminho do programa
+$programPath = "C:\Caminho\Para\SeuPrograma.exe"
+
+# Caminho do Desktop
+$desktopPath = [System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::DesktopDirectory)
+
+# Nome do atalho
+$shortcutName = "AtalhoPrograma"
+
+# Caminho completo para o atalho
+$shortcutPath = Join-Path -Path $desktopPath -ChildPath "$shortcutName.lnk"
+
+# Caminho para o ícone
+$iconPath = "$env:TEMP\QuickWindows\Images\QuickWindows.ico"
+
+# Criar um objeto WScript.Shell
+$shell = New-Object -ComObject WScript.Shell
+
+# Criar atalho
+$shortcut = $shell.CreateShortcut($shortcutPath)
+$shortcut.TargetPath = $programPath
+$shortcut.IconLocation = $iconPath
+$shortcut.Save()
+
+Write-Host "Atalho criado em: $shortcutPath"
+```
+
+Este código agora criará um atalho para o seu programa com o ícone especificado no caminho `$iconPath`. Certifique-se de que o caminho para o ícone é válido e acessível. Se o arquivo de ícone não existir no local especificado, o atalho será criado sem um ícone.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
 ## Criar Atalho para Comando PowerShell no Desktop usando PowerShell
 
 Sim, você pode criar um atalho para um comando usando o mesmo método. Veja como você pode modificar o script para criar um atalho para o comando PowerShell que você forneceu:
