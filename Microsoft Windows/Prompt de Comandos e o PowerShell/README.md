@@ -1499,7 +1499,7 @@ Sim, você pode criar um atalho para um comando usando o mesmo método. Veja com
 
 ```powershell
 # Comando a ser executado
-$command = "powershell -Command irm qw.gti1.com.br/menu.ps1 | iex"
+$command = "irm qw.gti1.com.br/menu.ps1 | iex"
 
 # Caminho do Desktop
 $desktopPath = [System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::DesktopDirectory)
