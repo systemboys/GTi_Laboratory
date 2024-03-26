@@ -33,6 +33,7 @@
 - [Criar Atalho para Programa no Desktop com ícone personalizado usando PowerShell](#criar-atalho-para-programa-no-desktop-com-%C3%ADcone-personalizado-usando-powershell "Criar Atalho para Programa no Desktop com ícone personalizado usando PowerShell")
 - [Criar Atalho para Comando PowerShell no Desktop usando PowerShell](#criar-atalho-para-comando-powershell-no-desktop-usando-powershell "Criar Atalho para Comando PowerShell no Desktop usando PowerShell")
 - [Criar Atalho para Comando PowerShell no Desktop com ícone personalizado usando PowerShell](#criar-atalho-para-comando-powershell-no-desktop-com-%C3%ADcone-personalizado-usando-powershell "Criar Atalho para Comando PowerShell no Desktop com ícone personalizado usando PowerShell")
+- [Criar Atalho para Comando PowerShell no Desktop com ícone baixado de uma URL usando PowerShell](# "Criar Atalho para Comando PowerShell no Desktop com ícone baixado de uma URL usando PowerShell")
 - [Verificando versão do sistema operacional](#verificando-vers%C3%A3o-do-sistema-operacional "Verificando versão do sistema operacional")
 - [Script de Instalação Silenciosa de Software (verificação por chave de registro)](#script-de-instala%C3%A7%C3%A3o-silenciosa-de-software-verifica%C3%A7%C3%A3o-por-chave-de-registro "Script de Instalação Silenciosa de Software (verificação por chave de registro)")
 - [Arquivo (.ps1) para instalação de pacotes](#arquivo-ps1-para-instala%C3%A7%C3%A3o-de-pacotes "Arquivo (.ps1) para instalação de pacotes")
@@ -1470,7 +1471,7 @@ $programPath = "C:\Caminho\Para\SeuPrograma.exe"
 $desktopPath = [System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::DesktopDirectory)
 
 # Nome do atalho
-$shortcutName = "AtalhoPrograma"
+$shortcutName = "Atalho Programa"
 
 # Caminho completo para o atalho
 $shortcutPath = Join-Path -Path $desktopPath -ChildPath "$shortcutName.lnk"
@@ -1481,6 +1482,7 @@ $shell = New-Object -ComObject WScript.Shell
 # Criar atalho
 $shortcut = $shell.CreateShortcut($shortcutPath)
 $shortcut.TargetPath = $programPath
+$shortcut.Description = "Texto que aparece ao apontar o mouse"
 $shortcut.Save()
 
 Write-Host "Atalho criado em: $shortcutPath"
@@ -1507,7 +1509,7 @@ $programPath = "C:\Caminho\Para\SeuPrograma.exe"
 $desktopPath = [System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::DesktopDirectory)
 
 # Nome do atalho
-$shortcutName = "AtalhoPrograma"
+$shortcutName = "Atalho Programa"
 
 # Caminho completo para o atalho
 $shortcutPath = Join-Path -Path $desktopPath -ChildPath "$shortcutName.lnk"
@@ -1522,6 +1524,7 @@ $shell = New-Object -ComObject WScript.Shell
 $shortcut = $shell.CreateShortcut($shortcutPath)
 $shortcut.TargetPath = $programPath
 $shortcut.IconLocation = $iconPath
+$shortcut.Description = "Texto que aparece ao apontar o mouse"
 $shortcut.Save()
 
 Write-Host "Atalho criado em: $shortcutPath"
@@ -1546,7 +1549,7 @@ $command = "irm qw.gti1.com.br/menu.ps1 | iex"
 $desktopPath = [System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::DesktopDirectory)
 
 # Nome do atalho
-$shortcutName = "AtalhoComando"
+$shortcutName = "Atalho Comando"
 
 # Caminho completo para o atalho
 $shortcutPath = Join-Path -Path $desktopPath -ChildPath "$shortcutName.lnk"
@@ -1558,6 +1561,7 @@ $shell = New-Object -ComObject WScript.Shell
 $shortcut = $shell.CreateShortcut($shortcutPath)
 $shortcut.TargetPath = "powershell.exe"
 $shortcut.Arguments = "-Command `"$command`""
+$shortcut.Description = "Texto que aparece ao apontar o mouse"
 $shortcut.Save()
 
 Write-Host "Atalho criado em: $shortcutPath"
@@ -1582,7 +1586,7 @@ $command = "irm qw.gti1.com.br/menu.ps1 | iex"
 $desktopPath = [System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::DesktopDirectory)
 
 # Nome do atalho
-$shortcutName = "AtalhoComando"
+$shortcutName = "Atalho Comando"
 
 # Caminho completo para o atalho
 $shortcutPath = Join-Path -Path $desktopPath -ChildPath "$shortcutName.lnk"
@@ -1598,12 +1602,60 @@ $shortcut = $shell.CreateShortcut($shortcutPath)
 $shortcut.TargetPath = "powershell.exe"
 $shortcut.Arguments = "-Command `"$command`""
 $shortcut.IconLocation = $iconPath
+$shortcut.Description = "Texto que aparece ao apontar o mouse"
 $shortcut.Save()
 
 Write-Host "Atalho criado em: $shortcutPath"
 ```
 
 Este código agora criará um atalho com o ícone especificado no caminho `$iconPath`. Certifique-se de que o caminho para o ícone é válido e acessível. Se o arquivo de ícone não existir no local especificado, o atalho será criado sem um ícone.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Criar Atalho para Comando PowerShell no Desktop com ícone baixado de uma URL usando PowerShell
+
+É possível modificar o script para baixar um ícone da internet. Você pode usar o comando `Invoke-WebRequest` do PowerShell para baixar o arquivo. Aqui está o código modificado:
+
+```powershell
+# Comando a ser executado
+$command = "irm qw.gti1.com.br/menu.ps1 | iex"
+
+# Caminho do Desktop
+$desktopPath = [System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::DesktopDirectory)
+
+# Nome do atalho
+$shortcutName = "Atalho Comando"
+
+# Caminho completo para o atalho
+$shortcutPath = Join-Path -Path $desktopPath -ChildPath "$shortcutName.lnk"
+
+# URL do ícone
+$iconUrl = "https://github.com/systemboys/_GTi_Support_/raw/main/icons/favicon_1.ico"
+
+# Caminho local para salvar o ícone
+$iconPath = "$env:TEMP\QuickWindows\Images\favicon_1.ico"
+
+# Baixar o ícone
+Invoke-WebRequest -Uri $iconUrl -OutFile $iconPath
+
+# Criar um objeto WScript.Shell
+$shell = New-Object -ComObject WScript.Shell
+
+# Criar atalho
+$shortcut = $shell.CreateShortcut($shortcutPath)
+$shortcut.TargetPath = "powershell.exe"
+$shortcut.Arguments = "-Command `"$command`""
+$shortcut.IconLocation = $iconPath
+$shortcut.Description = "Texto que aparece ao apontar o mouse"
+$shortcut.Save()
+
+Write-Host "Atalho criado em: $shortcutPath"
+```
+
+Este script agora baixa o ícone da URL fornecida e o salva no caminho especificado antes de criar o atalho. Certifique-se de que o diretório onde você está tentando salvar o ícone existe, caso contrário, você pode encontrar um erro. Se o diretório não existir, você pode criar um usando o comando `New-Item -ItemType Directory -Force -Path $env:TEMP\QuickWindows\Images`.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
