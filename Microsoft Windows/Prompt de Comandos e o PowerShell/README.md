@@ -1636,7 +1636,7 @@ $shortcutPath = Join-Path -Path $desktopPath -ChildPath "$shortcutName.lnk"
 $iconUrl = "https://github.com/systemboys/_GTi_Support_/raw/main/icons/favicon_1.ico"
 
 # Caminho local para salvar o ícone
-$iconPath = "$env:USERPROFILE\Downloads\favicon_1.ico"
+$iconPath = "$env:USERPROFILE\favicon_1.ico"
 
 # Baixar o ícone
 Invoke-WebRequest -Uri $iconUrl -OutFile $iconPath
