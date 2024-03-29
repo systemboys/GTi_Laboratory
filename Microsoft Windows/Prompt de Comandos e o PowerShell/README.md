@@ -68,7 +68,7 @@
 - [Verificação e Aplicação Dinâmica da Versão do PowerShell em Scripts CMD](#verifica%C3%A7%C3%A3o-e-aplica%C3%A7%C3%A3o-din%C3%A2mica-da-vers%C3%A3o-do-powershell-em-scripts-cmd "Verificação e Aplicação Dinâmica da Versão do PowerShell em Scripts CMD")
 - [Modificando Informações do OEM no Registro do Windows Usando PowerShell](#modificando-informa%C3%A7%C3%B5es-do-oem-no-registro-do-windows-usando-powershell "Modificando Informações do OEM no Registro do Windows Usando PowerShell")
 - [Execução Condicional de Recursos (Exemplo de execução de Rotinas)](#execu%C3%A7%C3%A3o-condicional-de-recursos-exemplo-de-execu%C3%A7%C3%A3o-de-rotinas "Execução Condicional de Recursos (Exemplo de execução de Rotinas)")
-- [Script de Verificação de Bateria e Relatório HTML](# "Script de Verificação de Bateria e Relatório HTML")
+- [Script de Verificação de Bateria e Relatório HTML](#script-de-verifica%C3%A7%C3%A3o-de-bateria-e-relat%C3%B3rio-html "Script de Verificação de Bateria e Relatório HTML")
 
 ---
 
