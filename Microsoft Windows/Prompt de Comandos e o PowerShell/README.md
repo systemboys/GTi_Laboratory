@@ -68,6 +68,7 @@
 - [Verificação e Aplicação Dinâmica da Versão do PowerShell em Scripts CMD](#verifica%C3%A7%C3%A3o-e-aplica%C3%A7%C3%A3o-din%C3%A2mica-da-vers%C3%A3o-do-powershell-em-scripts-cmd "Verificação e Aplicação Dinâmica da Versão do PowerShell em Scripts CMD")
 - [Modificando Informações do OEM no Registro do Windows Usando PowerShell](#modificando-informa%C3%A7%C3%B5es-do-oem-no-registro-do-windows-usando-powershell "Modificando Informações do OEM no Registro do Windows Usando PowerShell")
 - [Execução Condicional de Recursos (Exemplo de execução de Rotinas)](#execu%C3%A7%C3%A3o-condicional-de-recursos-exemplo-de-execu%C3%A7%C3%A3o-de-rotinas "Execução Condicional de Recursos (Exemplo de execução de Rotinas)")
+- [Script de Verificação de Bateria e Relatório HTML](# "Script de Verificação de Bateria e Relatório HTML")
 
 ---
 
@@ -3075,6 +3076,46 @@ $Command = "Start-Process powershell -ArgumentList '-NoExit','-File','$File' -Wa
 ```
 
 Com essa alteração, ao executar o script, ele deve abrir uma nova janela do Windows PowerShell e exibir a execução do arquivo .ps1.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Script de Verificação de Bateria e Relatório HTML
+
+Aqui está um script em **PowerShell** que faz gera um arquivo de diagnóstico da bateria:
+
+```powershell
+# Obtém a data e a hora atual
+$dataHoraAtual = Get-Date -Format "yyyy-MM-dd_HHmmss"
+
+# Define o nome do arquivo
+$nomeArquivo = "battery-report_$dataHoraAtual.html"
+
+# Define o caminho completo do arquivo
+$caminhoArquivo = Join-Path $env:TEMP $nomeArquivo
+
+# Executa o comando powercfg /batteryreport e gera o arquivo html
+Invoke-Expression "powercfg /batteryreport /output `"$caminhoArquivo`""
+
+# Exibe o caminho do arquivo gerado
+Write-Output "Relatório de bateria gerado em: $caminhoArquivo"
+
+# Abre o arquivo no navegador padrão do sistema
+Start-Process $caminhoArquivo
+```
+
+Este script PowerShell realiza as seguintes ações:
+
+1. Obtém a data e a hora atual do sistema e armazena na variável `$dataHoraAtual`.
+2. Define o nome do arquivo de relatório da bateria como `battery-report_$dataHoraAtual.html`, onde `$dataHoraAtual` é a data e hora atuais.
+3. Define o caminho completo do arquivo de relatório da bateria, armazenando-o na pasta TEMP do sistema e armazena esse caminho na variável `$caminhoArquivo`.
+4. Executa o comando `powercfg /batteryreport`, que gera um relatório de bateria do sistema em formato HTML. O relatório é salvo no caminho especificado pela variável `$caminhoArquivo`.
+5. Exibe o caminho do arquivo de relatório da bateria gerado.
+6. Abre o arquivo de relatório da bateria no navegador padrão do sistema.
+
+Portanto, o objetivo principal deste script é gerar um relatório de bateria do sistema em formato HTML e abri-lo no navegador padrão do sistema. O relatório inclui informações detalhadas sobre a bateria do sistema, como a capacidade da bateria, uso e histórico de carga/descarga. Este script pode ser útil para diagnosticar problemas de bateria ou para monitorar a saúde da bateria ao longo do tempo.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
