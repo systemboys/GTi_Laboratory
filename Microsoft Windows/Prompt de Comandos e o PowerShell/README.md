@@ -34,6 +34,8 @@
 - [Criar Atalho para Comando PowerShell no Desktop usando PowerShell](#criar-atalho-para-comando-powershell-no-desktop-usando-powershell "Criar Atalho para Comando PowerShell no Desktop usando PowerShell")
 - [Criar Atalho para Comando PowerShell no Desktop com ícone personalizado usando PowerShell](#criar-atalho-para-comando-powershell-no-desktop-com-%C3%ADcone-personalizado-usando-powershell "Criar Atalho para Comando PowerShell no Desktop com ícone personalizado usando PowerShell")
 - [Criar Atalho para Comando PowerShell no Desktop com ícone baixado de uma URL usando PowerShell](#criar-atalho-para-comando-powershell-no-desktop-com-%C3%ADcone-baixado-de-uma-url-usando-powershell "Criar Atalho para Comando PowerShell no Desktop com ícone baixado de uma URL usando PowerShell")
+- [Automatizando a Criação de Diretórios em locais de ambientes](# "Automatizando a Criação de Diretórios em locais de ambientes")
+- [Automatizando a Criação de Diretórios em Local Fixo](# "Automatizando a Criação de Diretórios em Local Fixo")
 - [Verificando versão do sistema operacional](#verificando-vers%C3%A3o-do-sistema-operacional "Verificando versão do sistema operacional")
 - [Script de Instalação Silenciosa de Software (verificação por chave de registro)](#script-de-instala%C3%A7%C3%A3o-silenciosa-de-software-verifica%C3%A7%C3%A3o-por-chave-de-registro "Script de Instalação Silenciosa de Software (verificação por chave de registro)")
 - [Arquivo (.ps1) para instalação de pacotes](#arquivo-ps1-para-instala%C3%A7%C3%A3o-de-pacotes "Arquivo (.ps1) para instalação de pacotes")
@@ -1657,6 +1659,69 @@ Write-Host "Atalho criado em: $shortcutPath"
 ```
 
 Este script agora baixa o ícone da URL fornecida e o salva no caminho especificado antes de criar o atalho. Certifique-se de que o diretório onde você está tentando salvar o ícone existe, caso contrário, você pode encontrar um erro. Se o diretório não existir, você pode criar um usando o comando `New-Item -ItemType Directory -Force -Path $env:TEMP\QuickWindows\Images`.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+### Automatizando a Criação de Diretórios em locais de ambientes
+
+Aqui está um script simples em PowerShell que cria um diretório chamado "GTi_Support" no diretório do perfil do usuário:
+
+```powershell
+# Define o nome do diretório
+$dirName = "GTi_Support"
+
+# Define o caminho completo do diretório
+$fullPath = Join-Path -Path $env:USERPROFILE -ChildPath $dirName
+
+# Cria o diretório se ele não existir
+if(!(Test-Path -Path $fullPath))
+{
+    New-Item -ItemType Directory -Path $fullPath
+    Write-Host "Diretório '$dirName' criado com sucesso em '$env:USERPROFILE'"
+}
+else
+{
+    Write-Host "Diretório '$dirName' já existe em '$env:USERPROFILE'"
+}
+```
+
+Este script verifica se o diretório já existe. Se não existir, ele cria o diretório. Se já existir, ele informa que o diretório já existe.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+### Automatizando a Criação de Diretórios em Local Fixo
+
+Aqui está um script em PowerShell que cria um diretório em um local fixo definido em uma variável. No exemplo, o local é "D:\\":
+
+```powershell
+# Define o nome do diretório
+$dirName = "Seu_Diretório"
+
+# Define o caminho base onde o diretório será criado
+$basePath = "D:\\"
+
+# Define o caminho completo do diretório
+$fullPath = Join-Path -Path $basePath -ChildPath $dirName
+
+# Cria o diretório se ele não existir
+if(!(Test-Path -Path $fullPath))
+{
+    New-Item -ItemType Directory -Path $fullPath
+    Write-Host "Diretório '$dirName' criado com sucesso em '$basePath'"
+}
+else
+{
+    Write-Host "Diretório '$dirName' já existe em '$basePath'"
+}
+```
+
+Este script verifica se o diretório já existe no local especificado. Se não existir, ele cria o diretório. Se já existir, ele informa que o diretório já existe.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
