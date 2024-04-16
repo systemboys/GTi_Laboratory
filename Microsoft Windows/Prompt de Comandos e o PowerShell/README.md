@@ -2626,7 +2626,7 @@ Write-Host "Argumento 2: $($args[1])"
 
 Certifique-se de substituir `.\file2.ps1` pelo caminho correto do primeiro arquivo.ps1 que você deseja executar. Os argumentos passados para o arquivo podem ser acessados usando o objeto `$args`, onde `$args[0]` representa o primeiro argumento e `$args[1]` representa o segundo argumento.
 
-> ( i ) Veja exemplos
+> ( i ) Veja exemplos!
 
 Você pode usar a variável automática `$args`, que é uma matriz de todos os argumentos não reconhecidos que são passados para o script. Aqui está um exemplo de como você pode fazer isso:
 
