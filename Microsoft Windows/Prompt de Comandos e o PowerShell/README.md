@@ -2626,6 +2626,29 @@ Write-Host "Argumento 2: $($args[1])"
 
 Certifique-se de substituir `.\file2.ps1` pelo caminho correto do primeiro arquivo.ps1 que você deseja executar. Os argumentos passados para o arquivo podem ser acessados usando o objeto `$args`, onde `$args[0]` representa o primeiro argumento e `$args[1]` representa o segundo argumento.
 
+> ( i ) Veja exemplos
+
+Você pode usar a variável automática `$args`, que é uma matriz de todos os argumentos não reconhecidos que são passados para o script. Aqui está um exemplo de como você pode fazer isso:
+
+```powershell
+if ($args.Count -eq 0) {
+    Write-Host "Nenhum argumento fornecido. Use 1 para desligar o computador e 2 para reiniciar."
+} else {
+    $argumento = $args[0]
+    if ($argumento -eq 1) {
+        Stop-Computer -Force
+    } elseif ($argumento -eq 2) {
+        Restart-Computer -Force
+    } else {
+        Write-Host "Argumento desconhecido. Use 1 para desligar o computador e 2 para reiniciar."
+    }
+}
+```
+
+Neste exemplo, o script verifica se algum argumento foi fornecido (`$args.Count -eq 0`). Se nenhum argumento foi fornecido, ele exibe uma mensagem para o usuário. Caso contrário, ele usa o primeiro argumento (`$args[0]`) como o valor de `$argumento`.
+
+Por favor, note que `$args` é uma matriz baseada em zero, então `$args[0]` se refere ao primeiro argumento. Além disso, `$args` não suporta a validação de parâmetros ou a marcação de parâmetros como obrigatórios, como você pode fazer com a palavra-chave 'param'. Portanto, você pode precisar adicionar sua própria lógica para validar os argumentos.
+
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
