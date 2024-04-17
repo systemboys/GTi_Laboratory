@@ -34,6 +34,7 @@
 - [Criar Atalho para Comando PowerShell no Desktop usando PowerShell](#criar-atalho-para-comando-powershell-no-desktop-usando-powershell "Criar Atalho para Comando PowerShell no Desktop usando PowerShell")
 - [Criar Atalho para Comando PowerShell no Desktop com ícone personalizado usando PowerShell](#criar-atalho-para-comando-powershell-no-desktop-com-%C3%ADcone-personalizado-usando-powershell "Criar Atalho para Comando PowerShell no Desktop com ícone personalizado usando PowerShell")
 - [Criar Atalho para Comando PowerShell no Desktop com ícone baixado de uma URL usando PowerShell](#criar-atalho-para-comando-powershell-no-desktop-com-%C3%ADcone-baixado-de-uma-url-usando-powershell "Criar Atalho para Comando PowerShell no Desktop com ícone baixado de uma URL usando PowerShell")
+- [Automação de Criação de Atalhos para Aplicativos Instalados](# "Automação de Criação de Atalhos para Aplicativos Instalados")
 - [Automatizando a Criação de Diretórios em locais de ambientes](#automatizando-a-cria%C3%A7%C3%A3o-de-diret%C3%B3rios-em-locais-de-ambientes "Automatizando a Criação de Diretórios em locais de ambientes")
 - [Automatizando a Criação de Diretórios em Local Fixo](#automatizando-a-cria%C3%A7%C3%A3o-de-diret%C3%B3rios-em-local-fixo "Automatizando a Criação de Diretórios em Local Fixo")
 - [Verificando versão do sistema operacional](#verificando-vers%C3%A3o-do-sistema-operacional "Verificando versão do sistema operacional")
@@ -1665,7 +1666,49 @@ Este script agora baixa o ícone da URL fornecida e o salva no caminho especific
 
 ---
 
-### Automatizando a Criação de Diretórios em locais de ambientes
+## Automação de Criação de Atalhos para Aplicativos Instalados
+
+Claro, posso ajudar com isso. Aqui está um script em PowerShell que verifica se o Microsoft Office está instalado e, se estiver, cria atalhos na área de trabalho para os aplicativos do Office especificados:
+
+```powershell
+# Caminhos dos aplicativos do Office
+$officeApps = @{
+    "Excel" = "${env:ProgramFiles}\Microsoft Office\root\Office16\EXCEL.EXE";
+    "PowerPoint" = "${env:ProgramFiles}\Microsoft Office\root\Office16\POWERPNT.EXE";
+    "Visio" = "${env:ProgramFiles}\Microsoft Office\root\Office16\VISIO.EXE";
+    "Word" = "${env:ProgramFiles}\Microsoft Office\root\Office16\WINWORD.EXE";
+    "Outlook" = "${env:ProgramFiles}\Microsoft Office\root\Office16\OUTLOOK.EXE";
+    "OneNote" = "${env:ProgramFiles}\Microsoft Office\root\Office16\ONENOTE.EXE";
+}
+
+# Verifica se o Office está instalado
+if (Test-Path "${env:ProgramFiles}\Microsoft Office\root\Office16") {
+    Write-Host "Microsoft Office está instalado."
+
+    # Cria atalhos para cada aplicativo do Office
+    foreach ($app in $officeApps.GetEnumerator()) {
+        $WshShell = New-Object -comObject WScript.Shell
+        $Shortcut = $WshShell.CreateShortcut("$Home\Desktop\$($app.Name).lnk")
+        $Shortcut.TargetPath = $app.Value
+        $Shortcut.IconLocation = $app.Value
+        $Shortcut.Description = "Microsoft $($app.Name)"
+        $Shortcut.Save()
+    }
+
+    Write-Host "Atalhos criados com sucesso na área de trabalho."
+} else {
+    Write-Host "Microsoft Office não está instalado."
+}
+```
+
+Este script verifica se o Microsoft Office está instalado verificando a existência do diretório do Office no sistema. Se o Office estiver instalado, ele criará atalhos na área de trabalho para cada um dos aplicativos do Office especificados. Se o Office não estiver instalado, ele exibirá uma mensagem informando que o Office não está instalado. Por favor, teste este script em um ambiente seguro antes de usá-lo em um ambiente de produção.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Automatizando a Criação de Diretórios em locais de ambientes
 
 Aqui está um script simples em PowerShell que cria um diretório chamado "GTi_Support" no diretório do perfil do usuário:
 
@@ -1695,7 +1738,7 @@ Este script verifica se o diretório já existe. Se não existir, ele cria o dir
 
 ---
 
-### Automatizando a Criação de Diretórios em Local Fixo
+## Automatizando a Criação de Diretórios em Local Fixo
 
 Aqui está um script em PowerShell que cria um diretório em um local fixo definido em uma variável. No exemplo, o local é "D:\\":
 
