@@ -1668,7 +1668,7 @@ Este script agora baixa o ícone da URL fornecida e o salva no caminho especific
 
 ## Automação de Criação de Atalhos para Aplicativos Instalados
 
-Claro, posso ajudar com isso. Aqui está um script em PowerShell que verifica se o Microsoft Office está instalado e, se estiver, cria atalhos na área de trabalho para os aplicativos do Office especificados:
+Aqui está um script em PowerShell que verifica se o Microsoft Office está instalado e, se estiver, cria atalhos na área de trabalho para os aplicativos do Office especificados:
 
 ```powershell
 # Caminhos dos aplicativos do Office
@@ -1702,6 +1702,52 @@ if (Test-Path "${env:ProgramFiles}\Microsoft Office\root\Office16") {
 ```
 
 Este script verifica se o Microsoft Office está instalado verificando a existência do diretório do Office no sistema. Se o Office estiver instalado, ele criará atalhos na área de trabalho para cada um dos aplicativos do Office especificados. Se o Office não estiver instalado, ele exibirá uma mensagem informando que o Office não está instalado. Por favor, teste este script em um ambiente seguro antes de usá-lo em um ambiente de produção.
+
+Você pode adaptar o "[Automação de Criação de Atalhos para Aplicativos Instalados](#automa%C3%A7%C3%A3o-de-cria%C3%A7%C3%A3o-de-atalhos-para-aplicativos-instalados "Automação de Criação de Atalhos para Aplicativos Instalados")" para usar a mesma metodologia de criação de atalhos do "[Criar Atalho para Programa no Desktop usando PowerShell](#criar-atalho-para-programa-no-desktop-usando-powershell "Criar Atalho para Programa no Desktop usando PowerShell")". Aqui está o script adaptado:
+
+```powershell
+# Caminhos dos aplicativos do Office
+$officeApps = @{
+    "Excel" = "${env:ProgramFiles}\Microsoft Office\root\Office16\EXCEL.EXE";
+    "PowerPoint" = "${env:ProgramFiles}\Microsoft Office\root\Office16\POWERPNT.EXE";
+    "Visio" = "${env:ProgramFiles}\Microsoft Office\root\Office16\VISIO.EXE";
+    "Word" = "${env:ProgramFiles}\Microsoft Office\root\Office16\WINWORD.EXE";
+    "Outlook" = "${env:ProgramFiles}\Microsoft Office\root\Office16\OUTLOOK.EXE";
+    "OneNote" = "${env:ProgramFiles}\Microsoft Office\root\Office16\ONENOTE.EXE";
+}
+
+# Caminho do Desktop
+$desktopPath = [System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::DesktopDirectory)
+
+# Verifica se o Office está instalado
+if (Test-Path "${env:ProgramFiles}\Microsoft Office\root\Office16") {
+    Write-Host "Microsoft Office is installed."
+
+    # Cria atalhos para cada aplicativo do Office
+    foreach ($app in $officeApps.GetEnumerator()) {
+        # Nome do atalho
+        $shortcutName = $app.Name
+
+        # Caminho completo para o atalho
+        $shortcutPath = Join-Path -Path $desktopPath -ChildPath "$shortcutName.lnk"
+
+        # Criar um objeto WScript.Shell
+        $shell = New-Object -ComObject WScript.Shell
+
+        # Criar atalho
+        $shortcut = $shell.CreateShortcut($shortcutPath)
+        $shortcut.TargetPath = $app.Value
+        $shortcut.Description = "Microsoft $($app.Name)"
+        $shortcut.Save()
+    }
+
+    Write-Host "Shortcuts successfully created on the desktop."
+} else {
+    Write-Host "Microsoft Office is not installed."
+}
+```
+
+Este script adaptado deve funcionar tanto no Windows 10 quanto no Windows 11. Ele usa a mesma abordagem do "Script 2" para criar atalhos, que é compatível com ambas as versões do Windows.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
