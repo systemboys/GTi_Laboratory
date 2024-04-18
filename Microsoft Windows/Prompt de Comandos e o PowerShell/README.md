@@ -1705,7 +1705,7 @@ Este script verifica se o Microsoft Office está instalado verificando a existê
 
 > **( i ) Versões diferentes do Windows (Ex.: Windows 10 e 11)!**
 >
-> O script anterior não funciona no Windows 10, funciona apenas no 11. Para contornar isso, abaixo está o script anterior adaptado usando a metodologia de criação de atalhos de script que cria atalhos em ambas as versões.
+> O script anterior não funciona no Windows 10, funciona apenas no 11. Para contornar isso, ele foi adaptado usando a metodologia de criação de atalhos de um script que cria atalhos em ambas as versões.
 
 Você pode adaptar o script "[Automação de Criação de Atalhos para Aplicativos Instalados](#automa%C3%A7%C3%A3o-de-cria%C3%A7%C3%A3o-de-atalhos-para-aplicativos-instalados "Automação de Criação de Atalhos para Aplicativos Instalados")" para usar a mesma metodologia de criação de atalhos do script "[Criar Atalho para Programa no Desktop usando PowerShell](#criar-atalho-para-programa-no-desktop-usando-powershell "Criar Atalho para Programa no Desktop usando PowerShell")". Aqui está o script adaptado:
 
@@ -1751,7 +1751,7 @@ if (Test-Path "${env:ProgramFiles}\Microsoft Office\root\Office16") {
 }
 ```
 
-Este script adaptado deve funcionar tanto no Windows 10 quanto no Windows 11. Ele usa a mesma abordagem do "Script 2" para criar atalhos, que é compatível com ambas as versões do Windows.
+Este script adaptado deve funcionar tanto no Windows 10 quanto no Windows 11. Ele usa a mesma abordagem de outro script para criar atalhos, que é compatível com ambas as versões do Windows.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
