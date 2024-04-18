@@ -72,6 +72,7 @@
 - [Modificando Informações do OEM no Registro do Windows Usando PowerShell](#modificando-informa%C3%A7%C3%B5es-do-oem-no-registro-do-windows-usando-powershell "Modificando Informações do OEM no Registro do Windows Usando PowerShell")
 - [Execução Condicional de Recursos (Exemplo de execução de Rotinas)](#execu%C3%A7%C3%A3o-condicional-de-recursos-exemplo-de-execu%C3%A7%C3%A3o-de-rotinas "Execução Condicional de Recursos (Exemplo de execução de Rotinas)")
 - [Script de Verificação de Bateria e Relatório HTML](#script-de-verifica%C3%A7%C3%A3o-de-bateria-e-relat%C3%B3rio-html "Script de Verificação de Bateria e Relatório HTML")
+- [Ativando o Visualizador de Fotos do Windows para Extensões de Imagem Específicas](# "Ativando o Visualizador de Fotos do Windows para Extensões de Imagem Específicas")
 
 ---
 
@@ -3352,6 +3353,29 @@ Este script PowerShell realiza as seguintes ações:
 6. Abre o arquivo de relatório da bateria no navegador padrão do sistema.
 
 Portanto, o objetivo principal deste script é gerar um relatório de bateria do sistema em formato HTML e abri-lo no navegador padrão do sistema. O relatório inclui informações detalhadas sobre a bateria do sistema, como a capacidade da bateria, uso e histórico de carga/descarga. Este script pode ser útil para diagnosticar problemas de bateria ou para monitorar a saúde da bateria ao longo do tempo.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Ativando o Visualizador de Fotos do Windows para Extensões de Imagem Específicas
+
+É possível usar o PowerShell para alterar as associações de arquivo no registro do Windows. Aqui está um exemplo de como você pode fazer isso para os tipos de arquivo que mencionou:
+
+```powershell
+$extensions = @('.jpg', '.jpeg', '.png', '.bmp')
+foreach ($extension in $extensions) {
+    $path = "HKCU:\Software\Classes\$extension"
+    Set-ItemProperty -Path $path -Name "(Default)" -Value "PhotoViewer.FileAssoc.Tiff"
+}
+```
+
+Este script percorre cada extensão de arquivo na lista `$extensions` e define o valor padrão da chave de registro correspondente para `PhotoViewer.FileAssoc.Tiff`, que é o valor necessário para abrir arquivos com o Visualizador de Fotos do Windows.
+
+Por favor, note que este script deve ser executado com privilégios de administrador. Além disso, como sempre, é uma boa ideia fazer um backup do registro ou criar um ponto de restauração antes de fazer alterações no registro. 
+
+Lembre-se também de que o Visualizador de Fotos do Windows pode não estar disponível em algumas versões do Windows 10 e 11, a menos que seja instalado separadamente. Se o Visualizador de Fotos do Windows não estiver disponível, essa alteração no registro não terá efeito.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
