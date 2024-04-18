@@ -1703,7 +1703,7 @@ if (Test-Path "${env:ProgramFiles}\Microsoft Office\root\Office16") {
 
 Este script verifica se o Microsoft Office está instalado verificando a existência do diretório do Office no sistema. Se o Office estiver instalado, ele criará atalhos na área de trabalho para cada um dos aplicativos do Office especificados. Se o Office não estiver instalado, ele exibirá uma mensagem informando que o Office não está instalado. Por favor, teste este script em um ambiente seguro antes de usá-lo em um ambiente de produção.
 
-> **( i ) Versões diferentes do Windows (Ex.: Windows 10 e 11)!**
+> **( i ) Versões diferentes do Windows (Ex.: Windows 10 e 11)**
 >
 > O script anterior não funciona no Windows 10, funciona apenas no 11. Para contornar isso, ele foi adaptado usando a metodologia de criação de atalhos de um script que cria atalhos em ambas as versões.
 
@@ -1752,6 +1752,61 @@ if (Test-Path "${env:ProgramFiles}\Microsoft Office\root\Office16") {
 ```
 
 Este script adaptado deve funcionar tanto no Windows 10 quanto no Windows 11. Ele usa a mesma abordagem de outro script para criar atalhos, que é compatível com ambas as versões do Windows.
+
+> **( i ) Com verificação de existência de arquivo de execução.**
+>
+> O script a seguir, verifica se o arquivo de execução de cada programa listado no array existe antes de criar o atalho.
+
+Esse script verifica se o arquivo de execução de cada programa listado no array existe antes de criar o atalho. Aqui está o script modificado:
+
+```powershell
+# Caminhos dos aplicativos do Office
+$officeApps = @{
+    "Excel" = "${env:ProgramFiles}\Microsoft Office\root\Office16\EXCEL.EXE";
+    "PowerPoint" = "${env:ProgramFiles}\Microsoft Office\root\Office16\POWERPNT.EXE";
+    "Visio" = "${env:ProgramFiles}\Microsoft Office\root\Office16\VISIO.EXE";
+    "Word" = "${env:ProgramFiles}\Microsoft Office\root\Office16\WINWORD.EXE";
+    "Outlook" = "${env:ProgramFiles}\Microsoft Office\root\Office16\OUTLOOK.EXE";
+    "OneNote" = "${env:ProgramFiles}\Microsoft Office\root\Office16\ONENOTE.EXE";
+}
+
+# Caminho do Desktop
+$desktopPath = [System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::DesktopDirectory)
+
+# Verifica se o Office está instalado
+if (Test-Path "${env:ProgramFiles}\Microsoft Office\root\Office16") {
+    Write-Host "Microsoft Office is installed."
+
+    # Cria atalhos para cada aplicativo do Office
+    foreach ($app in $officeApps.GetEnumerator()) {
+        # Verifica se o arquivo de execução do programa existe
+        if (Test-Path $app.Value) {
+            # Nome do atalho
+            $shortcutName = $app.Name
+
+            # Caminho completo para o atalho
+            $shortcutPath = Join-Path -Path $desktopPath -ChildPath "$shortcutName.lnk"
+
+            # Criar um objeto WScript.Shell
+            $shell = New-Object -ComObject WScript.Shell
+
+            # Criar atalho
+            $shortcut = $shell.CreateShortcut($shortcutPath)
+            $shortcut.TargetPath = $app.Value
+            $shortcut.Description = "Microsoft $($app.Name)"
+            $shortcut.Save()
+
+            Write-Host "Shortcut for $shortcutName successfully created on the desktop."
+        } else {
+            Write-Host "Executable for $shortcutName does not exist. Skipping..."
+        }
+    }
+} else {
+    Write-Host "Microsoft Office is not installed."
+}
+```
+
+Este script modificado irá verificar a existência do arquivo de execução de cada programa antes de criar o atalho. Se o arquivo de execução não existir, ele irá pular para o próximo programa na lista. Se o arquivo de execução existir, ele irá criar o atalho no desktop.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
