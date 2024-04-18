@@ -1703,6 +1703,10 @@ if (Test-Path "${env:ProgramFiles}\Microsoft Office\root\Office16") {
 
 Este script verifica se o Microsoft Office está instalado verificando a existência do diretório do Office no sistema. Se o Office estiver instalado, ele criará atalhos na área de trabalho para cada um dos aplicativos do Office especificados. Se o Office não estiver instalado, ele exibirá uma mensagem informando que o Office não está instalado. Por favor, teste este script em um ambiente seguro antes de usá-lo em um ambiente de produção.
 
+> ( i ) Versões diferentes do Windows (Ex.: Windows 10 e 11)!
+>
+> O script anterior não funciona no Windows 10, funciona apenas no 11. Para contornar isso, abaixo está o script de cima adaptado usando a metodologia de criação de atalhos de script que cria atalhos em ambas as versões.
+
 Você pode adaptar o script "[Automação de Criação de Atalhos para Aplicativos Instalados](#automa%C3%A7%C3%A3o-de-cria%C3%A7%C3%A3o-de-atalhos-para-aplicativos-instalados "Automação de Criação de Atalhos para Aplicativos Instalados")" para usar a mesma metodologia de criação de atalhos do script "[Criar Atalho para Programa no Desktop usando PowerShell](#criar-atalho-para-programa-no-desktop-usando-powershell "Criar Atalho para Programa no Desktop usando PowerShell")". Aqui está o script adaptado:
 
 ```powershell
