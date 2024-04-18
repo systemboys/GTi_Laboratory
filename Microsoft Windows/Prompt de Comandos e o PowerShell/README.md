@@ -72,7 +72,7 @@
 - [Modificando Informações do OEM no Registro do Windows Usando PowerShell](#modificando-informa%C3%A7%C3%B5es-do-oem-no-registro-do-windows-usando-powershell "Modificando Informações do OEM no Registro do Windows Usando PowerShell")
 - [Execução Condicional de Recursos (Exemplo de execução de Rotinas)](#execu%C3%A7%C3%A3o-condicional-de-recursos-exemplo-de-execu%C3%A7%C3%A3o-de-rotinas "Execução Condicional de Recursos (Exemplo de execução de Rotinas)")
 - [Script de Verificação de Bateria e Relatório HTML](#script-de-verifica%C3%A7%C3%A3o-de-bateria-e-relat%C3%B3rio-html "Script de Verificação de Bateria e Relatório HTML")
-- [Ativando o Visualizador de Fotos do Windows para Extensões de Imagem Específicas](# "Ativando o Visualizador de Fotos do Windows para Extensões de Imagem Específicas")
+- [Ativando o Visualizador de Fotos do Windows para Extensões de Imagem Específicas](#ativando-o-visualizador-de-fotos-do-windows-para-extens%C3%B5es-de-imagem-espec%C3%ADficas "Ativando o Visualizador de Fotos do Windows para Extensões de Imagem Específicas")
 
 ---
 
