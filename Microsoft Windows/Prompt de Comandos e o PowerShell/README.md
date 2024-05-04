@@ -16,6 +16,7 @@
 - [Guia Essencial de Comandos e Variáveis de Ambiente no Windows](#guia-essencial-de-comandos-e-vari%C3%A1veis-de-ambiente-no-windows "Guia Essencial de Comandos e Variáveis de Ambiente no Windows")
 - [Passagem de Argumentos entre Arquivos: PowerShell e Batch (CMD)](#passagem-de-argumentos-entre-arquivos-powershell-e-batch-cmd "Passagem de Argumentos entre Arquivos: PowerShell e Batch (CMD)")
 - [Compartilhando Variáveis e Funções entre Arquivos .CMD no Batch](#compartilhando-vari%C3%A1veis-e-fun%C3%A7%C3%B5es-entre-arquivos-cmd-no-batch "Compartilhando Variáveis e Funções entre Arquivos .CMD no Batch")
+- [Utilizando o Comando CHKDSK no Windows para corrigir erros](#utilizando-o-comando-chkdsk-no-windows-para-corrigir-erros "Utilizando o Comando CHKDSK no Windows para corrigir erros")
 
 > Microsoft **_PowerShell_**
 
@@ -596,6 +597,24 @@ REM Restante do código do arquivo atual...
 ```
 
 Dessa forma, ao chamar `functions.cmd` com `call`, todas as variáveis e funções definidas nesse arquivo se tornarão disponíveis para uso no arquivo `.cmd` atual. Lembre-se de ajustar o caminho do arquivo conforme a estrutura do seu diretório.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Utilizando o Comando CHKDSK no Windows para corrigir erros
+
+O comando `chkdsk` é uma ferramenta do Windows utilizada para verificar a integridade do sistema de arquivos de um disco rígido ou disquete. Quando executado sem parâmetros, o `chkdsk` apenas exibe o status do volume e não corrige erros. No entanto, quando utilizado com os parâmetros `/f` e `/r`, ele pode corrigir erros no volume.
+
+- **/f**: Esse parâmetro instrui o `chkdsk` a corrigir quaisquer erros encontrados no disco. O disco precisa estar bloqueado para que o `chkdsk` possa executar as correções. Se o `chkdsk` não conseguir bloquear o disco, será exibida uma mensagem perguntando se você deseja agendar a verificação para a próxima vez que o computador for reiniciado.
+- **/r**: Este parâmetro faz com que o `chkdsk` localize setores defeituosos no disco e recupere informações legíveis. Assim como o parâmetro `/f`, o disco precisa estar bloqueado. O `/r` inclui a funcionalidade do `/f`, com a análise adicional de erros físicos no disco.
+
+Quando você digita o comando `chkdsk /r /f C:` no Prompt de Comandos do Windows, você está instruindo o `chkdsk` a verificar e corrigir erros tanto lógicos quanto físicos na unidade `C:`. É importante notar que o parâmetro `/p` não é necessário nesse contexto, pois o `/r` já implica o `/f` e realiza uma verificação completa.
+
+Lembre-se de que interromper o `chkdsk` não é recomendado, pois pode deixar o volume em um estado incerto. No entanto, cancelar ou interromper o `chkdsk` não deve deixar o volume mais corrompido do que estava antes de executar o comando. Executar o `chkdsk` novamente verifica e deve reparar qualquer corrupção restante no volume.
+
+Para executar o `chkdsk` com esses parâmetros, você deve ter privilégios de administrador. Para abrir o Prompt de Comandos como administrador, clique com o botão direito do mouse em Prompt de Comandos no menu Iniciar e selecione "Executar como administrador".
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
