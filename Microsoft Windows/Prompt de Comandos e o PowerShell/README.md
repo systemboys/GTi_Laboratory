@@ -74,6 +74,7 @@
 - [Execução Condicional de Recursos (Exemplo de execução de Rotinas)](#execu%C3%A7%C3%A3o-condicional-de-recursos-exemplo-de-execu%C3%A7%C3%A3o-de-rotinas "Execução Condicional de Recursos (Exemplo de execução de Rotinas)")
 - [Script de Verificação de Bateria e Relatório HTML](#script-de-verifica%C3%A7%C3%A3o-de-bateria-e-relat%C3%B3rio-html "Script de Verificação de Bateria e Relatório HTML")
 - [Ativando o Visualizador de Fotos do Windows para Extensões de Imagem Específicas](#ativando-o-visualizador-de-fotos-do-windows-para-extens%C3%B5es-de-imagem-espec%C3%ADficas "Ativando o Visualizador de Fotos do Windows para Extensões de Imagem Específicas")
+- [Agendador de Verificação de Dispositivo de armazenamento](# "Agendador de Verificação de Dispositivo de armazenamento")
 
 ---
 
@@ -3395,6 +3396,48 @@ Este script percorre cada extensão de arquivo na lista `$extensions` e define o
 Por favor, note que este script deve ser executado com privilégios de administrador. Além disso, como sempre, é uma boa ideia fazer um backup do registro ou criar um ponto de restauração antes de fazer alterações no registro. 
 
 Lembre-se também de que o Visualizador de Fotos do Windows pode não estar disponível em algumas versões do Windows 10 e 11, a menos que seja instalado separadamente. Se o Visualizador de Fotos do Windows não estiver disponível, essa alteração no registro não terá efeito.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Agendador de Verificação de Dispositivo de armazenamento
+
+Claro, aqui está um script em PowerShell que faz exatamente o que você pediu. Ele pergunta ao usuário se deseja agendar uma verificação do disco e utiliza a variável de ambiente para a unidade. Além disso, ele valida a entrada para garantir que o usuário forneça uma resposta antes de prosseguir.
+
+```powershell
+# Script PowerShell para agendar verificação de disco
+
+# Pergunta ao usuário se deseja agendar a verificação do disco
+function Perguntar-Agendamento {
+    $resposta = $null
+    while ($resposta -ne 'S' -and $resposta -ne 'N') {
+        $resposta = Read-Host "Deseja agendar a verificação deste volume para a próxima vez em que o sistema for reiniciado? (S/N)"
+        if ($resposta -eq '') {
+            Write-Host "Por favor, digite 'S' para sim ou 'N' para não."
+        }
+    }
+    return $resposta
+}
+
+# Executa o comando chkdsk com os parâmetros /r /f na unidade especificada pela variável de ambiente
+function Executar-CHKDSK {
+    $unidade = $env:SystemDrive
+    $agendar = Perguntar-Agendamento
+    if ($agendar -eq 'S') {
+        chkdsk /r /f $unidade
+        Write-Host "A verificação foi agendada para a unidade $unidade."
+    } else {
+        Write-Host "A verificação não foi agendada."
+    }
+}
+
+# Chama a função para executar o processo
+Executar-CHKDSK
+```
+
+Para executar este script, você pode salvá-lo com a extensão `.ps1` e executá-lo no PowerShell como administrador. Lembre-se de que alterações no sistema de arquivos podem ser sensíveis e devem ser realizadas com cuidado. Certifique-se de ter backups dos seus dados antes de executar operações de disco como esta.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
