@@ -16,7 +16,7 @@
     - [Cache](#cache "Cache")
     - [Outros detalhes](#outros-detalhes "Outros detalhes")
     - [Qual comprar?](#qual-comprar "Qual comprar?")
-- [IHS: A Barreira Metálica Entre o CPU e o Overclocking Extremo](# "IHS: A Barreira Metálica Entre o CPU e o Overclocking Extremo")
+- [IHS: A Barreira Metálica Entre o CPU e o Overclocking Extremo](#ihs-a-barreira-met%C3%A1lica-entre-o-cpu-e-o-overclocking-extremo "IHS: A Barreira Metálica Entre o CPU e o Overclocking Extremo")
 
 ---
 
@@ -193,11 +193,11 @@ Se encontrar dois PCs com o mesmo Intel Core, mas de preços diferentes,  vale a
 
 IHS é a sigla para **Integrated Heat Spreader**, que em português significa **Difusor de Calor Integrado**. É a tampa metálica externa do processador de um CPU.
 
-![Processador com IHS](/home/marcos/Documentos/Projects/GTi Laboratory/Debian Linux e derivados/Softwares para terminais/images/1zn2owz44JYOXW2Zx_SY24w@2x.jpg)
+![Processador com IHS](./images/Processor_with_IHS.jpg)
 
 O IHS serve como uma concha protetora ao redor do silício do processador e também como um caminho para a troca de calor entre o CPU e o cooler. Alguns overclockers mais aventureiros usam um processo chamado **delidding** para remover o IHS original do processador e substituí-lo por um material ainda mais condutor.
 
-![Processador sem o IHS](https://i.ytimg.com/vi/qYbKlmkLPXM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD3SvCAQSes9lTNSiAkgzx47LsHzg)
+![Processador sem o IHS](./images/Processor_without_IHS.jpg)
 
 No entanto, independentemente da qualidade do IHS, ele sempre deve ser usado em conjunto com algum tipo de cooler para CPU.
 
