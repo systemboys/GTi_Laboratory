@@ -16,6 +16,7 @@
     - [Cache](#cache "Cache")
     - [Outros detalhes](#outros-detalhes "Outros detalhes")
     - [Qual comprar?](#qual-comprar "Qual comprar?")
+- [IHS: A Barreira Metálica Entre o CPU e o Overclocking Extremo](# "IHS: A Barreira Metálica Entre o CPU e o Overclocking Extremo")
 
 ---
 
@@ -182,6 +183,25 @@ Se você quer jogar games de última geração e levar seu notebook para trabalh
 O **Intel Core i9**, por sua vez, é o cúmulo da potência. Além de mais poderoso do que o i7, ele é consideravelmente mais caro e mais exigente, consumindo muita  energia e recursos de refrigeração da máquina. Este processador é  indicado para PCs profissionais, não para usar em casa, e para lidar com tarefas de altíssima demanda, como produção de animações em 3D.
 
 Se encontrar dois PCs com o mesmo Intel Core, mas de preços diferentes,  vale a pena dar uma olhada nos outros detalhes que destacamos neste  texto. Em muitos casos, um chipset melhor e mais barato pode estar  escondido por trás daquelas pequenas letras e números.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## IHS: A Barreira Metálica Entre o CPU e o Overclocking Extremo
+
+IHS é a sigla para **Integrated Heat Spreader**, que em português significa **Difusor de Calor Integrado**. É a tampa metálica externa do processador de um CPU.
+
+![Processador com IHS](/home/marcos/Documentos/Projects/GTi Laboratory/Debian Linux e derivados/Softwares para terminais/images/1zn2owz44JYOXW2Zx_SY24w@2x.jpg)
+
+O IHS serve como uma concha protetora ao redor do silício do processador e também como um caminho para a troca de calor entre o CPU e o cooler. Alguns overclockers mais aventureiros usam um processo chamado **delidding** para remover o IHS original do processador e substituí-lo por um material ainda mais condutor.
+
+![Processador sem o IHS](https://i.ytimg.com/vi/qYbKlmkLPXM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD3SvCAQSes9lTNSiAkgzx47LsHzg)
+
+No entanto, independentemente da qualidade do IHS, ele sempre deve ser usado em conjunto com algum tipo de cooler para CPU.
+
+Em um contexto diferente, IHS também é um monograma que representa o nome abreviado de Jesus em grego, Ιησούς (em maiúsculas, ΙΗΣΟΥΣ), e é frequentemente associado com a Companhia de Jesus, ou jesuítas². No entanto, essa definição não está relacionada com CPUs.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
