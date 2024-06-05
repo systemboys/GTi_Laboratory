@@ -18,7 +18,7 @@
 - [Compartilhando Variáveis e Funções entre Arquivos .CMD no Batch](#compartilhando-vari%C3%A1veis-e-fun%C3%A7%C3%B5es-entre-arquivos-cmd-no-batch "Compartilhando Variáveis e Funções entre Arquivos .CMD no Batch")
 - [Utilizando o Comando CHKDSK no Windows para corrigir erros](#utilizando-o-comando-chkdsk-no-windows-para-corrigir-erros "Utilizando o Comando CHKDSK no Windows para corrigir erros")
 - [Execução Simultânea de Múltiplos Programas Através de um Único Atalho](#execu%C3%A7%C3%A3o-simult%C3%A2nea-de-m%C3%BAltiplos-programas-atrav%C3%A9s-de-um-%C3%BAnico-atalho "Execução Simultânea de Múltiplos Programas Através de um Único Atalho")
-- [Execução Sequencial de Dois Arquivos Executáveis em Batch](# "Execução Sequencial de Dois Arquivos Executáveis em Batch")
+- [Execução Sequencial de Dois Arquivos Executáveis em Batch](#execu%C3%A7%C3%A3o-sequencial-de-dois-arquivos-execut%C3%A1veis-em-batch "Execução Sequencial de Dois Arquivos Executáveis em Batch")
 
 > Microsoft **_PowerShell_**
 
