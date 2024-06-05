@@ -18,6 +18,7 @@
 - [Compartilhando Variáveis e Funções entre Arquivos .CMD no Batch](#compartilhando-vari%C3%A1veis-e-fun%C3%A7%C3%B5es-entre-arquivos-cmd-no-batch "Compartilhando Variáveis e Funções entre Arquivos .CMD no Batch")
 - [Utilizando o Comando CHKDSK no Windows para corrigir erros](#utilizando-o-comando-chkdsk-no-windows-para-corrigir-erros "Utilizando o Comando CHKDSK no Windows para corrigir erros")
 - [Execução Simultânea de Múltiplos Programas Através de um Único Atalho](#execu%C3%A7%C3%A3o-simult%C3%A2nea-de-m%C3%BAltiplos-programas-atrav%C3%A9s-de-um-%C3%BAnico-atalho "Execução Simultânea de Múltiplos Programas Através de um Único Atalho")
+- [Execução Sequencial de Dois Arquivos Executáveis em Batch](# "Execução Sequencial de Dois Arquivos Executáveis em Batch")
 
 > Microsoft **_PowerShell_**
 
@@ -624,7 +625,7 @@ Para executar o `chkdsk` com esses parâmetros, você deve ter privilégios de a
 
 ---
 
-### Execução Simultânea de Múltiplos Programas Através de um Único Atalho
+## Execução Simultânea de Múltiplos Programas Através de um Único Atalho
 
 É possível executar dois arquivos com apenas um atalho. Você pode fazer isso criando um arquivo de script em lote (.bat) ou usando uma linguagem de script como o PowerShell no Windows para iniciar ambos os executáveis. Aqui está um exemplo de como você pode fazer isso com um arquivo .bat:
 
@@ -637,6 +638,22 @@ start "" "C:\Program Files (x86)\GTi SiS Stock\print_.exe"
 Salve o texto acima como um arquivo `.bat` e crie um atalho para ele. Quando você clicar no atalho, ele executará ambos os programas. Por favor, substitua os caminhos dos arquivos pelos caminhos corretos dos seus arquivos executáveis.
 
 Lembre-se de que você precisa ter as permissões adequadas para executar os arquivos e que qualquer alteração nos caminhos dos arquivos exigirá uma atualização do script. Além disso, esteja ciente de que a execução de scripts pode ter implicações de segurança, então sempre verifique o conteúdo dos scripts antes de executá-los.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Execução Sequencial de Dois Arquivos Executáveis em Batch
+
+Para executar os dois arquivos sequencialmente, você pode usar o operador `&&` no seu arquivo batch. Isso garantirá que o segundo arquivo só seja executado após o primeiro ter sido aberto. Aqui está a versão modificada do seu script:
+
+```batch
+@echo off
+start "" "C:\Program Files\Google\Chrome\Application\chrome_proxy.exe" --profile-directory=Default --app-id=nfbmecpjlfiimibjpnpkocekabpjgapo && start "" "C:\Program Files (x86)\GTi SiS Stock\print_.exe"
+```
+
+Dessa forma, o Chrome será aberto primeiro e, quando estiver pronto, o segundo programa será executado.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
