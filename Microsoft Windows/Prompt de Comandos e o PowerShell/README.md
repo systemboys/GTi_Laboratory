@@ -76,7 +76,7 @@
 - [Script de Verificação de Bateria e Relatório HTML](#script-de-verifica%C3%A7%C3%A3o-de-bateria-e-relat%C3%B3rio-html "Script de Verificação de Bateria e Relatório HTML")
 - [Ativando o Visualizador de Fotos do Windows para Extensões de Imagem Específicas](#ativando-o-visualizador-de-fotos-do-windows-para-extens%C3%B5es-de-imagem-espec%C3%ADficas "Ativando o Visualizador de Fotos do Windows para Extensões de Imagem Específicas")
 - [Agendador de Verificação de Dispositivo de armazenamento](#agendador-de-verifica%C3%A7%C3%A3o-de-dispositivo-de-armazenamento "Agendador de Verificação de Dispositivo de armazenamento")
-- [Automação de Instalação do GTi SiS Stock](# "Automação de Instalação do GTi SiS Stock")
+- [Automação de Instalação do GTi SiS Stock](#automa%C3%A7%C3%A3o-de-instala%C3%A7%C3%A3o-do-gti-sis-stock "Automação de Instalação do GTi SiS Stock")
 
 ---
 
