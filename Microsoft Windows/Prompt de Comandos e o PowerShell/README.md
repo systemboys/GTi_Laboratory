@@ -17,6 +17,7 @@
 - [Passagem de Argumentos entre Arquivos: PowerShell e Batch (CMD)](#passagem-de-argumentos-entre-arquivos-powershell-e-batch-cmd "Passagem de Argumentos entre Arquivos: PowerShell e Batch (CMD)")
 - [Compartilhando Variáveis e Funções entre Arquivos .CMD no Batch](#compartilhando-vari%C3%A1veis-e-fun%C3%A7%C3%B5es-entre-arquivos-cmd-no-batch "Compartilhando Variáveis e Funções entre Arquivos .CMD no Batch")
 - [Utilizando o Comando CHKDSK no Windows para corrigir erros](#utilizando-o-comando-chkdsk-no-windows-para-corrigir-erros "Utilizando o Comando CHKDSK no Windows para corrigir erros")
+- [Execução Simultânea de Múltiplos Programas Através de um Único Atalho](# "Execução Simultânea de Múltiplos Programas Através de um Único Atalho")
 
 > Microsoft **_PowerShell_**
 
@@ -616,6 +617,25 @@ Quando você digita o comando `chkdsk /r /f C:` no Prompt de Comandos do Windows
 Lembre-se de que interromper o `chkdsk` não é recomendado, pois pode deixar o volume em um estado incerto. No entanto, cancelar ou interromper o `chkdsk` não deve deixar o volume mais corrompido do que estava antes de executar o comando. Executar o `chkdsk` novamente verifica e deve reparar qualquer corrupção restante no volume.
 
 Para executar o `chkdsk` com esses parâmetros, você deve ter privilégios de administrador. Para abrir o Prompt de Comandos como administrador, clique com o botão direito do mouse em Prompt de Comandos no menu Iniciar e selecione "Executar como administrador".
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+### Execução Simultânea de Múltiplos Programas Através de um Único Atalho
+
+É possível executar dois arquivos com apenas um atalho. Você pode fazer isso criando um arquivo de script em lote (.bat) ou usando uma linguagem de script como o PowerShell no Windows para iniciar ambos os executáveis. Aqui está um exemplo de como você pode fazer isso com um arquivo .bat:
+
+```bat
+@echo off
+start "" "C:\Program Files\Google\Chrome\Application\chrome_proxy.exe" --profile-directory=Default --app-id=nfbmecpjlfiimibjpnpkocekabpjgapo
+start "" "C:\Program Files (x86)\GTi SiS Stock\print_.exe"
+```
+
+Salve o texto acima como um arquivo `.bat` e crie um atalho para ele. Quando você clicar no atalho, ele executará ambos os programas. Por favor, substitua os caminhos dos arquivos pelos caminhos corretos dos seus arquivos executáveis.
+
+Lembre-se de que você precisa ter as permissões adequadas para executar os arquivos e que qualquer alteração nos caminhos dos arquivos exigirá uma atualização do script. Além disso, esteja ciente de que a execução de scripts pode ter implicações de segurança, então sempre verifique o conteúdo dos scripts antes de executá-los.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
