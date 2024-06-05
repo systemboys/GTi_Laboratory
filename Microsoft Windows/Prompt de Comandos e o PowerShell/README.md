@@ -76,6 +76,7 @@
 - [Script de Verificação de Bateria e Relatório HTML](#script-de-verifica%C3%A7%C3%A3o-de-bateria-e-relat%C3%B3rio-html "Script de Verificação de Bateria e Relatório HTML")
 - [Ativando o Visualizador de Fotos do Windows para Extensões de Imagem Específicas](#ativando-o-visualizador-de-fotos-do-windows-para-extens%C3%B5es-de-imagem-espec%C3%ADficas "Ativando o Visualizador de Fotos do Windows para Extensões de Imagem Específicas")
 - [Agendador de Verificação de Dispositivo de armazenamento](#agendador-de-verifica%C3%A7%C3%A3o-de-dispositivo-de-armazenamento "Agendador de Verificação de Dispositivo de armazenamento")
+- [Automação de Instalação do GTi SiS Stock](# "Automação de Instalação do GTi SiS Stock")
 
 ---
 
@@ -3458,6 +3459,111 @@ Executar-CHKDSK
 ```
 
 Para executar este script, você pode salvá-lo com a extensão `.ps1` e executá-lo no PowerShell como administrador. Lembre-se de que alterações no sistema de arquivos podem ser sensíveis e devem ser realizadas com cuidado. Certifique-se de ter backups dos seus dados antes de executar operações de disco como esta.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Automação de Instalação do GTi SiS Stock
+
+```powershell
+# Definindo URLs dos arquivos
+$url1 = "https://companyservices.com.br/downloads/gti_sis_stock_install.exe"
+$url2 = "https://me7yna.sn.files.1drv.com/y4mM0uZknKIhGjNs8_EMZVydcPZ_p11pVt1SZ50rBxWNgNXSqVpoFmxRnlLZY8n5X5XOII58sTWU2OsklRxlQ2BzE4mCI2gXuW84cLCADGHpccJhdqNTwSRnqeQX9K1BGbrl3Ui3s7KJeOUhJ5BL_keLWQU4LL11eLlo6t2ft8cVY2YLxJzWn_TvCWRtoRNH5VzYfFF8JQb5dP76mtTmryYPw"
+$url3 = "https://www.companyservices.com.br/gti-sis-stock-5/run_gti_sis.bat"
+
+# Definindo os nomes dos arquivos
+$file1 = "$env:temp\gti_sis_stock_install.exe"
+$file2 = "$env:temp\thermal_printing.exe"
+$file3 = "$env:SystemDrive\Program Files (x86)\GTi SiS Stock\run_gti_sis.bat"
+
+# Baixando o primeiro arquivo
+Start-BitsTransfer -Source $url1 -Destination $file1
+
+# Executando o primeiro arquivo
+Start-Process -FilePath $file1 -Wait
+
+# Baixando o segundo arquivo
+Start-BitsTransfer -Source $url2 -Destination $file2
+
+# Baixando o terceiro arquivo (run_gti_sis.bat)
+Start-BitsTransfer -Source $url3 -Destination $file3
+
+# Verificando se o diretório do programa existe
+if (Test-Path -Path "$env:SystemDrive\Program Files (x86)\GTi SiS Stock") {
+    # Copiando o segundo arquivo para o diretório do programa
+    Copy-Item -Path $file2 -Destination "$env:SystemDrive\Program Files (x86)\GTi SiS Stock"
+    
+    # Removendo os arquivos baixados
+    Remove-Item -Path $file1
+    Remove-Item -Path $file2
+}
+
+# Caminho do programa
+$programPath = "$env:SystemDrive\Program Files (x86)\GTi SiS Stock\thermal_printing.exe"
+
+# Caminho do Desktop
+$desktopPath = [System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::DesktopDirectory)
+
+# Nome do atalho
+$shortcutName = "GTi SiS Stock 5"
+
+# Caminho completo para o atalho
+$shortcutPath = Join-Path -Path $desktopPath -ChildPath "$shortcutName.lnk"
+
+# URL do ícone
+$iconUrl = "https://github.com/systemboys/_GTi_Support_/raw/main/icons/favicon_0.ico"
+
+# Caminho local para salvar o ícone
+$iconPath = "$env:USERPROFILE\favicon_0.ico"
+
+# Baixar o ícone
+Invoke-WebRequest -Uri $iconUrl -OutFile $iconPath
+
+# Criar um objeto WScript.Shell
+$shell = New-Object -ComObject WScript.Shell
+
+# Criar atalho
+$shortcut = $shell.CreateShortcut($shortcutPath)
+$shortcut.TargetPath = $file3
+$shortcut.IconLocation = $iconPath
+$shortcut.Description = "Executar o GTi SiS Stock 5"
+$shortcut.Save()
+
+# Exibindo a mensagem final
+Write-Host "A instalação do GTi SiS foi concluída com sucesso! Pressione qualquer tecla para sair."
+$host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+```
+
+Vou explicar o que cada parte do script faz:
+
+1. **Download de arquivos:**
+   - O script começa definindo três URLs de arquivos:
+     - `url1`: Aponta para o instalador "gti_sis_stock_install.exe".
+     - `url2`: Aponta para um arquivo chamado "thermal_printing.exe".
+     - `url3`: Aponta para o arquivo "run_gti_sis.bat".
+   - Em seguida, ele baixa esses arquivos para a pasta temporária do sistema.
+
+2. **Execução do instalador:**
+   - O primeiro arquivo (instalador) é executado usando o cmdlet `Start-Process`.
+   - Isso provavelmente instala algum software relacionado ao GTi SiS Stock.
+
+3. **Criação de atalhos:**
+   - O script cria um atalho na área de trabalho para o arquivo "thermal_printing.exe".
+   - O atalho é nomeado "GTi SiS Stock Print" e possui um ícone personalizado.
+   - A descrição do atalho é definida como "Plugin para impressão térmica".
+
+4. **Download e atalho para "run_gti_sis.bat":**
+   - O terceiro arquivo ("run_gti_sis.bat") é baixado a partir da URL especificada.
+   - Um novo atalho é criado para esse arquivo.
+   - O atalho é nomeado "GTi SiS Stock 5" e possui a descrição "Executar o GTi SiS Stock 5".
+
+5. **Mensagem final:**
+   - O script exibe uma mensagem informando que a instalação do GTi SiS foi concluída com sucesso.
+   - O usuário é solicitado a pressionar qualquer tecla para sair.
+
+Em resumo, o script faz o download de arquivos, executa um instalador, cria atalhos e fornece feedback ao usuário.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
