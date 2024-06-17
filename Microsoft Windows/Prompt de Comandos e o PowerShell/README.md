@@ -78,8 +78,8 @@
 - [Ativando o Visualizador de Fotos do Windows para Extensões de Imagem Específicas](#ativando-o-visualizador-de-fotos-do-windows-para-extens%C3%B5es-de-imagem-espec%C3%ADficas "Ativando o Visualizador de Fotos do Windows para Extensões de Imagem Específicas")
 - [Agendador de Verificação de Dispositivo de armazenamento](#agendador-de-verifica%C3%A7%C3%A3o-de-dispositivo-de-armazenamento "Agendador de Verificação de Dispositivo de armazenamento")
 - [Automação de Instalação do GTi SiS Stock](#automa%C3%A7%C3%A3o-de-instala%C3%A7%C3%A3o-do-gti-sis-stock "Automação de Instalação do GTi SiS Stock")
-- [Gerenciamento de Configuração com JSON em Scripts PowerShell](# "Gerenciamento de Configuração com JSON em Scripts PowerShell")
-- [Verificação Condicional do Caminho do Arquivo de Configuração no PowerShell](# "Verificação Condicional do Caminho do Arquivo de Configuração no PowerShell")
+- [Gerenciamento de Configuração com JSON em Scripts PowerShell](#gerenciamento-de-configura%C3%A7%C3%A3o-com-json-em-scripts-powershell "Gerenciamento de Configuração com JSON em Scripts PowerShell")
+- [Verificação Condicional do Caminho do Arquivo de Configuração no PowerShell](#verifica%C3%A7%C3%A3o-condicional-do-caminho-do-arquivo-de-configura%C3%A7%C3%A3o-no-powershell "Verificação Condicional do Caminho do Arquivo de Configuração no PowerShell")
 
 ---
 
