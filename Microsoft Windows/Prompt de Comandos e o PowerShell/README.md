@@ -80,6 +80,7 @@
 - [Automação de Instalação do GTi SiS Stock](#automa%C3%A7%C3%A3o-de-instala%C3%A7%C3%A3o-do-gti-sis-stock "Automação de Instalação do GTi SiS Stock")
 - [Gerenciamento de Configuração com JSON em Scripts PowerShell](#gerenciamento-de-configura%C3%A7%C3%A3o-com-json-em-scripts-powershell "Gerenciamento de Configuração com JSON em Scripts PowerShell")
 - [Verificação Condicional do Caminho do Arquivo de Configuração no PowerShell](#verifica%C3%A7%C3%A3o-condicional-do-caminho-do-arquivo-de-configura%C3%A7%C3%A3o-no-powershell "Verificação Condicional do Caminho do Arquivo de Configuração no PowerShell")
+- [Verificação Flexível de Múltiplos Níveis de Caminho de Arquivo no PowerShell](# "Verificação Flexível de Múltiplos Níveis de Caminho de Arquivo no PowerShell")
 
 ---
 
@@ -3643,6 +3644,36 @@ $configData = Get-Content -Path $configPath | ConvertFrom-Json
 ```
 
 Esse script primeiro tentará encontrar o arquivo `config.json` na pasta raiz. Se não for encontrado, ele tentará o caminho relativo `../../config.json`. Isso deve evitar o erro que você está enfrentando.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Verificação Flexível de Múltiplos Níveis de Caminho de Arquivo no PowerShell
+
+Para lidar com múltiplos níveis, você pode expandir a lógica condicional para verificar cada nível de diretório. Aqui está um exemplo para quatro níveis:
+
+```powershell
+# Define o caminho inicial do arquivo config.json
+$configPath = "./config.json"
+
+# Define uma lista de possíveis caminhos relativos
+$possiblePaths = @("./config.json", "../config.json", "../../config.json", "../../../config.json", "../../../../config.json")
+
+# Verifica cada caminho na lista até encontrar o arquivo
+foreach ($path in $possiblePaths) {
+    if (Test-Path $path) {
+        $configPath = $path
+        break
+    }
+}
+
+# Importa as configurações do arquivo encontrado
+$configData = Get-Content -Path $configPath | ConvertFrom-Json
+```
+
+Esse script irá verificar a existência do arquivo `config.json` começando pelo diretório atual e depois subindo até quatro níveis de diretórios, se necessário.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
