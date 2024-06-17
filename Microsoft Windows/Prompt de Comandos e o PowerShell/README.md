@@ -78,6 +78,8 @@
 - [Ativando o Visualizador de Fotos do Windows para Extensões de Imagem Específicas](#ativando-o-visualizador-de-fotos-do-windows-para-extens%C3%B5es-de-imagem-espec%C3%ADficas "Ativando o Visualizador de Fotos do Windows para Extensões de Imagem Específicas")
 - [Agendador de Verificação de Dispositivo de armazenamento](#agendador-de-verifica%C3%A7%C3%A3o-de-dispositivo-de-armazenamento "Agendador de Verificação de Dispositivo de armazenamento")
 - [Automação de Instalação do GTi SiS Stock](#automa%C3%A7%C3%A3o-de-instala%C3%A7%C3%A3o-do-gti-sis-stock "Automação de Instalação do GTi SiS Stock")
+- [Gerenciamento de Configuração com JSON em Scripts PowerShell](# "Gerenciamento de Configuração com JSON em Scripts PowerShell")
+- [Verificação Condicional do Caminho do Arquivo de Configuração no PowerShell](# "Verificação Condicional do Caminho do Arquivo de Configuração no PowerShell")
 
 ---
 
@@ -3581,6 +3583,66 @@ Vou explicar o que cada parte do script faz:
    - O usuário é solicitado a pressionar qualquer tecla para sair.
 
 Em resumo, o script faz o download de arquivos, executa um instalador, cria atalhos e fornece feedback ao usuário.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Gerenciamento de Configuração com JSON em Scripts PowerShell
+
+Aqui está um exemplo:
+
+Conteúdo do arquivo `./config.json`:
+
+```json
+{
+    "ativarFuncionalidade": 1,
+    "beepsNosDownloads": 3
+}
+```
+
+E o script PowerShell `./Package_Installers/UtilitiesForWindows/Install_Rufus.ps1` poderia importar e usar essas configurações da seguinte maneira:
+
+```powershell
+$configData = Get-Content -Path "./config.json" | ConvertFrom-Json
+
+# Agora você pode acessar as configurações usando $configData.ativarFuncionalidade e $configData.beepsNosDownloads
+if ($configData.ativarFuncionalidade -eq 1) {
+    # Ativar funcionalidade aqui
+}
+
+if ($configData.beepsNosDownloads -eq 3) {
+    # Definir beeps para downloads aqui
+}
+```
+
+Este script usa o cmdlet `Get-Content` para ler o conteúdo do arquivo `config.json` e o cmdlet `ConvertFrom-Json` para converter o conteúdo em um objeto PowerShell que pode ser acessado como `$configData.ativarFuncionalidade` e `$configData.beepsNosDownloads`.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Verificação Condicional do Caminho do Arquivo de Configuração no PowerShell
+
+Sim, é possível resolver esse problema utilizando o cmdlet `Test-Path` do PowerShell para verificar se o arquivo existe no caminho especificado. Aqui está um exemplo de como você pode fazer isso:
+
+```powershell
+# Tenta encontrar o arquivo config.json na pasta raiz
+$configPath = "./config.json"
+
+# Verifica se o arquivo existe no caminho atual
+if (-not (Test-Path $configPath)) {
+    # Se não existir, tenta o caminho relativo
+    $configPath = "../../config.json"
+}
+
+# Importa as configurações do arquivo encontrado
+$configData = Get-Content -Path $configPath | ConvertFrom-Json
+```
+
+Esse script primeiro tentará encontrar o arquivo `config.json` na pasta raiz. Se não for encontrado, ele tentará o caminho relativo `../../config.json`. Isso deve evitar o erro que você está enfrentando.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
