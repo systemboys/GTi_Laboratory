@@ -2,7 +2,7 @@
 
 ## Prompt de Comandos e o PowerShell
 
-![Terminal Windows](https://github.com/systemboys/GTi_Laboratory/blob/main/Microsoft%20Windows/Prompt%20de%20Comandos%20e%20o%20PowerShell/images/WINDOWS-TERMINAL.png?raw=true "Terminal Windows")
+![Terminal Windows](./images/PowerShell.jpg "Terminal Windows")
 
 ### *Sumário*
 
