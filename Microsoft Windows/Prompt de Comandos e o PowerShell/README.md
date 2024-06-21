@@ -3764,6 +3764,53 @@ $logFilePath
 
 Agora o script irá criar o arquivo "QW_log.txt" se ele não existir e adicionar a primeira linha escrita. Espero que isso atenda às suas necessidades! 😊
 
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Colocando o script de log em uma função 'MyLogFunction()'
+
+Função "MyLogFunction()" em PowerShell para adicionar linhas de mensagens no arquivo de log. Ela receberá os parâmetros "Address", "FileName" e "Message" e gravará a mensagem no arquivo de log especificado. Aqui está a função:
+
+```powershell
+function MyLogFunction {
+    param (
+        [string]$Address,
+        [string]$FileName,
+        [string]$Message
+    )
+
+    # Define o caminho completo do arquivo de log
+    $logFilePath = Join-Path -Path $Address -ChildPath $FileName
+
+    # Cria a linha de log com a data e hora atual
+    $logLine = "$(Get-Date -Format 'yyyy/MM/dd HH:mm:ss') - $Message"
+
+    # Verifica se o arquivo já existe
+    if (Test-Path -Path $logFilePath) {
+        # Adiciona a nova linha ao arquivo existente
+        Add-Content -Path $logFilePath -Value $logLine
+    } else {
+        # Cria um novo arquivo e adiciona a linha
+        New-Item -Path $logFilePath -ItemType File
+        Set-Content -Path $logFilePath -Value $logLine
+    }
+
+    # Retorna o caminho completo do arquivo de log
+    return $logFilePath
+}
+
+# Exemplo de uso:
+$address = "C:\Caminho\Para\Destino"
+$fileName = "MeuLog.txt"
+$message = "Hello World!"
+$logPath = MyLogFunction -Address $address -FileName $fileName -Message $message
+$logPath
+```
+
+Lembre-se de substituir o valor de `$address` pelo diretório desejado para salvar o arquivo de log e escolher um nome adequado para o arquivo (`$fileName`). Quando chamar a função, passe os valores apropriados para os parâmetros. O caminho completo do arquivo de log será retornado como resultado da função. 😊
+
 > **( i ) Importação de Funções PowerShell entre Arquivos**
 
 Crie o arquivo `MyFunction.ps1` com a função `MyLogFunction` que criamos anteriormente. Certifique-se de que o arquivo esteja no mesmo diretório onde você está trabalhando. Aqui está o conteúdo do arquivo `MyFunction.ps1`:
