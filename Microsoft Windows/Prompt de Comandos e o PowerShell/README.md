@@ -3764,6 +3764,71 @@ $logFilePath
 
 Agora o script irá criar o arquivo "QW_log.txt" se ele não existir e adicionar a primeira linha escrita. Espero que isso atenda às suas necessidades! 😊
 
+> **( i ) Importação de Funções PowerShell entre Arquivos**
+
+Crie o arquivo `MyFunction.ps1` com a função `MyLogFunction` que criamos anteriormente. Certifique-se de que o arquivo esteja no mesmo diretório onde você está trabalhando. Aqui está o conteúdo do arquivo `MyFunction.ps1`:
+
+```powershell
+# MyFunction.ps1
+
+function MyLogFunction {
+    param (
+        [string]$Address,
+        [string]$FileName,
+        [string]$Message
+    )
+
+    # Define o caminho completo do arquivo de log
+    $logFilePath = Join-Path -Path $Address -ChildPath $FileName
+
+    # Cria a linha de log com a data e hora atual
+    $logLine = "$(Get-Date -Format 'yyyy/MM/dd HH:mm:ss') - $Message"
+
+    # Verifica se o arquivo já existe
+    if (Test-Path -Path $logFilePath) {
+        # Adiciona a nova linha ao arquivo existente
+        Add-Content -Path $logFilePath -Value $logLine
+    } else {
+        # Cria um novo arquivo e adiciona a linha
+        New-Item -Path $logFilePath -ItemType File
+        Set-Content -Path $logFilePath -Value $logLine
+    }
+
+    # Retorna o caminho completo do arquivo de log
+    return $logFilePath
+}
+```
+
+Agora, para importar a função `MyLogFunction` no arquivo `home.ps1`, siga estas etapas:
+
+1. Crie o arquivo `home.ps1` no mesmo diretório.
+2. No início do arquivo `home.ps1`, adicione o seguinte comando para importar a função:
+
+```powershell
+# home.ps1
+
+# Importa a função MyLogFunction do arquivo MyFunction.ps1
+. .\MyFunction.ps1
+```
+
+3. Em seguida, você pode chamar a função `MyLogFunction` normalmente no restante do arquivo `home.ps1`. Por exemplo:
+
+```powershell
+# home.ps1
+
+# Importa a função MyLogFunction do arquivo MyFunction.ps1
+. .\MyFunction.ps1
+
+# Exemplo de uso:
+$address = "C:\Caminho\Para\Destino"
+$fileName = "MeuLog.txt"
+$message = "Hello World!"
+$logPath = MyLogFunction -Address $address -FileName $fileName -Message $message
+$logPath
+```
+
+Lembre-se de substituir o valor de `$address` pelo diretório desejado para salvar o arquivo de log e escolher um nome adequado para o arquivo (`$fileName`). Quando você executar o arquivo `home.ps1`, a função `MyLogFunction` será importada e executada corretamente. 😊
+
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
