@@ -81,8 +81,8 @@
 - [Gerenciamento de Configuração com JSON em Scripts PowerShell](#gerenciamento-de-configura%C3%A7%C3%A3o-com-json-em-scripts-powershell "Gerenciamento de Configuração com JSON em Scripts PowerShell")
 - [Verificação Condicional do Caminho do Arquivo de Configuração no PowerShell](#verifica%C3%A7%C3%A3o-condicional-do-caminho-do-arquivo-de-configura%C3%A7%C3%A3o-no-powershell "Verificação Condicional do Caminho do Arquivo de Configuração no PowerShell")
 - [Verificação Flexível de Múltiplos Níveis de Caminho de Arquivo no PowerShell](#verifica%C3%A7%C3%A3o-flex%C3%ADvel-de-m%C3%BAltiplos-n%C3%ADveis-de-caminho-de-arquivo-no-powershell "Verificação Flexível de Múltiplos Níveis de Caminho de Arquivo no PowerShell")
-- [Adicionando Linhas a um Arquivo de Log com PowerShell](# "Adicionando Linhas a um Arquivo de Log com PowerShell")
-- [Criando um Arquivo de Log na Área de Trabalho com PowerShell](# "Criando um Arquivo de Log na Área de Trabalho com PowerShell")
+- [Adicionando Linhas a um Arquivo de Log com PowerShell](#adicionando-linhas-a-um-arquivo-de-log-com-powershell "Adicionando Linhas a um Arquivo de Log com PowerShell")
+- [Criando um Arquivo de Log na Área de Trabalho com PowerShell](#criando-um-arquivo-de-log-na-%C3%A1rea-de-trabalho-com-powershell "Criando um Arquivo de Log na Área de Trabalho com PowerShell")
 
 ---
 
