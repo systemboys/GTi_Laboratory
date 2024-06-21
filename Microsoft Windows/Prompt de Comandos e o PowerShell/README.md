@@ -81,6 +81,8 @@
 - [Gerenciamento de Configuração com JSON em Scripts PowerShell](#gerenciamento-de-configura%C3%A7%C3%A3o-com-json-em-scripts-powershell "Gerenciamento de Configuração com JSON em Scripts PowerShell")
 - [Verificação Condicional do Caminho do Arquivo de Configuração no PowerShell](#verifica%C3%A7%C3%A3o-condicional-do-caminho-do-arquivo-de-configura%C3%A7%C3%A3o-no-powershell "Verificação Condicional do Caminho do Arquivo de Configuração no PowerShell")
 - [Verificação Flexível de Múltiplos Níveis de Caminho de Arquivo no PowerShell](#verifica%C3%A7%C3%A3o-flex%C3%ADvel-de-m%C3%BAltiplos-n%C3%ADveis-de-caminho-de-arquivo-no-powershell "Verificação Flexível de Múltiplos Níveis de Caminho de Arquivo no PowerShell")
+- [Adicionando Linhas a um Arquivo de Log com PowerShell](# "Adicionando Linhas a um Arquivo de Log com PowerShell")
+- [Criando um Arquivo de Log na Área de Trabalho com PowerShell](# "Criando um Arquivo de Log na Área de Trabalho com PowerShell")
 
 ---
 
@@ -3674,6 +3676,93 @@ $configData = Get-Content -Path $configPath | ConvertFrom-Json
 ```
 
 Esse script irá verificar a existência do arquivo `config.json` começando pelo diretório atual e depois subindo até quatro níveis de diretórios, se necessário.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Adicionando Linhas a um Arquivo de Log com PowerShell
+
+É possível incrementar uma linha em um arquivo de log utilizando o PowerShell. Vou te mostrar algumas opções para lidar com isso:
+
+1. **Visualizar o conteúdo do arquivo:** Para exibir o conteúdo de um arquivo de log, você pode usar o comando `Get-Content`. Por exemplo:
+
+   ```
+   Get-Content -Path "C:\servicos\serv01\arquivo_de_log.txt"
+   ```
+
+   Isso exibirá todas as linhas do arquivo no console.
+
+2. **Exibir as últimas linhas do arquivo:** Se o arquivo for grande e você quiser ver apenas as últimas linhas, use o argumento `-Tail`. Por exemplo:
+
+   ```
+   Get-Content -Path "C:\servicos\serv01\arquivo_de_log.txt" -Tail 42
+   ```
+
+   Isso recuperará as últimas 42 linhas do arquivo.
+
+3. **Exibir as primeiras linhas do arquivo:** Se você precisar das primeiras linhas, use o argumento `-Head`. Por exemplo:
+
+   ```
+   Get-Content -Path "C:\servicos\serv01\arquivo_de_log.txt" -Head 10
+   ```
+
+   Isso exibirá apenas as 10 primeiras linhas.
+
+4. **Monitorar o arquivo em tempo real:** Se você quiser monitorar o arquivo enquanto ele é atualizado, use o argumento `-Wait`. Por exemplo:
+
+   ```
+   Get-Content -Path "C:\servicos\serv01\arquivo_de_log.txt" -Wait
+   ```
+
+   O PowerShell exibirá todas as linhas e ficará vigiando por atualizações, mostrando-as assim que ocorrerem.
+
+Lembre-se de que, se o arquivo estiver sendo escrito em “blocos”, o console do PowerShell ficará parado até que novas linhas sejam efetivadas.
+
+Para adicionar o texto “abc…” na próxima linha do arquivo, você pode usar o seguinte comando no PowerShell:
+
+```powershell
+Add-Content -Path "C:\servicos\serv01\arquivo_de_log.txt" -Value "abc..."
+```
+
+Isso adicionará a string “abc…” como uma nova linha no arquivo especificado. Lembre-se de substituir o caminho do arquivo pelo local correto onde seu arquivo de log está armazenado.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Criando um Arquivo de Log na Área de Trabalho com PowerShell
+
+Se o arquivo "QW_log.txt" não existir, o script criará o arquivo e adicionará a primeira linha escrita. Aqui está a versão atualizada do script:
+
+```powershell
+# Define o caminho para a Área de Trabalho
+$desktopPath = [Environment]::GetFolderPath("Desktop")
+
+# Nome do arquivo de log
+$logFileName = "QW_log.txt"
+$logFilePath = Join-Path -Path $desktopPath -ChildPath $logFileName
+
+# Cria a linha de log com a data e hora atual
+$logLine = "$(Get-Date -Format 'yyyy/MM/dd HH:mm:ss') - Hello World!"
+
+# Verifica se o arquivo já existe
+if (Test-Path -Path $logFilePath) {
+    # Adiciona a nova linha ao arquivo existente
+    Add-Content -Path $logFilePath -Value $logLine
+} else {
+    # Cria um novo arquivo e adiciona a linha
+    New-Item -Path $logFilePath -ItemType File
+    Set-Content -Path $logFilePath -Value $logLine
+}
+
+# Exibe o caminho completo do arquivo de log
+$logFilePath
+```
+
+Agora o script irá criar o arquivo "QW_log.txt" se ele não existir e adicionar a primeira linha escrita. Espero que isso atenda às suas necessidades! 😊
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
