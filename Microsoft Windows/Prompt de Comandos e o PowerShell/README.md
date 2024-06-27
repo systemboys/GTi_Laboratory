@@ -37,7 +37,7 @@
 - [Criar Atalho para Comando PowerShell no Desktop usando PowerShell](#criar-atalho-para-comando-powershell-no-desktop-usando-powershell "Criar Atalho para Comando PowerShell no Desktop usando PowerShell")
 - [Criar Atalho para Comando PowerShell no Desktop com ícone personalizado usando PowerShell](#criar-atalho-para-comando-powershell-no-desktop-com-%C3%ADcone-personalizado-usando-powershell "Criar Atalho para Comando PowerShell no Desktop com ícone personalizado usando PowerShell")
 - [Criar Atalho para Comando PowerShell no Desktop com ícone baixado de uma URL usando PowerShell](#criar-atalho-para-comando-powershell-no-desktop-com-%C3%ADcone-baixado-de-uma-url-usando-powershell "Criar Atalho para Comando PowerShell no Desktop com ícone baixado de uma URL usando PowerShell")
-- [Executando Atalhos com a Função PowerShell RunShortcut](# "Executando Atalhos com a Função PowerShell RunShortcut")
+- [Executando Atalhos com a Função PowerShell RunShortcut](#executando-atalhos-com-a-fun%C3%A7%C3%A3o-powershell-runshortcut "Executando Atalhos com a Função PowerShell RunShortcut")
 - [Automação de Criação de Atalhos para Aplicativos Instalados](#automa%C3%A7%C3%A3o-de-cria%C3%A7%C3%A3o-de-atalhos-para-aplicativos-instalados "Automação de Criação de Atalhos para Aplicativos Instalados")
 - [Automatizando a Criação de Diretórios em locais de ambientes](#automatizando-a-cria%C3%A7%C3%A3o-de-diret%C3%B3rios-em-locais-de-ambientes "Automatizando a Criação de Diretórios em locais de ambientes")
 - [Automatizando a Criação de Diretórios em Local Fixo](#automatizando-a-cria%C3%A7%C3%A3o-de-diret%C3%B3rios-em-local-fixo "Automatizando a Criação de Diretórios em Local Fixo")
