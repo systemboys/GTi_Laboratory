@@ -37,6 +37,7 @@
 - [Criar Atalho para Comando PowerShell no Desktop usando PowerShell](#criar-atalho-para-comando-powershell-no-desktop-usando-powershell "Criar Atalho para Comando PowerShell no Desktop usando PowerShell")
 - [Criar Atalho para Comando PowerShell no Desktop com ícone personalizado usando PowerShell](#criar-atalho-para-comando-powershell-no-desktop-com-%C3%ADcone-personalizado-usando-powershell "Criar Atalho para Comando PowerShell no Desktop com ícone personalizado usando PowerShell")
 - [Criar Atalho para Comando PowerShell no Desktop com ícone baixado de uma URL usando PowerShell](#criar-atalho-para-comando-powershell-no-desktop-com-%C3%ADcone-baixado-de-uma-url-usando-powershell "Criar Atalho para Comando PowerShell no Desktop com ícone baixado de uma URL usando PowerShell")
+- [Executando Atalhos com a Função PowerShell RunShortcut](# "Executando Atalhos com a Função PowerShell RunShortcut")
 - [Automação de Criação de Atalhos para Aplicativos Instalados](#automa%C3%A7%C3%A3o-de-cria%C3%A7%C3%A3o-de-atalhos-para-aplicativos-instalados "Automação de Criação de Atalhos para Aplicativos Instalados")
 - [Automatizando a Criação de Diretórios em locais de ambientes](#automatizando-a-cria%C3%A7%C3%A3o-de-diret%C3%B3rios-em-locais-de-ambientes "Automatizando a Criação de Diretórios em locais de ambientes")
 - [Automatizando a Criação de Diretórios em Local Fixo](#automatizando-a-cria%C3%A7%C3%A3o-de-diret%C3%B3rios-em-local-fixo "Automatizando a Criação de Diretórios em Local Fixo")
@@ -1728,6 +1729,43 @@ Este script agora baixa o ícone da URL fornecida e o salva no caminho especific
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Executando Atalhos com a Função PowerShell RunShortcut
+
+Essa função em PowerShell chamada "RunShortcut" verifica se um atalho chamado "GTi-Support.lnk" existe na Área de Trabalho e, se existir, o executa. Caso contrário, exibe a mensagem "O atalho não foi encontrado.".
+
+Para usar essa função, você pode seguir os passos abaixo:
+
+1. Abra o Windows PowerShell ou o Windows PowerShell ISE.
+2. Cole o código da função "RunShortcut" no prompt do PowerShell.
+3. Pressione Enter para definir a função.
+4. Agora você pode chamar a função digitando `RunShortcut` no prompt do PowerShell e pressionando Enter.
+
+```powershell
+function RunShortcut {
+    # Caminho completo para o atalho na Área de Trabalho
+    $desktopPath = [System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::DesktopDirectory)
+    $shortcut = Join-Path $desktopPath "GTi-Support.lnk"
+
+    # Verifica se o atalho existe
+    if (Test-Path $shortcut) {
+        # Executa o atalho
+        Invoke-Item $shortcut
+    } else {
+        Write-Host "O atalho não foi encontrado."
+    }
+}
+```
+
+Como funciona:
+
+- `$desktopPath` obtém o caminho para a Área de Trabalho usando `[System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::DesktopDirectory)`.
+- `$shortcut` é formado usando `Join-Path` para garantir que o caminho para o atalho esteja correto.
+- O resto da função permanece o mesmo, verificando se o atalho existe e, se existir, executando-o usando `Invoke-Item`.
+
+Certifique-se de que o atalho `GTi-Support.lnk` esteja localizado na Área de Trabalho do usuário onde o script está sendo executado.
 
 ---
 
