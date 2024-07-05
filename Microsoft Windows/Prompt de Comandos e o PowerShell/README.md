@@ -85,6 +85,7 @@
 - [Adicionando Linhas a um Arquivo de Log com PowerShell](#adicionando-linhas-a-um-arquivo-de-log-com-powershell "Adicionando Linhas a um Arquivo de Log com PowerShell")
 - [Criando um Arquivo de Log na Área de Trabalho com PowerShell](#criando-um-arquivo-de-log-na-%C3%A1rea-de-trabalho-com-powershell "Criando um Arquivo de Log na Área de Trabalho com PowerShell")
 - [Colocando o script de log em uma função 'MyLogFunction()'](#colocando-o-script-de-log-em-uma-fun%C3%A7%C3%A3o-mylogfunction "Colocando o script de log em uma função 'MyLogFunction()'")
+- [Script PowerShell para Download e Instalação Silenciosa de Software com Indicador de Progresso](# "Script PowerShell para Download e Instalação Silenciosa de Software com Indicador de Progresso")
 
 ---
 
@@ -3914,6 +3915,81 @@ $logPath
 ```
 
 Lembre-se de substituir o valor de `$address` pelo diretório desejado para salvar o arquivo de log e escolher um nome adequado para o arquivo (`$fileName`). Quando você executar o arquivo `home.ps1`, a função `MyLogFunction` será importada e executada corretamente. 😊
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Script PowerShell para Download e Instalação Silenciosa de Software com Indicador de Progresso
+
+Podemos ajustar o script para que a função `Show-Progress` seja chamada diretamente durante o download e a instalação. Vou encapsular o código relevante dentro da função `Show-Progress` e chamá-la nos pontos apropriados. Aqui está o script atualizado:
+
+```powershell
+# Baixar o instalador via BitsTransfer e instalar o "Software" de forma silenciosa
+# Definição do arquivo
+$fileName = "Git"
+$fileUrl = "https://github.com/systemboys/_GTi_Support_/raw/main/Windows/VersionControlSoftware/Git_Setup.exe"
+$outputFileName = "Git_Setup.exe"
+
+Write-Host "$fileName does not exist on Windows! Downloading the installer..."
+Write-Host "File size: 58.4 MB"
+
+# Função para mostrar o indicador de progresso
+function Show-Progress {
+    param (
+        [int]$delay = 100
+    )
+    $spinner = @('-','\','|','/')
+    while ($true) {
+        foreach ($spin in $spinner) {
+            Write-Host -NoNewline "`r$spin"
+            Start-Sleep -Milliseconds $delay
+        }
+    }
+}
+
+# Baixa o instalador do Git
+Start-BitsTransfer -Source $fileUrl -Destination "$env:TEMP\$outputFileName"
+
+Write-Host "`nRunning the $fileName installer..."
+
+# Instala o Git de forma silenciosa
+$process = Start-Process -FilePath "$env:TEMP\$outputFileName" -ArgumentList "/VERYSILENT" -NoNewWindow -PassThru
+
+# Função para aguardar o processo com indicador de progresso
+function Wait-ProcessWithProgress {
+    param (
+        [System.Diagnostics.Process]$process
+    )
+    $spinner = @('-','\','|','/')
+    while (-not $process.HasExited) {
+        foreach ($spin in $spinner) {
+            Write-Host -NoNewline "`r$spin"
+            Start-Sleep -Milliseconds 100
+        }
+    }
+}
+
+# Espera o processo terminar enquanto mostra o indicador de progresso
+Wait-ProcessWithProgress -process $process
+
+Write-Host "`nDeleting the $fileName installer..."
+
+# Remove o instalador do Git
+if (Test-Path "$env:TEMP\$outputFileName") {
+    Remove-Item -Path "$env:TEMP\$outputFileName" -Force
+}
+
+Write-Host "`nDownload and installation completed."
+```
+
+Neste script, fiz o seguinte:
+
+1. Encapsulei o código do indicador de progresso na função `Wait-ProcessWithProgress`.
+2. Chamei `Wait-ProcessWithProgress` após iniciar o processo de instalação para garantir que o indicador de progresso seja exibido enquanto o processo está em andamento.
+
+Agora o indicador de progresso será exibido durante o download e a instalação do Git.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
