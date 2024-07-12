@@ -3995,3 +3995,162 @@ Agora o indicador de progresso será exibido durante o download e a instalação
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
+
+## Automatizando a Verificação e Instalação de Software com PowerShell
+
+```powershell
+# Verifica se o Git está instalado no Windows (versões 10 e 11)
+Write-Host "Checking if Git is installed on Windows..."
+
+# Verificação do caminho padrão de instalação do Git em outras versões do Windows
+$gitPaths = @(
+    "$env:ProgramFiles\Git\bin\git.exe",
+    "$env:ProgramFiles(x86)\Git\bin\git.exe"
+)
+
+$gitInstalled = $false
+
+foreach ($path in $gitPaths) {
+    if (Test-Path $path) {
+        Write-Host "Git found at $path"
+        $gitInstalled = $true
+        break
+    }
+}
+
+if ($gitInstalled) {
+    Write-Host "Git is installed."
+} else {
+    Write-Host "Git is not installed."
+    # -------------- Instalação do Git -------------------
+    # Verifica se o Git já está instalado
+    if (-not (Get-Command git -ErrorAction SilentlyContinue)) {
+        # Definição do arquivo
+        $fileName = "Git"
+        $fileUrl = "https://github.com/systemboys/_GTi_Support_/raw/main/Windows/VersionControlSoftware/Git_Setup.exe"
+        $outputFileName = "Git_Setup.exe"
+        $destinationPath = "$env:TEMP\$outputFileName"
+
+        Write-Host "$fileName doesn't exist on Windows! Downloading the installer..."
+        Write-Host "File size: 58.4 MB"
+
+        # Define os símbolos para o indicador de progresso
+        $symbols = @('.   \', ' .  |', '  . /', '   .-')
+        $index = 0
+
+        # Função para mostrar o indicador de progresso
+        function Show-Progress {
+            param (
+                [int]$delay = 100
+            )
+            while ($true) {
+                foreach ($spin in $symbols) {
+                    Write-Host -NoNewline "`r$spin"
+                    Start-Sleep -Milliseconds $delay
+                }
+            }
+        }
+
+        # Inicia o download do instalador do Git em um job
+        $job = Start-Job -ScriptBlock {
+            param ($fileUrl, $destinationPath)
+            Start-BitsTransfer -Source $fileUrl -Destination $destinationPath
+        } -ArgumentList $fileUrl, $destinationPath
+
+        # Loop para exibir o indicador de progresso enquanto o download está em andamento
+        while ($job.State -eq 'Running') {
+            Write-Host -NoNewline ("`rDownloading Git" + $symbols[$index])
+            Start-Sleep -Milliseconds 200
+            $index = ($index + 1) % $symbols.Count
+        }
+
+        # Espera o job terminar
+        Wait-Job $job
+
+        # Verifica o resultado do job
+        $jobResult = Receive-Job $job
+        if ($jobResult -eq $null) {
+            Write-Host "`rDownload completed successfully!"
+        } else {
+            Write-Host "`rAn error occurred while downloading Git."
+            $jobResult
+        }
+
+        # Remove o job
+        Remove-Job $job
+
+        Write-Host "`nRunning the $fileName installer..."
+
+        # Instala o Git de forma silenciosa
+        $process = Start-Process -FilePath $destinationPath -ArgumentList "/VERYSILENT" -NoNewWindow -PassThru
+
+        # Função para aguardar o processo com indicador de progresso
+        function Wait-ProcessWithProgress {
+            param (
+                [System.Diagnostics.Process]$process
+            )
+            while (-not $process.HasExited) {
+                foreach ($spin in $symbols) {
+                    Write-Host -NoNewline "`r$spin"
+                    Start-Sleep -Milliseconds 100
+                }
+            }
+        }
+
+        # Espera o processo terminar enquanto mostra o indicador de progresso
+        Wait-ProcessWithProgress -process $process
+
+        Write-Host "`nDeleting the $fileName installer..."
+
+        # Remove o instalador do Git
+        if (Test-Path $destinationPath) {
+            Remove-Item -Path $destinationPath -Force
+        }
+
+        Write-Host "`nDownload e instalação concluídos."
+    } else {
+        Write-Host "Git is already installed."
+    }
+    # -------------- /Instalação do Git -------------------
+
+    # Fechar a janela do Windows PowerShell
+    Write-Host "After installing Git, Windows PowerShell must be restarted!"
+    Write-Host "Type the same command again or press the up directional arrow key."
+    Write-Host
+    Write-Host "There is a GTi Support shortcut on the Desktop!"
+    Write-Host
+    Write-Host "Press any key to continue..."
+    $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+    Executar o atalho do Quick Windows no Desktop
+    return
+    break
+}
+# Fim da verificação do caminho padrão de instalação do Git em outras versões do Windows
+```
+
+Este script em PowerShell é usado para verificar se um software está instalado no Windows e, caso não esteja, ele baixa e instala o software automaticamente.
+
+1. **Verificação Inicial:**
+   - O script começa verificando se o software está instalado nos diretórios padrão do sistema. Ele percorre uma lista de possíveis caminhos onde o software pode estar instalado.
+
+2. **Instalação do Software:**
+   - Se o software não estiver instalado, o script procede para fazer o download do instalador. Ele usa um URL pré-definido para baixar o arquivo de instalação para um diretório temporário.
+   - Durante o download, um indicador de progresso é exibido para informar ao usuário que o download está em andamento.
+
+3. **Execução do Instalador:**
+   - Após o download, o script executa o instalador de forma silenciosa, sem abrir uma janela visível para o usuário, utilizando parâmetros que suprimem a interface gráfica do instalador.
+   - Durante a instalação, um indicador de progresso também é exibido para informar ao usuário que o processo está ocorrendo.
+
+4. **Limpeza:**
+   - Depois que a instalação é concluída, o script remove o arquivo de instalação baixado para liberar espaço no disco.
+
+5. **Notificação e Fechamento:**
+   - Finalmente, o script informa ao usuário que a instalação foi concluída e sugere que o Windows PowerShell seja reiniciado para aplicar as mudanças.
+   - O script também menciona a existência de um atalho de suporte na área de trabalho, convidando o usuário a pressionar qualquer tecla para continuar e fechar a janela do PowerShell.
+
+Esse script automatiza a verificação e instalação de um software, garantindo que os usuários tenham a versão necessária instalada sem precisar realizar o processo manualmente.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
