@@ -86,6 +86,7 @@
 - [Criando um Arquivo de Log na Área de Trabalho com PowerShell](#criando-um-arquivo-de-log-na-%C3%A1rea-de-trabalho-com-powershell "Criando um Arquivo de Log na Área de Trabalho com PowerShell")
 - [Colocando o script de log em uma função 'MyLogFunction()'](#colocando-o-script-de-log-em-uma-fun%C3%A7%C3%A3o-mylogfunction "Colocando o script de log em uma função 'MyLogFunction()'")
 - [Script PowerShell para Download e Instalação Silenciosa de Software com Indicador de Progresso](#script-powershell-para-download-e-instala%C3%A7%C3%A3o-silenciosa-de-software-com-indicador-de-progresso "Script PowerShell para Download e Instalação Silenciosa de Software com Indicador de Progresso")
+- [Automatizando a Verificação e Instalação de Software com PowerShell](#automatizando-a-verifica%C3%A7%C3%A3o-e-instala%C3%A7%C3%A3o-de-software-com-powershell "Automatizando a Verificação e Instalação de Software com PowerShell")
 
 ---
 
