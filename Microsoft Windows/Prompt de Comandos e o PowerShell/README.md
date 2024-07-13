@@ -3847,7 +3847,7 @@ $address = "C:\Caminho\Para\Destino"
 $fileName = "MeuLog.txt"
 $message = "Hello World!"
 $logPath = MyLogFunction -Address $address -FileName $fileName -Message $message
-$logPath
+Write-Host "Log created in: $logPath"
 ```
 
 Lembre-se de substituir o valor de `$address` pelo diretório desejado para salvar o arquivo de log e escolher um nome adequado para o arquivo (`$fileName`). Quando chamar a função, passe os valores apropriados para os parâmetros. O caminho completo do arquivo de log será retornado como resultado da função. 😊
@@ -3912,7 +3912,7 @@ $address = "C:\Caminho\Para\Destino"
 $fileName = "MeuLog.txt"
 $message = "Hello World!"
 $logPath = MyLogFunction -Address $address -FileName $fileName -Message $message
-$logPath
+Write-Host "Log created in: $logPath"
 ```
 
 Lembre-se de substituir o valor de `$address` pelo diretório desejado para salvar o arquivo de log e escolher um nome adequado para o arquivo (`$fileName`). Quando você executar o arquivo `home.ps1`, a função `MyLogFunction` será importada e executada corretamente. 😊
