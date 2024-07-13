@@ -3897,6 +3897,10 @@ Agora, para importar a função `MyLogFunction` no arquivo `home.ps1`, siga esta
 
 # Importa a função MyLogFunction do arquivo MyFunction.ps1
 . .\MyFunction.ps1
+
+# Ou
+$filePath = ".\MyFunction.ps1" # Definindo o caminho do arquivo
+Import-Module $filePath -ErrorAction Stop
 ```
 
 3. Em seguida, você pode chamar a função `MyLogFunction` normalmente no restante do arquivo `home.ps1`. Por exemplo:
