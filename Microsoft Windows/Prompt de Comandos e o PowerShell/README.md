@@ -87,7 +87,7 @@
 - [Colocando o script de log em uma função 'MyLogFunction()'](#colocando-o-script-de-log-em-uma-fun%C3%A7%C3%A3o-mylogfunction "Colocando o script de log em uma função 'MyLogFunction()'")
 - [Script PowerShell para Download e Instalação Silenciosa de Software com Indicador de Progresso](#script-powershell-para-download-e-instala%C3%A7%C3%A3o-silenciosa-de-software-com-indicador-de-progresso "Script PowerShell para Download e Instalação Silenciosa de Software com Indicador de Progresso")
 - [Automatizando a Verificação e Instalação de Software com PowerShell](#automatizando-a-verifica%C3%A7%C3%A3o-e-instala%C3%A7%C3%A3o-de-software-com-powershell "Automatizando a Verificação e Instalação de Software com PowerShell")
-- [Como Limpar o Histórico de Comandos no Windows PowerShell](# "Como Limpar o Histórico de Comandos no Windows PowerShell")
+- [Como Limpar o Histórico de Comandos no Windows PowerShell](#como-limpar-o-hist%C3%B3rico-de-comandos-no-windows-powershell "Como Limpar o Histórico de Comandos no Windows PowerShell")
 
 ---
 
