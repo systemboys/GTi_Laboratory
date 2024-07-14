@@ -87,6 +87,7 @@
 - [Colocando o script de log em uma função 'MyLogFunction()'](#colocando-o-script-de-log-em-uma-fun%C3%A7%C3%A3o-mylogfunction "Colocando o script de log em uma função 'MyLogFunction()'")
 - [Script PowerShell para Download e Instalação Silenciosa de Software com Indicador de Progresso](#script-powershell-para-download-e-instala%C3%A7%C3%A3o-silenciosa-de-software-com-indicador-de-progresso "Script PowerShell para Download e Instalação Silenciosa de Software com Indicador de Progresso")
 - [Automatizando a Verificação e Instalação de Software com PowerShell](#automatizando-a-verifica%C3%A7%C3%A3o-e-instala%C3%A7%C3%A3o-de-software-com-powershell "Automatizando a Verificação e Instalação de Software com PowerShell")
+- [Como Limpar o Histórico de Comandos no Windows PowerShell](# "Como Limpar o Histórico de Comandos no Windows PowerShell")
 
 ---
 
@@ -4154,6 +4155,50 @@ Este script em PowerShell é usado para verificar se um software está instalado
    - O script também menciona a existência de um atalho de suporte na área de trabalho, convidando o usuário a pressionar qualquer tecla para continuar e fechar a janela do PowerShell.
 
 Esse script automatiza a verificação e instalação de um software, garantindo que os usuários tenham a versão necessária instalada sem precisar realizar o processo manualmente.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Como Limpar o Histórico de Comandos no Windows PowerShell
+
+Para limpar o histórico de comandos do PowerShell no Windows 10, você pode seguir estes passos:
+
+1. **Limpar o histórico da sessão atual:**
+   Execute o seguinte comando no PowerShell para limpar o histórico da sessão atual:
+   ```powershell
+   Clear-History
+   ```
+
+2. **Remover o arquivo de histórico:**
+   Além de limpar o histórico da sessão atual, você pode remover o arquivo de histórico do PowerShell para garantir que nenhum comando anterior seja recuperado. Execute os seguintes comandos para encontrar e excluir o arquivo de histórico:
+   ```powershell
+   Remove-Item (Get-PSReadlineOption).HistorySavePath
+   ```
+
+3. **Reiniciar o PowerShell:**
+   Feche e abra o PowerShell novamente para garantir que o histórico foi limpo.
+
+### Passos detalhados:
+
+1. Abra o PowerShell.
+2. Execute o comando para limpar o histórico da sessão atual:
+   ```powershell
+   Clear-History
+   ```
+
+3. Execute o comando para remover o arquivo de histórico:
+   ```powershell
+   Remove-Item (Get-PSReadlineOption).HistorySavePath
+   ```
+
+4. Feche o PowerShell.
+5. Abra o PowerShell novamente.
+
+Seguindo esses passos, o histórico dos comandos executados anteriormente será limpo, e eles não aparecerão mais quando você pressionar a tecla para cima.
+
+Se precisar de mais alguma coisa, é só avisar!
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
