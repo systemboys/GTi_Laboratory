@@ -24,7 +24,7 @@
 
 - [Notebook com tela quebrada onde todo o resto está funcionando e você deseja formatar](#notebook-com-tela-quebrada-onde-todo-o-resto-est%C3%A1-funcionando-e-voc%C3%AA-deseja-formatar "Notebook com tela quebrada onde todo o resto está funcionando e você deseja formatar")
 
-- [Cores de Portas USB](./Cores de Portas USB/README.md#cores-de-portas-usb "Cores de Portas USB")
+- [Cores de Portas USB](./Cores%20de%20Portas%20USB/README.md "Cores de Portas USB")
 
 ---
 
