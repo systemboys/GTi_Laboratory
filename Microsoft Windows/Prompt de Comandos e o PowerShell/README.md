@@ -89,6 +89,7 @@
 - [Automatizando a Verificação e Instalação de Software com PowerShell](#automatizando-a-verifica%C3%A7%C3%A3o-e-instala%C3%A7%C3%A3o-de-software-com-powershell "Automatizando a Verificação e Instalação de Software com PowerShell")
 - [Como Limpar o Histórico de Comandos no Windows PowerShell](#como-limpar-o-hist%C3%B3rico-de-comandos-no-windows-powershell "Como Limpar o Histórico de Comandos no Windows PowerShell")
 - [Finalização de Processos no PowerShell para Continuação de Scripts](#finaliza%C3%A7%C3%A3o-de-processos-no-powershell-para-continua%C3%A7%C3%A3o-de-scripts "Finalização de Processos no PowerShell para Continuação de Scripts")
+- [Simulação de Inicialização do Linux com Animação em PowerShell](# "Simulação de Inicialização do Linux com Animação em PowerShell")
 
 ---
 
@@ -4239,6 +4240,69 @@ Write-Host "Comando adicional executado."
 Você pode personalizar o array `$processNames` com os nomes dos processos específicos que você deseja finalizar. Certifique-se de executar o script com permissões administrativas, pois algumas operações de finalização de processos podem requerer privilégios elevados.
 
 Se precisar de mais assistência ou tiver outras perguntas, estou à disposição!
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Simulação de Inicialização do Linux com Animação em PowerShell
+
+Script em PowerShell que simula a animação de inicialização de um sistema Linux. O script exibirá linhas de texto com mensagens de "OK" para cada serviço iniciado.
+
+Aqui está um exemplo de como você pode fazer isso:
+
+```powershell
+# Função para simular a exibição de uma linha com o status "OK"
+function Show-LoadingLine {
+    param (
+        [string]$message
+    )
+    Write-Host "[ OK ] $message"
+    Start-Sleep -Milliseconds 500
+}
+
+# Mensagens para exibir
+$messages = @(
+    "Started LSB: Record successful boot for GRUB.",
+    "Reached target Host and Network Name Lookups.",
+    "Started Thermal Daemon Service.",
+    "Started WPA supplicant.",
+    "Finished Remove Stale Online ext4 Metadata Check Snapshots.",
+    "Started Network Manager.",
+    "Started Avahi mDNS/DNS-SD Stack.",
+    "Started Switcheroo Control Proxy service.",
+    "Reached target Network.",
+    "Starting Network Manager Wait Online...",
+    "Started Make remote CUPS printers available locally.",
+    "Starting OpenVPN service...",
+    "Started Service for snap application... canonical-livepatch.",
+    "Started Dispatcher daemon for systemd-networkd.",
+    "Finished Permit User Sessions.",
+    "Starting GNOME Display Manager...",
+    "Starting Hold until boot process finishes up...",
+    "Started Authorization Manager.",
+    "Starting Modem Manager...",
+    "Finished Set console scheme.",
+    "Started GNOME Display Manager.",
+    "Started Accounts Service.",
+    "Started Disk Manager.",
+    "Started Login Service.",
+    "Started User Manager for UID 1000..."
+)
+
+# Exibir cada mensagem
+foreach ($msg in $messages) {
+    Show-LoadingLine -message $msg
+}
+
+# Indicar fim da animação
+Write-Host "Initialization complete."
+```
+
+Este script simula a inicialização de um sistema com várias mensagens de status. Cada mensagem é exibida com uma pausa de meio segundo entre elas para criar uma animação. Para rodar este script, basta colá-lo em um arquivo `.ps1` e executá-lo no PowerShell.
+
+Você pode ajustar o tempo de pausa (`Start-Sleep -Milliseconds 500`) conforme necessário para tornar a animação mais rápida ou mais lenta, dependendo da sua preferência.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
