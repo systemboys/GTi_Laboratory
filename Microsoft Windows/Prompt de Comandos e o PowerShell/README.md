@@ -88,6 +88,7 @@
 - [Script PowerShell para Download e Instalação Silenciosa de Software com Indicador de Progresso](#script-powershell-para-download-e-instala%C3%A7%C3%A3o-silenciosa-de-software-com-indicador-de-progresso "Script PowerShell para Download e Instalação Silenciosa de Software com Indicador de Progresso")
 - [Automatizando a Verificação e Instalação de Software com PowerShell](#automatizando-a-verifica%C3%A7%C3%A3o-e-instala%C3%A7%C3%A3o-de-software-com-powershell "Automatizando a Verificação e Instalação de Software com PowerShell")
 - [Como Limpar o Histórico de Comandos no Windows PowerShell](#como-limpar-o-hist%C3%B3rico-de-comandos-no-windows-powershell "Como Limpar o Histórico de Comandos no Windows PowerShell")
+- [Finalização de Processos no PowerShell para Continuação de Scripts](# "Finalização de Processos no PowerShell para Continuação de Scripts")
 
 ---
 
@@ -4199,6 +4200,45 @@ Para limpar o histórico de comandos do PowerShell no Windows 10, você pode seg
 Seguindo esses passos, o histórico dos comandos executados anteriormente será limpo, e eles não aparecerão mais quando você pressionar a tecla para cima.
 
 Se precisar de mais alguma coisa, é só avisar!
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Finalização de Processos no PowerShell para Continuação de Scripts
+
+É possível finalizar processos em PowerShell utilizando o cmdlet `Stop-Process`. Você pode criar um array com os nomes dos processos que deseja finalizar e, em seguida, usar um loop para finalizar cada um deles. Aqui está um exemplo de script PowerShell que faz isso:
+
+```powershell
+# Array com os nomes dos processos que deseja finalizar
+$processNames = @("AcroRd32", "AdobeARM")
+
+# Loop para finalizar cada processo do array
+foreach ($processName in $processNames) {
+    Get-Process -Name $processName -ErrorAction SilentlyContinue | Stop-Process -Force
+}
+
+# Restante do script que deve ser executado após os processos serem finalizados
+# Coloque aqui os comandos que você deseja executar após finalizar os processos
+Write-Host "Processos finalizados. Continuando com o restante do script..."
+
+# Exemplo de comando adicional
+Start-Sleep -Seconds 2
+Write-Host "Comando adicional executado."
+```
+
+### Explicação:
+
+1. **Array de Nomes de Processos**: `$processNames` é um array que contém os nomes dos processos que você deseja finalizar. Neste exemplo, "AcroRd32" e "AdobeARM" são os nomes dos processos relacionados ao Adobe Acrobat Reader DC.
+
+2. **Loop para Finalizar Processos**: O loop `foreach` percorre cada nome de processo no array e usa `Get-Process` para obter o processo pelo nome. `-ErrorAction SilentlyContinue` é usado para evitar mensagens de erro caso o processo não esteja em execução. `Stop-Process -Force` finaliza o processo encontrado.
+
+3. **Execução dos Comandos Adicionais**: Após finalizar os processos, você pode adicionar os comandos que deseja executar em seguida.
+
+Você pode personalizar o array `$processNames` com os nomes dos processos específicos que você deseja finalizar. Certifique-se de executar o script com permissões administrativas, pois algumas operações de finalização de processos podem requerer privilégios elevados.
+
+Se precisar de mais assistência ou tiver outras perguntas, estou à disposição!
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
