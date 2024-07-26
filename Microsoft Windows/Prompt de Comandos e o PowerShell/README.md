@@ -4304,6 +4304,80 @@ Este script simula a inicialização de um sistema com várias mensagens de stat
 
 Você pode ajustar o tempo de pausa (`Start-Sleep -Milliseconds 500`) conforme necessário para tornar a animação mais rápida ou mais lenta, dependendo da sua preferência.
 
+> ### Simulação de Inicialização do Linux com Animação em PowerShell e intervalo ramdômico
+
+Para fazer com que o intervalo de tempo entre as linhas seja randômico, variando entre 100, 250, 500, 750 ou 1000 milissegundos, você pode usar a função `Get-Random` para selecionar um desses valores de forma aleatória. Aqui está como você pode modificar o seu script:
+
+```powershell
+# Função para simular a exibição de uma linha com o status "OK"
+function Show-LoadingLine {
+    param (
+        [string]$message
+    )
+    Write-Host "[ " -NoNewline
+    Write-Host "OK" -NoNewline -ForegroundColor Green
+    Write-Host " ] $message"
+    $sleepTime = Get-Random -InputObject @(100, 250, 500)
+    Start-Sleep -Milliseconds $sleepTime
+}
+
+# Mensagens para exibir
+$messages = @(
+    "Started LSB: Record successful boot for GRUB.",
+    "Reached target Host and Network Name Lookups.",
+    "Started Thermal Daemon Service.",
+    "Started WPA supplicant.",
+    "Finished Remove Stale Online ext4 Metadata Check Snapshots.",
+    "Started Network Manager.",
+    "Started Avahi mDNS/DNS-SD Stack.",
+    "Started Switcheroo Control Proxy service.",
+    "Reached target Network.",
+    "Starting Network Manager Wait Online...",
+    "Started Make remote CUPS printers available locally.",
+    "Starting OpenVPN service...",
+    "Started Service for snap application... canonical-livepatch.",
+    "Started Dispatcher daemon for systemd-networkd.",
+    "Finished Permit User Sessions.",
+    "Starting GNOME Display Manager...",
+    "Starting Hold until boot process finishes up...",
+    "Started Authorization Manager.",
+    "Starting Modem Manager...",
+    "Finished Set console scheme.",
+    "Started GNOME Display Manager.",
+    "Started Accounts Service.",
+    "Started Disk Manager.",
+    "Started Login Service.",
+    "Started User Manager for UID 1000..."
+)
+
+# Exibir cada mensagem
+foreach ($msg in $messages) {
+    Show-LoadingLine -message $msg
+}
+
+# Indicar fim da animação
+Write-Host "Initialization complete."
+```
+
+Agora, cada linha será exibida com um intervalo de tempo randômico de 100, 250, 500, 750 ou 1000 milissegundos.
+
+> ### Função para executar a Simulação de Inicialização do Linux com Animação
+
+Aqui está como você pode encapsular todo o código em uma função e a forma de executá-la. Vou comentar o conteúdo da função para mostrar onde colocar o código.
+
+```powershell
+# Função para simular a inicialização do Linux
+function Simulate-LinuxBoot {
+    # Coloque o código aqui
+    # ...
+}
+
+# Para executar a função
+Simulate-LinuxBoot
+```
+
+Substitua o comentário `# Coloque o código aqui` pelo conteúdo completo do script, incluindo as mensagens e a lógica de exibição. Para executar a função, basta chamar `Simulate-LinuxBoot` no seu script ou no console do PowerShell.
+
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
