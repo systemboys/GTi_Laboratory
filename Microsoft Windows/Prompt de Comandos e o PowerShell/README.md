@@ -80,6 +80,7 @@
 - [Agendador de Verificação de Dispositivo de armazenamento](#agendador-de-verifica%C3%A7%C3%A3o-de-dispositivo-de-armazenamento "Agendador de Verificação de Dispositivo de armazenamento")
 - [Automação de Instalação do GTi SiS Stock](#automa%C3%A7%C3%A3o-de-instala%C3%A7%C3%A3o-do-gti-sis-stock "Automação de Instalação do GTi SiS Stock")
 - [Gerenciamento de Configuração com JSON em Scripts PowerShell](#gerenciamento-de-configura%C3%A7%C3%A3o-com-json-em-scripts-powershell "Gerenciamento de Configuração com JSON em Scripts PowerShell")
+- [Importação e Utilização de Configurações JSON Múltiplas no PowerShell](# "Importação e Utilização de Configurações JSON Múltiplas no PowerShell")
 - [Verificação Condicional do Caminho do Arquivo de Configuração no PowerShell](#verifica%C3%A7%C3%A3o-condicional-do-caminho-do-arquivo-de-configura%C3%A7%C3%A3o-no-powershell "Verificação Condicional do Caminho do Arquivo de Configuração no PowerShell")
 - [Verificação Flexível de Múltiplos Níveis de Caminho de Arquivo no PowerShell](#verifica%C3%A7%C3%A3o-flex%C3%ADvel-de-m%C3%BAltiplos-n%C3%ADveis-de-caminho-de-arquivo-no-powershell "Verificação Flexível de Múltiplos Níveis de Caminho de Arquivo no PowerShell")
 - [Adicionando Linhas a um Arquivo de Log com PowerShell](#adicionando-linhas-a-um-arquivo-de-log-com-powershell "Adicionando Linhas a um Arquivo de Log com PowerShell")
@@ -3665,6 +3666,84 @@ if ($configData.beepsNosDownloads -eq 3) {
 ```
 
 Este script usa o cmdlet `Get-Content` para ler o conteúdo do arquivo `config.json` e o cmdlet `ConvertFrom-Json` para converter o conteúdo em um objeto PowerShell que pode ser acessado como `$configData.ativarFuncionalidade` e `$configData.beepsNosDownloads`.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Importação e Utilização de Configurações JSON Múltiplas no PowerShell
+
+Para importar e utilizar o arquivo JSON com as URLs no seu script PowerShell, você pode seguir uma abordagem semelhante à que está usando para importar o arquivo `config.json`. Abaixo está um exemplo de como importar o arquivo de URLs e acessar uma das URLs:
+
+1. Certifique-se de que o arquivo JSON com as URLs esteja salvo, por exemplo, como `urls.json`.
+
+2. Atualize o script PowerShell para importar e acessar os dados do arquivo `urls.json`.
+
+Aqui está um exemplo de como fazer isso:
+
+### Estrutura do arquivo `config.json`:
+```json
+{
+    "promptWindowTitle": "GTi - QuickWindows",
+    "backgroundColor0": "Black",
+    "backgroundColor1": "Black",
+    "PowerShellTerminalWidth": 80,
+    "PowerShellTerminalHeight": 25,
+    "beepsOnDownloads": 3
+}
+```
+
+### Estrutura do arquivo `urls.json`:
+```json
+{
+    "URLs": [
+        "https://github.com/systemboys/QuickWindows/raw/main/Images/package_1.ico",
+        "https://github.com/systemboys/QuickWindows/raw/main/Images/package_2.ico",
+        "https://github.com/systemboys/QuickWindows/raw/main/Images/package_3.ico",
+        "https://github.com/systemboys/QuickWindows/raw/main/Images/package_4.ico",
+        "https://github.com/systemboys/QuickWindows/raw/main/Images/package_5.ico"
+    ]
+}
+```
+
+### Script PowerShell atualizado:
+```powershell
+# Configurações
+# Tenta encontrar o arquivo config.json na pasta raiz
+$configPath = "./config.json"
+# Verifica se o arquivo existe no caminho atual
+if (-not (Test-Path $configPath)) {
+    # Se não existir, tenta o caminho relativo
+    $configPath = "../../config.json"
+}
+# Importa as configurações do arquivo encontrado
+$configData = Get-Content -Path $configPath | ConvertFrom-Json
+
+# Define a cor de fundo para preto
+$Host.UI.RawUI.BackgroundColor = $configData.backgroundColor1
+Clear-Host  # Limpa a tela para aplicar a nova cor
+
+# Importa o arquivo de URLs
+$urlsPath = "./urls.json"
+if (-not (Test-Path $urlsPath)) {
+    $urlsPath = "../../urls.json"
+}
+$urlsData = Get-Content -Path $urlsPath | ConvertFrom-Json
+
+# Acessa a primeira URL
+$firstUrl = $urlsData.URLs[0]
+Write-Host "A primeira URL é: $firstUrl"
+```
+
+Neste exemplo, o script PowerShell:
+
+1. Tenta encontrar e importar o `config.json` para obter as configurações.
+2. Define a cor de fundo usando a configuração `backgroundColor1`.
+3. Tenta encontrar e importar o `urls.json`.
+4. Acessa a primeira URL da lista de URLs e a exibe.
+
+Você pode acessar outras URLs na lista de maneira semelhante, alterando o índice (`[0]`) para o índice desejado.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
