@@ -81,6 +81,7 @@
 - [Automação de Instalação do GTi SiS Stock](#automa%C3%A7%C3%A3o-de-instala%C3%A7%C3%A3o-do-gti-sis-stock "Automação de Instalação do GTi SiS Stock")
 - [Gerenciamento de Configuração com JSON em Scripts PowerShell](#gerenciamento-de-configura%C3%A7%C3%A3o-com-json-em-scripts-powershell "Gerenciamento de Configuração com JSON em Scripts PowerShell")
 - [Importação e Utilização de Configurações JSON Múltiplas no PowerShell](#importa%C3%A7%C3%A3o-e-utiliza%C3%A7%C3%A3o-de-configura%C3%A7%C3%B5es-json-m%C3%BAltiplas-no-powershell "Importação e Utilização de Configurações JSON Múltiplas no PowerShell")
+- [Organização de URLs em Categorias Usando JSON para Gerenciamento Eficiente no PowerShell](# "Organização de URLs em Categorias Usando JSON para Gerenciamento Eficiente no PowerShell")
 - [Verificação Condicional do Caminho do Arquivo de Configuração no PowerShell](#verifica%C3%A7%C3%A3o-condicional-do-caminho-do-arquivo-de-configura%C3%A7%C3%A3o-no-powershell "Verificação Condicional do Caminho do Arquivo de Configuração no PowerShell")
 - [Verificação Flexível de Múltiplos Níveis de Caminho de Arquivo no PowerShell](#verifica%C3%A7%C3%A3o-flex%C3%ADvel-de-m%C3%BAltiplos-n%C3%ADveis-de-caminho-de-arquivo-no-powershell "Verificação Flexível de Múltiplos Níveis de Caminho de Arquivo no PowerShell")
 - [Adicionando Linhas a um Arquivo de Log com PowerShell](#adicionando-linhas-a-um-arquivo-de-log-com-powershell "Adicionando Linhas a um Arquivo de Log com PowerShell")
@@ -3744,6 +3745,77 @@ Neste exemplo, o script PowerShell:
 4. Acessa a primeira URL da lista de URLs e a exibe.
 
 Você pode acessar outras URLs na lista de maneira semelhante, alterando o índice (`[0]`) para o índice desejado.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Organização de URLs em Categorias Usando JSON para Gerenciamento Eficiente no PowerShell
+
+Para organizar as URLs em categorias, você pode estruturar o arquivo `urls.json` de uma forma mais hierárquica, usando objetos para representar cada categoria. Assim, cada categoria terá seu próprio conjunto de URLs. Embora o JSON não suporte comentários, você pode usar chaves descritivas para cada categoria, o que torna o arquivo mais legível e organizado.
+
+Aqui está um exemplo de como você pode fazer isso:
+
+```json
+{
+    "MenuQuickWindows": [
+        "https://github.com/systemboys/QuickWindows/raw/main/Images/package_1.ico",
+        "https://github.com/systemboys/QuickWindows/raw/main/Images/package_2.ico"
+    ],
+    "Windows": [
+        "https://github.com/systemboys/QuickWindows/raw/main/Images/package_3.ico"
+    ],
+    "Internet": [
+        "https://github.com/systemboys/QuickWindows/raw/main/Images/package_4.ico"
+    ],
+    "Redes": [
+        "https://github.com/systemboys/QuickWindows/raw/main/Images/package_5.ico"
+    ],
+    "ExecucaoDeComandosNoPowerShell": [
+        "https://github.com/systemboys/QuickWindows/raw/main/Images/package_6.ico"
+    ],
+    "UtilitariosParaWindows": [
+        "https://github.com/systemboys/QuickWindows/raw/main/Images/package_7.ico"
+    ],
+    "SoftwaresParaEscritorio": [
+        "https://github.com/systemboys/QuickWindows/raw/main/Images/package_8.ico"
+    ],
+    "SistemasOperacionaisMicrosoft": [
+        "https://github.com/systemboys/QuickWindows/raw/main/Images/package_9.ico"
+    ],
+    "ExecutarRotinas": [
+        "https://github.com/systemboys/QuickWindows/raw/main/Images/package_10.ico"
+    ]
+}
+```
+
+### Script PowerShell atualizado para acessar as URLs:
+
+```powershell
+# Importa o arquivo de URLs
+$urlsPath = "./urls.json"
+if (-not (Test-Path $urlsPath)) {
+    $urlsPath = "../../urls.json"
+}
+$urlsData = Get-Content -Path $urlsPath | ConvertFrom-Json
+
+# Acessa as URLs da categoria "MenuQuickWindows"
+$menuQuickWindowsUrls = $urlsData.MenuQuickWindows
+Write-Host "URLs da categoria 'Menu QuickWindows':"
+foreach ($url in $menuQuickWindowsUrls) {
+    Write-Host $url
+}
+
+# Acessa as URLs de outras categorias conforme necessário
+$windowsUrls = $urlsData.Windows
+Write-Host "URLs da categoria 'Windows':"
+foreach ($url in $windowsUrls) {
+    Write-Host $url
+}
+```
+
+Neste exemplo, cada categoria no arquivo JSON é representada por uma chave que contém uma lista de URLs. O script PowerShell é atualizado para importar e acessar essas URLs por categoria. Você pode adicionar ou remover categorias conforme necessário e acessar as URLs de cada categoria de maneira organizada.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
