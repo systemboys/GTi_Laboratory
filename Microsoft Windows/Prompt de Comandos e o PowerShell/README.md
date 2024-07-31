@@ -81,7 +81,7 @@
 - [Automação de Instalação do GTi SiS Stock](#automa%C3%A7%C3%A3o-de-instala%C3%A7%C3%A3o-do-gti-sis-stock "Automação de Instalação do GTi SiS Stock")
 - [Gerenciamento de Configuração com JSON em Scripts PowerShell](#gerenciamento-de-configura%C3%A7%C3%A3o-com-json-em-scripts-powershell "Gerenciamento de Configuração com JSON em Scripts PowerShell")
 - [Importação e Utilização de Configurações JSON Múltiplas no PowerShell](#importa%C3%A7%C3%A3o-e-utiliza%C3%A7%C3%A3o-de-configura%C3%A7%C3%B5es-json-m%C3%BAltiplas-no-powershell "Importação e Utilização de Configurações JSON Múltiplas no PowerShell")
-- [Organização de URLs em Categorias Usando JSON para Gerenciamento Eficiente no PowerShell](# "Organização de URLs em Categorias Usando JSON para Gerenciamento Eficiente no PowerShell")
+- [Organização de URLs em Categorias Usando JSON para Gerenciamento Eficiente no PowerShell](#organiza%C3%A7%C3%A3o-de-urls-em-categorias-usando-json-para-gerenciamento-eficiente-no-powershell "Organização de URLs em Categorias Usando JSON para Gerenciamento Eficiente no PowerShell")
 - [Verificação Condicional do Caminho do Arquivo de Configuração no PowerShell](#verifica%C3%A7%C3%A3o-condicional-do-caminho-do-arquivo-de-configura%C3%A7%C3%A3o-no-powershell "Verificação Condicional do Caminho do Arquivo de Configuração no PowerShell")
 - [Verificação Flexível de Múltiplos Níveis de Caminho de Arquivo no PowerShell](#verifica%C3%A7%C3%A3o-flex%C3%ADvel-de-m%C3%BAltiplos-n%C3%ADveis-de-caminho-de-arquivo-no-powershell "Verificação Flexível de Múltiplos Níveis de Caminho de Arquivo no PowerShell")
 - [Adicionando Linhas a um Arquivo de Log com PowerShell](#adicionando-linhas-a-um-arquivo-de-log-com-powershell "Adicionando Linhas a um Arquivo de Log com PowerShell")
