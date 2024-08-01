@@ -92,6 +92,7 @@
 - [Como Limpar o Histórico de Comandos no Windows PowerShell](#como-limpar-o-hist%C3%B3rico-de-comandos-no-windows-powershell "Como Limpar o Histórico de Comandos no Windows PowerShell")
 - [Finalização de Processos no PowerShell para Continuação de Scripts](#finaliza%C3%A7%C3%A3o-de-processos-no-powershell-para-continua%C3%A7%C3%A3o-de-scripts "Finalização de Processos no PowerShell para Continuação de Scripts")
 - [Simulação de Inicialização do Linux com Animação em PowerShell](#simula%C3%A7%C3%A3o-de-inicializa%C3%A7%C3%A3o-do-linux-com-anima%C3%A7%C3%A3o-em-powershell "Simulação de Inicialização do Linux com Animação em PowerShell")
+- [Script PowerShell para Extrair e Exibir Trecho de Arquivo README.md no Bloco de Notas](# "Script PowerShell para Extrair e Exibir Trecho de Arquivo README.md no Bloco de Notas")
 
 ---
 
@@ -4528,6 +4529,110 @@ Simulate-LinuxBoot
 ```
 
 Substitua o comentário `# Coloque o código aqui` pelo conteúdo completo do script, incluindo as mensagens e a lógica de exibição. Para executar a função, basta chamar `Simulate-LinuxBoot` no seu script ou no console do PowerShell.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Script PowerShell para Extrair e Exibir Trecho de Arquivo README.md no Bloco de Notas
+
+> ( i ) O arquivo no exemplo é um (.md), onde deste é retirado um trecho específico e exibido em um bloco de notas.
+
+Este script PowerShell é projetado para ler um arquivo `README.md` localizado no diretório temporário do sistema (`$env:TEMP\QuickWindows\README.md`), extrair um trecho específico de texto delimitado por linhas de início e fim, e abrir o Bloco de notas do Windows para exibir o conteúdo extraído.
+
+```powershell
+# Caminho para o arquivo README.md
+$filePath = "$env:TEMP\QuickWindows\README.md"
+
+# Verifica se o arquivo existe
+if (Test-Path -Path $filePath) {
+    Write-Host "O arquivo $filePath foi encontrado."
+
+    # Lê o conteúdo do arquivo
+    $fileContent = Get-Content -Path $filePath -Encoding utf8
+    
+    # Inicializa variáveis
+    $startLineFound = $false
+    $endLineFound = $false
+    $extractedContent = @()
+
+    # Define as linhas de início e fim em minúsculas
+    $startLine = "# formatação remota"
+    $endLine = "# rascunho para novos itens"
+
+    # Percorre cada linha do conteúdo do arquivo
+    foreach ($line in $fileContent) {
+        $trimmedLine = $line.Trim().ToLower()
+        if ($trimmedLine -eq $startLine) {
+            Write-Host "Linha de início encontrada."
+            $startLineFound = $true
+            continue
+        }
+        
+        if ($trimmedLine -eq $endLine) {
+            Write-Host "Linha de fim encontrada."
+            $endLineFound = $true
+            break
+        }
+        
+        if ($startLineFound -and -not $endLineFound) {
+            $extractedContent += $line
+        }
+    }
+
+    # Verifica se as linhas de início e fim foram encontradas
+    if ($startLineFound -and $endLineFound) {
+        Write-Host "Linhas de início e fim encontradas."
+
+        # Concatena o conteúdo extraído em uma string
+        $contentToDisplay = $extractedContent -join "`r`n"
+
+        # Caminho para o arquivo temporário
+        $tempFilePath = "$env:TEMP\ExtractedContent.txt"
+
+        # Escreve o conteúdo extraído no arquivo temporário
+        $contentToDisplay | Out-File -FilePath $tempFilePath -Encoding utf8
+
+        # Abre o Bloco de notas com o arquivo temporário
+        Write-Host "Abrindo o Bloco de notas com o conteúdo extraído."
+        Start-Process notepad.exe $tempFilePath
+    } else {
+        Write-Host "Não foi possível encontrar as linhas especificadas no arquivo."
+    }
+} else {
+    Write-Host "O arquivo $filePath não existe."
+}
+```
+
+O script executa as seguintes etapas:
+
+1. **Verificação da Existência do Arquivo:**
+   - Verifica se o arquivo `README.md` existe no diretório especificado. Se o arquivo não existir, uma mensagem é exibida no console.
+
+2. **Leitura do Conteúdo do Arquivo:**
+   - Lê o conteúdo do arquivo `README.md` utilizando a codificação UTF-8 para garantir que todos os caracteres sejam lidos corretamente.
+
+3. **Inicialização de Variáveis:**
+   - Inicializa variáveis para controlar a detecção das linhas de início e fim do trecho a ser extraído e uma lista para armazenar as linhas extraídas.
+
+4. **Definição das Linhas de Início e Fim:**
+   - Define as linhas de início (`# FORMATAÇÃO REMOTA`) e fim (`# Rascunho para novos itens`) convertendo-as para minúsculas para garantir comparações consistentes.
+
+5. **Iteração sobre o Conteúdo do Arquivo:**
+   - Percorre cada linha do arquivo, removendo espaços em branco e convertendo-a para minúsculas. 
+   - Quando a linha de início é encontrada, define um sinalizador (`$startLineFound`) e começa a adicionar as linhas subsequentes à lista de conteúdo extraído.
+   - Quando a linha de fim é encontrada, define outro sinalizador (`$endLineFound`) e interrompe a iteração.
+
+6. **Verificação da Extração de Conteúdo:**
+   - Verifica se ambas as linhas de início e fim foram encontradas. 
+   - Se encontradas, concatena o conteúdo extraído em uma única string e grava-o em um arquivo temporário (`ExtractedContent.txt`) no diretório temporário do sistema.
+   - Abre o Bloco de notas do Windows para exibir o arquivo temporário.
+
+7. **Mensagens de Depuração:**
+   - Exibe mensagens no console para indicar o progresso e qualquer problema encontrado, como a ausência do arquivo ou a falha em encontrar as linhas delimitadoras.
+
+Este script é útil para extrair rapidamente trechos de um arquivo de texto e visualizá-los de forma conveniente no Bloco de notas, especialmente em cenários onde a automação e a análise rápida de arquivos são necessárias.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
