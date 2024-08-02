@@ -94,6 +94,14 @@
 - [Simulação de Inicialização do Linux com Animação em PowerShell](#simula%C3%A7%C3%A3o-de-inicializa%C3%A7%C3%A3o-do-linux-com-anima%C3%A7%C3%A3o-em-powershell "Simulação de Inicialização do Linux com Animação em PowerShell")
 - [Script PowerShell para Extrair e Exibir Trecho de Arquivo README.md no Bloco de Notas](#script-powershell-para-extrair-e-exibir-trecho-de-arquivo-readmemd-no-bloco-de-notas "Script PowerShell para Extrair e Exibir Trecho de Arquivo README.md no Bloco de Notas")
 - [Como instalar o Linux no Windows com o WS](#como-instalar-o-linux-no-windows-com-o-ws "Como instalar o Linux no Windows com o WS")
+    - [Pré-requisitos](#pr%C3%A9-requisitos "Pré-requisitos")
+    - [Comando de instalação do WSL](#comando-de-instala%C3%A7%C3%A3o-do-wsl "Comando de instalação do WSL")
+    - [Alterar a distribuição padrão do Linux instalada](#alterar-a-distribui%C3%A7%C3%A3o-padr%C3%A3o-do-linux-instalada "Alterar a distribuição padrão do Linux instalada")
+    - [Configuração e melhores práticas](#configurar-suas-informa%C3%A7%C3%B5es-de-usu%C3%A1rio-do-linux "Configuração e melhores práticas")
+    - [Verificar a versão do WSL que você está executando](https://github.com/systemboys/GTi_Laboratory/tree/main/Microsoft%20Windows/Prompt%20de%20Comandos%20e%20o%20PowerShell#verificar-a-vers%C3%A3o-do-wsl-que-voc%C3%AA-est%C3%A1-executando "Verificar a versão do WSL que você está executando")
+    - [Atualizar a versão do WSL 1 para o WSL 2](#atualizar-a-vers%C3%A3o-do-wsl-1-para-o-wsl-2 "Atualizar a versão do WSL 1 para o WSL 2")
+    - [Maneiras de executar várias distribuições do Linux com o WSL](#maneiras-de-executar-v%C3%A1rias-distribui%C3%A7%C3%B5es-do-linux-com-o-wsl "Maneiras de executar várias distribuições do Linux com o WSL")
+    - [Deseja experimentar os recursos de versão prévia mais recentes do WSL?](#deseja-experimentar-os-recursos-de-vers%C3%A3o-pr%C3%A9via-mais-recentes-do-wsl "Deseja experimentar os recursos de versão prévia mais recentes do WSL?")
 
 ---
 
