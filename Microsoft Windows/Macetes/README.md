@@ -64,8 +64,6 @@ Outra opção é usar o Editor do Registro:
 
 Seguindo esses passos, a unidade E: será ocultada do Explorador de Arquivos, mas ainda estará disponível para o sistema operacional e aplicativos.
 
-Se precisar de mais alguma ajuda ou se houver algo mais que você gostaria de fazer, por favor, me avise!
-
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#gti-laboratory--macetes-t%C3%A9cnicos "Subir para o topo")
 
