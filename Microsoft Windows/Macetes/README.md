@@ -2,8 +2,8 @@
 
 [![Macetes diversos para lidar com Windows](https://github.com/systemboys/GTi_Laboratory/raw/main/Microsoft%20Windows/Macetes/images/banner1.jpg "Macetes diversos para lidar com Windows")](https://github.com/systemboys/GTi_Laboratory/raw/main/Microsoft%20Windows/Macetes/images/banner1.jpg "Macetes diversos para lidar com Windows")
 
-- [Programas utilizados por advogados](https://github.com/systemboys/GTi_Laboratory/tree/main/Microsoft%20Windows/Macetes/Advogados#gti-laboratory--programas-utilizados-por-advogados "Programas utilizados por advogados")
-- [Como Ocultar uma Unidade de Disco no Windows 10: Guia Completo](# "Como Ocultar uma Unidade de Disco no Windows 10: Guia Completo")
+- [Programas utilizados por advogados](./Advogados/README.md#gti-laboratory--programas-utilizados-por-advogados "Programas utilizados por advogados")
+- [Como Ocultar uma Unidade de Disco no Windows 10: Guia Completo](#como-ocultar-uma-unidade-de-disco-no-windows-10-guia-completo "Como Ocultar uma Unidade de Disco no Windows 10: Guia Completo")
 
 ---
 
