@@ -102,6 +102,7 @@
     - [Atualizar a versão do WSL 1 para o WSL 2](#atualizar-a-vers%C3%A3o-do-wsl-1-para-o-wsl-2 "Atualizar a versão do WSL 1 para o WSL 2")
     - [Maneiras de executar várias distribuições do Linux com o WSL](#maneiras-de-executar-v%C3%A1rias-distribui%C3%A7%C3%B5es-do-linux-com-o-wsl "Maneiras de executar várias distribuições do Linux com o WSL")
     - [Deseja experimentar os recursos de versão prévia mais recentes do WSL?](#deseja-experimentar-os-recursos-de-vers%C3%A3o-pr%C3%A9via-mais-recentes-do-wsl "Deseja experimentar os recursos de versão prévia mais recentes do WSL?")
+- [Opção para Acesso ao Setup da BIOS via PowerShell na sessão Windows.](# "Opção para Acesso ao Setup da BIOS via PowerShell na sessão Windows.")
 
 ---
 
@@ -4747,6 +4748,27 @@ Experimente os recursos ou atualizações mais recentes do WSL participando do [
 - Canal do Desenvolvedor: atualizações mais recentes, mas baixa estabilidade.
 - Canal Beta: ideal para os usuários pioneiros, builds mais confiáveis do que o canal do Desenvolvedor.
 - Canal de pré-visualização de lançamento: visualize correções e  principais recursos da próxima versão do Windows antes de estar  disponível para o público em geral.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Opção para Acesso ao Setup da BIOS via PowerShell na sessão Windows.
+
+Você pode executar o comando `shutdown /r /fw /t 1` diretamente no PowerShell para reiniciar o Windows e entrar no modo de configuração da placa-mãe (Setup). Basta abrir o PowerShell e digitar o comando exatamente como faria no prompt de comando:
+
+```powershell
+shutdown /r /fw /t 1
+```
+
+Se quiser automatizar isso em um script PowerShell, você pode colocar esse comando em um script `.ps1`:
+
+```powershell
+Start-Process "shutdown" -ArgumentList "/r /fw /t 1"
+```
+
+Este script irá executar o comando `shutdown` com os argumentos fornecidos, resultando na reinicialização e entrada no modo de configuração da placa-mãe.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
