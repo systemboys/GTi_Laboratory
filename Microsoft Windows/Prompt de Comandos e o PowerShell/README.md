@@ -4756,16 +4756,16 @@ Experimente os recursos ou atualizações mais recentes do WSL participando do [
 
 ## Automatizando o Acesso ao Setup da BIOS via PowerShell.
 
-Você pode executar o comando `shutdown /r /fw /t 1` diretamente no PowerShell para reiniciar o Windows e entrar no modo de configuração da placa-mãe (Setup). Basta abrir o PowerShell e digitar o comando exatamente como faria no prompt de comando:
+Você pode executar o comando `shutdown /r /fw /t 00` diretamente no PowerShell para reiniciar o Windows e entrar no modo de configuração da placa-mãe (Setup). Basta abrir o PowerShell e digitar o comando exatamente como faria no prompt de comando:
 
 ```powershell
-shutdown /r /fw /t 1
+shutdown /r /fw /t 00
 ```
 
 Se quiser automatizar isso em um script PowerShell, você pode colocar esse comando em um script `.ps1`:
 
 ```powershell
-Start-Process "shutdown" -ArgumentList "/r /fw /t 1"
+Start-Process "shutdown" -ArgumentList "/r /fw /t 00"
 ```
 
 Este script irá executar o comando `shutdown` com os argumentos fornecidos, resultando na reinicialização e entrada no modo de configuração da placa-mãe.
