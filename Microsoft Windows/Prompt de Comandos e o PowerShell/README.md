@@ -102,7 +102,7 @@
     - [Atualizar a versão do WSL 1 para o WSL 2](#atualizar-a-vers%C3%A3o-do-wsl-1-para-o-wsl-2 "Atualizar a versão do WSL 1 para o WSL 2")
     - [Maneiras de executar várias distribuições do Linux com o WSL](#maneiras-de-executar-v%C3%A1rias-distribui%C3%A7%C3%B5es-do-linux-com-o-wsl "Maneiras de executar várias distribuições do Linux com o WSL")
     - [Deseja experimentar os recursos de versão prévia mais recentes do WSL?](#deseja-experimentar-os-recursos-de-vers%C3%A3o-pr%C3%A9via-mais-recentes-do-wsl "Deseja experimentar os recursos de versão prévia mais recentes do WSL?")
-- [Opção para Acesso ao Setup da BIOS via PowerShell na sessão Windows.](# "Opção para Acesso ao Setup da BIOS via PowerShell na sessão Windows.")
+- [Automatizando o Acesso ao Setup da BIOS via PowerShell.](# "Automatizando o Acesso ao Setup da BIOS via PowerShell.")
 
 ---
 
@@ -4754,7 +4754,7 @@ Experimente os recursos ou atualizações mais recentes do WSL participando do [
 
 ---
 
-## Opção para Acesso ao Setup da BIOS via PowerShell na sessão Windows.
+## Automatizando o Acesso ao Setup da BIOS via PowerShell.
 
 Você pode executar o comando `shutdown /r /fw /t 1` diretamente no PowerShell para reiniciar o Windows e entrar no modo de configuração da placa-mãe (Setup). Basta abrir o PowerShell e digitar o comando exatamente como faria no prompt de comando:
 
