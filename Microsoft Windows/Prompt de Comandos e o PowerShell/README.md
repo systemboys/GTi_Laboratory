@@ -103,6 +103,7 @@
     - [Maneiras de executar várias distribuições do Linux com o WSL](#maneiras-de-executar-v%C3%A1rias-distribui%C3%A7%C3%B5es-do-linux-com-o-wsl "Maneiras de executar várias distribuições do Linux com o WSL")
     - [Deseja experimentar os recursos de versão prévia mais recentes do WSL?](#deseja-experimentar-os-recursos-de-vers%C3%A3o-pr%C3%A9via-mais-recentes-do-wsl "Deseja experimentar os recursos de versão prévia mais recentes do WSL?")
 - [Automatizando o Acesso ao Setup da BIOS via PowerShell.](#automatizando-o-acesso-ao-setup-da-bios-via-powershell "Automatizando o Acesso ao Setup da BIOS via PowerShell.")
+- [Exclusão Simultânea de Múltiplos Itens no PowerShell Usando Variáveis de Ambiente](# "Exclusão Simultânea de Múltiplos Itens no PowerShell Usando Variáveis de Ambiente")
 
 ---
 
@@ -4769,6 +4770,36 @@ Start-Process "shutdown" -ArgumentList "/r /fw /t 00"
 ```
 
 Este script irá executar o comando `shutdown` com os argumentos fornecidos, resultando na reinicialização e entrada no modo de configuração da placa-mãe.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Exclusão Simultânea de Múltiplos Itens no PowerShell Usando Variáveis de Ambiente
+
+Aqui está o comando PowerShell para apagar os três itens utilizando variáveis de ambiente em vez de caminhos absolutos:
+
+```powershell
+# Apagar o arquivo .txt
+Remove-Item "$env:USERPROFILE\GTiSupport\QWLog.txt" -Force
+
+# Apagar o diretório e todo o seu conteúdo
+Remove-Item "$env:LOCALAPPDATA\Temp\QuickWindows" -Recurse -Force
+
+# Apagar o atalho
+Remove-Item "$env:USERPROFILE\Desktop\GTi Support.lnk" -Force
+```
+
+Este script utiliza as variáveis de ambiente `$env:USERPROFILE` para o caminho do perfil do usuário e `$env:LOCALAPPDATA` para o diretório Local AppData, garantindo que funcione independentemente do nome de usuário ou caminho específico do sistema. O parâmetro `-Force` é utilizado para garantir que os itens sejam excluídos, e o parâmetro `-Recurse` permite a exclusão de diretórios com conteúdo.
+
+Aqui está o comando PowerShell em uma única linha para apagar os três itens:
+
+```powershell
+Remove-Item "$env:USERPROFILE\GTiSupport\QWLog.txt", "$env:LOCALAPPDATA\Temp\QuickWindows", "$env:USERPROFILE\Desktop\GTi Support.lnk" -Recurse -Force
+```
+
+Este comando combina todos os itens em uma linha, utilizando a vírgula para separar os caminhos dos arquivos e diretórios a serem excluídos. O parâmetro `-Recurse` será aplicado apenas ao diretório, enquanto `-Force` será aplicado a todos os itens.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
