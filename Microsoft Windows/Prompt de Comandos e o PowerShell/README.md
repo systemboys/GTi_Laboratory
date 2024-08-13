@@ -103,7 +103,7 @@
     - [Maneiras de executar várias distribuições do Linux com o WSL](#maneiras-de-executar-v%C3%A1rias-distribui%C3%A7%C3%B5es-do-linux-com-o-wsl "Maneiras de executar várias distribuições do Linux com o WSL")
     - [Deseja experimentar os recursos de versão prévia mais recentes do WSL?](#deseja-experimentar-os-recursos-de-vers%C3%A3o-pr%C3%A9via-mais-recentes-do-wsl "Deseja experimentar os recursos de versão prévia mais recentes do WSL?")
 - [Automatizando o Acesso ao Setup da BIOS via PowerShell.](#automatizando-o-acesso-ao-setup-da-bios-via-powershell "Automatizando o Acesso ao Setup da BIOS via PowerShell.")
-- [Exclusão Simultânea de Múltiplos Itens no PowerShell Usando Variáveis de Ambiente](# "Exclusão Simultânea de Múltiplos Itens no PowerShell Usando Variáveis de Ambiente")
+- [Exclusão Simultânea de Múltiplos Itens no PowerShell Usando Variáveis de Ambiente](#exclus%C3%A3o-simult%C3%A2nea-de-m%C3%BAltiplos-itens-no-powershell-usando-vari%C3%A1veis-de-ambiente "Exclusão Simultânea de Múltiplos Itens no PowerShell Usando Variáveis de Ambiente")
 
 ---
 
