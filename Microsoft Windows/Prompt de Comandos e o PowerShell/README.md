@@ -91,7 +91,7 @@
 - [Automatizando a Verificação e Instalação de Software com PowerShell](#automatizando-a-verifica%C3%A7%C3%A3o-e-instala%C3%A7%C3%A3o-de-software-com-powershell "Automatizando a Verificação e Instalação de Software com PowerShell")
 - [Como Limpar o Histórico de Comandos no Windows PowerShell](#como-limpar-o-hist%C3%B3rico-de-comandos-no-windows-powershell "Como Limpar o Histórico de Comandos no Windows PowerShell")
 - [Finalização de Processos no PowerShell para Continuação de Scripts](#finaliza%C3%A7%C3%A3o-de-processos-no-powershell-para-continua%C3%A7%C3%A3o-de-scripts "Finalização de Processos no PowerShell para Continuação de Scripts")
-- [Manipulação Avançada de Serviços Windows com PowerShell: Filtragem, Controle e Automação](# "Manipulação Avançada de Serviços Windows com PowerShell: Filtragem, Controle e Automação")
+- [Manipulação Avançada de Serviços Windows com PowerShell: Filtragem, Controle e Automação](#manipula%C3%A7%C3%A3o-avan%C3%A7ada-de-servi%C3%A7os-windows-com-powershell-filtragem-controle-e-automa%C3%A7%C3%A3o "Manipulação Avançada de Serviços Windows com PowerShell: Filtragem, Controle e Automação")
 - [Simulação de Inicialização do Linux com Animação em PowerShell](#simula%C3%A7%C3%A3o-de-inicializa%C3%A7%C3%A3o-do-linux-com-anima%C3%A7%C3%A3o-em-powershell "Simulação de Inicialização do Linux com Animação em PowerShell")
 - [Script PowerShell para Extrair e Exibir Trecho de Arquivo README.md no Bloco de Notas](#script-powershell-para-extrair-e-exibir-trecho-de-arquivo-readmemd-no-bloco-de-notas "Script PowerShell para Extrair e Exibir Trecho de Arquivo README.md no Bloco de Notas")
 - [Como instalar o Linux no Windows com o WS](#como-instalar-o-linux-no-windows-com-o-ws "Como instalar o Linux no Windows com o WS")
