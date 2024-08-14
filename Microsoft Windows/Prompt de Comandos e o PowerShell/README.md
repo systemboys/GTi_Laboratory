@@ -91,6 +91,7 @@
 - [Automatizando a Verificação e Instalação de Software com PowerShell](#automatizando-a-verifica%C3%A7%C3%A3o-e-instala%C3%A7%C3%A3o-de-software-com-powershell "Automatizando a Verificação e Instalação de Software com PowerShell")
 - [Como Limpar o Histórico de Comandos no Windows PowerShell](#como-limpar-o-hist%C3%B3rico-de-comandos-no-windows-powershell "Como Limpar o Histórico de Comandos no Windows PowerShell")
 - [Finalização de Processos no PowerShell para Continuação de Scripts](#finaliza%C3%A7%C3%A3o-de-processos-no-powershell-para-continua%C3%A7%C3%A3o-de-scripts "Finalização de Processos no PowerShell para Continuação de Scripts")
+- [Manipulação Avançada de Serviços Windows com PowerShell: Filtragem, Controle e Automação](# "Manipulação Avançada de Serviços Windows com PowerShell: Filtragem, Controle e Automação")
 - [Simulação de Inicialização do Linux com Animação em PowerShell](#simula%C3%A7%C3%A3o-de-inicializa%C3%A7%C3%A3o-do-linux-com-anima%C3%A7%C3%A3o-em-powershell "Simulação de Inicialização do Linux com Animação em PowerShell")
 - [Script PowerShell para Extrair e Exibir Trecho de Arquivo README.md no Bloco de Notas](#script-powershell-para-extrair-e-exibir-trecho-de-arquivo-readmemd-no-bloco-de-notas "Script PowerShell para Extrair e Exibir Trecho de Arquivo README.md no Bloco de Notas")
 - [Como instalar o Linux no Windows com o WS](#como-instalar-o-linux-no-windows-com-o-ws "Como instalar o Linux no Windows com o WS")
@@ -4403,6 +4404,117 @@ Write-Host "Comando adicional executado."
 Você pode personalizar o array `$processNames` com os nomes dos processos específicos que você deseja finalizar. Certifique-se de executar o script com permissões administrativas, pois algumas operações de finalização de processos podem requerer privilégios elevados.
 
 Se precisar de mais assistência ou tiver outras perguntas, estou à disposição!
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Manipulação Avançada de Serviços Windows com PowerShell: Filtragem, Controle e Automação
+
+```powershell
+Get-Service | Select-Object -First 20
+```
+
+Esse comando é utilizado no PowerShell para listar os primeiros 20 serviços do Windows. O `Get-Service` recupera informações sobre os serviços do Windows, e o `Select-Object -First 20` limita a saída para mostrar apenas os primeiros 20 serviços da lista. Na coluna "Status", você pode ver se o serviço está "Running" (em execução) ou "Stopped" (parado), seguido pelo "Name" (nome do serviço) e o "DisplayName" (nome amigável ou descritivo do serviço).
+
+Aqui estão algumas dicas e truques sobre como manipular o comando `Get-Service` no PowerShell para gerenciar e filtrar serviços:
+
+### 1. **Listar apenas serviços "Running" (em execução):**
+
+Você pode filtrar os serviços que estão em execução com o seguinte comando:
+
+```powershell
+Get-Service | Where-Object { $_.Status -eq 'Running' }
+```
+
+### 2. **Listar apenas serviços "Stopped" (parados):**
+
+Para listar apenas os serviços que estão parados:
+
+```powershell
+Get-Service | Where-Object { $_.Status -eq 'Stopped' }
+```
+
+### 3. **Iniciar um serviço:**
+
+Para iniciar um serviço específico, você pode usar o comando `Start-Service`. Por exemplo, para iniciar o serviço de nome "Spooler":
+
+```powershell
+Start-Service -Name Spooler
+```
+
+### 4. **Parar um serviço:**
+
+Para parar um serviço, utilize o comando `Stop-Service`. Por exemplo, para parar o serviço "Spooler":
+
+```powershell
+Stop-Service -Name Spooler
+```
+
+### 5. **Reiniciar um serviço:**
+
+Você pode reiniciar um serviço usando o comando `Restart-Service`. Por exemplo, para reiniciar o serviço "Spooler":
+
+```powershell
+Restart-Service -Name Spooler
+```
+
+### 6. **Listar serviços com nomes específicos ou padrões:**
+
+Você pode listar serviços que correspondem a um padrão específico no nome usando o comando `-Name` com curingas (`*`). Por exemplo, para listar todos os serviços cujo nome começa com "Win":
+
+```powershell
+Get-Service -Name Win*
+```
+
+### 7. **Exibir serviços com mais detalhes:**
+
+Se quiser ver mais detalhes sobre um serviço específico, você pode usar o comando `Format-List` (`fl`) para exibir todas as propriedades:
+
+```powershell
+Get-Service -Name Spooler | Format-List *
+```
+
+### 8. **Filtrar serviços por um campo específico:**
+
+Para listar serviços filtrando por um campo específico, como `DisplayName` ou `ServiceType`, você pode usar o `Where-Object`. Por exemplo, para listar serviços cujo nome amigável contém "Update":
+
+```powershell
+Get-Service | Where-Object { $_.DisplayName -like '*Update*' }
+```
+
+### 9. **Verificar se um serviço está rodando antes de iniciar ou parar:**
+
+Se você deseja garantir que um serviço está parado antes de iniciá-lo, ou em execução antes de pará-lo, você pode usar uma lógica condicional:
+
+```powershell
+$service = Get-Service -Name Spooler
+if ($service.Status -eq 'Stopped') {
+    Start-Service -Name Spooler
+}
+```
+
+Ou, para parar:
+
+```powershell
+$service = Get-Service -Name Spooler
+if ($service.Status -eq 'Running') {
+    Stop-Service -Name Spooler
+}
+```
+
+### 10. **Combinar múltiplas ações:**
+
+Você pode combinar comandos para realizar múltiplas ações em sequência. Por exemplo, listar os serviços que estão em execução, parar um específico e reiniciar outro:
+
+```powershell
+Get-Service | Where-Object { $_.Status -eq 'Running' }
+Stop-Service -Name Spooler
+Restart-Service -Name W32Time
+```
+
+Essas dicas e comandos ajudam a gerenciar serviços de forma eficaz no Windows através do PowerShell, facilitando a automação e o controle de diversos serviços do sistema.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
