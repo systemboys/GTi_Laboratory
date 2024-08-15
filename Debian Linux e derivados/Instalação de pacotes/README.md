@@ -16,6 +16,7 @@
 - [Instalar o Google Earth via terminal](#instalar-o-google-earth-via-terminal "Instalar o Google Earth via terminal")
 - [Instalar o Microsoft Edge para Linux](#instalar-o-microsoft-edge-para-linux "Instalar o Microsoft Edge para Linux")
 - [Instalar o Oracle Virtual Box no Debian Linux](#instalar-o-oracle-virtual-box-no-debian-linux "Instalar o Oracle Virtual Box no Debian Linux")
+- [Instalar o Virt-Manager (Virtual Machine Manager)](# "Instalar o Virt-Manager (Virtual Machine Manager)")
 > Dicas de Instalação e Desinstalação
 - [Instalação e Desinstalação de Programas no Linux via Terminal](#instala%C3%A7%C3%A3o-e-desinstala%C3%A7%C3%A3o-de-programas-no-linux-via-terminal "Instalação e Desinstalação de Programas no Linux via Terminal")
    - [Identificar e remover programas no Linux usando o comando dpkg e apt no terminal](#identificar-e-remover-programas-no-linux-usando-o-comando-dpkg-e-apt-no-terminal "Identificar e remover programas no Linux usando o comando dpkg e apt no terminal")
@@ -295,6 +296,25 @@ sudo apt install virtualbox-6.1
 Certifique-se de ter privilégios administrativos para executar os comandos com `sudo`. Além disso, verifique a versão mais recente do VirtualBox no site oficial (https://www.virtualbox.org) para garantir que você está instalando a versão correta.
 
 Observação: Se você estiver usando uma versão diferente do Debian, substitua `$(lsb_release -sc)` pelo código do seu sistema, como "buster" para o Debian 10.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+# Instalar o Virt-Manager (Virtual Machine Manager)
+
+![Virt-Manager](/home/marcos/Documentos/Projects/GTi Laboratory/Debian Linux e derivados/Instalação de pacotes/images/Virt-Manager.png "Virt-Manager")
+
+O programa exibido na imagem é o **Virt-Manager** (Virtual Machine Manager), um popular gerenciador de máquinas virtuais para sistemas Linux. Ele é uma interface gráfica para o QEMU/KVM e outras tecnologias de virtualização, permitindo criar, configurar e gerenciar máquinas virtuais.
+
+No Debian, você pode instalar o Virt-Manager usando o seguinte comando no terminal:
+
+```bash
+sudo apt-get install virt-manager
+```
+
+Após a instalação, você poderá utilizar o Virt-Manager para gerenciar suas máquinas virtuais de maneira similar ao que é mostrado na imagem.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
