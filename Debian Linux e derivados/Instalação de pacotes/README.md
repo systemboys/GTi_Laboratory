@@ -16,7 +16,7 @@
 - [Instalar o Google Earth via terminal](#instalar-o-google-earth-via-terminal "Instalar o Google Earth via terminal")
 - [Instalar o Microsoft Edge para Linux](#instalar-o-microsoft-edge-para-linux "Instalar o Microsoft Edge para Linux")
 - [Instalar o Oracle Virtual Box no Debian Linux](#instalar-o-oracle-virtual-box-no-debian-linux "Instalar o Oracle Virtual Box no Debian Linux")
-- [Instalar o Virt-Manager (Virtual Machine Manager)](# "Instalar o Virt-Manager (Virtual Machine Manager)")
+- [Instalar o Virt-Manager (Virtual Machine Manager)](#instalar-o-virt-manager-virtual-machine-manager "Instalar o Virt-Manager (Virtual Machine Manager)")
 > Dicas de Instalação e Desinstalação
 - [Instalação e Desinstalação de Programas no Linux via Terminal](#instala%C3%A7%C3%A3o-e-desinstala%C3%A7%C3%A3o-de-programas-no-linux-via-terminal "Instalação e Desinstalação de Programas no Linux via Terminal")
    - [Identificar e remover programas no Linux usando o comando dpkg e apt no terminal](#identificar-e-remover-programas-no-linux-usando-o-comando-dpkg-e-apt-no-terminal "Identificar e remover programas no Linux usando o comando dpkg e apt no terminal")
