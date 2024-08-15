@@ -304,7 +304,7 @@ Observação: Se você estiver usando uma versão diferente do Debian, substitua
 
 # Instalar o Virt-Manager (Virtual Machine Manager)
 
-![Virt-Manager](/home/marcos/Documentos/Projects/GTi Laboratory/Debian Linux e derivados/Instalação de pacotes/images/Virt-Manager.png "Virt-Manager")
+![Virt-Manager](./images/Virt-Manager.png "Virt-Manager")
 
 O programa exibido na imagem é o **Virt-Manager** (Virtual Machine Manager), um popular gerenciador de máquinas virtuais para sistemas Linux. Ele é uma interface gráfica para o QEMU/KVM e outras tecnologias de virtualização, permitindo criar, configurar e gerenciar máquinas virtuais.
 
