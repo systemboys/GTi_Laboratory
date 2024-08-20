@@ -105,7 +105,7 @@
     - [Deseja experimentar os recursos de versão prévia mais recentes do WSL?](#deseja-experimentar-os-recursos-de-vers%C3%A3o-pr%C3%A9via-mais-recentes-do-wsl "Deseja experimentar os recursos de versão prévia mais recentes do WSL?")
 - [Automatizando o Acesso ao Setup da BIOS via PowerShell.](#automatizando-o-acesso-ao-setup-da-bios-via-powershell "Automatizando o Acesso ao Setup da BIOS via PowerShell.")
 - [Exclusão Simultânea de Múltiplos Itens no PowerShell Usando Variáveis de Ambiente](#exclus%C3%A3o-simult%C3%A2nea-de-m%C3%BAltiplos-itens-no-powershell-usando-vari%C3%A1veis-de-ambiente "Exclusão Simultânea de Múltiplos Itens no PowerShell Usando Variáveis de Ambiente")
-- [Configurando o Servidor Apache para Servir um Script PowerShell como Padrão Usando .htaccess](# "Configurando o Servidor Apache para Servir um Script PowerShell como Padrão Usando .htaccess")
+- [Configurando o Servidor Apache para Servir um Script PowerShell como Padrão Usando .htaccess](#configurando-o-servidor-apache-para-servir-um-script-powershell-como-padr%C3%A3o-usando-htaccess "Configurando o Servidor Apache para Servir um Script PowerShell como Padrão Usando .htaccess")
 
 ---
 
