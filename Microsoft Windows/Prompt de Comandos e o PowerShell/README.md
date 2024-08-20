@@ -105,6 +105,7 @@
     - [Deseja experimentar os recursos de versão prévia mais recentes do WSL?](#deseja-experimentar-os-recursos-de-vers%C3%A3o-pr%C3%A9via-mais-recentes-do-wsl "Deseja experimentar os recursos de versão prévia mais recentes do WSL?")
 - [Automatizando o Acesso ao Setup da BIOS via PowerShell.](#automatizando-o-acesso-ao-setup-da-bios-via-powershell "Automatizando o Acesso ao Setup da BIOS via PowerShell.")
 - [Exclusão Simultânea de Múltiplos Itens no PowerShell Usando Variáveis de Ambiente](#exclus%C3%A3o-simult%C3%A2nea-de-m%C3%BAltiplos-itens-no-powershell-usando-vari%C3%A1veis-de-ambiente "Exclusão Simultânea de Múltiplos Itens no PowerShell Usando Variáveis de Ambiente")
+- [Configurando o Servidor Apache para Servir um Script PowerShell como Padrão Usando .htaccess](# "Configurando o Servidor Apache para Servir um Script PowerShell como Padrão Usando .htaccess")
 
 ---
 
@@ -4912,6 +4913,58 @@ Remove-Item "$env:USERPROFILE\GTiSupport\QWLog.txt", "$env:LOCALAPPDATA\Temp\Qui
 ```
 
 Este comando combina todos os itens em uma linha, utilizando a vírgula para separar os caminhos dos arquivos e diretórios a serem excluídos. O parâmetro `-Recurse` será aplicado apenas ao diretório, enquanto `-Force` será aplicado a todos os itens.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Configurando o Servidor Apache para Servir um Script PowerShell como Padrão Usando .htaccess
+
+### **Tutorial: Como Configurar o Servidor Apache para Executar um Script PowerShell como Padrão**
+
+Este tutorial descreve como configurar um servidor Apache para servir um script PowerShell (`menu.ps1`) como o arquivo padrão ao acessar um domínio ou subdomínio, sem precisar especificar o nome do arquivo na URL.
+
+#### **Passo 1: Acesso ao Servidor**
+- Acesse seu servidor via SSH ou através de um painel de controle que permita editar arquivos.
+  
+#### **Passo 2: Localize o Diretório da Aplicação**
+- Navegue até o diretório raiz do seu domínio ou subdomínio onde o script PowerShell está hospedado. Normalmente, esse diretório é algo como `/var/www/html/` ou um diretório específico para o seu site.
+
+#### **Passo 3: Criar ou Editar o Arquivo `.htaccess`**
+- Verifique se já existe um arquivo `.htaccess` no diretório raiz. Se não existir, você precisará criar um.
+  
+**Comando para criar ou editar o arquivo `.htaccess`:**
+```bash
+nano /caminho/para/o/seu/diretorio/.htaccess
+```
+
+#### **Passo 4: Adicionar a Configuração `DirectoryIndex`**
+- Dentro do arquivo `.htaccess`, adicione ou edite a linha que define o arquivo padrão para `menu.ps1`:
+
+```bash
+DirectoryIndex menu.ps1
+```
+
+- Isso instrui o Apache a servir o arquivo `menu.ps1` automaticamente sempre que o domínio ou subdomínio for acessado sem especificar um arquivo na URL.
+
+#### **Passo 5: Salvar e Sair**
+- Após adicionar a linha acima, salve as alterações e saia do editor de texto. No editor `nano`, por exemplo, você faria isso pressionando `CTRL + O`, `Enter` para salvar, e `CTRL + X` para sair.
+
+#### **Passo 6: Testar a Configuração**
+- Acesse o seu domínio ou subdomínio no navegador (por exemplo, `http://qw.gti1.com.br`). Se configurado corretamente, o script `menu.ps1` será servido automaticamente.
+
+#### **Passo 7: Executar o Script no PowerShell**
+- No Windows PowerShell, agora você pode executar o script remoto simplesmente digitando:
+
+```powershell
+irm qw.gti1.com.br | iex
+```
+
+Este comando baixa e executa o script `menu.ps1` diretamente, sem a necessidade de especificar o nome do arquivo.
+
+### **Considerações Finais**
+Este método é útil para simplificar o acesso e a execução de scripts em ambientes onde múltiplos scripts podem existir ou onde a facilidade de uso é uma prioridade. Além disso, essa configuração não interfere em outros arquivos que possam ser servidos pelo servidor, desde que não haja conflito com o nome `menu.ps1`.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
