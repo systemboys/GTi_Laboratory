@@ -92,11 +92,18 @@ Esse script em Bash cria um loop infinito que verifica se o processo chamado "ba
 
 O `sleep 1` faz com que o script espere 1 segundo antes de verificar novamente se o processo "bashtop" está em execução. Isso cria um loop contínuo que garante que o programa "bashtop" esteja sempre em execução.
 
+> ( i ) Para ShellScript (.sh).
+
 ```bash
 while true; do
   pgrep -f bashtop >/dev/null || bashtop
   sleep 1
 done
+```
+> ( i ) Em uma linha no Terminal.
+
+```bash
+while true; do pgrep -f bashtop >/dev/null || bashtop; sleep 1; done
 ```
 
 Esse script vai rodar infinitamente (while true) e  lançar o bashtop se ele não estiver rodando. Você pode salvar esse  arquivo em qualquer lugar que você quiser e executá-lo com o comando:
