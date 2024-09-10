@@ -4,6 +4,7 @@
 
 - [Programas utilizados por advogados](./Advogados/README.md#gti-laboratory--programas-utilizados-por-advogados "Programas utilizados por advogados")
 - [Como Ocultar uma Unidade de Disco no Windows 10: Guia Completo](#como-ocultar-uma-unidade-de-disco-no-windows-10-guia-completo "Como Ocultar uma Unidade de Disco no Windows 10: Guia Completo")
+- [Como Pular a Solicitação de Conta Microsoft Durante a Instalação do Windows 11: Método OOBE\BypassNRO](# "Como Pular a Solicitação de Conta Microsoft Durante a Instalação do Windows 11: Método OOBE\BypassNRO")
 
 ---
 
@@ -63,6 +64,33 @@ Outra opção é usar o Editor do Registro:
    - Clique em "OK" e reinicie o computador.
 
 Seguindo esses passos, a unidade E: será ocultada do Explorador de Arquivos, mas ainda estará disponível para o sistema operacional e aplicativos.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#gti-laboratory--macetes-t%C3%A9cnicos "Subir para o topo")
+
+---
+
+## Como Pular a Solicitação de Conta Microsoft Durante a Instalação do Windows 11: Método OOBE\BypassNRO
+
+Sim, o procedimento mencionado no título dessa abordagem para pular a tela de login da conta Microsoft durante a instalação do Windows 11 pode funcionar, dependendo de como for feito. A linha que você viu no título "oobe\byassnro" se refere a um comando que é inserido durante o processo de instalação do Windows 11, especificamente na fase conhecida como OOBE (Out-of-Box Experience).
+
+Esse método funciona da seguinte maneira:
+
+1. **Durante a instalação do Windows 11**, quando chegar à tela de login onde é solicitada uma conta da Microsoft, você pode pressionar a combinação de teclas **Shift + F10**. Isso abrirá uma janela de **prompt de comando (CMD)**.
+
+2. No prompt de comando, você digita o comando:
+   
+   ```
+   oobe\bypassnro
+   ```
+
+   Após isso, o Windows irá reiniciar a instalação, voltando para a tela inicial, mas agora permitirá que você configure o Windows sem a necessidade de uma conta Microsoft, possibilitando o uso de uma **conta local**.
+
+Este método é frequentemente usado por técnicos ou usuários que preferem não vincular suas instalações a uma conta Microsoft ou que estão configurando sistemas em redes onde contas locais são mais viáveis.
+
+Lembre-se que, em algumas versões e atualizações do Windows 11, a Microsoft pode mudar o comportamento desse bypass, e nem sempre garantirá que ele funcione, mas é uma solução conhecida e amplamente usada.
+
+Se precisar de mais detalhes sobre como realizar o procedimento ou sobre alternativas, é só perguntar!
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#gti-laboratory--macetes-t%C3%A9cnicos "Subir para o topo")
