@@ -1,8 +1,8 @@
-# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi")
+# [Laboratório GTi](../../README.md#laborat%C3%B3rio-gti "Laboratório GTi")
 
 ## Monitoramento de sistema
 
-[![Monitoramento Linux](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Monitoramento%20de%20sistemas/images/monitoramento_linux.jpeg?raw=true "Monitoramento Linux")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Monitoramento%20de%20sistemas/images/monitoramento_linux.jpeg?raw=true "Monitoramento Linux")
+[![Monitoramento Linux](./images/monitoramento_linux.jpeg?raw=true "Monitoramento Linux")](./images/monitoramento_linux.jpeg?raw=true "Monitoramento Linux")
 
 ### *Sumário*
 
@@ -13,7 +13,7 @@
 
 ---
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -28,7 +28,7 @@ sensors
 
 Este comando exibirá as informações de temperatura do processador, incluindo a temperatura atual e máxima. Certifique-se de ter o pacote "lm-sensors" instalado em seu sistema antes de executar o comando.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -75,13 +75,13 @@ sudo make install
 bashtop
 ```
 
-[![BashTOP](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Monitoramento%20de%20sistemas/images/BashTOP.png?raw=true "BashTOP")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Monitoramento%20de%20sistemas/images/BashTOP.png?raw=true "BashTOP")
+[![BashTOP](./images/BashTOP.png?raw=true "BashTOP")](./images/BashTOP.png?raw=true "BashTOP")
 
 O BashTOP deve iniciar e começar a exibir informações sobre o uso de CPU, memória e outros recursos do sistema.
 
 Lembre-se de que, como o BashTOP é uma ferramenta de terceiros, ele pode não estar disponível nos repositórios oficiais do Debian. Portanto, ao instalá-lo dessa maneira, você está confiando no código fornecido no repositório do GitHub. Sempre verifique a fonte e a confiabilidade das ferramentas que você instala no seu sistema.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -124,7 +124,7 @@ E adicionar uma linha usando a expressão @reboot, que vai executar o seu códig
 @reboot ./keepalivescript.sh
 ```
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -153,13 +153,13 @@ sudo apt install htop
 htop
 ```
 
-[![HTop](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Monitoramento%20de%20sistemas/images/htop.png?raw=true "HTop")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Monitoramento%20de%20sistemas/images/htop.png?raw=true "HTop")
+[![HTop](./images/htop.png?raw=true "HTop")](./images/htop.png?raw=true "HTop")
 
 O "htop" deve ser iniciado e exibirá uma interface interativa que mostra uma visão detalhada do uso de recursos do sistema.
 
 Lembre-se de que o "htop" é uma ferramenta amplamente reconhecida e confiável. Ele é distribuído pelos repositórios oficiais do Debian e é uma escolha popular para monitoramento de sistema.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---

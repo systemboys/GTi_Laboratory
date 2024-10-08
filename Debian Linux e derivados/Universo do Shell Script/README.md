@@ -1,4 +1,4 @@
-# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi")
+# [Laboratório GTi](../../README.md#laborat%C3%B3rio-gti "Laboratório GTi")
 
 ## Universo do Shell Script
 
@@ -91,7 +91,7 @@ Certifique-se de executar scripts de fontes confiáveis, pois eles têm o potenc
 
 Depois de usar o AnyDesk, você pode remover o script se desejar, já que ele é apenas para automação do processo de instalação.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -174,7 +174,7 @@ Se o seu software já está em um estágio mais avançado de desenvolvimento e v
 
 Em resumo, a convenção exata pode variar de equipe para equipe, mas o importante é manter consistência e comunicar claramente as mudanças significativas em cada versão.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -219,7 +219,7 @@ lastVersion=$(grep -o 'v[0-9]\+\.[0-9]\+\.[0-9]\+' "$fileHistory" | tail -n 1)
 echo "A última versão registrada no script é: $lastVersion"
 ```
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -283,7 +283,7 @@ else
 fi
 ```
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -334,7 +334,7 @@ Lembre-se de ajustar o comando `dialog` conforme necessário para atender às su
 # ... restante do código...
 ```
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -376,7 +376,7 @@ Variável C: c
 
 Dessa forma, você pode compartilhar variáveis entre diferentes scripts de shell, facilitando a modularização e reutilização de código.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -400,7 +400,7 @@ echo "O endereço local do arquivo é: $file_path"
 
 Esse código utiliza as variáveis `$0` e `$PWD` para obter o diretório atual onde o script está sendo executado. Em seguida, utiliza o comando `realpath` para obter o caminho completo do arquivo. Por fim, imprime o endereço local do arquivo utilizando o comando `echo`.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -426,7 +426,7 @@ echo "Endereço local do arquivo: $localAddress"
 
 Neste código, definimos o caminho absoluto do arquivo que queremos obter o endereço local. Em seguida, usamos o comando `dirname` para obter o diretório do arquivo. Depois, usamos o comando `cd` para entrar no diretório e o comando `pwd` para obter o endereço local do diretório. Por fim, imprimimos o endereço local do arquivo na saída.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -684,7 +684,7 @@ fi
 
 Esses são apenas alguns exemplos de condições que podem ser usadas em scripts shell. Os títulos sugeridos para esses exemplos são:
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -725,7 +725,7 @@ Ao executar o script com o comando `sudo`, ele terá as permissões necessárias
 **Finalidade:**
 Esse tipo de verificação é essencial para garantir que operações críticas do sistema sejam realizadas apenas por usuários autorizados, evitando assim possíveis danos acidentais ou maliciosos ao sistema operacional.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -772,7 +772,7 @@ fi
 
 Lembre-se de que alguns programas podem não ter um comando associado diretamente e podem ter um processo de instalação mais complexo que envolve a obtenção de pacotes específicos ou a configuração de repositórios. Certifique-se de verificar a documentação oficial do programa ou as orientações da distribuição Linux para a instalação correta do AnyDesk ou de qualquer outro software que você deseja instalar.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -794,7 +794,7 @@ fi
 
 Neste script, `dpkg -l` lista todos os pacotes instalados no sistema e `grep discord` filtra a saída para verificar se o Discord está presente. Se não estiver, ele exibirá a mensagem "Discord não está instalado. Instalando...". Você pode adicionar os comandos para instalar o Discord no bloco de código dentro do `if` conforme necessário.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -816,7 +816,7 @@ fi
 
 Neste script, `command -v google-chrome` verifica se o comando `google-chrome` pode ser executado (ou seja, se o Google Chrome está instalado). Se estiver instalado, ele mostrará a mensagem "O Google Chrome está instalado!". Caso contrário, mostrará "O Google Chrome não está instalado!".
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -843,7 +843,7 @@ Neste script:
 - Se o diretório existe, a primeira parte do `if` é verdadeira, então ele entra no bloco `then` e exibe "O diretório Firefox existe!".
 - Se o diretório não existe, ele pula para a parte do `else` e exibe "O diretório Firefox não existe!".
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -896,7 +896,7 @@ Este script é útil para usuários que desejam verificar as especificações do
 
 **Nota:** A versão reescrita do script está na sintaxe padrão do Shell (/bin/sh), que é mais portátil e pode ser executada em uma variedade de ambientes Unix-like.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -941,7 +941,7 @@ echo "Informações da memória: $(formatar_tamanho $tamanho_kb)"
 
 Esse script é útil para exibir o total de memória do sistema de forma mais amigável para o usuário, mostrando o valor em MB.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -963,7 +963,7 @@ Neste comando:
 
 Certifique-se de ajustar o URL do script para corresponder à localização real do seu script no repositório GitHub. Além disso, é altamente recomendável revisar o script ou a fonte para garantir que não contenha código malicioso antes de executá-lo desta forma.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -1052,7 +1052,7 @@ Lembre-se de tornar o arquivo `menu_instalacao.sh` executável antes de usá-lo 
 
 Certifique-se de substituir o URL de download pelo URL real do arquivo de instalação e ajuste o script conforme necessário para outras operações de instalação ou personalizações que você precise.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -1085,7 +1085,7 @@ Neste exemplo, `\033[0;31m` representa a cor vermelha e `\033[0;32m` representa 
 
 Espero que isso ajude! Se você tiver mais perguntas ou precisar de assistência com algo mais, sinta-se à vontade para perguntar.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -1108,7 +1108,7 @@ Neste exemplo, `\033[97;41m` muda a cor do texto para branco (código 97) e o pl
 
 Sugestão de título para esta dica: "Personalizando o Plano de Fundo no Terminal Linux: Como Alterar o Fundo dos Textos em Scripts Bash"
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -1166,7 +1166,7 @@ Neste exemplo, `\033[1;32;43m` define o texto como verde, fundo como amarelo e n
 
 Você pode combinar e experimentar diferentes códigos de escape para criar os efeitos visuais desejados em seus scripts Bash.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -1183,7 +1183,7 @@ echo "Segundo comando executado!"
 
 Neste exemplo, o `sleep 3` faz com que o script pause por 3 segundos antes de executar o próximo comando. Você pode ajustar o número de segundos conforme necessário.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -1206,7 +1206,7 @@ echo "O nome deste script é: $nome_do_arquivo"
 
 Neste exemplo, `basename "$0"` extrai apenas o nome do arquivo do caminho completo do script, e o resultado é armazenado na variável `nome_do_arquivo`. Em seguida, o `echo` exibe o nome do arquivo. Você pode adaptar essa parte do código conforme necessário para se adequar ao restante do seu script.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -1243,7 +1243,7 @@ Aqui está uma lista de caracteres especiais que podem ser úteis para criar men
 
 Esses caracteres podem ser usados para criar bordas, setas, caixas, e muitos outros elementos gráficos em menus ou interfaces de texto. Sinta-se à vontade para experimentar e combiná-los conforme necessário!
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -1271,7 +1271,7 @@ fi
 
 Neste exemplo, `$diretorioA` é o caminho para "diretorioA" e `$diretorioB` é o caminho completo para "diretorioB". O script verifica se o diretório B existe usando a condição `-d "$diretorioB"`. Se existir, executa o comando 1; caso contrário, executa o comando 2. Você pode substituir os `echo` com os comandos reais que deseja executar em cada caso. Certifique-se de substituir `"/caminho/para/diretorioA"` pelo caminho real do seu "diretorioA".
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -1311,7 +1311,7 @@ fileName="$2"
 
 Quando você executa "./Install_Package1.sh" a partir de "GTi_Support.sh", as variáveis "sleep" e "fileName" serão passadas como argumentos para o script "Install_Package1.sh", permitindo que você use esses valores dentro do segundo script.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -1339,7 +1339,7 @@ echo "Agora são $hora_atual"
 
 Neste exemplo, `%H:%M:%S` é um formato para extrair a hora (`%H`) os minutos (`%M`) e os segundos (`%S`) do comando `date`.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -1406,7 +1406,7 @@ while true; do
 
 Neste código, `"\u24C7"` é o valor Unicode hexadecimal para o símbolo de registro (®) em um círculo. Usando `echo -e`, ele é convertido para o caractere correspondente e armazenado na variável `symbol_1`. Em seguida, `symbol_1` é incorporado à string `developer` conforme necessário.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -1480,7 +1480,7 @@ sudo apt-get install dialog
 
 O comando `apt-get update` atualiza a lista de pacotes disponíveis e o comando `apt-get install dialog` instala o pacote `dialog` em seu sistema Debian. Você pode então usar o `dialog` em seus scripts Shell Bash para criar interfaces de usuário interativas baseadas em texto.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -1557,7 +1557,7 @@ update_packages() {
 
 Neste script, a saída do `sudo apt-get update` é redirecionada para o arquivo temporário `/tmp/apt_progress`. O script então lê este arquivo, calcula o progresso como uma porcentagem do total de linhas e atualiza a barra de progresso em conformidade. Quando a atualização estiver completa, o arquivo temporário é removido e uma caixa de mensagem informa que os pacotes foram atualizados.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -1647,7 +1647,7 @@ Vamos entender a diferença entre os dois scripts e, em seguida, criar um títul
    - Exibe uma mensagem de alerta se o nome está vazio ou se o usuário cancelou a operação.
    - Se o nome não está vazio, exibe o nome.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -1707,7 +1707,7 @@ done
 
 Nesse script, o loop `while true` garante que o usuário forneça uma senha não vazia. Se o usuário pressionar Cancelar, ele será informado de que a operação foi cancelada. Se a senha estiver vazia, ele será informado de que a senha não pode ser vazia e solicitado a fornecer uma senha novamente. Somente quando uma senha não vazia é fornecida, o script exibirá a senha e sairá do loop.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -1760,7 +1760,7 @@ Nesse caso, `pkill -SIGINT -f "$(basename "$0")"` irá enviar o sinal SIGINT par
 
 Certifique-se de testar essa abordagem para garantir que funcione conforme esperado no seu ambiente específico.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -1817,7 +1817,7 @@ Neste script, a função `pingDomain` solicita ao usuário que insira um domíni
 
 Certifique-se de ter o `Dialog` instalado em seu sistema para que o script funcione corretamente. Você pode instalá-lo usando `sudo apt-get install dialog` se estiver usando o Debian ou Ubuntu.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -1836,7 +1836,7 @@ Portanto, o que está acontecendo é que o `curl` está baixando um script diret
 
 No entanto, esta abordagem também tem riscos de segurança. Você está basicamente executando um script do qual não tem controle total, baixado da internet. É por isso que muitas pessoas e organizações recomendam revisar cuidadosamente os scripts antes de executá-los dessa maneira, especialmente em ambientes de produção, para garantir que não contenham código malicioso.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -1865,7 +1865,7 @@ Certifique-se de que o arquivo Shell Script (`QuickLinux.sh` no seu caso) tenha 
 
 Lembre-se de que executar scripts diretamente do cURL desta forma tem riscos de segurança, pois você está executando código remoto no seu sistema. Portanto, só faça isso com scripts de fontes confiáveis.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---

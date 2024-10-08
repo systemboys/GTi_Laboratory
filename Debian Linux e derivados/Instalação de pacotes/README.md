@@ -1,4 +1,4 @@
-# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi") / [Debian Linux e derivados](https://github.com/systemboys/GTi_Laboratory/tree/main/Debian%20Linux%20e%20derivados#debian-linux-e-derivados "Debian Linux e derivados")
+# [Laboratório GTi](../../README.md#laborat%C3%B3rio-gti "Laboratório GTi") / [Debian Linux e derivados](https://github.com/systemboys/GTi_Laboratory/tree/main/Debian%20Linux%20e%20derivados#debian-linux-e-derivados "Debian Linux e derivados")
 
 ## Instalação de pacotes
 
@@ -102,7 +102,7 @@ Uma solução definitiva para o erro de `PATH` após a instalação de um pacote
 
 Depois de seguir estes passos, o caminho correto deve estar configurado corretamente e o erro de `PATH` não deve mais ocorrer.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -117,7 +117,7 @@ A história dos arquivos ".deb" remonta ao projeto Debian, que começou em 1993.
 
 Portanto, quando você encontra um arquivo com a extensão ".deb", pode ter certeza de que é destinado principalmente a sistemas baseados no Debian e é compatível com ferramentas de gerenciamento de pacotes como "dpkg", "apt" e "apt-get".
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -138,7 +138,7 @@ Ao executar esse comando com privilégios de superusuário (sudo), o sistema ten
 
 Portanto, o "sudo apt --fix-broken install" é uma ferramenta útil para manter a estabilidade do sistema Linux, garantindo que todas as dependências necessárias para o funcionamento adequado dos programas sejam satisfeitas.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -159,7 +159,7 @@ Este comando é útil quando você encontra mensagens de erro relacionadas a dep
 
 Lembre-se de que você precisa ter privilégios de administrador (usando `sudo`) para executar esse comando, pois ele lida com operações que afetam o sistema como um todo.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -210,7 +210,7 @@ O comando `sudo apt --fix-broken install` é uma ferramenta poderosa para resolv
 
 Se tiver dúvidas sobre um caso específico de dependências quebradas ou erros, sinta-se à vontade para compartilhar que eu posso ajudar com mais detalhes!
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -225,7 +225,7 @@ Ao executar `apt autoremove`, o sistema verifica as dependências que foram inst
 
 Em resumo, o comando `apt autoremove` ajuda a limpar o sistema, removendo pacotes que não têm mais utilidade após a remoção de pacotes principais. Certifique-se de que você realmente não precisa dessas dependências antes de executar o comando, pois ele pode remover pacotes que não são mais necessários, mas tenha cuidado para não remover algo importante acidentalmente.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -268,7 +268,7 @@ Siga as etapas abaixo para instalar o Google Earth no Debian Linux via terminal:
 
 Lembre-se de ter privilégios administrativos para executar os comandos com `sudo`. Certifique-se também de baixar a versão correta do Google Earth para o seu sistema operacional (32 bits ou 64 bits) e de atualizar os comandos acima com o nome do arquivo .deb baixado, se necessário.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -308,7 +308,7 @@ Lembre-se de que você precisará ter privilégios de administrador (sudo) para 
 
 Essas etapas garantirão a instalação apropriada e atualizações futuras do Microsoft Edge no seu sistema Linux.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -349,7 +349,7 @@ Certifique-se de ter privilégios administrativos para executar os comandos com 
 
 Observação: Se você estiver usando uma versão diferente do Debian, substitua `$(lsb_release -sc)` pelo código do seu sistema, como "buster" para o Debian 10.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -368,7 +368,7 @@ sudo apt-get install virt-manager
 
 Após a instalação, você poderá utilizar o Virt-Manager para gerenciar suas máquinas virtuais de maneira similar ao que é mostrado na imagem.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -414,7 +414,7 @@ Ao seguir esses exemplos, você poderá fazer a instalação e desinstalação d
 
 Lembre-se de verificar a documentação oficial do programa e fazer backup de dados importantes antes de realizar qualquer alteração em seu sistema.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -449,7 +449,7 @@ Esse comando lista todos os pacotes instalados pelo `apt` (incluindo os do `dpkg
 
 Lembre-se de que o comando `apt` é uma camada de gerenciamento de pacotes mais amigável que envolve o `dpkg`. Portanto, a maioria dos programas instalados usando o `apt` também estará listada se você usar o comando `dpkg --list`, mas o comando `apt list` é mais direto para listar programas instalados através do `apt`.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -474,7 +474,7 @@ Esses comandos irão listar os pacotes cujos nomes ou descrições incluem a pal
 
 Lembre-se de executar esses comandos com privilégios de administrador (sudo). Se o pacote "bashtop" estiver disponível nos repositórios configurados, você deverá ver o nome correto e outras informações relacionadas a ele.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---

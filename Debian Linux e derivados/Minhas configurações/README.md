@@ -1,8 +1,8 @@
-# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi")
+# [Laboratório GTi](../../README.md#laborat%C3%B3rio-gti "Laboratório GTi")
 
 ## Minhas configurações
 
-![Programação](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Minhas%20configura%C3%A7%C3%B5es/images/programacao.png?raw=true "Programação")
+![Programação](./images/programacao.png?raw=true "Programação")
 
 ### *Sumário*
 
@@ -36,7 +36,7 @@
 
 > O conteúdo abaixo, são as configurações do meu computador o qual utilizo para fazer meus trabalhos, meus projetos e meu companheiro de gerra. Nessas configurações, estou utilizando o `Debian Linux` com o ambiente `Cinnamon`, adotei como minha principal interface de usuário...
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -55,7 +55,7 @@ Em 2008, continuei minha exploração do mundo Linux, experimentando outras dist
 
 Em 2010, retornei a Mirador e comecei a usar o Ubuntu Linux por alguns anos. Posteriormente, mudei para o Debian Linux, que continua sendo minha distribuição de escolha até hoje. Para mim, o GNU/Linux não é apenas um sistema operacional; é um "kernel". Apesar de trabalhar com o Windows em outros computadores, meu sistema operacional pessoal é o Debian Linux no mundo do GNU/Linux.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -80,7 +80,7 @@ Minha paixão se concentrou na programação web, e comecei a trabalhar com PHP,
 
 Hoje, sou um programador que cria soluções baseadas na web e utiliza o Linux, com o Debian como meu ambiente de desenvolvimento principal. Essa jornada tem sido uma mistura emocionante de exploração, aprendizado e evolução constante."
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -95,7 +95,7 @@ Há uma percepção negativa de que o Linux é reservado para geeks e hackers, o
 
 > Neste texto, exploraremos a jornada de evolução do GNU/Linux e desvendaremos os mitos que cercam sua utilização como sistema operacional de desktop. É hora de compreender que o Linux é uma opção viável e amigável para o usuário médio.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -128,7 +128,7 @@ Para particionar o disco em duas partições, uma para o sistema raiz ("/") e ou
 
 Depois de concluir essas etapas, o Debian Linux será instalado com as duas partições desejadas: uma para o sistema raiz ("/") e outra para o diretório pessoal ("/home"). Isso permitirá que você mantenha seus dados pessoais separados do sistema operacional, facilitando a reinstalação ou a atualização do sistema no futuro. Certifique-se de fazer backup de dados importantes antes de prosseguir.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -157,7 +157,7 @@ Você pode instalar o Debian Linux em uma partição específica do seu disco r�
 
 Após concluir essas etapas, o Debian Linux estará instalado na partição desejada do seu disco rígido, e as outras partições devem permanecer intactas. Certifique-se de fazer backup dos dados importantes e tome cuidado ao selecionar a partição durante a instalação para evitar a formatação acidental de outras partições.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -170,7 +170,7 @@ Após concluir essas etapas, o Debian Linux estará instalado na partição dese
 
 | Software | Copyright | Instalação e/ou Configurações |
 | :--: | :--: | ---- |
-| Configuração da data na área de notificação | Nativo | Clique inverso na data / Configurar... / Ativar "Exibir números da semana no calendário" e "Usar um formato de data personalizado", formato da data: `%A, %e de %B de %Y, %H:%M:%S`. [![Data e hora do sistema](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Minhas%20configura%C3%A7%C3%B5es/images/Data_e_hora_do_sistema.png?raw=true "Data e hora do sistema")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Minhas%20configura%C3%A7%C3%B5es/images/Data_e_hora_do_sistema.png?raw=true "Data e hora do sistema") |
+| Configuração da data na área de notificação | Nativo | Clique inverso na data / Configurar... / Ativar "Exibir números da semana no calendário" e "Usar um formato de data personalizado", formato da data: `%A, %e de %B de %Y, %H:%M:%S`. [![Data e hora do sistema](./images/Data_e_hora_do_sistema.png?raw=true "Data e hora do sistema")](./images/Data_e_hora_do_sistema.png?raw=true "Data e hora do sistema") |
 | Captura de tela | Nativo | Adicionar ao painel. |
 | Monitor do sistema | Nativo | Adicionar ao painel. |
 | Editor de texto | Nativo | Preferêncis: Esquema de cores (Olívio) \| Adicionar ao painel. |
@@ -178,11 +178,11 @@ Após concluir essas etapas, o Debian Linux estará instalado na partição dese
 
 Botões do Painel na barra inferior.
 
-[![Botões do painel](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Minhas%20configura%C3%A7%C3%B5es/images/panel_buttons.png?raw=true "Botões do painel")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Minhas%20configura%C3%A7%C3%B5es/images/panel_buttons.png?raw=true "Botões do painel")
+[![Botões do painel](./images/panel_buttons.png?raw=true "Botões do painel")](./images/panel_buttons.png?raw=true "Botões do painel")
 
 > ( ! ) Acima estão os botões por ordem na barra inferior!
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -194,7 +194,7 @@ Botões do Painel na barra inferior.
 | GParted | Copyright © 2004-2006 Bart Hakvoort \| Copyright © 2008-2021 Curtis Gedak \| Copyright © 2011-2021 Mike Fleetwood | `apt update && apt install gparted` |
 | Virtual Box | [Oracle](https://www.oracle.com/ "Oracle - Cloud Applications and Cloud Platform") |  |
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -218,7 +218,7 @@ Botões do Painel na barra inferior.
 | Remmina | [Antenore Gatta](https://remmina.org/ "Antenore Gatta") | Instalação via terminal: `sudo apt-get install remmina` |
 | Visualizador TigerVNC | [TigerVNC](https://tigervnc.org/ "Visualizador TigerVNC") | Para instalar o "Visualizador TigerVNC" via terminal: `sudo apt-get update` e `sudo apt-get install tigervnc-viewer` |
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -232,7 +232,7 @@ Botões do Painel na barra inferior.
 |     Beekeeper      | [Bookeeper Studio Inc](https://www.beekeeperstudio.io/get "Download") | ( ! ) Falta instalar, é um arquivo AppImage!                |
 |        Git         | [Software Freedom Conservancy](https://git-scm.com/ "Download") | Terminal: `apt update && apt install git && git --version`. |
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -243,7 +243,7 @@ Botões do Painel na barra inferior.
 | :--: | :--: | ---- |
 | draw.io | [drawio](https://www.drawio.com/ "drawio") | Instalação no link: [Download](https://get.diagrams.net/ "Download do pacote"), também roda [online](https://app.diagrams.net/ "Clique para usar o App online") |
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---

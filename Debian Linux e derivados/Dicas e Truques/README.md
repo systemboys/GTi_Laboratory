@@ -1,8 +1,8 @@
-# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi")
+# [Laboratório GTi](../../README.md#laborat%C3%B3rio-gti "Laboratório GTi")
 
 ## Dicas e Truques
 
-[![Dicas e Truques](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Dicas%20e%20Truques/images/Comandos-basicos-do-Linux-para-iniciantes.jpg?raw=true "Dicas e Truques")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Dicas%20e%20Truques/images/Comandos-basicos-do-Linux-para-iniciantes.jpg?raw=true "Dicas e Truques")
+[![Dicas e Truques](./images/Comandos-basicos-do-Linux-para-iniciantes.jpg?raw=true "Dicas e Truques")](./images/Comandos-basicos-do-Linux-para-iniciantes.jpg?raw=true "Dicas e Truques")
 
 ### *Sumário*
 
@@ -14,7 +14,7 @@
 
 ---
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -41,7 +41,7 @@ Resolvendo o Problema de Resolução em uma Máquina Virtual Debian no Hyper-V:
    sudo nano grub
    ```
 
-   [![Nano - Grub](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Dicas%20e%20Truques/images/nano_etc_default_grub.png?raw=true "Nano - Grub")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Dicas%20e%20Truques/images/nano_etc_default_grub.png?raw=true "Nano - Grub")
+   [![Nano - Grub](./images/nano_etc_default_grub.png?raw=true "Nano - Grub")](./images/nano_etc_default_grub.png?raw=true "Nano - Grub")
 
 5. No arquivo de configuração do GRUB, encontre as linhas que começam com `GRUB_CMDLINE_LINUX_DEFAULT` e `GRUB_CMDLINE_LINUX`. Adicione a resolução ideal para a sua tela ao final dessas linhas. Por exemplo, se a resolução desejada for 1366x768, as linhas devem ser assim:
 
@@ -50,7 +50,7 @@ Resolvendo o Problema de Resolução em uma Máquina Virtual Debian no Hyper-V:
    GRUB_CMDLINE_LINUX="video=hyperv_fb:1366x768"
    ```
 
-   [![Grub](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Dicas%20e%20Truques/images/nano_etc_default_grub_code.png?raw=true "Grub")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Dicas%20e%20Truques/images/nano_etc_default_grub_code.png?raw=true "Grub")
+   [![Grub](./images/nano_etc_default_grub_code.png?raw=true "Grub")](./images/nano_etc_default_grub_code.png?raw=true "Grub")
 
 6. Salve as alterações no arquivo e saia do editor de texto.
 
@@ -68,13 +68,13 @@ Resolvendo o Problema de Resolução em uma Máquina Virtual Debian no Hyper-V:
 
 Após a reinicialização da máquina virtual Debian, você deve ter a resolução configurada corretamente. Se necessário, ajuste a resolução da tela nas configurações do ambiente gráfico do Debian para corresponder à configuração feita no GRUB.
 
-[![Configurações do sistema](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Dicas%20e%20Truques/images/System_settings-layout.png?raw=true "Configurações do sistema")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Dicas%20e%20Truques/images/System_settings-layout.png?raw=true "Configurações do sistema")
+[![Configurações do sistema](./images/System_settings-layout.png?raw=true "Configurações do sistema")](./images/System_settings-layout.png?raw=true "Configurações do sistema")
 
 Essas etapas devem ajudá-lo a resolver problemas de resolução em uma máquina virtual Debian no Hyper-V.
 
-[![Desktop do Debian Linux](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Dicas%20e%20Truques/images/desktop_debian.png?raw=true "Desktop do Debian Linux")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Dicas%20e%20Truques/images/desktop_debian.png?raw=true "Desktop do Debian Linux")
+[![Desktop do Debian Linux](./images/desktop_debian.png?raw=true "Desktop do Debian Linux")](./images/desktop_debian.png?raw=true "Desktop do Debian Linux")
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -107,7 +107,7 @@ Aqui estão os passos:
 
 Agora, seu histórico de comandos estará vazio. Lembre-se de que isso apagará permanentemente o histórico de comandos, portanto, certifique-se de que é isso que deseja fazer. Se você deseja evitar que comandos futuros sejam registrados no histórico, pode configurar o shell para ignorar o histórico com um comando específico ou ajustar as configurações de histórico em seu arquivo de perfil, como o `~/.bashrc` para o Bash shell.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -160,7 +160,7 @@ Você pode desligar o Linux via terminal usando vários comandos, mas os princip
 
 Lembre-se de usar o `sudo` antes desses comandos para executá-los com privilégios de superusuário, pois o desligamento do sistema geralmente requer permissões elevadas. Certifique-se de salvar o trabalho antes de desligar ou reiniciar o sistema para evitar perda de dados.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -179,7 +179,7 @@ Essa abordagem de ter a opção padrão como "Sim" (Y) é uma convenção para t
 
 Em resumo, essa mensagem visa tornar as operações no terminal mais seguras e eficientes, permitindo que os usuários confirmem ou cancelem a ação de forma rápida e simples.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -210,7 +210,7 @@ Agora você pode executar o comando usando o alias que você criou. Por exemplo,
 
 A diferença entre os arquivos `~/.bashrc` e `~/.bash_profile` é que o `~/.bashrc` é executado toda vez que um novo shell é aberto, enquanto o `~/.bash_profile` é executado apenas no login do usuário.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---

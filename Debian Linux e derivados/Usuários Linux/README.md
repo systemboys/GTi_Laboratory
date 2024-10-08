@@ -1,4 +1,4 @@
-# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi")
+# [Laboratório GTi](../../README.md#laborat%C3%B3rio-gti "Laboratório GTi")
 
 ## Usuários linux
 
@@ -14,7 +14,7 @@
 
 ---
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -49,7 +49,7 @@ No Linux, o usuário "root" já vem pré-instalado no sistema e é criado automa
 
 Lembre-se de que é importante limitar o acesso do usuário root sempre que possível e evitar usá-lo para tarefas rotineiras. Em vez disso, use um usuário comum com privilégios limitados para tarefas diárias e execute comandos como superusuário apenas quando necessário.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -80,7 +80,7 @@ Aqui estão os passos para adicionar um usuário ao grupo `sudo` e conceder-lhe 
 
 A partir deste ponto, o usuário `name_user` terá a capacidade de executar comandos com privilégios de superusuário usando `sudo`. Isso elimina a necessidade de usar `su` para trocar para o superusuário, mas ainda exigirá a autenticação com a senha do próprio usuário ao usar `sudo`. Certifique-se de usar esses privilégios com responsabilidade, pois comandos errados podem afetar o sistema.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -105,7 +105,7 @@ Portanto, você tem duas opções, dependendo se deseja manter ou excluir os arq
 
 Certifique-se de substituir "nome_usuario" pelo nome real do usuário que você deseja remover. Lembre-se de que você precisará ter privilégios de administrador (sudo) para executar esses comandos. Certifique-se de fazer isso com cuidado, pois a remoção de um usuário é uma ação irreversível e seus arquivos serão perdidos.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -144,7 +144,7 @@ Importante: Tome cuidado ao usar esses comandos, pois eles podem afetar a config
 
 A edição de usuários geralmente requer privilégios de administrador (sudo), pois envolve alterações nas configurações do sistema. Certifique-se de que está fazendo alterações com cuidado e de acordo com as necessidades do sistema.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -179,7 +179,7 @@ Para mudar a senha do superusuário "root" no Linux, você pode seguir os seguin
 
 > Lembre-se de escolher uma senha forte e complexa para aumentar a segurança do sistema. Uma senha forte deve conter uma combinação de letras maiúsculas e minúsculas, números e caracteres especiais e ter pelo menos 8 caracteres de comprimento. Evite usar senhas fáceis de adivinhar, como datas de nascimento, nomes comuns ou palavras do dicionário.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -201,7 +201,7 @@ Lembre-se de substituir `"nova_senha"` pela senha desejada.
 
 No entanto, este método de fornecer senhas diretamente no terminal pode ser inseguro, pois deixa as senhas visíveis no histórico do terminal e em processos em execução. Em ambientes de produção ou em sistemas críticos, é altamente recomendável utilizar métodos mais seguros para gerenciar senhas e autenticações, como o uso de chaves SSH e políticas de segurança adequadas.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---

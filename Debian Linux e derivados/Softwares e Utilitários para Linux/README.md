@@ -1,8 +1,8 @@
-# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi")
+# [Laboratório GTi](../../README.md#laborat%C3%B3rio-gti "Laboratório GTi")
 
 ## Softwares e Utilitários para Linux
 
-[![Pacotes Linux](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Softwares%20e%20Utilit%C3%A1rios%20para%20Linux/images/cardboard-boxes-apt-dpkg.jpg?raw=true "Pacotes Linux")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Softwares%20e%20Utilit%C3%A1rios%20para%20Linux/images/cardboard-boxes-apt-dpkg.jpg?raw=true "Pacotes Linux")
+[![Pacotes Linux](./images/cardboard-boxes-apt-dpkg.jpg?raw=true "Pacotes Linux")](./images/cardboard-boxes-apt-dpkg.jpg?raw=true "Pacotes Linux")
 
 ### *Sumário*
 
@@ -13,7 +13,7 @@
 
 ---
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -24,7 +24,7 @@ Sim, existem vários aceleradores de download disponíveis para Linux que podem 
 
 1. **Axel:** O Axel é um acelerador de download de linha de comando que suporta várias conexões simultâneas, o que pode melhorar significativamente as velocidades de download. É simples de usar e amplamente disponível nos repositórios de pacotes das distribuições Linux.
 
-   [![Axel](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Softwares%20e%20Utilit%C3%A1rios%20para%20Linux/images/axel.png?raw=true "Axel")](hthttps://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Softwares%20e%20Utilit%C3%A1rios%20para%20Linux/images/axel.png?raw=true "Axel")
+   [![Axel](./images/axel.png?raw=true "Axel")](ht./images/axel.png?raw=true "Axel")
 
    Para instalar o Axel, você pode usar o seguinte comando, dependendo da sua distribuição:
 
@@ -35,7 +35,7 @@ Sim, existem vários aceleradores de download disponíveis para Linux que podem 
 
 2. **aria2:** O aria2 é uma ferramenta de download de código aberto que suporta downloads segmentados, torrent, metalink e muito mais. Ele possui uma interface de linha de comando e pode ser altamente configurável para atender às suas necessidades específicas.
 
-   [![aria2](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Softwares%20e%20Utilit%C3%A1rios%20para%20Linux/images/aria2.png?raw=true "aria2")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Softwares%20e%20Utilit%C3%A1rios%20para%20Linux/images/aria2.png?raw=true "aria2")
+   [![aria2](./images/aria2.png?raw=true "aria2")](./images/aria2.png?raw=true "aria2")
 
    Para instalar o aria2, você pode usar o seguinte comando:
 
@@ -46,7 +46,7 @@ Sim, existem vários aceleradores de download disponíveis para Linux que podem 
 
 3. **uGet:** O uGet é um gerenciador de download de código aberto com uma interface gráfica do usuário. Ele oferece recursos avançados de gerenciamento de downloads, como agendamento, categorização e integração com navegadores.
 
-   [![uGet](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Softwares%20e%20Utilit%C3%A1rios%20para%20Linux/images/uget.jpg?raw=true "uGet")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Softwares%20e%20Utilit%C3%A1rios%20para%20Linux/images/uget.jpg?raw=true "uGet")
+   [![uGet](./images/uget.jpg?raw=true "uGet")](./images/uget.jpg?raw=true "uGet")
 
    Para instalar o uGet, você pode usar o seguinte comando:
 
@@ -57,7 +57,7 @@ Sim, existem vários aceleradores de download disponíveis para Linux que podem 
 
 4. **KGet:** O KGet é um gerenciador de download específico para o ambiente de desktop KDE. Ele oferece uma interface gráfica intuitiva e pode ser usado em sistemas Linux que utilizam o KDE Plasma.
 
-   [![KGet](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Softwares%20e%20Utilit%C3%A1rios%20para%20Linux/images/KGet.png?raw=true "KGet")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Softwares%20e%20Utilit%C3%A1rios%20para%20Linux/images/KGet.png?raw=true "KGet")
+   [![KGet](./images/KGet.png?raw=true "KGet")](./images/KGet.png?raw=true "KGet")
 
    Para instalar o KGet, você pode usar o seguinte comando:
 
@@ -67,7 +67,7 @@ Sim, existem vários aceleradores de download disponíveis para Linux que podem 
 
 Cada uma dessas ferramentas tem suas próprias características e vantagens, então escolha a que melhor atende às suas necessidades e preferências. Todas elas podem ajudar a melhorar a velocidade de download de arquivos da Internet.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -118,11 +118,11 @@ O comando `wget` é uma ferramenta de linha de comando disponível em sistemas L
 
 7. **Espelhamento de Sites:** O `wget` pode ser usado para criar espelhos de sites inteiros, o que é útil para fazer backup de sites ou criar cópias locais de conteúdo da web.
 
-[![WGet](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Softwares%20e%20Utilit%C3%A1rios%20para%20Linux/images/comando-wget-linux.png?raw=true "WGet")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Softwares%20e%20Utilit%C3%A1rios%20para%20Linux/images/comando-wget-linux.png?raw=true "WGet")
+[![WGet](./images/comando-wget-linux.png?raw=true "WGet")](./images/comando-wget-linux.png?raw=true "WGet")
 
 O `wget` é uma ferramenta poderosa e versátil para gerenciar downloads de arquivos e recursos da web em sistemas Linux e UNIX. É amplamente utilizado por administradores de sistemas e usuários avançados para diversas tarefas relacionadas à web. Certifique-se de usar com responsabilidade e respeitar os direitos autorais e os termos de uso ao baixar conteúdo da Internet.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---

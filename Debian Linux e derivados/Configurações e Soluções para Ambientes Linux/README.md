@@ -2,7 +2,7 @@
 
 ## Configurações e Soluções para Ambientes Linux
 
-[![Ambientes Linux](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Configura%C3%A7%C3%B5es%20e%20Solu%C3%A7%C3%B5es%20para%20Ambientes%20Linux/images/Linux_environments.png?raw=true "Ambientes Linux")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Configura%C3%A7%C3%B5es%20e%20Solu%C3%A7%C3%B5es%20para%20Ambientes%20Linux/images/Linux_environments.png?raw=true "Ambientes Linux")
+[![Ambientes Linux](./images/Linux_environments.png?raw=true "Ambientes Linux")](./images/Linux_environments.png?raw=true "Ambientes Linux")
 
 ### *Sumário*
 

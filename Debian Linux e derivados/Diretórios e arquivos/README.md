@@ -1,8 +1,8 @@
-# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi")
+# [Laboratório GTi](../../README.md#laborat%C3%B3rio-gti "Laboratório GTi")
 
 ## Diretórios e arquivos
 
-[![Diretórios e arquivos](https://github.com/systemboys/GTi_Laboratory/raw/main/Debian%20Linux%20e%20derivados/Diret%C3%B3rios%20e%20arquivos/images/desktop_zero_feature_tiny.jpg "Diretórios e arquivos")](http://link.com "Diretórios e arquivos")
+[![Diretórios e arquivos](./images/desktop_zero_feature_tiny.jpg "Diretórios e arquivos")](http://link.com "Diretórios e arquivos")
 
 > Comandos e Gerenciamento de Arquivos no Terminal Linux
 
@@ -34,7 +34,7 @@
 
 ---
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -57,7 +57,7 @@ mv antigo_nome novo_nome
 
 Certifique-se de estar no diretório correto ou fornecer o caminho completo para o diretório, caso esteja em um local diferente. Além disso, verifique se você tem permissões suficientes para renomear o diretório.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -104,7 +104,7 @@ sudo cp arquivo.txt /diretorio/protegido/
 
 Sempre tenha cuidado ao usar o comando `cp` para evitar sobrescrever acidentalmente arquivos existentes. É uma boa prática fazer backup ou ter certeza do que você está copiando e para onde está copiando.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -130,7 +130,7 @@ Certifique-se de substituir `/caminho/do/seu/diretorio/fonte/` pelo caminho real
 
 Isso copiará todos os arquivos e pastas do diretório de origem para o diretório de destino, exibindo um indicador de progresso no terminal.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -185,7 +185,7 @@ O `rsync` é uma ferramenta poderosa para copiar e sincronizar arquivos e diret�
 
 Lembre-se de que o `rsync` é uma ferramenta flexível e pode ser usada de várias maneiras, combinando esses parâmetros de acordo com suas necessidades específicas. Certifique-se de ler a documentação do `rsync` (`man rsync`) para obter informações detalhadas sobre todos os parâmetros disponíveis e suas opções.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -228,7 +228,7 @@ Certifique-se de fornecer o caminho correto para o local de destino. Se você es
 
 Além disso, verifique se você tem as permissões adequadas para realizar a operação de movimentação.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -265,7 +265,7 @@ Para apagar um diretório com todos os seus subdiretórios e arquivos no Linux v
 
 Lembre-se de ter cuidado ao usar o comando "rm" com a opção "-r", pois ele pode excluir arquivos importantes e não é possível recuperá-los. Certifique-se de que você esteja excluindo o diretório correto e que não haja arquivos importantes dentro dele antes de executar o comando.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -294,7 +294,7 @@ Para apagar todos os arquivos de um diretório, exceto um arquivo ou diretório 
 
 Lembre-se de que este comando é muito poderoso e pode causar a exclusão acidental de arquivos importantes se não for usado com cuidado. Certifique-se de revisar cuidadosamente o comando antes de executá-lo e garantir que você esteja preservando o arquivo ou diretório filho desejado.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -343,7 +343,7 @@ Onde "[permissões]" são as permissões que você deseja definir para o arquivo
 
 Lembre-se de que as permissões de arquivos e diretórios são uma parte importante da segurança do sistema, por isso é importante usar com cuidado e conceder apenas as permissões necessárias.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -400,7 +400,7 @@ Isso fará o seguinte:
 
 Ajuste os diretórios e os nomes dos arquivos conforme necessário para atender aos seus requisitos específicos.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -423,7 +423,7 @@ ls --all
 
 Quando você usar um desses comandos, o `ls` exibirá todos os itens, incluindo os ocultos, no diretório atual. Isso é útil para visualizar todos os arquivos e pastas, inclusive os que normalmente não são mostrados ao usar apenas o comando `ls`.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -474,7 +474,7 @@ Esses são comandos bastante úteis no Linux. Vou explicar cada um deles com um 
 
 Esses comandos são fundamentais para qualquer usuário do Linux que trabalhe com texto e arquivos de forma regular. Cada um tem suas próprias funcionalidades específicas, tornando-os muito versáteis em várias situações.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -517,7 +517,7 @@ grep "^[A-Z].*ing$" arquivo.txt
 ```
 Neste exemplo, a expressão regular `^[A-Z].*ing$` corresponde a linhas que começam com uma letra maiúscula e terminam com "ing" no arquivo `arquivo.txt`.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -621,7 +621,7 @@ sudo service smbd restart
 
 Certifique-se de também ajustar as permissões de acesso nos diretórios no sistema de arquivos para garantir que os usuários tenham as permissões apropriadas para os compartilhamentos.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -664,7 +664,7 @@ sudo apt install unzip
 
 Após a instalação do `unzip`, você poderá usá-lo para extrair arquivos ZIP como mencionado anteriormente.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -699,7 +699,7 @@ Você também pode usar opções adicionais para especificar um diretório de de
 
 Lembre-se de que o comando `tar` é bastante versátil e possui várias opções que você pode explorar usando o `man tar` no terminal ou consultando sua documentação online.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
