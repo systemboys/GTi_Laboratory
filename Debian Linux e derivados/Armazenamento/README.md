@@ -2,7 +2,7 @@
 
 ## Armazenamento
 
-[![HHD's e SSD's](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Armazenamento/images/ssd-o-hdd-1024x576.jpg?raw=true "HHD's e SSD's")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Armazenamento/images/ssd-o-hdd-1024x576.jpg?raw=true "HHD's e SSD's")
+[![HHD's e SSD's](./images/ssd-o-hdd-1024x576.jpg?raw=true "HHD's e SSD's")](./images/ssd-o-hdd-1024x576.jpg?raw=true "HHD's e SSD's")
 
 ### *Sumário*
 

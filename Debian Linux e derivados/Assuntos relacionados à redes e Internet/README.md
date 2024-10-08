@@ -1,8 +1,8 @@
-# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi")
+# [Laboratório GTi](../../README.md#laborat%C3%B3rio-gti "Laboratório GTi")
 
 ## Assuntos relacionados à redes e Internet
 
-[![Redes e Internet](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Assuntos%20relacionados%20%C3%A0%20redes%20e%20Internet/images/networks.png?raw=true "Redes e Internet")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Assuntos%20relacionados%20%C3%A0%20redes%20e%20Internet/images/networks.png?raw=true "Redes e Internet")
+[![Redes e Internet](./images/networks.png?raw=true "Redes e Internet")](./images/networks.png?raw=true "Redes e Internet")
 
 ### *Sumário*
 
@@ -14,7 +14,7 @@
 
 ---
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -23,7 +23,7 @@
 
 O comando "nslookup dominio_do_site.com" é usado para obter informações sobre um domínio específico, como o endereço IP associado a ele. No exemplo abaixo, o comando "nslookup facebook.com" foi executado.
 
-[![Comando nslookup](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Assuntos%20relacionados%20%C3%A0%20redes%20e%20Internet/images/Terminal_comando_nslookup.png?raw=true "Comando nslookup")](https://github.com/systemboys/GTi_Laboratory/blob/main/Debian%20Linux%20e%20derivados/Assuntos%20relacionados%20%C3%A0%20redes%20e%20Internet/images/Terminal_comando_nslookup.png?raw=true "Comando nslookup")
+[![Comando nslookup](./images/Terminal_comando_nslookup.png?raw=true "Comando nslookup")](./images/Terminal_comando_nslookup.png?raw=true "Comando nslookup")
 
 A resposta retornada mostra o servidor DNS usado para fazer a consulta (no caso, 10.0.0.1) e as informações relacionadas ao domínio "facebook.com". A resposta não é autoritativa, o que significa que não é proveniente do servidor DNS oficial do domínio.
 
@@ -31,7 +31,7 @@ Em seguida, são exibidos os registros de nome e endereço (IP) associados ao do
 
 Essas informações são úteis para verificar a resolução de DNS de um domínio específico e obter os endereços IP associados a ele.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -84,7 +84,7 @@ Substitua "interface" pelo nome da sua interface de rede. Certifique-se de que a
 
 Depois de seguir essas etapas, sua interface de rede deve estar configurada com o IP estático especificado. Certifique-se de ter anotado todos os valores corretamente, pois incorreções podem causar problemas na conectividade de rede.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -114,7 +114,7 @@ Substitua "seu_ip", "eth0", "sua_mascara" e "seu_gateway" pelos valores apropria
 
 Essas configurações serão válidas até o próximo reinício do sistema. Se você deseja tornar a configuração permanente, siga as instruções fornecidas na resposta anterior para configurar um IP estático.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -178,7 +178,7 @@ Pressione `Ctrl + O` para salvar e `Ctrl + X` para sair no Nano.
 
 > Este tutorial oferece uma visão clara e concisa do processo de modificação das configurações de rede no Linux, permitindo que você ajuste sua conexão de acordo com suas necessidades.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -223,7 +223,7 @@ Pressione `Ctrl + O` para salvar e `Ctrl + X` para sair no Nano.
 
 A principal diferença entre os dois comandos é que o segundo força explicitamente o uso do IPv4, enquanto o primeiro pode usar IPv6 se estiver configurado no sistema.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
