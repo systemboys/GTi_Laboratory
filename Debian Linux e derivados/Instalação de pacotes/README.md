@@ -21,7 +21,7 @@
 - [Instalação e Desinstalação de Programas no Linux via Terminal](#instala%C3%A7%C3%A3o-e-desinstala%C3%A7%C3%A3o-de-programas-no-linux-via-terminal "Instalação e Desinstalação de Programas no Linux via Terminal")
    - [Identificar e remover programas no Linux usando o comando dpkg e apt no terminal](#identificar-e-remover-programas-no-linux-usando-o-comando-dpkg-e-apt-no-terminal "Identificar e remover programas no Linux usando o comando dpkg e apt no terminal")
    - [Verificar nome correto de pacote no sistema Debian](#verificar-nome-correto-de-pacote-no-sistema-debian "Verificar nome correto de pacote no sistema Debian")
-- [Corrigindo Pacotes Quebrados no Debian: Como Utilizar o Comando sudo apt --fix-broken install](# "Corrigindo Pacotes Quebrados no Debian: Como Utilizar o Comando sudo apt --fix-broken install")
+- [Corrigindo Pacotes Quebrados no Debian: Como Utilizar o Comando sudo apt --fix-broken install](#corrigindo-pacotes-quebrados-no-debian-como-utilizar-o-comando-sudo-apt---fix-broken-install "Corrigindo Pacotes Quebrados no Debian: Como Utilizar o Comando sudo apt --fix-broken install")
 
 ---
 
