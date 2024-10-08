@@ -1,4 +1,4 @@
-# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi")
+# [Laboratório GTi](../../README.md#laborat%C3%B3rio-gti "Laboratório GTi")
 
 ## Configurações e Soluções para Ambientes Linux
 
@@ -12,7 +12,7 @@
 
 ---
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -29,7 +29,7 @@ Este comando instalará o ambiente de desktop Cinnamon e suas dependências. Lem
 
 Depois que a instalação estiver concluída, você pode fazer logout da sua sessão atual ou reiniciar o sistema e, na tela de login, selecionar "Cinnamon" como ambiente de desktop antes de fazer login novamente.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -78,7 +78,7 @@ Para desinstalar o ambiente GNOME e manter apenas o Cinnamon (ou qualquer outro 
 
 Após reiniciar, você deve estar usando apenas o ambiente de desktop Cinnamon, com o ambiente GNOME removido. Certifique-se de verificar se tudo está funcionando conforme o esperado antes de prosseguir, pois a desinstalação de ambientes de desktop pode ter efeitos inesperados em alguns casos.
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
@@ -125,7 +125,7 @@ Se nenhum desses passos resolver o problema, é possível que haja um problema m
 
 ---
 
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
 ---
