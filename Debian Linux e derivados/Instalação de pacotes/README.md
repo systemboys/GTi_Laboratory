@@ -11,6 +11,7 @@
    - [O Significado dos Arquivos (.deb) no Mundo Linux](#o-significado-dos-arquivos-deb-no-mundo-linux "O Significado dos Arquivos (.deb) no Mundo Linux")
 - [Entendendo e Corrigindo Dependências Quebradas no Linux com 'apt --fix-broken install'](#entendendo-e-corrigindo-depend%C3%AAncias-quebradas-no-linux-com-sudo-apt---fix-broken-install "Entendendo e Corrigindo Dependências Quebradas no Linux com 'apt --fix-broken install'")
 - [Resolvendo Dependências de Pacotes no Linux com o Comando apt-get install -f](#resolvendo-depend%C3%AAncias-de-pacotes-no-linux-com-o-comando-apt-get-install--f "Resolvendo Dependências de Pacotes no Linux com o Comando apt-get install -f")
+   - [Corrigindo Pacotes Quebrados no Debian: Como Utilizar o Comando sudo apt --fix-broken install](#corrigindo-pacotes-quebrados-no-debian-como-utilizar-o-comando-sudo-apt---fix-broken-install "Corrigindo Pacotes Quebrados no Debian: Como Utilizar o Comando sudo apt --fix-broken install")
 - [Liberação de Espaço no Linux: Usando o Comando apt autoremove para Remover Pacotes Não Necessários](#libera%C3%A7%C3%A3o-de-espa%C3%A7o-no-linux-usando-o-comando-apt-autoremove-para-remover-pacotes-n%C3%A3o-necess%C3%A1rios "Liberação de Espaço no Linux: Usando o Comando apt autoremove para Remover Pacotes Não Necessários")
 > Instalação de alguns softwares via terminal
 - [Instalar o Google Earth via terminal](#instalar-o-google-earth-via-terminal "Instalar o Google Earth via terminal")
@@ -21,7 +22,6 @@
 - [Instalação e Desinstalação de Programas no Linux via Terminal](#instala%C3%A7%C3%A3o-e-desinstala%C3%A7%C3%A3o-de-programas-no-linux-via-terminal "Instalação e Desinstalação de Programas no Linux via Terminal")
    - [Identificar e remover programas no Linux usando o comando dpkg e apt no terminal](#identificar-e-remover-programas-no-linux-usando-o-comando-dpkg-e-apt-no-terminal "Identificar e remover programas no Linux usando o comando dpkg e apt no terminal")
    - [Verificar nome correto de pacote no sistema Debian](#verificar-nome-correto-de-pacote-no-sistema-debian "Verificar nome correto de pacote no sistema Debian")
-- [Corrigindo Pacotes Quebrados no Debian: Como Utilizar o Comando sudo apt --fix-broken install](#corrigindo-pacotes-quebrados-no-debian-como-utilizar-o-comando-sudo-apt---fix-broken-install "Corrigindo Pacotes Quebrados no Debian: Como Utilizar o Comando sudo apt --fix-broken install")
 
 ---
 
@@ -158,6 +158,57 @@ Quando você executa `apt-get install -f`, o sistema irá:
 Este comando é útil quando você encontra mensagens de erro relacionadas a dependências ou quando alguma instalação foi interrompida e precisa ser corrigida.
 
 Lembre-se de que você precisa ter privilégios de administrador (usando `sudo`) para executar esse comando, pois ele lida com operações que afetam o sistema como um todo.
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Corrigindo Pacotes Quebrados no Debian: Como Utilizar o Comando sudo apt --fix-broken install
+
+O comando `sudo apt --fix-broken install` é utilizado para corrigir problemas de dependências de pacotes no sistema Debian e em distribuições baseadas nele, como Ubuntu, Mint, etc.
+
+### Objetivo do comando:
+
+Ele serve para resolver situações onde o sistema apresenta pacotes quebrados, ou seja, pacotes que não foram instalados corretamente devido à falta de dependências ou conflitos entre dependências. Esses problemas podem surgir quando a instalação de um pacote falha, deixando o sistema com pacotes parcialmente instalados ou pacotes que requerem outros pacotes que ainda não estão presentes ou corretamente instalados.
+
+### Estrutura:
+
+- `sudo`: Executa o comando com permissões de superusuário, o que é necessário para instalar ou modificar pacotes no sistema.
+- `apt`: O gerenciador de pacotes do Debian, utilizado para instalar, atualizar, remover pacotes e gerenciar dependências.
+- `--fix-broken`: Esta opção indica ao `apt` que ele deve tentar corrigir pacotes quebrados no sistema. Isso pode significar instalar dependências ausentes, remover pacotes que estão em conflito ou corrigir pacotes parcialmente instalados.
+- `install`: Indica que o comando deve instalar os pacotes que faltam para corrigir os problemas.
+
+### Quando usar:
+
+Esse comando é útil quando você tenta instalar ou atualizar um pacote e o processo falha devido a pacotes quebrados ou dependências que não foram resolvidas corretamente. Ele verifica o sistema em busca de pacotes que precisam ser reparados e tenta corrigir esses problemas automaticamente.
+
+### Exemplo de uso:
+
+1. Você tenta instalar um programa com `sudo apt install nome_do_pacote` e recebe um erro indicando que há pacotes quebrados ou dependências que não foram atendidas.
+2. Ao tentar qualquer outro comando do `apt`, ele também pode informar que o sistema está em um estado inconsistente.
+3. Para corrigir, você roda:
+
+   ```bash
+   sudo apt --fix-broken install
+   ```
+
+4. O `apt` tentará instalar as dependências que faltam, remover pacotes quebrados ou fazer ajustes necessários para colocar o gerenciador de pacotes em um estado consistente.
+
+### Cenário comum de uso:
+
+Suponha que você tentou instalar o AnyDesk, e ele falhou devido a dependências ausentes. Ao executar o comando:
+
+```bash
+sudo dpkg -i anydesk_*.deb
+```
+
+Se houver dependências não atendidas, você verá um erro sobre pacotes quebrados. Nesse ponto, o sistema pode sugerir o uso de `sudo apt --fix-broken install` para corrigir essas dependências e finalizar a instalação.
+
+### Resumindo:
+O comando `sudo apt --fix-broken install` é uma ferramenta poderosa para resolver automaticamente problemas de pacotes no sistema, corrigindo pacotes quebrados e garantindo que o sistema continue funcionando corretamente.
+
+Se tiver dúvidas sobre um caso específico de dependências quebradas ou erros, sinta-se à vontade para compartilhar que eu posso ajudar com mais detalhes!
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
@@ -422,57 +473,6 @@ apt-cache search bashtop
 Esses comandos irão listar os pacotes cujos nomes ou descrições incluem a palavra-chave "bashtop". Você pode então ver se o pacote que você está procurando está listado e verificar o nome correto dele.
 
 Lembre-se de executar esses comandos com privilégios de administrador (sudo). Se o pacote "bashtop" estiver disponível nos repositórios configurados, você deverá ver o nome correto e outras informações relacionadas a ele.
-
-[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
-[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
-
----
-
-## Corrigindo Pacotes Quebrados no Debian: Como Utilizar o Comando sudo apt --fix-broken install
-
-O comando `sudo apt --fix-broken install` é utilizado para corrigir problemas de dependências de pacotes no sistema Debian e em distribuições baseadas nele, como Ubuntu, Mint, etc.
-
-### Objetivo do comando:
-
-Ele serve para resolver situações onde o sistema apresenta pacotes quebrados, ou seja, pacotes que não foram instalados corretamente devido à falta de dependências ou conflitos entre dependências. Esses problemas podem surgir quando a instalação de um pacote falha, deixando o sistema com pacotes parcialmente instalados ou pacotes que requerem outros pacotes que ainda não estão presentes ou corretamente instalados.
-
-### Estrutura:
-
-- `sudo`: Executa o comando com permissões de superusuário, o que é necessário para instalar ou modificar pacotes no sistema.
-- `apt`: O gerenciador de pacotes do Debian, utilizado para instalar, atualizar, remover pacotes e gerenciar dependências.
-- `--fix-broken`: Esta opção indica ao `apt` que ele deve tentar corrigir pacotes quebrados no sistema. Isso pode significar instalar dependências ausentes, remover pacotes que estão em conflito ou corrigir pacotes parcialmente instalados.
-- `install`: Indica que o comando deve instalar os pacotes que faltam para corrigir os problemas.
-
-### Quando usar:
-
-Esse comando é útil quando você tenta instalar ou atualizar um pacote e o processo falha devido a pacotes quebrados ou dependências que não foram resolvidas corretamente. Ele verifica o sistema em busca de pacotes que precisam ser reparados e tenta corrigir esses problemas automaticamente.
-
-### Exemplo de uso:
-
-1. Você tenta instalar um programa com `sudo apt install nome_do_pacote` e recebe um erro indicando que há pacotes quebrados ou dependências que não foram atendidas.
-2. Ao tentar qualquer outro comando do `apt`, ele também pode informar que o sistema está em um estado inconsistente.
-3. Para corrigir, você roda:
-
-   ```bash
-   sudo apt --fix-broken install
-   ```
-
-4. O `apt` tentará instalar as dependências que faltam, remover pacotes quebrados ou fazer ajustes necessários para colocar o gerenciador de pacotes em um estado consistente.
-
-### Cenário comum de uso:
-
-Suponha que você tentou instalar o AnyDesk, e ele falhou devido a dependências ausentes. Ao executar o comando:
-
-```bash
-sudo dpkg -i anydesk_*.deb
-```
-
-Se houver dependências não atendidas, você verá um erro sobre pacotes quebrados. Nesse ponto, o sistema pode sugerir o uso de `sudo apt --fix-broken install` para corrigir essas dependências e finalizar a instalação.
-
-### Resumindo:
-O comando `sudo apt --fix-broken install` é uma ferramenta poderosa para resolver automaticamente problemas de pacotes no sistema, corrigindo pacotes quebrados e garantindo que o sistema continue funcionando corretamente.
-
-Se tiver dúvidas sobre um caso específico de dependências quebradas ou erros, sinta-se à vontade para compartilhar que eu posso ajudar com mais detalhes!
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
