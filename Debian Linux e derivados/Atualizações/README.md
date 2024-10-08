@@ -1,8 +1,8 @@
-# [Laboratório GTi](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Laboratório GTi")
+# [Laboratório GTi](../../README.md#laborat%C3%B3rio-gti "Laboratório GTi")
 
 ## Atualizações
 
-[![Atualizações](https://github.com/systemboys/GTi_Laboratory/raw/main/Debian%20Linux%20e%20derivados/Atualiza%C3%A7%C3%B5es/images/Upgrade_button.jpg "Atualizações")](https://github.com/systemboys/GTi_Laboratory/raw/main/Debian%20Linux%20e%20derivados/Atualiza%C3%A7%C3%B5es/images/Upgrade_button.jpg "Atualizações")
+[![Atualizações](./images/Upgrade_button.jpg "Atualizações")](./images/Upgrade_button.jpg "Atualizações")
 
 ### *Sumário*
 
@@ -81,7 +81,7 @@ N: Updating from such a repository can't be done securely, and is therefore disa
 N: See apt-secure(8) manpage for repository creation and user configuration details.
 ```
 
-[![Terminal após o comando apt update](https://github.com/systemboys/GTi_Laboratory/raw/main/Debian%20Linux%20e%20derivados/Atualiza%C3%A7%C3%B5es/images/apt_update.png "Terminal após o comando apt update")](https://github.com/systemboys/GTi_Laboratory/raw/main/Debian%20Linux%20e%20derivados/Atualiza%C3%A7%C3%B5es/images/apt_update.png "Terminal após o comando apt update")
+[![Terminal após o comando apt update](./images/apt_update.png "Terminal após o comando apt update")](./images/apt_update.png "Terminal após o comando apt update")
 
 Esse erro indica que há um problema com o repositório VirtualBox no arquivo `/etc/apt/sources.list`. Especificamente, há um problema com a entrada de linha do arquivo que se refere ao repositório VirtualBox.
 
