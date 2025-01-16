@@ -136,14 +136,12 @@ Se nenhum desses passos resolver o problema, é possível que haja um problema m
 1. Abra o menu de aplicativos do Debian e procure por **Configurações do sistema**.
 2. Clique em **Configurações do sistema** para abrir a janela principal.
 
-![Configurações do sistema](./images/Corner_shortcuts_in_System_Settings.png)
-*Janela principal de Configurações do sistema no Debian.*
+![Configurações do sistema](./images/Corner_shortcuts_in_System_Settings.png "Janela principal de Configurações do sistema no Debian")
 
 3. Dentro das **Configurações do sistema**, selecione **Atalhos nos cantos**.
 4. Na janela de **Atalhos nos cantos**, ative um dos cantos ligando o interruptor correspondente.
 
-![Configuração dos Atalhos nos cantos](./images/Shortcuts_in_the_corners.png)
-*Janela de configuração dos atalhos nos cantos.*
+![Configuração dos Atalhos nos cantos](./images/Shortcuts_in_the_corners.png "Janela de configuração dos atalhos nos cantos")
 
 5. No menu suspenso, selecione **“Mostrar todas as janelas”**.
 6. Para outro canto, ative a opção **“Exibir todos os espaços de trabalho”**.
