@@ -420,11 +420,11 @@ Exemplo 4: Desinstalando o RealVNC Viewer
    ```
    > Este comando remove pacotes obsoletos do cache local que não são mais necessários.
    >
-   > Certifique-se de que o Programa não esteja em execução antes de iniciar o processo de desinstalação. Você pode verificar se há processos ativos do Programa com o comando ps aux | grep Programa e encerrá-los, se necessário.​
+   > Certifique-se de que o Programa não esteja em execução antes de iniciar o processo de desinstalação. Você pode verificar se há processos ativos do Programa com o comando `ps aux | grep Programa` e encerrá-los, se necessário.​
    >
    > Após executar esses comandos, o Programa será completamente removido do seu sistema Debian.
-   >
-   > Certifique-se de adaptar os comandos de instalação e desinstalação de acordo com o programa que você está instalando ou removendo.
+   
+Certifique-se de adaptar os comandos de instalação e desinstalação de acordo com o programa que você está instalando ou removendo.
 
 Ao seguir esses exemplos, você poderá fazer a instalação e desinstalação de programas no Linux via terminal.
 
