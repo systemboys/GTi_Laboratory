@@ -5,7 +5,7 @@
 - [Programas utilizados por advogados](./Advogados/README.md#gti-laboratory--programas-utilizados-por-advogados "Programas utilizados por advogados")
 - [Como Ocultar uma Unidade de Disco no Windows 10: Guia Completo](#como-ocultar-uma-unidade-de-disco-no-windows-10-guia-completo "Como Ocultar uma Unidade de Disco no Windows 10: Guia Completo")
 - [Como Pular a Solicitação de Conta Microsoft Durante a Instalação do Windows 11: Método OOBE\BypassNRO](#como-pular-a-solicita%C3%A7%C3%A3o-de-conta-microsoft-durante-a-instala%C3%A7%C3%A3o-do-windows-11-m%C3%A9todo-oobebypassnro "Como Pular a Solicitação de Conta Microsoft Durante a Instalação do Windows 11: Método OOBE\BypassNRO")
-- [Corrigindo Erros ao Compartilhar Impressoras em Rede](# "Corrigindo Erros ao Compartilhar Impressoras em Rede")
+- [Corrigindo Erros ao Compartilhar Impressoras em Rede](#corrigindo-erros-ao-compartilhar-impressoras-em-rede "Corrigindo Erros ao Compartilhar Impressoras em Rede")
 
 ---
 
