@@ -5,6 +5,7 @@
 - [Programas utilizados por advogados](./Advogados/README.md#gti-laboratory--programas-utilizados-por-advogados "Programas utilizados por advogados")
 - [Como Ocultar uma Unidade de Disco no Windows 10: Guia Completo](#como-ocultar-uma-unidade-de-disco-no-windows-10-guia-completo "Como Ocultar uma Unidade de Disco no Windows 10: Guia Completo")
 - [Como Pular a Solicitação de Conta Microsoft Durante a Instalação do Windows 11: Método OOBE\BypassNRO](#como-pular-a-solicita%C3%A7%C3%A3o-de-conta-microsoft-durante-a-instala%C3%A7%C3%A3o-do-windows-11-m%C3%A9todo-oobebypassnro "Como Pular a Solicitação de Conta Microsoft Durante a Instalação do Windows 11: Método OOBE\BypassNRO")
+- [Corrigindo Erros ao Compartilhar Impressoras em Rede](# "Corrigindo Erros ao Compartilhar Impressoras em Rede")
 
 ---
 
@@ -91,6 +92,37 @@ Este método é frequentemente usado por técnicos ou usuários que preferem nã
 Lembre-se que, em algumas versões e atualizações do Windows 11, a Microsoft pode mudar o comportamento desse bypass, e nem sempre garantirá que ele funcione, mas é uma solução conhecida e amplamente usada.
 
 Se precisar de mais detalhes sobre como realizar o procedimento ou sobre alternativas, é só perguntar!
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#gti-laboratory--macetes-t%C3%A9cnicos "Subir para o topo")
+
+---
+
+## Corrigindo Erros ao Compartilhar Impressoras em Rede
+
+![Erro 0x0000011b](./images/error-0x0000011b-windows-cannot-connect-to-the-printer-in-windows-11-10.jpg)
+
+O erro **0x0000011b** ao conectar a uma impressora compartilhada geralmente ocorre devido a atualizações de segurança do Windows que afetam a autenticação de impressoras em rede.  
+
+### Solução rápida:  
+1. **No computador que compartilha a impressora (servidor):**  
+   - Pressione `Win + R`, digite **regedit** e pressione `Enter`.  
+   - Navegue até:  
+     ```
+     HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Print
+     ```
+   - Clique com o botão direito, selecione **Novo > Valor DWORD (32 bits)** e nomeie como:  
+     ```
+     RpcAuthnLevelPrivacyEnabled
+     ```
+   - Dê um duplo clique nele e defina o valor para **0**.  
+   - Feche o Editor do Registro e **reinicie o computador**.  
+
+2. **No computador que está tentando acessar a impressora:**  
+   - Pressione `Win + R`, digite `\\NOME-DO-SERVIDOR` e pressione `Enter`.  
+   - Clique com o botão direito na impressora e selecione **Conectar**.  
+
+![RegEdit](./images/erro-0x0000011b-01.png)
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#gti-laboratory--macetes-t%C3%A9cnicos "Subir para o topo")
