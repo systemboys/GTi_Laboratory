@@ -377,47 +377,71 @@ Após a instalação, você poderá utilizar o Virt-Manager para gerenciar suas 
 
 Exemplo 1: Instalando o TigerVNC
 1. Abra o terminal em seu sistema.
+
 2. Execute o seguinte comando para instalar o TigerVNC:
+
    ```bash
    sudo apt install tigervnc-scraping-server
    ```
 3. Aguarde até que o processo de instalação seja concluído.
 
 Exemplo 2: Desinstalando o TigerVNC
+
 1. Abra o terminal em seu sistema.
+
 2. Execute o seguinte comando para desinstalar o TigerVNC:
+
    ```bash
    sudo apt remove tigervnc-scraping-server
    ```
 3. Aguarde até que o processo de desinstalação seja concluído.
 
 Exemplo 3: Instalando o RealVNC Viewer
+
 1. Abra o terminal em seu sistema.
+
 2. Execute o seguinte comando para instalar o RealVNC Viewer:
+
    ```bash
    sudo dpkg -i realvnc-vnc-viewer.deb
    ```
    (substitua "realvnc-vnc-viewer.deb" pelo nome do pacote .deb que você baixou)
+
 3. Aguarde até que o processo de instalação seja concluído.
 
 Exemplo 4: Desinstalando o RealVNC Viewer
+
 1. Abra o terminal em seu sistema.
+
 2. Execute o seguinte comando para desinstalar o RealVNC Viewer:
+
    ```bash
    sudo dpkg -r realvnc-vnc-viewer
    ```
-3. Aguarde até que o processo de desinstalação seja concluído.
+   > Ou, remover o AnyDesk e seus arquivos de configuração:
 
-4. Remover dependências não utilizadas:
    ```bash
    sudo apt-get autoremove
    ```
+
+   > Este comando elimina pacotes que foram instalados como dependências do AnyDesk e que não são mais necessários.
+
+3. Aguarde até que o processo de desinstalação seja concluído.
+
+4. Remover dependências não utilizadas:
+
+   ```bash
+   sudo apt-get autoremove
+   ```
+
    > Este comando elimina pacotes que foram instalados como dependências do Programa e que não são mais necessários.
 
 5. Limpar o cache de pacotes obsoletos:
+
    ```bash
    sudo apt-get autoclean
    ```
+
    > Este comando remove pacotes obsoletos do cache local que não são mais necessários.
    >
    > Certifique-se de que o Programa não esteja em execução antes de iniciar o processo de desinstalação. Você pode verificar se há processos ativos do Programa com o comando `ps aux | grep Programa` e encerrá-los, se necessário.​
