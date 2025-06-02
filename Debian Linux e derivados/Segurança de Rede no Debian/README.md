@@ -9,6 +9,7 @@
 - [Verificarndo porta com NMap](#verificarndo-porta-com-nmap "Verificarndo porta com NMap")
 - [Verificar status de todas as portas em um host](#verificar-status-de-todas-as-portas-em-um-host "Verificar status de todas as portas em um host")
 - [Instalar utilitário "ufw" (Uncomplicated Firewall) no Debian Linux](#instalar-utilit%C3%A1rio-ufw-uncomplicated-firewall-no-debian-linux "Instalar utilitário 'ufw' (Uncomplicated Firewall) no Debian Linux")
+- [🛡️ Instruções para Instalação e Uso do ClamAV no Debian](# "Instruções para Instalação e Uso do ClamAV no Debian")
 - [Firewall UFW (abrir ou fechar portas)](#firewall-ufw-abrir-ou-fechar-portas "Firewall UFW (abrir ou fechar portas)")
 
 ---
@@ -92,6 +93,72 @@ Para instalar o utilitário "ufw" (Uncomplicated Firewall) no Debian Linux, voc�
 4. Durante a instalação, você será solicitado a confirmar a ação digitando "Y" ou "S" e pressionando Enter.
 
 Após a conclusão da instalação, você poderá utilizar o "ufw" para configurar o firewall no seu sistema Debian Linux. Lembre-se de consultar a documentação ou recursos adicionais para aprender a usar o "ufw" corretamente e configurar as regras de firewall de acordo com suas necessidades.
+
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## 🛡️ Instruções para Instalação e Uso do ClamAV no Debian
+
+Este guia orienta sobre como instalar o antivírus **ClamAV** no Debian e executar uma varredura completa em uma pasta específica (como um pendrive com **Ventoy**).
+
+### ✅ Etapa 1: Acessar como superusuário (root)
+
+```bash
+su
+```
+
+Digite a senha de root quando solicitado.
+
+### 📦 Etapa 2: Instalar o ClamAV
+
+Execute o comando:
+
+```bash
+sudo apt-get install clamav
+```
+
+Confirme a instalação pressionando `S` quando for solicitado para continuar.
+
+### 🔄 Etapa 3: Atualizar base de dados de vírus (opcional, mas recomendado)
+
+```bash
+sudo freshclam
+```
+
+> *Obs.: Se o serviço estiver rodando em segundo plano, talvez precise pará-lo para atualizar manualmente.*
+
+### 🧼 Etapa 4: Executar varredura em uma pasta
+
+No exemplo abaixo, é feita a varredura recursiva da pasta `/media/marcos/Ventoy`:
+
+```bash
+clamscan -r /media/marcos/Ventoy
+```
+
+### 📊 Exemplo de resultado da varredura
+
+```text
+/media/marcos/Ventoy/Win10.iso: OK
+/media/marcos/Ventoy/debian.iso: OK
+...
+
+----------- SCAN SUMMARY -----------
+Known viruses: 8706641
+Engine version: 1.0.7
+Scanned directories: 7
+Scanned files: 176
+Infected files: 0
+Data scanned: 0.72 MB
+Time: 51.948 sec (0 m 51 s)
+```
+
+### 🧠 Observações
+
+* O `clamscan` apenas verifica, **não remove** os arquivos infectados.
+* Para ações automáticas como mover arquivos infectados, use flags como `--move` ou `--remove`.
+* A varredura pode demorar, dependendo do tamanho e quantidade de arquivos.
 
 [(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
