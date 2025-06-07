@@ -10,6 +10,7 @@
 
 - [Melhorando a Velocidade de Download no Linux com Aceleradores de Download](#melhorando-a-velocidade-de-download-no-linux-com-aceleradores-de-download "Melhorando a Velocidade de Download no Linux com Aceleradores de Download")
 - [Baixando com Facilidade: Utilizando o Comando wget no Linux](#baixando-com-facilidade-utilizando-o-comando-wget-no-linux "Baixando com Facilidade: Utilizando o Comando wget no Linux")
+- [📎 Instalação e Uso do PDFTK no Debian Linux](# "📎 Instalação e Uso do PDFTK no Debian Linux")
 
 ---
 
@@ -121,6 +122,65 @@ O comando `wget` é uma ferramenta de linha de comando disponível em sistemas L
 [![WGet](./images/comando-wget-linux.png?raw=true "WGet")](./images/comando-wget-linux.png?raw=true "WGet")
 
 O `wget` é uma ferramenta poderosa e versátil para gerenciar downloads de arquivos e recursos da web em sistemas Linux e UNIX. É amplamente utilizado por administradores de sistemas e usuários avançados para diversas tarefas relacionadas à web. Certifique-se de usar com responsabilidade e respeitar os direitos autorais e os termos de uso ao baixar conteúdo da Internet.
+
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## 📎 Instalação e Uso do PDFTK no Debian Linux
+
+O **PDFTK (PDF Toolkit)** é uma ferramenta de linha de comando eficiente para manipular arquivos PDF, como unificação, separação e rotacionamento de páginas.
+
+### 🛠️ Instalação via Terminal (Debian/Ubuntu)
+
+```bash
+sudo apt update
+sudo apt install pdftk
+```
+
+> 💡 Em versões mais recentes do Debian/Ubuntu, o pacote pode ser `pdftk-java`, que oferece a mesma funcionalidade:
+
+```bash
+sudo apt install pdftk-java
+```
+
+Verifique a instalação com:
+
+```bash
+pdftk --version
+```
+
+### 📄 Exemplo Genérico: Unificar Vários PDFs
+
+Para unir todos os arquivos `.pdf` de um diretório em um único PDF de saída:
+
+```bash
+pdftk diretorio/*.pdf cat output diretorio/arquivos_unificados.pdf
+```
+
+> 🔄 Substitua `diretorio/` pelo caminho do seu diretório de arquivos PDF.
+>  O resultado será salvo como `arquivos_unificados.pdf` no mesmo local.
+
+### ✅ Dicas Extras
+
+- Para unir arquivos em ordem específica:
+
+  ```bash
+  pdftk A=arquivo1.pdf B=arquivo2.pdf C=arquivo3.pdf cat A B C output unificado.pdf
+  ```
+
+- Para dividir um PDF em páginas individuais:
+
+  ```bash
+  pdftk entrada.pdf burst
+  ```
+
+- Para extrair páginas específicas:
+
+  ```bash
+  pdftk entrada.pdf cat 1-3 5 7-10 output extraido.pdf
+  ```
 
 [(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
