@@ -10,7 +10,7 @@
 
 - [Melhorando a Velocidade de Download no Linux com Aceleradores de Download](#melhorando-a-velocidade-de-download-no-linux-com-aceleradores-de-download "Melhorando a Velocidade de Download no Linux com Aceleradores de Download")
 - [Baixando com Facilidade: Utilizando o Comando wget no Linux](#baixando-com-facilidade-utilizando-o-comando-wget-no-linux "Baixando com Facilidade: Utilizando o Comando wget no Linux")
-- [📎 Instalação e Uso do PDFTK no Debian Linux](#-instala%C3%A7%C3%A3o-e-uso-do-pdftk-no-debian-linux "📎 Instalação e Uso do PDFTK no Debian Linux")
+- [📎 Instalação e Uso do PDFTK no Debian Linux](#instala%C3%A7%C3%A3o-e-uso-do-pdftk-no-debian-linux "📎 Instalação e Uso do PDFTK no Debian Linux")
 
 ---
 
@@ -128,7 +128,7 @@ O `wget` é uma ferramenta poderosa e versátil para gerenciar downloads de arqu
 
 ---
 
-## 📎 Instalação e Uso do PDFTK no Debian Linux
+## Instalação e Uso do PDFTK no Debian Linux
 
 O **PDFTK (PDF Toolkit)** é uma ferramenta de linha de comando eficiente para manipular arquivos PDF, como unificação, separação e rotacionamento de páginas.
 
