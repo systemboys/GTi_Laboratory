@@ -182,6 +182,19 @@ pdftk diretorio/*.pdf cat output diretorio/arquivos_unificados.pdf
   pdftk entrada.pdf cat 1-3 5 7-10 output extraido.pdf
   ```
 
+Aqui vai um exemplo de **uso inline do `pdftk`** com os arquivos listados um por linha e o comando completo ao final:
+
+```bash
+pdftk \
+"Diretorio A/receitas de bolo.pdf" \
+"Diretorio B/Outras receitas.pdf" \
+"Diretorio C/Sobremesas.pdf" \
+cat output "Unificados/receitas_completas.pdf"
+```
+
+> 🔹 O caractere `\` no final de cada linha serve para quebrar o comando sem executá-lo, mantendo tudo como um único comando no terminal.
+> 🔹 Os caminhos com espaços devem estar **entre aspas**.
+
 [(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
 
