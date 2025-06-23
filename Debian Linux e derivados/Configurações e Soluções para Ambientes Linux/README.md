@@ -7,6 +7,7 @@
 ### *Sumário*
 
 - [Como Instalar o Ambiente de Desktop Cinnamon via Terminal no Linux](#como-instalar-o-ambiente-de-desktop-cinnamon-via-terminal-no-linux "Como Instalar o Ambiente de Desktop Cinnamon via Terminal no Linux")
+  - [Restauração do Ambiente Cinnamon no Debian](# "Restauração do Ambiente Cinnamon no Debian")
 - [Como Desinstalar o Ambiente GNOME e Manter Apenas o Cinnamon no Linux](#como-desinstalar-o-ambiente-gnome-e-manter-apenas-o-cinnamon-no-linux "Como Desinstalar o Ambiente GNOME e Manter Apenas o Cinnamon no Linux")
 - [Como Solucionar o Problema 'Falha ao Iniciar a Sessão' ao Criar um Novo Usuário no Linux](#como-solucionar-o-problema-falha-ao-iniciar-a-sess%C3%A3o-ao-criar-um-novo-usu%C3%A1rio-no-linux "Como Solucionar o Problema 'Falha ao Iniciar a Sessão' ao Criar um Novo Usuário no Linux")
 - [Configurando Atalhos nos Cantos no Debian](#configurando-atalhos-nos-cantos-no-debian "Configurando Atalhos nos Cantos no Debian")
@@ -29,6 +30,70 @@ sudo apt-get install cinnamon-desktop-environment
 Este comando instalará o ambiente de desktop Cinnamon e suas dependências. Lembre-se de que você precisará ter privilégios de superusuário (sudo) para executar o comando.
 
 Depois que a instalação estiver concluída, você pode fazer logout da sua sessão atual ou reiniciar o sistema e, na tela de login, selecionar "Cinnamon" como ambiente de desktop antes de fazer login novamente.
+
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+### 🛠️ **Restauração do Ambiente Cinnamon no Debian**
+
+**Problema identificado:**
+
+* Área de trabalho do Cinnamon sem barra de tarefas;
+* Ícones sem imagens;
+* Ambiente gráfico incompleto após login;
+* Terminal é o único funcionando.
+
+#### ✅ **Diagnóstico inicial**
+
+Verifique o ambiente atual:
+
+```bash
+echo $XDG_CURRENT_DESKTOP
+```
+
+#### 🔄 **Tentativa de restaurar sessão (usuário normal)**
+
+```bash
+cinnamon --replace
+```
+
+Se der erro de *session bus*, ignore e continue com os passos abaixo.
+
+#### ♻️ **Reinstalação completa do Cinnamon**
+
+```bash
+sudo apt update
+sudo apt install --reinstall cinnamon
+```
+
+#### 🧹 **Verificar e corrigir pacotes quebrados**
+
+```bash
+sudo apt install -f
+```
+
+#### 🔁 **Reinicie o sistema**
+
+```bash
+sudo reboot
+```
+
+#### ✅ **Resultado esperado**
+
+* Área de trabalho com barra inferior restaurada;
+* Ícones visuais normalizados;
+* Softwares abrindo corretamente.
+
+**Observações finais:**
+
+* Não execute `cinnamon --replace` como root — use com o usuário normal.
+* Se for necessário rodar via terminal gráfico direto:
+
+  ```bash
+  DISPLAY=:0 cinnamon --replace
+  ```
 
 [(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
