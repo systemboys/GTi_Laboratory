@@ -7,7 +7,7 @@
 ### *Sumário*
 
 - [Como Instalar o Ambiente de Desktop Cinnamon via Terminal no Linux](#como-instalar-o-ambiente-de-desktop-cinnamon-via-terminal-no-linux "Como Instalar o Ambiente de Desktop Cinnamon via Terminal no Linux")
-  - [Restauração do Ambiente Cinnamon no Debian](# "Restauração do Ambiente Cinnamon no Debian")
+  - [Restauração do Ambiente Cinnamon no Debian](#%EF%B8%8F-restaura%C3%A7%C3%A3o-do-ambiente-cinnamon-no-debian "Restauração do Ambiente Cinnamon no Debian")
 - [Como Desinstalar o Ambiente GNOME e Manter Apenas o Cinnamon no Linux](#como-desinstalar-o-ambiente-gnome-e-manter-apenas-o-cinnamon-no-linux "Como Desinstalar o Ambiente GNOME e Manter Apenas o Cinnamon no Linux")
 - [Como Solucionar o Problema 'Falha ao Iniciar a Sessão' ao Criar um Novo Usuário no Linux](#como-solucionar-o-problema-falha-ao-iniciar-a-sess%C3%A3o-ao-criar-um-novo-usu%C3%A1rio-no-linux "Como Solucionar o Problema 'Falha ao Iniciar a Sessão' ao Criar um Novo Usuário no Linux")
 - [Configurando Atalhos nos Cantos no Debian](#configurando-atalhos-nos-cantos-no-debian "Configurando Atalhos nos Cantos no Debian")
