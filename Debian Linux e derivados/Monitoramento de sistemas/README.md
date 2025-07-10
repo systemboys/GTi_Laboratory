@@ -9,7 +9,7 @@
 - [Sensores de Hardware do Linux](#sensores-de-hardware-do-linux "Sensores de Hardware do Linux")
 - [Instalar o BashTOP no Debian Linux](#instalar-o-bashtop-no-debian-linux "Instalar o BashTOP no Debian Linux")
 - [Monitoramento e Execução Contínua do Bashtop](#monitoramento-e-execu%C3%A7%C3%A3o-cont%C3%ADnua-do-bashtop "Monitoramento e Execução Contínua do Bashtop")
-- [🔄 Reiniciando o computador automaticamente caso o bashtop falhe](#-reiniciando-o-computador-automaticamente-caso-o-bashtop-falhe "Reiniciando o computador automaticamente caso o bashtop falhe")
+- [🔄 Script para executar Bashtop em loop e reiniciar apenas em falha](#-reiniciando-o-computador-automaticamente-caso-o-bashtop-falhe "Script para executar Bashtop em loop e reiniciar apenas em falha")
 - [Instalar o utilitário de monitoramento HTOP](#instalar-o-utilit%C3%A1rio-de-monitoramento-htop "Instalar o utilitário de monitoramento HTOP")
 
 ---
@@ -130,42 +130,44 @@ E adicionar uma linha usando a expressão @reboot, que vai executar o seu códig
 
 ---
 
-## 🔄 Reiniciando o computador automaticamente caso o bashtop falhe
+## 🔄 Segue a instrução **pronta para seu Codex**, no modelo corporativo, formal, direto e visionário:
 
-Essa instrução cria um **watchdog loop** que monitora o `bashtop`. Se ele falhar (por exemplo, ao travar quando a CPU atinge 100%), o script reinicia o computador imediatamente como medida emergencial.
+---
 
-Comandos em ShellScript:
+## Script para executar Bashtop em loop e reiniciar apenas em falha
+
+Este script executa o Bashtop em loop infinito, reiniciando o computador **apenas se o Bashtop falhar**. Inclui configuração para reinício sem senha no sudo, garantindo automação completa em ambientes de monitoramento ou kiosks.
+
+ShellScript:
 
 ```sh
 #!/bin/bash
-# Script: watchdog_reboot_bashtop.sh
-# Autor: Marcos - Engenharia de Software
-# Descrição: Reinicia o computador caso o bashtop falhe.
 
 while true; do
-    pgrep -f bashtop >/dev/null || {
-        echo "⚠️ Bashtop falhou. Reiniciando o sistema...";
-        sudo reboot
-    }
-    sleep 1
+  # Executa o bashtop
+  bashtop
+  STATUS=$?
+
+  # Se bashtop falhar, reinicia
+  if [ $STATUS -ne 0 ]; then
+    echo "⚠️ Bashtop falhou com status $STATUS. Reiniciando o sistema..."
+    sudo reboot
+  fi
+
+  # Pausa antes de reiniciar o loop
+  sleep 1
 done
 ```
 
-O mesmo comando em apenas uma linha para execução direta no terminal:
+Comando em uma única linha para execução direta no terminal:
 
 ```bash
-while true; do pgrep -f bashtop >/dev/null || { echo "⚠️ Bashtop falhou. Reiniciando o sistema..."; sudo reboot; }; sleep 1; done
+echo 'seu_usuario ALL=(ALL) NOPASSWD:/sbin/reboot' | sudo tee -a /etc/sudoers
 ```
 
-### ✅ **Observações rápidas**
+Explicação:
 
-* Adicione permissão de execução com: `chmod +x watchdog_reboot_bashtop.sh`
-* Para o `sudo reboot` funcionar sem senha, adicione ao seu sudoers:
-
-  ```
-  SEU_USUARIO ALL=(ALL) NOPASSWD: /sbin/reboot
-  ```
-* **Use com cautela.** Esse script é uma solução reativa emergencial, não preventiva.
+Este script cria um loop que executa o `bashtop` continuamente. Caso o `bashtop` retorne um status diferente de 0 (indicando falha ou encerramento anormal), o sistema será reiniciado com uma mensagem clara ⚠️ para logs ou stdout. O comando em uma linha adiciona a permissão ao `sudoers` para que o comando `sudo reboot` seja executado **sem solicitar senha**, permitindo reinício automatizado sem intervenção manual.
 
 [(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
