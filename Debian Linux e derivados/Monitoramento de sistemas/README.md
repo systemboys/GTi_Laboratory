@@ -9,7 +9,7 @@
 - [Sensores de Hardware do Linux](#sensores-de-hardware-do-linux "Sensores de Hardware do Linux")
 - [Instalar o BashTOP no Debian Linux](#instalar-o-bashtop-no-debian-linux "Instalar o BashTOP no Debian Linux")
 - [Monitoramento e Execução Contínua do Bashtop](#monitoramento-e-execu%C3%A7%C3%A3o-cont%C3%ADnua-do-bashtop "Monitoramento e Execução Contínua do Bashtop")
-- [🔄 Script para executar Bashtop em loop e reiniciar apenas em falha](#-script-para-executar-bashtop-em-loop-e-reiniciar-apenas-em-falha "Script para executar Bashtop em loop e reiniciar apenas em falha")
+- [🔄 Monitoramento Automático da CPU com Reinicialização](#-script-para-executar-bashtop-em-loop-e-reiniciar-apenas-em-falha "Monitoramento Automático da CPU com Reinicialização")
 - [Instalar o utilitário de monitoramento HTOP](#instalar-o-utilit%C3%A1rio-de-monitoramento-htop "Instalar o utilitário de monitoramento HTOP")
 
 ---
@@ -130,52 +130,132 @@ E adicionar uma linha usando a expressão @reboot, que vai executar o seu códig
 
 ---
 
-## 🔄 Script para executar Bashtop em loop e reiniciar apenas em falha
+## 🔄 Monitoramento Automático da CPU com Reinicialização
 
-Este script executa o Bashtop em loop infinito, reiniciando o computador **apenas se o Bashtop falhar**. Inclui configuração para reinício sem senha no sudo, garantindo automação completa em ambientes de monitoramento ou kiosks.
+### 📌 **Descrição**
 
-ShellScript:
+Este script Shell monitora o uso de **todos os núcleos do processador** em tempo real.
+Se **todos** atingirem 100% de uso simultaneamente, o sistema é reiniciado automaticamente.
+Enquanto monitora, exibe um **spinner animado** e mostra o status de carga de cada núcleo com **bolinhas coloridas**:
 
-```sh
+* 🟢 Verde: uso até 49%
+* 🟠 Laranja: uso entre 50% e 75%
+* 🔴 Vermelho: uso de 76% pra cima
+
+### ⚙️ **Pré-requisitos**
+
+* Sistema Linux com **bash**
+* **sysstat** instalado (`mpstat`)
+
+```bash
+sudo apt update
+sudo apt install sysstat
+```
+
+* Permissão para reiniciar sem senha:
+
+```bash
+sudo visudo
+```
+
+Adicione:
+
+```
+seu_usuario ALL=(ALL) NOPASSWD: /sbin/reboot
+```
+
+### 🗂️ **Arquivo: `monitor_cpu_reboot.sh`**
+
+```bash
 #!/bin/bash
 
+INTERVAL=1
+SPINNER="/-\|"
+SPINNER_INDEX=0
+
 while true; do
-  # Executa o bashtop
-  bashtop
-  STATUS=$?
+    ALL_CORES_100=true
 
-  # Se bashtop falhar, reinicia
-  if [ $STATUS -ne 0 ]; then
-    echo "⚠️ Bashtop falhou com status $STATUS. Reiniciando o sistema..."
-    sudo reboot
-  fi
+    clear
 
-  # Pausa antes de reiniciar o loop
-  sleep 1
+    echo "==================================================="
+    echo "               MONITORAMENTO DA CPU"
+    echo "---------------------------------------------------"
+    echo "                  ⚠️  Atenção!"
+    echo "Seu computador poderá reiniciar a qualquer momento!"
+    echo "==================================================="
+
+    printf "Monitorando CPU... [%c]\n" "${SPINNER:SPINNER_INDEX++:1}"
+    ((SPINNER_INDEX == ${#SPINNER})) && SPINNER_INDEX=0
+
+    CPU_USAGES=$(mpstat -P ALL 1 1 | grep -E "^[0-9]" | awk '{print 100 - $12}')
+
+    CORE_INDEX=1
+    for usage in $CPU_USAGES; do
+        usage_int=$(printf "%.0f" "$usage")
+
+        if [ "$usage_int" -le 49 ]; then
+            STATUS="🟢"
+        elif [ "$usage_int" -le 75 ]; then
+            STATUS="🟠"
+        else
+            STATUS="🔴"
+        fi
+
+        echo "Núcleo $CORE_INDEX: $STATUS $usage_int%"
+
+        if [ "$usage_int" -lt 100 ]; then
+            ALL_CORES_100=false
+        fi
+
+        ((CORE_INDEX++))
+    done
+
+    echo "---------------------------------------------------"
+
+    if [ "$ALL_CORES_100" = true ]; then
+        echo "⚠️  Todos os núcleos atingiram 100%."
+        echo "⏳  Reiniciando o sistema... 🖥️"
+        sudo reboot
+        exit 0
+    fi
+
+    sleep $INTERVAL
 done
 ```
 
-Segue o **comando em uma única linha**, direto, formal e pronto para seu Codex ou execução imediata em terminal:
+### ▶️ **Como executar**
+
+1️⃣ Dê permissão:
 
 ```bash
-while true; do bashtop; STATUS=$?; if [ $STATUS -ne 0 ]; then echo "⚠️ Bashtop falhou com status $STATUS. Reiniciando o sistema..."; sudo reboot; fi; sleep 1; done
+chmod +x monitor_cpu_reboot.sh
 ```
 
-### ⚠️ **Explicação executiva**
-
-* Tudo em **uma única linha** para shell scripts inline, cron jobs, containers, ou quick tests.
-* Mantém **exatamente a mesma lógica** do script estruturado.
-* Ideal para pipelines CI/CD de kiosks, scripts de provisionamento ou uso direto em shells remotos.
-
-Comando em uma única linha para execução direta no terminal:
+2️⃣ Rode no terminal:
 
 ```bash
-echo 'seu_usuario ALL=(ALL) NOPASSWD:/sbin/reboot' | sudo tee -a /etc/sudoers
+./monitor_cpu_reboot.sh
 ```
 
-Explicação:
+3️⃣ Para rodar em segundo plano:
 
-Este script cria um loop que executa o `bashtop` continuamente. Caso o `bashtop` retorne um status diferente de 0 (indicando falha ou encerramento anormal), o sistema será reiniciado com uma mensagem clara ⚠️ para logs ou stdout. O comando em uma linha adiciona a permissão ao `sudoers` para que o comando `sudo reboot` seja executado **sem solicitar senha**, permitindo reinício automatizado sem intervenção manual.
+```bash
+./monitor_cpu_reboot.sh &
+```
+
+4️⃣ Para parar:
+
+```bash
+ps aux | grep monitor_cpu_reboot.sh
+kill PID
+```
+
+### 🚦 **Uso recomendado**
+
+* Use somente em cenários de emergência enquanto espera manutenção de hardware.
+* Monitore logs, pois reinícios forçados podem gerar perda de dados.
+* Mantenha backup atualizado.
 
 [(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
