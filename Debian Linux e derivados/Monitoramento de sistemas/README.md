@@ -9,7 +9,7 @@
 - [Sensores de Hardware do Linux](#sensores-de-hardware-do-linux "Sensores de Hardware do Linux")
 - [Instalar o BashTOP no Debian Linux](#instalar-o-bashtop-no-debian-linux "Instalar o BashTOP no Debian Linux")
 - [Monitoramento e Execução Contínua do Bashtop](#monitoramento-e-execu%C3%A7%C3%A3o-cont%C3%ADnua-do-bashtop "Monitoramento e Execução Contínua do Bashtop")
-- [🔄 Reiniciando o computador automaticamente caso o bashtop falhe](# "Reiniciando o computador automaticamente caso o bashtop falhe")
+- [🔄 Reiniciando o computador automaticamente caso o bashtop falhe](#-reiniciando-o-computador-automaticamente-caso-o-bashtop-falhe "Reiniciando o computador automaticamente caso o bashtop falhe")
 - [Instalar o utilitário de monitoramento HTOP](#instalar-o-utilit%C3%A1rio-de-monitoramento-htop "Instalar o utilitário de monitoramento HTOP")
 
 ---
@@ -127,12 +127,6 @@ E adicionar uma linha usando a expressão @reboot, que vai executar o seu códig
 
 [(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
-
----
-
-## 🔄 Reiniciando o computador automaticamente caso o bashtop falhe
-
-Segue a dica **pronta no seu padrão Codex** para guardar no seu acervo de instruções:
 
 ---
 
