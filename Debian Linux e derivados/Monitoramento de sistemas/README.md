@@ -9,7 +9,7 @@
 - [Sensores de Hardware do Linux](#sensores-de-hardware-do-linux "Sensores de Hardware do Linux")
 - [Instalar o BashTOP no Debian Linux](#instalar-o-bashtop-no-debian-linux "Instalar o BashTOP no Debian Linux")
 - [Monitoramento e Execução Contínua do Bashtop](#monitoramento-e-execu%C3%A7%C3%A3o-cont%C3%ADnua-do-bashtop "Monitoramento e Execução Contínua do Bashtop")
-- [🔄 Monitoramento Automático da CPU com Reinicialização](#-script-para-executar-bashtop-em-loop-e-reiniciar-apenas-em-falha "Monitoramento Automático da CPU com Reinicialização")
+- [🔄 Monitoramento Automático da CPU com Reinicialização](#-monitoramento-autom%C3%A1tico-da-cpu-com-reinicializa%C3%A7%C3%A3o "Monitoramento Automático da CPU com Reinicialização")
 - [Instalar o utilitário de monitoramento HTOP](#instalar-o-utilit%C3%A1rio-de-monitoramento-htop "Instalar o utilitário de monitoramento HTOP")
 
 ---
