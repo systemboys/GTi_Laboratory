@@ -139,11 +139,12 @@ Comandos em ShellScript:
 ```sh
 #!/bin/bash
 # Script: watchdog_reboot_bashtop.sh
+# Autor: Marcos - Engenharia de Software
 # Descrição: Reinicia o computador caso o bashtop falhe.
 
 while true; do
     pgrep -f bashtop >/dev/null || {
-        echo "⚠️ bashtop falhou. Reiniciando o sistema...";
+        echo "⚠️ Bashtop falhou. Reiniciando o sistema...";
         sudo reboot
     }
     sleep 1
@@ -153,7 +154,7 @@ done
 O mesmo comando em apenas uma linha para execução direta no terminal:
 
 ```bash
-while true; do pgrep -f bashtop >/dev/null || { echo "⚠️ bashtop falhou. Reiniciando o sistema..."; sudo reboot; }; sleep 1; done
+while true; do pgrep -f bashtop >/dev/null || { echo "⚠️ Bashtop falhou. Reiniciando o sistema..."; sudo reboot; }; sleep 1; done
 ```
 
 ### ✅ **Observações rápidas**
