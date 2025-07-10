@@ -155,6 +155,18 @@ while true; do
 done
 ```
 
+Segue o **comando em uma única linha**, direto, formal e pronto para seu Codex ou execução imediata em terminal:
+
+```bash
+while true; do bashtop; STATUS=$?; if [ $STATUS -ne 0 ]; then echo "⚠️ Bashtop falhou com status $STATUS. Reiniciando o sistema..."; sudo reboot; fi; sleep 1; done
+```
+
+### ⚠️ **Explicação executiva**
+
+* Tudo em **uma única linha** para shell scripts inline, cron jobs, containers, ou quick tests.
+* Mantém **exatamente a mesma lógica** do script estruturado.
+* Ideal para pipelines CI/CD de kiosks, scripts de provisionamento ou uso direto em shells remotos.
+
 Comando em uma única linha para execução direta no terminal:
 
 ```bash
