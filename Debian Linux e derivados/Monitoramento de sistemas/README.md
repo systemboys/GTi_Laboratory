@@ -130,11 +130,7 @@ E adicionar uma linha usando a expressão @reboot, que vai executar o seu códig
 
 ---
 
-## 🔄 Segue a instrução **pronta para seu Codex**, no modelo corporativo, formal, direto e visionário:
-
----
-
-## Script para executar Bashtop em loop e reiniciar apenas em falha
+## 🔄 Script para executar Bashtop em loop e reiniciar apenas em falha
 
 Este script executa o Bashtop em loop infinito, reiniciando o computador **apenas se o Bashtop falhar**. Inclui configuração para reinício sem senha no sudo, garantindo automação completa em ambientes de monitoramento ou kiosks.
 
