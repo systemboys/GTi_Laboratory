@@ -9,6 +9,7 @@
 - [Sensores de Hardware do Linux](#sensores-de-hardware-do-linux "Sensores de Hardware do Linux")
 - [Instalar o BashTOP no Debian Linux](#instalar-o-bashtop-no-debian-linux "Instalar o BashTOP no Debian Linux")
 - [Monitoramento e Execução Contínua do Bashtop](#monitoramento-e-execu%C3%A7%C3%A3o-cont%C3%ADnua-do-bashtop "Monitoramento e Execução Contínua do Bashtop")
+- [🔄 Reiniciando o computador automaticamente caso o bashtop falhe](# "Reiniciando o computador automaticamente caso o bashtop falhe")
 - [Instalar o utilitário de monitoramento HTOP](#instalar-o-utilit%C3%A1rio-de-monitoramento-htop "Instalar o utilitário de monitoramento HTOP")
 
 ---
@@ -123,6 +124,53 @@ E adicionar uma linha usando a expressão @reboot, que vai executar o seu códig
 ```bash
 @reboot ./keepalivescript.sh
 ```
+
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## 🔄 Reiniciando o computador automaticamente caso o bashtop falhe
+
+Segue a dica **pronta no seu padrão Codex** para guardar no seu acervo de instruções:
+
+---
+
+## 🔄 Reiniciando o computador automaticamente caso o bashtop falhe
+
+Essa instrução cria um **watchdog loop** que monitora o `bashtop`. Se ele falhar (por exemplo, ao travar quando a CPU atinge 100%), o script reinicia o computador imediatamente como medida emergencial.
+
+Comandos em ShellScript:
+
+```sh
+#!/bin/bash
+# Script: watchdog_reboot_bashtop.sh
+# Descrição: Reinicia o computador caso o bashtop falhe.
+
+while true; do
+    pgrep -f bashtop >/dev/null || {
+        echo "⚠️ bashtop falhou. Reiniciando o sistema...";
+        sudo reboot
+    }
+    sleep 1
+done
+```
+
+O mesmo comando em apenas uma linha para execução direta no terminal:
+
+```bash
+while true; do pgrep -f bashtop >/dev/null || { echo "⚠️ bashtop falhou. Reiniciando o sistema..."; sudo reboot; }; sleep 1; done
+```
+
+### ✅ **Observações rápidas**
+
+* Adicione permissão de execução com: `chmod +x watchdog_reboot_bashtop.sh`
+* Para o `sudo reboot` funcionar sem senha, adicione ao seu sudoers:
+
+  ```
+  SEU_USUARIO ALL=(ALL) NOPASSWD: /sbin/reboot
+  ```
+* **Use com cautela.** Esse script é uma solução reativa emergencial, não preventiva.
 
 [(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
