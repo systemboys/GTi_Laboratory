@@ -11,6 +11,7 @@
 - [Como Desligar ou Reiniciar o Linux via Terminal: Comandos Úteis](#como-desligar-ou-reiniciar-o-linux-via-terminal-comandos-%C3%BAteis "Como Desligar ou Reiniciar o Linux via Terminal: Comandos Úteis")
 - [Entendendo a Mensagem 'Do you want to continue? [Y/n]' em Instalações de Pacotes no Linux](#entendendo-a-mensagem-do-you-want-to-continue-yn-em-instala%C3%A7%C3%B5es-de-pacotes-no-linux "Entendendo a Mensagem 'Do you want to continue? [Y/n]' em Instalações de Pacotes no Linux")
 - [Criando alias para executar comandos no Linux como super usuário](#criando-alias-para-executar-comandos-no-linux-como-super-usu%C3%A1rio "Criando alias para executar comandos no Linux como super usuário")
+- [✅ Como permitir acesso remoto via AnyDesk na tela de login do Debian 12](# "Como permitir acesso remoto via AnyDesk na tela de login do Debian 12")
 
 ---
 
@@ -209,6 +210,55 @@ Agora você pode executar o comando usando o alias que você criou. Por exemplo,
 > ( i ) A diferença entre `~/.bashrc` e `~/.bash_profile`.
 
 A diferença entre os arquivos `~/.bashrc` e `~/.bash_profile` é que o `~/.bashrc` é executado toda vez que um novo shell é aberto, enquanto o `~/.bash_profile` é executado apenas no login do usuário.
+
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## ✅ Como permitir acesso remoto via AnyDesk na tela de login do Debian 12
+
+**Problema**: AnyDesk não mostra a tela de login quando o sistema usa o servidor gráfico *Wayland* (erro: *Remote display server is not supported*).
+
+**Solução**: Forçar o uso do *Xorg (X11)* no GDM.
+
+### Passos:
+
+1. **Abrir o arquivo de configuração do GDM**:
+
+   ```bash
+   sudo nano /etc/gdm3/daemon.conf
+   ```
+
+2. **Na seção `[daemon]`, adicionar ou descomentar**:
+
+   ```
+   WaylandEnable=false
+   ```
+
+3. **Salvar e sair** (`Ctrl + O`, `Enter`, `Ctrl + X`).
+
+4. **Reiniciar o GDM**:
+
+   ```bash
+   sudo systemctl restart gdm3
+   ```
+
+5. **Na tela de login**, clicar na engrenagem ⚙️ e escolher uma sessão (ex: `GNOME` ou `Cinnamon`).
+
+6. **Fazer login e confirmar se está usando X11**:
+
+   ```bash
+   echo $XDG_SESSION_TYPE
+   ```
+
+   O retorno deve ser:
+
+   ```
+   x11
+   ```
+
+🟢 **Após isso, o AnyDesk poderá mostrar a tela de login normalmente, permitindo controle remoto completo.**
 
 [(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
