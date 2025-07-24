@@ -12,6 +12,7 @@
 - [Entendendo a Mensagem 'Do you want to continue? [Y/n]' em Instalações de Pacotes no Linux](#entendendo-a-mensagem-do-you-want-to-continue-yn-em-instala%C3%A7%C3%B5es-de-pacotes-no-linux "Entendendo a Mensagem 'Do you want to continue? [Y/n]' em Instalações de Pacotes no Linux")
 - [Criando alias para executar comandos no Linux como super usuário](#criando-alias-para-executar-comandos-no-linux-como-super-usu%C3%A1rio "Criando alias para executar comandos no Linux como super usuário")
 - [✅ Como permitir acesso remoto via AnyDesk na tela de login do Debian 12](#-como-permitir-acesso-remoto-via-anydesk-na-tela-de-login-do-debian-12 "Como permitir acesso remoto via AnyDesk na tela de login do Debian 12")
+- [✅ Como mudar o gerenciador de login padrão para LightDM no Debian](# "Como mudar o gerenciador de login padrão para LightDM no Debian")
 
 ---
 
@@ -259,6 +260,57 @@ A diferença entre os arquivos `~/.bashrc` e `~/.bash_profile` é que o `~/.bash
    ```
 
 🟢 **Após isso, o AnyDesk poderá mostrar a tela de login normalmente, permitindo controle remoto completo.**
+
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## ✅ Como mudar o gerenciador de login padrão para LightDM no Debian
+
+1. Instale o LightDM:
+
+```bash
+sudo apt update
+sudo apt install lightdm
+```
+
+2. Escolha o LightDM como gerenciador padrão:
+
+Durante a instalação, o sistema exibirá um prompt perguntando qual display manager usar.
+Selecione `lightdm` com as teclas de seta e confirme com Enter.
+
+Se o prompt não aparecer ou você quiser trocar manualmente:
+
+```bash
+sudo dpkg-reconfigure lightdm
+```
+
+3. Reinicie o sistema:
+
+```bash
+sudo reboot
+```
+
+🔎 Verificação:
+
+Após o reboot, o sistema estará utilizando o LightDM como gerenciador de sessão.
+
+Você pode confirmar com:
+
+```bash
+cat /etc/X11/default-display-manager
+```
+
+O retorno será:
+
+```bash
+/usr/sbin/lightdm
+```
+
+🧠 Observação:
+
+LightDM é leve, compatível com múltiplos ambientes gráficos (GNOME, Xfce, MATE, etc.) e tende a ser mais estável com sessões X11.
 
 [(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
