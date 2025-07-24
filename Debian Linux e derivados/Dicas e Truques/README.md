@@ -12,7 +12,7 @@
 - [Entendendo a Mensagem 'Do you want to continue? [Y/n]' em Instalações de Pacotes no Linux](#entendendo-a-mensagem-do-you-want-to-continue-yn-em-instala%C3%A7%C3%B5es-de-pacotes-no-linux "Entendendo a Mensagem 'Do you want to continue? [Y/n]' em Instalações de Pacotes no Linux")
 - [Criando alias para executar comandos no Linux como super usuário](#criando-alias-para-executar-comandos-no-linux-como-super-usu%C3%A1rio "Criando alias para executar comandos no Linux como super usuário")
 - [✅ Como permitir acesso remoto via AnyDesk na tela de login do Debian 12](#-como-permitir-acesso-remoto-via-anydesk-na-tela-de-login-do-debian-12 "Como permitir acesso remoto via AnyDesk na tela de login do Debian 12")
-- [✅ Como mudar o gerenciador de login padrão para LightDM no Debian](# "Como mudar o gerenciador de login padrão para LightDM no Debian")
+- [✅ Como mudar o gerenciador de login padrão para LightDM no Debian](#-como-mudar-o-gerenciador-de-login-padr%C3%A3o-para-lightdm-no-debian "Como mudar o gerenciador de login padrão para LightDM no Debian")
 
 ---
 
