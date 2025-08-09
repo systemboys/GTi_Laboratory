@@ -6,6 +6,7 @@
 - [Como Ocultar uma Unidade de Disco no Windows 10: Guia Completo](#como-ocultar-uma-unidade-de-disco-no-windows-10-guia-completo "Como Ocultar uma Unidade de Disco no Windows 10: Guia Completo")
 - [Como Pular a Solicitação de Conta Microsoft Durante a Instalação do Windows 11: Método OOBE\BypassNRO](#como-pular-a-solicita%C3%A7%C3%A3o-de-conta-microsoft-durante-a-instala%C3%A7%C3%A3o-do-windows-11-m%C3%A9todo-oobebypassnro "Como Pular a Solicitação de Conta Microsoft Durante a Instalação do Windows 11: Método OOBE\BypassNRO")
 - [Corrigindo Erros ao Compartilhar Impressoras em Rede](#corrigindo-erros-ao-compartilhar-impressoras-em-rede "Corrigindo Erros ao Compartilhar Impressoras em Rede")
+- 💡 [Dica Rápida – Abrir BIOS/UEFI pelo Windows via Comando](# "Dica Rápida – Abrir BIOS/UEFI pelo Windows via Comando")
 
 ---
 
@@ -123,6 +124,60 @@ O erro **0x0000011b** ao conectar a uma impressora compartilhada geralmente ocor
    - Clique com o botão direito na impressora e selecione **Conectar**.  
 
 ![RegEdit](./images/erro-0x0000011b-01.png)
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#gti-laboratory--macetes-t%C3%A9cnicos "Subir para o topo")
+
+---
+
+## 💡 Dica Rápida – Abrir BIOS/UEFI pelo Windows via Comando
+
+### **Descrição**
+
+O comando `shutdown /r /fw /t 1` reinicia o computador e força a entrada na BIOS/UEFI sem precisar pressionar teclas na inicialização.
+
+### **Sintaxe**
+
+```cmd
+shutdown /r /fw /t 1
+```
+
+### **Parâmetros**
+
+* **`/r`** → Reinicia o sistema.
+* **`/fw`** → Direciona a inicialização para o firmware (UEFI/BIOS).
+* **`/t 1`** → Tempo de espera para desligar/reiniciar (em segundos).
+
+### **Pré-requisitos**
+
+* Computador com **UEFI** (não funciona em BIOS legado).
+* Suporte habilitado no firmware para inicialização rápida na BIOS.
+* Windows 8 ou superior.
+* Permissões de **administrador**.
+
+### **Execução local**
+
+1. Abra **Prompt de Comando** ou **PowerShell** como Administrador.
+2. Execute:
+
+   ```cmd
+   shutdown /r /fw /t 1
+   ```
+3. Aguarde a reinicialização — a máquina entrará diretamente na BIOS/UEFI.
+
+### **Execução remota (via PsExec)**
+
+```cmd
+psexec \\NOME_DO_PC -u ADMINISTRADOR -p SENHA shutdown /r /fw /t 1
+```
+
+> Troque `NOME_DO_PC`, `ADMINISTRADOR` e `SENHA` pelas credenciais corretas.
+
+### **Observações**
+
+* Evite rodar em máquinas críticas sem aviso — reinicia quase instantaneamente.
+* Em alguns notebooks, requer **Fast Boot** ativo.
+* Útil para suporte remoto, evitando perda de tempo tentando apertar teclas no boot.
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#gti-laboratory--macetes-t%C3%A9cnicos "Subir para o topo")
