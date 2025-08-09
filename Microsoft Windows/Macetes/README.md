@@ -15,7 +15,7 @@
 
 ---
 
-📁 ## Como Ocultar uma Unidade de Disco no Windows 10: Guia Completo
+## Como Ocultar uma Unidade de Disco no Windows 10: Guia Completo
 
 Para ocultar a unidade do disco rígido local E: no Windows 10, você pode seguir os passos abaixo:
 
