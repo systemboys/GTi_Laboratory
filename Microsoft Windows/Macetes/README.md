@@ -2,8 +2,6 @@
 
 [![Macetes diversos para lidar com Windows](https://github.com/systemboys/GTi_Laboratory/raw/main/Microsoft%20Windows/Macetes/images/banner1.jpg "Macetes diversos para lidar com Windows")](https://github.com/systemboys/GTi_Laboratory/raw/main/Microsoft%20Windows/Macetes/images/banner1.jpg "Macetes diversos para lidar com Windows")
 
-[![Macetes diversos para lidar com Windows](https://github.com/systemboys/GTi_Laboratory/raw/main/Microsoft%20Windows/Macetes/images/banner1.jpg "Macetes diversos para lidar com Windows")](https://github.com/systemboys/GTi_Laboratory/raw/main/Microsoft%20Windows/Macetes/images/banner1.jpg "Macetes diversos para lidar com Windows")
-
 - ⚖️ [Programas utilizados por advogados](./Advogados/README.md#gti-laboratory--programas-utilizados-por-advogados "Programas utilizados por advogados")
 - 📁 [Como Ocultar uma Unidade de Disco no Windows 10: Guia Completo](#como-ocultar-uma-unidade-de-disco-no-windows-10-guia-completo "Como Ocultar uma Unidade de Disco no Windows 10: Guia Completo")
 - 🚫 [Como Pular a Solicitação de Conta Microsoft Durante a Instalação do Windows 11: Método OOBE\BypassNRO](#como-pular-a-solicita%C3%A7%C3%A3o-de-conta-microsoft-durante-a-instala%C3%A7%C3%A3o-do-windows-11-m%C3%A9todo-oobebypassnro "Como Pular a Solicitação de Conta Microsoft Durante a Instalação do Windows 11: Método OOBE\BypassNRO")
@@ -17,7 +15,7 @@
 
 ---
 
-## Como Ocultar uma Unidade de Disco no Windows 10: Guia Completo
+📁 ## Como Ocultar uma Unidade de Disco no Windows 10: Guia Completo
 
 Para ocultar a unidade do disco rígido local E: no Windows 10, você pode seguir os passos abaixo:
 
