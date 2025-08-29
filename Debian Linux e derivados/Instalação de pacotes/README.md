@@ -18,6 +18,7 @@
 - [Instalar o Microsoft Edge para Linux](#instalar-o-microsoft-edge-para-linux "Instalar o Microsoft Edge para Linux")
 - [Instalar o Oracle Virtual Box no Debian Linux](#instalar-o-oracle-virtual-box-no-debian-linux "Instalar o Oracle Virtual Box no Debian Linux")
 - [Instalar o Virt-Manager (Virtual Machine Manager)](#instalar-o-virt-manager-virtual-machine-manager "Instalar o Virt-Manager (Virtual Machine Manager)")
+- 🖥️ [Instalação do Ventoy em Pendrive (Linux)](# "Instalação do Ventoy em Pendrive (Linux)")
 > Dicas de Instalação e Desinstalação
 - [Instalação e Desinstalação de Programas no Linux via Terminal](#instala%C3%A7%C3%A3o-e-desinstala%C3%A7%C3%A3o-de-programas-no-linux-via-terminal "Instalação e Desinstalação de Programas no Linux via Terminal")
    - [Identificar e remover programas no Linux usando o comando dpkg e apt no terminal](#identificar-e-remover-programas-no-linux-usando-o-comando-dpkg-e-apt-no-terminal "Identificar e remover programas no Linux usando o comando dpkg e apt no terminal")
@@ -367,6 +368,101 @@ sudo apt-get install virt-manager
 ```
 
 Após a instalação, você poderá utilizar o Virt-Manager para gerenciar suas máquinas virtuais de maneira similar ao que é mostrado na imagem.
+
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## 🖥️ Instalação do Ventoy em Pendrive (Linux)
+
+### 📥 Download
+
+1. Baixar o Ventoy no site oficial:
+   👉 [https://www.ventoy.net/en/download.html](https://www.ventoy.net/en/download.html)
+
+2. Extrair o pacote:
+
+   ```bash
+   tar -xzvf ventoy-x.x.xx-linux.tar.gz
+   cd ventoy-x.x.xx
+   ```
+
+### 🔎 Identificar o pendrive
+
+Listar dispositivos conectados:
+
+```bash
+lsblk
+```
+
+> Exemplo do que verá após executar o comando `lsblk`:
+
+```bash
+root@10:/home/marcos/Downloads/ventoy-1.1.07# lsblk
+NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+loop0    7:0    0 173,2M  1 loop /snap/skype/394
+loop1    7:1    0  50,8M  1 loop /snap/snapd/25202
+loop2    7:2    0  55,5M  1 loop /snap/core18/2934
+loop3    7:3    0  49,3M  1 loop /snap/snapd/24792
+loop4    7:4    0 182,3M  1 loop /snap/skype/392
+loop5    7:5    0  55,5M  1 loop /snap/core18/2940
+loop6    7:6    0 164,8M  1 loop /snap/gnome-3-28-1804/198
+loop7    7:7    0  91,7M  1 loop /snap/gtk-common-themes/1535
+loop8    7:8    0     4K  1 loop /snap/bare/5
+sda      8:0    0 223,6G  0 disk 
+├─sda1   8:1    0  93,2G  0 part /
+├─sda2   8:2    0     1K  0 part 
+├─sda5   8:5    0   4,7G  0 part [SWAP]
+└─sda6   8:6    0 125,7G  0 part /home
+sdb      8:16   1   7,5G  0 disk 
+└─sdb1   8:17   1   7,5G  0 part /media/marcos/133DA2E66CBFDA43
+sr0     11:0    1  1024M  0 rom
+```
+
+Exemplo de saída:
+
+```
+sda  → Disco do sistema
+sdb  → Pendrive
+```
+
+⚠️ Certifique-se de usar o **dispositivo correto** (`/dev/sdb`, por exemplo), pois o Ventoy irá formatar.
+
+### ⚡ Instalação
+
+Instalar o Ventoy no pendrive:
+
+```bash
+sudo ./Ventoy2Disk.sh -i /dev/sdX
+```
+
+(Substituir `sdX` pelo dispositivo real, ex.: `sdb`)
+
+### 🔄 Atualização
+
+Para atualizar sem perder as ISOs já copiadas:
+
+```bash
+sudo ./Ventoy2Disk.sh -u /dev/sdX
+```
+
+### ⚠️ Observação importante
+
+Se ao usar `-u` aparecer a mensagem:
+
+```
+/dev/sdX does not contain Ventoy or data corrupted
+Please use -i option if you want to install ventoy to /dev/sdX
+```
+
+➡️ Nesse caso, use **`-i`** no lugar de `-u`, pois significa que o pendrive ainda não tem o Ventoy instalado.
+
+### 🚀 Como usar
+
+1. Copiar arquivos **.iso** direto para o pendrive.
+2. Dar boot pelo pendrive no computador.
+3. O Ventoy exibirá um menu com todas as ISOs disponíveis para inicialização.
 
 [(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
