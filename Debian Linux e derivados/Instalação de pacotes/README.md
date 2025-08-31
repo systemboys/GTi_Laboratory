@@ -18,7 +18,8 @@
 - [Instalar o Microsoft Edge para Linux](#instalar-o-microsoft-edge-para-linux "Instalar o Microsoft Edge para Linux")
 - [Instalar o Oracle Virtual Box no Debian Linux](#instalar-o-oracle-virtual-box-no-debian-linux "Instalar o Oracle Virtual Box no Debian Linux")
 - [Instalar o Virt-Manager (Virtual Machine Manager)](#instalar-o-virt-manager-virtual-machine-manager "Instalar o Virt-Manager (Virtual Machine Manager)")
-- 🖥️ [Instalação do Ventoy em Pendrive (Linux)](#%EF%B8%8F-instala%C3%A7%C3%A3o-do-ventoy-em-pendrive-linux "Instalação do Ventoy em Pendrive (Linux)")
+- 🖥️ [Instalação do `Ventoy` em Pendrive (Linux)](#%EF%B8%8F-instala%C3%A7%C3%A3o-do-ventoy-em-pendrive-linux "Instalação do Ventoy em Pendrive (Linux)")
+- 🐧 [Criar `Pendrive Bootável` com `dd`](# "Criar Pendrive Bootável com dd")
 > Dicas de Instalação e Desinstalação
 - [Instalação e Desinstalação de Programas no Linux via Terminal](#instala%C3%A7%C3%A3o-e-desinstala%C3%A7%C3%A3o-de-programas-no-linux-via-terminal "Instalação e Desinstalação de Programas no Linux via Terminal")
    - [Identificar e remover programas no Linux usando o comando dpkg e apt no terminal](#identificar-e-remover-programas-no-linux-usando-o-comando-dpkg-e-apt-no-terminal "Identificar e remover programas no Linux usando o comando dpkg e apt no terminal")
@@ -463,6 +464,45 @@ Please use -i option if you want to install ventoy to /dev/sdX
 1. Copiar arquivos **.iso** direto para o pendrive.
 2. Dar boot pelo pendrive no computador.
 3. O Ventoy exibirá um menu com todas as ISOs disponíveis para inicialização.
+
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## 🐧 Criar Pendrive Bootável com `dd`
+
+Para gravar uma ISO diretamente em um pendrive e torná-lo bootável no Linux, pode-se usar o comando:
+
+```bash
+sudo dd if=MiniOS.iso of=/dev/sdX bs=4M status=progress conv=fsync
+```
+
+### 🔎 Explicação dos parâmetros:
+
+* **`if=MiniOS.iso`** → Arquivo de entrada (a ISO da distro).
+* **`of=/dev/sdX`** → Destino (substitua `sdX` pelo dispositivo do pendrive, ex: `/dev/sdb`).
+* **`bs=4M`** → Define tamanho dos blocos como 4 MB (cópia mais rápida).
+* **`status=progress`** → Mostra o progresso da gravação.
+* **`conv=fsync`** → Garante que os dados sejam gravados fisicamente antes de finalizar.
+
+### ⚠️ Atenção
+
+* Verifique o dispositivo correto com `lsblk` ou `fdisk -l`.
+* Se errar e usar o disco do sistema (`/dev/sda`), pode apagar todo o sistema.
+
+### 🆚 Diferença em relação ao Ventoy
+
+* **`dd`**: grava apenas **uma ISO por vez**, substitui tudo no pendrive.
+* **Ventoy**: permite copiar várias ISOs no mesmo pendrive e escolher no boot.
+
+### 💡 Observação
+
+Caso o comando falhe em alguns ambientes, pode-se tentar com `-i` ao invés de `-u`:
+
+```bash
+sudo dd if=MiniOS.iso of=/dev/sdX bs=4M status=progress conv=fsync -i
+```
 
 [(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
