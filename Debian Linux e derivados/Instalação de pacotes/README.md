@@ -491,8 +491,8 @@ sudo dd if=MiniOS.iso of=/dev/sdX bs=4M status=progress conv=fsync
 * Verifique o dispositivo correto com `lsblk` ou `fdisk -l`.
 * Se errar e usar o disco do sistema (`/dev/sda`), pode apagar todo o sistema.
 
-📦 Disponibilidade
-O comando `dd` já vem instalado por padrão na maioria das distribuições Linux, pois faz parte do pacote coreutils. Só em sistemas extremamente minimalistas ele pode não estar presente — nesses casos, basta instalar o pacote `coreutils` pelo gerenciador de pacotes da distro.
+> 📦 Disponibilidade
+> O comando `dd` já vem instalado por padrão na maioria das distribuições Linux, pois faz parte do pacote coreutils. Só em sistemas extremamente minimalistas ele pode não estar presente — nesses casos, basta instalar o pacote `coreutils` pelo gerenciador de pacotes da distro.
 
 ### 🆚 Diferença em relação ao Ventoy
 
