@@ -434,7 +434,13 @@ sdb  → Pendrive
 
 Instalar o Ventoy no pendrive:
 
-⚠️ Desmonte o dispositivo de armazenamento antes de instalar o Ventoy!
+⚠️ Antes de tudo, se estiver no Linux, desmonte sua unidade, caso contrário, apresentará a seguinte mensagem:
+
+   ```bash
+	"/dev/sdc is already mounted, please umount it first!"
+   ```
+
+No seu terminal dentro do diretório do Ventoy execute o arquivo `Ventoy2Disk.sh` com o incremento a seguir:
 
 ```bash
 sudo ./Ventoy2Disk.sh -i /dev/sdX
