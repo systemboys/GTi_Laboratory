@@ -434,6 +434,8 @@ sdb  → Pendrive
 
 Instalar o Ventoy no pendrive:
 
+⚠️ Desmonte o dispositivo de armazenamento antes de instalar o Ventoy!
+
 ```bash
 sudo ./Ventoy2Disk.sh -i /dev/sdX
 ```
