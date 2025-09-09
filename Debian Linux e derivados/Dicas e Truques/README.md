@@ -13,6 +13,7 @@
 - [Criando alias para executar comandos no Linux como super usuário](#criando-alias-para-executar-comandos-no-linux-como-super-usu%C3%A1rio "Criando alias para executar comandos no Linux como super usuário")
 - [✅ Como permitir acesso remoto via AnyDesk na tela de login do Debian 12](#-como-permitir-acesso-remoto-via-anydesk-na-tela-de-login-do-debian-12 "Como permitir acesso remoto via AnyDesk na tela de login do Debian 12")
 - [✅ Como mudar o gerenciador de login padrão para LightDM no Debian](#-como-mudar-o-gerenciador-de-login-padr%C3%A3o-para-lightdm-no-debian "Como mudar o gerenciador de login padrão para LightDM no Debian")
+- [🔐 Guia de Permissões no Linux](#aaa "Guia de Permissões no Linux")
 
 ---
 
@@ -311,6 +312,91 @@ O retorno será:
 🧠 Observação:
 
 LightDM é leve, compatível com múltiplos ambientes gráficos (GNOME, Xfce, MATE, etc.) e tende a ser mais estável com sessões X11.
+
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## 🔐 Guia de Permissões no Linux
+
+### 📌 Estrutura de Permissões
+
+Cada arquivo/pasta no Linux tem **3 grupos de permissões**:
+
+* 👤 **User (dono)**
+* 👥 **Group (grupo)**
+* 🌍 **Others (outros usuários)**
+
+E cada grupo pode ter:
+
+* 📖 **r** = Read (leitura)
+* ✏️ **w** = Write (escrita)
+* ⚙️ **x** = Execute (execução)
+
+### 🔢 Representação Numérica (Octal)
+
+As permissões podem ser expressas em números:
+
+| Número | Permissão | Significado                  |
+| ------ | --------- | ---------------------------- |
+| **0**  | ---       | nenhum acesso                |
+| **1**  | --x       | apenas execução              |
+| **2**  | -w-       | apenas escrita               |
+| **3**  | -wx       | escrita + execução           |
+| **4**  | r--       | apenas leitura               |
+| **5**  | r-x       | leitura + execução           |
+| **6**  | rw-       | leitura + escrita            |
+| **7**  | rwx       | leitura + escrita + execução |
+
+### 🎯 Exemplos Comuns
+
+* 🔑 **600** → dono: `rw-` | grupo: `---` | outros: `---`
+  👉 Usado para **chaves privadas (.pem)**
+
+* 📖 **644** → dono: `rw-` | grupo: `r--` | outros: `r--`
+  👉 Usado para **arquivos de texto/HTML**
+
+* 📂 **755** → dono: `rwx` | grupo: `r-x` | outros: `r-x`
+  👉 Usado para **diretórios e scripts executáveis**
+
+* 🔒 **700** → dono: `rwx` | grupo: `---` | outros: `---`
+  👉 Usado para **arquivos pessoais restritos**
+
+### ⚡ Comandos Úteis
+
+Alterar permissões:
+
+```bash
+chmod 600 arquivo.pem
+chmod 644 index.html
+chmod 755 script.sh
+```
+
+Alterar dono:
+
+```bash
+chown usuario:grupo arquivo
+```
+
+Ver permissões:
+
+```bash
+ls -l
+```
+
+Exemplo de saída:
+
+```
+-rw-------  1 marcos users   1692 set  9 13:22 gti-sis.pem
+```
+
+### ✅ Boas Práticas
+
+* 🔑 **Chaves privadas (.pem)** sempre em `600`
+* 📂 **Pastas de projetos** em `755`
+* 📖 **Arquivos de configuração** geralmente `644`
+* 🚫 Nunca use `777` (dá acesso total a todos, inseguro!)
 
 [(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
