@@ -13,7 +13,7 @@
 - [Criando alias para executar comandos no Linux como super usuário](#criando-alias-para-executar-comandos-no-linux-como-super-usu%C3%A1rio "Criando alias para executar comandos no Linux como super usuário")
 - [✅ Como permitir acesso remoto via AnyDesk na tela de login do Debian 12](#-como-permitir-acesso-remoto-via-anydesk-na-tela-de-login-do-debian-12 "Como permitir acesso remoto via AnyDesk na tela de login do Debian 12")
 - [✅ Como mudar o gerenciador de login padrão para LightDM no Debian](#-como-mudar-o-gerenciador-de-login-padr%C3%A3o-para-lightdm-no-debian "Como mudar o gerenciador de login padrão para LightDM no Debian")
-- [🔐 Guia de Permissões no Linux](#aaa "Guia de Permissões no Linux")
+- [🔐 Guia de Permissões no Linux](#-guia-de-permiss%C3%B5es-no-linux "Guia de Permissões no Linux")
 
 ---
 
