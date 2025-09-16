@@ -70,7 +70,7 @@ Novamente, reforço a importância de fazer backup dos seus dados antes de qualq
 
 ---
 
-🛠️ Codex — Corrigir Repositórios com Erro no APT (Debian/Ubuntu)
+## 🛠️ Codex — Corrigir Repositórios com Erro no APT (Debian/Ubuntu)
 
 > O que quer dizer o seguinte erro no terminal Linux após o comando "apt update"?
 
