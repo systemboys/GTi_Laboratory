@@ -7,7 +7,7 @@
 ### *Sumário*
 
 - [Atualizar o kernel do Linux](#atualizar-o-kernel-do-linux "Atualizar o kernel do Linux")
-- [🛠️ Codex — Corrigir Repositórios com Erro no APT (Debian/Ubuntu)](#alguns-erros-durante-a-atualiza%C3%A7%C3%A3o-de-pacotes "Codex — Corrigir Repositórios com Erro no APT (Debian/Ubuntu)")
+- [🛠️ Codex — Corrigir Repositórios com Erro no APT (Debian/Ubuntu)](#%EF%B8%8F-codex--corrigir-reposit%C3%B3rios-com-erro-no-apt-debianubuntu "Codex — Corrigir Repositórios com Erro no APT (Debian/Ubuntu)")
 
 ---
 
