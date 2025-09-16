@@ -72,15 +72,6 @@ Novamente, reforço a importância de fazer backup dos seus dados antes de qualq
 
 ## 🛠️ Codex — Corrigir Repositórios com Erro no APT (Debian/Ubuntu)
 
-> O que quer dizer o seguinte erro no terminal Linux após o comando "apt update"?
-
-```bash
-W: Skipping acquire of configured file 'contrib/source/Sources' as repository 'https://download.virtualbox.org/virtualbox/debian buster InRelease' does not seem to provide it (sources.list entry misspelt?)
-E: The repository 'https://download.virtualbox.org/virtualbox/debian <mydist> Release' does not have a Release file.
-N: Updating from such a repository can't be done securely, and is therefore disabled by default.
-N: See apt-secure(8) manpage for repository creation and user configuration details.
-```
-
 [![Terminal após o comando apt update](./images/apt_update.png "Terminal após o comando apt update")](./images/apt_update.png "Terminal após o comando apt update")
 
 ## 🛠️ **Codex — Corrigir Repositórios com Erro no APT (Debian/Ubuntu)**
