@@ -7,7 +7,7 @@
 ### *Sumário*
 
 - [Atualizar o kernel do Linux](#atualizar-o-kernel-do-linux "Atualizar o kernel do Linux")
-- [Alguns erros](#alguns-erros-durante-a-atualiza%C3%A7%C3%A3o-de-pacotes "Alguns erros")
+- [🛠️ Codex — Corrigir Repositórios com Erro no APT (Debian/Ubuntu)](#alguns-erros-durante-a-atualiza%C3%A7%C3%A3o-de-pacotes "Codex — Corrigir Repositórios com Erro no APT (Debian/Ubuntu)")
 
 ---
 
@@ -70,7 +70,7 @@ Novamente, reforço a importância de fazer backup dos seus dados antes de qualq
 
 ---
 
-## Alguns erros durante a atualização de pacotes
+🛠️ Codex — Corrigir Repositórios com Erro no APT (Debian/Ubuntu)
 
 > O que quer dizer o seguinte erro no terminal Linux após o comando "apt update"?
 
@@ -83,29 +83,75 @@ N: See apt-secure(8) manpage for repository creation and user configuration deta
 
 [![Terminal após o comando apt update](./images/apt_update.png "Terminal após o comando apt update")](./images/apt_update.png "Terminal após o comando apt update")
 
-Esse erro indica que há um problema com o repositório VirtualBox no arquivo `/etc/apt/sources.list`. Especificamente, há um problema com a entrada de linha do arquivo que se refere ao repositório VirtualBox.
+## 🛠️ **Codex — Corrigir Repositórios com Erro no APT (Debian/Ubuntu)**
 
-A mensagem de erro indica que a entrada da linha do arquivo para o diretório de origem do repositório VirtualBox (contrib/source/Sources) está faltando ou foi mal escrita. Além disso, a mensagem de erro também informa que o repositório não possui um arquivo Release, o que torna o processo de atualização inseguro e, portanto, é desabilitado por padrão.
+### 📌 Objetivo:
 
-Para corrigir esse problema, você pode editar o arquivo `/etc/apt/sources.list` e corrigir a entrada do repositório VirtualBox ou removê-la completamente. Para fazer isso, você pode seguir as etapas abaixo:
+Remover ou corrigir repositórios quebrados, duplicados ou com chave GPG inválida durante `apt update`.
 
-1. Abra o arquivo `/etc/apt/sources.list` com um editor de texto de sua preferência, como o nano:
+### ✅ **Etapas Genéricas**
+
+#### 1️⃣ Verificar erros com:
+
+```bash
+sudo apt update
+```
+
+> Copiar e analisar as linhas com `Err:` ou `NO_PUBKEY`, ou repositórios quebrados.
+
+#### 2️⃣ Verificar repositórios principais:
 
 ```bash
 sudo nano /etc/apt/sources.list
 ```
 
-2. Procure a linha que se refere ao repositório VirtualBox e corrija-a, se houver um erro de digitação, ou remova-a completamente. Para remover a linha, basta comentá-la adicionando um "#" no início da linha. A linha deve ficar assim:
+> ⚠️ Se não encontrar o repositório com erro, vá para o passo 3.
+
+#### 3️⃣ Listar arquivos extras:
 
 ```bash
-# deb https://download.virtualbox.org/virtualbox/debian buster contrib
+ls /etc/apt/sources.list.d/
 ```
 
-3. Salve e feche o arquivo.
+> Aqui ficam os `.list` e `.sources` que podem conter os repositórios com problema.
 
-4. Execute o comando `sudo apt update` novamente para atualizar a lista de pacotes disponíveis.
+#### 4️⃣ Identificar e **remover** os arquivos dos repositórios problemáticos:
 
-Com esses passos, você deve conseguir resolver o erro e atualizar seu sistema sem problemas.
+```bash
+sudo rm /etc/apt/sources.list.d/NOME_DO_ARQUIVO
+```
+
+> 💡 Ex:
+> `skype-stable.list`, `qgis.sources`, `mixxx.list`, etc.
+
+#### 5️⃣ Corrigir chave GPG faltando (se aplicável):
+
+```bash
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CHAVE_PUBKEY
+```
+
+> 🔑 Substitua `CHAVE_PUBKEY` pelo valor do erro, ex: `11EE8C00B693A745`
+
+#### 6️⃣ Remover duplicação de repositórios (se houver):
+
+* Identifique arquivos `.list` repetidos com o mesmo conteúdo.
+* Remova o duplicado:
+
+```bash
+sudo rm /etc/apt/sources.list.d/ARQUIVO_DUPLICADO
+```
+
+#### 7️⃣ Testar novamente:
+
+```bash
+sudo apt update
+```
+
+> Tudo certo se não aparecerem mais erros!
+
+### 💾 **Dica final**:
+
+Mantenha seu sistema limpo e revise os repositórios após instalar programas de terceiros (como Skype, Anydesk, QGIS, etc.).
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
