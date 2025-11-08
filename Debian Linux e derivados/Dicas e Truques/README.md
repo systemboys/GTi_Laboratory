@@ -14,6 +14,7 @@
 - [✅ Como permitir acesso remoto via AnyDesk na tela de login do Debian 12](#-como-permitir-acesso-remoto-via-anydesk-na-tela-de-login-do-debian-12 "Como permitir acesso remoto via AnyDesk na tela de login do Debian 12")
 - [✅ Como mudar o gerenciador de login padrão para LightDM no Debian](#-como-mudar-o-gerenciador-de-login-padr%C3%A3o-para-lightdm-no-debian "Como mudar o gerenciador de login padrão para LightDM no Debian")
 - [🔐 Guia de Permissões no Linux](#-guia-de-permiss%C3%B5es-no-linux "Guia de Permissões no Linux")
+- [🧩 Executar AppImage com erro de FUSE no Debian](#-executar-appimage-com-erro-de-fuse-no-debian "Executar AppImage com erro de FUSE no Debian")
 
 ---
 
@@ -397,6 +398,66 @@ Exemplo de saída:
 * 📂 **Pastas de projetos** em `755`
 * 📖 **Arquivos de configuração** geralmente `644`
 * 🚫 Nunca use `777` (dá acesso total a todos, inseguro!)
+
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## 🧩 Executar AppImage com erro de FUSE no Debian
+
+### 🧠 Contexto
+
+Ao tentar executar um arquivo `.AppImage`, pode aparecer o erro:
+
+```
+dlopen(): error loading libfuse.so.2
+AppImages require FUSE to run
+```
+
+Isso acontece porque o AppImage depende da biblioteca **libfuse2**, que pode não estar instalada ou foi substituída pela **fuse3** em sistemas Debian recentes.
+
+### ⚙️ Solução 1 — Instalar a libfuse2 (recomendada)
+
+```bash
+sudo apt install fuse libfuse2 -y
+```
+
+Após a instalação, volte ao diretório e execute novamente o AppImage:
+
+```bash
+./nome-do-arquivo.AppImage
+```
+
+### ⚙️ Solução 2 — Criar link simbólico com fuse3 (Debian 12+)
+
+Se a `libfuse2` não estiver disponível:
+
+```bash
+sudo apt install fuse3 -y
+sudo ln -s /usr/lib/x86_64-linux-gnu/libfuse3.so.3 /usr/lib/x86_64-linux-gnu/libfuse.so.2
+```
+
+### ⚙️ Solução 3 — Executar AppImage sem FUSE (modo extração)
+
+Caso o AppImage ainda não rode:
+
+```bash
+./nome-do-arquivo.AppImage --appimage-extract
+```
+
+Isso criará uma pasta `squashfs-root/`.
+Execute o app dentro dela:
+
+```bash
+./squashfs-root/AppRun
+```
+
+### 🧾 Observações
+
+* Sempre use `chmod +x nome-do-arquivo.AppImage` antes de rodar.
+* Essa correção vale para qualquer AppImage que dependa da `libfuse.so.2`.
+* Ideal para distribuições baseadas em **Debian 11+ (Bullseye e Bookworm)**.
 
 [(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
