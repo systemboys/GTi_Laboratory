@@ -7,8 +7,8 @@
 ### *Sumário*
 
 - [🧬 Atualizar o kernel do Linux](#atualizar-o-kernel-do-linux "Atualizar o kernel do Linux")
-- [🛠️ Corrigir Repositórios com Erro no APT (Debian/Ubuntu)](#%EF%B8%8F-codex--corrigir-reposit%C3%B3rios-com-erro-no-apt-debianubuntu "Corrigir Repositórios com Erro no APT (Debian/Ubuntu)")
-- [📘 Manutenção automática de disco no Debian (via systemd)](#%F0%9F%93%98-codex--manuten%C3%A7%C3%A3o-autom%C3%A1tica-de-disco-no-debian-via-systemd "Manutenção automática de disco no Debian (via systemd)")
+- [🛠️ Corrigir Repositórios com Erro no APT (Debian/Ubuntu)](#%EF%B8%8F-corrigir-reposit%C3%B3rios-com-erro-no-apt-debianubuntu "Corrigir Repositórios com Erro no APT (Debian/Ubuntu)")
+- [📘 Manutenção automática de disco no Debian (via systemd)](#-manuten%C3%A7%C3%A3o-autom%C3%A1tica-de-disco-no-debian-via-systemd "Manutenção automática de disco no Debian (via systemd)")
 
 
 ---
