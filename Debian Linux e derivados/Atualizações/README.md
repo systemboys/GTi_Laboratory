@@ -7,8 +7,8 @@
 ### *Sumário*
 
 - [🧬 Atualizar o kernel do Linux](#atualizar-o-kernel-do-linux "Atualizar o kernel do Linux")
-- [🛠️ Codex — Corrigir Repositórios com Erro no APT (Debian/Ubuntu)](#%EF%B8%8F-codex--corrigir-reposit%C3%B3rios-com-erro-no-apt-debianubuntu "Codex — Corrigir Repositórios com Erro no APT (Debian/Ubuntu)")
-- [📘 Codex — Manutenção automática de disco no Debian (via systemd)](#%F0%9F%93%98-codex--manuten%C3%A7%C3%A3o-autom%C3%A1tica-de-disco-no-debian-via-systemd "Codex — Manutenção automática de disco no Debian (via systemd)")
+- [🛠️ Corrigir Repositórios com Erro no APT (Debian/Ubuntu)](#%EF%B8%8F-codex--corrigir-reposit%C3%B3rios-com-erro-no-apt-debianubuntu "Corrigir Repositórios com Erro no APT (Debian/Ubuntu)")
+- [📘 Manutenção automática de disco no Debian (via systemd)](#%F0%9F%93%98-codex--manuten%C3%A7%C3%A3o-autom%C3%A1tica-de-disco-no-debian-via-systemd "Manutenção automática de disco no Debian (via systemd)")
 
 
 ---
@@ -72,11 +72,11 @@ Novamente, reforço a importância de fazer backup dos seus dados antes de qualq
 
 ---
 
-## 🛠️ Codex — Corrigir Repositórios com Erro no APT (Debian/Ubuntu)
+## 🛠️ Corrigir Repositórios com Erro no APT (Debian/Ubuntu)
 
 [![Terminal após o comando apt update](./images/apt_update.png "Terminal após o comando apt update")](./images/apt_update.png "Terminal após o comando apt update")
 
-## 🛠️ **Codex — Corrigir Repositórios com Erro no APT (Debian/Ubuntu)**
+## 🛠️ **Corrigir Repositórios com Erro no APT (Debian/Ubuntu)**
 
 ### 📌 Objetivo:
 
@@ -151,7 +151,7 @@ Mantenha seu sistema limpo e revise os repositórios após instalar programas de
 
 ---
 
-## 📘 Codex — Manutenção automática de disco no Debian (via systemd)
+## 📘 Manutenção automática de disco no Debian (via systemd)
 
 ### Objetivo
 
