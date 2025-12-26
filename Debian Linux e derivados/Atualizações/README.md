@@ -8,6 +8,7 @@
 
 - [🧬 Atualizar o kernel do Linux](#atualizar-o-kernel-do-linux "Atualizar o kernel do Linux")
 - [🛠️ Codex — Corrigir Repositórios com Erro no APT (Debian/Ubuntu)](#%EF%B8%8F-codex--corrigir-reposit%C3%B3rios-com-erro-no-apt-debianubuntu "Codex — Corrigir Repositórios com Erro no APT (Debian/Ubuntu)")
+- [📘 Codex — Manutenção automática de disco no Debian (via systemd)](#%F0%9F%93%98-codex--manuten%C3%A7%C3%A3o-autom%C3%A1tica-de-disco-no-debian-via-systemd "Codex — Manutenção automática de disco no Debian (via systemd)")
 
 
 ---
@@ -144,6 +145,126 @@ sudo apt update
 ### 💾 **Dica final**:
 
 Mantenha seu sistema limpo e revise os repositórios após instalar programas de terceiros (como Skype, Anydesk, QGIS, etc.).
+
+[(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## 📘 Codex — Manutenção automática de disco no Debian (via systemd)
+
+### Objetivo
+
+Evitar problemas de boot e travamentos causados por **disco cheio**, automatizando limpeza segura sempre que o sistema **desliga ou reinicia**.
+
+---
+
+### 1️⃣ Criar o script de manutenção
+
+```bash
+nano ~/manutencao-sistema.sh
+```
+
+#### Conteúdo do script:
+
+```bash
+#!/bin/bash
+
+echo "=== Manutenção automática do sistema ==="
+
+apt clean
+apt autoremove -y
+journalctl --vacuum-size=200M
+
+apt remove --purge -y $(dpkg -l 'linux-image-*' \
+ | awk '/^ii/{print $2}' \
+ | sort -V \
+ | head -n -2)
+
+df -h /
+echo "=== Manutenção concluída ==="
+```
+
+Salvar (`Ctrl+O`, Enter) e sair (`Ctrl+X`).
+
+---
+
+### 2️⃣ Tornar o script executável e mover para local do sistema
+
+```bash
+chmod +x ~/manutencao-sistema.sh
+sudo mv ~/manutencao-sistema.sh /usr/local/bin/manutencao-sistema.sh
+```
+
+---
+
+### 3️⃣ Criar o serviço systemd para rodar no desligamento
+
+```bash
+sudo nano /etc/systemd/system/manutencao-desligamento.service
+```
+
+#### Conteúdo do serviço:
+
+```ini
+[Unit]
+Description=Manutenção automática antes do desligamento
+DefaultDependencies=no
+Before=shutdown.target reboot.target halt.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/manutencao-sistema.sh
+TimeoutStartSec=0
+
+[Install]
+WantedBy=halt.target reboot.target shutdown.target
+```
+
+Salvar e sair.
+
+---
+
+### 4️⃣ Ativar o serviço
+
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable manutencao-desligamento.service
+```
+
+Verificação:
+
+```bash
+systemctl status manutencao-desligamento.service
+```
+
+---
+
+### 5️⃣ Teste manual (opcional)
+
+```bash
+sudo systemctl start manutencao-desligamento.service
+df -h /
+```
+
+---
+
+### Resultado final
+
+✔ Executa automaticamente ao desligar ou reiniciar  
+✔ Limpa cache do APT  
+✔ Remove pacotes órfãos  
+✔ Controla logs do systemd  
+✔ Remove kernels antigos  
+✔ Evita falha de boot por disco cheio  
+
+---
+
+📌 **Nota Codex:**
+
+Este procedimento é seguro para uso contínuo em sistemas Debian/Ubuntu usados com atualizações frequentes.
+
+---
 
 [(&larr;) Voltar](https://github.com/systemboys/GTi_Laboratory#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
