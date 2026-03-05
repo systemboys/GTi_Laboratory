@@ -1233,9 +1233,10 @@ Aqui está uma lista de caracteres especiais que podem ser úteis para criar men
 ╙ ╜
 ░ ▒ ▓
 ← ↑ → ↓ ↔ ↕ ↨
-┌ ┬ ┐
-├ ┼ ┤
-└ ┴ ┘
+┌ ┬ ─ ┐
+├ ┼ ─ ┤
+│ │   │
+└ ┴ ─ ┘
 ▀ ▄ █ ▌ ▐
 ▲ ► ▼ ◄
 ← ↑ → ↓ ↔ ↕ ↨ ≡ │ ┌ ┐ └ ┘ ├ ┤ ┬ ┴ ┼ ─ ═ ║
