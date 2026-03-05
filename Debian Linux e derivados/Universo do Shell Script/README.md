@@ -1238,7 +1238,7 @@ Aqui está uma lista de caracteres especiais que podem ser úteis para criar men
 └ ┴ ┘
 ▀ ▄ █ ▌ ▐
 ▲ ► ▼ ◄
-← ↑ → ↓ ↔ ↕ ↨ ≡ │ ┌ ┐ └ ┘ ├ ┤ ┬ ┴ ┼ ═ ║
+← ↑ → ↓ ↔ ↕ ↨ ≡ │ ┌ ┐ └ ┘ ├ ┤ ┬ ┴ ┼ ─ ═ ║
 ```
 
 Esses caracteres podem ser usados para criar bordas, setas, caixas, e muitos outros elementos gráficos em menus ou interfaces de texto. Sinta-se à vontade para experimentar e combiná-los conforme necessário!
