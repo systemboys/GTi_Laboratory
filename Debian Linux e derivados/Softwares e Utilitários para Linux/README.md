@@ -248,7 +248,7 @@ mogrify -format jpg *.png && rm *.png
 ```
 
 ### Outras opções úteis
-- Converter e colocar em uma pasta diferente:
+- Converter e colocar em uma pasta diferente (✅ A que gostei!):
   ```bash
   mkdir jpgs
   mogrify -format jpg -path jpgs *.png
