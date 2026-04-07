@@ -10,7 +10,8 @@
 
 - [Melhorando a Velocidade de Download no Linux com Aceleradores de Download](#melhorando-a-velocidade-de-download-no-linux-com-aceleradores-de-download "Melhorando a Velocidade de Download no Linux com Aceleradores de Download")
 - [Baixando com Facilidade: Utilizando o Comando wget no Linux](#baixando-com-facilidade-utilizando-o-comando-wget-no-linux "Baixando com Facilidade: Utilizando o Comando wget no Linux")
-- [Instalação e Uso do PDFTK no Debian Linux](#instala%C3%A7%C3%A3o-e-uso-do-pdftk-no-debian-linux "Instalação e Uso do PDFTK no Debian Linux")
+- [Instalação e Uso do `PDFTK` no Debian Linux](#instala%C3%A7%C3%A3o-e-uso-do-pdftk-no-debian-linux "Instalação e Uso do PDFTK no Debian Linux")
+- [Converter imagens de um formato para outro com `ImageMagick`](# "Converter imagens de um formato para outro com ImageMagick")
 
 ---
 
@@ -194,6 +195,83 @@ cat output "Unificados/receitas_completas.pdf"
 
 > 🔹 O caractere `\` no final de cada linha serve para quebrar o comando sem executá-lo, mantendo tudo como um único comando no terminal.
 > 🔹 Os caminhos com espaços devem estar **entre aspas**.
+
+[(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
+[(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
+
+---
+
+## Converter imagens de um formato para outro com ImageMagick
+
+Existe uma ferramenta excelente (e a mais usada) via terminal no Linux para **converter imagens** de um formato para outro, inclusive **para JPG**. O nome dela é **ImageMagick**.
+
+### Como instalar o ImageMagick
+Na maioria das distribuições baseadas em Debian/Ubuntu (como Ubuntu, Linux Mint, Pop!_OS etc.), rode:
+
+```bash
+sudo apt update
+sudo apt install imagemagick
+```
+
+Se estiver usando Fedora, Arch ou outra distro, o comando muda um pouco (ex: `sudo dnf install ImageMagick` ou `sudo pacman -S imagemagick`).
+
+### Converter uma única imagem para JPG
+```bash
+convert imagem.png imagem.jpg
+```
+
+Ou, se quiser controlar a qualidade (quanto menor o número, menor o arquivo, mas pior a qualidade):
+
+```bash
+convert imagem.png -quality 90 imagem.jpg   # 90 é uma boa qualidade
+```
+
+### Converter várias imagens de uma vez (batch)
+Entre na pasta onde estão as imagens e use o `mogrify` (é o jeito mais prático para conversão em lote):
+
+```bash
+# Converte todos os PNG para JPG (mantém os originais)
+mogrify -format jpg *.png
+
+# Converte todos os WEBP para JPG
+mogrify -format jpg *.webp
+
+# Converte PNG, GIF, TIFF etc. de uma vez
+mogrify -format jpg *.png *.gif *.tif
+```
+
+**Dica importante**: O `mogrify -format jpg` **cria** os arquivos .jpg e **deixa** os originais intactos.  
+Se quiser **apagar** os originais depois (para economizar espaço), faça:
+
+```bash
+mogrify -format jpg *.png && rm *.png
+```
+
+### Outras opções úteis
+- Converter e colocar em uma pasta diferente:
+  ```bash
+  mkdir jpgs
+  mogrify -format jpg -path jpgs *.png
+  ```
+
+- Converter com qualidade específica:
+  ```bash
+  mogrify -format jpg -quality 85 *.png
+  ```
+
+### Alternativas via terminal
+- **ffmpeg** (ótimo também, especialmente se você já usa para vídeo):
+  ```bash
+  ffmpeg -i imagem.png -q:v 2 imagem.jpg
+  ```
+  Para batch:
+  ```bash
+  for f in *.png; do ffmpeg -i "$f" "${f%.png}.jpg"; done
+  ```
+
+- **GraphicsMagick** (mais leve em alguns casos): similar ao ImageMagick, comando `gm convert`.
+
+O **ImageMagick** é de longe a solução mais completa e recomendada para o que você quer fazer.
 
 [(&larr;) Voltar](../../README.md#laborat%C3%B3rio-gti "Voltar ao Sumário") | 
 [(&uarr;) Subir](#sum%C3%A1rio "Subir para o topo")
